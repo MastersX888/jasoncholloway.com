@@ -1,0 +1,14 @@
+/* ─── RESPONSIVE BOOK DETAIL ROW ─────────────────────────────── */
+@media (max-width: 768px) {
+  .book-detail-row {
+    grid-template-columns: 1fr !important;
+  }
+  .book-detail-row > div:first-child {
+    order: 2;
+  }
+  .book-detail-row > div:nth-child(2) {
+    order: 1;
+    width: 180px !important;
+    margin: 0 auto;
+  }
+}

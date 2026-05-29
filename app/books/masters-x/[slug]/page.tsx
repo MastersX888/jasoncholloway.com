@@ -1,5 +1,4 @@
-"use client";
-import { useState, use } from "react";
+import { use } from "react";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -20,24 +19,29 @@ export default function BookPage({ params }: Props) {
   const book = books.find((b) => b.slug === slug);
   if (!book) notFound();
 
-  const [format, setFormat] = useState<"pb" | "hc">("pb"); // Default to Paperback as user prefers it
-
   const prevBook = books.find((b) => b.volume === book.volume - 1);
   const nextBook = books.find((b) => b.volume === book.volume + 1);
 
   const paragraphs = book.description.split("\n\n").filter(Boolean);
 
-  const currentCover = format === "pb" ? book.coverImagePB : book.coverImageHC;
-  const currentIsbn = format === "pb" ? book.isbn_pb : book.isbn_hc;
-  const formatLabel = format === "pb" ? "Paperback" : "Hardcover";
-
-  // Filter purchase links based on chosen format
-  const primaryBuyLink = book.buyLinks.find(
-    (l) => l.format?.toLowerCase() === (format === "pb" ? "paperback" : "hardcover")
-  );
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": book.subtitle,
+    "bookFormat": "https://schema.org/Paperback",
+    "author": { "@id": "https://jasoncholloway.com/#person" },
+    "publisher": { "@id": "https://jasoncholloway.com/#organization" },
+    "isbn": book.isbn_pb,
+    "numberOfPages": book.pageCount,
+    "inLanguage": "English",
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="page-header" style={{ paddingBottom: "4rem" }}>
         <div className="container">
           <div className="page-header-inner">

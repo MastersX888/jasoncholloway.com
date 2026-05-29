@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { books } from "@/lib/data/books";
 
 export const metadata: Metadata = {
   title: "Seventh City Press",
@@ -55,34 +56,13 @@ export default function PressPage() {
               <div className="section-label-row"><span className="label">Current Catalog</span></div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 {[
-                  {
-                    title: "Masters X: The Inheritance of Frequency",
-                    type: "Novel · Literary Fiction",
-                    isbn: "9798295812675",
+                  ...books.map(b => ({
+                    title: `${b.series}: ${b.subtitle}`,
+                    type: b.slug === "omnibus" ? "Collected Edition" : "Novel · Literary Fiction",
+                    isbn: b.isbn_hc || b.isbn_pb || "—",
                     status: "Available June 1, 2026",
-                    href: "/books/masters-x/the-inheritance-of-frequency",
-                  },
-                  {
-                    title: "Masters X: The Grimoire",
-                    type: "Novel · Literary Fiction",
-                    isbn: "—",
-                    status: "Available June 1, 2026",
-                    href: "/books/masters-x/the-grimoire",
-                  },
-                  {
-                    title: "Masters X: The Kingdom",
-                    type: "Novel · Literary Fiction",
-                    isbn: "—",
-                    status: "Available June 1, 2026",
-                    href: "/books/masters-x/the-kingdom",
-                  },
-                  {
-                    title: "Masters X Omnibus",
-                    type: "Collected Edition",
-                    isbn: "979-8-2560-7270-4",
-                    status: "Available June 1, 2026",
-                    href: "/books/masters-x",
-                  },
+                    href: b.slug === "omnibus" ? "/books/masters-x" : `/books/masters-x/${b.slug}`,
+                  })),
                   {
                     title: "Innocence, Desire, and the Architecture of the Fall",
                     type: "Literary Criticism",

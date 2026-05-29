@@ -49,6 +49,30 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Person",
+                  "@id": "https://jasoncholloway.com/#person",
+                  "name": "Jason C. Holloway",
+                  "url": "https://jasoncholloway.com",
+                  "jobTitle": "Author",
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://jasoncholloway.com/#organization",
+                  "name": "Seventh City Press LLC",
+                  "url": "https://jasoncholloway.com/press",
+                  "founder": { "@id": "https://jasoncholloway.com/#person" }
+                }
+              ]
+            })
+          }}
+        />
       </head>
       <body>
         <Header />

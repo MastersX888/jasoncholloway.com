@@ -96,6 +96,7 @@ export default function MastersXPage() {
                           fill
                           style={{ objectFit: "cover" }}
                           sizes="180px"
+                          priority={i === 0}
                         />
                       </div>
                     </div>
@@ -115,6 +116,7 @@ export default function MastersXPage() {
                           fill
                           style={{ objectFit: "cover" }}
                           sizes="180px"
+                          priority={i === 0}
                         />
                       </div>
                     </div>

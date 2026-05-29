@@ -7,6 +7,14 @@ import { books } from "@/lib/data/books";
 
 type Props = { params: Promise<{ slug: string }> };
 
+export async function generateStaticParams() {
+  // Only generate for actual books, omit Omnibus if we don't want a standalone page for it
+  // Wait, let's just generate for all books in the data array.
+  return books.filter(b => b.slug !== "omnibus").map((book) => ({
+    slug: book.slug,
+  }));
+}
+
 export default function BookPage({ params }: Props) {
   const { slug } = use(params);
   const book = books.find((b) => b.slug === slug);

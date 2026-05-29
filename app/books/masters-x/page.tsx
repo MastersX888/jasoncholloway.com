@@ -57,7 +57,7 @@ export default function MastersXPage() {
       <section className="section">
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", gap: "6rem" }}>
-            {books.map((book, i) => (
+            {books.filter(b => b.slug !== "omnibus").map((book, i) => (
               <div key={book.slug} style={{
                 display: "grid",
                 gridTemplateColumns: i % 2 === 0 ? "380px 1fr" : "1fr 380px",
@@ -138,92 +138,92 @@ export default function MastersXPage() {
       </section>
 
       {/* Omnibus Section */}
-      <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem", alignItems: "center" }}>
-            
-            {/* Covers display */}
-            <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center" }}>
-              <div style={{
-                position: "relative",
-                width: 170,
-                aspectRatio: "2/3",
-                borderRadius: "var(--r-lg)",
-                overflow: "hidden",
-                boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
-                transform: "rotate(-3deg)",
-                zIndex: 1,
-              }}>
-                <Image
-                  src="/covers/omnibus-pb-v2.png"
-                  alt="Masters X Omnibus Paperback"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="170px"
-                />
-              </div>
-              <div style={{
-                position: "relative",
-                width: 170,
-                aspectRatio: "2/3",
-                borderRadius: "var(--r-lg)",
-                overflow: "hidden",
-                boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
-                transform: "rotate(3deg)",
-                marginTop: "1.5rem",
-                zIndex: 2,
-              }}>
-                <Image
-                  src="/covers/omnibus-hc-v2.png"
-                  alt="Masters X Omnibus Hardcover"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="170px"
-                />
-              </div>
-            </div>
-
-            {/* Info and buy links */}
-            <div>
-              <div className="label" style={{ marginBottom: "0.5rem" }}>Collected Edition</div>
-              <h2 className="display-md" style={{ marginBottom: "1rem" }}>
-                Masters X Omnibus Edition
-              </h2>
-              <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-                All three volumes collected in a single monumental volume. Complete with all 75 chapters,
-                the full set of illustrations, and the complete appendix of acoustic specifications.
-                A beautiful addition to any bookshelf.
-              </p>
-              
-              <div className="card" style={{ marginBottom: "1.5rem", background: "var(--bg-raised)", borderColor: "var(--border)" }}>
-                {[
-                  { k: "Paperback ISBN", v: "979-8-2560-7270-4" },
-                  { k: "Hardcover ISBN", v: "979-8-2958-8441-2" },
-                  { k: "Page Count", v: "734 pages" },
-                ].map((row) => (
-                  <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", padding: "0.4rem 0", borderBottom: "1px solid var(--border-faint)" }}>
-                    <span style={{ color: "var(--text-faint)" }}>{row.k}</span>
-                    <span style={{ color: "var(--text-muted)", fontFamily: row.k.includes("ISBN") ? "var(--font-mono)" : undefined }}>{row.v}</span>
+      {(() => {
+        const omnibus = books.find(b => b.slug === "omnibus");
+        if (!omnibus) return null;
+        return (
+          <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
+            <div className="container">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem", alignItems: "center" }}>
+                
+                {/* Covers display */}
+                <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center" }}>
+                  <div style={{
+                    position: "relative",
+                    width: 170,
+                    aspectRatio: "2/3",
+                    borderRadius: "var(--r-lg)",
+                    overflow: "hidden",
+                    boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
+                    transform: "rotate(-3deg)",
+                    zIndex: 1,
+                  }}>
+                    <Image
+                      src={omnibus.coverImagePB}
+                      alt={`${omnibus.subtitle} Paperback`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="170px"
+                    />
                   </div>
-                ))}
-              </div>
+                  <div style={{
+                    position: "relative",
+                    width: 170,
+                    aspectRatio: "2/3",
+                    borderRadius: "var(--r-lg)",
+                    overflow: "hidden",
+                    boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
+                    transform: "rotate(3deg)",
+                    marginTop: "1.5rem",
+                    zIndex: 2,
+                  }}>
+                    <Image
+                      src={omnibus.coverImageHC}
+                      alt={`${omnibus.subtitle} Hardcover`}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      sizes="170px"
+                    />
+                  </div>
+                </div>
 
-              <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                <a href="https://www.amazon.com/dp/B0H364814B" target="_blank" rel="noopener noreferrer" className="btn btn-gold">
-                  Order Hardcover on Amazon
-                </a>
-                <a href="https://www.amazon.com/s?k=9798256072704" target="_blank" rel="noopener noreferrer" className="btn btn-gold">
-                  Order Paperback on Amazon
-                </a>
-                <a href="https://www.ingramcontent.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline">
-                  IngramSpark
-                </a>
+                {/* Info and buy links */}
+                <div>
+                  <div className="label" style={{ marginBottom: "0.5rem" }}>Collected Edition</div>
+                  <h2 className="display-md" style={{ marginBottom: "1rem" }}>
+                    {omnibus.subtitle}
+                  </h2>
+                  <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1.5rem" }}>
+                    {omnibus.description}
+                  </p>
+                  
+                  <div className="card" style={{ marginBottom: "1.5rem", background: "var(--bg-raised)", borderColor: "var(--border)" }}>
+                    {[
+                      { k: "Paperback ISBN", v: omnibus.isbn_pb },
+                      { k: "Hardcover ISBN", v: omnibus.isbn_hc },
+                      { k: "Page Count", v: `${omnibus.pageCount} pages` },
+                    ].map((row) => (
+                      <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", padding: "0.4rem 0", borderBottom: "1px solid var(--border-faint)" }}>
+                        <span style={{ color: "var(--text-faint)" }}>{row.k}</span>
+                        <span style={{ color: "var(--text-muted)", fontFamily: row.k.includes("ISBN") ? "var(--font-mono)" : undefined }}>{row.v}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
+                    {omnibus.buyLinks.map(link => (
+                      <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className={link.label.includes("Amazon") ? "btn btn-gold" : "btn btn-outline"}>
+                        {link.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+
               </div>
             </div>
-
-          </div>
-        </div>
-      </section>
+          </section>
+        );
+      })()}
     </>
   );
 }

@@ -115,4 +115,30 @@ export const books: Book[] = [
       { label: "Bookshop.org", url: "https://bookshop.org", format: "Paperback" },
     ],
   },
+  {
+    slug: "omnibus",
+    volume: 4,
+    series: "Masters X",
+    title: "Masters X",
+    subtitle: "Omnibus Edition",
+    coverImage: "/covers/omnibus-pb-v2.png",
+    coverImageHC: "/covers/omnibus-hc-v2.png",
+    coverImagePB: "/covers/omnibus-pb-v2.png",
+    isbn_hc: "979-8-2958-8441-2",
+    isbn_pb: "979-8-2560-7270-4",
+    asin_hc: "B0H364814B",
+    pageCount: 734,
+    description:
+      "All three volumes collected in a single monumental volume. Complete with all 75 chapters, the full set of illustrations, and the complete appendix of acoustic specifications. A beautiful addition to any bookshelf.",
+    shortDesc:
+      "The complete Masters X Trilogy collected in a single monumental volume.",
+    excerpt:
+      "The gate is not arbitrary. The gate is the body.",
+    keywords: ["Masters X Omnibus", "collected edition", "acoustic frequency"],
+    buyLinks: [
+      { label: "Amazon (Paperback)", url: "https://www.amazon.com/s?k=9798256072704", format: "Paperback" },
+      { label: "Amazon (Hardcover)", url: "https://www.amazon.com/dp/B0H364814B", format: "Hardcover" },
+      { label: "IngramSpark", url: "https://www.ingramcontent.com", format: "Paperback" },
+    ],
+  },
 ];

@@ -1,4 +1,7 @@
-// Canonical book data derived from Ingram listing details and manuscript ISBNs
+// Canonical book database for Seventh City Press.
+// Derived from KDP/IngramSpark records and printed proof files.
+// Author spellings standardized to "Jason Carroll Holloway" across all titles.
+
 export interface BookLink {
   label: string;
   url: string;
@@ -7,7 +10,7 @@ export interface BookLink {
 
 export interface Book {
   slug: string;
-  volume: number;
+  volume?: number; // Optional to accommodate monograph
   series: string;
   title: string;
   subtitle: string;
@@ -73,7 +76,7 @@ export const books: Book[] = [
     asin_pb: "B0H2JM96QG",
     pageCount: 256,
     description:
-      "The frequency is real. Blake heard it in the Strahov crypt. It restructured his nervous system in a way that cannot be reversed. Now he sits in a stone cottage on the Icelandic coast, writing the account of what happened in the seventh Moleskine with a pen that shakes when he sets it down. Bilateral tremor. 111.2 Hz. Permanent.\n\nWhat he is writing is both confession and instruction manual.\n\nThe Premonstratensian monks did not simply guard the frequency. They prepared for it. A fifteenth-century reading list recovered from a Charles University archive reveals twenty-three texts — Christian, Jewish, Hermetic, Islamic — required before any candidate could enter the crypt. The Ars Notoria. The Sefer Yetzirah. The Gospel of Mary. Twenty-three books to tune the mind before the frequency tuned the body.\n\nWhile Blake maps the preparation protocol from Iceland, Nadia holds the William Masters Foundation together from Kansas City, alone, at 5:12 every morning. Andrew Chen's algorithm has identified something no one expected. The mathematical relationships the medieval masters encoded in cathedral proportions — the nave heights at Chartres, the transept ratios at Reims — are not decorative. They are acoustic specifications. The cathedrals are instruments. They were always instruments.\n\nThe preparation is not about the frequency. The preparation is about the organism that will receive it.\n\nTwenty-three candidates are waiting.",
+      "The frequency is real. Blake heard it in the Strahov crypt. It restructured his nervous system in a way that cannot be reversed. Now he sits in a stone cottage on the Icelandic coast, writing the account of what happened in the seventh Moleskine with a pen that shakes when he sets it down. Bilateral tremor. 111.2 Hz. Permanent.\n\nWhat he is writing is both confession and instruction manual.\n\nThe Premonstratensian monks did not simply guard the frequency. They prepared for it. A fifteenth-century reading list recovered from a Charles University archive reveals twenty-three texts, Christian, Jewish, Hermetic, Islamic, required before any candidate could enter the crypt. The Ars Notoria. The Sefer Yetzirah. The Gospel of Mary. Twenty-three books to tune the mind before the frequency tuned the body.\n\nWhile Blake maps the preparation protocol from Iceland, Nadia holds the William Masters Foundation together from Kansas City, alone, at 5:12 every morning. Andrew Chen's algorithm has identified something no one expected. The mathematical relationships the medieval masters encoded in cathedral proportions, the nave heights at Chartres, the transept ratios at Reims, are not decorative. They are acoustic specifications. The cathedrals are instruments. They were always instruments.\n\nThe preparation is not about the frequency. The preparation is about the organism that will receive it.\n\nTwenty-three candidates are waiting.",
     shortDesc:
       "Blake maps the preparation protocol from an Iceland cottage while Andrew's algorithm decodes the acoustic architecture of medieval cathedrals.",
     excerpt:
@@ -95,12 +98,12 @@ export const books: Book[] = [
     coverImage: "/covers/book3-pb.png",
     coverImageHC: "/covers/book3-hc-v2.png",
     coverImagePB: "/covers/book3-pb.png",
-    isbn_hc: "9798295812705",
-    isbn_pb: "9798256010072",
-    isbn_ebook: "9798256009809",
+    isbn_hc: "9798256010072", // Hardcover proof ISBN
+    isbn_pb: "9798295812705", // Paperback ISBN
+    isbn_ebook: "9798256009809", // Ebook ISBN
     asin_hc: "B0GZCX3L8S",
     asin_pb: "B0H2L5Y1B3",
-    pageCount: 178,
+    pageCount: 362, // From printed interior proof
     description:
       "Blake Masters returns to Kansas City with a restructured nervous system, a preparation protocol that can safely expand human consciousness, and an argument he cannot answer.\n\nFather Crane has published a theological critique in Theological Studies that the Foundation cannot refute. If the frequency is what Jesus taught, if the kingdom of God within you is a technical description of human acoustic resonance, then the fifty-two-week preparation protocol is gatekeeping prayer. Every week a candidate spends in preparation is a week a suffering person is denied access to their own fundamental frequency.\n\nBlake knows Crane is right. The preparation IS gatekeeping. But the alternative is three seizures and two cardiac events and a 34% adverse event rate and the institutional disaster that follows when knowledge moves faster than readiness.\n\nTwenty-three candidates. Seventy-two hours. A limestone chamber beneath Kansas City where the frequency has been resonating since before the city was built.\n\nFour hundred and twelve listening sites in sixty-one countries. Eleven thousand participants. And a man sitting alone, writing in the ninth Moleskine with hands that tremble at 111.2 Hz:\n\nThe gate is not arbitrary. The gate is the body. The body requires time. This is not theology. This is physics. This is love.",
     shortDesc:
@@ -124,12 +127,12 @@ export const books: Book[] = [
     coverImage: "/covers/omnibus-pb-v2.png",
     coverImageHC: "/covers/omnibus-hc-v2.png",
     coverImagePB: "/covers/omnibus-pb-v2.png",
-    isbn_hc: "979-8-2958-8441-2",
-    isbn_pb: "979-8-2560-7270-4",
+    isbn_hc: "9798295884412",
+    isbn_pb: "9798256072704",
     asin_hc: "B0H364814B",
-    pageCount: 734,
+    pageCount: 736, // Total trilogy page count
     description:
-      "All three volumes collected in a single monumental volume. Complete with all 75 chapters, the full set of illustrations, and the complete appendix of acoustic specifications. A beautiful addition to any bookshelf.",
+      "All three volumes collected in a single monumental volume. The complete Masters X Trilogy in one book, available in both hardcover and paperback editions.",
     shortDesc:
       "The complete Masters X Trilogy collected in a single monumental volume.",
     excerpt:
@@ -141,4 +144,30 @@ export const books: Book[] = [
       { label: "IngramSpark", url: "https://www.ingramcontent.com", format: "Paperback" },
     ],
   },
+  {
+    slug: "hawkes-monograph",
+    series: "John Hawkes Critical Study",
+    title: "Innocence, Desire, and the Architecture of the Fall",
+    subtitle: "The Grape and Its Counter-Symbols in the Fiction of John Hawkes",
+    coverImage: "/covers/hawkes-pb.png",
+    coverImageHC: "/covers/hawkes-hc.png",
+    coverImagePB: "/covers/hawkes-pb.png",
+    isbn_hc: "9798295777622", // Hardcover ISBN
+    isbn_pb: "9798349308444", // Paperback ISBN
+    isbn_ebook: "TODO(jason) RESOLVE", // Mark as TODO for digital edition
+    asin_hc: "B0H1Q6GD7Z",
+    asin_pb: "B0GWLT9Y4G",
+    pageCount: 90, // Reconciled from printed proof interior
+    description:
+      "John Hawkes is among the most challenging and least understood novelists of the twentieth century. His fiction operates through a symbolic register so dense, so precisely constructed, that conventional thematic criticism tends to slide off its surface. What Holloway's monograph proposes is a different methodology: to trace a single, seemingly peripheral image — the grape — through Hawkes's entire fictional career, and to discover that the grape is not peripheral at all.\n\nThe grape functions in Hawkes's fiction as a counter-symbol to the Christian tradition of grace. Where the liturgical tradition makes the grape sacred — the wine of communion, the blood of transformation — Hawkes uses the grape to mark the moments when his characters are most fully themselves, most fully animal, most fully present in the irreducible fact of their embodiment. Grace, in Hawkes, is not transcendence. It is immanence. It is the weight of the body against the earth.\n\nThe monograph traces this argument across seventeen novels, from The Cannibal (1949) through An Irish Eye (1997), with particular attention to The Lime Twig, Second Skin, The Blood Oranges, and the later trilogy (Travesty, The Passion Artist, Virginie: Her Two Lives).",
+    shortDesc:
+      "A critical and quantitative analysis of the repeating symbolic architectures across John Hawkes's novel corpus.",
+    excerpt:
+      "The grape appears 129 times across 17 novels. It is the most frequent non-human image in the Hawkes canon. This is not accident. This is architecture.",
+    keywords: ["John Hawkes", "literary criticism", "symbolic architecture", "grape motif"],
+    buyLinks: [
+      { label: "Amazon (Paperback)", url: "https://www.amazon.com/dp/B0GWLT9Y4G", format: "Paperback" },
+      { label: "Amazon (Hardcover)", url: "https://www.amazon.com/dp/B0H1Q6GD7Z", format: "Hardcover" },
+    ],
+  }
 ];

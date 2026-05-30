@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Masters X Trilogy",
   description:
-    "Three novels at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception. By Jason C. Holloway. Published by Seventh City Press.",
+    "Three novels at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception. By Jason Carroll Holloway. Published by Seventh City Press.",
 };
 
 export default function MastersXPage() {
@@ -25,7 +25,7 @@ export default function MastersXPage() {
             <p style={{ maxWidth: "62ch", color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.85 }}>
               A safety deposit box, paid in advance for fifty-seven years, arrives the day Blake Masters
               is ready to receive it. Inside: seven notebooks, thirty years of classified research, and a
-              cross-reference to a crypt that has been sealed since 1247. Three novels about what you do
+              cross-reference to a crypt that has been sealed since 1267. Three novels about what you do
               when you open something that was waiting specifically for you.
             </p>
           </div>
@@ -37,11 +37,11 @@ export default function MastersXPage() {
         <div className="container">
           <div style={{ display: "flex", gap: "3rem", flexWrap: "wrap", justifyContent: "center" }}>
             {[
-              { label: "Author", value: "Jason C. Holloway" },
+              { label: "Author", value: "Jason Carroll Holloway" },
               { label: "Publisher", value: "Seventh City Press LLC" },
               { label: "Format", value: "HC · PB · Ebook" },
               { label: "Distribution", value: "IngramSpark · Global" },
-              { label: "Total Pages", value: "634 (Trilogy)" },
+              { label: "Total Pages", value: "736 (Trilogy)" },
               { label: "BISAC", value: "FIC019000 · Literary Fiction" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center" }}>
@@ -57,7 +57,7 @@ export default function MastersXPage() {
       <section className="section">
         <div className="container">
           <div style={{ display: "flex", flexDirection: "column", gap: "6rem" }}>
-            {books.filter(b => b.slug !== "omnibus").map((book, i) => (
+            {books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map((book, i) => (
               <div key={book.slug} style={{
                 display: "grid",
                 gridTemplateColumns: i % 2 === 0 ? "380px 1fr" : "1fr 380px",

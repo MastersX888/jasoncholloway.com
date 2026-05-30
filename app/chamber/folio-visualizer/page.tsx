@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import foliosData from "@/lib/folios.json";
 
@@ -30,6 +30,7 @@ interface ActiveLayer {
 
 export default function FolioVisualizerPage() {
   const [activeLayers, setActiveLayers] = useState<ActiveLayer[]>([]);
+  const layerCounterRef = useRef(0);
   const [searchQuery, setSearchQuery] = useState("");
   const [collectionFilter, setCollectionFilter] = useState<"all" | "voynich" | "arsnotoria">("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
@@ -72,8 +73,9 @@ export default function FolioVisualizerPage() {
 
   // Add a folio to the stage
   const addLayer = (folio: Folio) => {
+    layerCounterRef.current += 1;
     const newLayer: ActiveLayer = {
-      layerId: `${folio.id}-${Date.now()}`,
+      layerId: `${folio.id}-${layerCounterRef.current}`,
       folio,
       opacity: 0.8,
       rotation: 0,
@@ -90,7 +92,11 @@ export default function FolioVisualizerPage() {
   };
 
   // Update layer property
-  const updateLayer = (layerId: string, property: keyof ActiveLayer, value: any) => {
+  const updateLayer = <K extends keyof ActiveLayer>(
+    layerId: string,
+    property: K,
+    value: ActiveLayer[K]
+  ) => {
     setActiveLayers(
       activeLayers.map((l) => {
         if (l.layerId === layerId) {
@@ -399,7 +405,7 @@ export default function FolioVisualizerPage() {
                         transition: "opacity 0.15s, transform 0.15s",
                         opacity: layer.opacity,
                         transform: `rotate(${layer.rotation}deg) scale(${layer.scale})`,
-                        mixBlendMode: layer.blendMode as any,
+                        mixBlendMode: layer.blendMode as React.CSSProperties["mixBlendMode"],
                         filter: layer.inverted ? "invert(1) brightness(1.2) contrast(1.2)" : "none",
                         zIndex: index + 1,
                         pointerEvents: "none"

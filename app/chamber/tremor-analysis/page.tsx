@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { caveSites } from "@/lib/data/notae";
 
 const BLAKE_BASELINE = 111.2;
 const MODEL_RESULT = 111.19;

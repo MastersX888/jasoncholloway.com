@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 
@@ -14,7 +13,7 @@ export default function HawkesMonographPage() {
       cover: "/covers/hawkes-pb.png",
       asin: "B0GWLT9Y4G",
       price: "$16.95",
-      details: "Trade Paperback · 6x9 in · 214 pages",
+      details: "Trade Paperback · 6x9 in · 90 pages",
       features: "Premium cream paper, matte cover finish"
     },
     {
@@ -22,7 +21,7 @@ export default function HawkesMonographPage() {
       cover: "/covers/hawkes-hc.png",
       asin: "B0H1Q6GD7Z",
       price: "$26.95",
-      details: "Laminate Casebound · 6x9 in · 214 pages",
+      details: "Laminate Casebound · 6x9 in · 90 pages",
       features: "Stitch-bound, gold foil element stamping"
     },
     {
@@ -30,13 +29,52 @@ export default function HawkesMonographPage() {
       cover: "/covers/hawkes-ebook.jpg",
       asin: "B0GWLT9Y4G", // Fallback or search link
       price: "$9.99",
-      details: "EPUB / Kindle Format · Reflowable",
+      details: "EPUB / Kindle Format · Reflowable · 90 pages",
       features: "High-resolution figures, full text search"
     }
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "@id": "https://jasoncholloway.com/books/hawkes-monograph#work",
+    "name": "Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes",
+    "author": { "@id": "https://jasoncholloway.com/#person" },
+    "publisher": { "@id": "https://jasoncholloway.com/#organization" },
+    "inLanguage": "English",
+    "numberOfPages": 90,
+    "workExample": [
+      {
+        "@type": "Book",
+        "@id": "https://jasoncholloway.com/books/hawkes-monograph#paperback",
+        "isbn": "9798349308444",
+        "bookFormat": "https://schema.org/Paperback",
+        "numberOfPages": 90,
+        "potentialAction": {
+          "@type": "BuyAction",
+          "target": "https://www.amazon.com/dp/B0GWLT9Y4G"
+        }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://jasoncholloway.com/books/hawkes-monograph#hardcover",
+        "isbn": "9798295777622",
+        "bookFormat": "https://schema.org/Hardcover",
+        "numberOfPages": 90,
+        "potentialAction": {
+          "@type": "BuyAction",
+          "target": "https://www.amazon.com/dp/B0H1Q6GD7Z"
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="page-header" style={{ paddingBottom: "3rem" }}>
         <div className="container">
           <div className="page-header-inner">
@@ -54,12 +92,12 @@ export default function HawkesMonographPage() {
                   The Grape and Its Counter-Symbols in the Fiction of John Hawkes
                 </p>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "2rem" }}>
-                  By Jason Carroll Holloway · Seventh City Press · Available June 1, 2026
+                  By Jason Carroll Holloway · Seventh City Press · Releasing June 2026
                 </p>
 
                 <div className="ms-pull" style={{ margin: "1.5rem 0", maxWidth: "65ch" }}>
                   <p>
-                    The grape appears 116 times across 16 novels. It is the most frequent non-human image in the Hawkes canon.
+                    The grape appears 129 times across 17 novels. It is the most frequent non-human image in the Hawkes canon.
                     This is not accident. This is architecture.
                   </p>
                   <cite>— Holloway, Abstract</cite>
@@ -143,7 +181,7 @@ export default function HawkesMonographPage() {
                   It is immanence. It is the weight of the body against the earth.
                 </p>
                 <p>
-                  The monograph traces this argument across sixteen novels, from <em>The Cannibal</em> (1949) through
+                  The monograph traces this argument across seventeen novels, from <em>The Cannibal</em> (1949) through
                   <em>An Irish Eye</em> (1997), with particular attention to <em>The Lime Twig</em>, <em>Second Skin</em>,
                   <em>The Blood Oranges</em>, and the later trilogy (<em>Travesty</em>, <em>The Passion Artist</em>,
                   <em>Virginie: Her Two Lives</em>).
@@ -159,7 +197,7 @@ export default function HawkesMonographPage() {
                   { k: "Publisher", v: "Seventh City Press LLC" },
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
-                  { k: "Status", v: "Available June 1, 2026" },
+                  { k: "Status", v: "Releasing June 2026" },
                   { k: "Hardcover ASIN", v: "B0H1Q6GD7Z" },
                   { k: "Paperback ASIN", v: "B0GWLT9Y4G" },
                 ].map((row) => (
@@ -173,7 +211,7 @@ export default function HawkesMonographPage() {
               <div className="card">
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Texts Examined</div>
                 <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.8 }}>
-                  {["The Cannibal (1949)", "The Beetle Leg (1951)", "The Lime Twig (1961)", "Second Skin (1964)",
+                  {["Charivari (1949)", "The Cannibal (1949)", "The Beetle Leg (1951)", "The Lime Twig (1961)", "Second Skin (1964)",
                     "The Blood Oranges (1971)", "Death, Sleep & the Traveler (1974)", "Travesty (1976)",
                     "The Passion Artist (1979)", "Virginie: Her Two Lives (1982)", "Adventures in the Alaskan Skin Trade (1985)",
                     "Innocence in Extremis (1985)", "Humors of Blood & Skin (1984)", "Whistlejacket (1988)",

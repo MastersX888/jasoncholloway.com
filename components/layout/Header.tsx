@@ -7,6 +7,7 @@ const navItems = [
   { href: "/books/hawkes-monograph", label: "Monograph" },
   { href: "/press", label: "Press" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function Header() {

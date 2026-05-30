@@ -7,9 +7,7 @@ import { books } from "@/lib/data/books";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  // Only generate for actual books, omit Omnibus if we don't want a standalone page for it
-  // Wait, let's just generate for all books in the data array.
-  return books.filter(b => b.slug !== "omnibus").map((book) => ({
+  return books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map((book) => ({
     slug: book.slug,
   }));
 }
@@ -19,21 +17,50 @@ export default function BookPage({ params }: Props) {
   const book = books.find((b) => b.slug === slug);
   if (!book) notFound();
 
-  const prevBook = books.find((b) => b.volume === book.volume - 1);
-  const nextBook = books.find((b) => b.volume === book.volume + 1);
+  const prevBook = books.find((b) => b.series === "Masters X" && b.volume === (book.volume ?? 0) - 1);
+  const nextBook = books.find((b) => b.series === "Masters X" && b.volume === (book.volume ?? 0) + 1);
 
   const paragraphs = book.description.split("\n\n").filter(Boolean);
 
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Book",
-    "name": book.subtitle,
-    "bookFormat": "https://schema.org/Paperback",
+    "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#work`,
+    "name": `${book.title}: ${book.subtitle}`,
     "author": { "@id": "https://jasoncholloway.com/#person" },
     "publisher": { "@id": "https://jasoncholloway.com/#organization" },
-    "isbn": book.isbn_pb,
-    "numberOfPages": book.pageCount,
     "inLanguage": "English",
+    "workExample": [
+      ...(book.isbn_pb ? [{
+        "@type": "Book",
+        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#paperback`,
+        "isbn": book.isbn_pb,
+        "bookFormat": "https://schema.org/Paperback",
+        "numberOfPages": book.pageCount,
+        "potentialAction": book.asin_pb ? {
+          "@type": "BuyAction",
+          "target": `https://www.amazon.com/dp/${book.asin_pb}`
+        } : undefined
+      }] : []),
+      ...(book.isbn_hc ? [{
+        "@type": "Book",
+        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#hardcover`,
+        "isbn": book.isbn_hc,
+        "bookFormat": "https://schema.org/Hardcover",
+        "numberOfPages": book.pageCount,
+        "potentialAction": book.asin_hc ? {
+          "@type": "BuyAction",
+          "target": `https://www.amazon.com/dp/${book.asin_hc}`
+        } : undefined
+      }] : []),
+      ...(book.isbn_ebook ? [{
+        "@type": "Book",
+        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#ebook`,
+        "isbn": book.isbn_ebook,
+        "bookFormat": "https://schema.org/EBook",
+        "numberOfPages": book.pageCount
+      }] : [])
+    ]
   };
 
   return (

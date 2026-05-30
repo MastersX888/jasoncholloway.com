@@ -20,9 +20,6 @@ const sitePositions: Record<string, { x: number; y: number }> = {
 export default function GlobalMapPage() {
   const [activeSite, setActiveSite] = useState<CaveSite | null>(caveSites[0]);
 
-  const minFreq = Math.min(...caveSites.map((s) => s.frequencyHz));
-  const maxFreq = Math.max(...caveSites.map((s) => s.frequencyHz));
-
   return (
     <>
       <section className="page-header page-header-chamber">

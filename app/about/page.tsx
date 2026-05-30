@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Jason Carroll Holloway",
   description:
-    "Jason Carroll Holloway is a novelist and literary critic whose work examines the intersection of acoustic physics, medieval knowledge systems, and the architecture of human perception. He is the author of the Masters X Trilogy and is published by Seventh City Press.",
+    "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
 };
 
 export default function AboutPage() {
@@ -27,31 +27,33 @@ export default function AboutPage() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "4rem", alignItems: "start" }}>
             <div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", color: "var(--text-muted)", lineHeight: 1.9, fontSize: "1rem" }}>
+
+              {/* About the Author */}
+              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                <span className="label">About the Author</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", color: "var(--text-muted)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "3rem" }}>
                 <p>
-                  What I&apos;m interested in is the gap between what the historical record contains and what
-                  modern scholarship is willing to conclude from it. The grimoire tradition, the Ars Notoria,
-                  the acoustic geometry embedded in cathedral proportions — this material is documented,
-                  studied, extensively published. What&apos;s rarely asked is whether it worked. My fiction
-                  asks that question and tries to answer it honestly.
+                  Jason Carroll Holloway holds an M.A. in English Literature from Mercy University in Dobbs Ferry,
+                  New York, as well as various degrees and certificates in Psychology, Sociology, Creative Writing,
+                  and Data Analytics. He is a writer and researcher whose work explores the intersection of
+                  acoustic science, medieval scholarship, and human consciousness. He lives in Kansas City.
                 </p>
                 <p>
-                  The Masters X Trilogy follows Blake Masters, Nadia Volkov, and Andrew Chen across three
-                  novels. The research program they construct in the fiction is built from real data —
-                  cave acoustics, cathedral measurements, medieval text traditions. The Analysis Chamber
-                  on this site runs the same data Andrew runs in the novels. It isn&apos;t a supplement
-                  to the books. It&apos;s the same work.
+                  The Masters X Trilogy follows Blake Masters, Nadia Volkov, and Andrew Chen across three novels.
+                  The research program they construct in the fiction is built from real data: cave acoustics,
+                  cathedral measurements, medieval text traditions. The Analysis Chamber on this site runs the
+                  same data Andrew runs in the novels.
                 </p>
                 <p>
-                  The Hawkes monograph began as a dissertation argument and became something larger: an
-                  account of how a writer can use a single recurring image — the grape, the vineyard,
-                  the fermented thing — to dismantle an entire theological tradition across sixteen novels.
-                  It&apos;s the book I wanted to read on Hawkes and couldn&apos;t find, so I wrote it.
+                  Holloway&apos;s monograph on John Hawkes began as a dissertation argument and became something
+                  larger: an account of how a writer can use a single recurring image to dismantle an entire
+                  theological tradition across seventeen novels.
                 </p>
                 <p>
-                  Seventh City Press exists because the work I wanted to publish — fiction that earns
-                  its ideas, criticism that takes risks — doesn&apos;t fit neatly into the categories that
-                  make trade publishing comfortable. An independent imprint seemed the honest answer to that.
+                  Seventh City Press was founded as the publishing home for work that operates at the
+                  intersection of imaginative and intellectual ambition: novels that think, and criticism
+                  that speaks.
                 </p>
               </div>
 
@@ -82,7 +84,7 @@ export default function AboutPage() {
                     {
                       title: "Innocence, Desire, and the Architecture of the Fall",
                       type: "Literary Criticism",
-                      publisher: "Seventh City Press, forthcoming",
+                      publisher: "Seventh City Press, 2026",
                       desc: "The grape and its counter-symbols in the fiction of John Hawkes.",
                     },
                   ].map((work) => (
@@ -118,6 +120,20 @@ export default function AboutPage() {
                 <span style={{ fontSize: "0.7rem", opacity: 0.6 }}>Jason Carroll Holloway</span>
               </div>
 
+              {/* Credentials card */}
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
+                <div className="label" style={{ marginBottom: "0.75rem" }}>Credentials</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
+                  <div>M.A., English Literature<br /><span style={{ color: "var(--text-faint)", fontSize: "0.75rem" }}>Mercy University, Dobbs Ferry, NY</span></div>
+                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "0.6rem" }}>
+                    Degrees and certificates in Psychology, Sociology, Creative Writing, and Data Analytics
+                  </div>
+                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "0.6rem", color: "var(--text-faint)", fontSize: "0.75rem" }}>
+                    Kansas City, Missouri
+                  </div>
+                </div>
+              </div>
+
               {/* Press contact */}
               <div className="card" style={{ background: "var(--gold-glow)", borderColor: "var(--gold-dim)" }}>
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Publisher</div>
@@ -126,7 +142,7 @@ export default function AboutPage() {
                   Jason Carroll Holloway, Publisher
                 </p>
                 <a href="mailto:press@jasoncholloway.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                  Contact for Rights & Press
+                  Contact for Rights and Press
                 </a>
               </div>
             </div>

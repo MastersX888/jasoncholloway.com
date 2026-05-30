@@ -13,9 +13,25 @@ export default function WaveformHero() {
     let animId: number;
     let t = 0;
 
+    // Detect and respect prefers-reduced-motion media query
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let isReduced = mediaQuery.matches;
+
+    const handleMotionChange = (e: MediaQueryListEvent) => {
+      isReduced = e.matches;
+      if (isReduced) {
+        t = 0; // reset for static render
+        draw();
+      } else {
+        animId = requestAnimationFrame(draw);
+      }
+    };
+    mediaQuery.addEventListener("change", handleMotionChange);
+
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      if (isReduced) draw(); // Redraw static scene on resize
     };
     resize();
     window.addEventListener("resize", resize);
@@ -35,8 +51,8 @@ export default function WaveformHero() {
       waves.forEach((wave) => {
         ctx.beginPath();
         ctx.strokeStyle = wave.color;
-        ctx.globalAlpha = 0.06;
-        ctx.lineWidth = 1;
+        ctx.globalAlpha = 0.04;
+        ctx.lineWidth = 1.5;
 
         for (let x = 0; x <= width; x += 2) {
           const normalizedX = (x + wave.offset) / width;
@@ -56,8 +72,8 @@ export default function WaveformHero() {
       // Draw the primary visible wave — the 111.2 Hz signature
       ctx.beginPath();
       ctx.strokeStyle = "#4CC9C9";
-      ctx.globalAlpha = 0.15;
-      ctx.lineWidth = 1.5;
+      ctx.globalAlpha = 0.12;
+      ctx.lineWidth = 2;
 
       for (let x = 0; x <= width; x += 1) {
         const nx = x / width;
@@ -75,8 +91,8 @@ export default function WaveformHero() {
       // Gold baseline (Schumann reference)
       ctx.beginPath();
       ctx.strokeStyle = "#C9A84C";
-      ctx.globalAlpha = 0.08;
-      ctx.lineWidth = 1;
+      ctx.globalAlpha = 0.06;
+      ctx.lineWidth = 1.5;
       ctx.setLineDash([4, 8]);
 
       for (let x = 0; x <= width; x += 2) {
@@ -89,14 +105,17 @@ export default function WaveformHero() {
       ctx.setLineDash([]);
       ctx.globalAlpha = 1;
 
-      t += 0.016;
-      animId = requestAnimationFrame(draw);
+      if (!isReduced) {
+        t += 0.016;
+        animId = requestAnimationFrame(draw);
+      }
     };
 
     draw();
     return () => {
-      cancelAnimationFrame(animId);
+      if (animId) cancelAnimationFrame(animId);
       window.removeEventListener("resize", resize);
+      mediaQuery.removeEventListener("change", handleMotionChange);
     };
   }, []);
 

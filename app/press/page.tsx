@@ -5,7 +5,7 @@ import { books } from "@/lib/data/books";
 export const metadata: Metadata = {
   title: "Seventh City Press",
   description:
-    "Seventh City Press is an independent literary imprint publishing fiction and criticism that refuses the division between imaginative and intellectual work. Founded and published by Jason C. Holloway.",
+    "Seventh City Press is an independent literary imprint publishing fiction and criticism that refuses the division between imaginative and intellectual work. Founded and published by Jason Carroll Holloway.",
 };
 
 export default function PressPage() {
@@ -36,13 +36,13 @@ export default function PressPage() {
               <div className="section-label-row"><span className="label">About the Press</span></div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "0.93rem" }}>
                 <p>
-                  Seventh City Press was founded by Jason C. Holloway as the publishing home for work
+                  Seventh City Press was founded by Jason Carroll Holloway as the publishing home for work
                   that operates at the intersection of imaginative and intellectual ambition — novels that think,
                   and criticism that speaks.
                 </p>
                 <p>
                   The name comes from the seven cities of the Aldric tradition in the Masters X Trilogy: Prague, Paris,
-                  Rome, Constantinople, Toledo, Uppsala, and the unnamed seventh — the city where the frequency was first
+                  Rome, Constantinople, Toledo, Uppsala, and the unnamed seventh, the city where the frequency was first
                   heard. A press named for a threshold.
                 </p>
                 <p>
@@ -55,39 +55,47 @@ export default function PressPage() {
             <div>
               <div className="section-label-row"><span className="label">Current Catalog</span></div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                {[
-                  ...books.map(b => ({
-                    title: `${b.series}: ${b.subtitle}`,
-                    type: b.slug === "omnibus" ? "Collected Edition" : "Novel · Literary Fiction",
-                    isbn: b.isbn_hc || b.isbn_pb || "—",
-                    status: "Available June 1, 2026",
-                    href: b.slug === "omnibus" ? "/books/masters-x" : `/books/masters-x/${b.slug}`,
-                  })),
-                  {
-                    title: "Innocence, Desire, and the Architecture of the Fall",
-                    type: "Literary Criticism",
-                    isbn: "—",
-                    status: "Forthcoming",
-                    href: "/books/hawkes-monograph",
-                  },
-                ].map((title) => (
-                  <Link key={title.title} href={title.href} style={{ textDecoration: "none" }}>
-                    <div className="card" style={{ gap: "0.5rem" }}>
-                      <div style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
-                        <div>
-                          <div style={{ fontFamily: "var(--font-display)", fontSize: "0.95rem", marginBottom: "0.25rem" }}>{title.title}</div>
-                          <div style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.08em" }}>{title.type}</div>
-                        </div>
-                        <div style={{ textAlign: "right", flexShrink: 0 }}>
-                          <div className={`badge ${title.status === "Forthcoming" ? "" : "badge-gold"}`}>{title.status}</div>
-                          {title.isbn !== "—" && (
-                            <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "var(--text-faint)", marginTop: "0.3rem" }}>{title.isbn}</div>
-                          )}
+                {books.map((b) => {
+                  const isHawkes = b.slug === "hawkes-monograph";
+                  const isOmnibus = b.slug === "omnibus";
+                  
+                  let title = `${b.series}: ${b.subtitle}`;
+                  let type = "Novel · Literary Fiction";
+                  let status = "Releasing June 2026";
+                  let href = `/books/masters-x/${b.slug}`;
+
+                  if (isHawkes) {
+                    title = b.title;
+                    type = "Literary Criticism";
+                    status = "Available June 2026"; // Standardized release
+                    href = "/books/hawkes-monograph";
+                  } else if (isOmnibus) {
+                    type = "Collected Edition";
+                    href = "/books/masters-x";
+                  }
+
+                  // Use hardcover ISBN for the press sheet listing to represent the premium edition
+                  const isbn = b.isbn_hc || b.isbn_pb || "";
+
+                  return (
+                    <Link key={b.slug} href={href} style={{ textDecoration: "none" }}>
+                      <div className="card" style={{ gap: "0.5rem" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
+                          <div>
+                            <div style={{ fontFamily: "var(--font-display)", fontSize: "0.95rem", marginBottom: "0.25rem" }}>{title}</div>
+                            <div style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.08em" }}>{type}</div>
+                          </div>
+                          <div style={{ textAlign: "right", flexShrink: 0 }}>
+                            <div className="badge">{status}</div>
+                            {isbn && (
+                              <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "var(--text-faint)", marginTop: "0.3rem" }}>ISBN: {isbn}</div>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </Link>
-                ))}
+                    </Link>
+                  );
+                })}
               </div>
             </div>
           </div>

@@ -2,12 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
+import NewsletterForm from "@/components/layout/NewsletterForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Jason Carroll Holloway — Author & Seventh City Press",
   description:
-    "Official digital platform for Jason Carroll Holloway, author of the Masters X Trilogy and forthcoming monograph on John Hawkes. Exploring acoustic consciousness, medieval manuscripts, and the architecture of human perception.",
+    "Official digital platform for Jason Carroll Holloway, author of the Masters X Trilogy and the Hawkes monograph. Exploring acoustic consciousness, medieval manuscripts, and the architecture of human perception.",
 };
 
 const pullQuotes = [
@@ -47,29 +48,33 @@ export default function Home() {
               <span style={{ color: "var(--gold)", fontStyle: "italic" }}>Holloway</span>
             </h1>
 
-            <p className="hero-sub animate-fade-up delay-2" style={{ maxWidth: "55ch" }}>
+            <p className="hero-sub animate-fade-up delay-2" style={{ maxWidth: "55ch", marginBottom: "2rem" }}>
               What the medieval masters encoded in cathedral geometry, grimoire tradition,
-              and acoustic stonework wasn't mysticism. The Masters X Trilogy is the account of proving it.
+              and acoustic stonework wasn&apos;t mysticism. The Masters X Trilogy is the account of proving it.
             </p>
 
-            <div className="hero-ctas animate-fade-up delay-3" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/books/masters-x" className="btn btn-gold btn-lg">
-                Explore the Trilogy
+            <div className="animate-fade-up delay-3" style={{ maxWidth: "580px", marginBottom: "1.5rem" }}>
+              <NewsletterForm compact={false} />
+            </div>
+
+            <div className="hero-ctas animate-fade-up delay-3" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginBottom: "3.5rem" }}>
+              <Link href="/books/masters-x" className="btn btn-outline">
+                Explore the Catalog
               </Link>
-              <Link href="/chamber" className="btn btn-outline btn-lg" style={{ color: "var(--cyan)", borderColor: "var(--cyan-dim)" }}>
-                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", display: "inline-block", marginRight: "0.25rem" }} />
+              <Link href="/chamber" className="btn btn-ghost" style={{ color: "var(--cyan)" }}>
+                <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", display: "inline-block", marginRight: "0.4rem" }} />
                 Analysis Chamber
               </Link>
             </div>
 
             <div className="hero-stats animate-fade-up delay-4">
               <div>
-                <div className="hero-stat-num">4</div>
-                <div className="hero-stat-label">Volumes Published</div>
+                <div className="hero-stat-num">June 2026</div>
+                <div className="hero-stat-label">Launch Window</div>
               </div>
               <div>
                 <div className="hero-stat-num">111.2</div>
-                <div className="hero-stat-label">Hz — The Carrier Frequency</div>
+                <div className="hero-stat-label">Hz, The Carrier Frequency</div>
               </div>
               <div>
                 <div className="hero-stat-num">181</div>
@@ -111,7 +116,7 @@ export default function Home() {
 
                 {/* Stack of three book covers */}
                 <div style={{ display: "flex", gap: "1rem", margin: "2rem 0", justifyContent: "center" }}>
-                  {books.map((b) => (
+                  {books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus").map((b) => (
                     <div key={b.slug} style={{
                       position: "relative",
                       width: "80px",
@@ -147,14 +152,14 @@ export default function Home() {
             <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "2.5rem" }}>
               <div>
                 <div style={{ fontSize: "0.7rem", letterSpacing: "0.12em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.5rem" }}>
-                  Literary Criticism · Forthcoming
+                  Literary Criticism · Available Now
                 </div>
                 <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.8rem", fontWeight: 400, marginBottom: "1rem" }}>
                   Innocence, Desire, and the Architecture of the Fall
                 </h3>
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "1.5rem" }}>
-                  A study of John Hawkes across his complete sixteen-novel corpus. Holloway traces how the grape —
-                  fermented, animal, transgressive — functions as a counter-symbol to Christian grace throughout
+                  A study of John Hawkes across his complete seventeen-novel corpus. Holloway traces how the grape,
+                  fermented, animal, transgressive, functions as a counter-symbol to Christian grace throughout
                   Hawkes&apos;s fiction, mapping the symbolic architecture of America&apos;s most demanding postmodern writer.
                   The book I wanted to read and couldn&apos;t find, so it had to be written.
                 </p>
@@ -202,7 +207,7 @@ export default function Home() {
             {pullQuotes.map((q, i) => (
               <div key={i} className="ms-pull" style={{ margin: 0 }}>
                 <p>{q.text}</p>
-                <cite>— {q.speaker} · {q.ref}</cite>
+                <cite>{q.speaker} · {q.ref}</cite>
               </div>
             ))}
           </div>

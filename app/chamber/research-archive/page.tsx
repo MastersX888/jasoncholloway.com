@@ -219,7 +219,7 @@ export default function ResearchArchivePage() {
 
           {/* Note */}
           <div style={{ marginTop: "3rem", padding: "1.25rem 1.5rem", background: "var(--bg-surface)", borderRadius: "var(--r-md)", border: "1px solid var(--border-faint)", fontSize: "0.82rem", color: "var(--text-faint)", lineHeight: 1.7 }}>
-            <strong style={{ color: "var(--text-muted)" }}>Archive Note:</strong> The distribution file described above exists within the world of the Masters X Trilogy. The section summaries and key contents are derived directly from manuscript text — from descriptions of what Andrew&apos;s research contained and what the preparation protocol specified. Jason C. Holloway built a novel whose technical claims are internally consistent enough to document. Future editions may include selected research materials formatted as in-universe documents.
+            <strong style={{ color: "var(--text-muted)" }}>Archive Note:</strong> The distribution file described above exists within the world of the Masters X Trilogy. The section summaries and key contents are derived directly from manuscript text — from descriptions of what Andrew&apos;s research contained and what the preparation protocol specified. Jason Carroll Holloway built a novel whose technical claims are internally consistent enough to document. Future editions may include selected research materials formatted as in-universe documents.
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,10 +10,14 @@ export default function Footer() {
           <div>
             <div className="footer-brand-name">Jason Carroll Holloway</div>
             <div className="footer-brand-press">Seventh City Press LLC</div>
-            <p className="footer-brand-desc">
+            <p className="footer-brand-desc" style={{ marginBottom: "1.5rem" }}>
               Literary fiction at the intersection of acoustic physics, medieval scholarship, and
               the architecture of human perception.
             </p>
+            <div style={{ maxWidth: "380px" }}>
+              <div className="footer-col-title" style={{ marginBottom: "0.5rem", color: "var(--text-muted)" }}>Newsletter Dispatch</div>
+              <NewsletterForm compact={true} />
+            </div>
           </div>
 
           <div>

@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/",
+    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
 };
 
@@ -195,7 +196,7 @@ export default function Home() {
                     border: "1px solid var(--border-faint)"
                   }}>
                     <Image
-                      src="/covers/hawkes-pb.png"
+                      src="/covers/hawkes-paperback.png"
                       alt="Cover of Innocence, Desire, and the Architecture of the Fall, a study of John Hawkes by Jason Carroll Holloway"
                       fill
                       style={{ objectFit: "cover" }}

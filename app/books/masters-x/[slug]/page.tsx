@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: `${book.title}: ${book.subtitle}`,
       description: book.excerpt,
       url: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
-      images: [{ url: book.coverImagePB }],
+      images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
     },
     alternates: {
       canonical: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,

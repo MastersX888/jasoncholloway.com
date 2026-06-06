@@ -62,12 +62,10 @@ export const metadata: Metadata = {
     title: "Jason Carroll Holloway — Author & Seventh City Press",
     description:
       "Literary fiction at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
+    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jason Carroll Holloway — Author",
-    description: "Literary fiction. Masters X Trilogy. Seventh City Press.",
   },
   metadataBase: new URL("https://jasoncholloway.com"),
 };

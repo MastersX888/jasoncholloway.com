@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/books/hawkes-monograph/",
+    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
 };
 
@@ -16,7 +17,7 @@ export default function HawkesMonographPage() {
   const editions = [
     {
       format: "Paperback",
-      cover: "/covers/hawkes-pb.png",
+      cover: "/covers/hawkes-paperback.png",
       asin: "B0GWLT9Y4G",
       isbn: "9798349308444",
       price: "$16.95",
@@ -25,7 +26,7 @@ export default function HawkesMonographPage() {
     },
     {
       format: "Hardcover",
-      cover: "/covers/hawkes-hc.png",
+      cover: "/covers/hawkes-hardcover.png",
       asin: "B0H1Q6GD7Z",
       isbn: "9798295777622",
       price: "$26.95",

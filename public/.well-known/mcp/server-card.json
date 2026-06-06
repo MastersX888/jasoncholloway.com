@@ -1,0 +1,13 @@
+{
+  "serverInfo": {
+    "name": "jasoncholloway-website",
+    "version": "1.0.0"
+  },
+  "capabilities": {
+    "tools": {}
+  },
+  "transport": {
+    "type": "webmcp",
+    "endpoint": "https://jasoncholloway.com"
+  }
+}

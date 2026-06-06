@@ -1,0 +1,7 @@
+{
+  "issuer": "https://jasoncholloway.com",
+  "authorization_endpoint": "",
+  "token_endpoint": "",
+  "jwks_uri": "",
+  "grant_types_supported": []
+}

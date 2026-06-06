@@ -70,6 +70,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://jasoncholloway.com"),
 };
 
+import WebMCPProvider from "@/components/WebMCPProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -120,6 +122,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <WebMCPProvider />
         <div className="bg-sacred-geometry" />
         <Header />
         <main>{children}</main>

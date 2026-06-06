@@ -1,0 +1,11 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "contact_publisher",
+      "type": "webmcp",
+      "description": "Send a direct inquiry or message to the publisher via the contact form.",
+      "url": "https://jasoncholloway.com/contact/"
+    }
+  ]
+}

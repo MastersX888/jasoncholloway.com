@@ -1,0 +1,13 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://jasoncholloway.com/",
+      "service-desc": [
+        { "href": "https://jasoncholloway.com/.well-known/mcp/server-card.json", "type": "application/json" }
+      ],
+      "service-doc": [
+        { "href": "https://jasoncholloway.com/auth.md", "type": "text/markdown" }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,28 @@ export const metadata: Metadata = {
   title: "Research Archive — Virtual Masters Analysis Chamber",
   description:
     "The 247-page distribution file released by Andrew Chen. Seven years of acoustic consciousness research. 1.2 million downloads. Creative Commons.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/chamber/research-archive/",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Analysis Chamber",
+      "item": "https://jasoncholloway.com/chamber/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Research Archive",
+      "item": "https://jasoncholloway.com/chamber/research-archive/"
+    }
+  ]
 };
 
 const archiveSections = [
@@ -102,6 +124,10 @@ const downloadStats = [
 export default function ResearchArchivePage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="page-header page-header-chamber">
         <div className="container">
           <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1.5rem", alignItems: "center" }}>

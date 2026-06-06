@@ -7,11 +7,54 @@ export const metadata: Metadata = {
   title: "Masters X Trilogy",
   description:
     "Three novels at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception. By Jason Carroll Holloway. Published by Seventh City Press.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/books/masters-x/",
+  },
+  openGraph: {
+    url: "https://jasoncholloway.com/books/masters-x/",
+  },
 };
 
 export default function MastersXPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Books",
+                  "item": "https://jasoncholloway.com/books/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Masters X Trilogy",
+                  "item": "https://jasoncholloway.com/books/masters-x/"
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BookSeries",
+              "name": "Masters X Trilogy",
+              "author": { "@id": "https://jasoncholloway.com/#person" },
+              "publisher": { "@id": "https://jasoncholloway.com/#organization" },
+              "hasPart": books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map(b => ({
+                "@type": "Book",
+                "name": b.title + ": " + b.subtitle,
+                "url": `https://jasoncholloway.com/books/masters-x/${b.slug}/`
+              }))
+            }
+          ])
+        }}
+      />
       <section className="page-header">
         <div className="container">
           <div className="page-header-inner">
@@ -38,7 +81,7 @@ export default function MastersXPage() {
           <div style={{ display: "flex", gap: "3rem", flexWrap: "wrap", justifyContent: "center" }}>
             {[
               { label: "Author", value: "Jason Carroll Holloway" },
-              { label: "Publisher", value: "Seventh City Press LLC" },
+              { label: "Publisher", value: "Seventh City Press" },
               { label: "Format", value: "HC · PB · Ebook" },
               { label: "Distribution", value: "IngramSpark · Global" },
               { label: "Total Pages", value: "736 (Trilogy)" },

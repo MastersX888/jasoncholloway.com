@@ -3,7 +3,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact & Press — Jason Carroll Holloway",
   description:
-    "Get in touch with Jason Carroll Holloway or Seventh City Press LLC for rights, media inquiries, review copies, and press kit downloads.",
+    "Get in touch with Jason Carroll Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/contact/",
+  },
 };
 
 export default function ContactPage() {
@@ -33,14 +36,14 @@ export default function ContactPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem", marginBottom: "2rem" }}>
                 <p>
                   For interview requests, podcast appearances, and media commentary regarding the 
-                  acoustic research behind the <strong>Masters X Trilogy</strong> or 
-                  <em>Innocence, Desire, and the Architecture of the Fall</em>, please contact 
+                  <strong> Masters X Trilogy</strong> and 
+                  <em> Innocence, Desire, and the Architecture of the Fall</em>, please contact 
                   the Seventh City Press media team.
                 </p>
                 <p>
                   Jason Carroll Holloway is available for selective interviews, literary panels, 
-                  and discussions focused on structuralist criticism, medieval grimoire technology, 
-                  and acoustic physics.
+                  and discussions exploring his approach to fiction, structuralist criticism, 
+                  and the integration of esoteric histories into the modern novel.
                 </p>
               </div>
 
@@ -51,7 +54,7 @@ export default function ContactPage() {
                     Media Relations
                   </div>
                   <div style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "0.75rem" }}>
-                    Seventh City Press LLC
+                    Seventh City Press
                   </div>
                   <a href="mailto:press@jasoncholloway.com" style={{ fontSize: "0.9rem", color: "var(--cyan)", textDecoration: "underline" }}>
                     press@jasoncholloway.com
@@ -93,20 +96,18 @@ export default function ContactPage() {
                   Download the official press package for the June 2026 launch. Contains high-resolution book covers, 
                   author headshots, canonical bios, and press release sheets.
                 </p>
-                <a 
-                  href="/press-kit.zip" 
-                  download 
+                <div 
                   className="btn btn-gold" 
-                  style={{ width: "100%", justifyContent: "center", fontSize: "0.85rem" }}
+                  style={{ width: "100%", justifyContent: "center", fontSize: "0.85rem", opacity: 0.6, cursor: "not-allowed" }}
                 >
-                  Download Press Kit (.zip)
-                </a>
+                  Download Press Kit (Coming Soon)
+                </div>
               </div>
 
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
                 <div className="label-cyan" style={{ marginBottom: "0.75rem" }}>Mailing Address</div>
                 <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.6, margin: 0 }}>
-                  Seventh City Press LLC<br />
+                  Seventh City Press<br />
                   Attn: Communications Desk<br />
                   Kansas City, Missouri
                 </p>

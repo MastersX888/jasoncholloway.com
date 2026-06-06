@@ -5,6 +5,22 @@ export const metadata: Metadata = {
   title: "Virtual Masters Analysis Chamber",
   description:
     "An interactive research tool replicating Andrew Chen's acoustic consciousness analysis system from the Masters X Trilogy. Five layers of frequency data, global cave mapping, harmonic derivations, and the 247-page research archive.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/chamber/",
+  },
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Analysis Chamber",
+      "item": "https://jasoncholloway.com/chamber/"
+    }
+  ]
 };
 
 const panels = [
@@ -79,6 +95,10 @@ const panels = [
 export default function ChamberPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <section className="page-header page-header-chamber">
         <div className="container">
           <div className="page-header-inner">

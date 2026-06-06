@@ -4,11 +4,30 @@ export const metadata: Metadata = {
   title: "About Jason Carroll Holloway",
   description:
     "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/about/",
+  },
+  openGraph: {
+    url: "https://jasoncholloway.com/about/",
+  },
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "dateCreated": "2026-06-05T00:00:00Z",
+            "mainEntity": {
+              "@id": "https://jasoncholloway.com/#person"
+            }
+          })
+        }}
+      />
       <section className="page-header">
         <div className="container">
           <div className="page-header-inner">
@@ -42,11 +61,11 @@ export default function AboutPage() {
                 <p>
                   The Masters X Trilogy follows Blake Masters, Nadia Volkov, and Andrew Chen across three novels.
                   The research program they construct in the fiction is built from real data: cave acoustics,
-                  cathedral measurements, medieval text traditions. The Analysis Chamber on this site runs the
+                  cathedral measurements, and medieval text traditions. The Analysis Chamber on this site runs the
                   same data Andrew runs in the novels.
                 </p>
                 <p>
-                  Holloway&apos;s monograph on John Hawkes began as a dissertation argument and became something
+                  Holloway&apos;s monograph on John Hawkes began as a Masters thesis and became something
                   larger: an account of how a writer can use a single recurring image to dismantle an entire
                   theological tradition across seventeen novels.
                 </p>
@@ -101,7 +120,6 @@ export default function AboutPage() {
 
             {/* Sidebar */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-              {/* Author image placeholder */}
               <div style={{
                 aspectRatio: "3/4",
                 background: "linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-raised) 100%)",
@@ -111,25 +129,39 @@ export default function AboutPage() {
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "0.75rem",
+                gap: "1rem",
                 color: "var(--text-faint)",
                 fontSize: "0.8rem",
+                position: "relative",
+                overflow: "hidden"
               }}>
-                <div style={{ fontSize: "3rem", opacity: 0.3 }}>✦</div>
-                <span>Author Photo</span>
-                <span style={{ fontSize: "0.7rem", opacity: 0.6 }}>Jason Carroll Holloway</span>
+                <div style={{
+                  position: "absolute",
+                  top: "0", left: "0", right: "0", bottom: "0",
+                  background: "radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, transparent 70%)",
+                }}></div>
+                <div style={{ fontSize: "2rem", opacity: 0.3, fontFamily: "var(--font-display)", fontStyle: "italic" }}>JCH</div>
+                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.25rem", zIndex: 1 }}>
+                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>Author Portrait</span>
+                  <span style={{ fontSize: "0.75rem", opacity: 0.5, textTransform: "uppercase", letterSpacing: "0.15em" }}>Coming Soon</span>
+                </div>
               </div>
 
               {/* Credentials card */}
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <div className="label" style={{ marginBottom: "0.75rem" }}>Credentials</div>
-                <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.6 }}>
-                  <div>M.A., English Literature<br /><span style={{ color: "var(--text-faint)", fontSize: "0.75rem" }}>Mercy University, Dobbs Ferry, NY</span></div>
-                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "0.6rem" }}>
-                    Degrees and certificates in Psychology, Sociology, Creative Writing, and Data Analytics
+                <div className="label" style={{ marginBottom: "1rem" }}>Credentials</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.85rem", color: "var(--text)", lineHeight: 1.5 }}>
+                  <div>
+                    <div style={{ fontWeight: 600, color: "var(--gold)", marginBottom: "0.1rem" }}>M.A., English Literature</div>
+                    <div style={{ color: "var(--text-faint)", fontSize: "0.8rem" }}>Mercy University, Dobbs Ferry, NY</div>
                   </div>
-                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "0.6rem", color: "var(--text-faint)", fontSize: "0.75rem" }}>
-                    Kansas City, Missouri
+                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "1rem" }}>
+                    <div style={{ fontWeight: 600, color: "var(--gold)", marginBottom: "0.1rem" }}>B.A., Psychology/Sociology</div>
+                    <div style={{ color: "var(--text-faint)", fontSize: "0.8rem" }}>Columbia College, Columbia, MO</div>
+                  </div>
+                  <div style={{ borderTop: "1px solid var(--border-faint)", paddingTop: "1rem" }}>
+                    <div style={{ fontWeight: 600, color: "var(--gold)", marginBottom: "0.1rem" }}>Certifications</div>
+                    <div style={{ color: "var(--text-faint)", fontSize: "0.8rem" }}>Creative Writing &amp; Data Analytics</div>
                   </div>
                 </div>
               </div>
@@ -138,7 +170,7 @@ export default function AboutPage() {
               <div className="card" style={{ background: "var(--gold-glow)", borderColor: "var(--gold-dim)" }}>
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Publisher</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, marginBottom: "1rem" }}>
-                  Seventh City Press LLC<br />
+                  Seventh City Press<br />
                   Jason Carroll Holloway, Publisher
                 </p>
                 <a href="mailto:press@jasoncholloway.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>

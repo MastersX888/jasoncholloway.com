@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "Seventh City Press",
   description:
     "Seventh City Press is an independent literary imprint publishing fiction and criticism that refuses the division between imaginative and intellectual work. Founded and published by Jason Carroll Holloway.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/press/",
+  },
 };
 
 export default function PressPage() {

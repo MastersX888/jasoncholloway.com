@@ -6,9 +6,17 @@ import NewsletterForm from "@/components/layout/NewsletterForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Jason Carroll Holloway — Author & Seventh City Press",
+  title: {
+    absolute: "Jason Carroll Holloway — Author & Seventh City Press",
+  },
   description:
     "Official digital platform for Jason Carroll Holloway, author of the Masters X Trilogy and the Hawkes monograph. Exploring acoustic consciousness, medieval manuscripts, and the architecture of human perception.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/",
+  },
+  openGraph: {
+    url: "https://jasoncholloway.com/",
+  },
 };
 
 const pullQuotes = [
@@ -32,6 +40,18 @@ const pullQuotes = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfilePage",
+            "mainEntity": {
+              "@id": "https://jasoncholloway.com/#person"
+            }
+          })
+        }}
+      />
       {/* ─── HERO ─── */}
       <section className="hero">
         <div className="hero-bg" />
@@ -161,7 +181,6 @@ export default function Home() {
                   A study of John Hawkes across his complete seventeen-novel corpus. Holloway traces how the grape,
                   fermented, animal, transgressive, functions as a counter-symbol to Christian grace throughout
                   Hawkes&apos;s fiction, mapping the symbolic architecture of America&apos;s most demanding postmodern writer.
-                  The book I wanted to read and couldn&apos;t find, so it had to be written.
                 </p>
 
                 {/* Monograph Cover */}
@@ -177,7 +196,7 @@ export default function Home() {
                   }}>
                     <Image
                       src="/covers/hawkes-pb.png"
-                      alt="Hawkes Monograph Cover"
+                      alt="Cover of Innocence, Desire, and the Architecture of the Fall, a study of John Hawkes by Jason Carroll Holloway"
                       fill
                       style={{ objectFit: "cover" }}
                       sizes="80px"
@@ -292,16 +311,6 @@ export default function Home() {
                 <span className="label">The Imprint & The Author</span>
               </div>
               <h2 className="display-md" style={{ marginBottom: "1.25rem" }}>Jason Carroll Holloway</h2>
-              <p style={{ color: "var(--text-muted)", lineHeight: 1.85, marginBottom: "1.5rem", fontSize: "1rem" }}>
-                The research came before the fiction. Years in archives — medieval grimoire traditions,
-                cathedral acoustic records, classified aerospace history — following questions that formal
-                scholarship tends not to ask. The novels came after, when the answers needed a container
-                equal to what they were claiming.
-              </p>
-              <p style={{ color: "var(--text-muted)", lineHeight: 1.85, marginBottom: "2rem", fontSize: "1rem" }}>
-                Seventh City Press is his independent imprint, built to give serious literary and critical
-                work the attention that trade publishing increasingly cannot afford to provide.
-              </p>
               <div style={{ display: "flex", gap: "1rem" }}>
                 <Link href="/about" className="btn btn-outline">About the Author</Link>
                 <Link href="/press" className="btn btn-ghost">Seventh City Press</Link>
@@ -319,7 +328,7 @@ export default function Home() {
             }}>
               <div className="label" style={{ marginBottom: "0.5rem" }}>Catalog Distribution Details</div>
               {[
-                { label: "Publisher", value: "Seventh City Press LLC" },
+                { label: "Publisher", value: "Seventh City Press" },
                 { label: "Imprint", value: "Seventh City Press" },
                 { label: "Release Date", value: "June 1, 2026" },
                 { label: "Formats Available", value: "Hardcover · Paperback · Ebook" },

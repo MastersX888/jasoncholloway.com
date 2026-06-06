@@ -23,6 +23,8 @@ export interface Book {
   asin_hc?: string;
   asin_pb?: string;
   pageCount: number;
+  pageCountPB?: number;
+  pageCountHC?: number;
   description: string;
   shortDesc: string;
   excerpt: string;
@@ -37,15 +39,17 @@ export const books: Book[] = [
     series: "Masters X",
     title: "Masters X",
     subtitle: "The Inheritance of Frequency",
-    coverImage: "/covers/book1-pb.png",
-    coverImageHC: "/covers/book1-hc-v2.png",
-    coverImagePB: "/covers/book1-pb.png",
+    coverImage: "/covers/book1-paperback.png",
+    coverImageHC: "/covers/book1-hardcover-v2.png",
+    coverImagePB: "/covers/book1-paperback.png",
     isbn_hc: "9798295800801",
     isbn_pb: "9798256008048",
     isbn_ebook: "9798256008819",
     asin_hc: "B0GY7HJPYB",
     asin_pb: "B0H2GQX2G3",
-    pageCount: 200,
+    pageCount: 322,
+    pageCountPB: 322,
+    pageCountHC: 268,
     description:
       "His grandfather paid for a safety deposit box fifty-seven years in advance. Timed it to arrive at the exact moment Blake Masters would be ready to open it.\n\nInside: seven notebooks. Thirty years of research linking acoustic resonance to the architecture of human thought, documented by a man who saw the patterns from the cockpit of a U-2 spy plane at seventy thousand feet and spent his life proving they existed in bedrock beneath Kansas City.\n\nBlake is a graduate student who lost his security clearance, his job as a guard at SubTropolis, and the last person who tried to love him, all because he photographed geometric carvings in a tunnel that no official map acknowledges. They match his grandfather's notebooks exactly. They predate the limestone by millennia.\n\nThen a woman appears. Sister Nadia Volkov. Orphaned in Lviv, raised by Keeper nuns in a Prague convent, translating thirteenth-century Latin by the age of twelve. She has a PhD in medieval history and a dissertation arguing that grimoires are cognitive technologies. She arrives with Thai food and bandages and a warning: the people who killed his father want what is inside that box.\n\nBeneath the Strahov Library in Prague, the Premonstratensian monks guarded a sealed crypt for seven centuries. A thirteenth-century monk had scattered a single truth across seven cities, because what he found in the frequency was too dangerous to keep in one place, and too important to destroy.\n\nBlake and Nadia are about to open it.\n\nThe cost of perception is everything ordinary.",
     shortDesc:
@@ -66,9 +70,9 @@ export const books: Book[] = [
     series: "Masters X",
     title: "Masters X",
     subtitle: "The Grimoire",
-    coverImage: "/covers/book2-pb.png",
-    coverImageHC: "/covers/book2-hc-v2.png",
-    coverImagePB: "/covers/book2-pb.png",
+    coverImage: "/covers/book2-paperback.png",
+    coverImageHC: "/covers/book2-hardcover-v2.png",
+    coverImagePB: "/covers/book2-paperback.png",
     isbn_hc: "9798295812675",
     isbn_pb: "9798256009953",
     isbn_ebook: "9798256009625",
@@ -95,9 +99,9 @@ export const books: Book[] = [
     series: "Masters X",
     title: "Masters X",
     subtitle: "The Kingdom",
-    coverImage: "/covers/book3-pb.png",
-    coverImageHC: "/covers/book3-hc-v2.png",
-    coverImagePB: "/covers/book3-pb.png",
+    coverImage: "/covers/book3-paperback.png",
+    coverImageHC: "/covers/book3-hardcover-v2.png",
+    coverImagePB: "/covers/book3-paperback.png",
     isbn_hc: "9798256010072", // Hardcover proof ISBN
     isbn_pb: "9798295812705", // Paperback ISBN
     isbn_ebook: "9798256009809", // Ebook ISBN
@@ -124,9 +128,9 @@ export const books: Book[] = [
     series: "Masters X",
     title: "Masters X",
     subtitle: "Omnibus Edition",
-    coverImage: "/covers/omnibus-pb-v2.png",
-    coverImageHC: "/covers/omnibus-hc-v2.png",
-    coverImagePB: "/covers/omnibus-pb-v2.png",
+    coverImage: "/covers/omnibus-paperback-v2.png",
+    coverImageHC: "/covers/omnibus-hardcover-v2.png",
+    coverImagePB: "/covers/omnibus-paperback-v2.png",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_hc: "B0H364814B",
@@ -149,12 +153,12 @@ export const books: Book[] = [
     series: "John Hawkes Critical Study",
     title: "Innocence, Desire, and the Architecture of the Fall",
     subtitle: "The Grape and Its Counter-Symbols in the Fiction of John Hawkes",
-    coverImage: "/covers/hawkes-pb.png",
-    coverImageHC: "/covers/hawkes-hc.png",
-    coverImagePB: "/covers/hawkes-pb.png",
+    coverImage: "/covers/hawkes-paperback.png",
+    coverImageHC: "/covers/hawkes-hardcover.png",
+    coverImagePB: "/covers/hawkes-paperback.png",
     isbn_hc: "9798295777622", // Hardcover ISBN
     isbn_pb: "9798349308444", // Paperback ISBN
-    isbn_ebook: "TODO(jason) RESOLVE", // Mark as TODO for digital edition
+    isbn_ebook: "9798295778926", // Resolving TODO
     asin_hc: "B0H1Q6GD7Z",
     asin_pb: "B0GWLT9Y4G",
     pageCount: 90, // Reconciled from printed proof interior

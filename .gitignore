@@ -39,3 +39,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Large Exports
+Jason_Carroll_Holloway_Final_Export/
+website_unzipped/
+business_cards/
+*.pdf
+*.epub
+*.zip
+*_out.txt
+*.py

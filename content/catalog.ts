@@ -191,7 +191,7 @@ export const catalog: CatalogBook[] = [
       },
       {
         format: "Ebook",
-        isbn: "TODO(jason) RESOLVE", // Mark as TODO for digital edition ISBN
+        isbn: "9798295778926",
         price: "$9.99",
         specifications: "Kindle / EPUB Format"
       }

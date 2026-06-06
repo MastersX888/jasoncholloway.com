@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div>
             <div className="footer-brand-name">Jason Carroll Holloway</div>
-            <div className="footer-brand-press">Seventh City Press LLC</div>
+            <div className="footer-brand-press">Seventh City Press</div>
             <p className="footer-brand-desc" style={{ marginBottom: "1.5rem" }}>
               Literary fiction at the intersection of acoustic physics, medieval scholarship, and
               the architecture of human perception.
@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {currentYear} Jason Carroll Holloway · Seventh City Press LLC · All rights reserved</span>
+          <span>© {currentYear} Jason Carroll Holloway · Seventh City Press, an imprint of Omniscript LLC · All rights reserved</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--text-faint)" }}>
             f = 111.2 Hz
           </span>

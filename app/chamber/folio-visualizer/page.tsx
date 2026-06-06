@@ -2,6 +2,7 @@
 
 import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import foliosData from "@/lib/folios.json";
 
 interface Folio {
@@ -317,12 +318,12 @@ export default function FolioVisualizerPage() {
                         overflow: "hidden",
                         border: "1px solid var(--border)"
                       }}>
-                        <img
+                        <Image
                           src={folio.path}
                           alt={folio.title}
+                          fill
+                          unoptimized
                           style={{
-                            width: "100%",
-                            height: "100%",
                             objectFit: "cover",
                             filter: "invert(1)" // Inverted for glowing preview look
                           }}
@@ -411,12 +412,12 @@ export default function FolioVisualizerPage() {
                         pointerEvents: "none"
                       }}
                     >
-                      <img
+                      <Image
                         src={layer.folio.path}
                         alt={layer.folio.title}
+                        fill
+                        unoptimized
                         style={{
-                          width: "100%",
-                          height: "100%",
                           objectFit: "contain",
                         }}
                       />

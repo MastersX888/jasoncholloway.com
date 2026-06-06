@@ -4,6 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
   description: "The Grape and Its Counter-Symbols in the Fiction of John Hawkes. By Jason Carroll Holloway. Published by Seventh City Press.",
+  alternates: {
+    canonical: "https://jasoncholloway.com/books/hawkes-monograph/",
+  },
+  openGraph: {
+    url: "https://jasoncholloway.com/books/hawkes-monograph/",
+  },
 };
 
 export default function HawkesMonographPage() {
@@ -12,6 +18,7 @@ export default function HawkesMonographPage() {
       format: "Paperback",
       cover: "/covers/hawkes-pb.png",
       asin: "B0GWLT9Y4G",
+      isbn: "9798349308444",
       price: "$16.95",
       details: "Trade Paperback · 6x9 in · 90 pages",
       features: "Premium cream paper, matte cover finish"
@@ -20,6 +27,7 @@ export default function HawkesMonographPage() {
       format: "Hardcover",
       cover: "/covers/hawkes-hc.png",
       asin: "B0H1Q6GD7Z",
+      isbn: "9798295777622",
       price: "$26.95",
       details: "Laminate Casebound · 6x9 in · 90 pages",
       features: "Stitch-bound, gold foil element stamping"
@@ -28,6 +36,7 @@ export default function HawkesMonographPage() {
       format: "Ebook",
       cover: "/covers/hawkes-ebook.jpg",
       asin: "B0GWLT9Y4G", // Fallback or search link
+      isbn: "9798295778926",
       price: "$9.99",
       details: "EPUB / Kindle Format · Reflowable · 90 pages",
       features: "High-resolution figures, full text search"
@@ -37,34 +46,42 @@ export default function HawkesMonographPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Book",
-    "@id": "https://jasoncholloway.com/books/hawkes-monograph#work",
+    "@id": "https://jasoncholloway.com/books/hawkes-monograph/#work",
     "name": "Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes",
     "author": { "@id": "https://jasoncholloway.com/#person" },
     "publisher": { "@id": "https://jasoncholloway.com/#organization" },
     "inLanguage": "English",
     "numberOfPages": 90,
-    "workExample": [
-      {
+    "workExample": editions.flatMap((ed) =>
+      ed.isbn ? [{
         "@type": "Book",
-        "@id": "https://jasoncholloway.com/books/hawkes-monograph#paperback",
-        "isbn": "9798349308444",
-        "bookFormat": "https://schema.org/Paperback",
+        "@id": `https://jasoncholloway.com/books/hawkes-monograph/#${ed.format.toLowerCase()}`,
+        "isbn": ed.isbn,
+        "bookFormat": ed.format === "Paperback" ? "https://schema.org/Paperback" : ed.format === "Hardcover" ? "https://schema.org/Hardcover" : undefined,
         "numberOfPages": 90,
-        "potentialAction": {
+        "potentialAction": ed.asin ? {
           "@type": "BuyAction",
-          "target": "https://www.amazon.com/dp/B0GWLT9Y4G"
-        }
+          "target": `https://www.amazon.com/dp/${ed.asin}`
+        } : undefined
+      }] : []
+    )
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Books",
+        "item": "https://jasoncholloway.com/books/"
       },
       {
-        "@type": "Book",
-        "@id": "https://jasoncholloway.com/books/hawkes-monograph#hardcover",
-        "isbn": "9798295777622",
-        "bookFormat": "https://schema.org/Hardcover",
-        "numberOfPages": 90,
-        "potentialAction": {
-          "@type": "BuyAction",
-          "target": "https://www.amazon.com/dp/B0H1Q6GD7Z"
-        }
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Innocence, Desire, and the Architecture of the Fall",
+        "item": "https://jasoncholloway.com/books/hawkes-monograph/"
       }
     ]
   };
@@ -73,7 +90,7 @@ export default function HawkesMonographPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
       />
       <section className="page-header" style={{ paddingBottom: "3rem" }}>
         <div className="container">
@@ -194,7 +211,7 @@ export default function HawkesMonographPage() {
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Publication Details</div>
                 {[
                   { k: "Author", v: "Jason Carroll Holloway" },
-                  { k: "Publisher", v: "Seventh City Press LLC" },
+                  { k: "Publisher", v: "Seventh City Press" },
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
                   { k: "Status", v: "Releasing June 2026" },

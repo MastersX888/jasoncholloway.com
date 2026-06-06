@@ -16,7 +16,9 @@ files_to_crop = [
     "hawkes-pb.png",
     "hawkes-hc.png",
     "omnibus-pb.png",
+    "omnibus-pb-v2.png",
     "omnibus-hc.png",
+    "omnibus-hc-v2.png",
 ]
 
 for filename in files_to_crop:

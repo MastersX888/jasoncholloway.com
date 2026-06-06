@@ -1,7 +1,38 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-cormorant",
+  display: "swap",
+});
+
+const ebGaramond = EB_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-eb-garamond",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-jetbrains-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +62,7 @@ export const metadata: Metadata = {
     title: "Jason Carroll Holloway — Author & Seventh City Press",
     description:
       "Literary fiction at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception.",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -45,10 +76,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -56,17 +85,35 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@graph": [
                 {
+                  "@type": "WebSite",
+                  "@id": "https://jasoncholloway.com/#website",
+                  "url": "https://jasoncholloway.com/",
+                  "name": "Jason Carroll Holloway",
+                  "publisher": {
+                    "@id": "https://jasoncholloway.com/#organization"
+                  }
+                },
+                {
                   "@type": "Person",
                   "@id": "https://jasoncholloway.com/#person",
                   "name": "Jason Carroll Holloway",
-                  "url": "https://jasoncholloway.com",
+                  "url": "https://jasoncholloway.com/",
                   "jobTitle": "Author",
+                  "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
+                  "sameAs": [
+                    "https://amazon.com/author/jasoncholloway",
+                    "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway"
+                  ]
                 },
                 {
                   "@type": "Organization",
                   "@id": "https://jasoncholloway.com/#organization",
-                  "name": "Seventh City Press LLC",
-                  "url": "https://jasoncholloway.com/press",
+                  "name": "Seventh City Press",
+                  "url": "https://jasoncholloway.com/press/",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://jasoncholloway.com/og-image.png"
+                  },
                   "founder": { "@id": "https://jasoncholloway.com/#person" }
                 }
               ]

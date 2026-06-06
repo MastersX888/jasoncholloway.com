@@ -11,7 +11,27 @@ export async function generateStaticParams() {
     slug: book.slug,
   }));
 }
+import type { Metadata } from "next";
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const book = books.find((b) => b.slug === slug);
+  if (!book) return {};
+
+  return {
+    title: book.subtitle,
+    description: book.excerpt,
+    openGraph: {
+      title: `${book.title}: ${book.subtitle}`,
+      description: book.excerpt,
+      url: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
+      images: [{ url: book.coverImagePB }],
+    },
+    alternates: {
+      canonical: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
+    },
+  };
+}
 export default function BookPage({ params }: Props) {
   const { slug } = use(params);
   const book = books.find((b) => b.slug === slug);
@@ -63,11 +83,36 @@ export default function BookPage({ params }: Props) {
     ]
   };
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Books",
+        "item": "https://jasoncholloway.com/books"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Masters X Trilogy",
+        "item": "https://jasoncholloway.com/books/masters-x"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": book.subtitle,
+        "item": `https://jasoncholloway.com/books/masters-x/${book.slug}/`
+      }
+    ]
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
       />
       <section className="page-header" style={{ paddingBottom: "4rem" }}>
         <div className="container">
@@ -175,7 +220,7 @@ export default function BookPage({ params }: Props) {
                     <div style={{ fontSize: "0.8rem", color: "var(--text-faint)", marginBottom: "1rem" }}>
                       ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_pb}</span><br />
                       ASIN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.asin_pb}</span><br />
-                      Page Count: {book.pageCount} pages
+                      Page Count: {book.pageCountPB || book.pageCount} pages
                     </div>
                   </div>
                   <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
@@ -193,7 +238,7 @@ export default function BookPage({ params }: Props) {
                     <div style={{ fontSize: "0.8rem", color: "var(--text-faint)", marginBottom: "1rem" }}>
                       ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_hc}</span><br />
                       ASIN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.asin_hc}</span><br />
-                      Page Count: {book.pageCount} pages
+                      Page Count: {book.pageCountHC || book.pageCount} pages
                     </div>
                   </div>
                   <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
@@ -210,7 +255,7 @@ export default function BookPage({ params }: Props) {
                 <div className="label" style={{ marginBottom: "1rem" }}>Publication Details</div>
                 {[
                   { k: "Author", v: "Jason Carroll Holloway" },
-                  { k: "Publisher", v: "Seventh City Press LLC" },
+                  { k: "Publisher", v: "Seventh City Press" },
                   { k: "Series", v: `${book.series} Vol. ${book.volume}` },
                   { k: "Laminate", v: "Matte" },
                   { k: "Interior Color", v: "Premium Color (70lb)" },

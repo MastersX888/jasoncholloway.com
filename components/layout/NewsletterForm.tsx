@@ -23,11 +23,28 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
     setErrorMessage("");
 
     try {
-      // Simulate API network latency of 1 second
-      await new Promise((resolve) => setTimeout(resolve, 1120)); // 1.12s thematic delay (111.2 Hz)
-      console.log(`[NEWSLETTER SIGNUP SUCCESS] Email: ${email}`);
-      setStatus("success");
-      setEmail("");
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "29ea1914-9c58-4abf-b4e1-4e71e9a27186",
+          email: email,
+          subject: "New Newsletter Signup — JasonCHolloway.com",
+          from_name: "Newsletter System",
+        }),
+      });
+      const result = await response.json();
+      
+      if (result.success) {
+        setStatus("success");
+        setEmail("");
+      } else {
+        setStatus("error");
+        setErrorMessage(result.message || "An unexpected transmission error occurred. Please try again.");
+      }
     } catch {
       setStatus("error");
       setErrorMessage("An unexpected transmission error occurred. Please try again.");

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/layout/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact & Press — Jason Carroll Holloway",
@@ -47,32 +48,8 @@ export default function ContactPage() {
                 </p>
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", marginBottom: "3rem" }}>
-                <div className="card" style={{ padding: "1.5rem" }}>
-                  <div className="label-cyan" style={{ marginBottom: "0.5rem" }}>Press Contact</div>
-                  <div style={{ fontSize: "1.1rem", fontFamily: "var(--font-display)", color: "var(--text)", marginBottom: "0.25rem" }}>
-                    Media Relations
-                  </div>
-                  <div style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "0.75rem" }}>
-                    Seventh City Press
-                  </div>
-                  <a href="mailto:press@jasoncholloway.com" style={{ fontSize: "0.9rem", color: "var(--cyan)", textDecoration: "underline" }}>
-                    press@jasoncholloway.com
-                  </a>
-                </div>
-
-                <div className="card" style={{ padding: "1.5rem" }}>
-                  <div className="label" style={{ marginBottom: "0.5rem" }}>Rights & Licensing</div>
-                  <div style={{ fontSize: "1.1rem", fontFamily: "var(--font-display)", color: "var(--text)", marginBottom: "0.25rem" }}>
-                    Rights Department
-                  </div>
-                  <div style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "0.75rem" }}>
-                    Translation, Film & Audio
-                  </div>
-                  <a href="mailto:rights@jasoncholloway.com" style={{ fontSize: "0.9rem", color: "var(--gold)", textDecoration: "underline" }}>
-                    rights@jasoncholloway.com
-                  </a>
-                </div>
+              <div style={{ marginBottom: "3rem" }}>
+                <ContactForm />
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>

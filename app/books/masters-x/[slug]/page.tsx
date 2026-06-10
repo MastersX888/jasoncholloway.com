@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { books } from "@/lib/data/books";
-
+import NewsletterForm from "@/components/layout/NewsletterForm";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: book.subtitle,
     description: book.excerpt,
+    keywords: book.slug === "the-inheritance-of-frequency" ? [...book.keywords, "conspiracy thriller", "books like the da vinci code", "voynich manuscript fiction", "consciousness thriller", "medieval manuscript thriller"] : book.keywords,
     openGraph: {
       title: `${book.title}: ${book.subtitle}`,
       description: book.excerpt,
@@ -78,7 +79,11 @@ export default function BookPage({ params }: Props) {
         "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#ebook`,
         "isbn": book.isbn_ebook,
         "bookFormat": "https://schema.org/EBook",
-        "numberOfPages": book.pageCount
+        "numberOfPages": book.pageCount,
+        "potentialAction": book.asin_ebook ? {
+          "@type": "BuyAction",
+          "target": `https://www.amazon.com/dp/${book.asin_ebook}`
+        } : undefined
       }] : [])
     ]
   };
@@ -182,6 +187,31 @@ export default function BookPage({ params }: Props) {
                 <div className="ms-pull" style={{ margin: "1rem 0" }}>
                   <p>{book.excerpt}</p>
                 </div>
+                
+                {book.asin_ebook && (
+                  <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
+                    <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", fontSize: "1.1rem", padding: "1rem" }}>
+                      Read on Kindle — ${book.price_ebook || "6.99"}
+                    </a>
+                    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+                      {book.asin_pb && (
+                        <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: "center", fontSize: "0.85rem" }}>
+                          Paperback Edition
+                        </a>
+                      )}
+                      {book.asin_hc && (
+                        <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: "center", fontSize: "0.85rem" }}>
+                          Hardcover Edition
+                        </a>
+                      )}
+                    </div>
+                    {book.slug === "the-inheritance-of-frequency" && (
+                      <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", textAlign: "center", marginTop: "0.5rem" }}>
+                        <em>Volume 1 of the complete Masters X Trilogy — all three volumes available now.</em>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -196,12 +226,23 @@ export default function BookPage({ params }: Props) {
               <div className="section-label-row" style={{ marginBottom: "2rem" }}>
                 <span className="label">About the Book</span>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "3rem" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
                 {paragraphs.map((p, i) => (
                   <p key={i} style={{ color: "var(--text-muted)", lineHeight: 1.85, fontSize: "0.95rem" }}>
                     {p}
                   </p>
                 ))}
+              </div>
+              
+              {book.slug === "the-inheritance-of-frequency" && (
+                <div style={{ marginBottom: "3rem", padding: "1rem", borderLeft: "2px solid var(--gold)", background: "var(--bg-raised)", color: "var(--text-muted)", fontSize: "0.95rem", fontStyle: "italic" }}>
+                  For readers of Dan Brown's symbology thrillers, Umberto Eco's manuscript mysteries, and Blake Crouch's consciousness fiction.
+                </div>
+              )}
+              
+              <div style={{ marginBottom: "3rem", background: "var(--bg-raised)", padding: "1.5rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)" }}>
+                <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", marginBottom: "1rem" }}>Not ready to buy? Read the opening chapters free.</h4>
+                <NewsletterForm compact={true} />
               </div>
 
               {/* Show All Editions Side-by-Side */}
@@ -282,9 +323,11 @@ export default function BookPage({ params }: Props) {
                   EPUB standard ebook available for Kindle, Nook, and Apple Books.
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-                  <a href={`https://www.amazon.com/s?k=${book.isbn_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                    Purchase Kindle Ebook
-                  </a>
+                  {book.asin_ebook && (
+                    <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
+                      Purchase Kindle Ebook
+                    </a>
+                  )}
                   <a href="https://www.ingramcontent.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ width: "100%", justifyContent: "center" }}>
                     IngramSpark Digital
                   </a>

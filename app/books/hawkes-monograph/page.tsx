@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import { BUY_LINKS } from "@/lib/data/buyLinks";
 
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
@@ -36,9 +37,9 @@ export default function HawkesMonographPage() {
     {
       format: "Ebook",
       cover: "/covers/hawkes-ebook.jpg",
-      asin: "B0GWLT9Y4G", // Fallback or search link
+      asin: BUY_LINKS.HAWKES_KINDLE_ASIN,
       isbn: "9798295778926",
-      price: "$9.99",
+      price: `$${BUY_LINKS.HAWKES_KINDLE_PRICE || "9.99"}`,
       details: "EPUB / Kindle Format · Reflowable · 90 pages",
       features: "High-resolution figures, full text search"
     }
@@ -163,7 +164,7 @@ export default function HawkesMonographPage() {
 
                 <div style={{ marginTop: "1rem" }}>
                   <a 
-                    href={ed.format === "Ebook" ? `https://www.amazon.com/s?k=Innocence+Desire+and+the+Architecture+of+the+Fall+Jason+Carroll+Holloway` : `https://www.amazon.com/dp/${ed.asin}`} 
+                    href={`https://www.amazon.com/dp/${ed.asin}`} 
                     target="_blank" 
                     rel="noopener noreferrer" 
                     className="btn btn-gold" 

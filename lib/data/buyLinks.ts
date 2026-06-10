@@ -1,0 +1,16 @@
+export const BUY_LINKS = {
+  // Kindle ASINs
+  MX1_KINDLE_ASIN: "B0H4KYMSM1",
+  MX2_KINDLE_ASIN: "B0H4KQ4YQJ",
+  MX3_KINDLE_ASIN: "B0H4L36X21",
+  HAWKES_KINDLE_ASIN: "B072BLH7X7",
+  
+  // No ebook version exists for Omnibus
+  MX_OMNIBUS_KINDLE_ASIN: null,
+
+  // Pricing
+  MX1_KINDLE_PRICE: "6.99",
+  MX2_KINDLE_PRICE: "6.99",
+  MX3_KINDLE_PRICE: "6.99",
+  HAWKES_KINDLE_PRICE: "6.99",
+};

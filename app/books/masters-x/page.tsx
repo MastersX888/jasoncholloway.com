@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
 import type { Metadata } from "next";
+import NewsletterForm from "@/components/layout/NewsletterForm";
 
 export const metadata: Metadata = {
   title: "Masters X Trilogy",
@@ -183,6 +184,16 @@ export default function MastersXPage() {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
+        <div className="container" style={{ maxWidth: "800px" }}>
+          <div style={{ background: "var(--bg-raised)", padding: "2rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)" }}>
+            <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "1.25rem", textAlign: "center" }}>Not ready to buy? Read the opening chapters free.</h4>
+            <NewsletterForm compact={true} />
+          </div>
+        </div>
+      </section>
+
       {/* Omnibus Section */}
       {(() => {
         const omnibus = books.find(b => b.slug === "omnibus");
@@ -288,6 +299,13 @@ function BookBody({ book }: { book: typeof books[0] }) {
       {/* Editions Specifications list */}
       <div className="card" style={{ background: "var(--bg-raised)", borderColor: "var(--border)", padding: "1.25rem", marginBottom: "1.5rem" }}>
         <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 600 }}>Available Formats & Specifications</div>
+        
+        {book.asin_ebook && (
+          <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", marginBottom: "1rem", fontSize: "1rem", padding: "0.8rem" }}>
+            Read on Kindle — ${book.price_ebook || "6.99"}
+          </a>
+        )}
+
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
           <div>
             <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text)" }}>Paperback</div>

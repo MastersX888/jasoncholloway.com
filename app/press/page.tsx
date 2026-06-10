@@ -64,13 +64,13 @@ export default function PressPage() {
                   
                   let title = `${b.series}: ${b.subtitle}`;
                   let type = "Novel · Literary Fiction";
-                  let status = "Releasing June 2026";
+                  let status = "Available Now";
                   let href = `/books/masters-x/${b.slug}`;
 
                   if (isHawkes) {
                     title = b.title;
                     type = "Literary Criticism";
-                    status = "Available June 2026"; // Standardized release
+                    status = "Available Now";
                     href = "/books/hawkes-monograph";
                   } else if (isOmnibus) {
                     type = "Collected Edition";

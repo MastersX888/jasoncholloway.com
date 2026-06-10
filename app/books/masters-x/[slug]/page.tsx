@@ -328,9 +328,6 @@ export default function BookPage({ params }: Props) {
                       Purchase Kindle Ebook
                     </a>
                   )}
-                  <a href="https://www.ingramcontent.com" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ width: "100%", justifyContent: "center" }}>
-                    IngramSpark Digital
-                  </a>
                 </div>
               </div>
 

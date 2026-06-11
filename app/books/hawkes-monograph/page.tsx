@@ -111,7 +111,7 @@ export default function HawkesMonographPage() {
                   The Grape and Its Counter-Symbols in the Fiction of John Hawkes
                 </p>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "2rem" }}>
-                  By Jason Carroll Holloway · Seventh City Press · Releasing June 2026
+                  By Jason Carroll Holloway · Seventh City Press · Available Now
                 </p>
 
                 <div className="ms-pull" style={{ margin: "1.5rem 0", maxWidth: "65ch" }}>
@@ -216,7 +216,7 @@ export default function HawkesMonographPage() {
                   { k: "Publisher", v: "Seventh City Press" },
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
-                  { k: "Status", v: "Releasing June 2026" },
+                  { k: "Status", v: "Available Now" },
                   { k: "Hardcover ASIN", v: "B0H1Q6GD7Z" },
                   { k: "Paperback ASIN", v: "B0GWLT9Y4G" },
                 ].map((row) => (

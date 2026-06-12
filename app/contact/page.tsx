@@ -4,7 +4,7 @@ import ContactForm from "@/components/layout/ContactForm";
 export const metadata: Metadata = {
   title: "Contact & Press — Jason Carroll Holloway",
   description:
-    "Get in touch with Jason Carroll Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
+    "Get in touch with Jason C. Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
   alternates: {
     canonical: "https://jasoncholloway.com/contact/",
   },
@@ -42,7 +42,7 @@ export default function ContactPage() {
                   the Seventh City Press media team.
                 </p>
                 <p>
-                  Jason Carroll Holloway is available for selective interviews, literary panels, 
+                  Jason C. Holloway is available for selective interviews, literary panels, 
                   and discussions exploring his approach to fiction, structuralist criticism, 
                   and the integration of esoteric histories into the modern novel.
                 </p>
@@ -100,3 +100,4 @@ export default function ContactPage() {
     </>
   );
 }
+

@@ -3,13 +3,13 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Jason Carroll Holloway",
   description:
-    "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
+    "Jason C. Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
   alternates: {
     canonical: "https://jasoncholloway.com/about/",
   },
   openGraph: {
     url: "https://jasoncholloway.com/about/",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
+    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason C. Holloway — Masters X Trilogy" }],
   },
 };
 
@@ -54,7 +54,7 @@ export default function AboutPage() {
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", color: "var(--text-muted)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "3rem" }}>
                 <p>
-                  Jason Carroll Holloway holds an M.A. in English Literature from Mercy University in Dobbs Ferry,
+                  Jason C. Holloway holds an M.A. in English Literature from Mercy University in Dobbs Ferry,
                   New York, as well as various degrees and certificates in Psychology, Sociology, Creative Writing,
                   and Data Analytics. He is a writer and researcher whose work explores the intersection of
                   acoustic science, medieval scholarship, and human consciousness. He lives in Kansas City.
@@ -172,7 +172,7 @@ export default function AboutPage() {
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Publisher</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, marginBottom: "1rem" }}>
                   Seventh City Press<br />
-                  Jason Carroll Holloway, Publisher
+                  Jason C. Holloway, Publisher
                 </p>
                 <a href="mailto:press@jasoncholloway.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
                   Contact for Rights and Press
@@ -185,3 +185,4 @@ export default function AboutPage() {
     </>
   );
 }
+

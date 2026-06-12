@@ -11,8 +11,7 @@ export default function Footer() {
             <div className="footer-brand-name">Jason Carroll Holloway</div>
             <div className="footer-brand-press">Seventh City Press</div>
             <p className="footer-brand-desc" style={{ marginBottom: "1.5rem" }}>
-              Literary fiction at the intersection of acoustic physics, medieval scholarship, and
-              the architecture of human perception.
+              Kansas City conspiracy fiction where the Voynich Manuscript, the Ars Notoria, SubTropolis, and a 111 Hz frequency converge. Three novels by Jason Carroll Holloway.
             </p>
             <div style={{ maxWidth: "380px" }}>
               <div className="footer-col-title" style={{ marginBottom: "0.5rem", color: "var(--text-muted)" }}>Newsletter Dispatch</div>
@@ -32,12 +31,14 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="footer-col-title">Research</div>
+            <div className="footer-col-title">Research & Field Notes</div>
             <nav className="footer-links">
+              <Link href="/field-notes">Field Notes Hub</Link>
+              <Link href="/field-notes/subtropolis">SubTropolis</Link>
+              <Link href="/field-notes/111-hz">111 Hz</Link>
+              <Link href="/field-notes/voynich-manuscript">Voynich Manuscript</Link>
               <Link href="/chamber">Analysis Chamber</Link>
               <Link href="/chamber/harmonic-stack">Harmonic Stack</Link>
-              <Link href="/chamber/global-map">Global Site Map</Link>
-              <Link href="/chamber/schumann-baseline">Schumann Baseline</Link>
               <Link href="/chamber/research-archive">Research Archive</Link>
             </nav>
           </div>

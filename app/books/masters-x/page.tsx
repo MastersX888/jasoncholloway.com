@@ -5,13 +5,15 @@ import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Masters X Trilogy",
+  title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
   description:
-    "Three novels at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception. By Jason Carroll Holloway. Published by Seventh City Press.",
+    "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. For readers of Foucault's Pendulum, The Da Vinci Code, and Cloud Cuckoo Land. By Jason Carroll Holloway. Published by Seventh City Press.",
   alternates: {
     canonical: "https://jasoncholloway.com/books/masters-x/",
   },
   openGraph: {
+    title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
+    description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
     url: "https://jasoncholloway.com/books/masters-x/",
     images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
@@ -48,6 +50,12 @@ export default function MastersXPage() {
               "name": "Masters X Trilogy",
               "author": { "@id": "https://jasoncholloway.com/#person" },
               "publisher": { "@id": "https://jasoncholloway.com/#organization" },
+              "locationCreated": {
+                "@type": "Place",
+                "name": "Kansas City, Missouri"
+              },
+              "genre": ["Conspiracy Thriller", "Literary Fiction", "Historical Fiction", "Mystery"],
+              "description": "A Kansas City trilogy tracing the Voynich Manuscript, the Ars Notoria, and a 111 Hz archaeoacoustic frequency from SubTropolis to a sealed crypt beneath Prague's Strahov Monastery.",
               "hasPart": books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map(b => ({
                 "@type": "Book",
                 "name": b.title + ": " + b.subtitle,
@@ -67,11 +75,14 @@ export default function MastersXPage() {
               Masters X<br />
               <span style={{ color: "var(--gold)", fontStyle: "italic" }}>Trilogy</span>
             </h1>
-            <p style={{ maxWidth: "62ch", color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.85 }}>
+            <p style={{ maxWidth: "62ch", color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.85, marginBottom: "1.25rem" }}>
               A safety deposit box, paid in advance for fifty-seven years, arrives the day Blake Masters
               is ready to receive it. Inside: seven notebooks, thirty years of classified research, and a
               cross-reference to a crypt that has been sealed since 1267. Three novels about what you do
               when you open something that was waiting specifically for you.
+            </p>
+            <p style={{ maxWidth: "60ch", color: "var(--text-faint)", fontSize: "0.9rem", fontStyle: "italic", marginBottom: "0.5rem" }}>
+              For readers of Umberto Eco’s <em>Foucault’s Pendulum</em>, Dan Brown’s <em>The Da Vinci Code</em>, Elizabeth Kostova’s <em>The Historian</em>, and Anthony Doerr’s <em>Cloud Cuckoo Land</em>.
             </p>
           </div>
         </div>
@@ -310,12 +321,34 @@ function BookBody({ book }: { book: typeof books[0] }) {
           <div>
             <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text)" }}>Paperback</div>
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_pb}</span></div>
-            <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block", marginTop: "0.25rem" }}>Order on Amazon →</a>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
+              {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
+                <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block" }}>
+                  Buy Direct {book.price_pb_is ? `($${book.price_pb_is})` : "(Best Price)"} →
+                </a>
+              )}
+              {book.asin_pb && (
+                <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
+                  Order on Amazon {book.price_pb_amazon ? `($${book.price_pb_amazon})` : ""} →
+                </a>
+              )}
+            </div>
           </div>
           <div>
             <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text)" }}>Hardcover</div>
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_hc}</span></div>
-            <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block", marginTop: "0.25rem" }}>Order on Amazon →</a>
+            <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
+              {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
+                <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block" }}>
+                  Buy Direct {book.price_hc_is ? `($${book.price_hc_is})` : "(Best Price)"} →
+                </a>
+              )}
+              {book.asin_hc && (
+                <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
+                  Order on Amazon {book.price_hc_amazon ? `($${book.price_hc_amazon})` : ""} →
+                </a>
+              )}
+            </div>
           </div>
         </div>
         <div style={{ borderTop: "1px solid var(--border-faint)", marginTop: "0.75rem", paddingTop: "0.75rem", display: "flex", justifyContent: "space-between", fontSize: "0.75rem" }}>

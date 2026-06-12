@@ -25,6 +25,10 @@ export interface Book {
   asin_pb?: string;
   asin_ebook?: string | null;
   price_ebook?: string;
+  price_hc_amazon?: string;
+  price_pb_amazon?: string;
+  price_hc_is?: string;
+  price_pb_is?: string;
   pageCount: number;
   pageCountPB?: number;
   pageCountHC?: number;
@@ -150,6 +154,8 @@ export const books: Book[] = [
     isbn_pb: "9798256072704",
     asin_hc: "B0H364814B",
     asin_ebook: null, // No ebook version
+    price_hc_amazon: "49.99",
+    price_hc_is: "29.99",
     pageCount: 736, // Total trilogy page count
     description:
       "All three volumes collected in a single monumental volume. The complete Masters X Trilogy in one book, available in both hardcover and paperback editions.",

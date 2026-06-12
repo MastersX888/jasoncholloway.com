@@ -18,15 +18,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const book = books.find((b) => b.slug === slug);
   if (!book) return {};
 
+  const volumeTitles: Record<string, string> = {
+    "the-inheritance-of-frequency": "The Inheritance of Frequency — A Kansas City Conspiracy Thriller | Masters X Book 1",
+    "the-grimoire": "The Grimoire — Medieval Manuscripts & Archaeoacoustics | Masters X Book 2",
+    "the-kingdom": "The Kingdom — Consciousness, Kansas City & the Frequency | Masters X Book 3",
+  };
+
+  const volumeDescs: Record<string, string> = {
+    "the-inheritance-of-frequency": "A fired Kansas City security guard inherits classified acoustic research linking SubTropolis carvings, the Voynich Manuscript, and a Prague crypt sealed since 1267. For readers of Foucault's Pendulum and The Da Vinci Code.",
+    "the-grimoire": "Blake Masters maps a medieval preparation protocol from an Iceland cottage as Andrew's algorithm decodes the acoustic architecture of Chartres Cathedral. The Ars Notoria is not magic — it's cognitive technology.",
+    "the-kingdom": "The demonstration: 111.2 Hz, a Kansas City limestone chamber, and 1.2 million open-source downloads. Who gets access to their own fundamental frequency? Masters X Book 3.",
+  };
+
+  const title = volumeTitles[slug] ?? book.subtitle;
+  const description = volumeDescs[slug] ?? book.excerpt;
+
   return {
-    title: book.subtitle,
-    description: book.excerpt,
-    keywords: book.slug === "the-inheritance-of-frequency" ? [...book.keywords, "conspiracy thriller", "books like the da vinci code", "voynich manuscript fiction", "consciousness thriller", "medieval manuscript thriller"] : book.keywords,
+    title,
+    description,
+    keywords: slug === "the-inheritance-of-frequency"
+      ? [...book.keywords, "conspiracy thriller", "books like the da vinci code", "voynich manuscript fiction", "consciousness thriller", "medieval manuscript thriller", "SubTropolis"]
+      : slug === "the-grimoire"
+      ? [...book.keywords, "Chartres cathedral acoustics", "medieval grimoire fiction", "Ars Notoria explained", "Iceland novel"]
+      : [...book.keywords, "books about frequency", "sound healing fiction", "Kansas City novel", "Gospel of Thomas"],
     openGraph: {
-      title: `${book.title}: ${book.subtitle}`,
-      description: book.excerpt,
+      title,
+      description,
       url: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
-      images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
+      images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: `${book.subtitle} — Masters X by Jason Carroll Holloway` }],
     },
     alternates: {
       canonical: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
@@ -88,6 +107,54 @@ export default function BookPage({ params }: Props) {
     ]
   };
 
+  // Per-volume FAQ data
+  const faqData: Record<string, Array<{q: string; a: string}>> = {
+    "the-inheritance-of-frequency": [
+      { q: "Do I need to read Masters X in order?", a: "Yes — the trilogy is designed to be read in sequence. Volume I establishes all the characters, locations, and the core mystery. Volume II deepens the preparation protocol. Volume III resolves everything. Starting with Volume I is the only recommended path." },
+      { q: "Is The Inheritance of Frequency a standalone novel?", a: "It functions as a complete first act with a satisfying arc, but the story continues directly into The Grimoire. The three volumes are best understood as a single, continuous novel published in three parts." },
+      { q: "Is the Voynich Manuscript in this novel?", a: "Yes. The Folio Visualizer in the Analysis Chamber is built around 181 Voynich Manuscript folios and Ars Notoria notae. The novel's plot pivots on Nadia's discovery that the Voynich Manuscript, the Ars Notoria, and the Codex Gigas are three expressions of a single system." },
+      { q: "Where can I buy The Inheritance of Frequency?", a: "Available in Hardcover, Paperback, and Kindle editions on Amazon, and direct from IngramSpark. See the edition links on this page." },
+    ],
+    "the-grimoire": [
+      { q: "Do I need to read Volume I before The Grimoire?", a: "Yes. The Grimoire picks up immediately after the events of The Inheritance of Frequency and assumes full knowledge of the first volume's revelations." },
+      { q: "What is the Ars Notoria, really?", a: "The Ars Notoria is a real thirteenth-century Solomonic manuscript, available in institutional collections worldwide. It uses geometric figures called notae and structured prayers to develop memory and eloquence. The Grimoire's fictional reading is that the notae are interfaces — cognitive technology, not magic. Read the full history in the Field Notes." },
+      { q: "Is Chartres Cathedral's acoustics real?", a: "Cathedral acoustics are a real and documented field. The specific frequency relationships in the novel are the trilogy's fictional architecture, built on real acoustic research into medieval sacred spaces." },
+      { q: "Where can I buy The Grimoire?", a: "Available in Hardcover, Paperback, and Kindle editions on Amazon, and direct from IngramSpark. See the edition links on this page." },
+    ],
+    "the-kingdom": [
+      { q: "Do I need to read Volumes I and II before The Kingdom?", a: "Absolutely. The Kingdom is the culmination of a three-volume story. It will not make sense without the first two volumes." },
+      { q: "What is the 111 Hz frequency in the novel?", a: "111 Hz is a standing-wave frequency documented by acoustic researchers in multiple ancient stone chambers worldwide, including the Hħal-Saflieni Hypogeum in Malta. The trilogy uses this documented research as its scientific foundation." },
+      { q: "Is 'The Kingdom of God is within you' a real saying?", a: "Saying 113 of the Gospel of Thomas reads: 'The kingdom of God is spread upon the earth, and people do not see it.' The Gospel of Thomas is a real first-century text discovered at Nag Hammadi, Egypt in 1945. It is available in scholarly translation." },
+      { q: "Where can I buy The Kingdom?", a: "Available in Hardcover, Paperback, and Kindle editions on Amazon, and direct from IngramSpark. See the edition links on this page." },
+    ],
+  };
+
+  const volumeFaqs = faqData[slug] ?? [];
+
+  // Per-volume Real Elements sidebar data
+  const realElementsData: Record<string, Array<{label: string; href: string}>> = {
+    "the-inheritance-of-frequency": [
+      { label: "SubTropolis, Kansas City", href: "/field-notes/subtropolis" },
+      { label: "The Voynich Manuscript", href: "/field-notes/voynich-manuscript" },
+      { label: "The Strahov Monastery Library", href: "/field-notes/strahov-monastery" },
+      { label: "The Ars Notoria", href: "/field-notes/ars-notoria" },
+      { label: "Oscar-01 Launch Control", href: "/field-notes/oscar-01" },
+    ],
+    "the-grimoire": [
+      { label: "111 Hz: Ancient Chamber Acoustics", href: "/field-notes/111-hz" },
+      { label: "The Ars Notoria", href: "/field-notes/ars-notoria" },
+      { label: "Cymatics: Sound Made Visible", href: "/field-notes/cymatics" },
+    ],
+    "the-kingdom": [
+      { label: "Gospel of Thomas, Saying 113", href: "/field-notes/gospel-of-thomas" },
+      { label: "111 Hz: Ancient Chamber Acoustics", href: "/field-notes/111-hz" },
+      { label: "The Real Kansas City of Masters X", href: "/field-notes/kansas-city-locations" },
+      { label: "Meramec Caverns", href: "/field-notes/meramec-caverns" },
+    ],
+  };
+
+  const volumeRealElements = realElementsData[slug] ?? [];
+
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -113,20 +180,34 @@ export default function BookPage({ params }: Props) {
     ]
   };
 
+  const faqJsonLd = volumeFaqs.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": volumeFaqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a,
+      }
+    }))
+  } : null;
+
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])]) }}
       />
       <section className="page-header" style={{ paddingBottom: "4rem" }}>
         <div className="container">
           <div className="page-header-inner">
             <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
-              <Link href="/books/masters-x" className="btn btn-ghost btn-sm" style={{ fontSize: "0.78rem" }}>
-                ← Masters X Trilogy
-              </Link>
-              <span className="badge badge-gold">Volume {book.volume} of 3</span>
+              <Link href="/books/masters-x" className="hover:text-foreground transition-colors">
+              {book.series}
+            </Link>
+            <span className="text-muted-foreground">·</span>
+            <span className="text-foreground">{book.title}</span>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "380px 1fr", gap: "3.5rem", alignItems: "start" }}>
@@ -264,9 +345,18 @@ export default function BookPage({ params }: Props) {
                       Page Count: {book.pageCountPB || book.pageCount} pages
                     </div>
                   </div>
-                  <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                    Order Paperback on Amazon
-                  </a>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                    {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
+                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
+                        Buy Direct {book.price_pb_is ? `— $${book.price_pb_is}` : "— Best Price"}
+                      </a>
+                    )}
+                    {book.asin_pb && (
+                      <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" className={book.buyLinks.find(l => l.label === "IngramSpark (PB)") ? "btn btn-outline" : "btn btn-gold"} style={{ width: "100%", justifyContent: "center" }}>
+                        Amazon {book.price_pb_amazon ? `— $${book.price_pb_amazon}` : ""}
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* Hardcover Card */}
@@ -282,9 +372,18 @@ export default function BookPage({ params }: Props) {
                       Page Count: {book.pageCountHC || book.pageCount} pages
                     </div>
                   </div>
-                  <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                    Order Hardcover on Amazon
-                  </a>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                    {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
+                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
+                        Buy Direct {book.price_hc_is ? `— $${book.price_hc_is}` : "— Best Price"}
+                      </a>
+                    )}
+                    {book.asin_hc && (
+                      <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" className={book.buyLinks.find(l => l.label === "IngramSpark (HC)") ? "btn btn-outline" : "btn btn-gold"} style={{ width: "100%", justifyContent: "center" }}>
+                        Amazon {book.price_hc_amazon ? `— $${book.price_hc_amazon}` : ""}
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
 
@@ -339,10 +438,57 @@ export default function BookPage({ params }: Props) {
                   ))}
                 </div>
               </div>
+
+              {/* Real Elements Field Notes */}
+              {volumeRealElements.length > 0 && (
+                <div className="card" style={{ borderColor: "var(--gold-dim)" }}>
+                  <div className="label" style={{ marginBottom: "0.75rem" }}>The Real History</div>
+                  <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.5 }}>
+                    Every place and document in this volume is real. Read the documented history:
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
+                    {volumeRealElements.map(el => (
+                      <Link key={el.href} href={el.href} style={{
+                        fontSize: "0.82rem",
+                        color: "var(--gold)",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.35rem",
+                        padding: "0.3rem 0",
+                        borderBottom: "1px solid var(--border-faint)",
+                      }}>
+                        <span style={{ opacity: 0.6 }}>→</span> {el.label}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link href="/field-notes" style={{ display: "block", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--text-faint)" }}>
+                    All Field Notes →
+                  </Link>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {volumeFaqs.length > 0 && (
+        <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
+          <div className="container" style={{ maxWidth: "800px" }}>
+            <div className="section-label-row">
+              <span className="label">Frequently Asked Questions</span>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+              {volumeFaqs.map((faq, i) => (
+                <div key={i} style={{ borderBottom: "1px solid var(--border-faint)", paddingBottom: "1.5rem" }}>
+                  <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", fontWeight: 500, marginBottom: "0.5rem", color: "var(--text)" }}>{faq.q}</h3>
+                  <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.75 }}>{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Navigation between books */}
       <section style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", padding: "3rem 0" }}>

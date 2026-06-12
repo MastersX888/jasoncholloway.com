@@ -19,10 +19,12 @@ export default function NotFound() {
       <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontStyle: "italic", fontFamily: "var(--font-display)" }}>
         The page you&apos;re looking for doesn&apos;t exist — or has been scattered across seven cities.
       </p>
-      <div style={{ display: "flex", gap: "1rem" }}>
-        <Link href="/" className="btn btn-gold">Return Home</Link>
+      <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center", maxWidth: "600px" }}>
+        <Link href="/" className="btn btn-outline">Return Home</Link>
+        <Link href="/books/masters-x" className="btn btn-gold">Read the Trilogy</Link>
+        <Link href="/field-notes" className="btn btn-outline">Field Notes</Link>
         <Link href="/chamber" className="btn btn-outline" style={{ color: "var(--cyan)", borderColor: "var(--cyan-dim)" }}>
-          Enter the Chamber
+          Analysis Chamber
         </Link>
       </div>
     </div>

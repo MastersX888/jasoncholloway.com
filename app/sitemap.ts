@@ -21,6 +21,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/chamber/tremor-analysis`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
     { url: `${baseUrl}/press`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
+    // Field Notes hub
+    { url: `${baseUrl}/field-notes`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
   ];
 
   // Dynamic book routes
@@ -32,5 +34,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...bookRoutes];
+  // Field Notes routes
+  const fieldNoteSlugs = [
+    "subtropolis",
+    "111-hz",
+    "voynich-manuscript",
+    "ars-notoria",
+    "strahov-monastery",
+    "codex-gigas",
+    "kansas-city-locations",
+    "oscar-01",
+    "u2-test-pilots",
+    "cymatics",
+    "gospel-of-thomas",
+    "meramec-caverns",
+  ];
+  const fieldNoteRoutes: MetadataRoute.Sitemap = fieldNoteSlugs.map((slug) => ({
+    url: `${baseUrl}/field-notes/${slug}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly",
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...bookRoutes, ...fieldNoteRoutes];
 }

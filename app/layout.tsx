@@ -36,22 +36,27 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jason Carroll Holloway — Author & Seventh City Press",
-    template: "%s | Jason Carroll Holloway",
+    default: "Jason C. Holloway — Author & Seventh City Press",
+    template: "%s | Jason C. Holloway",
   },
   description:
-    "Jason Carroll Holloway is the author of the Masters X Trilogy — literary fiction exploring acoustic consciousness, medieval manuscripts, and the architecture of human perception. Published by Seventh City Press.",
+    "Jason Carroll Holloway is the author of the Masters X Trilogy — a Kansas City conspiracy thriller tracing the Voynich Manuscript, the Ars Notoria, SubTropolis, and the 111 Hz archaeoacoustics phenomenon. Published by Seventh City Press.",
   keywords: [
     "Jason Carroll Holloway",
+    "Jason C. Holloway",
     "Masters X Trilogy",
     "Seventh City Press",
-    "literary fiction",
-    "acoustic consciousness",
+    "Kansas City fiction",
+    "SubTropolis",
+    "Voynich Manuscript",
+    "Ars Notoria",
+    "111 Hz frequency",
+    "archaeoacoustics",
+    "The Inheritance of Frequency",
     "The Grimoire",
     "The Kingdom",
-    "The Inheritance of Frequency",
-    "Ars Notoria",
-    "resonance fiction",
+    "conspiracy thriller",
+    "medieval manuscript thriller",
   ],
   authors: [{ name: "Jason Carroll Holloway" }],
   openGraph: {
@@ -59,9 +64,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jasoncholloway.com",
     siteName: "Jason Carroll Holloway",
-    title: "Jason Carroll Holloway — Author & Seventh City Press",
+    title: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
     description:
-      "Literary fiction at the intersection of acoustic physics, medieval scholarship, and the architecture of human perception.",
+      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
     images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
   twitter: {
@@ -97,8 +102,30 @@ export default function RootLayout({
                   "@type": "Person",
                   "@id": "https://jasoncholloway.com/#person",
                   "name": "Jason Carroll Holloway",
+                  "alternateName": "Jason C. Holloway",
                   "url": "https://jasoncholloway.com/",
                   "jobTitle": "Author",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Kansas City",
+                    "addressRegion": "MO",
+                    "addressCountry": "US"
+                  },
+                  "alumniOf": {
+                    "@type": "EducationalOrganization",
+                    "name": "University of Missouri–Kansas City"
+                  },
+                  "knowsAbout": [
+                    "Voynich Manuscript",
+                    "Ars Notoria",
+                    "archaeoacoustics",
+                    "SubTropolis",
+                    "Strahov Monastery",
+                    "medieval manuscripts",
+                    "John Hawkes",
+                    "acoustic frequency",
+                    "conspiracy fiction"
+                  ],
                   "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
                   "sameAs": [
                     "https://amazon.com/author/jasoncholloway",

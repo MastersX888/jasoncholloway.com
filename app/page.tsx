@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Jason C. Holloway | Masters X Trilogy — Kansas City Conspiracy of Frequency & Medieval Manuscripts",
+    absolute: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy of Frequency & Medieval Manuscripts",
   },
   description:
     "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
@@ -16,9 +16,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/",
-    title: "Jason C. Holloway | Masters X Trilogy — Kansas City Conspiracy of Frequency & Medieval Manuscripts",
+    title: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy of Frequency & Medieval Manuscripts",
     description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
 };
 
@@ -56,7 +55,7 @@ export default function Home() {
         }}
       />
       <section className="hero">
-        <div className="hero-bg" data-version="groundswell-v2" />
+        <div className="hero-bg" data-version="groundswell-v3" />
         <WaveformHero />
         <div className="container">
           <div className="hero-content">
@@ -235,6 +234,52 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── GROUNDED IN REAL PLACES ─── */}
+      <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
+        <div className="container">
+          <div className="section-label-row">
+            <span className="label">Grounded in Real Places</span>
+          </div>
+          <p style={{ fontSize: "1.1rem", lineHeight: 1.8, color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "800px" }}>
+            The trilogy is built on documented history. Every location in the novels can be visited, looked up, or found in a scholarly bibliography. Explore the research archive beneath the fiction:
+          </p>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "1rem" }}>
+            <Link href="/field-notes/subtropolis" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
+              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>01</div>
+              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>SubTropolis</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the city beneath Kansas City</div>
+            </Link>
+            <Link href="/field-notes/111-hz" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
+              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>02</div>
+              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>111 Hz</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the frequency ancient builders kept choosing</div>
+            </Link>
+            <Link href="/field-notes/voynich-manuscript" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
+              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>03</div>
+              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Voynich Manuscript</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the undeciphered 15th-century codex</div>
+            </Link>
+            <Link href="/field-notes/ars-notoria" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
+              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>04</div>
+              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Ars Notoria</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the medieval technology of memory</div>
+            </Link>
+            <Link href="/field-notes/strahov-monastery" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
+              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>05</div>
+              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Strahov Monastery</div>
+              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the 12th-century chained library</div>
+            </Link>
+          </div>
+          
+          <div style={{ marginTop: "1rem" }}>
+            <Link href="/field-notes" className="btn btn-outline">
+              Read the Field Notes — Real History Beneath Masters X
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* ─── VIRTUAL ANALYSIS CHAMBER ─── */}
       <section className="section">
         <div className="container">
@@ -301,24 +346,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* ─── GROUNDED IN REAL PLACES ─── */}
-      <section className="section" style={{ borderTop: "1px solid var(--border-faint)" }}>
-        <div className="container" style={{ maxWidth: "900px" }}>
-          <div className="section-label-row">
-            <span className="label">Grounded in Real Places</span>
-          </div>
-          <p style={{ fontSize: "1.1rem", lineHeight: 1.9, color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-            The trilogy is built on documented history. <Link href="/field-notes/subtropolis" style={{ color: "var(--gold)" }}>SubTropolis</Link> — the 270-million-year-old Bethany Falls limestone mine beneath Kansas City — is real, the largest underground business complex in the world, and the ground-floor setting of Volume I. The <Link href="/field-notes/strahov-monastery" style={{ color: "var(--gold)" }}>Strahov Monastery Library in Prague</Link>, with its seventeenth-century chained books and Theological Hall, is real. The <Link href="/field-notes/voynich-manuscript" style={{ color: "var(--gold)" }}>Voynich Manuscript</Link> — the undeciphered medieval codex owned by Emperor Rudolf II of Bohemia, the same emperor whose Prague court the trilogy reconstructs — is real and sits in Yale&apos;s Beinecke Library.
-          </p>
-          <p style={{ fontSize: "1.1rem", lineHeight: 1.9, color: "var(--text-muted)", marginBottom: "2rem" }}>
-            The <Link href="/field-notes/111-hz" style={{ color: "var(--gold)" }}>111 Hz archaeoacoustics phenomenon</Link> — the standing-wave frequency measured repeatedly in stone chambers from the Ħal-Saflieni Hypogeum in Malta to the Volta Region caves of Ghana — is documented and debated by acoustic researchers. The <Link href="/field-notes/ars-notoria" style={{ color: "var(--gold)" }}>Ars Notoria</Link>, the thirteenth-century Solomonic manuscript of memory and eloquence, exists in multiple institutional collections. Every location in the novels can be visited, looked up, or found in a scholarly bibliography. The fiction is the account of what happens when the real things are put in the same room.
-          </p>
-          <Link href="/field-notes" className="btn btn-outline">
-            Read the Field Notes — Real History Beneath Masters X
-          </Link>
         </div>
       </section>
 

@@ -10,7 +10,6 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/books/hawkes-monograph/",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
 };
 

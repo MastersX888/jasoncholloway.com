@@ -24,7 +24,38 @@ export default function AboutPage() {
             "@type": "ProfilePage",
             "dateCreated": "2026-06-05T00:00:00Z",
             "mainEntity": {
-              "@id": "https://jasoncholloway.com/#person"
+              "@type": "Person",
+              "@id": "https://jasoncholloway.com/#person",
+              "name": "Jason Carroll Holloway",
+              "alternateName": "Jason C. Holloway",
+              "url": "https://jasoncholloway.com/",
+              "jobTitle": "Author",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kansas City",
+                "addressRegion": "MO",
+                "addressCountry": "US"
+              },
+              "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "Mercy University"
+              },
+              "knowsAbout": [
+                "Voynich Manuscript",
+                "Ars Notoria",
+                "archaeoacoustics",
+                "SubTropolis",
+                "Strahov Monastery",
+                "medieval manuscripts",
+                "John Hawkes",
+                "acoustic frequency",
+                "conspiracy fiction"
+              ],
+              "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
+              "sameAs": [
+                "https://amazon.com/author/jasoncholloway",
+                "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway"
+              ]
             }
           })
         }}

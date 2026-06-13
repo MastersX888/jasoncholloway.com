@@ -161,7 +161,7 @@ export default function HarmonicStackPage() {
 
           {/* Context note */}
           <div style={{ marginTop: "3rem", padding: "1.25rem 1.5rem", background: "var(--bg-surface)", borderRadius: "var(--r-md)", border: "1px solid var(--border-faint)", fontSize: "0.82rem", color: "var(--text-faint)", lineHeight: 1.7 }}>
-            <strong style={{ color: "var(--text-muted)" }}>Historical source:</strong> The Ars Notoria is a genuine 13th-century grimoire tradition documented in the British Library (Sloane MSS 1712, 3826). The frequency derivations above are the fictional extension Jason Carroll Holloway developed for the Masters X Trilogy, grounded in the manuscript&apos;s actual notae imagery and gematria tradition.
+            <strong style={{ color: "var(--text-muted)" }}>Historical source:</strong> The Ars Notoria is a genuine 13th-century grimoire tradition documented in the British Library (Sloane MSS 1712, 3826). Read more in the <Link href="/field-notes/ars-notoria" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>Ars Notoria Field Note</Link>. The frequency derivations above are the fictional extension Jason Carroll Holloway developed for the Masters X Trilogy, grounded in the manuscript&apos;s actual notae imagery and gematria tradition.
           </div>
         </div>
       </section>

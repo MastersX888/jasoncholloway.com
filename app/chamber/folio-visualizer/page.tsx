@@ -194,7 +194,7 @@ export default function FolioVisualizerPage() {
                 <p style={{ maxWidth: "58ch", color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.7 }}>
                   Select, scale, rotate, and overlay historical manuscript folios (Voynich, Ars Notoria)
                   to reproduce Blake Masters&apos;s discoveries. Synthesize layered sacred geometries using
-                  real-time CSS blend modes.
+                  real-time CSS blend modes. Read the real historical context in the <Link href="/field-notes/voynich-manuscript" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>Voynich Manuscript</Link> and <Link href="/field-notes/ars-notoria" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>Ars Notoria</Link> Field Notes.
                 </p>
               </div>
 

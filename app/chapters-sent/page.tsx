@@ -4,8 +4,12 @@ import { books } from "@/lib/data/books";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your Chapters Are Ready | Jason C. Holloway",
-  robots: "noindex", // Enforced by B3 specification
+  title: "Your Chapters Are Ready",
+  description: "Download your complimentary opening chapters of the Masters X Trilogy.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function ChaptersSentPage() {

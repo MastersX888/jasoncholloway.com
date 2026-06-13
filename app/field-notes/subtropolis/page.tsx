@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "How deep is SubTropolis?",
-    a: "The tunnels run up to about 160 feet beneath the bluffs, varying by section. The limestone ceiling — the \"room and pillar\" mine structure — is typically 25 feet high.",
+    a: "The tunnels run up to roughly 150-160 feet beneath the bluffs, depending on the section. The limestone ceiling — the \"room and pillar\" mine structure — is typically 25 feet high.",
   },
   {
     q: "What companies are in SubTropolis?",

@@ -5,17 +5,16 @@ import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 
 export const metadata: Metadata = {
-  title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
+  title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
   description:
     "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. For readers of Foucault's Pendulum, The Da Vinci Code, and Cloud Cuckoo Land. By Jason Carroll Holloway. Published by Seventh City Press.",
   alternates: {
     canonical: "https://jasoncholloway.com/books/masters-x/",
   },
   openGraph: {
-    title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
+    title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
     description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
     url: "https://jasoncholloway.com/books/masters-x/",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
 };
 

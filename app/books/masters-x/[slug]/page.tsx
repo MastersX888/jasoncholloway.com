@@ -19,9 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!book) return {};
 
   const volumeTitles: Record<string, string> = {
-    "the-inheritance-of-frequency": "The Inheritance of Frequency — A Kansas City Conspiracy Thriller | Masters X Book 1",
-    "the-grimoire": "The Grimoire — Medieval Manuscripts & Archaeoacoustics | Masters X Book 2",
-    "the-kingdom": "The Kingdom — Consciousness, Kansas City & the Frequency | Masters X Book 3",
+    "the-inheritance-of-frequency": "The Inheritance of Frequency — Masters X Book 1",
+    "the-grimoire": "The Grimoire — Masters X Book 2",
+    "the-kingdom": "The Kingdom — Masters X Book 3",
   };
 
   const volumeDescs: Record<string, string> = {
@@ -44,11 +44,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title,
       description,
-      url: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
-      images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: `${book.subtitle} — Masters X by Jason Carroll Holloway` }],
+      url: `https://jasoncholloway.com/books/masters-x/${slug}/`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
     },
     alternates: {
-      canonical: `https://jasoncholloway.com/books/masters-x/${book.slug}/`,
+      canonical: `https://jasoncholloway.com/books/masters-x/${slug}/`,
     },
   };
 }

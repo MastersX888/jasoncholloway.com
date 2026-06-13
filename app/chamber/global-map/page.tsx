@@ -34,7 +34,7 @@ export default function GlobalMapPage() {
           </h1>
           <p style={{ maxWidth: "54ch", color: "var(--text-muted)", lineHeight: 1.7 }}>
             Nine documented sites. Four continents. Every geology produces its own song — but every song
-            converges within 3% of the 111 Hz fundamental.
+            converges within 3% of the <Link href="/field-notes/111-hz" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>111 Hz</Link> fundamental. Including the bedrock beneath <Link href="/field-notes/kansas-city-locations" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>Kansas City</Link> and <Link href="/field-notes/subtropolis" className="hover-gold" style={{ textDecoration: "underline", color: "var(--cyan)" }}>SubTropolis</Link>.
           </p>
         </div>
       </section>

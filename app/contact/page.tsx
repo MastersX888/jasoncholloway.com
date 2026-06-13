@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact & Press — Jason Carroll Holloway",
+  title: "Contact & Press",
   description:
     "Get in touch with Jason C. Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
   alternates: {

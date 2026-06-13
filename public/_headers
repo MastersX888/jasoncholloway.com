@@ -3,3 +3,6 @@
 
 /downloads/*.epub
   Content-Type: application/epub+zip
+
+/*/opengraph-image
+  Content-Type: image/png

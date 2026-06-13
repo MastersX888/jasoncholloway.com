@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",
     description:
-      "270 million years of Bethany Falls limestone, ~1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
+      "307-million-year-old Bethany Falls limestone, ~1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
     url: "https://jasoncholloway.com/field-notes/subtropolis/",
     images: [{ url: "https://jasoncholloway.com/og/field-notes/subtropolis.png", width: 1200, height: 630, alt: "Illustration: limestone pillars in an underground corridor" }],
   },
@@ -48,11 +48,11 @@ export default function SubTropolisNote() {
       title="SubTropolis: The Underground City Beneath Kansas City"
       titleTag="SubTropolis: The Underground City Beneath Kansas City"
       theme="Beneath Kansas City"
-      lede="SubTropolis is a 55-million-square-foot active commercial complex excavated from 270-million-year-old Bethany Falls limestone beneath the bluffs north of downtown Kansas City, Missouri. It is the largest underground business complex in the world. Roughly 1,700 people go to work there every day — and most of Kansas City has never been inside it."
+      lede="SubTropolis is a 55-million-square-foot active commercial complex excavated from Pennsylvanian-age Bethany Falls limestone, roughly 307 million years old, beneath the bluffs north of downtown Kansas City, Missouri. It is the largest underground business complex in the world. Roughly 1,700 people go to work there every day — and most of Kansas City has never been inside it."
       record={
         <>
           <p className="fn-body">
-            The limestone beneath Kansas City is Pennsylvanian-age Bethany Falls limestone, roughly 270 million years old, deposited when the interior of North America was a shallow inland sea. By the late nineteenth century, Kansas City's builders were quarrying it for construction. By the mid-twentieth century, they noticed something: the excavated chambers maintained a constant 65°F year-round, with near-perfect humidity and zero vibration. They were, in other words, ideal warehouses.
+            The limestone beneath Kansas City is Pennsylvanian-age Bethany Falls limestone, deposited approximately 307 million years ago, when the interior of North America was a shallow inland sea. By the late nineteenth century, Kansas City's builders were quarrying it for construction. By the mid-twentieth century, they noticed something: the excavated chambers maintained a constant 65°F year-round, with near-perfect humidity and zero vibration. They were, in other words, ideal warehouses.
           </p>
           <p className="fn-body">
             Hunt Midwest began developing the industrial underground complex formally in the 1960s, trademarking the name SubTropolis — a portmanteau of "subterranean" and "metropolitan." Today the facility covers an ~55 million sq ft total excavated footprint, with roughly 9–10 million sq ft of developed, leasable space across a working limestone mine, making it the largest underground business complex in the world by square footage. Tenants include the U.S. Postal Service, the National Archives and Records Administration (which stores millions of federal military personnel records there, many irreplaceable), and hundreds of commercial tenants in storage, light manufacturing, and film preservation. The constant temperature and humidity make it particularly valuable for archival and cold-chain storage.
@@ -74,7 +74,7 @@ export default function SubTropolisNote() {
             What makes SubTropolis strange — and narratively irresistible — is not its scale but its secrecy. The facility's complete tunnel map has never been publicly released. The footprint of the active complex is documented; the full extent of the excavated limestone caverns is not. The Bethany Falls formation continues for miles in multiple directions beneath the Kansas City metro area. Not all of it has been commercially developed. Some of it has been surveyed. Some of it, presumably, has not.
           </p>
           <p className="fn-body">
-            There is also the question of what the Bethany Falls limestone replaced. The formation is 270 million years old — but the bedrock beneath it, the Pre-Cambrian basement rock, is far older. In some locations in Missouri, that basement rock has been exposed. It has never been systematically surveyed for markings. The mine's commercial focus is on the limestone, which is where the stable ceiling is, and where the utilities run. What lies below the limestone is not commercially relevant.
+            There is also the question of what the Bethany Falls limestone replaced. The formation was deposited roughly 307 million years ago — but the bedrock beneath it, the Pre-Cambrian basement rock, is far older. In some locations in Missouri, that basement rock has been exposed. It has never been systematically surveyed for markings. The mine's commercial focus is on the limestone, which is where the stable ceiling is, and where the utilities run. What lies below the limestone is not commercially relevant.
           </p>
           <p className="fn-body">
             That gap — between the documented facility and the unexplored bedrock beneath it — is the gap the trilogy occupies.

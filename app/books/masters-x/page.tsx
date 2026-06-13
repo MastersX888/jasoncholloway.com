@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "https://jasoncholloway.com/books/masters-x/",
   },
   openGraph: {
-    title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+    title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
     description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
     url: "https://jasoncholloway.com/books/masters-x/",
   },

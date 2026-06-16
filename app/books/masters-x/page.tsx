@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     canonical: "https://jasoncholloway.com/books/masters-x/",
   },
   openGraph: {
-    title: "Masters X Trilogy — Kansas City Conspiracy Thriller | Jason C. Holloway",
+    title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
     description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
     url: "https://jasoncholloway.com/books/masters-x/",
   },
@@ -350,7 +350,21 @@ function BookBody({ book }: { book: typeof books[0] }) {
             </div>
           </div>
         </div>
-        <div style={{ borderTop: "1px solid var(--border-faint)", marginTop: "0.75rem", paddingTop: "0.75rem", display: "flex", justifyContent: "space-between", fontSize: "0.75rem" }}>
+
+        {book.qrCodePB && book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
+          <div style={{ marginTop: "1.25rem", padding: "1.25rem", borderRadius: "var(--r-md)", background: "var(--bg-surface)", border: "1px solid var(--border)", display: "flex", gap: "1.25rem", alignItems: "center", flexWrap: "wrap" }}>
+             <Image src={book.qrCodePB} alt="QR Code to buy direct" width={80} height={80} style={{ borderRadius: "8px", flexShrink: 0, border: "1px solid var(--border-faint)", background: "white", padding: "4px" }} />
+             <div style={{ flex: 1, minWidth: "180px" }}>
+               <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--gold)", marginBottom: "0.25rem" }}>Buy Direct & Save (Paperback)</div>
+               <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.4 }}>Skip Amazon. Scan or click to purchase directly from the publisher for the best price.</div>
+               <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-sm" style={{ padding: "0.5rem 1rem", fontSize: "0.8rem", display: "inline-block", textAlign: "center" }}>
+                  Buy Now {book.price_pb_is ? `($${book.price_pb_is})` : ""}
+               </a>
+             </div>
+          </div>
+        )}
+
+        <div style={{ borderTop: "1px solid var(--border-faint)", marginTop: "1.25rem", paddingTop: "0.75rem", display: "flex", justifyContent: "space-between", fontSize: "0.75rem" }}>
           <span style={{ color: "var(--text-faint)" }}>Ebook ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_ebook}</span></span>
           <span style={{ color: "var(--text-faint)" }}>Page Count: {book.pageCount} pages</span>
         </div>

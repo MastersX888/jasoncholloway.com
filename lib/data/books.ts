@@ -18,6 +18,7 @@ export interface Book {
   coverImage: string;      // Default display cover (Paperback)
   coverImageHC: string;    // Hardcover cover path
   coverImagePB: string;    // Paperback cover path
+  qrCodePB?: string;       // QR Code image path for Paperback direct buy
   isbn_hc?: string;
   isbn_pb?: string;
   isbn_ebook?: string;
@@ -49,6 +50,7 @@ export const books: Book[] = [
     coverImage: "/covers/book1-paperback.png",
     coverImageHC: "/covers/book1-hardcover-v2.png",
     coverImagePB: "/covers/book1-paperback.png",
+    qrCodePB: "/media/qr1.png",
     isbn_hc: "9798295800801",
     isbn_pb: "9798256008048",
     isbn_ebook: "9798256008819",
@@ -84,6 +86,7 @@ export const books: Book[] = [
     coverImage: "/covers/book2-paperback.png",
     coverImageHC: "/covers/book2-hardcover-v2.png",
     coverImagePB: "/covers/book2-paperback.png",
+    qrCodePB: "/media/qr2.png",
     isbn_hc: "9798295812675",
     isbn_pb: "9798256009953",
     isbn_ebook: "9798256009625",
@@ -117,6 +120,7 @@ export const books: Book[] = [
     coverImage: "/covers/book3-paperback.png",
     coverImageHC: "/covers/book3-hardcover-v2.png",
     coverImagePB: "/covers/book3-paperback.png",
+    qrCodePB: "/media/qr3.png",
     isbn_hc: "9798256010072", // Hardcover proof ISBN
     isbn_pb: "9798295812705", // Paperback ISBN
     isbn_ebook: "9798256009809", // Ebook ISBN

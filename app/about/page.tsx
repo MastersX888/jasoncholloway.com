@@ -153,6 +153,7 @@ export default function AboutPage() {
             {/* Sidebar */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <div style={{
+                width: "100%",
                 aspectRatio: "3/4",
                 borderRadius: "var(--r-xl)",
                 border: "1px solid var(--border)",

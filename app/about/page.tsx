@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About",
@@ -9,7 +10,6 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/about/",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason C. Holloway — Masters X Trilogy" }],
   },
 };
 
@@ -154,29 +154,20 @@ export default function AboutPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <div style={{
                 aspectRatio: "3/4",
-                background: "linear-gradient(135deg, var(--bg-elevated) 0%, var(--bg-raised) 100%)",
                 borderRadius: "var(--r-xl)",
                 border: "1px solid var(--border)",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                gap: "1rem",
-                color: "var(--text-faint)",
-                fontSize: "0.8rem",
                 position: "relative",
-                overflow: "hidden"
+                overflow: "hidden",
+                boxShadow: "0 20px 40px -10px rgba(0,0,0,0.5)"
               }}>
-                <div style={{
-                  position: "absolute",
-                  top: "0", left: "0", right: "0", bottom: "0",
-                  background: "radial-gradient(circle at center, rgba(255,255,255,0.03) 0%, transparent 70%)",
-                }}></div>
-                <div style={{ fontSize: "2rem", opacity: 0.3, fontFamily: "var(--font-display)", fontStyle: "italic" }}>JCH</div>
-                <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.25rem", zIndex: 1 }}>
-                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", letterSpacing: "0.05em" }}>Author Portrait</span>
-                  <span style={{ fontSize: "0.75rem", opacity: 0.5, textTransform: "uppercase", letterSpacing: "0.15em" }}>Coming Soon</span>
-                </div>
+                <Image 
+                  src="/media/JasonCHolloway.png" 
+                  alt="Jason Carroll Holloway - Author Portrait" 
+                  fill 
+                  style={{ objectFit: "cover", objectPosition: "center top" }} 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  priority
+                />
               </div>
 
               {/* Credentials card */}

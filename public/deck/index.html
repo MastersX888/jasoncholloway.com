@@ -1,0 +1,1487 @@
+<!-- Seventh City Press — Command Deck
+     All-in-one operating cockpit for Jason Carroll Holloway / Seventh City Press.
+     Self-contained. Persists via /api/state -> window.storage -> localStorage -> memory.
+     The Intelligence feed is fed by an external worker (groundswell-intel.js); the
+     browser cannot crawl the open web itself. -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root{
+    --ink:#0A0D12; --panel:#121821; --panel-2:#0E131B; --inset:#0B1017;
+    --line:#222B38; --line-soft:#1A222D; --bone:#EAE4D3; --slate:#828DA0;
+    --slate-dim:#5C6779; --phosphor:#46E2C8; --phosphor-dim:#2BB8A2;
+    --amber:#E2A33C; --violet:#A487DC; --red:#E06A45; --radius:14px;
+    --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace; --serif:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--ink);color:var(--bone);font-family:var(--mono);
+    -webkit-font-smoothing:antialiased;font-size:14px;line-height:1.5}
+  body{padding:22px;max-width:1320px;margin:0 auto}
+  a{color:inherit}
+  button{font-family:var(--mono);cursor:pointer}
+  ::selection{background:rgba(70,226,200,.25)}
+  .eyebrow{font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--slate-dim)}
+  .label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
+  .num{font-variant-numeric:tabular-nums}
+  .section-title{font-family:var(--serif);font-weight:600;font-size:21px;margin:4px 0 2px;letter-spacing:-.01em}
+  .section-sub{color:var(--slate);font-size:12px;margin:0 0 16px;max-width:64ch;line-height:1.6}
+
+  .mast{position:relative;border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(180deg,#10161F 0%,#0B1017 100%);overflow:hidden}
+  .mast-canvas{position:absolute;inset:0;width:100%;height:100%;opacity:.85}
+  .mast-inner{position:relative;padding:26px 28px 22px;display:flex;justify-content:space-between;
+    align-items:flex-end;gap:24px;flex-wrap:wrap}
+  .mast h1{font-family:var(--serif);font-weight:600;font-size:28px;line-height:1;margin:8px 0 0;letter-spacing:-.01em}
+  .mast h1 em{font-style:italic;color:var(--phosphor)}
+  .mast .sub{margin-top:10px;color:var(--slate);font-size:12px;max-width:46ch}
+  .readouts{display:flex;gap:34px;flex-wrap:wrap}
+  .carrier{text-align:right;min-width:160px}
+  .carrier .big{font-family:var(--serif);font-weight:600;font-size:40px;line-height:.9;
+    color:var(--phosphor);text-shadow:0 0 26px rgba(70,226,200,.35)}
+  .carrier.coin .big{color:var(--bone);text-shadow:0 0 26px rgba(234,228,211,.18)}
+  .carrier .delta{font-size:12px;margin-top:6px}
+  .up{color:var(--phosphor)} .down{color:var(--red)} .flat{color:var(--slate)}
+
+  .bands{display:flex;gap:4px;margin-top:14px;border:1px solid var(--line);border-radius:12px;
+    background:var(--panel-2);padding:5px;overflow-x:auto;scrollbar-width:none}
+  .bands::-webkit-scrollbar{display:none}
+  .band{flex:1 0 auto;background:transparent;border:0;color:var(--slate);padding:9px 15px;
+    border-radius:8px;font-size:12px;letter-spacing:.04em;white-space:nowrap;display:flex;
+    align-items:center;gap:8px;transition:color .18s ease, background .18s ease}
+  .band:hover{color:var(--bone)}
+  .band.active{background:var(--inset);color:var(--phosphor);box-shadow:inset 0 0 0 1px var(--line)}
+  .band .bdot{width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.7}
+  .band .bcount{font-size:9px;background:var(--phosphor);color:#06231F;border-radius:10px;
+    padding:1px 6px;font-weight:700;letter-spacing:0}
+  .tab{display:none}
+  .tab.active{display:block;animation:fadeUp .5s cubic-bezier(.16,1,.3,1)}
+
+  .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px}
+  .kpi{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:14px 15px;
+    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+  .kpi:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.4);border-color:var(--line-soft)}
+  .kpi .v{font-family:var(--serif);font-weight:600;font-size:24px;margin-top:7px;line-height:1}
+  .kpi .foot{font-size:10.5px;color:var(--slate-dim);margin-top:6px}
+  .kpi-delta{font-size:10.5px;margin-top:5px;min-height:14px}
+
+  .grid{display:grid;gap:12px;margin-top:12px}
+  .g-2{grid-template-columns:1.55fr 1fr}
+  .g-2e{grid-template-columns:1fr 1fr}
+  .g-3{grid-template-columns:repeat(3,1fr)}
+  .card{position:relative;border:1px solid var(--line);border-radius:var(--radius);background:var(--panel);
+    padding:18px;transition:box-shadow .25s ease, border-color .25s ease}
+  .card::before{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(180deg,rgba(234,228,211,.05),transparent 36%)}
+  .card:hover{border-color:var(--line-soft);box-shadow:0 10px 30px rgba(0,0,0,.45)}
+  .card h2{position:relative;font-family:var(--serif);font-weight:600;font-size:16px;margin:2px 0 0;padding-left:12px}
+  .card h2::before{content:'';position:absolute;left:0;top:.18em;bottom:.18em;width:2px;border-radius:2px;
+    background:var(--phosphor);opacity:.55}
+  .card-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+  .chart-wrap{position:relative;height:230px}
+  .chart-wrap.sm{height:150px}
+  .empty{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;color:var(--slate-dim);gap:6px}
+  .empty .e-big{font-family:var(--serif);font-size:15px;color:var(--slate)}
+
+  .alerts{display:flex;flex-direction:column;gap:8px}
+  .alert{display:flex;gap:11px;align-items:flex-start;border:1px solid var(--line);border-left-width:3px;
+    border-radius:10px;background:var(--panel);padding:11px 14px;font-size:12px;line-height:1.5}
+  .alert.warn{border-left-color:var(--amber)} .alert.crit{border-left-color:var(--red)}
+  .alert.good{border-left-color:var(--phosphor)} .alert.info{border-left-color:var(--slate)}
+  .alert .atag{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--slate-dim);
+    margin-top:2px;min-width:58px;flex:none}
+  .alert b{color:var(--bone)}
+
+  .stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .stat{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:14px 15px}
+  .stat .v{font-family:var(--serif);font-size:23px;margin-top:6px;line-height:1}
+  .money-pos{color:var(--phosphor)} .money-neg{color:var(--red)}
+  .gauge{height:10px;border-radius:6px;background:var(--inset);overflow:hidden;border:1px solid var(--line);margin-top:8px}
+  .gauge>div{height:100%;border-radius:6px;transition:width .6s cubic-bezier(.16,1,.3,1)}
+
+  .src{display:flex;align-items:center;gap:11px;padding:9px 0;border-bottom:1px solid var(--line-soft)}
+  .src:last-child{border-bottom:0}
+  .dot{width:8px;height:8px;border-radius:50%;flex:none}
+  .d-api{background:var(--phosphor);box-shadow:0 0 8px var(--phosphor)}
+  .d-export{background:var(--amber)} .d-manual{background:var(--slate-dim)}
+  .src .nm{flex:1;font-size:12.5px}
+  .src .tier{font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--slate-dim)}
+  .src .open{font-size:11px;color:var(--phosphor-dim);text-decoration:none;border:1px solid var(--line);
+    padding:3px 9px;border-radius:7px;white-space:nowrap}
+  .src .open:hover{border-color:var(--phosphor-dim);color:var(--phosphor)}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:10.5px;color:var(--slate)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+
+  table{width:100%;border-collapse:collapse;font-size:12px}
+  th{text-align:right;font-weight:500;color:var(--slate);font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;padding:7px 8px;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  td{padding:8px;border-bottom:1px solid var(--line-soft);text-align:right}
+  tr:last-child td{border-bottom:0}
+  .term-anchor{color:var(--violet);font-weight:500}
+  .term-note{font-size:10px;color:var(--slate-dim)}
+  .ledger-amt.pos{color:var(--phosphor)} .ledger-amt.neg{color:var(--red)}
+  .pnl td.net-pos{color:var(--phosphor)} .pnl td.net-neg{color:var(--red)}
+  .row-x{background:none;border:0;color:var(--slate-dim);font-size:14px;padding:0 4px}
+  .row-x:hover{color:var(--red)}
+
+  .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  .filters select,.filters input{background:var(--inset);border:1px solid var(--line);border-radius:8px;
+    color:var(--bone);font-family:var(--mono);font-size:12px;padding:7px 10px}
+  .intel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(335px,1fr));gap:12px}
+  .intel{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:14px;
+    display:flex;flex-direction:column;gap:9px;transition:border-color .2s ease}
+  .intel:hover{border-color:var(--line-soft)}
+  .intel.dismissed{opacity:.4}
+  .intel.kept{border-color:var(--phosphor-dim)}
+  .intel-top{display:flex;align-items:center;gap:8px;font-size:10px;color:var(--slate)}
+  .src-badge{font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:6px;font-weight:600}
+  .sb-bluesky{background:rgba(70,226,200,.16);color:var(--phosphor)}
+  .sb-reddit{background:rgba(226,163,60,.16);color:var(--amber)}
+  .sb-podcast{background:rgba(164,135,220,.16);color:var(--violet)}
+  .sb-news,.sb-web{background:rgba(130,141,160,.16);color:var(--slate)}
+  .intel-text{font-size:12.5px;line-height:1.5;color:var(--bone)}
+  .intel-why{font-size:11px;color:var(--slate);border-left:2px solid var(--phosphor-dim);padding-left:9px;line-height:1.5}
+  .intel-foot{display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:4px}
+  .score-ring{width:36px;height:36px;border-radius:50%;flex:none;display:grid;place-items:center;
+    background:conic-gradient(var(--rc,var(--phosphor)) calc(var(--p,0)*1%),var(--inset) 0)}
+  .score-ring i{width:28px;height:28px;border-radius:50%;background:var(--panel);display:grid;place-items:center;
+    font-style:normal;font-size:10px;font-weight:700;color:var(--bone)}
+  .sent{font-size:9px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:6px}
+  .sent.pos{background:rgba(70,226,200,.14);color:var(--phosphor)}
+  .sent.neu{background:rgba(130,141,160,.14);color:var(--slate)}
+  .sent.neg{background:rgba(224,106,69,.14);color:var(--red)}
+  .intel-btns{margin-left:auto;display:flex;gap:6px}
+  .mini-btn{background:transparent;border:1px solid var(--line);color:var(--slate);border-radius:7px;
+    padding:4px 9px;font-size:11px}
+  .mini-btn:hover{border-color:var(--slate);color:var(--bone)}
+  .mini-btn.keep:hover{border-color:var(--phosphor-dim);color:var(--phosphor)}
+  .pipe-status{display:flex;align-items:center;gap:10px;flex-wrap:wrap;border:1px solid var(--line);
+    border-radius:10px;background:var(--panel-2);padding:11px 14px;margin-bottom:14px;font-size:11.5px;color:var(--slate)}
+  .pipe-status .pulse{width:8px;height:8px;border-radius:50%;background:var(--phosphor);box-shadow:0 0 8px var(--phosphor);flex:none}
+
+  .field{margin-bottom:12px}
+  .field label{display:block;margin-bottom:5px}
+  input[type=text],input[type=number],input[type=date],select,textarea{width:100%;background:var(--inset);
+    border:1px solid var(--line);border-radius:9px;color:var(--bone);font-family:var(--mono);font-size:13px;padding:9px 11px}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--phosphor-dim);outline-offset:1px;border-color:var(--phosphor-dim)}
+  .field-row{display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:center}
+  .field-row label{margin:0;font-size:12px;color:var(--bone);text-transform:none;letter-spacing:0}
+  .field-row .hint{font-size:10px;color:var(--slate-dim)}
+  .inline-form{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+  .inline-form input,.inline-form select{width:auto;flex:1 1 120px;min-width:90px}
+  .grp{margin:16px 0 8px}
+  .grp .eyebrow{padding-bottom:8px;border-bottom:1px solid var(--line-soft);display:block}
+  .btn{background:var(--phosphor);color:#06231F;border:0;border-radius:10px;padding:11px 18px;
+    font-weight:600;font-size:13px;letter-spacing:.02em;transition:background .18s ease, transform .08s ease, box-shadow .18s ease}
+  .btn:hover{background:#5DEBD3;box-shadow:0 6px 18px rgba(70,226,200,.28)}
+  .btn:active,.btn-ghost:active{transform:translateY(1px)}
+  .btn-ghost{background:transparent;color:var(--slate);border:1px solid var(--line);border-radius:9px;padding:8px 13px;font-size:12px}
+  .btn-ghost:hover{border-color:var(--slate);color:var(--bone)}
+  button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--phosphor-dim);outline-offset:2px;border-radius:8px}
+  .term-chip{display:inline-flex;align-items:center;gap:7px;background:var(--inset);border:1px solid var(--line);
+    border-radius:20px;padding:5px 6px 5px 12px;margin:0 7px 7px 0;font-size:12px}
+  .term-chip.anchor{border-color:var(--violet);color:var(--violet)}
+  .term-chip button{background:none;border:0;color:var(--slate-dim);font-size:15px;line-height:1;padding:0 2px}
+  .term-chip button:hover{color:var(--red)}
+  .add-term{display:flex;gap:8px;margin-top:10px;max-width:420px}
+  .note{font-size:11px;color:var(--slate-dim);line-height:1.6}
+  .note b{color:var(--slate)}
+  details summary{cursor:pointer;color:var(--phosphor-dim);font-size:11.5px;list-style:none}
+  details summary::-webkit-details-marker{display:none}
+  details summary:before{content:'\25B8 ';color:var(--slate-dim)}
+  details[open] summary:before{content:'\25BE '}
+  .formula{font-size:11px;color:var(--slate);background:var(--inset);border:1px solid var(--line-soft);
+    border-radius:9px;padding:11px 13px;margin-top:9px;line-height:1.7}
+  .toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--phosphor);
+    color:#06231F;padding:11px 20px;border-radius:10px;font-weight:600;font-size:13px;opacity:0;transition:.25s;pointer-events:none;z-index:50}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  .pill{font-size:10px;border:1px solid var(--line);border-radius:20px;padding:3px 10px;color:var(--slate)}
+  .holdings-big{font-family:var(--serif);font-size:38px;color:var(--bone);line-height:1}
+  .demo-banner{display:flex;align-items:center;gap:12px;border:1px solid var(--amber);border-radius:10px;
+    background:rgba(226,163,60,.08);padding:10px 14px;margin-top:14px;font-size:11.5px;color:var(--amber)}
+  .demo-banner button{margin-left:auto}
+  footer{margin-top:18px;padding:16px 4px;color:var(--slate-dim);font-size:10.5px;border-top:1px solid var(--line-soft);line-height:1.7}
+
+  @media(max-width:920px){
+    .kpis,.stat-row{grid-template-columns:repeat(2,1fr)}
+    .g-2,.g-2e,.g-3{grid-template-columns:1fr}
+    .carrier{text-align:left}
+    #ovKpis{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(prefers-reduced-motion:reduce){.mast-canvas{opacity:.5}.carrier .big{animation:none}}
+
+  @keyframes fadeUp{0%{opacity:0;transform:translateY(8px)}100%{opacity:1;transform:translateY(0)}}
+  .fade-in{animation:fadeUp .6s cubic-bezier(.16,1,.3,1) forwards}
+  .mo{font-variant-numeric:tabular-nums;font-size:11px;letter-spacing:.02em}
+  .mo-up{color:var(--phosphor)} .mo-down{color:var(--red)} .mo-flat{color:var(--slate-dim)}
+  .mo-new{color:var(--phosphor);font-weight:600}
+  .mo-surge{color:#06231F;background:var(--phosphor);border-radius:6px;padding:1px 6px;font-weight:600}
+  .ment-group{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--slate);
+    border-bottom:1px solid var(--line-soft);padding:14px 8px 6px;text-align:left;font-weight:600}
+  .first-sig{background:var(--phosphor);color:#06231F;font-size:9px;padding:2px 5px;border-radius:4px;font-weight:700;margin-left:6px;letter-spacing:0}
+  .carrier .big{animation:reachPulse 4.5s ease-in-out infinite}
+  @keyframes reachPulse{0%,100%{text-shadow:0 0 26px rgba(70,226,200,.30)}50%{text-shadow:0 0 34px rgba(70,226,200,.55)}}
+  #mentBody tr{transition:background .3s ease}
+  #mentBody tr.row-surge td{background:linear-gradient(90deg,rgba(70,226,200,.10),transparent 60%)}
+  #mentBody tr.row-surge td:first-child{box-shadow:inset 3px 0 0 var(--phosphor)}
+  #mentBody tr.row-new td{background:linear-gradient(90deg,rgba(164,135,220,.12),transparent 60%)}
+  #mentBody tr.row-new td:first-child{box-shadow:inset 3px 0 0 var(--violet)}
+  .reach-bar{display:flex;height:14px;border-radius:7px;overflow:hidden;border:1px solid var(--line)}
+  .reach-bar>div{transition:width .5s cubic-bezier(.16,1,.3,1)}
+  .reach-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:10px;font-size:10.5px;color:var(--slate)}
+</style>
+
+<div class="mast">
+  <canvas class="mast-canvas" id="wave"></canvas>
+  <div class="mast-inner">
+    <div>
+      <div class="eyebrow">Operation Groundswell · Command Deck</div>
+      <h1><em>Seventh City Press</em> &mdash; operating cockpit</h1>
+      <div class="sub">Treasury, sales, audience &amp; signal intelligence for the Masters X catalog. Do not distribute.</div>
+    </div>
+    <div class="readouts">
+      <div class="carrier">
+        <div class="label" style="margin-bottom:8px">Reach Index</div>
+        <div class="big num" id="reachBig">&mdash;</div>
+        <div class="delta num flat" id="reachDelta">awaiting first snapshot</div>
+      </div>
+      <div class="carrier coin">
+        <div class="label" style="margin-bottom:8px">Treasury · Relay</div>
+        <div class="big num" id="balBig">&mdash;</div>
+        <div class="delta num flat" id="balDelta">no ledger yet</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bands" id="bands">
+  <button class="band active" data-tab="overview"><span class="bdot"></span> Command Deck</button>
+  <button class="band" data-tab="treasury"><span class="bdot"></span> Treasury</button>
+  <button class="band" data-tab="sales"><span class="bdot"></span> Sales &amp; Ads</button>
+  <button class="band" data-tab="catalog"><span class="bdot"></span> Catalog</button>
+  <button class="band" data-tab="audience"><span class="bdot"></span> Audience</button>
+  <button class="band" data-tab="intel"><span class="bdot"></span> Intelligence <span class="bcount" id="intelCount" style="display:none">0</span></button>
+  <button class="band" data-tab="log"><span class="bdot"></span> Log &amp; Config</button>
+</div>
+
+<div class="demo-banner" id="demoBanner" style="display:none">
+  <span>Showing seeded demo data so every panel is alive. Nothing is saved until you edit something.</span>
+  <button class="btn-ghost" id="demoClear">Start clean</button>
+</div>
+
+<section class="tab active" id="tab-overview">
+  <div class="kpis" id="ovKpis" style="grid-template-columns:repeat(6,1fr)"></div>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Watch floor</div><h2>What needs attention</h2></div></div>
+      <div class="alerts" id="alerts"></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Top signals</div><h2>Highest-relevance chatter</h2></div>
+        <span class="pill" id="ovIntelMore"></span></div>
+      <div id="ovIntel"></div>
+    </div>
+  </div>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Signal over time</div><h2>Reach Index trajectory</h2></div></div>
+      <div class="chart-wrap"><canvas id="ovReachChart"></canvas>
+        <div class="empty" id="ovReachEmpty"><div class="e-big">No snapshots yet</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Cash position</div><h2>Relay balance trajectory</h2></div></div>
+      <div class="chart-wrap"><canvas id="ovBalChart"></canvas>
+        <div class="empty" id="ovBalEmpty"><div class="e-big">No ledger entries yet</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-treasury">
+  <div class="section-title">Treasury</div>
+  <p class="section-sub">Your Seventh City Press Relay account, royalty inflows and operating costs in one ledger. Balance, runway and revenue mix update as you log payments.</p>
+  <div class="stat-row fade-in">
+    <div class="stat"><div class="label">Balance</div><div class="v num" id="trBal">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">Relay · current</div></div>
+    <div class="stat"><div class="label">Royalties · MTD</div><div class="v num money-pos" id="trRoyMTD">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">this month, all channels</div></div>
+    <div class="stat"><div class="label">Burn · monthly</div><div class="v num money-neg" id="trBurn">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">avg of last 3 months</div></div>
+    <div class="stat"><div class="label">Runway</div><div class="v num" id="trRunway">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">months at current burn</div></div>
+  </div>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Cash position</div><h2>Balance over time</h2></div></div>
+      <div class="chart-wrap"><canvas id="balChart"></canvas>
+        <div class="empty" id="balEmpty"><div class="e-big">No ledger entries yet</div><div>Log a royalty or expense below.</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Where revenue comes from</div><h2>Royalties by channel</h2></div></div>
+      <div class="chart-wrap"><canvas id="channelChart"></canvas>
+        <div class="empty" id="channelEmpty"><div class="e-big">No royalties logged</div></div></div>
+    </div>
+  </div>
+  <div class="grid g-2 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Ledger</div><h2>Account activity</h2></div>
+        <span class="pill" id="ledgerCount">0 entries</span></div>
+      <div style="overflow:auto;max-height:360px"><table><thead><tr>
+        <th>Date</th><th>Type</th><th>Channel / note</th><th>Amount</th><th></th>
+      </tr></thead><tbody id="ledgerBody"></tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Add to ledger</div><h2>Log a transaction</h2></div></div>
+      <div class="field"><label class="label">Date</label><input type="date" id="lg_date"></div>
+      <div class="field"><label class="label">Type</label>
+        <select id="lg_type">
+          <option value="royalty">Royalty in</option>
+          <option value="sale_direct">Direct sale in</option>
+          <option value="expense">Expense out</option>
+          <option value="ad">Ad spend out</option>
+          <option value="transfer">Transfer</option>
+          <option value="other">Other</option>
+        </select></div>
+      <div class="field"><label class="label">Channel / note</label><input type="text" id="lg_channel" placeholder="KDP, IngramSpark, ISBN block, cover art…"></div>
+      <div class="field"><label class="label">Amount (USD · sign handled for you)</label><input type="number" step="0.01" id="lg_amount" placeholder="e.g. 84.20"></div>
+      <button class="btn" id="lg_add">Log transaction</button>
+      <p class="note" style="margin-top:14px">Inflows add to the balance; expenses and ad spend subtract. Just enter the magnitude — the sign is set by the type.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-sales">
+  <div class="section-title">Sales &amp; advertising</div>
+  <p class="section-sub">Units and royalty revenue per title, title-level P&amp;L, and the Amazon Ads campaign with live ACOS and budget pacing against your ceiling.</p>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Distribution</div><h2>Units by title · cumulative</h2></div></div>
+      <div class="chart-wrap"><canvas id="salesChart"></canvas>
+        <div class="empty" id="salesEmpty"><div class="e-big">No sales logged</div><div>Log units in the snapshot form.</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Revenue</div><h2>Royalty revenue by title</h2></div></div>
+      <div class="chart-wrap"><canvas id="revChart"></canvas>
+        <div class="empty" id="revEmpty"><div class="e-big">No revenue yet</div><div>Set per-unit royalties in Log &amp; Config.</div></div></div>
+    </div>
+  </div>
+  <div class="grid g-1 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Profit &amp; loss</div><h2>Per-title contribution</h2></div>
+        <span class="pill">units &times; royalty &minus; production</span></div>
+      <div style="overflow-x:auto"><table class="pnl"><thead><tr>
+        <th>Title</th><th>Units</th><th>Royalty / unit</th><th>Gross royalty</th><th>Production</th><th>Net</th>
+      </tr></thead><tbody id="pnlBody"></tbody></table></div>
+    </div>
+  </div>
+  <div class="grid g-2 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Amazon Ads</div><h2>Campaign performance</h2></div>
+        <span class="pill" id="adsCount">0 entries</span></div>
+      <div class="kpis" style="grid-template-columns:repeat(5,1fr);margin-top:0">
+        <div class="kpi"><div class="label">Spend</div><div class="v num" id="adSpend">&mdash;</div><div class="foot">cumulative</div></div>
+        <div class="kpi"><div class="label">Ad sales</div><div class="v num" id="adSales">&mdash;</div><div class="foot">attributed</div></div>
+        <div class="kpi"><div class="label">ACOS</div><div class="v num" id="adAcos">&mdash;</div><div class="foot">spend ÷ sales</div></div>
+        <div class="kpi"><div class="label">ROAS</div><div class="v num" id="adRoas">&mdash;</div><div class="foot">sales ÷ spend</div></div>
+        <div class="kpi"><div class="label">CTR</div><div class="v num" id="adCtr">&mdash;</div><div class="foot">clicks ÷ impr.</div></div>
+      </div>
+      <div style="margin-top:16px">
+        <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--slate);margin-bottom:2px">
+          <span>Budget pacing</span><span class="num" id="adCeilLbl">ceiling &mdash;</span></div>
+        <div class="gauge"><div id="adGauge" style="width:0%;background:var(--phosphor)"></div></div>
+        <div class="field" style="margin-top:12px"><div class="field-row">
+          <label>Total campaign ceiling (USD)</label><input type="number" step="1" id="ad_ceiling" placeholder="e.g. 300"></div></div>
+      </div>
+      <div style="overflow-x:auto;margin-top:8px"><table><thead><tr>
+        <th>Date</th><th>Campaign</th><th>Spend</th><th>Sales</th><th>ACOS</th><th></th>
+      </tr></thead><tbody id="adsBody"></tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Add ad data</div><h2>Log a period</h2></div></div>
+      <div class="field"><label class="label">Date</label><input type="date" id="ad_date"></div>
+      <div class="field"><label class="label">Campaign</label><input type="text" id="ad_campaign" placeholder="Carrier Wave · Book 1"></div>
+      <div class="inline-form" style="margin-bottom:12px">
+        <input type="number" step="0.01" id="ad_spend" placeholder="spend $">
+        <input type="number" step="0.01" id="ad_sales" placeholder="ad sales $"></div>
+      <div class="inline-form" style="margin-bottom:12px">
+        <input type="number" id="ad_impr" placeholder="impressions">
+        <input type="number" id="ad_clicks" placeholder="clicks">
+        <input type="number" id="ad_orders" placeholder="orders"></div>
+      <button class="btn" id="ad_add">Log ad period</button>
+      <p class="note" style="margin-top:14px">Pull these from the Amazon Ads console. Logging spend here also drops a matching <b>ad spend</b> line into Treasury so your runway stays honest.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-catalog">
+  <div class="section-title">Catalog &amp; reviews</div>
+  <p class="section-sub">Ratings, review velocity and Kindle page reads per title. Social proof compounds — this is where you watch it accumulate and spot which book is converting readers into reviewers.</p>
+  <div class="stat-row fade-in">
+    <div class="stat"><div class="label">Total reviews</div><div class="v num" id="catTotal">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">Amazon + Goodreads</div></div>
+    <div class="stat"><div class="label">Avg rating</div><div class="v num" id="catAvg">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">Amazon, weighted</div></div>
+    <div class="stat"><div class="label">New reviews</div><div class="v num money-pos" id="catNew">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">since last reading</div></div>
+    <div class="stat"><div class="label">KENP reads</div><div class="v num" id="catKenp">&mdash;</div><div class="foot" style="font-size:10.5px;color:var(--slate-dim);margin-top:5px">latest period</div></div>
+  </div>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Momentum</div><h2>Review velocity</h2></div></div>
+      <div class="chart-wrap"><canvas id="velChart"></canvas>
+        <div class="empty" id="velEmpty"><div class="e-big">No review data yet</div><div>Log a catalog reading below.</div></div></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Reception</div><h2>Average rating by title</h2></div></div>
+      <div class="chart-wrap"><canvas id="ratingChart"></canvas>
+        <div class="empty" id="ratingEmpty"><div class="e-big">No ratings yet</div></div></div>
+    </div>
+  </div>
+  <div class="grid g-1 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Per title</div><h2>Ratings &amp; reads</h2></div></div>
+      <div style="overflow-x:auto"><table><thead><tr>
+        <th>Title</th><th>Amazon \u2605</th><th>Amazon #</th><th>Goodreads \u2605</th><th>Goodreads #</th><th>KENP</th><th>\u0394 reviews</th>
+      </tr></thead><tbody id="catBody"></tbody></table></div>
+    </div>
+  </div>
+  <div class="grid g-2 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Log a reading</div><h2>Catalog snapshot</h2></div>
+        <span class="pill" id="catCount">0 readings</span></div>
+      <div class="field"><div class="field-row"><label>Reading date</label><input type="date" id="cat_date"></div></div>
+      <div class="grp"><span class="eyebrow">Per title \u00B7 amazon \u2605 / amazon # / goodreads \u2605 / goodreads # / KENP</span></div>
+      <div id="catInputs"></div>
+      <button class="btn" id="cat_add" style="margin-top:8px">Log reading</button>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Where to pull it</div><h2>Sources</h2></div></div>
+      <p class="note" style="line-height:1.8">
+        <b>Amazon \u2605 &amp; count</b> \u2014 each book's product page (or Author Central \u2192 Reviews).<br>
+        <b>Goodreads \u2605 &amp; count</b> \u2014 the book's Goodreads page; counts move slower but signal literary reach.<br>
+        <b>KENP</b> \u2014 KDP \u2192 Reports \u2192 KENP Read; a leading indicator that outruns reviews.<br><br>
+        Neither Amazon nor Goodreads exposes a clean public API at your tier, so this is a one-minute manual reading \u2014 weekly is plenty.</p>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-audience">
+  <div class="section-title">Audience &amp; reach</div>
+  <p class="section-sub">The Groundswell reach engine: site &amp; search discovery, exact-phrase cultural mentions, library penetration, and the lead/lag resonance scan.</p>
+  <div class="card reach-comp-card fade-in">
+    <div class="card-head"><div><div class="eyebrow">Composition</div><h2 style="font-size:14px">What's driving the Reach Index</h2></div></div>
+    <div id="reachComp"></div>
+  </div>
+  <div class="grid g-2 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Signal over time</div><h2>Reach Index trajectory</h2></div>
+        <span class="pill" id="snapCount">0 snapshots</span></div>
+      <div class="chart-wrap"><canvas id="trendChart"></canvas>
+        <div class="empty" id="trendEmpty"><div class="e-big">No transmissions logged yet</div>
+          <div>Log your first snapshot to begin charting the swell.</div></div></div>
+      <details style="margin-top:12px"><summary>Mark an event</summary>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;align-items:center">
+          <input type="date" id="ev_date" style="width:150px">
+          <input type="text" id="ev_label" placeholder="e.g. Amazon Ads live" style="flex:1;min-width:150px">
+          <select id="ev_type" style="width:auto">
+            <option value="launch">Launch / Ad</option><option value="fieldnote">Field Note</option>
+            <option value="mention">Mention / Press</option><option value="other">Other</option></select>
+          <button class="btn-ghost" id="ev_add">Mark</button></div>
+        <div id="ev_list" style="margin-top:10px"></div>
+      </details>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Feeds</div><h2>Source status</h2></div></div>
+      <div id="srcList"></div>
+      <div class="legend">
+        <span><i class="dot d-api"></i> API · auto-pullable</span>
+        <span><i class="dot d-export"></i> Export · scheduled</span>
+        <span><i class="dot d-manual"></i> Manual · no API</span></div>
+    </div>
+  </div>
+  <div class="grid g-2e fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Site &amp; discovery</div><h2>jasoncholloway.com</h2></div></div>
+      <div class="kpis" style="grid-template-columns:repeat(2,1fr);margin:0">
+        <div class="kpi"><div class="label">Visitors · period</div><div class="v num" id="kVisitors">&mdash;</div><div class="foot">Cloudflare</div></div>
+        <div class="kpi"><div class="label">Search impressions</div><div class="v num" id="kImpr">&mdash;</div><div class="foot">Search Console</div></div>
+        <div class="kpi"><div class="label">Search clicks</div><div class="v num" id="kClicks">&mdash;</div><div class="foot">Search Console</div></div>
+        <div class="kpi"><div class="label">Form signups</div><div class="v num" id="kSignups">&mdash;</div><div class="foot">Web3Forms</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Catalog penetration</div><h2>WorldCat holdings</h2></div></div>
+      <div style="display:flex;align-items:baseline;gap:14px;margin:6px 0 4px">
+        <span class="holdings-big num" id="holdingsBig">&mdash;</span>
+        <span class="label">libraries holding<br>Jason Carroll Holloway titles</span></div>
+      <div class="chart-wrap sm" style="margin-top:8px"><canvas id="mentChart"></canvas></div>
+    </div>
+  </div>
+  <div class="grid g-1 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Consciousness bandwidth</div><h2>Cultural mention tracking</h2></div></div>
+      <p class="note" style="margin:-4px 0 14px">Exact-phrase mentions per term across Reddit, X, Bluesky &amp; podcasts.
+        <b>"Jason Carroll Holloway"</b> is the anchor identity. Semantic / between-the-lines detection lives in the <b>Intelligence</b> tab.</p>
+      <div style="overflow-x:auto"><table id="mentTable"><thead><tr>
+        <th>Term</th><th>Reddit</th><th>X</th><th>Bluesky</th><th>Podcast</th><th>Total</th><th>Sparkline</th><th>Momentum</th>
+      </tr></thead><tbody id="mentBody"></tbody></table></div>
+      <div id="signalCorr" class="formula" style="margin-top:16px;display:none"></div>
+    </div>
+  </div>
+  <div class="grid g-2 fade-in">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Diagnostic panel</div><h2>Discovery &amp; resonance</h2></div></div>
+      <div class="grp"><span class="eyebrow">Fingerprints &amp; queries</span></div>
+      <div style="overflow-x:auto;margin-top:10px"><table><thead><tr><th>Query</th><th>Impressions</th><th>Clicks</th></tr></thead>
+        <tbody id="diagQueries"><tr><td colspan="3" style="text-align:center;color:var(--slate-dim)">awaiting pipeline import</td></tr></tbody></table></div>
+      <div class="grp" style="margin-top:24px"><span class="eyebrow">Content resonance</span></div>
+      <div style="overflow-x:auto;margin-top:10px"><table><thead><tr><th>Page path</th><th>Impressions</th><th>Clicks</th></tr></thead>
+        <tbody id="diagPages"><tr><td colspan="3" style="text-align:center;color:var(--slate-dim)">awaiting pipeline import</td></tr></tbody></table></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Diagnostic panel</div><h2>Geographic spread</h2></div></div>
+      <div id="diagGeo" style="margin-top:16px"><div class="empty" style="height:120px"><div class="e-big">No geographic data</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-intel">
+  <div class="section-title">Signal intelligence</div>
+  <p class="section-sub">Semantically-scored chatter from across the open web — not keyword hits, but posts the scoring model judged thematically relevant to the catalog. Items arrive from the intelligence worker; keep the signal, dismiss the noise.</p>
+  <div class="pipe-status" id="intelStatus"><span class="pulse"></span> <span id="intelStatusText">No ingest yet.</span></div>
+  <div class="filters">
+    <select id="if_source"><option value="">All sources</option><option value="bluesky">Bluesky</option>
+      <option value="reddit">Reddit</option><option value="podcast">Podcast</option><option value="news">News / web</option></select>
+    <select id="if_sentiment"><option value="">Any sentiment</option><option value="pos">Positive</option>
+      <option value="neu">Neutral</option><option value="neg">Negative</option></select>
+    <select id="if_status"><option value="active">New + kept</option><option value="new">New only</option>
+      <option value="kept">Kept</option><option value="dismissed">Dismissed</option><option value="all">All</option></select>
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--slate)">
+      min score <input type="range" id="if_minscore" min="0" max="100" value="40" style="width:120px;padding:0">
+      <b id="if_minscore_lbl" style="color:var(--bone)">40</b></span>
+  </div>
+  <div class="intel-grid" id="intelFeed"></div>
+  <div class="grid g-2e fade-in" style="margin-top:16px">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Tuning</div><h2>Concept watchlist</h2></div></div>
+      <p class="note" style="margin:-2px 0 12px">The themes the scorer reads <i>for</i> — broader than exact phrases. The worker scores each crawled post against these to catch resonance that never names you.</p>
+      <div id="profileList"></div>
+      <div class="add-term"><input type="text" id="newProfile" placeholder="e.g. infrasound and altered states">
+        <button class="btn-ghost" id="addProfileBtn">Add</button></div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Ingest</div><h2>Feed the worker output</h2></div></div>
+      <p class="note" style="margin:-2px 0 12px">Paste the JSON array your intelligence worker emits, or wire it to POST here. New items merge in; dismissed ones stay dismissed.</p>
+      <textarea id="intelJson" placeholder='[{"id":"…","source":"bluesky","author":"…","text":"…","score":82,"sentiment":"pos","why":"…","term":"…","url":"…","ts":"2026-06-14T10:00:00Z"}]' style="min-height:120px;font-size:11.5px;resize:vertical"></textarea>
+      <div style="display:flex;gap:10px;margin-top:10px"><button class="btn" id="intelImportBtn">Merge items</button>
+        <button class="btn-ghost" id="intelSampleBtn">Load a sample</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="tab" id="tab-log">
+  <div class="section-title">Log &amp; configuration</div>
+  <p class="section-sub">The weekly two-minute keystroke: log a reach snapshot, manage the lexicon and title economics, import from the pipeline, and back up everything.</p>
+  <div class="grid g-2">
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Acquire signal</div><h2>Log a snapshot</h2></div>
+        <span class="pill" id="lastSnap">never</span></div>
+      <div class="field"><div class="field-row"><label>Snapshot date</label><input type="date" id="snapDate"></div></div>
+      <details style="margin:2px 0 14px"><summary>Import from automation pipeline</summary>
+        <div style="margin-top:10px">
+          <textarea id="importJson" placeholder='Paste the JSON emitted by groundswell_fetch.py' style="min-height:92px;font-size:11.5px;resize:vertical"></textarea>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:8px;flex-wrap:wrap">
+            <button class="btn-ghost" id="importBtn">Load into form</button>
+            <span class="hint" style="font-size:10px;color:var(--slate-dim)">Fills API-sourced fields; add sales &amp; holdings by hand, then Log.</span></div>
+        </div>
+      </details>
+      <div class="grp"><span class="eyebrow">Sales &amp; distribution · cumulative units</span></div>
+      <div id="salesInputs"></div>
+      <div class="grp"><span class="eyebrow">Site, discovery &amp; catalog</span></div>
+      <div class="field"><div class="field-row"><label>Site visitors <span class="hint">(Cloudflare)</span></label><input type="number" min="0" id="in_visitors"></div></div>
+      <div class="field"><div class="field-row"><label>Search impressions <span class="hint">(GSC)</span></label><input type="number" min="0" id="in_impr"></div></div>
+      <div class="field"><div class="field-row"><label>Search clicks <span class="hint">(GSC)</span></label><input type="number" min="0" id="in_clicks"></div></div>
+      <div class="field"><div class="field-row"><label>Form signups <span class="hint">(Web3Forms)</span></label><input type="number" min="0" id="in_signups"></div></div>
+      <div class="field"><div class="field-row"><label>WorldCat holdings <span class="hint">(total)</span></label><input type="number" min="0" id="in_holdings"></div></div>
+      <div class="grp"><span class="eyebrow">Mentions per term · this period</span>
+        <div class="hint" style="font-size:10px;color:var(--slate-dim);margin-top:6px">Format per cell: reddit / x / bluesky / podcast — e.g. <b>2/0/1/0</b>.</div></div>
+      <div id="mentInputs"></div>
+      <div style="display:flex;gap:10px;margin-top:18px;flex-wrap:wrap">
+        <button class="btn" id="saveBtn">Log snapshot</button>
+        <button class="btn-ghost" id="exportBtn">Export all data</button>
+        <button class="btn-ghost" id="resetBtn">Clear all</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="eyebrow">Configuration</div><h2>Lexicon Lab</h2></div></div>
+      <p class="note" style="margin:2px 0 14px">Exact-phrase terms tracked in the Audience matrix. (Semantic concepts live in Intelligence.)</p>
+      <div id="termList" style="margin-top:12px"></div>
+      <div class="add-term"><input type="text" id="newTerm" placeholder="Add an exact-phrase term"><button class="btn-ghost" id="addTermBtn">Add</button></div>
+      <div class="grp" style="margin-top:22px"><span class="eyebrow">Title economics</span>
+        <div class="hint" style="font-size:10px;color:var(--slate-dim);margin-top:6px">Royalty per unit &amp; sunk production cost — drives the P&amp;L.</div></div>
+      <div id="econInputs"></div>
+      <details style="margin-top:20px"><summary>How the Reach Index is scored</summary>
+        <div class="formula"><b>Reach Index</b> = units<sub>cum</sub> + (visitors ÷ 10) + (impressions ÷ 100) + (clicks × 0.5)
+          + (signups × 2) + (<span style="color:var(--violet)">mentions × tier weight</span>) + (<span style="color:var(--bone)">holdings × 50</span>)<br><br>
+          A directional composite. Tier 1: 40×, Tier 2: 15×, Tier 3: 25×.</div></details>
+      <details style="margin-top:14px"><summary>Where to pull each number</summary>
+        <div class="formula" id="consoleLinks"></div></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Seventh City Press · Command Deck — Treasury, sales, audience &amp; intelligence in one cockpit. State persists across sessions.
+  KDP and IngramSpark sales and Relay balances are entered by hand (no public API); reach signals are API-automatable;
+  the Intelligence feed is produced by an external crawl-and-score worker.
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const EVENT_COLORS={launch:'#E2A33C',fieldnote:'#A487DC',mention:'#46E2C8',other:'#828DA0'};
+const eventMarkersPlugin={
+  id:'eventMarkers',
+  afterDatasetsDraw(chart,_a,opts){
+    const evs=(opts&&opts.events)||[]; if(!evs.length) return;
+    const labels=chart.data.labels||[];
+    const {ctx, chartArea:{top,bottom}, scales:{x}}=chart;
+    ctx.save();
+    evs.forEach(ev=>{
+      let idx=labels.findIndex(l=>l>=ev.date); if(idx<0) idx=labels.length-1; if(idx<0) return;
+      const px=x.getPixelForValue(idx), col=EVENT_COLORS[ev.type]||'#828DA0';
+      ctx.beginPath(); ctx.setLineDash([3,3]); ctx.lineWidth=1; ctx.strokeStyle=col;
+      ctx.moveTo(px,top); ctx.lineTo(px,bottom); ctx.stroke(); ctx.setLineDash([]);
+      ctx.fillStyle=col; ctx.font="9px 'IBM Plex Mono'";
+      ctx.fillText((ev.label||'').slice(0,22), px+3, top+10);
+    });
+    ctx.restore();
+  }
+};
+if(window.Chart) Chart.register(eventMarkersPlugin);
+</script>
+<script>
+(function(){
+  "use strict";
+  const KEY="scp:command-deck:v1";
+  const fmt = n => (n==null||isNaN(n)) ? "\u2014" : Math.round(n).toLocaleString();
+  const fmtUSD = n => (n==null||isNaN(n)) ? "\u2014" : (n<0?"-":"")+"$"+Math.abs(n).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2});
+  const fmtUSD0 = n => (n==null||isNaN(n)) ? "\u2014" : (n<0?"-":"")+"$"+Math.round(Math.abs(n)).toLocaleString();
+  const pct = (n,d=0) => (n==null||isNaN(n)) ? "\u2014" : (n*100).toFixed(d)+"%";
+  const uid = () => Math.random().toString(36).slice(2,10);
+  const todayISO = () => new Date().toISOString().slice(0,10);
+
+  function countUp(el,newVal,duration=800,formatter=fmt){
+    if(!el) return;
+    const oldVal=parseFloat(String(el.innerText).replace(/[^0-9.\-]/g,''))||0;
+    if(newVal==null||isNaN(newVal)){el.innerText="\u2014";return;}
+    if(oldVal===newVal){el.innerText=formatter(newVal);return;}
+    const start=performance.now();
+    const frame=now=>{const p=Math.min((now-start)/duration,1);const e=1-Math.pow(1-p,3);
+      el.innerText=formatter(oldVal+(newVal-oldVal)*e);
+      if(p<1)requestAnimationFrame(frame); else el.innerText=formatter(newVal);};
+    requestAnimationFrame(frame);
+  }
+
+  function sparkline(values,color="#46E2C8",w=84,h=22,opts={}){
+    const v=(values||[]).map(n=>+n||0);
+    if(v.length<2) return `<svg width="${w}" height="${h}"></svg>`;
+    const max=Math.max(...v,1),min=Math.min(...v,0),span=(max-min)||1,step=w/(v.length-1);
+    const pts=v.map((n,i)=>[i*step,h-2-((n-min)/span)*(h-4)]);
+    const d=pts.map((p,i)=>(i?'L':'M')+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ');
+    const area=`M0 ${h} `+pts.map(p=>'L'+p[0].toFixed(1)+' '+p[1].toFixed(1)).join(' ')+` L${w} ${h} Z`;
+    const id='sg'+uid(),end=pts[pts.length-1];
+    const rise=v[v.length-1]-v[v.length-2];
+    const hot=opts.hot ?? (rise>0 && Math.abs(rise)/span>0.12);
+    const mi=v.indexOf(Math.max(...v)); const maxPt=pts[mi>=0?mi:pts.length-1];
+    return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" style="display:block">
+      <defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0" stop-color="${color}" stop-opacity="${hot?0.42:0.28}"/>
+        <stop offset="1" stop-color="${color}" stop-opacity="0"/></linearGradient></defs>
+      <path d="${area}" fill="url(#${id})"/>
+      ${hot?`<path d="${d}" fill="none" stroke="${color}" stroke-width="4" stroke-opacity="0.22" stroke-linecap="round" stroke-linejoin="round"/>`:''}
+      <path d="${d}" fill="none" stroke="${color}" stroke-width="${hot?1.8:1.5}" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="${maxPt[0].toFixed(1)}" cy="${maxPt[1].toFixed(1)}" r="1.4" fill="${color}" fill-opacity="0.5"/>
+      <circle cx="${end[0].toFixed(1)}" cy="${end[1].toFixed(1)}" r="${hot?2.6:2}" fill="${color}"/>
+      ${hot?`<circle cx="${end[0].toFixed(1)}" cy="${end[1].toFixed(1)}" r="4.5" fill="none" stroke="${color}" stroke-opacity="0.4"/>`:''}
+    </svg>`;
+  }
+
+  function momentum(curr,prev){
+    curr=+curr||0; prev=+prev||0;
+    if(!prev&&!curr) return `<span class="mo mo-flat">\u2014</span>`;
+    if(!prev&&curr)  return `<span class="mo mo-new">\u25B2 NEW</span>`;
+    const p=((curr-prev)/prev)*100;
+    if(Math.abs(p)<1) return `<span class="mo mo-flat">\u25A0 0%</span>`;
+    const up=p>0,cls=up?(p>=25?'mo-surge':'mo-up'):'mo-down';
+    return `<span class="mo ${cls}">${up?'\u25B2':'\u25BC'} ${Math.abs(p).toFixed(0)}%</span>`;
+  }
+  function pearson(a,b){
+    const n=Math.min(a.length,b.length); if(n<2) return 0;
+    let ma=0,mb=0; for(let i=0;i<n;i++){ma+=a[i];mb+=b[i];} ma/=n; mb/=n;
+    let num=0,da=0,db=0;
+    for(let i=0;i<n;i++){const u=a[i]-ma,v=b[i]-mb;num+=u*v;da+=u*u;db+=v*v;}
+    const den=Math.sqrt(da*db); return den?num/den:0;
+  }
+  const esc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  // ---- Config ----
+  const DEFAULT_TERMS=[
+    {t:"Jason Carroll Holloway",anchor:true},
+    {t:"Masters X"},{t:"Seventh City Press"},{t:"111.2 Hz"},
+    {t:"carrier frequency"},{t:"SubTropolis"},{t:"Ars Notoria"},{t:"Voynich"},{t:"Codex Gigas"}
+  ];
+  const TITLES=[
+    {id:"inheritance",nm:"The Inheritance of Frequency"},
+    {id:"grimoire",nm:"The Grimoire"},
+    {id:"kingdom",nm:"The Kingdom"},
+    {id:"omnibus",nm:"Masters X Omnibus"},
+    {id:"hawkes",nm:"John Hawkes Monograph"}
+  ];
+  const DEFAULT_ECON={inheritance:{rpu:3.20,prod:0},grimoire:{rpu:3.20,prod:0},kingdom:{rpu:3.20,prod:0},omnibus:{rpu:6.40,prod:0},hawkes:{rpu:4.10,prod:0}};
+  const DEFAULT_PROFILE=[
+    "infrasound and altered states of consciousness",
+    "occult thriller grounded in real manuscript scholarship",
+    "SubTropolis / underground Kansas City mystery",
+    "carrier frequency or resonance as a narrative device",
+    "Voynich / Ars Notoria / medieval grimoire fiction",
+    "readers asking for literary esoteric thrillers"
+  ];
+  const SOURCES=[
+    {nm:"Bluesky · firehose listening",tier:"api",url:"https://bsky.app/search?q=%22111.2+Hz%22+OR+%22carrier+frequency%22+OR+%22Masters+X%22+OR+%22SubTropolis%22"},
+    {nm:"Reddit · search (free tier)",tier:"api",url:"https://www.reddit.com/search/?q=%28%22111.2+Hz%22+OR+%22carrier+frequency%22+OR+%22Masters+X%22+OR+%22SubTropolis%22%29&type=link"},
+    {nm:"Cloudflare · site traffic",tier:"api",url:"https://dash.cloudflare.com/"},
+    {nm:"Google Search Console",tier:"api",url:"https://search.google.com/search-console?resource_id=sc-domain:jasoncholloway.com"},
+    {nm:"Web3Forms · signups",tier:"api",url:"https://app.web3forms.com/dashboard"},
+    {nm:"WorldCat · holdings",tier:"export",url:"https://search.worldcat.org/search?q=au%3A%22Jason+Carroll+Holloway%22"},
+    {nm:"ListenNotes · podcasts",tier:"export",url:"https://www.listennotes.com/search/?q=%22111.2%20Hz%22%20OR%20%22carrier%20frequency%22%20OR%20%22Masters%20X%22&scope=episode"},
+    {nm:"X / Twitter · read $200/mo",tier:"manual",url:"https://x.com/search?q=(%22111.2%20Hz%22%20OR%20%22Masters%20X%22%20OR%20%22SubTropolis%22)&src=typed_query"},
+    {nm:"Amazon KDP · sales",tier:"manual",url:"https://kdpreports.amazon.com/dashboard"},
+    {nm:"IngramSpark · sales",tier:"manual",url:"https://myaccount.ingramspark.com/Sales/Reports"},
+    {nm:"Relay · Seventh City Press",tier:"manual",url:"https://app.relayfi.com/"}
+  ];
+
+  // ---- Persistence: /api/state -> window.storage -> localStorage -> memory ----
+  let mem=null;
+  const STORE={
+    async load(){
+      try{ const r=await fetch('/api/state',{headers:{'accept':'application/json'}});
+        if(r.ok){ const j=await r.json(); if(j&&typeof j==='object') return j; } }catch(e){}
+      try{ if(window.storage&&window.storage.get){ const r=await window.storage.get(KEY); if(r&&r.value) return JSON.parse(r.value); } }catch(e){}
+      try{ const v=localStorage.getItem(KEY); if(v) return JSON.parse(v); }catch(e){}
+      return null;
+    },
+    async save(state){
+      const body=JSON.stringify(state);
+      try{ await fetch('/api/state',{method:'POST',headers:{'Content-Type':'application/json'},body}); }catch(e){}
+      try{ if(window.storage&&window.storage.set) await window.storage.set(KEY,body); }catch(e){}
+      try{ localStorage.setItem(KEY,body); }catch(e){}
+    }
+  };
+
+  function emptyState(){
+    return {terms:DEFAULT_TERMS.slice(),snapshots:[],events:[],
+      finance:{opening:0,ledger:[]},ads:[],ads_ceiling:0,
+      econ:JSON.parse(JSON.stringify(DEFAULT_ECON)),intel:[],reviews:[],profile:DEFAULT_PROFILE.slice(),_demo:false};
+  }
+  function ensureShape(s){
+    s=s||{};
+    if(!Array.isArray(s.terms)||!s.terms.length) s.terms=DEFAULT_TERMS.slice();
+    if(!Array.isArray(s.snapshots)) s.snapshots=[];
+    if(!Array.isArray(s.events)) s.events=[];
+    if(!s.finance||typeof s.finance!=='object') s.finance={opening:0,ledger:[]};
+    if(typeof s.finance.opening!=='number') s.finance.opening=0;
+    if(!Array.isArray(s.finance.ledger)) s.finance.ledger=[];
+    if(!Array.isArray(s.ads)) s.ads=[];
+    if(typeof s.ads_ceiling!=='number') s.ads_ceiling=0;
+    if(!s.econ||typeof s.econ!=='object') s.econ={};
+    TITLES.forEach(t=>{ if(!s.econ[t.id]) s.econ[t.id]={rpu:DEFAULT_ECON[t.id]?.rpu||0,prod:0}; });
+    if(!Array.isArray(s.intel)) s.intel=[];
+    if(!Array.isArray(s.reviews)) s.reviews=[];
+    if(!Array.isArray(s.profile)||!s.profile.length) s.profile=DEFAULT_PROFILE.slice();
+    return s;
+  }
+
+  function seedDemo(){
+    const s=emptyState(); s._demo=true;
+    const snap=(date,u,terms,vis,impr,clk,sg,hold,extra={})=>Object.assign({date,sales:u,terms,visitors:vis,impr,clicks:clk,signups:sg,holdings:hold},extra);
+    const T=(r,x,b,p)=>({r,x,b,p});
+    s.snapshots=[
+      snap("2026-02-15",{inheritance:6,grimoire:3,kingdom:2,omnibus:1,hawkes:1},
+        {"Masters X":T(0,0,1,0),"SubTropolis":T(1,0,0,0),"111.2 Hz":T(0,0,0,0)},140,320,4,2,0),
+      snap("2026-03-15",{inheritance:11,grimoire:6,kingdom:4,omnibus:2,hawkes:1},
+        {"Masters X":T(1,0,1,0),"SubTropolis":T(2,0,1,0),"111.2 Hz":T(0,0,0,1)},260,690,11,5,0),
+      snap("2026-04-15",{inheritance:17,grimoire:9,kingdom:7,omnibus:3,hawkes:2},
+        {"Masters X":T(1,0,2,0),"SubTropolis":T(2,0,1,1),"111.2 Hz":T(0,0,1,1),"carrier frequency":T(1,0,0,0)},410,1180,22,9,0),
+      snap("2026-05-15",{inheritance:24,grimoire:13,kingdom:10,omnibus:5,hawkes:2},
+        {"Masters X":T(2,0,3,0),"SubTropolis":T(3,0,2,1),"111.2 Hz":T(1,0,1,2),"carrier frequency":T(1,0,1,0),"Voynich":T(1,0,0,0)},680,2240,41,14,15),
+      snap("2026-06-14",{inheritance:31,grimoire:17,kingdom:13,omnibus:7,hawkes:3},
+        {"Masters X":T(3,0,4,0),"SubTropolis":T(4,0,3,2),"111.2 Hz":T(2,0,2,3),"carrier frequency":T(2,0,1,1),"Voynich":T(1,0,1,0),"Ars Notoria":T(1,0,0,0)},1020,3870,73,23,15,
+        {queries:[{q:"subtropolis fiction",impressions:540,clicks:31,fp:true},{q:"111.2 hz meaning",impressions:410,clicks:22,fp:true},{q:"masters x trilogy",impressions:360,clicks:28},{q:"jason carroll holloway",impressions:210,clicks:19},{q:"voynich novel",impressions:180,clicks:7},{q:"ars notoria fiction",impressions:120,clicks:5,fp:true}],
+         pages:[{page:"https://jasoncholloway.com/",impressions:1450,clicks:58},{page:"https://jasoncholloway.com/field-notes/subtropolis",impressions:820,clicks:39},{page:"https://jasoncholloway.com/books/the-inheritance-of-frequency",impressions:610,clicks:26},{page:"https://jasoncholloway.com/field-notes/carrier-frequency",impressions:430,clicks:14}],
+         countries:[{name:"United States",requests:2380},{name:"United Kingdom",requests:410},{name:"Canada",requests:330},{name:"Germany",requests:190},{name:"Australia",requests:150}]})
+    ];
+    s.events=[{date:"2026-05-15",label:"WorldCat: first 15 copies",type:"mention"},{date:"2026-06-01",label:"Amazon Ads live",type:"launch"}];
+    s.finance.opening=0;
+    const L=(date,type,channel,amt)=>({id:uid(),date,type,channel,amount:amt});
+    s.finance.ledger=[
+      L("2026-02-20","transfer","Owner funding",750.00),
+      L("2026-03-28","royalty","KDP",12.40),
+      L("2026-04-12","expense","ISBN block (Bowker)",-210.00),
+      L("2026-04-29","royalty","KDP",47.10),
+      L("2026-05-02","expense","Cloudflare + domain",-25.00),
+      L("2026-05-29","royalty","KDP",88.65),
+      L("2026-05-30","royalty","IngramSpark",34.20),
+      L("2026-06-01","ad","Amazon Ads · Carrier Wave",-45.00),
+      L("2026-06-10","royalty","KDP",61.30),
+      L("2026-06-10","ad","Amazon Ads · Carrier Wave",-38.00)
+    ];
+    s.ads_ceiling=300;
+    s.ads=[
+      {id:uid(),date:"2026-06-01",campaign:"Carrier Wave · Book 1",spend:45.00,sales:18.00,impr:9800,clicks:41,orders:4},
+      {id:uid(),date:"2026-06-10",campaign:"Carrier Wave · Book 1",spend:38.00,sales:33.00,impr:8600,clicks:52,orders:7}
+    ];
+    const I=(ts,source,author,text,score,sentiment,why,term,url,status='new')=>({id:uid(),ts,source,author,text,score,sentiment,why,term,url,status});
+    s.intel=[
+      I("2026-06-13T14:20:00Z","bluesky","@deepmaproom.bsky.social",
+        "spent an hour in a service tunnel under the city today and got this creeping sense of being watched the whole time. learned later there's HVAC infrasound down there around 18hz. our bodies know things our ears don't.",
+        88,"pos","Describes infrasound-induced dread in an underground space — the exact phenomenology of the carrier-frequency premise, with zero awareness the book exists. Prime curiosity-arbitrage target.","infrasound and altered states","https://bsky.app/"),
+      I("2026-06-12T19:05:00Z","podcast","Resonance Fiction Hour · ep.47",
+        "...this whole subgenre of what I'd call resonance fiction — where a specific frequency, like 111.2 hertz, becomes almost a character. there's a real craft to grounding the uncanny in actual acoustics.",
+        84,"pos","Names the precise carrier frequency in a fiction-craft discussion — a near-direct fingerprint match on an audience already primed for the premise.","111.2 Hz","https://www.listennotes.com/"),
+      I("2026-06-11T16:42:00Z","reddit","r/KansasCity · u/caves_and_clay",
+        "Does anyone actually know the full extent of what's stored in SubTropolis? Heard there's gov't records and film reels down there. Feels like the setting for a novel nobody's written yet.",
+        76,"neu","Active public curiosity about SubTropolis as a place of mystery — your single most ownable real-world locus, and they're literally asking for the novel you wrote.","SubTropolis","https://www.reddit.com/"),
+      I("2026-06-10T11:15:00Z","bluesky","@grimoirehours.bsky.social",
+        "looking for an occult thriller that actually respects the source material — real manuscript stuff, Voynich, Ars Notoria, not Da Vinci Code nonsense. does this book exist??",
+        72,"neu","A reader describing your exact subgenre and source texts by name, asking if it exists. Direct outreach candidate.","Voynich / Ars Notoria","https://bsky.app/"),
+      I("2026-06-09T08:30:00Z","news","midwestreads.blog",
+        "Our roundup of Kansas City authors to watch this year spans literary fiction, memoir, and crime...",
+        54,"neu","Adjacent 'authors to watch' list you're absent from — a pitch/outreach target rather than organic resonance.","Kansas City authors","https://midwestreads.blog/"),
+      I("2026-06-08T22:10:00Z","reddit","r/skeptic · u/freqdebunk",
+        "the whole '111hz healing frequency' thing is pseudoscience marketing, there's no peer-reviewed basis for it whatsoever.",
+        43,"neg","Negative framing of the frequency space adjacent to your premise. Monitor tone; not an engagement target.","111 Hz","https://www.reddit.com/")
+    ];
+    const R=(date,t)=>({date,t});
+    s.reviews=[
+      R("2026-04-15",{inheritance:{ar:4.4,ac:5,gr:3.9,gc:3,kenp:1200},grimoire:{ar:4.6,ac:2,gr:0,gc:0,kenp:600},kingdom:{ar:0,ac:0,gr:0,gc:0,kenp:300}}),
+      R("2026-05-15",{inheritance:{ar:4.5,ac:9,gr:4.0,gc:6,kenp:2600},grimoire:{ar:4.5,ac:4,gr:4.2,gc:2,kenp:1500},kingdom:{ar:5,ac:1,gr:0,gc:0,kenp:700},omnibus:{ar:0,ac:0,gr:0,gc:1,kenp:200}}),
+      R("2026-06-14",{inheritance:{ar:4.6,ac:14,gr:4.1,gc:9,kenp:4200},grimoire:{ar:4.6,ac:7,gr:4.3,gc:4,kenp:2900},kingdom:{ar:4.8,ac:3,gr:0,gc:1,kenp:1600},omnibus:{ar:5,ac:2,gr:0,gc:1,kenp:800},hawkes:{ar:0,ac:0,gr:0,gc:0,kenp:120}})
+    ];
+    return s;
+  }
+
+  let state, charts={};
+  function commit(){ state._demo=false; renderDemoBanner(); return save(state); }
+  async function load(){ const s=await STORE.load(); return s? ensureShape(s): null; }
+  async function save(s){ mem=s; try{ await STORE.save(s); }catch(e){} }
+
+  // ---- Reach engine ----
+  function reachParts(s){
+    const units=TITLES.reduce((a,t)=>a+(s.sales?.[t.id]||0),0);
+    let ment=0;
+    (state.terms||[]).forEach(tm=>{
+      const v=s.terms?.[tm.t]||{};
+      const c=(v.r||0)+(v.x||0)+(v.b||0)+(v.p||0);
+      let tNum=tm.anchor?3:2;
+      if(s.term_meta&&s.term_meta[tm.t]) tNum=s.term_meta[tm.t].tier||tNum; else if(tm.tier) tNum=tm.tier;
+      ment+=c*(tNum===1?40:tNum===2?15:25);
+    });
+    return {Sales:units,Site:(s.visitors||0)/10,Search:(s.impr||0)/100+(s.clicks||0)*0.5,
+            Signups:(s.signups||0)*2,Mentions:ment,Holdings:(s.holdings||0)*50};
+  }
+  const reachOf = s => Object.values(reachParts(s)).reduce((a,b)=>a+b,0);
+  const last = () => state.snapshots[state.snapshots.length-1];
+  const prev = () => state.snapshots[state.snapshots.length-2];
+
+  // ---- Finance ----
+  const ledgerSorted = () => (state.finance.ledger||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+  const balanceNow = () => (state.finance.opening||0)+(state.finance.ledger||[]).reduce((a,e)=>a+(+e.amount||0),0);
+  function balanceSeries(){ let bal=state.finance.opening||0; const out=[]; ledgerSorted().forEach(e=>{bal+=(+e.amount||0); out.push({date:e.date,bal});}); return out; }
+  function royaltiesMTD(){ const m=todayISO().slice(0,7); return (state.finance.ledger||[]).filter(e=>(e.type==='royalty'||e.type==='sale_direct')&&(e.date||'').slice(0,7)===m).reduce((a,e)=>a+(+e.amount||0),0); }
+  function monthlyBurn(){ const bm={}; (state.finance.ledger||[]).forEach(e=>{ if(+e.amount<0){const m=(e.date||'').slice(0,7); bm[m]=(bm[m]||0)+(-e.amount);} }); const ms=Object.keys(bm).sort().slice(-3); return ms.length? ms.reduce((a,m)=>a+bm[m],0)/ms.length : 0; }
+  function runwayMonths(){ const b=balanceNow(),burn=monthlyBurn(); return burn>0? b/burn : Infinity; }
+  function channelTotals(){ const t={}; (state.finance.ledger||[]).forEach(e=>{ if((e.type==='royalty'||e.type==='sale_direct')&&+e.amount>0){const c=e.channel||'Other'; t[c]=(t[c]||0)+(+e.amount);} }); return t; }
+  const TYPE_SIGN={royalty:1,sale_direct:1,expense:-1,ad:-1,transfer:1,other:1};
+  const TYPE_LABEL={royalty:'Royalty',sale_direct:'Direct sale',expense:'Expense',ad:'Ad spend',transfer:'Transfer',other:'Other'};
+
+  // ---- Ads ----
+  function adTotals(){ const a={spend:0,sales:0,impr:0,clicks:0,orders:0}; (state.ads||[]).forEach(e=>{a.spend+=+e.spend||0;a.sales+=+e.sales||0;a.impr+=+e.impr||0;a.clicks+=+e.clicks||0;a.orders+=+e.orders||0;}); return a; }
+
+  function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),1900); }
+
+  // ---- Tabs ----
+  let activeTab='overview';
+  function activateTab(name){
+    activeTab=name;
+    document.querySelectorAll('.band').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));
+    document.querySelectorAll('.tab').forEach(s=>s.classList.toggle('active',s.id==='tab-'+name));
+    renderTabCharts(name);
+  }
+
+  // ---- Master render ----
+  function renderAll(){
+    renderHeader(); renderDemoBanner();
+    renderOverviewKpis(); renderAlerts(); renderOverviewIntel();
+    renderTreasury(); renderSalesAds(); renderPnl(); renderCatalog(); renderCatalogInputs();
+    renderReachComposition(); renderSources(); renderSiteDiscovery(); renderMentions(); renderResonance(); renderEvents();
+    renderDiagnostics(); renderLexiconLab(); renderEconInputs(); renderInputs(); renderConsoleLinks();
+    renderIntel(); renderProfile(); renderIntelStatus();
+    document.getElementById('snapCount').textContent=state.snapshots.length+" snapshot"+(state.snapshots.length===1?"":"s");
+    document.getElementById('lastSnap').textContent=last()?("last: "+last().date):"never";
+    const nIntel=(state.intel||[]).filter(i=>i.status==='new').length;
+    const ic=document.getElementById('intelCount');
+    if(nIntel){ic.style.display='';ic.textContent=nIntel;} else ic.style.display='none';
+    renderTabCharts(activeTab);
+  }
+  function renderDemoBanner(){ document.getElementById('demoBanner').style.display=state._demo?'flex':'none'; }
+
+  function renderHeader(){
+    const ls=last(),pv=prev();
+    const rb=document.getElementById('reachBig'),rd=document.getElementById('reachDelta');
+    if(!ls){ rb.textContent="\u2014"; rd.textContent="awaiting first snapshot"; setWaveAmp(0.08); }
+    else{
+      const r=reachOf(ls); countUp(rb,r);
+      if(pv){ const pr=reachOf(pv),diff=r-pr,pc=pr?((diff/pr)*100):0;
+        rd.className='delta num '+(diff>0?'up':diff<0?'down':'flat');
+        rd.textContent=`${diff>0?'\u25B2':diff<0?'\u25BC':'\u25A0'} ${fmt(Math.abs(diff))} (${pc>=0?'+':''}${pc.toFixed(1)}%) vs prior`;
+      } else { rd.className='delta num flat'; rd.textContent='baseline established'; }
+      const max=Math.max(...state.snapshots.map(reachOf),1); setWaveAmp(0.1+0.9*(r/max));
+    }
+    // treasury hero
+    const bb=document.getElementById('balBig'),bd=document.getElementById('balDelta');
+    const ser=balanceSeries();
+    if(!ser.length){ bb.textContent="\u2014"; bd.textContent="no ledger yet"; bd.className='delta num flat'; }
+    else{
+      countUp(bb,balanceNow(),800,fmtUSD0);
+      const roy=royaltiesMTD();
+      bd.className='delta num '+(roy>0?'up':'flat');
+      bd.textContent=roy>0?`\u25B2 ${fmtUSD0(roy)} royalties MTD`:`runway ${runwayMonths()===Infinity?'\u221E':runwayMonths().toFixed(1)+' mo'}`;
+    }
+  }
+
+  // ---- Overview KPIs ----
+  function renderOverviewKpis(){
+    const ls=last(),pv=prev();
+    const units=ls?TITLES.reduce((a,t)=>a+(ls.sales?.[t.id]||0),0):null;
+    const punits=pv?TITLES.reduce((a,t)=>a+(pv.sales?.[t.id]||0),0):null;
+    const ser=balanceSeries(); const bal=ser.length?balanceNow():null;
+    const pbal=ser.length>1?ser[ser.length-2].bal:null;
+    const rw=runwayMonths();
+    const nNew=(state.intel||[]).filter(i=>i.status==='new').length;
+    const at=adTotals(); const acos=at.sales>0?at.spend/at.sales:null;
+    const cards=[
+      {l:"Relay balance",v:bal!=null?fmtUSD0(bal):"\u2014",d:(bal!=null&&pbal!=null)?momentum(bal,pbal):''},
+      {l:"Royalties · MTD",v:fmtUSD0(royaltiesMTD()),d:''},
+      {l:"Runway",v:rw===Infinity?"\u221E":rw.toFixed(1)+" mo",d:''},
+      {l:"Units · total",v:units!=null?fmt(units):"\u2014",d:(units!=null&&punits!=null)?momentum(units,punits):''},
+      {l:"Reach Index",v:ls?fmt(reachOf(ls)):"\u2014",d:(ls&&pv)?momentum(reachOf(ls),reachOf(pv)):''},
+      {l:"ACOS",v:acos!=null?pct(acos,0):"\u2014",d:acos!=null?(acos<=0.40?'<span class="mo mo-up">on target</span>':'<span class="mo mo-down">high</span>'):''}
+    ];
+    document.getElementById('ovKpis').innerHTML=cards.map(k=>
+      `<div class="kpi"><div class="label">${k.l}</div><div class="v num">${k.v}</div>
+        <div class="kpi-delta">${k.d||''}</div></div>`).join('');
+  }
+
+  function renderAlerts(){
+    const box=document.getElementById('alerts'); const A=[];
+    const rw=runwayMonths();
+    if(rw!==Infinity){ if(rw<3) A.push(['crit','Runway',`<b>${rw.toFixed(1)} months</b> of runway at the current burn. Time to grow inflows or trim costs.`]);
+      else if(rw<6) A.push(['warn','Runway',`Runway is <b>${rw.toFixed(1)} months</b>. Keep an eye on burn vs royalties.`]); }
+    else if(balanceSeries().length) A.push(['good','Runway',`Inflows cover costs — <b>no net burn</b> this window.`]);
+    const at=adTotals();
+    if(at.spend>0){ const acos=at.sales>0?at.spend/at.sales:Infinity;
+      if(acos>0.5||acos===Infinity) A.push(['warn','Ads',`Amazon Ads ACOS is <b>${at.sales>0?pct(acos,0):'\u221E'}</b> — above a ~40% break-even guide. Tighten targeting or bids.`]);
+      else if(acos<0.35) A.push(['good','Ads',`Ads ACOS <b>${pct(acos,0)}</b> — efficient. Headroom to scale toward the ceiling.`]);
+      if(state.ads_ceiling>0){ const p=at.spend/state.ads_ceiling;
+        if(p>=0.8) A.push(['warn','Budget',`<b>${pct(p,0)}</b> of the $${fmt(state.ads_ceiling)} ceiling spent.`]); } }
+    const newIntel=(state.intel||[]).filter(i=>i.status==='new').sort((a,b)=>b.score-a.score);
+    if(newIntel[0]&&newIntel[0].score>=75) A.push(['good','Signal',`High-relevance ${newIntel[0].source} chatter (score <b>${newIntel[0].score}</b>): "${esc(newIntel[0].text.slice(0,90))}\u2026"`]);
+    // surging term
+    const ls=last(),pv=prev();
+    if(ls&&pv){ for(const tm of state.terms){ const c=ls.terms?.[tm.t]||{},p=pv.terms?.[tm.t]||{};
+      const ct=(c.r||0)+(c.x||0)+(c.b||0)+(c.p||0),pt=(p.r||0)+(p.x||0)+(p.b||0)+(p.p||0);
+      if(pt>0&&(ct-pt)/pt>=0.5){ A.push(['info','Mentions',`"<b>${esc(tm.t)}</b>" mentions up ${pct((ct-pt)/pt,0)} this period.`]); break; } } }
+    const rls=revLast(),rpv=revPrev();
+    if(rls&&rpv){ const v=totalReviews(rls)-totalReviews(rpv); if(v>0) A.push(['good','Reviews',`<b>${v}</b> new review${v===1?'':'s'} since the last reading \u2014 social proof is compounding.`]); }
+    if(!A.length) A.push(['info','Status','All quiet — nothing flagged this cycle. Log a snapshot or check Intelligence.']);
+    box.innerHTML=A.map(([cls,tag,txt])=>`<div class="alert ${cls}"><span class="atag">${tag}</span><span>${txt}</span></div>`).join('');
+  }
+
+  function intelColor(score){ return score>=75?'var(--phosphor)':score>=50?'var(--amber)':'var(--slate)'; }
+  function intelCardHTML(it,compact){
+    const sb={bluesky:'sb-bluesky',reddit:'sb-reddit',podcast:'sb-podcast',news:'sb-news',web:'sb-web'}[it.source]||'sb-web';
+    const when=relTime(it.ts);
+    return `<div class="intel ${it.status==='dismissed'?'dismissed':''} ${it.status==='kept'?'kept':''}">
+      <div class="intel-top"><span class="src-badge ${sb}">${esc(it.source)}</span>
+        <span>${esc(it.author||'')}</span><span style="margin-left:auto">${when}</span></div>
+      <div class="intel-text">${esc(it.text)}</div>
+      ${it.why?`<div class="intel-why">${esc(it.why)}</div>`:''}
+      <div class="intel-foot">
+        <div class="score-ring" style="--p:${it.score};--rc:${intelColor(it.score)}"><i>${it.score}</i></div>
+        <span class="sent ${it.sentiment||'neu'}">${({pos:'positive',neu:'neutral',neg:'negative'}[it.sentiment]||'neutral')}</span>
+        ${it.term?`<span class="term-note">${esc(it.term)}</span>`:''}
+        ${compact?'':`<div class="intel-btns">
+          ${it.url?`<a class="mini-btn" href="${esc(it.url)}" target="_blank" rel="noopener">open</a>`:''}
+          ${it.status!=='kept'?`<button class="mini-btn keep" onclick="intelAct('${it.id}','kept')">keep</button>`:''}
+          ${it.status!=='dismissed'?`<button class="mini-btn" onclick="intelAct('${it.id}','dismissed')">dismiss</button>`:`<button class="mini-btn" onclick="intelAct('${it.id}','new')">restore</button>`}
+        </div>`}
+      </div></div>`;
+  }
+  function relTime(ts){ if(!ts) return ''; const d=new Date(ts); if(isNaN(d)) return ''; const s=(Date.now()-d.getTime())/1000;
+    if(s<3600) return Math.max(1,Math.round(s/60))+'m ago'; if(s<86400) return Math.round(s/3600)+'h ago';
+    if(s<86400*7) return Math.round(s/86400)+'d ago'; return d.toISOString().slice(0,10); }
+
+  function renderOverviewIntel(){
+    const top=(state.intel||[]).filter(i=>i.status!=='dismissed').sort((a,b)=>b.score-a.score).slice(0,3);
+    const box=document.getElementById('ovIntel');
+    document.getElementById('ovIntelMore').textContent=(state.intel||[]).length?`${(state.intel||[]).filter(i=>i.status==='new').length} new`:'';
+    box.innerHTML=top.length? top.map(it=>intelCardHTML(it,true)).join('<div style="height:8px"></div>')
+      : `<div class="empty" style="height:140px"><div class="e-big">No signals yet</div><div>Wire the worker, or load a sample in Intelligence.</div></div>`;
+  }
+
+  // ---- Treasury ----
+  function renderTreasury(){
+    const ser=balanceSeries();
+    document.getElementById('trBal').textContent=ser.length?fmtUSD0(balanceNow()):"\u2014";
+    document.getElementById('trBal').className='v num '+(balanceNow()>=0?'money-pos':'money-neg');
+    document.getElementById('trRoyMTD').textContent=fmtUSD0(royaltiesMTD());
+    document.getElementById('trBurn').textContent=monthlyBurn()>0?fmtUSD0(monthlyBurn()):"\u2014";
+    const rw=runwayMonths(); document.getElementById('trRunway').textContent=rw===Infinity?"\u221E":rw.toFixed(1);
+    // ledger table
+    const rows=ledgerSorted().reverse();
+    document.getElementById('ledgerCount').textContent=rows.length+" entr"+(rows.length===1?"y":"ies");
+    document.getElementById('ledgerBody').innerHTML=rows.length? rows.map(e=>{
+      const pos=(+e.amount||0)>=0;
+      return `<tr><td>${e.date}</td><td>${TYPE_LABEL[e.type]||e.type}</td><td>${esc(e.channel||'')}</td>
+        <td class="num ledger-amt ${pos?'pos':'neg'}">${fmtUSD(+e.amount||0)}</td>
+        <td><button class="row-x" onclick="ledgerDel('${e.id}')" title="delete">\u00D7</button></td></tr>`;
+    }).join('') : `<tr><td colspan="5" style="text-align:center;color:var(--slate-dim)">No entries — log a royalty or expense.</td></tr>`;
+  }
+
+  // ---- Sales & Ads ----
+  function renderSalesAds(){
+    const at=adTotals();
+    document.getElementById('adSpend').textContent=fmtUSD0(at.spend);
+    document.getElementById('adSales').textContent=fmtUSD0(at.sales);
+    document.getElementById('adAcos').textContent=at.sales>0?pct(at.spend/at.sales,0):"\u2014";
+    document.getElementById('adRoas').textContent=at.spend>0?(at.sales/at.spend).toFixed(2)+"\u00D7":"\u2014";
+    document.getElementById('adCtr').textContent=at.impr>0?pct(at.clicks/at.impr,2):"\u2014";
+    const ceil=state.ads_ceiling||0;
+    document.getElementById('adCeilLbl').textContent=ceil>0?`${fmtUSD0(at.spend)} / ${fmtUSD0(ceil)}`:'ceiling \u2014';
+    const g=document.getElementById('adGauge'); const p=ceil>0?Math.min(1,at.spend/ceil):0;
+    g.style.width=(p*100).toFixed(1)+'%'; g.style.background=p>=0.8?'var(--red)':p>=0.5?'var(--amber)':'var(--phosphor)';
+    const ce=document.getElementById('ad_ceiling'); if(ce&&document.activeElement!==ce) ce.value=ceil||'';
+    const ads=(state.ads||[]).slice().sort((a,b)=>b.date.localeCompare(a.date));
+    document.getElementById('adsCount').textContent=ads.length+" entr"+(ads.length===1?"y":"ies");
+    document.getElementById('adsBody').innerHTML=ads.length? ads.map(a=>{
+      const ac=(+a.sales>0)?(+a.spend/+a.sales):null;
+      return `<tr><td>${a.date}</td><td>${esc(a.campaign||'')}</td><td class="num">${fmtUSD(+a.spend||0)}</td>
+        <td class="num">${fmtUSD(+a.sales||0)}</td><td class="num">${ac!=null?pct(ac,0):'\u2014'}</td>
+        <td><button class="row-x" onclick="adDel('${a.id}')" title="delete">\u00D7</button></td></tr>`;
+    }).join('') : `<tr><td colspan="6" style="text-align:center;color:var(--slate-dim)">No ad periods logged.</td></tr>`;
+  }
+  function renderPnl(){
+    const ls=last();
+    const body=document.getElementById('pnlBody');
+    let any=false,totG=0,totP=0,totN=0;
+    const rows=TITLES.map(t=>{
+      const u=ls?.sales?.[t.id]||0; const e=state.econ[t.id]||{rpu:0,prod:0};
+      const g=u*(+e.rpu||0),pr=+e.prod||0,net=g-pr; if(u>0)any=true; totG+=g;totP+=pr;totN+=net;
+      return `<tr><td>${t.nm}</td><td class="num">${fmt(u)}</td><td class="num">${fmtUSD(+e.rpu||0)}</td>
+        <td class="num">${fmtUSD(g)}</td><td class="num">${pr?fmtUSD(pr):'\u2014'}</td>
+        <td class="num ${net>=0?'net-pos':'net-neg'}">${fmtUSD(net)}</td></tr>`;
+    }).join('');
+    body.innerHTML=rows+`<tr style="border-top:1px solid var(--line)"><td><b>Total</b></td><td></td><td></td>
+      <td class="num"><b>${fmtUSD(totG)}</b></td><td class="num">${totP?fmtUSD(totP):'\u2014'}</td>
+      <td class="num ${totN>=0?'net-pos':'net-neg'}"><b>${fmtUSD(totN)}</b></td></tr>`;
+    if(!any) body.innerHTML=`<tr><td colspan="6" style="text-align:center;color:var(--slate-dim)">No units logged yet.</td></tr>`;
+  }
+
+  // ---- Catalog & reviews ----
+  const revLast = () => state.reviews[state.reviews.length-1];
+  const revPrev = () => state.reviews[state.reviews.length-2];
+  function totalReviews(s){ return s?TITLES.reduce((a,t)=>{const x=s.t?.[t.id]||{};return a+(+x.ac||0)+(+x.gc||0);},0):0; }
+  function avgAmazon(s){ if(!s)return null; let n=0,d=0; TITLES.forEach(t=>{const x=s.t?.[t.id]||{}; if(+x.ac){n+=(+x.ar||0)*(+x.ac);d+=(+x.ac);}}); return d?n/d:null; }
+  function totalKenp(s){ return s?TITLES.reduce((a,t)=>a+(+(s.t?.[t.id]?.kenp)||0),0):0; }
+  function renderCatalog(){
+    const ls=revLast(),pv=revPrev();
+    const tot=totalReviews(ls),vel=tot-totalReviews(pv),avg=avgAmazon(ls);
+    document.getElementById('catTotal').textContent=ls?fmt(tot):"\u2014";
+    document.getElementById('catAvg').textContent=avg!=null?avg.toFixed(2)+" \u2605":"\u2014";
+    document.getElementById('catNew').textContent=ls?(vel>0?"+"+fmt(vel):fmt(vel)):"\u2014";
+    document.getElementById('catKenp').textContent=ls?fmt(totalKenp(ls)):"\u2014";
+    document.getElementById('catCount').textContent=state.reviews.length+" reading"+(state.reviews.length===1?"":"s");
+    const body=document.getElementById('catBody');
+    if(!ls){ body.innerHTML=`<tr><td colspan="7" style="text-align:center;color:var(--slate-dim)">No readings logged.</td></tr>`; return; }
+    body.innerHTML=TITLES.map(t=>{
+      const x=ls.t?.[t.id]||{},p=pv?.t?.[t.id]||{};
+      const cur=(+x.ac||0)+(+x.gc||0),prevc=(+p.ac||0)+(+p.gc||0),d=cur-prevc;
+      const star=v=>(+v>0)?(+v).toFixed(1)+'\u2605':'\u2014';
+      return `<tr><td>${t.nm}</td>
+        <td class="num" style="color:var(--amber)">${star(x.ar)}</td><td class="num">${fmt(+x.ac||0)}</td>
+        <td class="num" style="color:var(--violet)">${star(x.gr)}</td><td class="num">${fmt(+x.gc||0)}</td>
+        <td class="num">${fmt(+x.kenp||0)}</td>
+        <td class="num">${pv?(d>0?'<span class="mo mo-up">\u25B2 '+d+'</span>':d<0?'<span class="mo mo-down">\u25BC '+Math.abs(d)+'</span>':'<span class="mo mo-flat">\u25A0</span>'):'<span class="mo mo-flat">\u2014</span>'}</td></tr>`;
+    }).join('');
+  }
+  function renderCatalogInputs(){
+    const box=document.getElementById('catInputs'); if(box.childElementCount) return;
+    box.innerHTML=TITLES.map(t=>`<div class="field"><div class="field-row" style="grid-template-columns:1fr 1fr">
+      <label>${t.nm}</label><input type="text" id="cat_${t.id}" placeholder="4.6/14/4.1/9/4200"></div></div>`).join('');
+    const ls=revLast(); if(ls) TITLES.forEach(t=>{const x=ls.t?.[t.id]; const e=document.getElementById('cat_'+t.id); if(x&&e)e.value=`${x.ar||0}/${x.ac||0}/${x.gr||0}/${x.gc||0}/${x.kenp||0}`;});
+  }
+
+  // ---- Reach composition ----
+  const REACH_COLORS={Sales:'#46E2C8',Site:'#828DA0',Search:'#E2A33C',Signups:'#2BB8A2',Mentions:'#A487DC',Holdings:'#EAE4D3'};
+  function renderReachComposition(){
+    const box=document.getElementById('reachComp'); const ls=last(); if(!ls){box.innerHTML='<div class="note">Log a snapshot to see the mix.</div>';return;}
+    const parts=reachParts(ls),total=Object.values(parts).reduce((a,b)=>a+b,0)||1;
+    const live=Object.entries(parts).filter(([,v])=>v>0);
+    box.innerHTML=`<div class="reach-bar">${live.map(([k,v])=>`<div title="${k}: ${fmt(v)} (${(v/total*100).toFixed(0)}%)" style="width:${(v/total*100).toFixed(2)}%;background:${REACH_COLORS[k]}"></div>`).join('')}</div>
+      <div class="reach-legend">${live.map(([k,v])=>`<span style="display:inline-flex;align-items:center;gap:6px"><i style="width:8px;height:8px;border-radius:2px;display:inline-block;background:${REACH_COLORS[k]}"></i> ${k} <b style="color:var(--bone)">${(v/total*100).toFixed(0)}%</b></span>`).join('')}</div>`;
+  }
+  function renderSiteDiscovery(){
+    const ls=last();
+    document.getElementById('kVisitors').textContent=ls?fmt(ls.visitors):"\u2014";
+    document.getElementById('kImpr').textContent=ls?fmt(ls.impr):"\u2014";
+    document.getElementById('kClicks').textContent=ls?fmt(ls.clicks):"\u2014";
+    document.getElementById('kSignups').textContent=ls?fmt(ls.signups):"\u2014";
+    document.getElementById('holdingsBig').textContent=ls?fmt(ls.holdings):"\u2014";
+  }
+  function renderSources(){
+    document.getElementById('srcList').innerHTML=SOURCES.map(s=>
+      `<div class="src"><span class="dot d-${s.tier}"></span><span class="nm">${s.nm}</span>
+        <span class="tier">${s.tier}</span><a class="open" href="${s.url}" target="_blank" rel="noopener">open \u2197</a></div>`).join('');
+  }
+  function renderConsoleLinks(){ document.getElementById('consoleLinks').innerHTML=SOURCES.map(s=>`<a href="${s.url}" target="_blank" rel="noopener" style="color:var(--phosphor-dim);text-decoration:none">${s.nm} \u2197</a>`).join('<br>'); }
+
+  function renderMentions(){
+    const ls=last(),pv=prev();
+    const tiers={1:{nm:"Tier 1 \u00B7 Fingerprint",hex:"#46E2C8",rows:[]},2:{nm:"Tier 2 \u00B7 Thematic",hex:"#E2A33C",rows:[]},3:{nm:"Tier 3 \u00B7 Identity",hex:"#A487DC",rows:[]}};
+    state.terms.forEach(tm=>{
+      let tNum=tm.anchor?3:2;
+      if(ls&&ls.term_meta&&ls.term_meta[tm.t]) tNum=ls.term_meta[tm.t].tier||tNum; else if(tm.tier) tNum=tm.tier;
+      const curr=ls?.terms?.[tm.t]||{},prior=pv?.terms?.[tm.t]||{};
+      const tot=(curr.r||0)+(curr.x||0)+(curr.b||0)+(curr.p||0),pTot=(prior.r||0)+(prior.x||0)+(prior.b||0)+(prior.p||0);
+      const hist=state.snapshots.map(s=>{const v=s.terms?.[tm.t]||{};return (v.r||0)+(v.x||0)+(v.b||0)+(v.p||0);});
+      const isFirst=(tNum===1&&pTot===0&&tot>0&&hist.filter(x=>x>0).length===1);
+      let nm=esc(tm.t);
+      if(tm.anchor) nm=`<span class="term-anchor">${esc(tm.t)}</span><br><span class="term-note">anchor identity</span>`;
+      const rowCls=(pTot===0&&tot>0)?'row-new':(pTot>0&&(tot-pTot)/pTot>=0.25)?'row-surge':'';
+      tiers[tNum].rows.push(`<tr class="${rowCls}"><td>${nm}${isFirst?'<span class="first-sig">FIRST SIGNAL</span>':''}</td>
+        <td class="num">${curr.r||0}</td><td class="num">${curr.x||0}</td><td class="num">${curr.b||0}</td><td class="num">${curr.p||0}</td>
+        <td class="num" style="color:${tiers[tNum].hex};font-weight:600">${tot}</td>
+        <td>${sparkline(hist,tiers[tNum].hex)}</td><td style="text-align:right">${momentum(tot,pTot)}</td></tr>`);
+    });
+    let html=''; [1,2,3].forEach(t=>{ if(tiers[t].rows.length) html+=`<tr><td colspan="8" class="ment-group">${tiers[t].nm}</td></tr>`+tiers[t].rows.join(''); });
+    document.getElementById('mentBody').innerHTML=html||`<tr><td colspan="8" style="text-align:center;color:var(--slate-dim);padding:18px">No terms tracked.</td></tr>`;
+  }
+
+  function renderResonance(){
+    const box=document.getElementById('signalCorr'); const snaps=state.snapshots;
+    if(snaps.length<4){ box.style.display='none'; return; }
+    const ment=snaps.map(s=>Object.values(s.terms||{}).reduce((a,v)=>a+(v.r||0)+(v.x||0)+(v.b||0)+(v.p||0),0));
+    const targets={'search impressions':snaps.map(s=>s.impr||0),'search clicks':snaps.map(s=>s.clicks||0),'site visitors':snaps.map(s=>s.visitors||0)};
+    let best={r:0};
+    for(const [name,series] of Object.entries(targets)) for(const k of [1,2]){ if(ment.length-k<3) continue;
+      const r=pearson(ment.slice(0,ment.length-k),series.slice(k)); if(r>best.r) best={r,name,k}; }
+    box.style.display='block';
+    box.innerHTML=best.r<0.4
+      ? `<b>Resonance scan:</b> no strong lagged link between cultural mentions and downstream search or traffic yet (${snaps.length} snapshots). Needs a few more cycles and a mention spike before an echo surfaces.`
+      : `<b>Resonance detected \u2014 directional:</b> mention spikes track with a rise in <span style="color:var(--phosphor)">${best.name}</span> about <b>${best.k} snapshot${best.k>1?'s':''} later</b> (r \u2248 ${best.r.toFixed(2)} over ${snaps.length} points). The curiosity-arbitrage signature: people meet a term, then search it on their own clock. Small sample \u2014 a lead to watch, not proof.`;
+  }
+
+  function renderEvents(){
+    const wrap=document.getElementById('ev_list'); if(!wrap) return;
+    const evs=(state.events||[]).slice().sort((a,b)=>a.date.localeCompare(b.date));
+    wrap.innerHTML=evs.length? evs.map((e,i)=>`<span class="term-chip" style="border-color:${EVENT_COLORS[e.type]||'#828DA0'};color:${EVENT_COLORS[e.type]||'#828DA0'}"><span style="color:var(--slate-dim);font-size:10px">${e.date}</span> ${esc(e.label)} <button data-ei="${i}" title="remove">\u00D7</button></span>`).join('')
+      : `<span class="hint" style="font-size:10px;color:var(--slate-dim)">No events marked yet.</span>`;
+    wrap.querySelectorAll('button[data-ei]').forEach(b=>b.onclick=()=>{ state.events.splice(+b.dataset.ei,1); commit(); renderEvents(); renderTabCharts('audience'); });
+  }
+
+  function renderDiagnostics(){
+    const ls=last(); if(!ls) return;
+    const maxQ=ls.queries?Math.max(...ls.queries.map(q=>q.impressions),1):1;
+    const maxP=ls.pages?Math.max(...ls.pages.map(p=>p.impressions),1):1;
+    const maxC=ls.countries?Math.max(...ls.countries.map(c=>c.requests),1):1;
+    if(ls.queries&&ls.queries.length) document.getElementById('diagQueries').innerHTML=ls.queries.slice(0,8).map(q=>
+      `<tr><td>${q.fp?'<span class="first-sig" style="margin:0 6px 0 0">FP</span>':''}<span style="${q.fp?'color:var(--phosphor);font-weight:600':''}">${esc(q.q)}</span></td>
+        <td class="num">${fmt(q.impressions)}<div style="height:3px;background:var(--phosphor);width:${(q.impressions/maxQ)*100}%;margin-top:2px;border-radius:2px"></div></td>
+        <td class="num">${fmt(q.clicks)}</td></tr>`).join('');
+    if(ls.pages&&ls.pages.length) document.getElementById('diagPages').innerHTML=ls.pages.slice(0,6).map(p=>
+      `<tr><td><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:180px">${esc(p.page.replace('https://jasoncholloway.com',''))}</div></td>
+        <td class="num">${fmt(p.impressions)}<div style="height:3px;background:var(--amber);width:${(p.impressions/maxP)*100}%;margin-top:2px;border-radius:2px"></div></td>
+        <td class="num">${fmt(p.clicks)}</td></tr>`).join('');
+    if(ls.countries&&ls.countries.length) document.getElementById('diagGeo').innerHTML=ls.countries.slice(0,8).map(c=>
+      `<div style="margin-bottom:8px"><div style="display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px"><span>${esc(c.name)}</span><span class="num">${fmt(c.requests)}</span></div>
+        <div style="background:var(--inset);height:6px;border-radius:3px;overflow:hidden"><div style="background:var(--violet);height:100%;width:${(c.requests/maxC)*100}%"></div></div></div>`).join('');
+  }
+
+  function renderLexiconLab(){
+    document.getElementById('termList').innerHTML=state.terms.map((tm,i)=>
+      `<span class="term-chip ${tm.anchor?'anchor':''}">${esc(tm.t)} ${tm.anchor?'':`<button data-i="${i}" title="remove">\u00D7</button>`}</span>`).join('');
+    document.querySelectorAll('#termList button[data-i]').forEach(b=>b.onclick=()=>{ state.terms.splice(+b.dataset.i,1); commit(); renderAll(); });
+  }
+  function renderEconInputs(){
+    document.getElementById('econInputs').innerHTML=TITLES.map(t=>{
+      const e=state.econ[t.id]||{rpu:0,prod:0};
+      return `<div class="field"><div class="field-row" style="grid-template-columns:1fr 90px 90px">
+        <label>${t.nm}</label>
+        <input type="number" step="0.01" id="rpu_${t.id}" value="${e.rpu||''}" placeholder="$/unit" title="royalty per unit">
+        <input type="number" step="1" id="prod_${t.id}" value="${e.prod||''}" placeholder="prod $" title="sunk production cost"></div></div>`;
+    }).join('');
+    TITLES.forEach(t=>{
+      const r=document.getElementById('rpu_'+t.id),p=document.getElementById('prod_'+t.id);
+      const upd=()=>{ state.econ[t.id]={rpu:parseFloat(r.value)||0,prod:parseFloat(p.value)||0}; commit(); renderPnl(); renderTabCharts(activeTab); };
+      r.addEventListener('change',upd); p.addEventListener('change',upd);
+    });
+  }
+  function renderInputs(){
+    document.getElementById('salesInputs').innerHTML=TITLES.map(t=>`<div class="field"><div class="field-row"><label>${t.nm}</label><input type="number" min="0" id="sale_${t.id}"></div></div>`).join('');
+    document.getElementById('mentInputs').innerHTML=state.terms.map((tm,i)=>`<div class="field"><div class="field-row"><label>${tm.anchor?'<span class="term-anchor">'+esc(tm.t)+'</span>':esc(tm.t)}</label><input type="text" id="ment_${i}" placeholder="0/0/0/0"></div></div>`).join('');
+    const ls=last(); if(!ls) return;
+    TITLES.forEach(t=>{const el=document.getElementById('sale_'+t.id); if(el)el.value=ls.sales?.[t.id]||'';});
+    const e=document.getElementById('in_holdings'); if(e)e.value=ls.holdings||'';
+  }
+
+  // ---- Intelligence ----
+  function intelFilters(){
+    return {source:document.getElementById('if_source').value,sent:document.getElementById('if_sentiment').value,
+      status:document.getElementById('if_status').value,min:+document.getElementById('if_minscore').value};
+  }
+  function renderIntel(){
+    const f=intelFilters();
+    let items=(state.intel||[]).slice().sort((a,b)=>b.score-a.score);
+    items=items.filter(i=>{
+      if(f.source&&i.source!==f.source) return false;
+      if(f.sent&&(i.sentiment||'neu')!==f.sent) return false;
+      if(i.score<f.min) return false;
+      if(f.status==='active') return i.status!=='dismissed';
+      if(f.status==='all') return true;
+      return i.status===f.status;
+    });
+    const feed=document.getElementById('intelFeed');
+    feed.innerHTML=items.length? items.map(it=>intelCardHTML(it,false)).join('')
+      : `<div class="empty" style="height:160px;grid-column:1/-1"><div class="e-big">Nothing matches</div><div>Lower the score floor, change the status filter, or ingest fresh items.</div></div>`;
+  }
+  function renderIntelStatus(){
+    const items=state.intel||[]; const last=items.reduce((m,i)=>i.ts&&i.ts>m?i.ts:m,'');
+    const n=items.length,nn=items.filter(i=>i.status==='new').length;
+    document.getElementById('intelStatusText').innerHTML=n
+      ? `${n} items in the feed \u00B7 <b style="color:var(--bone)">${nn} new</b> \u00B7 last ingest ${last?relTime(last):'unknown'}. Fed by the intelligence worker (Bluesky + Reddit \u2192 semantic scoring).`
+      : `No ingest yet. Wire the intelligence worker, or load a sample below to see how scored chatter lands here.`;
+  }
+  function renderProfile(){
+    const box=document.getElementById('profileList');
+    box.innerHTML=(state.profile||[]).map((p,i)=>`<span class="term-chip">${esc(p)} <button data-pi="${i}" title="remove">\u00D7</button></span>`).join('');
+    box.querySelectorAll('button[data-pi]').forEach(b=>b.onclick=()=>{ state.profile.splice(+b.dataset.pi,1); commit(); renderProfile(); });
+  }
+  window.intelAct=function(id,status){ const it=(state.intel||[]).find(x=>x.id===id); if(!it) return; it.status=status; commit(); renderIntel(); renderOverviewIntel(); renderAlerts(); renderIntelStatus(); const ic=document.getElementById('intelCount'); const nn=(state.intel||[]).filter(i=>i.status==='new').length; if(nn){ic.style.display='';ic.textContent=nn;}else ic.style.display='none'; };
+  window.ledgerDel=function(id){ state.finance.ledger=state.finance.ledger.filter(e=>e.id!==id); commit(); renderTreasury(); renderHeader(); renderTabCharts(activeTab); renderOverviewKpis(); renderAlerts(); };
+  window.adDel=function(id){ state.ads=state.ads.filter(a=>a.id!==id); commit(); renderSalesAds(); renderAlerts(); renderOverviewKpis(); };
+  window.toggleTerm=async function(t){ const i=state.terms.findIndex(x=>x.t===t); if(i>=0){ if(!state.terms[i].anchor) state.terms.splice(i,1);} else state.terms.push({t}); await commit(); renderAll(); };
+
+  // ---- Charts ----
+  function baseOpts(){ const grid='rgba(130,141,160,.12)',tick='#828DA0';
+    return {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},
+      scales:{x:{grid:{color:grid},ticks:{color:tick,font:{family:"'IBM Plex Mono'",size:10}}},
+              y:{grid:{color:grid},ticks:{color:tick,font:{family:"'IBM Plex Mono'",size:10}}}}}; }
+  function lineDS(data,color){ return {data,borderColor:color,borderWidth:2,tension:.32,pointRadius:3,pointBackgroundColor:color,fill:true,
+    backgroundColor:ctx=>{const c=ctx.chart.ctx,g=c.createLinearGradient(0,0,0,230);g.addColorStop(0,color+'47');g.addColorStop(1,color+'00');return g;}}; }
+  function kill(k){ if(charts[k]){charts[k].destroy();charts[k]=null;} }
+
+  function renderTabCharts(name){
+    if(typeof Chart==='undefined') return;
+    const snaps=state.snapshots, ls=last();
+    if(name==='overview'){
+      const re=document.getElementById('ovReachEmpty');
+      if(snaps.length){ re.style.display='none'; kill('ovReach');
+        charts.ovReach=new Chart(document.getElementById('ovReachChart'),{type:'line',data:{labels:snaps.map(s=>s.date),datasets:[lineDS(snaps.map(reachOf),'#46E2C8')]},options:baseOpts()});
+      } else { re.style.display='flex'; kill('ovReach'); }
+      const be=document.getElementById('ovBalEmpty'),ser=balanceSeries();
+      if(ser.length){ be.style.display='none'; kill('ovBal');
+        charts.ovBal=new Chart(document.getElementById('ovBalChart'),{type:'line',data:{labels:ser.map(p=>p.date),datasets:[lineDS(ser.map(p=>p.bal),'#EAE4D3')]},options:baseOpts()});
+      } else { be.style.display='flex'; kill('ovBal'); }
+    }
+    if(name==='treasury'){
+      const be=document.getElementById('balEmpty'),ser=balanceSeries();
+      if(ser.length){ be.style.display='none'; kill('bal');
+        charts.bal=new Chart(document.getElementById('balChart'),{type:'line',data:{labels:ser.map(p=>p.date),datasets:[lineDS(ser.map(p=>p.bal),'#46E2C8')]},options:baseOpts()});
+      } else { be.style.display='flex'; kill('bal'); }
+      const ct=channelTotals(),keys=Object.keys(ct),ce=document.getElementById('channelEmpty');
+      if(keys.length){ ce.style.display='none'; kill('chan');
+        const palette=['#46E2C8','#E2A33C','#A487DC','#2BB8A2','#828DA0','#E06A45'];
+        charts.chan=new Chart(document.getElementById('channelChart'),{type:'doughnut',
+          data:{labels:keys,datasets:[{data:keys.map(k=>ct[k]),backgroundColor:keys.map((k,i)=>palette[i%palette.length]),borderColor:'#0E131B',borderWidth:2}]},
+          options:{responsive:true,maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'bottom',labels:{color:'#828DA0',font:{family:"'IBM Plex Mono'",size:10},boxWidth:10,padding:10}}}}});
+      } else { ce.style.display='flex'; kill('chan'); }
+    }
+    if(name==='sales'){
+      const se=document.getElementById('salesEmpty'); const sVals=TITLES.map(t=>ls?.sales?.[t.id]||0);
+      const lab=TITLES.map(t=>t.nm.replace('The ','').replace(' Monograph',''));
+      if(ls&&sVals.some(v=>v>0)){ se.style.display='none'; kill('sales');
+        charts.sales=new Chart(document.getElementById('salesChart'),{type:'bar',data:{labels:lab,datasets:[{data:sVals,backgroundColor:'#2BB8A2',borderRadius:5,barThickness:22}]},options:{...baseOpts(),indexAxis:'y'}});
+      } else { se.style.display='flex'; kill('sales'); }
+      const rev=TITLES.map(t=>(ls?.sales?.[t.id]||0)*(+state.econ[t.id]?.rpu||0)); const re=document.getElementById('revEmpty');
+      if(rev.some(v=>v>0)){ re.style.display='none'; kill('rev');
+        charts.rev=new Chart(document.getElementById('revChart'),{type:'bar',data:{labels:lab,datasets:[{data:rev,backgroundColor:'#46E2C8',borderRadius:5,barThickness:22}]},
+          options:{...baseOpts(),indexAxis:'y',plugins:{legend:{display:false},tooltip:{callbacks:{label:c=>fmtUSD(c.raw)}}}}});
+      } else { re.style.display='flex'; kill('rev'); }
+    }
+    if(name==='audience'){
+      const te=document.getElementById('trendEmpty');
+      if(snaps.length){ te.style.display='none'; kill('trend');
+        charts.trend=new Chart(document.getElementById('trendChart'),{type:'line',data:{labels:snaps.map(s=>s.date),datasets:[lineDS(snaps.map(reachOf),'#46E2C8')]},
+          options:{...baseOpts(),plugins:{legend:{display:false},eventMarkers:{events:state.events||[]}}}});
+      } else { te.style.display='flex'; kill('trend'); }
+      if(ls){ kill('ment'); const labels=state.terms.map(t=>t.t),data=state.terms.map(t=>{const v=ls.terms?.[t.t]||{};return (v.r||0)+(v.x||0)+(v.b||0)+(v.p||0);});
+        charts.ment=new Chart(document.getElementById('mentChart'),{type:'bar',data:{labels,datasets:[{data,backgroundColor:'#A487DC',borderRadius:4,barThickness:10}]},
+          options:{...baseOpts(),indexAxis:'y',scales:{...baseOpts().scales,y:{...baseOpts().scales.y,ticks:{color:'#828DA0',font:{family:"'IBM Plex Mono'",size:8.5}}}}}});
+      } else kill('ment');
+    }
+    if(name==='catalog'){
+      const rev=state.reviews, ve=document.getElementById('velEmpty');
+      if(rev.length){ ve.style.display='none'; kill('vel');
+        charts.vel=new Chart(document.getElementById('velChart'),{type:'line',data:{labels:rev.map(r=>r.date),datasets:[lineDS(rev.map(totalReviews),'#A487DC')]},options:baseOpts()});
+      } else { ve.style.display='flex'; kill('vel'); }
+      const lsr=revLast(), re=document.getElementById('ratingEmpty');
+      const rr=TITLES.map(t=>+(lsr?.t?.[t.id]?.ar)||0);
+      if(lsr&&rr.some(v=>v>0)){ re.style.display='none'; kill('rating');
+        const lab=TITLES.map(t=>t.nm.replace('The ','').replace(' Monograph',''));
+        charts.rating=new Chart(document.getElementById('ratingChart'),{type:'bar',data:{labels:lab,datasets:[{data:rr,backgroundColor:'#E2A33C',borderRadius:5,barThickness:20}]},
+          options:{...baseOpts(),indexAxis:'y',scales:{...baseOpts().scales,x:{...baseOpts().scales.x,min:0,max:5}}}});
+      } else { re.style.display='flex'; kill('rating'); }
+    }
+  }
+
+  // ---- Import / save snapshot ----
+  function importFromPipeline(){
+    let obj; try{ obj=JSON.parse(document.getElementById('importJson').value); }catch(e){ toast('Invalid JSON \u2014 check the paste'); return; }
+    const setN=(id,v)=>{ if(v!=null&&!isNaN(v)){const e=document.getElementById(id); if(e)e.value=v;} };
+    if(obj.date) document.getElementById('snapDate').value=obj.date;
+    setN('in_visitors',obj.visitors); setN('in_impr',obj.impr); setN('in_clicks',obj.clicks); setN('in_signups',obj.signups); setN('in_holdings',obj.holdings);
+    if(obj.sales) TITLES.forEach(t=>setN('sale_'+t.id,obj.sales[t.id]));
+    if(obj.terms) state.terms.forEach((tm,i)=>{ const v=obj.terms[tm.t]; const e=document.getElementById('ment_'+i); if(v&&e) e.value=`${v.r||0}/${v.x||0}/${v.b||0}/${v.p||0}`; });
+    if(obj.intel&&Array.isArray(obj.intel)) mergeIntel(obj.intel);
+    toast('Pipeline data loaded \u00B7 review & Log');
+  }
+  function readInt(id){const e=document.getElementById(id);const v=parseInt(e&&e.value,10);return isNaN(v)?0:v;}
+  function saveSnapshot(){
+    const date=document.getElementById('snapDate').value||todayISO();
+    const sales={}; TITLES.forEach(t=>sales[t.id]=readInt('sale_'+t.id));
+    const terms={}; state.terms.forEach((tm,i)=>{const raw=(document.getElementById('ment_'+i)?.value||'').split('/').map(x=>parseInt(x,10)||0);terms[tm.t]={r:raw[0]||0,x:raw[1]||0,b:raw[2]||0,p:raw[3]||0};});
+    const snap={date,sales,terms,visitors:readInt('in_visitors'),impr:readInt('in_impr'),clicks:readInt('in_clicks'),signups:readInt('in_signups'),holdings:readInt('in_holdings')};
+    const idx=state.snapshots.findIndex(s=>s.date===date);
+    if(idx>=0) state.snapshots[idx]=snap; else state.snapshots.push(snap);
+    state.snapshots.sort((a,b)=>a.date.localeCompare(b.date));
+    commit(); renderAll();
+    toast(idx>=0?"Snapshot updated \u00B7 "+date:"Snapshot logged \u00B7 "+date);
+    document.querySelectorAll('#mentInputs input').forEach(i=>i.value='');
+  }
+
+  function mergeIntel(arr){
+    const byId={}; (state.intel||[]).forEach(i=>byId[i.id]=i);
+    let added=0;
+    arr.forEach(raw=>{
+      const it={id:raw.id||uid(),ts:raw.ts||new Date().toISOString(),source:raw.source||'web',author:raw.author||'',
+        url:raw.url||'',text:raw.text||'',score:Math.max(0,Math.min(100,Math.round(+raw.score||0))),
+        sentiment:['pos','neu','neg'].includes(raw.sentiment)?raw.sentiment:'neu',why:raw.why||'',term:raw.term||'',status:raw.status||'new'};
+      if(byId[it.id]){ if(byId[it.id].status==='dismissed') it.status='dismissed'; Object.assign(byId[it.id],it); }
+      else { byId[it.id]=it; added++; }
+    });
+    state.intel=Object.values(byId);
+    return added;
+  }
+
+  // ---- Carrier wave ----
+  let amp=0.1,ampTarget=0.1,t0=0;
+  const reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  function setWaveAmp(a){ ampTarget=Math.max(0.06,Math.min(1,a)); if(reduce)amp=ampTarget; }
+  function drawWave(ts){
+    const c=document.getElementById('wave'); if(!c)return;
+    const dpr=window.devicePixelRatio||1,w=c.clientWidth,h=c.clientHeight;
+    if(c.width!==w*dpr){c.width=w*dpr;c.height=h*dpr;}
+    const x=c.getContext('2d'); x.setTransform(dpr,0,0,dpr,0,0); x.clearRect(0,0,w,h);
+    amp+=(ampTarget-amp)*0.05;
+    const phase=reduce?0:(ts-t0)/1400,mid=h/2,A=(h*0.34)*amp;
+    for(let layer=0;layer<2;layer++){ x.beginPath();
+      for(let px=0;px<=w;px+=4){ const k=px/w*Math.PI*6; const y=mid+Math.sin(k+phase+layer*1.6)*A*(layer?0.45:1)+Math.sin(k*2.3+phase*1.4)*A*0.18; px===0?x.moveTo(px,y):x.lineTo(px,y); }
+      x.strokeStyle=layer?'rgba(70,226,200,.18)':'rgba(70,226,200,.55)'; x.lineWidth=layer?1:1.6; x.stroke(); }
+    if(!reduce) requestAnimationFrame(drawWave);
+  }
+
+  // ---- Init / wiring ----
+  async function init(){
+    let loaded=await load();
+    if(!loaded){ state=seedDemo(); } else { state=loaded; }
+    if(!state.snapshots.length && !state.finance.ledger.length && !state.intel.length){ state=seedDemo(); }
+    document.getElementById('snapDate').value=todayISO();
+    document.getElementById('lg_date').value=todayISO();
+    document.getElementById('ad_date').value=todayISO();
+    document.getElementById('cat_date').value=todayISO();
+    renderAll();
+    document.querySelectorAll('.fade-in').forEach((el,i)=>el.style.animationDelay=(i*0.05)+'s');
+    requestAnimationFrame(t=>{t0=t;drawWave(t);});
+
+    document.querySelectorAll('.band').forEach(b=>b.onclick=()=>activateTab(b.dataset.tab));
+    document.getElementById('demoClear').onclick=()=>{ if(confirm('Discard the demo data and start with an empty deck?')){ state=emptyState(); save(state); renderAll(); toast('Cleared \u2014 starting fresh'); } };
+
+    // Treasury
+    document.getElementById('lg_add').onclick=()=>{
+      const date=document.getElementById('lg_date').value||todayISO();
+      const type=document.getElementById('lg_type').value;
+      const channel=document.getElementById('lg_channel').value.trim();
+      const mag=Math.abs(parseFloat(document.getElementById('lg_amount').value)); if(isNaN(mag)){toast('Enter an amount');return;}
+      const amount=mag*(TYPE_SIGN[type]||1);
+      state.finance.ledger.push({id:uid(),date,type,channel,amount});
+      commit(); document.getElementById('lg_amount').value=''; document.getElementById('lg_channel').value='';
+      renderTreasury(); renderHeader(); renderOverviewKpis(); renderAlerts(); renderTabCharts(activeTab); toast('Logged \u00B7 '+fmtUSD(amount));
+    };
+
+    // Ads
+    document.getElementById('ad_add').onclick=()=>{
+      const date=document.getElementById('ad_date').value||todayISO();
+      const campaign=document.getElementById('ad_campaign').value.trim()||'Campaign';
+      const spend=parseFloat(document.getElementById('ad_spend').value)||0;
+      const sales=parseFloat(document.getElementById('ad_sales').value)||0;
+      const impr=parseInt(document.getElementById('ad_impr').value)||0;
+      const clicks=parseInt(document.getElementById('ad_clicks').value)||0;
+      const orders=parseInt(document.getElementById('ad_orders').value)||0;
+      if(!spend&&!sales&&!impr){toast('Enter at least spend or impressions');return;}
+      state.ads.push({id:uid(),date,campaign,spend,sales,impr,clicks,orders});
+      if(spend>0) state.finance.ledger.push({id:uid(),date,type:'ad',channel:'Amazon Ads \u00B7 '+campaign,amount:-spend});
+      commit(); ['ad_spend','ad_sales','ad_impr','ad_clicks','ad_orders'].forEach(i=>document.getElementById(i).value='');
+      renderSalesAds(); renderTreasury(); renderHeader(); renderOverviewKpis(); renderAlerts(); renderTabCharts(activeTab); toast('Ad period logged');
+    };
+    document.getElementById('ad_ceiling').addEventListener('change',e=>{ state.ads_ceiling=parseFloat(e.target.value)||0; commit(); renderSalesAds(); renderAlerts(); });
+
+    // Intelligence
+    const reIntel=()=>{ renderIntel(); };
+    ['if_source','if_sentiment','if_status'].forEach(id=>document.getElementById(id).addEventListener('change',reIntel));
+    document.getElementById('if_minscore').addEventListener('input',e=>{ document.getElementById('if_minscore_lbl').textContent=e.target.value; renderIntel(); });
+    document.getElementById('addProfileBtn').onclick=()=>{ const v=document.getElementById('newProfile').value.trim(); if(!v)return; if(!state.profile.includes(v)) state.profile.push(v); commit(); document.getElementById('newProfile').value=''; renderProfile(); };
+    document.getElementById('newProfile').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('addProfileBtn').click();});
+    document.getElementById('intelImportBtn').onclick=()=>{ let arr; try{ arr=JSON.parse(document.getElementById('intelJson').value); }catch(e){ toast('Invalid JSON'); return; } if(!Array.isArray(arr)){toast('Expected a JSON array');return;} const n=mergeIntel(arr); commit(); renderAll(); toast(n+' new item'+(n===1?'':'s')+' merged'); };
+    document.getElementById('intelSampleBtn').onclick=()=>{ const demo=seedDemo(); const n=mergeIntel(demo.intel.map(i=>Object.assign({},i,{id:uid(),status:'new'}))); commit(); renderAll(); toast('Loaded '+n+' sample signals'); };
+
+    // Catalog
+    document.getElementById('cat_add').onclick=()=>{
+      const date=document.getElementById('cat_date').value||todayISO();
+      const t={};
+      TITLES.forEach(tt=>{ const raw=(document.getElementById('cat_'+tt.id)?.value||'').split('/').map(x=>parseFloat(x)||0);
+        t[tt.id]={ar:raw[0]||0,ac:raw[1]||0,gr:raw[2]||0,gc:raw[3]||0,kenp:raw[4]||0}; });
+      const idx=state.reviews.findIndex(r=>r.date===date);
+      if(idx>=0) state.reviews[idx]={date,t}; else state.reviews.push({date,t});
+      state.reviews.sort((a,b)=>a.date.localeCompare(b.date));
+      commit(); renderCatalog(); renderTabCharts(activeTab); toast('Reading logged \u00B7 '+date);
+    };
+
+    // Snapshot / lexicon / events
+    document.getElementById('saveBtn').onclick=saveSnapshot;
+    document.getElementById('importBtn').onclick=importFromPipeline;
+    document.getElementById('exportBtn').onclick=()=>{ const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='command-deck-'+todayISO()+'.json'; a.click(); toast('Exported full state'); };
+    document.getElementById('addTermBtn').onclick=()=>{ const v=document.getElementById('newTerm').value.trim(); if(!v)return; if(!state.terms.some(x=>x.t.toLowerCase()===v.toLowerCase())){state.terms.push({t:v});commit();renderAll();} document.getElementById('newTerm').value=''; };
+    document.getElementById('newTerm').addEventListener('keydown',e=>{if(e.key==='Enter')document.getElementById('addTermBtn').click();});
+    document.getElementById('ev_add').onclick=()=>{ const date=document.getElementById('ev_date').value; const label=document.getElementById('ev_label').value.trim(); const type=document.getElementById('ev_type').value; if(!date||!label){toast('Event needs a date and a label');return;} state.events.push({date,label,type}); state.events.sort((a,b)=>a.date.localeCompare(b.date)); commit(); document.getElementById('ev_label').value=''; renderEvents(); renderTabCharts('audience'); toast('Event marked \u00B7 '+date); };
+    document.getElementById('resetBtn').onclick=()=>{ if(confirm('Clear ALL data \u2014 snapshots, ledger, ads, intel? This cannot be undone.')){ state=emptyState(); save(state); renderAll(); toast('All data cleared'); } };
+  }
+  init();
+})();
+</script>

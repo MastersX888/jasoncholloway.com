@@ -1,0 +1,7 @@
+name = "jasoncholloway"
+compatibility_date = "2026-06-16"
+pages_build_output_dir = "out"
+
+[[kv_namespaces]]
+binding = "STATE_KV"
+id = "6f0e96702c3d4da4ad652abd51b5d82e"

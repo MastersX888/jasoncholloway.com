@@ -162,7 +162,7 @@ export default function AboutPage() {
                 boxShadow: "0 20px 40px -10px rgba(0,0,0,0.5)"
               }}>
                 <Image 
-                  src="/media/JasonCHolloway.png" 
+                  src="/media/JasonCHolloway-v2.png" 
                   alt="Jason Carroll Holloway - Author Portrait" 
                   fill 
                   style={{ objectFit: "cover", objectPosition: "center top" }} 

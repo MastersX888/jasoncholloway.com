@@ -214,15 +214,15 @@ export default function MastersXPage() {
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem", alignItems: "center" }}>
                 
                 {/* Covers display */}
-                <div style={{ display: "flex", justifyContent: "center", marginLeft: "-1rem" }}>
+                <div style={{ display: "flex", justifyContent: "center", marginLeft: "-0.5rem" }}>
                   <div style={{
                     position: "relative",
-                    width: 280,
+                    width: 220,
                     aspectRatio: "2/3",
                     borderRadius: "var(--r-lg)",
                     overflow: "hidden",
-                    boxShadow: "0 25px 65px rgba(0,0,0,0.7)",
-                    transform: "rotate(-4deg)",
+                    boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
+                    transform: "rotate(-3.5deg)",
                     zIndex: 1,
                   }}>
                     <Image
@@ -230,19 +230,19 @@ export default function MastersXPage() {
                       alt={`${omnibus.subtitle} Paperback`}
                       fill
                       style={{ objectFit: "cover" }}
-                      sizes="500px"
+                      sizes="400px"
                     />
                   </div>
                   <div style={{
                     position: "relative",
-                    width: 280,
+                    width: 220,
                     aspectRatio: "2/3",
                     borderRadius: "var(--r-lg)",
                     overflow: "hidden",
-                    boxShadow: "0 25px 65px rgba(0,0,0,0.7)",
-                    transform: "rotate(4deg)",
-                    marginTop: "2.5rem",
-                    marginLeft: "-3.5rem",
+                    boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
+                    transform: "rotate(3.5deg)",
+                    marginTop: "2rem",
+                    marginLeft: "-2.5rem",
                     zIndex: 2,
                   }}>
                     <Image
@@ -250,7 +250,7 @@ export default function MastersXPage() {
                       alt={`${omnibus.subtitle} Hardcover`}
                       fill
                       style={{ objectFit: "cover" }}
-                      sizes="500px"
+                      sizes="400px"
                     />
                   </div>
                 </div>

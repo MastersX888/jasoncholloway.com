@@ -84,7 +84,7 @@ export const books: Book[] = [
     title: "Masters X",
     subtitle: "The Grimoire",
     coverImage: "/covers/book2-paperback.png",
-    coverImageHC: "/covers/book2-hardcover-v2.png",
+    coverImageHC: "/covers/book2-hardcover.png",
     coverImagePB: "/covers/book2-paperback.png",
     qrCodePB: "/media/qr2.png",
     isbn_hc: "9798295812675",

@@ -243,6 +243,32 @@ export default function ResearchArchivePage() {
             ))}
           </div>
 
+          
+          {/* CTA Section */}
+          <div style={{ marginTop: "4rem", padding: "3rem", background: "var(--bg-surface)", border: "1px solid var(--border)", borderRadius: "var(--r-xl)", textAlign: "center", position: "relative", overflow: "hidden" }}>
+            <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "4px", background: "var(--gold)" }}></div>
+            <span className="label" style={{ display: "block", marginBottom: "1rem", color: "var(--gold)" }}>Access the Research</span>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.2rem", marginBottom: "1rem", color: "var(--text)" }}>Download the Distribution File</h2>
+            <p style={{ color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "600px", margin: "0 auto 2rem", lineHeight: 1.6 }}>
+              Get the complete 247-page in-universe research document. Plus, receive the first three chapters of each novel alongside the file.
+            </p>
+            <form action="https://api.web3forms.com/submit" method="POST" style={{ display: "flex", gap: "1rem", maxWidth: "450px", margin: "0 auto", flexDirection: "column" }}>
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+              <input type="hidden" name="subject" value="Distribution File Request" />
+              <input type="hidden" name="redirect" value="https://jasoncholloway.com/downloads/The_Distribution_File.pdf" />
+              
+              <input type="email" name="email" placeholder="Email Address" required style={{ width: "100%", padding: "1rem", borderRadius: "var(--r-sm)", border: "1px solid var(--border)", background: "var(--bg-raised)", color: "var(--text)", fontFamily: "var(--font-ui)", fontSize: "1rem", outline: "none" }} />
+              <button type="submit" className="btn btn-gold" style={{ padding: "1rem", fontSize: "1rem", width: "100%", cursor: "pointer", border: "none" }}>Access the File</button>
+            </form>
+            <div style={{ marginTop: "2.5rem", fontFamily: "var(--font-mono)", fontSize: "0.8rem", color: "var(--text-faint)" }}>
+              f = 111.2 Hz
+            </div>
+            <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center", gap: "1.5rem", fontSize: "0.85rem", flexWrap: "wrap" }}>
+              <Link href="/chamber/reading-sequence" style={{ color: "var(--cyan)", textDecoration: "none" }}>The Reading Sequence →</Link>
+              <Link href="/chamber/harmonic-derivations" style={{ color: "var(--cyan)", textDecoration: "none" }}>Harmonic Derivations →</Link>
+            </div>
+          </div>
+
           {/* Note */}
           <div style={{ marginTop: "3rem", padding: "1.25rem 1.5rem", background: "var(--bg-surface)", borderRadius: "var(--r-md)", border: "1px solid var(--border-faint)", fontSize: "0.82rem", color: "var(--text-faint)", lineHeight: 1.7 }}>
             <strong style={{ color: "var(--text-muted)" }}>Archive Note:</strong> The distribution file described above exists within the world of the Masters X Trilogy. The section summaries and key contents are derived directly from manuscript text — from descriptions of what Andrew&apos;s research contained and what the preparation protocol specified. Jason Carroll Holloway built a novel whose technical claims are internally consistent enough to document. Future editions may include selected research materials formatted as in-universe documents.

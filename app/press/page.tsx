@@ -240,7 +240,7 @@ export default function PressPage() {
                   geography of Kansas City, from the SubTropolis cavern complex
                   upward. Every location in the novels can be visited, looked up, or
                   found in a scholarly bibliography — and much of the underlying data
-                  is published openly through the Analysis Chamber, a research archive
+                  is published openly through the <Link href="/chamber/research-archive" style={{ color: "var(--cyan)", textDecoration: "none" }}>Analysis Chamber</Link>, a research archive
                   on this site that runs the same measurements the characters run in
                   the books.
                 </p>

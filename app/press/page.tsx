@@ -1,128 +1,359 @@
-import Link from "next/link";
-import type { Metadata } from "next";
-import { books } from "@/lib/data/books";
+// app/press/page.tsx
+// Drop this file at: src/app/press/page.tsx  (or app/press/page.tsx)
+// Put the PDFs in: public/press-kit/
+//   - Masters_X_Press_Release.pdf
+//   - Masters_X_Fact_Sheet.pdf
+//   - Holloway_Author_Bios.pdf
+//   - Masters_X_Synopses.pdf
+//   - Masters_X_Press_Kit.pdf  (combined)
 
+import type { Metadata } from "next";
+import Script from "next/script";
+import styles from './press-page.module.css';
+
+// ── Page metadata ──────────────────────────────────────────────────────────
 export const metadata: Metadata = {
-  title: "Seventh City Press",
+  title: "Press | Jason Carroll Holloway — Masters X Trilogy",
   description:
-    "Seventh City Press is an independent literary imprint publishing fiction and criticism that refuses the division between imaginative and intellectual work. Founded and published by Jason Carroll Holloway.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/press/",
+    "Press materials for the Masters X Trilogy by Jason Carroll Holloway (Seventh City Press). Includes press release, fact sheet, author bio, and synopses. Review copies available on request.",
+  openGraph: {
+    title: "Press — Masters X Trilogy | Jason Carroll Holloway",
+    description:
+      "A conspiracy of frequency, medieval manuscripts, and the city beneath the city. Three novels and a complete omnibus from Seventh City Press.",
+    url: "https://jasoncholloway.com/press",
+    siteName: "Jason Carroll Holloway",
+    type: "website",
   },
+  alternates: { canonical: "https://jasoncholloway.com/press" },
 };
 
+// ── JSON-LD structured data ────────────────────────────────────────────────
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jasoncholloway.com/#author",
+      name: "Jason Carroll Holloway",
+      url: "https://jasoncholloway.com",
+      jobTitle: "Author",
+      description:
+        "Writer and researcher at the intersection of acoustic science, medieval scholarship, and human consciousness.",
+      alumniOf: {
+        "@type": "CollegeOrUniversity",
+        name: "Mercy University",
+        sameAs: "https://www.mercy.edu",
+      },
+      sameAs: [
+        "https://www.goodreads.com/author/show/20924993",
+        "https://www.wikidata.org/wiki/Q140275300",
+      ],
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://jasoncholloway.com/#publisher",
+      name: "Seventh City Press",
+      url: "https://jasoncholloway.com",
+      founder: { "@id": "https://jasoncholloway.com/#author" },
+      location: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Kansas City", addressRegion: "MO" } },
+    },
+    // Book: The Inheritance of Frequency
+    {
+      "@type": "Book",
+      name: "The Inheritance of Frequency",
+      author: { "@id": "https://jasoncholloway.com/#author" },
+      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      isbn: "9798256008048",
+      datePublished: "2026-06-01",
+      numberOfPages: 178,
+      inLanguage: "en",
+      bookFormat: "Paperback",
+      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+      description:
+        "Seven notebooks. Thirty years of classified acoustic research. A sealed crypt beneath Prague.",
+    },
+    // Book: The Grimoire
+    {
+      "@type": "Book",
+      name: "The Grimoire",
+      author: { "@id": "https://jasoncholloway.com/#author" },
+      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      isbn: "9798256009953",
+      datePublished: "2026-06-01",
+      numberOfPages: 260,
+      inLanguage: "en",
+      bookFormat: "Paperback",
+      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+      description:
+        "The Ars Notoria decoded. A preparation protocol for the frequency. Twenty-three candidates waiting.",
+    },
+    // Book: The Kingdom
+    {
+      "@type": "Book",
+      name: "The Kingdom",
+      author: { "@id": "https://jasoncholloway.com/#author" },
+      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      isbn: "9798256010072",
+      datePublished: "2026-06-01",
+      numberOfPages: 200,
+      inLanguage: "en",
+      bookFormat: "Paperback",
+      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+      description:
+        "The demonstration, the argument, and an open-source release that reaches 1.2 million downloads.",
+    },
+    // WebPage schema for the press page itself
+    {
+      "@type": "WebPage",
+      "@id": "https://jasoncholloway.com/press",
+      url: "https://jasoncholloway.com/press",
+      name: "Press — Masters X Trilogy | Jason Carroll Holloway",
+      description:
+        "Press materials, media kit, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
+      author: { "@id": "https://jasoncholloway.com/#author" },
+      dateModified: new Date().toISOString().split("T")[0],
+    },
+  ],
+};
+
+// ── Kit file manifest ──────────────────────────────────────────────────────
+const kitFiles = [
+  {
+    label: "Press Release",
+    desc: "Full release — the story, the books, the author",
+    file: "Masters_X_Press_Release.pdf",
+    pages: "2pp",
+  },
+  {
+    label: "Fact Sheet",
+    desc: "Complete ISBN matrix, BISAC codes, pricing, trade terms",
+    file: "Masters_X_Fact_Sheet.pdf",
+    pages: "2pp",
+  },
+  {
+    label: "Author Bios",
+    desc: "One-line, short, standard, and extended bios — ready to quote",
+    file: "Holloway_Author_Bios.pdf",
+    pages: "1pp",
+  },
+  {
+    label: "Series & Synopses",
+    desc: "Series premise and book-by-book synopses",
+    file: "Masters_X_Synopses.pdf",
+    pages: "1pp",
+  },
+];
+
+// ── Component ──────────────────────────────────────────────────────────────
 export default function PressPage() {
   return (
     <>
-      <section className="page-header">
-        <div className="container">
-          <div className="page-header-inner">
-            <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-              <span className="label">The Imprint</span>
-            </div>
-            <h1 className="display-xl" style={{ marginBottom: "1rem" }}>
-              Seventh City<br />
-              <span style={{ color: "var(--gold)", fontStyle: "italic" }}>Press</span>
-            </h1>
-            <p style={{ maxWidth: "52ch", color: "var(--text-muted)", fontSize: "1rem", lineHeight: 1.8 }}>
-              An independent literary press dedicated to fiction and criticism that refuses the division
-              between imaginative and intellectual work.
+      <Script
+        id="press-jsonld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
+      <main className={styles['press-page']}>
+
+        {/* ── Header ─────────────────────────────────────────────────── */}
+        <header className={styles['press-header']}>
+          <p className={styles['press-eyebrow']}>For Immediate Release</p>
+          <h1 className={styles['press-headline']}>
+            Jason Carroll Holloway Launches the Masters&nbsp;X&nbsp;Trilogy
+          </h1>
+          <p className={styles['press-dek']}>
+            A conspiracy of frequency, medieval manuscripts, and the city
+            beneath the city — three novels and a complete omnibus from Seventh
+            City Press.
+          </p>
+        </header>
+
+        {/* ── Body copy — this is what Google indexes ─────────────────── */}
+        <article className={styles['press-body']} aria-label="Press release">
+
+          <p>
+            <strong>KANSAS CITY, MO</strong> — Author Jason Carroll Holloway
+            and his independent imprint Seventh City Press have released the{" "}
+            <strong>Masters&nbsp;X&nbsp;Trilogy</strong>, a three-volume work of
+            literary conspiracy fiction. The trilogy —{" "}
+            <em>The Inheritance of Frequency</em>, <em>The Grimoire</em>, and{" "}
+            <em>The Kingdom</em> — is available in hardcover, paperback, and
+            ebook, alongside a complete one-volume omnibus.
+          </p>
+
+          <p>
+            The story begins beneath Kansas City. A fired security guard named
+            Blake Masters inherits a safety deposit box his grandfather paid for
+            fifty-seven years in advance, timed to open at the exact moment
+            Blake would be ready for it. Inside: seven notebooks, thirty years
+            of classified acoustic research, and a cross-reference to a crypt
+            that has been sealed beneath Prague since 1267. The trilogy is the
+            account of what Blake does with that knowledge — and what it does to
+            him.
+          </p>
+
+          <p>
+            The series braids documented history into fiction: the undeciphered
+            Voynich Manuscript and the medieval Ars Notoria; the science of
+            archaeoacoustics and a 111.2&nbsp;Hz frequency that recurs in caves
+            and cathedrals across four continents; and the real, subterranean
+            geography of Kansas City, from the SubTropolis cavern complex
+            upward. Every location in the novels can be visited, looked up, or
+            found in a scholarly bibliography — and much of the underlying data
+            is published openly through the Analysis Chamber, a research archive
+            on this site that runs the same measurements the characters run in
+            the books.
+          </p>
+
+          <blockquote className={styles['press-quote']}>
+            <p>
+              "What the medieval masters encoded in cathedral geometry and
+              grimoire tradition wasn't mysticism — it was a technology we had
+              simply forgotten how to read. The Masters&nbsp;X&nbsp;Trilogy is
+              the account of learning to read it again."
             </p>
-          </div>
-        </div>
-      </section>
+            <cite>— Jason Carroll Holloway</cite>
+          </blockquote>
 
-      <section className="section" style={{ paddingTop: "3rem" }}>
-        <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem" }}>
+          <p className={styles['press-comps']}>
+            For readers of Umberto Eco's <em>Foucault's Pendulum</em>, Dan
+            Brown's <em>The Da Vinci Code</em>, Elizabeth Kostova's{" "}
+            <em>The Historian</em>, and Anthony Doerr's{" "}
+            <em>Cloud Cuckoo Land</em>.
+          </p>
+
+          {/* ── The Books ─────────────────────────────────────────────── */}
+          <h2 className={styles['press-section']}>The Books</h2>
+
+          <dl className={styles['press-books']}>
             <div>
-              <div className="section-label-row"><span className="label">About the Press</span></div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "0.93rem" }}>
-                <p>
-                  Seventh City Press was founded by Jason Carroll Holloway as the publishing home for work
-                  that operates at the intersection of imaginative and intellectual ambition — novels that think,
-                  and criticism that speaks.
-                </p>
-                <p>
-                  The name comes from the seven cities of the Aldric tradition in the Masters X Trilogy: Prague, Paris,
-                  Rome, Constantinople, Toledo, Uppsala, and the unnamed seventh, the city where the frequency was first
-                  heard. A press named for a threshold.
-                </p>
-                <p>
-                  All titles are distributed globally through IngramSpark, available through Amazon, Bookshop.org,
-                  independent booksellers, and library systems worldwide.
-                </p>
-              </div>
+              <dt>
+                <span className={styles['vol-label']}>Vol.&nbsp;I</span>
+                <em>The Inheritance of Frequency</em>
+              </dt>
+              <dd>
+                Seven notebooks. Thirty years of classified acoustic research. A
+                sealed crypt beneath Prague.
+              </dd>
             </div>
-
             <div>
-              <div className="section-label-row"><span className="label">Current Catalog</span></div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                {books.map((b) => {
-                  const isHawkes = b.slug === "hawkes-monograph";
-                  const isOmnibus = b.slug === "omnibus";
-                  
-                  let title = `${b.series}: ${b.subtitle}`;
-                  let type = "Novel · Literary Fiction";
-                  let status = "Available Now";
-                  let href = `/books/masters-x/${b.slug}`;
+              <dt>
+                <span className={styles['vol-label']}>Vol.&nbsp;II</span>
+                <em>The Grimoire</em>
+              </dt>
+              <dd>
+                The Ars Notoria decoded. A preparation protocol for the
+                frequency. Twenty-three candidates waiting.
+              </dd>
+            </div>
+            <div>
+              <dt>
+                <span className={styles['vol-label']}>Vol.&nbsp;III</span>
+                <em>The Kingdom</em>
+              </dt>
+              <dd>
+                The demonstration and the argument — and, within the novel's own
+                events, an open-source release that reaches 1.2&nbsp;million
+                downloads.
+              </dd>
+            </div>
+            <div>
+              <dt>
+                <span className={styles['vol-label']}>Omnibus</span>
+                <em>Masters X: The Complete Trilogy</em>
+              </dt>
+              <dd>All three novels in a single volume, in hardcover and paperback.</dd>
+            </div>
+          </dl>
 
-                  if (isHawkes) {
-                    title = b.title;
-                    type = "Literary Criticism";
-                    status = "Available Now";
-                    href = "/books/hawkes-monograph";
-                  } else if (isOmnibus) {
-                    type = "Collected Edition";
-                    href = "/books/masters-x";
-                  }
+          {/* ── Availability ──────────────────────────────────────────── */}
+          <h2 className={styles['press-section']}>Availability</h2>
+          <p>
+            Hardcover, paperback, and ebook. Distributed globally through
+            IngramSpark and available via Amazon, Bookshop.org, and library
+            systems (OverDrive, Baker&nbsp;&amp;&nbsp;Taylor). Ebook editions
+            from $5.99. Full ISBNs, page counts, pricing by market, and BISAC
+            subject codes appear in the Fact Sheet below.
+          </p>
 
-                  // Use hardcover ISBN for the press sheet listing to represent the premium edition
-                  const isbn = b.isbn_hc || b.isbn_pb || "";
-
-                  return (
-                    <Link key={b.slug} href={href} style={{ textDecoration: "none" }}>
-                      <div className="card" style={{ gap: "0.5rem" }}>
-                        <div style={{ display: "flex", justifyContent: "space-between", gap: "1rem" }}>
-                          <div>
-                            <div style={{ fontFamily: "var(--font-display)", fontSize: "0.95rem", marginBottom: "0.25rem" }}>{title}</div>
-                            <div style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.08em" }}>{type}</div>
-                          </div>
-                          <div style={{ textAlign: "right", flexShrink: 0 }}>
-                            <div className="badge">{status}</div>
-                            {isbn && (
-                              <div style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", color: "var(--text-faint)", marginTop: "0.3rem" }}>ISBN: {isbn}</div>
-                            )}
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  );
-                })}
-              </div>
+          {/* ── About ─────────────────────────────────────────────────── */}
+          <div className={styles['press-abouts']}>
+            <div>
+              <h2 className={styles['press-section']}>About the Author</h2>
+              <p>
+                Jason Carroll Holloway is a writer and researcher based in
+                Kansas City and the founder of Seventh City Press. His work
+                explores the intersection of acoustic science, medieval
+                scholarship, and human consciousness. He holds an M.A. in
+                English Literature from Mercy University in Dobbs Ferry, New
+                York, along with degrees and certificates in psychology,
+                sociology, creative writing, and data analytics. He lives and
+                writes in Kansas City.
+              </p>
+            </div>
+            <div>
+              <h2 className={styles['press-section']}>About Seventh City Press</h2>
+              <p>
+                Seventh City Press is an independent literary imprint founded by
+                Jason Carroll Holloway to publish work that refuses the division
+                between imaginative and intellectual work — novels that think,
+                and criticism that speaks. The name comes from the seven cities
+                of the Aldric tradition in the Masters&nbsp;X&nbsp;Trilogy.
+              </p>
             </div>
           </div>
+        </article>
 
-          <div className="divider" style={{ margin: "4rem 0" }} />
+        {/* ── Download kit ──────────────────────────────────────────────── */}
+        <section className={styles['press-kit-section']} aria-label="Press kit downloads">
+          <h2 className={styles['press-section']}>Press Kit</h2>
+          <p className={styles['press-kit-intro']}>
+            Download the complete kit or individual sheets. All files are
+            print-ready PDF.
+          </p>
 
-          {/* Distribution */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.5rem" }}>
-            {[
-              { label: "Global Distribution", value: "IngramSpark", detail: "Lightning Source network · 40,000+ retail and library accounts" },
-              { label: "Online Retail", value: "Amazon", detail: "HC, PB, and Kindle editions — all markets" },
-              { label: "Independent Retail", value: "Bookshop.org", detail: "Supporting independent booksellers" },
-              { label: "Library Access", value: "OverDrive · Baker & Taylor", detail: "Available to public library systems worldwide" },
-              { label: "Wholesale Discount", value: "55%", detail: "Standard trade terms · Returns accepted" },
-            ].map((item) => (
-              <div key={item.label} className="card">
-                <div style={{ fontSize: "0.68rem", textTransform: "uppercase", letterSpacing: "0.12em", color: "var(--text-faint)", marginBottom: "0.4rem" }}>{item.label}</div>
-                <div style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", color: "var(--gold)", marginBottom: "0.25rem" }}>{item.value}</div>
-                <div style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{item.detail}</div>
-              </div>
+          <a
+            href="/press-kit/Masters_X_Press_Kit.pdf"
+            download
+            className={styles['kit-download-all']}
+            aria-label="Download complete Masters X Trilogy press kit PDF"
+          >
+            <span className={styles['kit-dl-icon']} aria-hidden="true">↓</span>
+            <span>
+              <strong>Download Complete Press Kit</strong>
+              <span className={styles['kit-dl-sub']}>All four documents · 8 pages · PDF</span>
+            </span>
+          </a>
+
+          <ul className={styles['kit-files']} role="list">
+            {kitFiles.map((f) => (
+              <li key={f.file}>
+                <a
+                  href={`/press-kit/${f.file}`}
+                  download
+                  aria-label={`Download ${f.label} PDF`}
+                >
+                  <span className={styles['kf-label']}>{f.label}</span>
+                  <span className={styles['kf-desc']}>{f.desc}</span>
+                  <span className={styles['kf-meta']}>{f.pages} · PDF</span>
+                  <span className={styles['kf-arrow']} aria-hidden="true">↓</span>
+                </a>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </section>
+
+        {/* ── Contact ───────────────────────────────────────────────────── */}
+        <section className={styles['press-contact']} aria-label="Press contact">
+          <p>
+            Review copies and interview requests are available to accredited
+            reviewers and journalists.{" "}
+            <a href="/contact">Contact the Communications Desk →</a>
+          </p>
+        </section>
+
+      </main>
     </>
   );
 }

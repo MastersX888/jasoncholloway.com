@@ -55,7 +55,7 @@ export default function Home() {
         }}
       />
       <section className="hero">
-        <div className="hero-bg" data-version="groundswell-v3" />
+        <div className="hero-bg" data-version="groundswell-v4" />
         <WaveformHero />
         <div className="container">
           <div className="hero-content">
@@ -244,37 +244,18 @@ export default function Home() {
             The trilogy is built on documented history. Every location in the novels can be visited, looked up, or found in a scholarly bibliography. Explore the research archive beneath the fiction:
           </p>
           
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem", marginBottom: "1rem" }}>
-            <Link href="/field-notes/subtropolis" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
-              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>01</div>
-              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>SubTropolis</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the city beneath Kansas City</div>
-            </Link>
-            <Link href="/field-notes/111-hz" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
-              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>02</div>
-              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>111 Hz</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the frequency ancient builders kept choosing</div>
-            </Link>
-            <Link href="/field-notes/voynich-manuscript" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
-              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>03</div>
-              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Voynich Manuscript</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the undeciphered 15th-century codex</div>
-            </Link>
-            <Link href="/field-notes/ars-notoria" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
-              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>04</div>
-              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Ars Notoria</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the medieval technology of memory</div>
-            </Link>
-            <Link href="/field-notes/strahov-monastery" className="card" style={{ padding: "1.25rem", background: "var(--bg-raised)", textDecoration: "none", border: "1px solid var(--border-faint)" }}>
-              <div style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.75rem", marginBottom: "0.5rem" }}>05</div>
-              <div style={{ fontWeight: 600, marginBottom: "0.25rem", color: "var(--text)", lineHeight: 1.2 }}>Strahov Monastery</div>
-              <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.4 }}>the 12th-century chained library</div>
-            </Link>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5rem", alignItems: "center", padding: "1.5rem 0", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
+            <span style={{ color: "var(--gold)", fontWeight: 500, fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>The Field Notes:</span>
+            <Link href="/field-notes/subtropolis" className="link" style={{ fontWeight: 500 }}>The City Beneath Kansas City</Link>
+            <Link href="/field-notes/111-hz" className="link" style={{ fontWeight: 500 }}>The 111 Hz Phenomenon</Link>
+            <Link href="/field-notes/voynich-manuscript" className="link" style={{ fontWeight: 500 }}>The Undeciphered Codex</Link>
+            <Link href="/field-notes/ars-notoria" className="link" style={{ fontWeight: 500 }}>The Technology of Memory</Link>
+            <Link href="/field-notes/strahov-monastery" className="link" style={{ fontWeight: 500 }}>The 12th-Century Chained Library</Link>
           </div>
           
-          <div style={{ marginTop: "1rem" }}>
+          <div style={{ marginTop: "2rem" }}>
             <Link href="/field-notes" className="btn btn-outline">
-              Read the Field Notes — Real History Beneath Masters X
+              View the Complete Archive
             </Link>
           </div>
         </div>

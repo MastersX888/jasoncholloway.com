@@ -36,8 +36,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jason C. Holloway — Author & Seventh City Press",
-    template: "%s | Jason C. Holloway",
+    default: "Jason Carroll Holloway — Author & Seventh City Press",
+    template: "%s | Jason Carroll Holloway",
   },
   description:
     "Jason Carroll Holloway is the author of the Masters X Trilogy — a Kansas City conspiracy thriller tracing the Voynich Manuscript, the Ars Notoria, SubTropolis, and the 111 Hz archaeoacoustics phenomenon. Published by Seventh City Press.",
@@ -67,7 +67,6 @@ export const metadata: Metadata = {
     title: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
     description:
       "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
-    images: [{ url: "https://jasoncholloway.com/og-image.png", width: 1200, height: 630, alt: "Jason Carroll Holloway — Masters X Trilogy" }],
   },
   twitter: {
     card: "summary_large_image",

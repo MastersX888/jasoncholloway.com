@@ -1,9 +1,7 @@
-:root{--ink:#1a1815;--soft:#3f3b34;--faint:#7a7469;--gold:#8a6410;--gold-br:#a87c1e;
+:global(:root){--ink:#1a1815;--soft:#3f3b34;--faint:#7a7469;--gold:#8a6410;--gold-br:#a87c1e;
 --rule:#cdc6b6;--rule-sft:#e6e0d3;--paper:#fdfcf9;--panel:#f4efe4;
 --disp:'Cormorant Garamond',Georgia,serif;--body:'EB Garamond',Georgia,serif;--ui:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.6}
-.hd-wrap{max-width:920px;margin:0 auto;padding:64px 24px 96px}
+.hd-wrap{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.6;max-width:920px;margin:0 auto;padding:64px 24px 96px}
 .hd-eyebrow{font-family:var(--ui);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
 .hd-h1{font-family:var(--disp);font-size:clamp(2.1rem,5vw,3.1rem);font-weight:600;line-height:1.08;margin-bottom:18px}
 .hd-lede{font-size:1.2rem;color:var(--soft);line-height:1.55;margin-bottom:20px}
@@ -17,10 +15,10 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 .hd-section::after{content:"";flex:1;height:1px;background:var(--rule-sft)}
 .hd-section span{font-family:var(--ui);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .hd-tablewrap{overflow-x:auto;margin:18px 0 8px;border:1px solid var(--rule-sft);border-radius:10px}
-table{width:100%;border-collapse:collapse;font-size:.9rem}
-thead th{font-family:var(--ui);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink);padding:9px 12px;text-align:left;white-space:nowrap}
-tbody td{padding:9px 12px;border-bottom:1px solid var(--rule-sft);vertical-align:top}
-tbody tr:nth-child(even){background:#f7f3ea}
+.hd-tablewrap table{width:100%;border-collapse:collapse;font-size:.9rem}
+.hd-tablewrap thead th{font-family:var(--ui);font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--ink);padding:9px 12px;text-align:left;white-space:nowrap}
+.hd-tablewrap tbody td{padding:9px 12px;border-bottom:1px solid var(--rule-sft);vertical-align:top}
+.hd-tablewrap tbody tr:nth-child(even){background:#f7f3ea}
 .mono{font-family:var(--mono);font-size:.82rem}
 .gold{color:var(--gold)}
 .freq{font-weight:700;color:var(--gold)}

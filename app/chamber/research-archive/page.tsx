@@ -253,10 +253,11 @@ export default function ResearchArchivePage() {
               Get the complete 247-page in-universe research document. Plus, receive the first three chapters of each novel alongside the file.
             </p>
             <form action="https://api.web3forms.com/submit" method="POST" style={{ display: "flex", gap: "1rem", maxWidth: "450px", margin: "0 auto", flexDirection: "column" }}>
-              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-              <input type="hidden" name="subject" value="Distribution File Request" />
+              <input type="hidden" name="access_key" value="29ea1914-9c58-4abf-b4e1-4e71e9a27186" />
+              <input type="hidden" name="subject" value="Chapter request — Masters X opening chapters" />
+              <input type="hidden" name="from_name" value="jasoncholloway.com" />
               <input type="hidden" name="redirect" value="https://jasoncholloway.com/downloads/The_Distribution_File.pdf" />
-              
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
               <input type="email" name="email" placeholder="Email Address" required style={{ width: "100%", padding: "1rem", borderRadius: "var(--r-sm)", border: "1px solid var(--border)", background: "var(--bg-raised)", color: "var(--text)", fontFamily: "var(--font-ui)", fontSize: "1rem", outline: "none" }} />
               <button type="submit" className="btn btn-gold" style={{ padding: "1rem", fontSize: "1rem", width: "100%", cursor: "pointer", border: "none" }}>Access the File</button>
             </form>

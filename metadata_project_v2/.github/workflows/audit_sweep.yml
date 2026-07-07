@@ -1,0 +1,102 @@
+name: Nightly Metadata Sweep
+
+on:
+  # Nightly at 2 AM UTC
+  schedule:
+    - cron: "0 2 * * *"
+
+  # Manual trigger from GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      isbns:
+        description: "Comma-separated ISBNs to sweep (leave blank to use baseline CSV)"
+        required: false
+        default: ""
+      sources:
+        description: "Scraper sources to use (openlibrary, google_books — blank = all)"
+        required: false
+        default: ""
+
+jobs:
+  sweep:
+    name: Run Metadata Sweep
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run sweep
+        env:
+          DATABASE_URL: "sqlite+aiosqlite:///./metadata_pipeline.db"
+          GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
+          OPENLIBRARY_USERNAME: ${{ secrets.OPENLIBRARY_USERNAME }}
+          OPENLIBRARY_PASSWORD: ${{ secrets.OPENLIBRARY_PASSWORD }}
+        run: |
+          if [ -n "${{ github.event.inputs.isbns }}" ]; then
+            # Manual trigger with specific ISBNs
+            ISBNS=$(echo "${{ github.event.inputs.isbns }}" | tr ',' ' ')
+            python run_sweep.py --isbn $ISBNS \
+              ${{ github.event.inputs.sources && format('--sources {0}', github.event.inputs.sources) || '' }} \
+              --triggered-by "github-actions-manual"
+          else
+            # Scheduled: use baseline CSV (must exist in repo or be downloaded)
+            python run_sweep.py --csv baseline.csv --triggered-by "github-actions-scheduled"
+          fi
+
+      - name: Upload audit results
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-results-${{ github.run_id }}
+          path: audit_results.json
+          retention-days: 90
+
+      - name: Upload SQLite DB snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: metadata-db-${{ github.run_id }}
+          path: metadata_pipeline.db
+          retention-days: 30
+
+      - name: Post summary to job output
+        run: |
+          python - <<'EOF'
+          import json, sys
+          with open("audit_results.json") as f:
+              data = json.load(f)
+          total    = data.get("total_checked", 0)
+          compliant = data.get("total_compliant", 0)
+          failures = data.get("total_failures", 0)
+          not_found = data.get("not_found", 0)
+          rate = round(compliant / total * 100, 1) if total else 0
+          print(f"### Metadata Sweep Summary")
+          print(f"| Metric | Value |")
+          print(f"|--------|-------|")
+          print(f"| Total checked | {total} |")
+          print(f"| Compliant | {compliant} |")
+          print(f"| Failures | {failures} |")
+          print(f"| Not found | {not_found} |")
+          print(f"| Compliance rate | {rate}% |")
+          if failures > 0:
+              sys.exit(1)  # Fail the job if there are unresolved failures
+          EOF
+        continue-on-error: true  # Don't fail the workflow if the sweep found issues; artifacts still upload
+
+      - name: Notify Slack on failures
+        if: failure() && env.SLACK_WEBHOOK_URL != ''
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+        run: |
+          curl -s -X POST "$SLACK_WEBHOOK_URL" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"⚠️ Metadata sweep found failures. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}"

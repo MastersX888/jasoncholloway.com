@@ -1,0 +1,45 @@
+﻿
+File                                                                                                      ItalicsCount
+----                                                                                                      ------------
+E:\Mastersx_Trilogy\MASTERS_X.docx                                                                                7329
+E:\Mastersx_Trilogy\MASTERS_FREQUENCY_ANNOTATED.docx                                                              7077
+E:\Mastersx_Trilogy\MASTERS_FREQUENCY_COMPLETE.docx                                                               7008
+E:\Mastersx_Trilogy\MASTERS_TRILOGY_COMPLETE.docx                                                                 7008
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_V2.docx                                              6954
+E:\Mastersx_Trilogy\Masters-Chamber\output\stacking\stack_report_20260222_042506\stacking_report.md               5438
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_ILLUSTRATED.docx                                                        5420
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_ANNOTATED_FINAL.docx                                                    5403
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_V3_ANNOTATED_EXPANDED.docx                                              5381
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_V3_ANNOTATED.docx                                                       5308
+E:\Mastersx_Trilogy\MASTERS_FREQUENCY_ANNOTATED_V3.docx                                                           5158
+E:\Mastersx_Trilogy\Masters-Chamber\output\stacking\stack_report_20260216_002145\stacking_report.md               5133
+E:\Mastersx_Trilogy\MASTERS_FREQUENCY_ANNOTATED_V2.docx                                                           5091
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_V3.docx                                                                 5015
+E:\Masters_X_Trilogy_Archive\Final_Manuscripts\MASTERS_X_TRILOGY_READTHROUGH.docx                                 4639
+E:\Mastersx_Trilogy\EDITOR_FLAGGED_REPORT.md                                                                      1913
+E:\Masters_X_Trilogy_Archive\Final_Manuscripts\MASTERS_X_BOOK1_MANUSCRIPT.docx                                    1700
+E:\Masters_X_Trilogy_Archive\Final_Manuscripts\MASTERS_X_BOOK2_MANUSCRIPT.docx                                    1687
+E:\Mastersx_Trilogy\Screenplay\MASTERS_TRILOGY_PHASE4_COMPLETE.md                                                 1532
+E:\Masters_X_Trilogy_Archive\Final_Manuscripts\MASTERS_X_BOOK3_MANUSCRIPT.docx                                    1258
+E:\Masters_X_Trilogy_Archive\Production_and_Audits\resonance_audit_report.md                                      1226
+E:\Mastersx_Trilogy\THE_MASTERS_FREQUENCY_ILLUSTRATED_v2.docx                                                      955
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP2_20260223_224624.docx                          716
+E:\Mastersx_Trilogy\MASTERS_TRILOGY_COMPLETE_BACKUP_20260223_224017.docx                                           716
+E:\Mastersx_Trilogy\MASTERS_TRILOGY_COMPLETE_BACKUP2_20260223_224624.docx                                          716
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_20260223_224017.docx                           716
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_20260224_205629.docx                           679
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP3_20260224_004529.docx                          679
+E:\Mastersx_Trilogy\MASTERS_TRILOGY_COMPLETE_BACKUP_20260224_205629.docx                                           679
+E:\Mastersx_Trilogy\MASTERS_TRILOGY_COMPLETE_BACKUP3_20260224_004529.docx                                          679
+E:\Mastersx_Trilogy\Research\PKD_EXEGESIS_MASTERS_REFERENCE.md                                                     628
+E:\Mastersx_Trilogy\Pre-Publication_Audits\DRAMATIC_CRAFT_AUDIT_SUITE.docx                                         501
+E:\Masters_X_Trilogy_Archive\Production_and_Audits\Pre-Publication_Audits\DRAMATIC_CRAFT_AUDIT_SUITE.docx          501
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_PREDEDUP_20260225_011640.docx                  470
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_20260224_223950.docx                           470
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_20260224_224018.docx                           470
+E:\Mastersx_Trilogy\Screenplay\MASTERS_TRILOGY_PHASE3_SCENES.md                                                    459
+E:\Masters_X_Trilogy_Archive\Production_and_Audits\MASTERS_X_TRILOGY_PUBLICATION_MEGAPROMPT.md                     424
+E:\Mastersx_Trilogy\archive\backups\MASTERS_TRILOGY_COMPLETE_BACKUP_20260224_222439.docx                           416
+E:\Mastersx_Trilogy\archive\old_drafts\MASTERS_TRILOGY_REVISED_DRAFT.md                                            412
+
+

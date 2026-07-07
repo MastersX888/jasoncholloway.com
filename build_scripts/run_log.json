@@ -1,0 +1,374 @@
+[
+  {
+    "isbn": "9798295777622",
+    "edition_key": "PRINT_6x9",
+    "title_short": "Innocence, Desire, and the Architectur (PRINT_6x9)",
+    "output_file": "MASTERS_X_HAWKES_6x9_9798295777622.pdf",
+    "trim_pt_expected": [
+      432.0,
+      648.0
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 90,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — Status: Title in Revision — hold",
+    "notes": "Status: Title in Revision — hold"
+  },
+  {
+    "isbn": "9798295778247",
+    "edition_key": "PRINT_6x9",
+    "title_short": "Innocence, Desire, and the Architectur (PRINT_6x9)",
+    "output_file": "MASTERS_X_HAWKES_6x9_9798295778247.pdf",
+    "trim_pt_expected": [
+      432.0,
+      648.0
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 84,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — None",
+    "notes": ""
+  },
+  {
+    "isbn": "9798295778926",
+    "edition_key": "EPUB",
+    "title_short": "Innocence, Desire, and the Architectur (EPUB)",
+    "output_file": "MASTERS_X_HAWKES_EPUB_9798295778926.epub",
+    "trim_pt_expected": [],
+    "trim_pt_actual": null,
+    "pages_expected": 90,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — None",
+    "notes": ""
+  },
+  {
+    "isbn": "9798295799129",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Inheritance of Frequenc (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_HAWKES_ROYAL_9798295799129.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 184,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — Illustrated: requires illustration program (art), not text reflow; status error",
+    "notes": "Illustrated: requires illustration program (art), not text reflow; status error"
+  },
+  {
+    "isbn": "9798295812439",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Grimoire (Illustrated E (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_HAWKES_ROYAL_9798295812439.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 256,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — Illustrated: requires illustration program (art), not text reflow; status error",
+    "notes": "Illustrated: requires illustration program (art), not text reflow; status error"
+  },
+  {
+    "isbn": "9798295812507",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Kingdom (Illustrated Ed (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_HAWKES_ROYAL_9798295812507.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 194,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — Illustrated: requires illustration program (art), not text reflow; status error",
+    "notes": "Illustrated: requires illustration program (art), not text reflow; status error"
+  },
+  {
+    "isbn": "9798295800801",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Inheritance of Frequenc (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_BOOK1_ROYAL_9798295800801.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": [
+      442.08,
+      663.12
+    ],
+    "pages_expected": 268,
+    "pages_actual": 257,
+    "page_diff_pct": 4.1,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK1_ROYAL_9798295800801.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 442.08x663.12pt (got 442.08x663.12)\n   [x] target ISBN 9798295800801 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 257 vs expected 268 (diff 4.1%) <=5%"
+  },
+  {
+    "isbn": "9798295812675",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Grimoire (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_BOOK2_ROYAL_9798295812675.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": [
+      442.08,
+      663.12
+    ],
+    "pages_expected": 386,
+    "pages_actual": 383,
+    "page_diff_pct": 0.8,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK2_ROYAL_9798295812675.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 442.08x663.12pt (got 442.08x663.12)\n   [x] target ISBN 9798295812675 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 383 vs expected 386 (diff 0.8%) <=5%"
+  },
+  {
+    "isbn": "9798295812705",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Kingdom (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_BOOK3_ROYAL_9798295812705.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": [
+      442.08,
+      663.12
+    ],
+    "pages_expected": 285,
+    "pages_actual": 285,
+    "page_diff_pct": 0.0,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK3_ROYAL_9798295812705.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 442.08x663.12pt (got 442.08x663.12)\n   [x] target ISBN 9798295812705 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 285 vs expected 285 (diff 0.0%) <=5%"
+  },
+  {
+    "isbn": "9798349308444",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Innocence, Desire, and the Architectur (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_HAWKES_ROYAL_9798349308444.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": null,
+    "pages_expected": 84,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": null,
+    "author_name_clean": null,
+    "gate_result": "SKIPPED",
+    "upload_status": "HOLD — None",
+    "notes": ""
+  },
+  {
+    "isbn": "9798295884412",
+    "edition_key": "PRINT_ROYAL_8vo",
+    "title_short": "Masters X: The Complete Trilogy (PRINT_ROYAL_8vo)",
+    "output_file": "MASTERS_X_OMNIBUS_ROYAL_9798295884412.pdf",
+    "trim_pt_expected": [
+      442.08,
+      663.12
+    ],
+    "trim_pt_actual": [
+      442.08,
+      663.12
+    ],
+    "pages_expected": 732,
+    "pages_actual": 732,
+    "page_diff_pct": 0.0,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_OMNIBUS_ROYAL_9798295884412.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 442.08x663.12pt (got 442.08x663.12)\n   [x] target ISBN 9798295884412 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 732 vs expected 732 (diff 0.0%) <=5%"
+  },
+  {
+    "isbn": "9798256008819",
+    "edition_key": "EPUB",
+    "title_short": "Masters X: The Inheritance of Frequenc (EPUB)",
+    "output_file": "MASTERS_X_BOOK1_EPUB_9798256008819.epub",
+    "trim_pt_expected": [],
+    "trim_pt_actual": null,
+    "pages_expected": 267,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK1_EPUB_9798256008819.epub  (backend: fitz)\n   [x] mimetype is first entry\n   [x] correct mimetype (application/epub+zip)\n   [x] dc:identifier == 9798256008819 (got '9798256008819')\n   [x] has true <em> italic tags\n   [x] no short author name\n   [x] no stray emphasis asterisks\n   [x] nav/TOC present"
+  },
+  {
+    "isbn": "9798256009625",
+    "edition_key": "EPUB",
+    "title_short": "Masters X: The Grimoire (EPUB)",
+    "output_file": "MASTERS_X_BOOK2_EPUB_9798256009625.epub",
+    "trim_pt_expected": [],
+    "trim_pt_actual": null,
+    "pages_expected": 385,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK2_EPUB_9798256009625.epub  (backend: fitz)\n   [x] mimetype is first entry\n   [x] correct mimetype (application/epub+zip)\n   [x] dc:identifier == 9798256009625 (got '9798256009625')\n   [x] has true <em> italic tags\n   [x] no short author name\n   [x] no stray emphasis asterisks\n   [x] nav/TOC present"
+  },
+  {
+    "isbn": "9798256009809",
+    "edition_key": "EPUB",
+    "title_short": "Masters X: The Kingdom (EPUB)",
+    "output_file": "MASTERS_X_BOOK3_EPUB_9798256009809.epub",
+    "trim_pt_expected": [],
+    "trim_pt_actual": null,
+    "pages_expected": 291,
+    "pages_actual": null,
+    "page_diff_pct": null,
+    "isbn_on_page_verified": false,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK3_EPUB_9798256009809.epub  (backend: fitz)\n   [x] mimetype is first entry\n   [x] correct mimetype (application/epub+zip)\n   [x] dc:identifier == 9798256009809 (got '9798256009809')\n   [x] has true <em> italic tags\n   [x] no short author name\n   [x] no stray emphasis asterisks\n   [x] nav/TOC present"
+  },
+  {
+    "isbn": "9798256008048",
+    "edition_key": "PRINT_DEMY_8vo",
+    "title_short": "Masters X: The Inheritance of Frequenc (PRINT_DEMY_8vo)",
+    "output_file": "MASTERS_X_BOOK1_DEMY_9798256008048.pdf",
+    "trim_pt_expected": [
+      396.0,
+      612.0
+    ],
+    "trim_pt_actual": [
+      396.0,
+      612.0
+    ],
+    "pages_expected": 322,
+    "pages_actual": 311,
+    "page_diff_pct": 3.4,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK1_DEMY_9798256008048.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 396.0x612.0pt (got 396.0x612.0)\n   [x] target ISBN 9798256008048 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 311 vs expected 322 (diff 3.4%) <=5%"
+  },
+  {
+    "isbn": "9798256009953",
+    "edition_key": "PRINT_DEMY_8vo",
+    "title_short": "Masters X: The Grimoire (PRINT_DEMY_8vo)",
+    "output_file": "MASTERS_X_BOOK2_DEMY_9798256009953.pdf",
+    "trim_pt_expected": [
+      396.0,
+      612.0
+    ],
+    "trim_pt_actual": [
+      396.0,
+      612.0
+    ],
+    "pages_expected": 490,
+    "pages_actual": 495,
+    "page_diff_pct": 1.0,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK2_DEMY_9798256009953.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 396.0x612.0pt (got 396.0x612.0)\n   [x] target ISBN 9798256009953 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 495 vs expected 490 (diff 1.0%) <=5%"
+  },
+  {
+    "isbn": "9798256010072",
+    "edition_key": "PRINT_DEMY_8vo",
+    "title_short": "Masters X: The Kingdom (PRINT_DEMY_8vo)",
+    "output_file": "MASTERS_X_BOOK3_DEMY_9798256010072.pdf",
+    "trim_pt_expected": [
+      396.0,
+      612.0
+    ],
+    "trim_pt_actual": [
+      396.0,
+      612.0
+    ],
+    "pages_expected": 362,
+    "pages_actual": 355,
+    "page_diff_pct": 1.9,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "READY",
+    "notes": "PASS  MASTERS_X_BOOK3_DEMY_9798256010072.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 396.0x612.0pt (got 396.0x612.0)\n   [x] target ISBN 9798256010072 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 355 vs expected 362 (diff 1.9%) <=5%"
+  },
+  {
+    "isbn": "9798256072704",
+    "edition_key": "PRINT_DEMY_8vo",
+    "title_short": "Masters X: The Complete Trilogy (PRINT_DEMY_8vo)",
+    "output_file": "MASTERS_X_OMNIBUS_DEMY_9798256072704.pdf",
+    "trim_pt_expected": [
+      396.0,
+      612.0
+    ],
+    "trim_pt_actual": [
+      396.0,
+      612.0
+    ],
+    "pages_expected": 907,
+    "pages_actual": 907,
+    "page_diff_pct": 0.0,
+    "isbn_on_page_verified": true,
+    "foreign_isbn_found": false,
+    "author_name_clean": true,
+    "gate_result": "PASS",
+    "upload_status": "DRAFT-HOLD — Pending Publisher Approval in IngramSpark",
+    "notes": "Draftable; HOLD upload until approved\nPASS  MASTERS_X_OMNIBUS_DEMY_9798256072704.pdf  (backend: fitz)\n   [x] real PDF (%PDF header)\n   [x] trim 396.0x612.0pt (got 396.0x612.0)\n   [x] target ISBN 9798256072704 present\n   [x] no foreign ISBN (extras: none)\n   [x] no short author name (Jason C. Holloway)\n   [x] no stray emphasis asterisks (*word)\n   [x] page count 907 vs expected 907 (diff 0.0%) <=5%"
+  }
+]

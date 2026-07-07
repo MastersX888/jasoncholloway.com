@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metadata Monitor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:          #070d1a;
+      --surface:     #0e1829;
+      --surface-2:   #162236;
+      --border:      rgba(56, 139, 253, 0.12);
+      --border-bright: rgba(56, 139, 253, 0.3);
+      --text-primary: #e6edf3;
+      --text-secondary: #7d8590;
+      --text-muted:  #444d56;
+      --accent:      #388bfd;
+      --accent-glow: rgba(56, 139, 253, 0.15);
+      --critical:    #f85149;
+      --critical-bg: rgba(248, 81, 73, 0.08);
+      --warning:     #d29922;
+      --warning-bg:  rgba(210, 153, 34, 0.08);
+      --success:     #3fb950;
+      --success-bg:  rgba(63, 185, 80, 0.08);
+      --mono:        'IBM Plex Mono', monospace;
+      --sans:        'Inter', system-ui, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ── Layout ─────────────────────────────── */
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      grid-template-rows: 56px 1fr;
+      min-height: 100vh;
+    }
+
+    /* ── Topbar ──────────────────────────────── */
+    .topbar {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .topbar-logo {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.05em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .topbar-logo::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .topbar-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .topbar-stamp {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* ── Sidebar ─────────────────────────────── */
+    .sidebar {
+      background: var(--surface);
+      border-right: 1px solid var(--border);
+      padding: 24px 0;
+      position: sticky;
+      top: 56px;
+      height: calc(100vh - 56px);
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      padding: 0 16px;
+      margin-bottom: 8px;
+    }
+
+    .sidebar-label {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 8px 4px;
+    }
+
+    .sidebar-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.15s, color 0.15s;
+      cursor: pointer;
+    }
+
+    .sidebar-link:hover, .sidebar-link.active {
+      background: var(--accent-glow);
+      color: var(--accent);
+    }
+
+    .sidebar-link .icon { width: 16px; text-align: center; }
+
+    .sidebar-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 12px 16px;
+    }
+
+    /* ── Main content ────────────────────────── */
+    .main {
+      padding: 32px;
+      overflow-y: auto;
+    }
+
+    .page-header {
+      margin-bottom: 32px;
+    }
+
+    .page-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .page-subtitle {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+
+    /* ── Stat cards ──────────────────────────── */
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+
+    .stat-card.critical::before { background: var(--critical); }
+    .stat-card.warning::before  { background: var(--warning); }
+    .stat-card.success::before  { background: var(--success); }
+    .stat-card.accent::before   { background: var(--accent); }
+
+    .stat-label {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .stat-value {
+      font-family: var(--mono);
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .stat-card.critical .stat-value { color: var(--critical); }
+    .stat-card.warning  .stat-value { color: var(--warning); }
+    .stat-card.success  .stat-value { color: var(--success); }
+    .stat-card.accent   .stat-value { color: var(--accent); }
+
+    .stat-meta { font-size: 11px; color: var(--text-muted); }
+
+    /* ── Section headers ─────────────────────── */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title .count-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1px 8px;
+      color: var(--text-secondary);
+    }
+
+    .section-action {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* ── Review queue table ──────────────────── */
+    .queue-table-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
+
+    .queue-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .queue-table th {
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 12px 16px;
+      text-align: left;
+      background: var(--surface-2);
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    .queue-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+      font-size: 13px;
+    }
+
+    .queue-table tbody tr:last-child td { border-bottom: none; }
+
+    .queue-table tbody tr:hover td {
+      background: var(--accent-glow);
+    }
+
+    .isbn-cell {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+    }
+
+    .field-cell {
+      font-weight: 500;
+    }
+
+    .value-cell {
+      font-size: 12px;
+      color: var(--text-secondary);
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .value-expected {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--success);
+    }
+
+    .value-found {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--critical);
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .badge-critical { background: var(--critical-bg); color: var(--critical); border: 1px solid rgba(248,81,73,0.2); }
+    .badge-warning  { background: var(--warning-bg);  color: var(--warning);  border: 1px solid rgba(210,153,34,0.2); }
+    .badge-success  { background: var(--success-bg);  color: var(--success);  border: 1px solid rgba(63,185,80,0.2); }
+    .badge-pending  { background: var(--surface-2);   color: var(--text-secondary); border: 1px solid var(--border); }
+
+    .resolve-btn {
+      font-size: 11px;
+      color: var(--success);
+      background: var(--success-bg);
+      border: 1px solid rgba(63, 185, 80, 0.2);
+      border-radius: 4px;
+      padding: 6px 12px;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .resolve-btn:hover { background: rgba(63, 185, 80, 0.15); transform: translateY(-1px); }
+    
+    .fix-btn {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--accent);
+      background: var(--accent-glow);
+      border: 1px solid var(--border-bright);
+      border-radius: 4px;
+      padding: 5px 12px;
+      text-decoration: none;
+      font-family: var(--sans);
+      font-weight: 600;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+    
+    .fix-btn:hover { background: rgba(56, 139, 253, 0.25); transform: translateY(-1px); }
+    
+    .action-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .help-btn {
+      font-size: 11px;
+      color: var(--text-secondary);
+      background: var(--surface-2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 5px 8px;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: all 0.2s ease;
+    }
+    
+    .help-btn:hover { background: var(--border); color: var(--text-primary); }
+
+    .help-row td {
+      padding: 0;
+      border-bottom: none;
+    }
+
+    .help-row.open td {
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .help-box {
+      background: var(--surface-2);
+      border-left: 3px solid var(--accent);
+      padding: 16px 20px;
+      margin: 0 16px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
+      color: var(--text-secondary);
+      display: none;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+    }
+
+    .help-row.open .help-box {
+      display: block;
+      animation: slideDown 0.2s ease-out forwards;
+    }
+    
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── Run history ─────────────────────────── */
+    .run-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
+
+    .run-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      transition: border-color 0.15s;
+    }
+
+    .run-row:hover { border-color: var(--border-bright); }
+
+    .run-id {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-muted);
+      min-width: 50px;
+    }
+
+    .run-meta {
+      flex: 1;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .run-trigger {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .run-stat {
+      font-size: 11px;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .run-stat .num {
+      font-family: var(--mono);
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .run-stat .num.green { color: var(--success); }
+    .run-stat .num.red   { color: var(--critical); }
+
+    .run-time {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--text-muted);
+    }
+
+    /* ── Empty state ─────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 48px 24px;
+      color: var(--text-muted);
+    }
+
+    .empty-state .icon { font-size: 32px; margin-bottom: 12px; }
+    .empty-state p { font-size: 13px; }
+
+    /* ── Trigger panel ───────────────────────── */
+    .trigger-panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 32px;
+    }
+
+    .trigger-panel h3 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: var(--text-primary);
+    }
+
+    .trigger-row {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .trigger-input {
+      flex: 1;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      color: var(--text-primary);
+      font-family: var(--mono);
+      font-size: 12px;
+      resize: none;
+      height: 80px;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    .trigger-input:focus { border-color: var(--border-bright); }
+    .trigger-input::placeholder { color: var(--text-muted); }
+
+    .trigger-btn {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 20px;
+      font-family: var(--sans);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+    }
+
+    .trigger-btn:hover { opacity: 0.85; }
+
+    /* ── Toast ───────────────────────────────── */
+    .toast {
+      position: fixed;
+      bottom: 24px; right: 24px;
+      background: var(--surface-2);
+      border: 1px solid var(--border-bright);
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 13px;
+      color: var(--text-primary);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.2s, transform 0.2s;
+      z-index: 999;
+      pointer-events: none;
+    }
+
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    /* ── Responsive ──────────────────────────── */
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="topbar-logo">METADATA-MONITOR</div>
+    <span class="topbar-title">/ Review Dashboard</span>
+    <span class="topbar-stamp">Last refreshed: {{ now }}</span>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-label">Views</div>
+      <a class="sidebar-link active" href="#">
+        <span class="icon">⬜</span> Queue
+      </a>
+      <a class="sidebar-link" href="#runs">
+        <span class="icon">▶</span> Run History
+      </a>
+      <a class="sidebar-link" href="#trigger">
+        <span class="icon">⚡</span> Trigger Sweep
+      </a>
+    </div>
+    <div class="sidebar-divider"></div>
+    <div class="sidebar-section">
+      <div class="sidebar-label">API</div>
+      <a class="sidebar-link" href="/docs" target="_blank">
+        <span class="icon">⟡</span> Swagger Docs
+      </a>
+      <a class="sidebar-link" href="/api/queue/summary" target="_blank">
+        <span class="icon">⟡</span> Queue JSON
+      </a>
+      <a class="sidebar-link" href="/api/runs" target="_blank">
+        <span class="icon">⟡</span> Runs JSON
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Page header -->
+    <div class="page-header">
+      <h1 class="page-title">Review Queue</h1>
+      <p class="page-subtitle">Metadata discrepancies flagged for human review or automated patching.</p>
+    </div>
+
+    <!-- Stat cards -->
+    <div class="stat-grid">
+      <div class="stat-card critical">
+        <div class="stat-label">Critical Pending</div>
+        <div class="stat-value">{{ summary.critical_pending }}</div>
+        <div class="stat-meta">require manual intervention</div>
+      </div>
+      <div class="stat-card warning">
+        <div class="stat-label">Total Pending</div>
+        <div class="stat-value">{{ summary.pending }}</div>
+        <div class="stat-meta">in queue</div>
+      </div>
+      <div class="stat-card success">
+        <div class="stat-label">Resolved</div>
+        <div class="stat-value">{{ summary.resolved }}</div>
+        <div class="stat-meta">items closed</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="stat-label">Resolution Rate</div>
+        <div class="stat-value">{{ summary.compliance_rate }}%</div>
+        <div class="stat-meta">of {{ summary.total }} total items</div>
+      </div>
+    </div>
+
+    <!-- Trigger sweep panel -->
+    <div class="trigger-panel" id="trigger">
+      <h3>⚡ Trigger New Sweep</h3>
+      <div class="trigger-row">
+        <textarea
+          class="trigger-input"
+          id="isbn-input"
+          placeholder="Enter ISBNs to sweep manually...&#10;9798256072704&#10;9798295884412"
+        ></textarea>
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <button class="trigger-btn" onclick="triggerSweep()">Run ISBNs</button>
+          <button class="trigger-btn" style="background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--border);" onclick="triggerCSVSweep()">Run Configured CSV</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Review queue table -->
+    <div class="section-header">
+      <h2 class="section-title">
+        Pending Items
+        <span class="count-badge">{{ pending_items | length }}</span>
+      </h2>
+      <a class="section-action" href="/api/queue?limit=500" target="_blank">Export JSON ↗</a>
+    </div>
+
+    <div class="queue-table-wrap">
+      {% if pending_items %}
+      <table class="queue-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>ISBN</th>
+            <th>Field</th>
+            <th>Expected</th>
+            <th>Found</th>
+            <th>Severity</th>
+            <th>Added</th>
+            <th>Workflow Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in pending_items %}
+          <tr id="row-{{ item.id }}">
+            <td class="isbn-cell" style="color: var(--text-muted);">{{ item.id }}</td>
+            <td class="isbn-cell">{{ item.isbn }}</td>
+            <td class="field-cell">{{ item.field_name }}</td>
+            <td class="value-cell">
+              <span class="value-expected">{{ item.expected_value or '—' }}</span>
+            </td>
+            <td class="value-cell">
+              <span class="value-found">{{ item.found_value or '—' }}</span>
+            </td>
+            <td>
+              {% if item.severity.value == 'CRITICAL' %}
+                <span class="badge badge-critical">Critical</span>
+              {% elif item.severity.value == 'WARNING' %}
+                <span class="badge badge-warning">Warning</span>
+              {% else %}
+                <span class="badge badge-pending">{{ item.severity.value }}</span>
+              {% endif %}
+            </td>
+            <td style="font-family: var(--mono); font-size: 11px; color: var(--text-muted);">
+              {{ item.date_added.strftime('%m-%d %H:%M') if item.date_added else '—' }}
+            </td>
+            <td>
+              <div class="action-group">
+                <button class="help-btn" onclick="toggleHelp({{ item.id }})" title="Show Instructions">❓ Help</button>
+                {% if item.source_url %}
+                  <a href="{{ item.source_url }}" target="_blank" class="fix-btn">1. Fix Source ↗</a>
+                {% endif %}
+                <button class="resolve-btn" onclick="resolveItem({{ item.id }})">2. Mark Done ✓</button>
+              </div>
+            </td>
+          </tr>
+          <tr id="help-{{ item.id }}" class="help-row">
+            <td colspan="8">
+              <div class="help-box">
+                {% if item.field_name == 'ALL' %}
+                <strong style="color: var(--warning); font-size: 14px;">Book Missing on External Platform</strong><br>
+                This entire book could not be found in the external database (e.g. Google Books, OpenLibrary).<br><br>
+                <strong style="color: var(--text-primary);">Step-by-step Instructions:</strong>
+                <ol style="margin-left: 20px; margin-top: 6px; line-height: 1.8;">
+                  <li>Navigate to the external platform and manually create a new book listing for this ISBN.</li>
+                  <li>Fill in all the core metadata (Title, Author, Pub Date) to match your internal baseline.</li>
+                  <li>Return to this dashboard and click the <strong style="color: var(--success);">2. Mark Done ✓</strong> button to clear this issue.</li>
+                </ol>
+                {% else %}
+                <strong style="color: var(--text-primary); font-size: 14px;">Fixing {{ item.field_name }} Mismatch:</strong><br>
+                The <code>{{ item.field_name }}</code> listed on the external platform (<strong>{{ item.found_value or 'Blank' }}</strong>) does not match our baseline (<strong>{{ item.expected_value or 'Blank' }}</strong>).<br><br>
+                <strong style="color: var(--text-primary);">Step-by-step Instructions:</strong>
+                <ol style="margin-left: 20px; margin-top: 6px; line-height: 1.8;">
+                  {% if item.source_url %}<li>Click the <strong style="color: var(--accent);">1. Fix Source ↗</strong> button above to open the metadata page for this book in a new tab.</li>{% endif %}
+                  <li>Locate the <strong>{{ item.field_name }}</strong> field on that webpage and change it to exactly: <code style="color: var(--success); background: rgba(63,185,80,0.1); padding: 2px 6px; border-radius: 4px; font-weight: 600;">{{ item.expected_value or 'Blank' }}</code></li>
+                  <li>Save or submit the changes on the external platform.</li>
+                  <li>Return to this dashboard and click the <strong style="color: var(--success);">2. Mark Done ✓</strong> button to clear this issue from your queue.</li>
+                </ol>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% else %}
+      <div class="empty-state">
+        <div class="icon">✓</div>
+        <p>No pending items. Queue is clear.</p>
+      </div>
+      {% endif %}
+    </div>
+
+    <!-- Run history -->
+    <div class="section-header" id="runs">
+      <h2 class="section-title">
+        Recent Runs
+        <span class="count-badge">{{ recent_runs | length }}</span>
+      </h2>
+    </div>
+
+    <div class="run-list">
+      {% if recent_runs %}
+        {% for run in recent_runs %}
+        <div class="run-row">
+          <div class="run-id">#{{ run.id }}</div>
+          <div class="run-meta">
+            <div class="run-trigger">{{ run.triggered_by }}</div>
+            <div class="run-stat">
+              <span class="num">{{ run.total_checked }}</span> checked
+            </div>
+            <div class="run-stat">
+              <span class="num green">{{ run.total_compliant }}</span> compliant
+            </div>
+            {% if run.total_failures > 0 %}
+            <div class="run-stat">
+              <span class="num red">{{ run.total_failures }}</span> failures
+            </div>
+            {% endif %}
+            <div class="run-stat">
+              <span class="num">{{ run.compliance_rate }}%</span> rate
+            </div>
+          </div>
+          <div class="run-time">
+            {{ run.started_at.strftime('%Y-%m-%d %H:%M') if run.started_at else '—' }}
+            {% if run.duration_seconds %}
+              · {{ "%.1f"|format(run.duration_seconds) }}s
+            {% endif %}
+          </div>
+          <div>
+            {% if run.status.value == 'COMPLETE' %}
+              <span class="badge badge-success">Complete</span>
+            {% elif run.status.value == 'RUNNING' %}
+              <span class="badge badge-warning">Running</span>
+            {% else %}
+              <span class="badge badge-pending">{{ run.status.value }}</span>
+            {% endif %}
+          </div>
+        </div>
+        {% endfor %}
+      {% else %}
+      <div class="empty-state">
+        <div class="icon">▶</div>
+        <p>No runs yet. Trigger a sweep above or run <code>python run_sweep.py</code>.</p>
+      </div>
+      {% endif %}
+    </div>
+
+  </main>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+  function showToast(msg, duration = 3000) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), duration);
+  }
+
+  function toggleHelp(id) {
+    const helpRow = document.getElementById(`help-${id}`);
+    if (helpRow) {
+      helpRow.classList.toggle('open');
+      const row = document.getElementById(`row-${id}`);
+      if (helpRow.classList.contains('open')) {
+        row.style.borderBottom = 'none';
+      } else {
+        row.style.borderBottom = '';
+      }
+    }
+  }
+
+  async function resolveItem(id) {
+    const resolvedBy = prompt('Resolved by (your name or initials):');
+    if (!resolvedBy) return;
+    const note = prompt('Resolution note (optional):') || '';
+
+    try {
+      const res = await fetch(`/api/queue/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ resolved_by: resolvedBy, resolution_note: note, status: 'RESOLVED' })
+      });
+      if (res.ok) {
+        const row = document.getElementById(`row-${id}`);
+        const helpRow = document.getElementById(`help-${id}`);
+        if (row) {
+          row.style.opacity = '0.4';
+          row.style.transition = 'opacity 0.3s';
+          setTimeout(() => row.remove(), 350);
+        }
+        if (helpRow) {
+          helpRow.style.opacity = '0.4';
+          helpRow.style.transition = 'opacity 0.3s';
+          setTimeout(() => helpRow.remove(), 350);
+        }
+        showToast(`✓ Item #${id} resolved`);
+      } else {
+        showToast(`✗ Failed to resolve item #${id}`);
+      }
+    } catch (e) {
+      showToast('Network error');
+    }
+  }
+
+  async function triggerSweep() {
+    const raw = document.getElementById('isbn-input').value;
+    const isbns = raw.split('\n').map(s => s.trim()).filter(Boolean);
+    if (!isbns.length) { showToast('Enter at least one ISBN, or click Run Configured CSV'); return; }
+
+    try {
+      const res = await fetch('/api/runs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ isbns, triggered_by: 'dashboard_isbns' })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        showToast(`⚡ ${data.message} Refresh in a moment.`, 4000);
+      } else {
+        const err = await res.json();
+        showToast(`Failed: ${err.detail || 'Unknown error'}`);
+      }
+    } catch (e) {
+      showToast('Network error');
+    }
+  }
+
+  async function triggerCSVSweep() {
+    try {
+      const res = await fetch('/api/runs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ isbns: [], triggered_by: 'dashboard_csv' })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        showToast(`⚡ ${data.message} Refresh in a moment.`, 4000);
+      } else {
+        const err = await res.json();
+        showToast(`Failed: ${err.detail || 'Unknown error'}`);
+      }
+    } catch (e) {
+      showToast('Network error');
+    }
+  }
+</script>
+
+</body>
+</html>

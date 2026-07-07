@@ -1,0 +1,154 @@
+
+--- Jason_Holloway_Resume_Healthcare_Data_Analyst.docx ---
+JASON HOLLOWAY
+Kansas City, MO  •  Open to Remote / Hybrid
+(913) 225-0808  •  Zh5779485@gmail.com  •  jasoncholloway.com
+PROFESSIONAL SUMMARY
+Healthcare data professional with nearly a decade of experience managing clinical and public-health data, reporting pipelines, and quality-improvement initiatives in HIPAA-regulated, federally funded environments. Skilled in SAS, SQL, advanced Excel/VBA automation, Tableau, and Power BI, with a track record of building validation systems that drive measurable error reduction and of translating complex health datasets into decisions for clinical, epidemiological, and executive audiences. Deep experience with CDC performance measures, population-health analysis, and demographic stratification. Google-certified in data analytics, advanced data analytics, and business intelligence. Seeking a remote or hybrid healthcare data analyst role where analytical rigor and end-to-end data ownership improve patient and program outcomes.
+CORE COMPETENCIES
+Healthcare & Public-Health Data:  CDC Performance Measures • Population-Health Analysis • Demographic Stratification • Clinical & Program Reporting • HIPAA • Regulatory Compliance
+Data & Analytics:  SAS • SQL • Advanced Excel & VBA Automation • Tableau • Power BI • Data Validation & Integrity • Statistical Reporting
+Tools & Collaboration:  Jira • Asana • Smartsheet • MS Project • Basecamp • Technical Documentation • Data Governance • Cross-Functional Collaboration
+Technical & Cloud:  Google Cloud • Web Deployment (Next.js, Cloudflare Pages) • Workflow & AI-Agent Automation
+PROFESSIONAL EXPERIENCE
+Data Manager — WISEWOMAN & Show Me Healthy Women Programs
+Missouri DHSS, Division of Community and Public Health  |  Remote  |  Jan 2021 – Present
+Lead data management for two federally funded CDC chronic-disease and cancer-screening programs (WISEWOMAN and Show Me Healthy Women), owning the full cycle of clinical and program data collection, validation, and CDC-mandated submissions under HIPAA and strict federal reporting standards.
+Built SAS-based clinical analytics for CDC Performance Measures, including blood-pressure-control analysis with demographic stratification, to evaluate population-health outcomes and support federal reporting.
+Designed and deployed automated validation and error-reporting systems in advanced Excel/VBA — including deduplication logic and trend analysis — reducing submission error rates to the lowest levels on record while cutting manual review time.
+Serve as primary liaison among epidemiologists, IT teams, and program staff to define data requirements and align pipeline development across clinical and technical functions.
+Authored and maintain data-standards and process documentation, creating a single source of truth for distributed stakeholders and Regional Program Coordinators.
+Conduct recurring data audits to proactively identify, track, and mitigate integrity risks and maintain HIPAA and regulatory compliance.
+Research Data Analyst
+MO Dept. of Economic Development / Dept. of Higher Education & Workforce Development  |  Jefferson City, MO  |  Oct 2017 – Jan 2021
+Analyzed and validated large state and federal workforce datasets to meet recurring reporting deadlines and inform policy research.
+Partnered cross-functionally to interpret complex workforce data and ensure compliance across regular reporting cycles.
+Produced reports and presentations that translated data into actionable insight for internal stakeholders and state-level decision-makers.
+Community Support Specialist
+Compass Health  |  Jefferson City, MO  |  2015 – 2017
+Managed client documentation and coordinated with healthcare providers to ensure continuity of care and regulatory compliance.
+Facilitated group classes and maintained regular client contact, building the communication and relationship-management skills foundational to later stakeholder work.
+INDEPENDENT VENTURES & TECHNICAL PROJECTS
+Founder & Owner
+Seventh City Press LLC (Independent Publishing)  |  Kansas City, MO  |  Ongoing
+Founded and own an independent publishing company, managing a full product pipeline from manuscript to distribution across IngramSpark and Amazon KDP — ISBN assignment, EPUB generation, and print-file QA across multiple revision cycles.
+Designed, built, and deployed a production website (jasoncholloway.com) — a Next.js static site on Cloudflare Pages — with SEO optimization, WebP image/performance tuning, responsive mobile navigation, and integrated forms.
+Architected reusable automation and AI-agent workflows for editorial review, document preparation, and web/code development, demonstrating self-directed technical delivery end to end.
+EDUCATION
+Master of Arts, English Literature  —  Mercy College (now Mercy University)
+Bachelor of Arts, Psychology & Sociology  —  Columbia College
+CERTIFICATIONS
+Google Business Intelligence  •  Google Advanced Data Analytics  •  Google Data Analytics  •  Google Cybersecurity
+
+--- Jason_Holloway_Resume_HealthcareDataAnalyst_1page.docx ---
+JASON HOLLOWAY
+Kansas City, MO  •  Open to Remote / Hybrid
+(913) 225-0808  •  Zh5779485@gmail.com  •  jasoncholloway.com
+PROFESSIONAL SUMMARY
+Healthcare data professional with nearly a decade of experience managing clinical and public-health data, reporting pipelines, and quality-improvement initiatives in HIPAA-regulated, federally funded environments. Skilled in SAS, SQL, advanced Excel/VBA automation, Tableau, and Power BI, with a track record of building validation systems that drive measurable error reduction and translating complex health data into decisions for clinical, epidemiological, and executive audiences. Google-certified in data analytics, advanced data analytics, and business intelligence. Seeking a remote or hybrid healthcare data analyst role where analytical rigor and end-to-end ownership improve patient and program outcomes.
+CORE COMPETENCIES
+Healthcare & Public-Health Data:  CDC Performance Measures • Population-Health Analysis • Demographic Stratification • Clinical & Program Reporting • HIPAA • Regulatory Compliance
+Data & Analytics:  SAS • SQL • Advanced Excel & VBA Automation • Tableau • Power BI • Data Validation & Integrity • Statistical Reporting
+Tools & Collaboration:  Jira • Asana • Smartsheet • MS Project • Basecamp • Technical Documentation • Data Governance • Cross-Functional Collaboration
+Technical & Cloud:  Google Cloud • Web Deployment (Next.js, Cloudflare Pages) • Workflow & AI-Agent Automation
+PROFESSIONAL EXPERIENCE
+Data Manager — WISEWOMAN & Show Me Healthy Women Programs
+Missouri DHSS, Division of Community and Public Health  |  Remote  |  Jan 2021 – Present
+Lead data management for two federally funded CDC chronic-disease and cancer-screening programs, owning the full cycle of clinical and program data collection, validation, and CDC-mandated submissions under HIPAA and strict federal reporting standards.
+Built SAS-based clinical analytics for CDC Performance Measures, including blood-pressure-control analysis with demographic stratification, to evaluate population-health outcomes and support federal reporting.
+Designed and deployed automated validation and error-reporting systems in advanced Excel/VBA — with deduplication logic and trend analysis — reducing submission error rates to the lowest levels on record while cutting manual review time.
+Serve as primary liaison among epidemiologists, IT teams, and program staff to define data requirements and align pipeline development across clinical and technical functions.
+Authored and maintain data-standards and process documentation, and conduct recurring data audits to mitigate integrity risks and maintain HIPAA and regulatory compliance.
+Research Data Analyst
+MO Dept. of Economic Development / Dept. of Higher Education & Workforce Development  |  Jefferson City, MO  |  Oct 2017 – Jan 2021
+Analyzed and validated large state and federal workforce datasets to meet recurring reporting deadlines and inform policy research.
+Produced reports and presentations that translated complex data into actionable insight for internal stakeholders and state-level decision-makers.
+Community Support Specialist
+Compass Health  |  Jefferson City, MO  |  2015 – 2017
+Managed client documentation and coordinated with healthcare providers to ensure continuity of care and regulatory compliance, building the communication skills foundational to later stakeholder work.
+INDEPENDENT VENTURES & TECHNICAL PROJECTS
+Founder & Owner
+Seventh City Press LLC (Independent Publishing)  |  Kansas City, MO  |  Ongoing
+Founded and own an independent publishing company, managing a full product pipeline from manuscript to distribution across IngramSpark and Amazon KDP.
+Designed, built, and deployed a production website (jasoncholloway.com) — a Next.js static site on Cloudflare Pages — with SEO, WebP performance tuning, responsive navigation, and integrated forms.
+Architected reusable automation and AI-agent workflows for editorial review, document preparation, and web/code development — self-directed technical delivery end to end.
+EDUCATION & CERTIFICATIONS
+M.A., English Literature — Mercy College (now Mercy University)   |   B.A., Psychology & Sociology — Columbia College
+Certifications:  Google Business Intelligence • Google Advanced Data Analytics • Google Data Analytics • Google Cybersecurity
+
+--- Jason_Holloway_Resume_Payer_1page.docx ---
+JASON HOLLOWAY
+Kansas City, MO  •  Open to Remote / Hybrid
+(913) 225-0808  •  Zh5779485@gmail.com  •  jasoncholloway.com
+PROFESSIONAL SUMMARY
+Healthcare data professional with nearly a decade of experience managing regulated health data, quality- and performance-measure reporting, and data-validation systems in HIPAA-governed, federally funded environments. Skilled in SAS, SQL, advanced Excel/VBA automation, Tableau, and Power BI, with a track record of reducing submission error rates and translating complex health data into decisions for clinical, operational, and executive audiences. Experience in performance-measure and population-health analysis with demographic stratification offers transferable foundations for payer analytics across quality, enrollment, and member reporting. Seeking a remote or hybrid healthcare data analyst role on the health-plan / payer side.
+CORE COMPETENCIES
+Health Data & Quality Measures:  Regulated Health-Data Reporting • Quality & Performance Measures (CDC) • Population-Health & Demographic Stratification • Data Exchange & Submissions • HIPAA • Regulatory Compliance
+Data & Analytics:  SAS • SQL • Advanced Excel & VBA Automation • Tableau • Power BI • Data Validation & Integrity • Statistical Reporting
+Tools & Collaboration:  Jira • Asana • Smartsheet • MS Project • Basecamp • Technical Documentation • Data Governance • Cross-Functional Collaboration
+Technical & Cloud:  Google Cloud • Web Deployment (Next.js, Cloudflare Pages) • Workflow & AI-Agent Automation
+PROFESSIONAL EXPERIENCE
+Data Manager — WISEWOMAN & Show Me Healthy Women Programs
+Missouri DHSS, Division of Community and Public Health  |  Remote  |  Jan 2021 – Present
+Lead data management for two federally funded CDC chronic-disease and cancer-screening programs, owning the full cycle of clinical and program data collection, validation, and CDC-mandated submissions under HIPAA and strict federal reporting standards.
+Built SAS-based clinical analytics for CDC Performance Measures, including blood-pressure-control analysis with demographic stratification, to evaluate population-health outcomes and support federal reporting.
+Designed and deployed automated validation and error-reporting systems in advanced Excel/VBA — with deduplication logic and trend analysis — reducing submission error rates to the lowest levels on record while cutting manual review time.
+Serve as primary liaison among epidemiologists, IT teams, and program staff to define data requirements and align pipeline development across clinical and technical functions.
+Authored and maintain data-standards and process documentation, and conduct recurring data audits to mitigate integrity risks and maintain HIPAA and regulatory compliance.
+Research Data Analyst
+MO Dept. of Economic Development / Dept. of Higher Education & Workforce Development  |  Jefferson City, MO  |  Oct 2017 – Jan 2021
+Analyzed and validated large state and federal workforce datasets to meet recurring reporting deadlines and inform policy research.
+Produced reports and presentations that translated complex data into actionable insight for internal stakeholders and state-level decision-makers.
+Community Support Specialist
+Compass Health  |  Jefferson City, MO  |  2015 – 2017
+Managed client documentation and coordinated with healthcare providers to ensure continuity of care and regulatory compliance, building the communication skills foundational to later stakeholder work.
+INDEPENDENT VENTURES & TECHNICAL PROJECTS
+Founder & Owner
+Seventh City Press LLC (Independent Publishing)  |  Kansas City, MO  |  Ongoing
+Founded and own an independent publishing company, managing a full product pipeline from manuscript to distribution across IngramSpark and Amazon KDP.
+Designed, built, and deployed a production website (jasoncholloway.com) — a Next.js static site on Cloudflare Pages — with SEO, WebP performance tuning, responsive navigation, and integrated forms.
+Architected reusable automation and AI-agent workflows for editorial review, document preparation, and web/code development — self-directed technical delivery end to end.
+EDUCATION & CERTIFICATIONS
+M.A., English Literature — Mercy College (now Mercy University)   |   B.A., Psychology & Sociology — Columbia College
+Certifications:  Google Business Intelligence • Google Advanced Data Analytics • Google Data Analytics • Google Cybersecurity
+
+--- Jason_Holloway_Resume_Payer_HealthPlan.docx ---
+JASON HOLLOWAY
+Kansas City, MO  •  Open to Remote / Hybrid
+(913) 225-0808  •  Zh5779485@gmail.com  •  jasoncholloway.com
+PROFESSIONAL SUMMARY
+Healthcare data professional with nearly a decade of experience managing regulated health data, quality- and performance-measure reporting, and data-validation systems in HIPAA-governed, federally funded environments. Skilled in SAS, SQL, advanced Excel/VBA automation, Tableau, and Power BI, with a track record of reducing submission error rates and translating complex health datasets into decisions for clinical, operational, and executive audiences. Experienced in performance-measure and population-health analysis with demographic stratification — transferable foundations for payer analytics across quality, enrollment, and member reporting. Google-certified in data analytics, advanced data analytics, and business intelligence. Seeking a remote or hybrid healthcare data analyst role on the health-plan / payer side where analytical rigor and disciplined data governance improve member outcomes.
+CORE COMPETENCIES
+Health Data & Quality Measures:  Regulated Health-Data Reporting • Quality & Performance Measures (CDC) • Population-Health & Demographic Stratification • Data Exchange & Submissions • HIPAA • Regulatory Compliance
+Data & Analytics:  SAS • SQL • Advanced Excel & VBA Automation • Tableau • Power BI • Data Validation & Integrity • Statistical Reporting
+Tools & Collaboration:  Jira • Asana • Smartsheet • MS Project • Basecamp • Technical Documentation • Data Governance • Cross-Functional Collaboration
+Technical & Cloud:  Google Cloud • Web Deployment (Next.js, Cloudflare Pages) • Workflow & AI-Agent Automation
+PROFESSIONAL EXPERIENCE
+Data Manager — WISEWOMAN & Show Me Healthy Women Programs
+Missouri DHSS, Division of Community and Public Health  |  Remote  |  Jan 2021 – Present
+Lead data management for two federally funded CDC chronic-disease and cancer-screening programs (WISEWOMAN and Show Me Healthy Women), owning the full cycle of clinical and program data collection, validation, and CDC-mandated submissions under HIPAA and strict federal reporting standards.
+Built SAS-based clinical analytics for CDC Performance Measures, including blood-pressure-control analysis with demographic stratification, to evaluate population-health outcomes and support federal reporting.
+Designed and deployed automated validation and error-reporting systems in advanced Excel/VBA — including deduplication logic and trend analysis — reducing submission error rates to the lowest levels on record while cutting manual review time.
+Serve as primary liaison among epidemiologists, IT teams, and program staff to define data requirements and align pipeline development across clinical and technical functions.
+Authored and maintain data-standards and process documentation, creating a single source of truth for distributed stakeholders and Regional Program Coordinators.
+Conduct recurring data audits to proactively identify, track, and mitigate integrity risks and maintain HIPAA and regulatory compliance.
+Research Data Analyst
+MO Dept. of Economic Development / Dept. of Higher Education & Workforce Development  |  Jefferson City, MO  |  Oct 2017 – Jan 2021
+Analyzed and validated large state and federal workforce datasets to meet recurring reporting deadlines and inform policy research.
+Partnered cross-functionally to interpret complex workforce data and ensure compliance across regular reporting cycles.
+Produced reports and presentations that translated data into actionable insight for internal stakeholders and state-level decision-makers.
+Community Support Specialist
+Compass Health  |  Jefferson City, MO  |  2015 – 2017
+Managed client documentation and coordinated with healthcare providers to ensure continuity of care and regulatory compliance.
+Facilitated group classes and maintained regular client contact, building the communication and relationship-management skills foundational to later stakeholder work.
+INDEPENDENT VENTURES & TECHNICAL PROJECTS
+Founder & Owner
+Seventh City Press LLC (Independent Publishing)  |  Kansas City, MO  |  Ongoing
+Founded and own an independent publishing company, managing a full product pipeline from manuscript to distribution across IngramSpark and Amazon KDP — ISBN assignment, EPUB generation, and print-file QA across multiple revision cycles.
+Designed, built, and deployed a production website (jasoncholloway.com) — a Next.js static site on Cloudflare Pages — with SEO optimization, WebP image/performance tuning, responsive mobile navigation, and integrated forms.
+Architected reusable automation and AI-agent workflows for editorial review, document preparation, and web/code development, demonstrating self-directed technical delivery end to end.
+EDUCATION
+Master of Arts, English Literature  —  Mercy College (now Mercy University)
+Bachelor of Arts, Psychology & Sociology  —  Columbia College
+CERTIFICATIONS
+Google Business Intelligence  •  Google Advanced Data Analytics  •  Google Data Analytics  •  Google Cybersecurity

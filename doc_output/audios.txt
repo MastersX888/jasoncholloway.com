@@ -1,0 +1,6 @@
+file 'act1_1.mp3'
+file 'act1_2.mp3'
+file 'act2_1.mp3'
+file 'act3_1.mp3'
+file 'act4_1.mp3'
+file 'act5_1.mp3'

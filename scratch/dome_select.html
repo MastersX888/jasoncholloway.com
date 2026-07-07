@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Masters X — Dome Hero Image Selection</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #0a0806;
+    color: #e8c67c;
+    font-family: Georgia, serif;
+    padding: 32px;
+  }
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    color: #e8c67c;
+  }
+  .subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #e8dcc4;
+    margin-bottom: 32px;
+    font-style: italic;
+  }
+  .criteria {
+    background: #14100c;
+    border: 1px solid #3a2e1c;
+    border-radius: 6px;
+    padding: 16px 24px;
+    margin-bottom: 32px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .criteria h2 { font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; color: #e8c67c; }
+  .criteria ol { padding-left: 18px; color: #e8dcc4; font-size: 13px; line-height: 1.9; }
+  .criteria li span.pts { color: #e8c67c; font-weight: bold; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #14100c;
+    border: 2px solid #2a2016;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+  .card:hover {
+    border-color: #e8c67c;
+    transform: scale(1.02);
+  }
+  .card.selected {
+    border-color: #e8c67c;
+    box-shadow: 0 0 24px rgba(232,198,124,0.35);
+  }
+  .card img {
+    width: 100%;
+    aspect-ratio: 1;
+    display: block;
+    object-fit: cover;
+  }
+  .card-body {
+    padding: 12px 14px 14px;
+  }
+  .card-label {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #e8c67c;
+    margin-bottom: 4px;
+  }
+  .card-rec {
+    font-size: 11px;
+    color: #c8a840;
+    font-style: italic;
+    margin-bottom: 6px;
+    min-height: 14px;
+  }
+  .scores {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .score-badge {
+    background: #1e1810;
+    border: 1px solid #3a2e1c;
+    border-radius: 3px;
+    padding: 3px 7px;
+    font-size: 11px;
+    color: #e8dcc4;
+  }
+  .score-badge.good { border-color: #e8c67c; color: #e8c67c; }
+  .score-badge.bad { border-color: #5a3020; color: #9a6040; }
+  .card-notes {
+    font-size: 11px;
+    color: #8a7860;
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .select-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 8px;
+    background: transparent;
+    border: 1px solid #3a2e1c;
+    color: #e8c67c;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .select-btn:hover, .card.selected .select-btn {
+    background: #e8c67c;
+    color: #0a0806;
+    border-color: #e8c67c;
+  }
+  .winner-bar {
+    display: none;
+    text-align: center;
+    margin-top: 32px;
+    padding: 20px;
+    background: #14100c;
+    border: 1px solid #e8c67c;
+    border-radius: 6px;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .winner-bar.active { display: block; }
+</style>
+</head>
+<body>
+
+<h1>Masters X · Dome Hero Image Selection</h1>
+<p class="subtitle">Click a variant to select it. Brief criteria in priority order below.</p>
+
+<div class="criteria">
+  <h2>Selection Criteria</h2>
+  <ol>
+    <li><span class="pts">[5 pts]</span> Oculus Brightness — defined bright circle, sharp edge, readable at 150px</li>
+    <li><span class="pts">[4 pts]</span> Coffer Geometry — seven rings, radially symmetric, clean shadow</li>
+    <li><span class="pts">[4 pts]</span> Candle — present, small, warm flame, bottom of frame, on dark stone</li>
+    <li><span class="pts">[3 pts]</span> Tonal Range — cream→ochre→umber→near-black. No gray or blue cast.</li>
+  </ol>
+</div>
+
+<div class="grid" id="grid">
+
+  <div class="card" id="card-v1" onclick="select('v1')">
+    <img src="dome_variant_1_1782547534538.png" alt="V1">
+    <div class="card-body">
+      <div class="card-label">V1</div>
+      <div class="card-rec">★ Recommended</div>
+      <div class="scores">
+        <span class="score-badge good">Oculus: defined</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Best warm + defined oculus combo. Ratio 1.64. Strong tonal range.</div>
+      <button class="select-btn">Select V1</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v2" onclick="select('v2')">
+    <img src="dome_variant_2_1782547542605.png" alt="V2">
+    <div class="card-body">
+      <div class="card-label">V2</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge bad">Oculus: soft</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Oculus blends into dome — low contrast ratio (0.96). Warm palette.</div>
+      <button class="select-btn">Select V2</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v3" onclick="select('v3')">
+    <img src="dome_variant_3_1782547552370.png" alt="V3">
+    <div class="card-body">
+      <div class="card-label">V3</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge bad">Oculus: soft</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Warm and bright overall but oculus indistinct. Ratio 0.95.</div>
+      <button class="select-btn">Select V3</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v4" onclick="select('v4')">
+    <img src="dome_variant_4_1782547562083.png" alt="V4">
+    <div class="card-body">
+      <div class="card-label">V4</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge">Oculus: bright</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">High oculus brightness (194) but soft ring contrast. Warm tones.</div>
+      <button class="select-btn">Select V4</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v5" onclick="select('v5')">
+    <img src="dome_variant_5_1782547583606.png" alt="V5">
+    <div class="card-body">
+      <div class="card-label">V5</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge bad">Oculus: dim</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Lowest oculus brightness (111). Warm palette. Good lower geometry.</div>
+      <button class="select-btn">Select V5</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v6" onclick="select('v6')">
+    <img src="dome_variant_6_1782547592262.png" alt="V6">
+    <div class="card-body">
+      <div class="card-label">V6</div>
+      <div class="card-rec">★ Brightest</div>
+      <div class="scores">
+        <span class="score-badge good">Oculus: 241 lum</span>
+        <span class="score-badge bad">Cool cast?</span>
+      </div>
+      <div class="card-notes">Highest absolute brightness but pixel analysis flagged possible cool/gray cast. Check visually.</div>
+      <button class="select-btn">Select V6</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v7" onclick="select('v7')">
+    <img src="dome_variant_7_1782547601740.png" alt="V7">
+    <div class="card-body">
+      <div class="card-label">V7</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge">Oculus: moderate</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Warm with reasonable geometry. Lower brightness (159). Decent ring definition.</div>
+      <button class="select-btn">Select V7</button>
+    </div>
+  </div>
+
+  <div class="card" id="card-v8" onclick="select('v8')">
+    <img src="dome_variant_8_1782547610880.png" alt="V8">
+    <div class="card-body">
+      <div class="card-label">V8</div>
+      <div class="card-rec"></div>
+      <div class="scores">
+        <span class="score-badge bad">Oculus: weakest</span>
+        <span class="score-badge good">Warm ✓</span>
+      </div>
+      <div class="card-notes">Weakest oculus definition (ratio 0.89). Warm tones. Richest mid-range warmth.</div>
+      <button class="select-btn">Select V8</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="winner-bar" id="winner-bar">
+  Selected: <span id="winner-label">—</span> — Tell Antigravity which one to use.
+</div>
+
+<script>
+function select(id) {
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('card-' + id).classList.add('selected');
+  const labels = {
+    v1: 'V1 (Recommended — warm + defined oculus)',
+    v2: 'V2',
+    v3: 'V3',
+    v4: 'V4 (Bright and warm)',
+    v5: 'V5',
+    v6: 'V6 (Brightest absolute — check cool cast)',
+    v7: 'V7 (Warm, moderate brightness)',
+    v8: 'V8'
+  };
+  document.getElementById('winner-label').textContent = labels[id];
+  const bar = document.getElementById('winner-bar');
+  bar.classList.add('active');
+  bar.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

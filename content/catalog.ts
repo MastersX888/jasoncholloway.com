@@ -193,7 +193,7 @@ export const catalog: CatalogBook[] = [
         format: "Ebook",
         isbn: "9798295778926",
         price: "$9.99",
-        specifications: "Kindle / EPUB Format"
+        specifications: "EPUB · Google Play Books · 90 pages"
       }
     ]
   }

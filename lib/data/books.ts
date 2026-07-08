@@ -184,11 +184,11 @@ export const books: Book[] = [
     coverImagePB: "/covers/hawkes-paperback.png",
     isbn_hc: "9798295777622", // Hardcover ISBN
     isbn_pb: "9798349308444", // Paperback ISBN
-    isbn_ebook: "9798295778926", // Resolving TODO
+    isbn_ebook: "9798295778926",
     asin_hc: "B0H1Q6GD7Z",
     asin_pb: "B0GWLT9Y4G",
-    asin_ebook: BUY_LINKS.HAWKES_KINDLE_ASIN,
-    price_ebook: BUY_LINKS.HAWKES_KINDLE_PRICE,
+    asin_ebook: null,
+    price_ebook: "9.99",
     pageCount: 90, // Reconciled from printed proof interior
     description:
       "John Hawkes is among the most challenging and least understood novelists of the twentieth century. His fiction operates through a symbolic register so dense, so precisely constructed, that conventional thematic criticism tends to slide off its surface. What Holloway's monograph proposes is a different methodology: to trace a single, seemingly peripheral image — the grape — through Hawkes's entire fictional career, and to discover that the grape is not peripheral at all.\n\nThe grape functions in Hawkes's fiction as a counter-symbol to the Christian tradition of grace. Where the liturgical tradition makes the grape sacred — the wine of communion, the blood of transformation — Hawkes uses the grape to mark the moments when his characters are most fully themselves, most fully animal, most fully present in the irreducible fact of their embodiment. Grace, in Hawkes, is not transcendence. It is immanence. It is the weight of the body against the earth.\n\nThe monograph traces this argument across seventeen novels, from The Cannibal (1949) through An Irish Eye (1997), with particular attention to The Lime Twig, Second Skin, The Blood Oranges, and the later trilogy (Travesty, The Passion Artist, Virginie: Her Two Lives).",
@@ -198,7 +198,6 @@ export const books: Book[] = [
       "The grape appears 129 times across 17 novels. It is the most frequent non-human image in the Hawkes canon. This is not accident. This is architecture.",
     keywords: ["John Hawkes", "literary criticism", "symbolic architecture", "grape motif"],
     buyLinks: [
-      { label: "Amazon (Kindle)", url: `https://www.amazon.com/dp/${BUY_LINKS.HAWKES_KINDLE_ASIN}`, format: "Ebook" },
       { label: "Amazon (Paperback)", url: "https://www.amazon.com/dp/B0GWLT9Y4G", format: "Paperback" },
       { label: "Amazon (Hardcover)", url: "https://www.amazon.com/dp/B0H1Q6GD7Z", format: "Hardcover" },
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=WMOwZRI0f55r0rR2PR4c9N2TpNAPV0bYUjWFSSl98iN", format: "Paperback" },

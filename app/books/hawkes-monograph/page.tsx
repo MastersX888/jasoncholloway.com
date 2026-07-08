@@ -1,6 +1,5 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { BUY_LINKS } from "@/lib/data/buyLinks";
 
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
@@ -14,7 +13,18 @@ export const metadata: Metadata = {
 };
 
 export default function HawkesMonographPage() {
-  const editions = [
+  const editions: {
+    format: string;
+    cover: string;
+    isbn: string;
+    price: string;
+    details: string;
+    features: string;
+    asin?: string;
+    buyLabel?: string;
+    buyUrl?: string;
+    statusNote?: string;
+  }[] = [
     {
       format: "Paperback",
       cover: "/covers/hawkes-paperback.png",
@@ -22,7 +32,8 @@ export default function HawkesMonographPage() {
       isbn: "9798349308444",
       price: "$16.95",
       details: "Trade Paperback · 6x9 in · 90 pages",
-      features: "Premium cream paper, matte cover finish"
+      features: "Premium cream paper, matte cover finish",
+      buyLabel: "Buy Paperback on Amazon",
     },
     {
       format: "Hardcover",
@@ -31,16 +42,17 @@ export default function HawkesMonographPage() {
       isbn: "9798295777622",
       price: "$26.95",
       details: "Laminate Casebound · 6x9 in · 90 pages",
-      features: "Stitch-bound, gold foil element stamping"
+      features: "Stitch-bound, gold foil element stamping",
+      buyLabel: "Buy Hardcover on Amazon",
     },
     {
       format: "Ebook",
       cover: "/covers/hawkes-ebook.jpg",
-      asin: BUY_LINKS.HAWKES_KINDLE_ASIN,
       isbn: "9798295778926",
-      price: `$${BUY_LINKS.HAWKES_KINDLE_PRICE || "9.99"}`,
-      details: "EPUB / Kindle Format · Reflowable · 90 pages",
-      features: "High-resolution figures, full text search"
+      price: "$9.99",
+      details: "EPUB · Reflowable · 90 pages",
+      features: "High-resolution figures, full text search",
+      statusNote: "Available on Google Play Books",
     }
   ];
 
@@ -58,7 +70,11 @@ export default function HawkesMonographPage() {
         "@type": "Book",
         "@id": `https://jasoncholloway.com/books/hawkes-monograph/#${ed.format.toLowerCase()}`,
         "isbn": ed.isbn,
-        "bookFormat": ed.format === "Paperback" ? "https://schema.org/Paperback" : ed.format === "Hardcover" ? "https://schema.org/Hardcover" : undefined,
+        "bookFormat": ed.format === "Paperback"
+          ? "https://schema.org/Paperback"
+          : ed.format === "Hardcover"
+            ? "https://schema.org/Hardcover"
+            : "https://schema.org/EBook",
         "numberOfPages": 90,
         "potentialAction": ed.asin ? {
           "@type": "BuyAction",
@@ -163,15 +179,31 @@ export default function HawkesMonographPage() {
                 </div>
 
                 <div style={{ marginTop: "1rem" }}>
-                  <a 
-                    href={`https://www.amazon.com/dp/${ed.asin}`} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="btn btn-gold" 
-                    style={{ width: "100%", justifyContent: "center" }}
-                  >
-                    Buy {ed.format} on Amazon
-                  </a>
+                  {ed.asin ? (
+                    <a
+                      href={`https://www.amazon.com/dp/${ed.asin}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-gold"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      {ed.buyLabel ?? `Buy ${ed.format} on Amazon`}
+                    </a>
+                  ) : (
+                    <div
+                      style={{
+                        fontSize: "0.82rem",
+                        color: "var(--text-muted)",
+                        textAlign: "center",
+                        padding: "0.85rem 0.5rem",
+                        border: "1px solid var(--border-faint)",
+                        borderRadius: "var(--r-md)",
+                        lineHeight: 1.5,
+                      }}
+                    >
+                      {ed.statusNote}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -217,6 +249,7 @@ export default function HawkesMonographPage() {
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
                   { k: "Status", v: "Available Now" },
+                  { k: "Ebook ISBN", v: "9798295778926" },
                   { k: "Hardcover ASIN", v: "B0H1Q6GD7Z" },
                   { k: "Paperback ASIN", v: "B0GWLT9Y4G" },
                 ].map((row) => (

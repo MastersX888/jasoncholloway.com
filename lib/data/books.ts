@@ -196,8 +196,8 @@ export const books: Book[] = [
       "The grape appears 129 times across 17 novels. It is the most frequent non-human image in the Hawkes canon. This is not accident. This is architecture.",
     keywords: ["John Hawkes", "literary criticism", "symbolic architecture", "grape motif"],
     buyLinks: [
-      { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve", format: "Paperback" },
-      { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo", format: "Hardcover" },
+      { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo", format: "Paperback" },
+      { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve", format: "Hardcover" },
     ],
   }
 ];

@@ -32,7 +32,7 @@ export default function HawkesMonographPage() {
       details: "Trade Paperback · 6x9 in · 90 pages",
       features: "Premium cream paper, matte cover finish",
       buyLabel: "Buy Paperback Direct",
-      buyUrl: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
+      buyUrl: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
     },
     {
       format: "Hardcover",
@@ -42,7 +42,7 @@ export default function HawkesMonographPage() {
       details: "Laminate Casebound · 6x9 in · 90 pages",
       features: "Stitch-bound, gold foil element stamping",
       buyLabel: "Buy Hardcover Direct",
-      buyUrl: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
+      buyUrl: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
     },
     {
       format: "Ebook",

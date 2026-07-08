@@ -20,7 +20,6 @@ export default function HawkesMonographPage() {
     price: string;
     details: string;
     features: string;
-    asin?: string;
     buyLabel?: string;
     buyUrl?: string;
     statusNote?: string;
@@ -28,22 +27,22 @@ export default function HawkesMonographPage() {
     {
       format: "Paperback",
       cover: "/covers/hawkes-paperback.png",
-      asin: "B0GWLT9Y4G",
       isbn: "9798349308444",
       price: "$16.95",
       details: "Trade Paperback · 6x9 in · 90 pages",
       features: "Premium cream paper, matte cover finish",
-      buyLabel: "Buy Paperback on Amazon",
+      buyLabel: "Buy Paperback Direct",
+      buyUrl: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
     },
     {
       format: "Hardcover",
       cover: "/covers/hawkes-hardcover.png",
-      asin: "B0H1Q6GD7Z",
       isbn: "9798295777622",
       price: "$26.95",
       details: "Laminate Casebound · 6x9 in · 90 pages",
       features: "Stitch-bound, gold foil element stamping",
-      buyLabel: "Buy Hardcover on Amazon",
+      buyLabel: "Buy Hardcover Direct",
+      buyUrl: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
     },
     {
       format: "Ebook",
@@ -76,9 +75,9 @@ export default function HawkesMonographPage() {
             ? "https://schema.org/Hardcover"
             : "https://schema.org/EBook",
         "numberOfPages": 90,
-        "potentialAction": ed.asin ? {
+        "potentialAction": ed.buyUrl ? {
           "@type": "BuyAction",
-          "target": `https://www.amazon.com/dp/${ed.asin}`
+          "target": ed.buyUrl
         } : undefined
       }] : []
     )
@@ -179,15 +178,15 @@ export default function HawkesMonographPage() {
                 </div>
 
                 <div style={{ marginTop: "1rem" }}>
-                  {ed.asin ? (
+                  {ed.buyUrl ? (
                     <a
-                      href={`https://www.amazon.com/dp/${ed.asin}`}
+                      href={ed.buyUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn-gold"
                       style={{ width: "100%", justifyContent: "center" }}
                     >
-                      {ed.buyLabel ?? `Buy ${ed.format} on Amazon`}
+                      {ed.buyLabel ?? `Buy ${ed.format} Direct`}
                     </a>
                   ) : (
                     <div
@@ -249,9 +248,9 @@ export default function HawkesMonographPage() {
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
                   { k: "Status", v: "Available Now" },
+                  { k: "Paperback ISBN", v: "9798349308444" },
+                  { k: "Hardcover ISBN", v: "9798295777622" },
                   { k: "Ebook ISBN", v: "9798295778926" },
-                  { k: "Hardcover ASIN", v: "B0H1Q6GD7Z" },
-                  { k: "Paperback ASIN", v: "B0GWLT9Y4G" },
                 ].map((row) => (
                   <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.82rem", padding: "0.5rem 0", borderBottom: "1px solid var(--border-faint)" }}>
                     <span style={{ color: "var(--text-faint)" }}>{row.k}</span>

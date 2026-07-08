@@ -185,8 +185,6 @@ export const books: Book[] = [
     isbn_hc: "9798295777622", // Hardcover ISBN
     isbn_pb: "9798349308444", // Paperback ISBN
     isbn_ebook: "9798295778926",
-    asin_hc: "B0H1Q6GD7Z",
-    asin_pb: "B0GWLT9Y4G",
     asin_ebook: null,
     price_ebook: "9.99",
     pageCount: 90, // Reconciled from printed proof interior
@@ -198,9 +196,7 @@ export const books: Book[] = [
       "The grape appears 129 times across 17 novels. It is the most frequent non-human image in the Hawkes canon. This is not accident. This is architecture.",
     keywords: ["John Hawkes", "literary criticism", "symbolic architecture", "grape motif"],
     buyLinks: [
-      { label: "Amazon (Paperback)", url: "https://www.amazon.com/dp/B0GWLT9Y4G", format: "Paperback" },
-      { label: "Amazon (Hardcover)", url: "https://www.amazon.com/dp/B0H1Q6GD7Z", format: "Hardcover" },
-      { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=WMOwZRI0f55r0rR2PR4c9N2TpNAPV0bYUjWFSSl98iN", format: "Paperback" },
+      { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo", format: "Hardcover" },
     ],
   }

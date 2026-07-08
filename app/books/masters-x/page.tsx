@@ -144,12 +144,13 @@ export default function MastersXPage() {
                         overflow: "hidden",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
                         width: "100%",
+                        background: "#000",
                       }}>
                         <Image
                           src={book.coverImagePB}
                           alt={`${book.subtitle} Paperback`}
                           fill
-                          style={{ objectFit: "cover" }}
+                          style={{ objectFit: "contain" }}
                           sizes="180px"
                           priority={i === 0}
                         />
@@ -164,12 +165,13 @@ export default function MastersXPage() {
                         overflow: "hidden",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
                         width: "100%",
+                        background: "#000",
                       }}>
                         <Image
                           src={book.coverImageHC}
                           alt={`${book.subtitle} Hardcover`}
                           fill
-                          style={{ objectFit: "cover" }}
+                          style={{ objectFit: "contain" }}
                           sizes="180px"
                           priority={i === 0}
                         />
@@ -224,12 +226,13 @@ export default function MastersXPage() {
                     boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
                     transform: "rotate(-3.5deg)",
                     zIndex: 1,
+                    background: "#000",
                   }}>
                     <Image
                       src={omnibus.coverImagePB}
                       alt={`${omnibus.subtitle} Paperback`}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       sizes="400px"
                     />
                   </div>
@@ -244,12 +247,13 @@ export default function MastersXPage() {
                     marginTop: "2rem",
                     marginLeft: "-2.5rem",
                     zIndex: 2,
+                    background: "#000",
                   }}>
                     <Image
                       src={omnibus.coverImageHC}
                       alt={`${omnibus.subtitle} Hardcover`}
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       sizes="400px"
                     />
                   </div>

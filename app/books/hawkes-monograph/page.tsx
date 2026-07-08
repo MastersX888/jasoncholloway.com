@@ -144,13 +144,14 @@ export default function HawkesMonographPage() {
                   boxShadow: "0 12px 36px rgba(0,0,0,0.5)",
                   width: "100%",
                   maxWidth: "200px",
-                  margin: "0 auto"
+                  margin: "0 auto",
+                  background: "#000",
                 }}>
                   <Image
                     src={ed.cover}
                     alt={`Innocence, Desire, and the Architecture of the Fall Cover (${ed.format})`}
                     fill
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                     sizes="200px"
                   />
                 </div>

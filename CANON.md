@@ -30,8 +30,8 @@ This file documents the locked narrative, biographical, and bibliographical fact
     *   *Vol. II Hardcover:* 9798295812675
     *   *Vol. II Paperback:* 9798256009953
     *   *Vol. II Ebook:* 9798256009625
-    *   *Vol. III Hardcover:* 9798256010072 *(Reconciled from printed proof)*
-    *   *Vol. III Paperback:* 9798295812705
+    *   *Vol. III Hardcover:* 9798295812705 *(Ingram catalog, July 2026)*
+    *   *Vol. III Paperback:* 9798256010072
     *   *Vol. III Ebook:* 9798256009809
     *   *Omnibus Hardcover:* 9798295884412
     *   *Omnibus Paperback:* 9798256072704

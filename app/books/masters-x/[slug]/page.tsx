@@ -228,12 +228,13 @@ export default function BookPage({ params }: Props) {
                       overflow: "hidden",
                       boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
                       width: "100%",
+                      background: "#000",
                     }}>
                       <Image
                         src={book.coverImagePB}
                         alt={`${book.subtitle} Paperback Cover`}
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                         sizes="180px"
                         priority
                       />
@@ -248,12 +249,13 @@ export default function BookPage({ params }: Props) {
                       overflow: "hidden",
                       boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
                       width: "100%",
+                      background: "#000",
                     }}>
                       <Image
                         src={book.coverImageHC}
                         alt={`${book.subtitle} Hardcover Cover`}
                         fill
-                        style={{ objectFit: "cover" }}
+                        style={{ objectFit: "contain" }}
                         sizes="180px"
                         priority
                       />

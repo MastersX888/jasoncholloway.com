@@ -116,17 +116,17 @@ export const catalog: CatalogBook[] = [
     editions: [
       {
         format: "Paperback",
-        isbn: "9798295812705", // Locked Paperback ISBN
+        isbn: "9798256010072",
         asin: "B0H2L5Y1B3",
         price: "$14.95",
         specifications: "Trade Paperback · 6x9 in"
       },
       {
         format: "Hardcover",
-        isbn: "9798256010072", // Reconciled from printed HC proof
+        isbn: "9798295812705",
         asin: "B0GZCX3L8S",
         price: "$24.95",
-        specifications: "Case Laminate Hardcover · 6x9 in"
+        specifications: "Digital Cloth™ Cover w/Jacket · 6.14×9.21 in"
       },
       {
         format: "Ebook",

@@ -180,13 +180,13 @@ export const catalog: CatalogBook[] = [
       {
         format: "Paperback",
         isbn: "9798349308444", // Cover/File ISBN (Paperback)
-        price: "$16.95",
+        price: "$14.99",
         specifications: "Trade Paperback · 6x9 in · 90 pages"
       },
       {
         format: "Hardcover",
         isbn: "9798295777622", // Copyright Page ISBN (Hardcover)
-        price: "$26.95",
+        price: "$19.99",
         specifications: "Case Laminate Hardcover · 6x9 in · 90 pages"
       },
       {

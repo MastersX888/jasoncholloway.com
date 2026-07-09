@@ -187,6 +187,8 @@ export const books: Book[] = [
     isbn_ebook: "9798295778926",
     asin_ebook: null,
     price_ebook: "9.99",
+    price_pb_is: "14.99",
+    price_hc_is: "19.99",
     pageCount: 90, // Reconciled from printed proof interior
     description:
       "John Hawkes is among the most challenging and least understood novelists of the twentieth century. His fiction operates through a symbolic register so dense, so precisely constructed, that conventional thematic criticism tends to slide off its surface. What Holloway's monograph proposes is a different methodology: to trace a single, seemingly peripheral image — the grape — through Hawkes's entire fictional career, and to discover that the grape is not peripheral at all.\n\nThe grape functions in Hawkes's fiction as a counter-symbol to the Christian tradition of grace. Where the liturgical tradition makes the grape sacred — the wine of communion, the blood of transformation — Hawkes uses the grape to mark the moments when his characters are most fully themselves, most fully animal, most fully present in the irreducible fact of their embodiment. Grace, in Hawkes, is not transcendence. It is immanence. It is the weight of the body against the earth.\n\nThe monograph traces this argument across seventeen novels, from The Cannibal (1949) through An Irish Eye (1997), with particular attention to The Lime Twig, Second Skin, The Blood Oranges, and the later trilogy (Travesty, The Passion Artist, Virginie: Her Two Lives).",

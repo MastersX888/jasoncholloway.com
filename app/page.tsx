@@ -193,13 +193,14 @@ export default function Home() {
                     borderRadius: "var(--r-sm)",
                     overflow: "hidden",
                     boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-                    border: "1px solid var(--border-faint)"
+                    border: "1px solid var(--border-faint)",
+                    background: "#000",
                   }}>
                     <Image
                       src="/covers/hawkes-paperback.png"
                       alt="Cover of Innocence, Desire, and the Architecture of the Fall, a study of John Hawkes by Jason Carroll Holloway"
                       fill
-                      style={{ objectFit: "cover" }}
+                      style={{ objectFit: "contain" }}
                       sizes="80px"
                     />
                   </div>

@@ -130,6 +130,49 @@ const kitFiles = [
   },
 ];
 
+const trilogyCovers = [
+  { label: "Vol. I — Paperback", src: "/covers/book1-paperback.png" },
+  { label: "Vol. I — Hardcover", src: "/covers/book1-hardcover-v3.png" },
+  { label: "Vol. II — Paperback", src: "/covers/book2-paperback.png" },
+  { label: "Vol. II — Hardcover", src: "/covers/book2-hardcover-v3.png" },
+  { label: "Vol. III — Paperback", src: "/covers/book3-paperback.png" },
+  { label: "Vol. III — Hardcover", src: "/covers/book3-hardcover-v3.png" },
+];
+
+const omnibusCovers = [
+  { label: "Omnibus — Hardcover", src: "/covers/omnibus-hardcover-v3.png" },
+];
+
+function CoverThumb({ label, src }: { label: string; src: string }) {
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.65rem" }}>
+      <div style={{
+        position: "relative",
+        width: "120px",
+        aspectRatio: "2/3",
+        borderRadius: "var(--r-sm)",
+        overflow: "hidden",
+        boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+        border: "1px solid var(--border-faint)",
+        background: "#000",
+      }}>
+        <Image src={src} alt={label} fill style={{ objectFit: "contain" }} sizes="120px" />
+      </div>
+      <span style={{
+        fontSize: "0.68rem",
+        letterSpacing: "0.08em",
+        textTransform: "uppercase",
+        color: "var(--text-faint)",
+        textAlign: "center",
+        maxWidth: "130px",
+        lineHeight: 1.4,
+      }}>
+        {label}
+      </span>
+    </div>
+  );
+}
+
 export default function PressPage() {
   return (
     <>
@@ -174,22 +217,31 @@ export default function PressPage() {
         </div>
       </section>
 
-      {/* Cover Row */}
-      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", paddingBottom: "2rem" }}>
+      {/* Cover Gallery */}
+      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", paddingBottom: "2.5rem" }}>
         <div className="container">
-          <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", paddingTop: "1rem" }}>
-            {["/covers/book1-paperback.png", "/covers/book2-paperback.png", "/covers/book3-paperback.png"].map((cover, i) => (
-              <div key={i} style={{
-                position: "relative",
-                width: "140px",
-                aspectRatio: "2/3",
-                borderRadius: "var(--r-sm)",
-                overflow: "hidden",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-                border: "1px solid var(--border-faint)"
-              }}>
-                <Image src={cover} alt={`Masters X Vol ${i+1} Cover`} fill style={{ objectFit: "cover" }} sizes="140px" />
-              </div>
+          <div style={{ textAlign: "center", marginBottom: "1.75rem", paddingTop: "0.5rem" }}>
+            <span className="label">Cover Art — Masters X Trilogy</span>
+          </div>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
+            gap: "1.5rem",
+            justifyItems: "center",
+            maxWidth: "920px",
+            margin: "0 auto 2.5rem",
+          }}>
+            {trilogyCovers.map((cover) => (
+              <CoverThumb key={cover.label} label={cover.label} src={cover.src} />
+            ))}
+          </div>
+
+          <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
+            <span className="label">Omnibus Edition</span>
+          </div>
+          <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
+            {omnibusCovers.map((cover) => (
+              <CoverThumb key={cover.label} label={cover.label} src={cover.src} />
             ))}
           </div>
         </div>

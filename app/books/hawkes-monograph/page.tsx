@@ -46,7 +46,7 @@ export default function HawkesMonographPage() {
     },
     {
       format: "Ebook",
-      cover: "/covers/hawkes-ebook.jpg",
+      cover: "/covers/hawkes-ebook.png",
       isbn: "9798295778926",
       price: "$9.99",
       details: "EPUB · Reflowable · 90 pages",

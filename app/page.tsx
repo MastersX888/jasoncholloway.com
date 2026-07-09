@@ -197,7 +197,7 @@ export default function Home() {
                     background: "#000",
                   }}>
                     <Image
-                      src="/covers/hawkes-paperback.png"
+                      src="/covers/hawkes-paperback-web.png"
                       alt="Cover of Innocence, Desire, and the Architecture of the Fall, a study of John Hawkes by Jason Carroll Holloway"
                       fill
                       style={{ objectFit: "contain" }}

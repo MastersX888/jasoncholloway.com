@@ -26,7 +26,7 @@ export default function HawkesMonographPage() {
   }[] = [
     {
       format: "Paperback",
-      cover: "/covers/hawkes-paperback.png",
+      cover: "/covers/hawkes-paperback-web.png",
       isbn: "9798349308444",
       price: "$14.99",
       details: "Trade Paperback · 6x9 in · 90 pages",
@@ -36,7 +36,7 @@ export default function HawkesMonographPage() {
     },
     {
       format: "Hardcover",
-      cover: "/covers/hawkes-hardcover.png",
+      cover: "/covers/hawkes-hardcover-web.png",
       isbn: "9798295777622",
       price: "$19.99",
       details: "Laminate Casebound · 6x9 in · 90 pages",

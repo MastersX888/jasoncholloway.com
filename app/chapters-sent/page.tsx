@@ -4,8 +4,8 @@ import { books } from "@/lib/data/books";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Your Chapters Are Ready",
-  description: "Download your complimentary opening chapters of the Masters X Trilogy.",
+  title: "Your Downloads Are Ready",
+  description: "Download your complimentary opening chapters of the Masters X Trilogy and the Distribution File.",
   robots: {
     index: false,
     follow: false,
@@ -19,22 +19,32 @@ export default function ChaptersSentPage() {
     <div className="container" style={{ padding: "6rem 0", maxWidth: "800px" }}>
       <div style={{ textAlign: "center", marginBottom: "4rem" }}>
         <h1 className="display-lg" style={{ marginBottom: "1.5rem" }}>
-          Your chapters are ready.
+          Your downloads are ready.
         </h1>
         
-        <div style={{ margin: "3rem 0" }}>
+        <div style={{ margin: "3rem 0", display: "flex", flexDirection: "column", alignItems: "center", gap: "1rem" }}>
           <a 
             href="/downloads/masters-x-opening-chapters.epub" 
             download
             className="btn btn-gold"
             style={{ fontSize: "1.1rem", padding: "1rem 2.5rem" }}
           >
-            Download the EPUB
+            Download the Opening Chapters (EPUB)
+          </a>
+          <a 
+            href="/downloads/The_Distribution_File.pdf" 
+            download
+            className="btn btn-outline"
+            style={{ fontSize: "1rem", padding: "0.9rem 2.5rem" }}
+          >
+            Download the Distribution File (PDF)
           </a>
         </div>
         
         <p style={{ fontSize: "1.1rem", color: "var(--text-muted)", lineHeight: 1.6, maxWidth: "600px", margin: "0 auto" }}>
-          A copy is also on its way to your inbox. If it doesn't arrive within a few minutes, check spam and add dispatch@jasoncholloway.com to your contacts.
+          Save these files now — this page is your delivery. You&apos;re also on the dispatch list for
+          launch notes from Jason Carroll Holloway. Add dispatch@jasoncholloway.com to your contacts
+          so nothing lands in spam.
         </p>
       </div>
 

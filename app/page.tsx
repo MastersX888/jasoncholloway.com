@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "https://jasoncholloway.com/",
-    title: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy of Frequency & Medieval Manuscripts",
+    title: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
     description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
   },
 };
@@ -90,8 +90,8 @@ export default function Home() {
 
             <div className="hero-stats animate-fade-up delay-4">
               <div>
-                <div className="hero-stat-num">June 2026</div>
-                <div className="hero-stat-label">Launch Window</div>
+                <div className="hero-stat-num">Available Now</div>
+                <div className="hero-stat-label">Launched June 2026</div>
               </div>
               <div>
                 <div className="hero-stat-num">111.2</div>
@@ -117,7 +117,7 @@ export default function Home() {
             <span className="label">Featured Publications</span>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "stretch" }}>
+          <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "stretch" }}>
             
             {/* Masters X Trilogy Card */}
             <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "2.5rem" }}>
@@ -135,36 +135,66 @@ export default function Home() {
                   The trilogy is the account of what he did with that knowledge — and what it did to him.
                 </p>
 
-                {/* Stack of three book covers */}
-                <div style={{ display: "flex", gap: "1rem", margin: "2rem 0", justifyContent: "center" }}>
-                  {books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus").map((b) => (
-                    <div key={b.slug} style={{
+                {/* Volume and omnibus covers */}
+                {(() => {
+                  const volumes = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");
+                  const omnibus = books.find((b) => b.slug === "omnibus");
+                  const coverThumb = (src: string, alt: string, aspect = "55/85") => (
+                    <div key={alt} style={{
                       position: "relative",
-                      width: "80px",
-                      aspectRatio: "2/3",
+                      width: "72px",
+                      aspectRatio: aspect,
                       borderRadius: "var(--r-sm)",
                       overflow: "hidden",
                       boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-                      border: "1px solid var(--border-faint)"
+                      border: "1px solid var(--border-faint)",
+                      flexShrink: 0,
                     }}>
-                      <Image
-                        src={b.coverImagePB}
-                        alt={b.subtitle}
-                        fill
-                        style={{ objectFit: "cover" }}
-                        sizes="80px"
-                      />
+                      <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} sizes="72px" />
                     </div>
-                  ))}
-                </div>
+                  );
+                  return (
+                    <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", margin: "2rem 0" }}>
+                      <div>
+                        <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: "0.6rem", textAlign: "center" }}>
+                          Paperback Editions
+                        </div>
+                        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+                          {volumes.map((b) => coverThumb(b.coverImagePB, `${b.subtitle} paperback`))}
+                        </div>
+                      </div>
+                      <div>
+                        <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: "0.6rem", textAlign: "center" }}>
+                          Hardcover Editions
+                        </div>
+                        <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center", flexWrap: "wrap" }}>
+                          {volumes.map((b) => coverThumb(b.coverImageHC, `${b.subtitle} hardcover`, "614/921"))}
+                        </div>
+                      </div>
+                      {omnibus && (
+                        <div>
+                          <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: "0.6rem", textAlign: "center" }}>
+                            Omnibus Edition
+                          </div>
+                          <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center" }}>
+                            {coverThumb(omnibus.coverImageHC, "Masters X Omnibus hardcover", "614/921")}
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                  );
+                })()}
               </div>
 
-              <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
-                <Link href="/books/masters-x" className="btn btn-gold" style={{ flex: 1, justifyContent: "center" }}>
+              <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem", flexWrap: "wrap" }}>
+                <Link href="/books/masters-x" className="btn btn-gold" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
                   View Trilogy
                 </Link>
-                <Link href="/books/masters-x/the-inheritance-of-frequency" className="btn btn-outline" style={{ flex: 1, justifyContent: "center" }}>
+                <Link href="/books/masters-x/the-inheritance-of-frequency" className="btn btn-outline" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
                   Volume I Details
+                </Link>
+                <Link href="/books/masters-x/omnibus" className="btn btn-outline" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
+                  Omnibus Edition
                 </Link>
               </div>
             </div>
@@ -265,7 +295,7 @@ export default function Home() {
       {/* ─── VIRTUAL ANALYSIS CHAMBER ─── */}
       <section className="section">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "4.5rem", alignItems: "center" }}>
+          <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: "4.5rem", alignItems: "center" }}>
             <div>
               <div className="section-label-row">
                 <span className="label-cyan">Virtual Research Tool</span>
@@ -361,7 +391,7 @@ export default function Home() {
                 { label: "Imprint", value: "Seventh City Press" },
                 { label: "Release Date", value: "June 1, 2026" },
                 { label: "Formats Available", value: "Hardcover · Paperback · Ebook" },
-                { label: "Global Distribution", value: "IngramSpark · Amazon · IndieBound" },
+                { label: "Global Distribution", value: "IngramSpark · Bookshop.org · Kindle" },
               ].map((item) => (
                 <div key={item.label} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", paddingBottom: "1rem", borderBottom: "1px solid var(--border-faint)" }}>
                   <span style={{ color: "var(--text-faint)" }}>{item.label}</span>

@@ -116,7 +116,7 @@ export default function FieldNoteLayout({
       {/* ─── ARTICLE BODY ─── */}
       <section className="section" style={{ paddingTop: "1rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: "4rem", alignItems: "start" }}>
+          <div className="resp-main-sidebar" style={{ display: "grid", gridTemplateColumns: "1fr 280px", gap: "4rem", alignItems: "start" }}>
             {/* Main column */}
             <article className="fn-article">
               {/* Lede */}
@@ -133,6 +133,23 @@ export default function FieldNoteLayout({
               {/* THE FICTION */}
               <h2 className="fn-h2">The Fiction</h2>
               {fiction}
+
+              {/* Volume bridge */}
+              <div style={{
+                fontSize: "0.85rem",
+                color: "var(--text-muted)",
+                padding: "0.75rem 1rem",
+                background: "var(--gold-glow)",
+                borderRadius: "var(--r-sm)",
+                borderLeft: "3px solid var(--gold)",
+                marginBottom: "1.5rem",
+              }}>
+                This history appears in{" "}
+                <Link href={bookHref} style={{ color: "var(--gold)", fontWeight: 500 }}>
+                  the Masters X Trilogy
+                </Link>
+                {" — "}fiction built on the documented record above.
+              </div>
 
               {/* Excerpt */}
               <blockquote className="fn-excerpt">

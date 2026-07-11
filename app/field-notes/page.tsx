@@ -56,7 +56,7 @@ export default function FieldNotesHub() {
         <div className="container">
           <div className="page-header-inner">
             <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-              <span className="label">Jason C. Holloway · Seventh City Press</span>
+              <span className="label">Jason Carroll Holloway · Seventh City Press</span>
             </div>
             <h1 className="display-xl" style={{ marginBottom: "1rem" }}>
               Field Notes —<br />

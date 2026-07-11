@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import "./responsive.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 
@@ -127,7 +128,6 @@ export default function RootLayout({
                   ],
                   "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
                   "sameAs": [
-                    "https://amazon.com/author/jasoncholloway",
                     "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway"
                   ]
                 },

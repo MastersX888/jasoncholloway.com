@@ -357,11 +357,12 @@ export default function PressPage() {
 
                 <h2 className={styles['press-section']}>Availability</h2>
                 <p>
-                  Hardcover, paperback, and ebook. Distributed globally through
-                  IngramSpark and available via Amazon, Bookshop.org, and library
-                  systems (OverDrive, Baker&nbsp;&amp;&nbsp;Taylor). Ebook editions
-                  from $5.99. Full ISBNs, page counts, pricing by market, and BISAC
-                  subject codes appear in the Fact Sheet below.
+                  Hardcover and paperback distributed globally through IngramSpark —
+                  orderable from any bookstore by ISBN and available via Bookshop.org
+                  and library systems (OverDrive, Baker&nbsp;&amp;&nbsp;Taylor).
+                  Kindle editions available on Amazon at $6.99. Full ISBNs, page
+                  counts, pricing by market, and BISAC subject codes appear in the
+                  Fact Sheet below.
                 </p>
 
                 <div className={styles['press-abouts']}>

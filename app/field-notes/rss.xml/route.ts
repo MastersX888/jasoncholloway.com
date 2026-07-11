@@ -7,14 +7,14 @@ export async function GET() {
   const siteUrl = "https://jasoncholloway.com";
 
   const feed = new Feed({
-    title: "Jason C. Holloway — Field Notes",
+    title: "Jason Carroll Holloway — Field Notes",
     description: "The documented real history beneath the Masters X Trilogy.",
     id: siteUrl,
     link: siteUrl,
     language: "en",
     image: `${siteUrl}/og/field-notes/hub.png`,
     favicon: `${siteUrl}/favicon.ico`,
-    copyright: `All rights reserved ${new Date().getFullYear()}, Jason C. Holloway`,
+    copyright: `All rights reserved ${new Date().getFullYear()}, Jason Carroll Holloway`,
     updated: new Date(), // Using current date for static generation
     generator: "Feed for Node.js",
     feedLinks: {

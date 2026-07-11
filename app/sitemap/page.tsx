@@ -47,10 +47,12 @@ export default function SitemapPage() {
             <div>
               <h2 className="label" style={{ marginBottom: "1.25rem", borderBottom: "1px solid var(--border-faint)", paddingBottom: "0.5rem" }}>Publications</h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                <li><Link href="/books" className="hover-gold" style={{ fontWeight: 600 }}>Full Catalog</Link></li>
                 <li><Link href="/books/masters-x" className="hover-gold" style={{ fontWeight: 600 }}>Masters X Trilogy</Link></li>
                 {volumes.map(v => (
                   <li key={v.slug} style={{ paddingLeft: "1rem" }}><Link href={`/books/masters-x/${v.slug}`} className="hover-gold">Volume {v.volume}: {v.subtitle}</Link></li>
                 ))}
+                <li style={{ paddingLeft: "1rem" }}><Link href="/books/masters-x/omnibus" className="hover-gold">Omnibus Edition</Link></li>
                 {monograph && (
                   <li style={{ marginTop: "0.5rem" }}><Link href={`/books/${monograph.slug}`} className="hover-gold" style={{ fontWeight: 600 }}>{monograph.title}</Link></li>
                 )}

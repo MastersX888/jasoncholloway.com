@@ -84,7 +84,7 @@ export default function ChaptersSentPage() {
           <span className="label">Field Notes Teasers</span>
         </div>
         
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
+        <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
           <Link href="/field-notes/subtropolis" className="card" style={{ padding: "1.5rem" }}>
             <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.5rem" }}>Beneath Kansas City</div>
             <h4 style={{ fontSize: "1.2rem", marginBottom: "0.5rem", color: "var(--text)" }}>SubTropolis</h4>

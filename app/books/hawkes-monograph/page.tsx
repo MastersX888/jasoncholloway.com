@@ -27,9 +27,9 @@ export default function HawkesMonographPage() {
     {
       format: "Paperback",
       cover: "/covers/hawkes-paperback-web.png",
-      isbn: "9798349308444",
-      price: "$14.99",
-      details: "Trade Paperback · 6x9 in · 90 pages",
+      isbn: "9798295778247",
+      price: "$14.98",
+      details: "Trade Paperback · 6×9 in · 84 pages",
       features: "Premium cream paper, matte cover finish",
       buyLabel: "Buy Paperback Direct",
       buyUrl: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
@@ -37,9 +37,9 @@ export default function HawkesMonographPage() {
     {
       format: "Hardcover",
       cover: "/covers/hawkes-hardcover-web.png",
-      isbn: "9798295777622",
-      price: "$19.99",
-      details: "Laminate Casebound · 6x9 in · 90 pages",
+      isbn: "9798349308444",
+      price: "$24.99",
+      details: "Digital Cloth™ Cover w/Jacket · 6.14×9.21 in · 84 pages",
       features: "Stitch-bound, gold foil element stamping",
       buyLabel: "Buy Hardcover Direct",
       buyUrl: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
@@ -63,7 +63,7 @@ export default function HawkesMonographPage() {
     "author": { "@id": "https://jasoncholloway.com/#person" },
     "publisher": { "@id": "https://jasoncholloway.com/#organization" },
     "inLanguage": "English",
-    "numberOfPages": 90,
+    "numberOfPages": 84,
     "workExample": editions.flatMap((ed) =>
       ed.isbn ? [{
         "@type": "Book",
@@ -74,11 +74,18 @@ export default function HawkesMonographPage() {
           : ed.format === "Hardcover"
             ? "https://schema.org/Hardcover"
             : "https://schema.org/EBook",
-        "numberOfPages": 90,
+        "numberOfPages": 84,
         "potentialAction": ed.buyUrl ? {
           "@type": "BuyAction",
           "target": ed.buyUrl
-        } : undefined
+        } : undefined,
+        "offers": {
+          "@type": "Offer",
+          "price": ed.price.replace("$", ""),
+          "priceCurrency": "USD",
+          "availability": "https://schema.org/InStock",
+          "url": ed.buyUrl ?? "https://jasoncholloway.com/books/hawkes-monograph/"
+        }
       }] : []
     )
   };
@@ -248,8 +255,8 @@ export default function HawkesMonographPage() {
                   { k: "Subject", v: "John Hawkes (novelist)" },
                   { k: "Method", v: "Counter-symbol analysis" },
                   { k: "Status", v: "Available Now" },
-                  { k: "Paperback ISBN", v: "9798349308444" },
-                  { k: "Hardcover ISBN", v: "9798295777622" },
+                  { k: "Paperback ISBN", v: "9798295778247" },
+                  { k: "Hardcover ISBN", v: "9798349308444" },
                   { k: "Ebook ISBN", v: "9798295778926" },
                 ].map((row) => (
                   <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.82rem", padding: "0.5rem 0", borderBottom: "1px solid var(--border-faint)" }}>

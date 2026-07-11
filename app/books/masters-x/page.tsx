@@ -96,7 +96,7 @@ export default function MastersXPage() {
               { label: "Publisher", value: "Seventh City Press" },
               { label: "Format", value: "HC · PB · Ebook" },
               { label: "Distribution", value: "IngramSpark · Global" },
-              { label: "Total Pages", value: "736 (Trilogy)" },
+              { label: "Total Pages", value: "686 HC · 734 PB" },
               { label: "BISAC", value: "FIC019000 · Literary Fiction" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center" }}>
@@ -133,25 +133,24 @@ export default function MastersXPage() {
                 )}
                 
                 {/* Covers side-by-side */}
-                <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <div className="bd-covers" style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                   <div style={{ display: "flex", gap: "1rem" }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Paperback</div>
                       <div style={{
                         position: "relative",
-                        aspectRatio: "2/3",
+                        aspectRatio: "55/85",
                         borderRadius: "var(--r-md)",
                         overflow: "hidden",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
                         width: "100%",
-                        background: "#000",
                       }}>
                         <Image
                           src={book.coverImagePB}
                           alt={`${book.subtitle} Paperback`}
                           fill
                           style={{ objectFit: "contain" }}
-                          sizes="180px"
+                          sizes="(max-width: 768px) 42vw, 180px"
                           priority={i === 0}
                         />
                       </div>
@@ -160,19 +159,18 @@ export default function MastersXPage() {
                       <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
                       <div style={{
                         position: "relative",
-                        aspectRatio: "2/3",
+                        aspectRatio: "614/921",
                         borderRadius: "var(--r-md)",
                         overflow: "hidden",
                         boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
                         width: "100%",
-                        background: "#000",
                       }}>
                         <Image
                           src={book.coverImageHC}
                           alt={`${book.subtitle} Hardcover`}
                           fill
                           style={{ objectFit: "contain" }}
-                          sizes="180px"
+                          sizes="(max-width: 768px) 42vw, 180px"
                           priority={i === 0}
                         />
                       </div>
@@ -215,46 +213,22 @@ export default function MastersXPage() {
             <div className="container">
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem", alignItems: "center" }}>
                 
-                {/* Covers display */}
-                <div style={{ display: "flex", justifyContent: "center", marginLeft: "-0.5rem" }}>
+                {/* Cover display — single HC cover until dedicated PB cover art exists */}
+                <div className="omni-cover" style={{ display: "flex", justifyContent: "center" }}>
                   <div style={{
                     position: "relative",
-                    width: 220,
-                    aspectRatio: "2/3",
+                    width: "min(280px, 70vw)",
+                    aspectRatio: "614/921",
                     borderRadius: "var(--r-lg)",
                     overflow: "hidden",
                     boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
-                    transform: "rotate(-3.5deg)",
-                    zIndex: 1,
-                    background: "#000",
-                  }}>
-                    <Image
-                      src={omnibus.coverImagePB}
-                      alt={`${omnibus.subtitle} Paperback`}
-                      fill
-                      style={{ objectFit: "contain" }}
-                      sizes="400px"
-                    />
-                  </div>
-                  <div style={{
-                    position: "relative",
-                    width: 220,
-                    aspectRatio: "2/3",
-                    borderRadius: "var(--r-lg)",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
-                    transform: "rotate(3.5deg)",
-                    marginTop: "2rem",
-                    marginLeft: "-2.5rem",
-                    zIndex: 2,
-                    background: "#000",
                   }}>
                     <Image
                       src={omnibus.coverImageHC}
-                      alt={`${omnibus.subtitle} Hardcover`}
+                      alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
                       fill
-                      style={{ objectFit: "contain" }}
-                      sizes="400px"
+                      style={{ objectFit: "cover" }}
+                      sizes="(max-width: 768px) 70vw, 280px"
                     />
                   </div>
                 </div>
@@ -273,7 +247,8 @@ export default function MastersXPage() {
                     {[
                       { k: "Paperback ISBN", v: omnibus.isbn_pb },
                       { k: "Hardcover ISBN", v: omnibus.isbn_hc },
-                      { k: "Page Count", v: `${omnibus.pageCount} pages` },
+                      { k: "Page Count (HC)", v: `${omnibus.pageCountHC ?? omnibus.pageCount} pages` },
+                      { k: "Page Count (PB)", v: `${omnibus.pageCountPB ?? omnibus.pageCount} pages` },
                     ].map((row) => (
                       <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", padding: "0.4rem 0", borderBottom: "1px solid var(--border-faint)" }}>
                         <span style={{ color: "var(--text-faint)" }}>{row.k}</span>
@@ -286,8 +261,13 @@ export default function MastersXPage() {
                     {omnibus.buyLinks.map(link => (
                       <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className={link.label.includes("Amazon") ? "btn btn-gold" : "btn btn-outline"}>
                         {link.label}
+                        {link.label.includes("HC") && omnibus.price_hc_is ? ` — $${omnibus.price_hc_is}` : ""}
+                        {link.label.includes("PB") && omnibus.price_pb_is ? ` — $${omnibus.price_pb_is}` : ""}
                       </a>
                     ))}
+                    <Link href="/books/masters-x/omnibus" className="btn btn-gold">
+                      Omnibus Details
+                    </Link>
                   </div>
                 </div>
 
@@ -317,7 +297,7 @@ function BookBody({ book }: { book: typeof books[0] }) {
         
         {book.asin_ebook && (
           <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", marginBottom: "1rem", fontSize: "1rem", padding: "0.8rem" }}>
-            Read on Kindle — ${book.price_ebook || "6.99"}
+            Kindle Edition (Amazon) — ${book.price_ebook || "6.99"}
           </a>
         )}
 
@@ -331,9 +311,9 @@ function BookBody({ book }: { book: typeof books[0] }) {
                   Buy Direct {book.price_pb_is ? `($${book.price_pb_is})` : "(Best Price)"} →
                 </a>
               )}
-              {book.asin_pb && (
-                <a href={`https://www.amazon.com/dp/${book.asin_pb}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
-                  Order on Amazon {book.price_pb_amazon ? `($${book.price_pb_amazon})` : ""} →
+              {book.buyLinks.find(l => l.label === "Bookshop.org") && (
+                <a href={book.buyLinks.find(l => l.label === "Bookshop.org")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
+                  Order via Bookshop.org →
                 </a>
               )}
             </div>
@@ -347,11 +327,9 @@ function BookBody({ book }: { book: typeof books[0] }) {
                   Buy Direct {book.price_hc_is ? `($${book.price_hc_is})` : "(Best Price)"} →
                 </a>
               )}
-              {book.asin_hc && (
-                <a href={`https://www.amazon.com/dp/${book.asin_hc}`} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
-                  Order on Amazon {book.price_hc_amazon ? `($${book.price_hc_amazon})` : ""} →
-                </a>
-              )}
+              <span style={{ fontSize: "0.78rem", color: "var(--text-faint)", display: "inline-block" }}>
+                Orderable from any bookstore by ISBN
+              </span>
             </div>
           </div>
         </div>
@@ -361,7 +339,7 @@ function BookBody({ book }: { book: typeof books[0] }) {
              <Image src={book.qrCodePB} alt="QR Code to buy direct" width={80} height={80} style={{ borderRadius: "8px", flexShrink: 0, border: "1px solid var(--border-faint)", background: "white", padding: "4px" }} />
              <div style={{ flex: 1, minWidth: "180px" }}>
                <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--gold)", marginBottom: "0.25rem" }}>Buy Direct & Save (Paperback)</div>
-               <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.4 }}>Skip Amazon. Scan or click to purchase directly from the publisher for the best price.</div>
+               <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.4 }}>Scan or click to purchase directly from the publisher — the best price on print editions.</div>
                <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-sm" style={{ padding: "0.5rem 1rem", fontSize: "0.8rem", display: "inline-block", textAlign: "center" }}>
                   Buy Now {book.price_pb_is ? `($${book.price_pb_is})` : ""}
                </a>
@@ -371,7 +349,7 @@ function BookBody({ book }: { book: typeof books[0] }) {
 
         <div style={{ borderTop: "1px solid var(--border-faint)", marginTop: "1.25rem", paddingTop: "0.75rem", display: "flex", justifyContent: "space-between", fontSize: "0.75rem" }}>
           <span style={{ color: "var(--text-faint)" }}>Ebook ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_ebook}</span></span>
-          <span style={{ color: "var(--text-faint)" }}>Page Count: {book.pageCount} pages</span>
+          <span style={{ color: "var(--text-faint)" }}>Page Count: {book.pageCountPB ?? book.pageCount} pages</span>
         </div>
       </div>
 

@@ -22,10 +22,12 @@ export default function Footer() {
           <div>
             <div className="footer-col-title">Books</div>
             <nav className="footer-links">
+              <Link href="/books">Full Catalog</Link>
               <Link href="/books/masters-x">Masters X Trilogy</Link>
               <Link href="/books/masters-x/the-inheritance-of-frequency">The Inheritance of Frequency</Link>
               <Link href="/books/masters-x/the-grimoire">The Grimoire</Link>
               <Link href="/books/masters-x/the-kingdom">The Kingdom</Link>
+              <Link href="/books/masters-x/omnibus">Omnibus Edition</Link>
               <Link href="/books/hawkes-monograph">Hawkes Monograph</Link>
             </nav>
           </div>
@@ -49,9 +51,6 @@ export default function Footer() {
               <Link href="/press">Seventh City Press</Link>
               <Link href="/about">About the Author</Link>
               <Link href="/contact">Contact</Link>
-              <a href="https://www.ingramspark.com" target="_blank" rel="noopener noreferrer">
-                IngramSpark
-              </a>
             </nav>
           </div>
         </div>

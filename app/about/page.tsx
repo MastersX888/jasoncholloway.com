@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Jason C. Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
+    "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
   alternates: {
     canonical: "https://jasoncholloway.com/about/",
   },
@@ -53,7 +53,6 @@ export default function AboutPage() {
               ],
               "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
               "sameAs": [
-                "https://amazon.com/author/jasoncholloway",
                 "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway"
               ]
             }
@@ -76,7 +75,7 @@ export default function AboutPage() {
 
       <section className="section" style={{ paddingTop: "3rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "4rem", alignItems: "start" }}>
+          <div className="resp-main-sidebar" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "4rem", alignItems: "start" }}>
             <div>
 
               {/* About the Author */}
@@ -85,7 +84,7 @@ export default function AboutPage() {
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.75rem", color: "var(--text-muted)", lineHeight: 1.9, fontSize: "1rem", marginBottom: "3rem" }}>
                 <p>
-                  Jason C. Holloway holds an M.A. in English Literature from Mercy University in Dobbs Ferry,
+                  Jason Carroll Holloway holds an M.A. in English Literature from Mercy University in Dobbs Ferry,
                   New York, as well as various degrees and certificates in Psychology, Sociology, Creative Writing,
                   and Data Analytics. He is a writer and researcher whose work explores the intersection of
                   acoustic science, medieval scholarship, and human consciousness. He lives in Kansas City.
@@ -131,6 +130,12 @@ export default function AboutPage() {
                       type: "Novel · Volume 3",
                       publisher: "Seventh City Press, 2026",
                       desc: "The demonstration. The argument. The open-source release. 1.2 million downloads.",
+                    },
+                    {
+                      title: "Masters X: Omnibus Edition",
+                      type: "Collected Edition · Hardcover & Paperback",
+                      publisher: "Seventh City Press, 2026",
+                      desc: "The complete trilogy in a single volume — 686 pages (hardcover) / 734 pages (paperback).",
                     },
                     {
                       title: "Innocence, Desire, and the Architecture of the Fall",
@@ -195,7 +200,7 @@ export default function AboutPage() {
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Publisher</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, marginBottom: "1rem" }}>
                   Seventh City Press<br />
-                  Jason C. Holloway, Publisher
+                  Jason Carroll Holloway, Publisher
                 </p>
                 <a href="mailto:press@jasoncholloway.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
                   Contact for Rights and Press

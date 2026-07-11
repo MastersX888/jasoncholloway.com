@@ -10,7 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${baseUrl}/`, lastModified: new Date(), changeFrequency: "monthly", priority: 1.0 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.8 },
+    { url: `${baseUrl}/books`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/books/masters-x`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/books/masters-x/omnibus`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/books/hawkes-monograph`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.9 },
     { url: `${baseUrl}/books/books-like-foucaults-pendulum`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/chamber`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },

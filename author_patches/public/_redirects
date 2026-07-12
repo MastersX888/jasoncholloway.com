@@ -1,0 +1,12 @@
+# ── DEPLOY AFTER seventhcitypress.com IS LIVE AND VERIFIED ──────────────────
+# Enable /press redirect only after confirming https://seventhcitypress.com/
+# loads correctly. Enabling before the imprint is live = 404 loop.
+
+https://www.jasoncholloway.com/* https://jasoncholloway.com/:splat 301
+/press    https://seventhcitypress.com/    301
+/press/   https://seventhcitypress.com/    301
+
+# Optional: redirect press-kit from author site to imprint.
+# Enable if you want all PDF traffic on seventhcitypress.com.
+# Leave commented to serve PDFs from both domains (no harm in mirroring).
+# /press-kit/*    https://seventhcitypress.com/press-kit/:splat    301

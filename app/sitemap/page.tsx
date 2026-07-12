@@ -38,7 +38,7 @@ export default function SitemapPage() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <li><Link href="/" className="hover-gold">Home</Link></li>
                 <li><Link href="/about" className="hover-gold">About the Author</Link></li>
-                <li><Link href="/press" className="hover-gold">Seventh City Press</Link></li>
+                <li><a href="https://seventhcitypress.com/" className="hover-gold">Seventh City Press</a></li>
                 <li><Link href="/contact" className="hover-gold">Contact & Rights</Link></li>
               </ul>
             </div>

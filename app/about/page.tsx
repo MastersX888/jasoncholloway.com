@@ -202,8 +202,8 @@ export default function AboutPage() {
                   Seventh City Press<br />
                   Jason Carroll Holloway, Publisher
                 </p>
-                <a href="mailto:press@jasoncholloway.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                  Contact for Rights and Press
+                <a href="mailto:jason@seventhcitypress.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
+                  Contact Jason Directly
                 </a>
               </div>
             </div>

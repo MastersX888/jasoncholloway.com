@@ -5,18 +5,18 @@ import Link from "next/link";
 import styles from './press-page.module.css';
 
 export const metadata: Metadata = {
-  title: "Press | Jason Carroll Holloway — Masters X Trilogy",
+  title: "Press & Media Kit — Masters X Trilogy",
   description:
-    "Press materials for the Masters X Trilogy by Jason Carroll Holloway (Seventh City Press). Includes press release, fact sheet, author bio, and synopses. Review copies available on request.",
+    "Press materials for the Masters X Trilogy by Jason Carroll Holloway. Includes press release, fact sheet, author bio, and synopses. Review copies available on request from Seventh City Press.",
   openGraph: {
-    title: "Press — Masters X Trilogy | Jason Carroll Holloway",
+    title: "Press — Masters X Trilogy | Seventh City Press",
     description:
       "A conspiracy of frequency, medieval manuscripts, and the city beneath the city. Three novels and a complete omnibus from Seventh City Press.",
-    url: "https://jasoncholloway.com/press",
-    siteName: "Jason Carroll Holloway",
+    url: "https://seventhcitypress.com/",
+    siteName: "Seventh City Press",
     type: "website",
   },
-  alternates: { canonical: "https://jasoncholloway.com/press" },
+  alternates: { canonical: "https://seventhcitypress.com/" },
 };
 
 const jsonLd = {
@@ -24,7 +24,7 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Person",
-      "@id": "https://jasoncholloway.com/#author",
+      "@id": "https://jasoncholloway.com/#person",
       name: "Jason Carroll Holloway",
       url: "https://jasoncholloway.com",
       jobTitle: "Author",
@@ -38,21 +38,29 @@ const jsonLd = {
       sameAs: [
         "https://www.goodreads.com/author/show/20924993",
         "https://www.wikidata.org/wiki/Q140275300",
+        "https://seventhcitypress.com/",
       ],
     },
     {
       "@type": "Organization",
-      "@id": "https://jasoncholloway.com/#publisher",
+      "@id": "https://seventhcitypress.com/#organization",
       name: "Seventh City Press",
-      url: "https://jasoncholloway.com",
-      founder: { "@id": "https://jasoncholloway.com/#author" },
-      location: { "@type": "Place", address: { "@type": "PostalAddress", addressLocality: "Kansas City", addressRegion: "MO" } },
+      url: "https://seventhcitypress.com/",
+      founder: { "@id": "https://jasoncholloway.com/#person" },
+      location: {
+        "@type": "Place",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Kansas City",
+          addressRegion: "MO",
+        },
+      },
     },
     {
       "@type": "Book",
       name: "The Inheritance of Frequency",
-      author: { "@id": "https://jasoncholloway.com/#author" },
-      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      author: { "@id": "https://jasoncholloway.com/#person" },
+      publisher: { "@id": "https://seventhcitypress.com/#organization" },
       isbn: "9798256008048",
       datePublished: "2026-06-01",
       numberOfPages: 178,
@@ -65,8 +73,8 @@ const jsonLd = {
     {
       "@type": "Book",
       name: "The Grimoire",
-      author: { "@id": "https://jasoncholloway.com/#author" },
-      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      author: { "@id": "https://jasoncholloway.com/#person" },
+      publisher: { "@id": "https://seventhcitypress.com/#organization" },
       isbn: "9798256009953",
       datePublished: "2026-06-01",
       numberOfPages: 260,
@@ -79,8 +87,8 @@ const jsonLd = {
     {
       "@type": "Book",
       name: "The Kingdom",
-      author: { "@id": "https://jasoncholloway.com/#author" },
-      publisher: { "@id": "https://jasoncholloway.com/#publisher" },
+      author: { "@id": "https://jasoncholloway.com/#person" },
+      publisher: { "@id": "https://seventhcitypress.com/#organization" },
       isbn: "9798256010072",
       datePublished: "2026-06-01",
       numberOfPages: 200,
@@ -92,12 +100,12 @@ const jsonLd = {
     },
     {
       "@type": "WebPage",
-      "@id": "https://jasoncholloway.com/press",
-      url: "https://jasoncholloway.com/press",
-      name: "Press — Masters X Trilogy | Jason Carroll Holloway",
+      "@id": "https://seventhcitypress.com/",
+      url: "https://seventhcitypress.com/",
+      name: "Press — Masters X Trilogy | Seventh City Press",
       description:
         "Press materials, media kit, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
-      author: { "@id": "https://jasoncholloway.com/#author" },
+      publisher: { "@id": "https://seventhcitypress.com/#organization" },
       dateModified: new Date().toISOString().split("T")[0],
     },
   ],
@@ -183,7 +191,7 @@ export default function PressPage() {
       />
 
       <section className="hero">
-        <div className="hero-bg" data-version="groundswell-v4" />
+        <div className="hero-bg" />
         <div className="container">
           <div className="hero-content">
             <div className="hero-eyebrow animate-fade-up">
@@ -250,7 +258,7 @@ export default function PressPage() {
       <section className="section">
         <div className="container">
           <div className={styles['press-page']}>
-            
+
             <article className={styles['press-card']} aria-label="Press release">
               <div className={styles['press-card-eyebrow']}>FOR IMMEDIATE RELEASE</div>
               <h2 className={styles['press-headline']}>
@@ -292,32 +300,33 @@ export default function PressPage() {
                   geography of Kansas City, from the SubTropolis cavern complex
                   upward. Every location in the novels can be visited, looked up, or
                   found in a scholarly bibliography — and much of the underlying data
-                  is published openly through the <Link href="/chamber/research-archive" style={{ color: "var(--cyan)", textDecoration: "none" }}>Analysis Chamber</Link>, a research archive
-                  on this site that runs the same measurements the characters run in
-                  the books.
+                  is published openly through the{" "}
+                  <a href="https://jasoncholloway.com/chamber/research-archive/" style={{ color: "var(--cyan)", textDecoration: "none" }}>Analysis Chamber</a>,
+                  a research archive on the author site that runs the same measurements
+                  the characters run in the books.
                 </p>
 
                 <div className="ms-pull" style={{ margin: "2.5rem 0" }}>
                   <p>
-                    "What the medieval masters encoded in cathedral geometry and
-                    grimoire tradition wasn't mysticism — it was a technology we had
+                    &ldquo;What the medieval masters encoded in cathedral geometry and
+                    grimoire tradition wasn&rsquo;t mysticism — it was a technology we had
                     simply forgotten how to read. The Masters&nbsp;X&nbsp;Trilogy is
-                    the account of learning to read it again."
+                    the account of learning to read it again.&rdquo;
                   </p>
                   <cite>— Jason Carroll Holloway</cite>
                 </div>
 
                 <p className={styles['press-comps']}>
-                  For readers of Umberto Eco's <em>Foucault's Pendulum</em>, Dan
-                  Brown's <em>The Da Vinci Code</em>, Elizabeth Kostova's{" "}
-                  <em>The Historian</em>, and Anthony Doerr's{" "}
+                  For readers of Umberto Eco&rsquo;s <em>Foucault&rsquo;s Pendulum</em>, Dan
+                  Brown&rsquo;s <em>The Da Vinci Code</em>, Elizabeth Kostova&rsquo;s{" "}
+                  <em>The Historian</em>, and Anthony Doerr&rsquo;s{" "}
                   <em>Cloud Cuckoo Land</em>.
                 </p>
 
                 <h2 className={styles['press-section']}>The Books</h2>
 
                 <div className={styles['press-books']}>
-                  <Link href="/books/masters-x/the-inheritance-of-frequency" className={styles['book-row']}>
+                  <a href="https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/" className={styles['book-row']}>
                     <div className={styles['book-meta']}>
                       <span className={styles['vol-label']}>Vol.&nbsp;I</span>
                       <span className={styles['book-title']}>The Inheritance of Frequency</span>
@@ -325,8 +334,8 @@ export default function PressPage() {
                     <div className={styles['book-desc']}>
                       Seven notebooks. Thirty years of classified acoustic research. A sealed crypt beneath Prague.
                     </div>
-                  </Link>
-                  <Link href="/books/masters-x/the-grimoire" className={styles['book-row']}>
+                  </a>
+                  <a href="https://jasoncholloway.com/books/masters-x/the-grimoire/" className={styles['book-row']}>
                     <div className={styles['book-meta']}>
                       <span className={styles['vol-label']}>Vol.&nbsp;II</span>
                       <span className={styles['book-title']}>The Grimoire</span>
@@ -334,8 +343,8 @@ export default function PressPage() {
                     <div className={styles['book-desc']}>
                       The Ars Notoria decoded. A preparation protocol for the frequency. Twenty-three candidates waiting.
                     </div>
-                  </Link>
-                  <Link href="/books/masters-x/the-kingdom" className={styles['book-row']}>
+                  </a>
+                  <a href="https://jasoncholloway.com/books/masters-x/the-kingdom/" className={styles['book-row']}>
                     <div className={styles['book-meta']}>
                       <span className={styles['vol-label']}>Vol.&nbsp;III</span>
                       <span className={styles['book-title']}>The Kingdom</span>
@@ -343,8 +352,8 @@ export default function PressPage() {
                     <div className={styles['book-desc']}>
                       The demonstration and the argument — and an open-source release that reaches 1.2&nbsp;million downloads.
                     </div>
-                  </Link>
-                  <Link href="/books/masters-x/omnibus" className={styles['book-row']}>
+                  </a>
+                  <a href="https://jasoncholloway.com/books/masters-x/omnibus/" className={styles['book-row']}>
                     <div className={styles['book-meta']}>
                       <span className={styles['vol-label']}>Omnibus</span>
                       <span className={styles['book-title']}>Masters X: The Complete Trilogy</span>
@@ -352,7 +361,7 @@ export default function PressPage() {
                     <div className={styles['book-desc']}>
                       All three novels in a single volume, in hardcover and paperback.
                     </div>
-                  </Link>
+                  </a>
                 </div>
 
                 <h2 className={styles['press-section']}>Availability</h2>
@@ -438,7 +447,7 @@ export default function PressPage() {
                 <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
                   Review copies and interview requests are available to accredited reviewers and journalists.
                 </p>
-                <Link href="/contact" className="btn btn-outline" style={{ display: "inline-flex" }}>
+                <Link href="/contact/" className="btn btn-outline" style={{ display: "inline-flex" }}>
                   Contact the Communications Desk
                 </Link>
               </div>

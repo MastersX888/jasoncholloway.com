@@ -131,7 +131,7 @@ export default function Home() {
                 <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.85, marginBottom: "1.5rem" }}>
                   Blake Masters inherits a safety deposit box his grandfather paid for fifty-seven years in advance,
                   timed to arrive at the exact moment Blake would be ready. Inside: seven notebooks.
-                  Thirty years of classified aerospace research. A cross-reference to a sealed crypt beneath Prague.
+                  Thirty years of classified acoustic research. A cross-reference to a sealed crypt beneath Prague.
                   The trilogy is the account of what he did with that knowledge — and what it did to him.
                 </p>
 
@@ -372,7 +372,7 @@ export default function Home() {
               <h2 className="display-md" style={{ marginBottom: "1.25rem" }}>Jason Carroll Holloway</h2>
               <div style={{ display: "flex", gap: "1rem" }}>
                 <Link href="/about" className="btn btn-outline">About the Author</Link>
-                <Link href="/press" className="btn btn-ghost">Seventh City Press</Link>
+                <a href="https://seventhcitypress.com/" className="btn btn-ghost">Seventh City Press</a>
               </div>
             </div>
 

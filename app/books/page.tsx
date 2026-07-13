@@ -159,7 +159,7 @@ export default function BooksIndexPage() {
                     color: "var(--text-faint)",
                   }}
                 >
-                  {book.pageCountPB ?? book.pageCount} pp PB · ${book.price_pb_is}
+                  {book.pageCountPB ?? book.pageCount} pp · from ${book.price_pb_is} direct
                 </div>
               </Link>
             ))}
@@ -178,7 +178,7 @@ export default function BooksIndexPage() {
             </Link>
             {omnibus && (
               <Link href="/books/masters-x/omnibus" className="btn btn-outline">
-                Omnibus Edition — ${omnibus.price_hc_is} HC / ${omnibus.price_pb_is} PB
+                Omnibus Edition — ${omnibus.price_hc_is} HC / ${omnibus.price_pb_is} PB · Buy Direct (save up to $17.98)
               </Link>
             )}
           </div>

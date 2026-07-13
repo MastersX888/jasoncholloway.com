@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/layout/NewsletterForm";
+import { getFieldNoteVolumes } from "@/lib/data/fieldNotes";
 
 export interface FaqItem {
   q: string;
@@ -82,9 +83,10 @@ export default function FieldNoteLayout({
   };
 
   const ldScripts = [articleJsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])];
+  const volumes = getFieldNoteVolumes(slug);
 
   return (
-    <>
+    <div data-register="research">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ldScripts) }}
@@ -240,14 +242,29 @@ export default function FieldNoteLayout({
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.65, marginBottom: "1rem" }}>
                   This history appears in the Masters X Trilogy — three novels by Jason Carroll Holloway, published June 2026 by Seventh City Press.
                 </p>
-                <Link href={bookHref} className="btn btn-gold btn-sm" style={{ width: "100%", justifyContent: "center" }}>
-                  Start Reading
-                </Link>
+                {volumes && volumes.length > 0 ? (
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                    {volumes.map((vol) => (
+                      <Link
+                        key={vol.slug}
+                        href={`/books/masters-x/${vol.slug}/`}
+                        className="btn btn-outline"
+                        style={{ width: "100%", justifyContent: "center", fontSize: "0.82rem" }}
+                      >
+                        {vol.label}: {vol.title} →
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <Link href="/books/masters-x/the-inheritance-of-frequency/" className="btn btn-gold btn-sm" style={{ width: "100%", justifyContent: "center" }}>
+                    Start Reading
+                  </Link>
+                )}
               </div>
             </aside>
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

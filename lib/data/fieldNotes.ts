@@ -1,4 +1,19 @@
-export const themes = [
+export interface VolumeBridge {
+  slug: string;
+  title: string;
+  label: string;
+}
+
+export interface FieldNote {
+  href: string;
+  slug: string;
+  label: string;
+  title: string;
+  desc: string;
+  volumes?: VolumeBridge[];
+}
+
+export const themes: { id: string; label: string; notes: FieldNote[] }[] = [
   {
     id: "beneath-kansas-city",
     label: "Beneath Kansas City",
@@ -9,6 +24,9 @@ export const themes = [
         label: "Place",
         title: "SubTropolis: The Underground City Beneath Kansas City",
         desc: "The 270-million-year-old Bethany Falls limestone mine where Blake Masters worked security — and found something that wasn't on any official map.",
+        volumes: [
+          { slug: "the-inheritance-of-frequency", title: "The Inheritance of Frequency", label: "Volume I" },
+        ],
       },
       {
         href: "/field-notes/kansas-city-locations",
@@ -43,6 +61,11 @@ export const themes = [
         label: "Science",
         title: "111 Hz: The Frequency Ancient Builders Kept Choosing",
         desc: "The standing-wave frequency documented in stone chambers from Malta to Ghana. Real acoustic research — and the carrier frequency of the entire trilogy.",
+        volumes: [
+          { slug: "the-inheritance-of-frequency", title: "The Inheritance of Frequency", label: "Volume I" },
+          { slug: "the-grimoire", title: "The Grimoire", label: "Volume II" },
+          { slug: "the-kingdom", title: "The Kingdom", label: "Volume III" },
+        ],
       },
       {
         href: "/field-notes/cymatics",
@@ -50,6 +73,10 @@ export const themes = [
         label: "Physics",
         title: "Cymatics: Sound You Can See",
         desc: "Ernst Chladni's sand patterns, Hans Jenny's water experiments, and the five-sided standing wave that Kofi Asante's drums produce in red laterite clay.",
+        volumes: [
+          { slug: "the-grimoire", title: "The Grimoire", label: "Volume II" },
+          { slug: "the-kingdom", title: "The Kingdom", label: "Volume III" },
+        ],
       },
       {
         href: "/field-notes/u2-test-pilots",
@@ -70,6 +97,10 @@ export const themes = [
         label: "Manuscript",
         title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read",
         desc: "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court the trilogy reconstructs.",
+        volumes: [
+          { slug: "the-inheritance-of-frequency", title: "The Inheritance of Frequency", label: "Volume I" },
+          { slug: "the-grimoire", title: "The Grimoire", label: "Volume II" },
+        ],
       },
       {
         href: "/field-notes/ars-notoria",
@@ -77,6 +108,10 @@ export const themes = [
         label: "Manuscript",
         title: "The Ars Notoria: The Medieval 'Notory Art'",
         desc: "A thirteenth-century Solomonic manuscript of memory and eloquence. Not magic — cognitive technology. The operational manual for the trilogy's preparation protocol.",
+        volumes: [
+          { slug: "the-grimoire", title: "The Grimoire", label: "Volume II" },
+          { slug: "the-kingdom", title: "The Kingdom", label: "Volume III" },
+        ],
       },
       {
         href: "/field-notes/codex-gigas",
@@ -104,9 +139,16 @@ export const themes = [
         label: "Site",
         title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague",
         desc: "The Premonstratensian Theological Hall, chained books, and the sealed crypt beneath — real place, fictional events.",
+        volumes: [
+          { slug: "the-inheritance-of-frequency", title: "The Inheritance of Frequency", label: "Volume I" },
+        ],
       },
     ],
   },
 ];
 
 export const fieldNotes = themes.flatMap((t) => t.notes);
+
+export function getFieldNoteVolumes(slug: string): VolumeBridge[] | undefined {
+  return fieldNotes.find((n) => n.slug === slug)?.volumes;
+}

@@ -12,7 +12,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f1r"
   },
   {
     "id": "v1-005",
@@ -27,7 +28,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f1v"
   },
   {
     "id": "v1-006",
@@ -42,7 +44,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f2r"
   },
   {
     "id": "v1-007",
@@ -57,7 +60,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f2v"
   },
   {
     "id": "v1-008",
@@ -72,13 +76,14 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f3r"
   },
   {
     "id": "v1-009",
     "folio": "V1-009",
     "beineckeRef": "f2v",
-    "title": "Herbal Page — Forked Root",
+    "title": "Herbal Page \u2014 Forked Root",
     "category": "botanical",
     "collection": "voynich",
     "volume": 1,
@@ -103,7 +108,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f4r"
   },
   {
     "id": "v1-011",
@@ -118,7 +124,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f4v"
   },
   {
     "id": "v1-012",
@@ -133,7 +140,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f5r"
   },
   {
     "id": "v1-013",
@@ -148,7 +156,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f5v"
   },
   {
     "id": "v1-014",
@@ -163,7 +172,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f6r"
   },
   {
     "id": "v1-015",
@@ -178,7 +188,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f6v"
   },
   {
     "id": "v1-016",
@@ -193,7 +204,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f7r"
   },
   {
     "id": "v1-017",
@@ -208,7 +220,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f7v"
   },
   {
     "id": "v1-018",
@@ -223,7 +236,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f8r"
   },
   {
     "id": "v1-019",
@@ -238,7 +252,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f8v"
   },
   {
     "id": "v1-020",
@@ -253,7 +268,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f9r"
   },
   {
     "id": "v1-021",
@@ -268,7 +284,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f9v"
   },
   {
     "id": "v1-022",
@@ -283,7 +300,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f10r"
   },
   {
     "id": "v1-023",
@@ -298,7 +316,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f10v"
   },
   {
     "id": "v1-024",
@@ -313,7 +332,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f11r"
   },
   {
     "id": "v1-025",
@@ -328,7 +348,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f11v"
   },
   {
     "id": "v1-026",
@@ -343,7 +364,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f13r"
   },
   {
     "id": "v1-027",
@@ -358,7 +380,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f13v"
   },
   {
     "id": "v1-028",
@@ -373,7 +396,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f14r"
   },
   {
     "id": "v1-029",
@@ -388,7 +412,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f14v"
   },
   {
     "id": "v1-030",
@@ -403,7 +428,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f15r"
   },
   {
     "id": "v1-031",
@@ -418,7 +444,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f15v"
   },
   {
     "id": "v1-032",
@@ -433,7 +460,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f16r"
   },
   {
     "id": "v1-033",
@@ -448,7 +476,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f16v"
   },
   {
     "id": "v1-034",
@@ -463,7 +492,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f17r"
   },
   {
     "id": "v1-035",
@@ -478,7 +508,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f17v"
   },
   {
     "id": "v1-036",
@@ -493,7 +524,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f18r"
   },
   {
     "id": "v1-037",
@@ -508,7 +540,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f18v"
   },
   {
     "id": "v1-038",
@@ -523,7 +556,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f19r"
   },
   {
     "id": "v1-039",
@@ -538,7 +572,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f19v"
   },
   {
     "id": "v1-040",
@@ -553,7 +588,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f20r"
   },
   {
     "id": "v1-041",
@@ -568,7 +604,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f20v"
   },
   {
     "id": "v1-042",
@@ -583,7 +620,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f21r"
   },
   {
     "id": "v1-043",
@@ -598,7 +636,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f21v"
   },
   {
     "id": "v1-044",
@@ -613,7 +652,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f22r"
   },
   {
     "id": "v1-045",
@@ -628,7 +668,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f22v"
   },
   {
     "id": "v1-046",
@@ -643,7 +684,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f23r"
   },
   {
     "id": "v1-047",
@@ -658,7 +700,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f23v"
   },
   {
     "id": "v1-048",
@@ -673,7 +716,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f24r"
   },
   {
     "id": "v1-049",
@@ -688,7 +732,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f24v"
   },
   {
     "id": "v1-050",
@@ -703,7 +748,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f25r"
   },
   {
     "id": "v1-051",
@@ -718,7 +764,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f25v"
   },
   {
     "id": "v1-052",
@@ -733,7 +780,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f26r"
   },
   {
     "id": "v1-053",
@@ -748,7 +796,8 @@
     "features": [
       "Plant illustration"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f26v"
   },
   {
     "id": "v2-000",
@@ -763,7 +812,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f27r"
   },
   {
     "id": "v2-001",
@@ -778,7 +828,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f27v"
   },
   {
     "id": "v2-002",
@@ -793,7 +844,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f28r"
   },
   {
     "id": "v2-003",
@@ -808,7 +860,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f28v"
   },
   {
     "id": "v2-004",
@@ -823,7 +876,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f29r"
   },
   {
     "id": "v2-005",
@@ -838,7 +892,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f29v"
   },
   {
     "id": "v2-006",
@@ -853,7 +908,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f30r"
   },
   {
     "id": "v2-007",
@@ -868,7 +924,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f30v"
   },
   {
     "id": "v2-008",
@@ -883,7 +940,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f31r"
   },
   {
     "id": "v2-009",
@@ -898,7 +956,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f31v"
   },
   {
     "id": "v2-010",
@@ -913,7 +972,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f32r"
   },
   {
     "id": "v2-011",
@@ -928,7 +988,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f32v"
   },
   {
     "id": "v2-012",
@@ -943,7 +1004,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f33r"
   },
   {
     "id": "v2-013",
@@ -958,7 +1020,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f33v"
   },
   {
     "id": "v2-014",
@@ -973,7 +1036,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f34r"
   },
   {
     "id": "v2-015",
@@ -988,7 +1052,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f34v"
   },
   {
     "id": "v2-016",
@@ -1003,7 +1068,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f35r"
   },
   {
     "id": "v2-017",
@@ -1018,7 +1084,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f35v"
   },
   {
     "id": "v2-018",
@@ -1033,7 +1100,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f36r"
   },
   {
     "id": "v2-019",
@@ -1048,7 +1116,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f36v"
   },
   {
     "id": "v2-020",
@@ -1063,7 +1132,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f37r"
   },
   {
     "id": "v2-021",
@@ -1078,7 +1148,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f37v"
   },
   {
     "id": "v2-022",
@@ -1093,7 +1164,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f38r"
   },
   {
     "id": "v2-023",
@@ -1108,7 +1180,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f38v"
   },
   {
     "id": "v2-024",
@@ -1123,7 +1196,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f39r"
   },
   {
     "id": "v2-025",
@@ -1138,7 +1212,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f39v"
   },
   {
     "id": "v2-026",
@@ -1153,7 +1228,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f40r"
   },
   {
     "id": "v2-027",
@@ -1168,7 +1244,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f40v"
   },
   {
     "id": "v2-028",
@@ -1183,7 +1260,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f41r"
   },
   {
     "id": "v2-029",
@@ -1198,7 +1276,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f41v"
   },
   {
     "id": "v2-030",
@@ -1213,7 +1292,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f42r"
   },
   {
     "id": "v2-031",
@@ -1228,7 +1308,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f42v"
   },
   {
     "id": "v2-032",
@@ -1243,7 +1324,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f43r"
   },
   {
     "id": "v2-033",
@@ -1258,7 +1340,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f43v"
   },
   {
     "id": "v2-034",
@@ -1273,7 +1356,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f44r"
   },
   {
     "id": "v2-035",
@@ -1288,7 +1372,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f44v"
   },
   {
     "id": "v2-036",
@@ -1303,7 +1388,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f45r"
   },
   {
     "id": "v2-037",
@@ -1318,7 +1404,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f45v"
   },
   {
     "id": "v2-038",
@@ -1333,7 +1420,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f46r"
   },
   {
     "id": "v2-039",
@@ -1348,7 +1436,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f46v"
   },
   {
     "id": "v2-040",
@@ -1363,7 +1452,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f47r"
   },
   {
     "id": "v2-041",
@@ -1378,7 +1468,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f47v"
   },
   {
     "id": "v2-042",
@@ -1393,7 +1484,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f48r"
   },
   {
     "id": "v2-043",
@@ -1408,7 +1500,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f48v"
   },
   {
     "id": "v2-044",
@@ -1423,7 +1516,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f49r"
   },
   {
     "id": "v2-045",
@@ -1438,7 +1532,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f49v"
   },
   {
     "id": "v2-046",
@@ -1453,7 +1548,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f50r"
   },
   {
     "id": "v2-047",
@@ -1468,7 +1564,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f50v"
   },
   {
     "id": "v2-048",
@@ -1483,7 +1580,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f51r"
   },
   {
     "id": "v2-049",
@@ -1498,7 +1596,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f51v"
   },
   {
     "id": "v2-050",
@@ -1513,7 +1612,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f52r"
   },
   {
     "id": "v2-051",
@@ -1528,7 +1628,8 @@
     "features": [
       "Circular diagram"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f52v"
   },
   {
     "id": "v3-000",
@@ -1544,7 +1645,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f53v"
   },
   {
     "id": "v3-001",
@@ -1560,7 +1662,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f54r"
   },
   {
     "id": "v3-002",
@@ -1576,7 +1679,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f54v"
   },
   {
     "id": "v3-003",
@@ -1592,7 +1696,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f55r"
   },
   {
     "id": "v3-004",
@@ -1608,7 +1713,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f55v"
   },
   {
     "id": "v3-005",
@@ -1624,7 +1730,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f56r"
   },
   {
     "id": "v3-006",
@@ -1640,7 +1747,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f56v"
   },
   {
     "id": "v3-007",
@@ -1656,7 +1764,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f57r"
   },
   {
     "id": "v3-008",
@@ -1672,7 +1781,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f57v"
   },
   {
     "id": "v3-009",
@@ -1688,7 +1798,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f58r"
   },
   {
     "id": "v3-010",
@@ -1704,7 +1815,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f58v"
   },
   {
     "id": "v3-011",
@@ -1720,7 +1832,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f65r"
   },
   {
     "id": "v3-012",
@@ -1736,7 +1849,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f65v"
   },
   {
     "id": "v3-013",
@@ -1752,7 +1866,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f66r"
   },
   {
     "id": "v3-014",
@@ -1768,7 +1883,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f66v"
   },
   {
     "id": "v3-015",
@@ -1784,7 +1900,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f67r"
   },
   {
     "id": "v3-016",
@@ -1800,7 +1917,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f67v"
   },
   {
     "id": "v3-017",
@@ -1816,7 +1934,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f68r"
   },
   {
     "id": "v3-018",
@@ -1832,7 +1951,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f68v"
   },
   {
     "id": "v3-019",
@@ -1848,7 +1968,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f69r"
   },
   {
     "id": "v3-020",
@@ -1864,7 +1985,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f69v-70r"
   },
   {
     "id": "v3-021",
@@ -1880,7 +2002,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f70v (part)"
   },
   {
     "id": "v3-022",
@@ -1896,7 +2019,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f70v (part)"
   },
   {
     "id": "v3-023",
@@ -1912,7 +2036,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f71r"
   },
   {
     "id": "v3-024",
@@ -1928,7 +2053,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f71v-72r"
   },
   {
     "id": "v3-025",
@@ -1944,7 +2070,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f72v (part)"
   },
   {
     "id": "v3-026",
@@ -1960,7 +2087,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f72v (part)"
   },
   {
     "id": "v3-027",
@@ -1976,7 +2104,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f73r"
   },
   {
     "id": "v3-028",
@@ -1992,7 +2121,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f73v"
   },
   {
     "id": "v3-029",
@@ -2008,7 +2138,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f75r"
   },
   {
     "id": "v3-030",
@@ -2024,7 +2155,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f75v"
   },
   {
     "id": "v3-031",
@@ -2040,7 +2172,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f76r"
   },
   {
     "id": "v3-032",
@@ -2056,7 +2189,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f76v"
   },
   {
     "id": "v3-033",
@@ -2072,7 +2206,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f77r"
   },
   {
     "id": "v3-034",
@@ -2088,7 +2223,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f77v"
   },
   {
     "id": "v3-035",
@@ -2104,7 +2240,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f78r"
   },
   {
     "id": "v3-036",
@@ -2120,7 +2257,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f78v"
   },
   {
     "id": "v3-037",
@@ -2136,7 +2274,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f79r"
   },
   {
     "id": "v3-038",
@@ -2152,7 +2291,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f79v"
   },
   {
     "id": "v3-039",
@@ -2168,7 +2308,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f80r"
   },
   {
     "id": "v3-040",
@@ -2184,7 +2325,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f80v"
   },
   {
     "id": "v3-041",
@@ -2200,7 +2342,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f81r"
   },
   {
     "id": "v3-042",
@@ -2216,7 +2359,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f81v"
   },
   {
     "id": "v3-043",
@@ -2232,7 +2376,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f82r"
   },
   {
     "id": "v3-044",
@@ -2248,7 +2393,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f82v"
   },
   {
     "id": "v3-045",
@@ -2264,7 +2410,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f83r"
   },
   {
     "id": "v3-046",
@@ -2280,7 +2427,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f83v"
   },
   {
     "id": "v3-047",
@@ -2296,7 +2444,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f84r"
   },
   {
     "id": "v3-048",
@@ -2312,7 +2461,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f84v"
   },
   {
     "id": "v3-049",
@@ -2328,7 +2478,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f85r (part)"
   },
   {
     "id": "v3-050",
@@ -2344,7 +2495,8 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f85r (part)"
   },
   {
     "id": "v3-051",
@@ -2360,19 +2512,20 @@
       "Figures",
       "Tubes"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f86v (part)"
   },
   {
     "id": "v3-052",
     "folio": "V3-052",
-    "beineckeRef": "f68r3",
+    "beineckeRef": "f85v-86r",
     "title": "Pleiades Rosette Foldout",
     "category": "astronomical",
     "collection": "voynich",
     "volume": 3,
     "filename": "vol3-052",
     "path": "/folios/voynich/Vol 3/vol3-052.jpg",
-    "description": "Astronomical foldout, folio 68 recto panel 3 (Beinecke MS 408). Nine rosette diagrams in a 3×3 grid.",
+    "description": "Astronomical foldout, folio 68 recto panel 3 (Beinecke MS 408). Nine rosette diagrams in a 3\u00d73 grid.",
     "features": [
       "Figures",
       "Tubes"
@@ -2394,7 +2547,8 @@
       "Blue rosettes",
       "Radiating patterns"
     ],
-    "storyNotes": "CRITICAL CONNECTION: The radiating geometric patterns mirror the Notae symbols in Ars Notoria manuscripts."
+    "storyNotes": "CRITICAL CONNECTION: The radiating geometric patterns mirror the Notae symbols in Ars Notoria manuscripts.",
+    "beineckeRef": "f85v-86r"
   },
   {
     "id": "v4-f87r",
@@ -2410,7 +2564,8 @@
       "Forked roots",
       "Blue flowers"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f87r"
   },
   {
     "id": "v4-f87v",
@@ -2425,7 +2580,8 @@
     "features": [
       "Paired plants"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f87v"
   },
   {
     "id": "v4-f88r",
@@ -2441,7 +2597,8 @@
       "Tiered vessels",
       "Hanging specimens"
     ],
-    "storyNotes": "CRITICAL: These vessels match alchemical apparatus."
+    "storyNotes": "CRITICAL: These vessels match alchemical apparatus.",
+    "beineckeRef": "f88r"
   },
   {
     "id": "v4-f88v-89r",
@@ -2457,7 +2614,8 @@
       "Four panels",
       "Multiple vessels"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f88v-89r"
   },
   {
     "id": "v4-f90v-part",
@@ -2473,7 +2631,8 @@
       "Walking root",
       "Animal-like roots"
     ],
-    "storyNotes": "IMPORTANT: Connects to mandrake legends."
+    "storyNotes": "IMPORTANT: Connects to mandrake legends.",
+    "beineckeRef": "f90v (part)"
   },
   {
     "id": "v4-f99r",
@@ -2488,7 +2647,8 @@
     "features": [
       "Marine specimens"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f99r"
   },
   {
     "id": "v4-f103r",
@@ -2503,7 +2663,8 @@
     "features": [
       "Red star markers"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "f103r"
   },
   {
     "id": "v4-f116v",
@@ -2519,7 +2680,8 @@
       "Sparse text",
       "Incomplete"
     ],
-    "storyNotes": "MYSTERIOUS: Intentionally withheld knowledge."
+    "storyNotes": "MYSTERIOUS: Intentionally withheld knowledge.",
+    "beineckeRef": "f116v"
   },
   {
     "id": "v5-spine",
@@ -2534,7 +2696,8 @@
     "features": [
       "Vellum binding"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "Spine"
   },
   {
     "id": "v5-back-cover",
@@ -2549,7 +2712,8 @@
     "features": [
       "Limp vellum"
     ],
-    "storyNotes": ""
+    "storyNotes": "",
+    "beineckeRef": "Back cover"
   },
   {
     "id": "an-01",

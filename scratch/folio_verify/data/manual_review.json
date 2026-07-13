@@ -1,0 +1,890 @@
+{
+  "generatedAt": "2026-07-13T15:46:07+00:00",
+  "count": 34,
+  "rows": [
+    {
+      "id": "v1-006",
+      "title": "Herbal Page 3",
+      "filename": "voynich-006",
+      "filenameHint": null,
+      "topSuggestion": "f2r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f1r",
+          "distance": 16,
+          "label": "1r"
+        },
+        {
+          "ref": "f7r",
+          "distance": 18,
+          "label": "7r"
+        },
+        {
+          "ref": "f49r",
+          "distance": 18,
+          "label": "49r"
+        }
+      ]
+    },
+    {
+      "id": "v1-007",
+      "title": "Herbal Page 4",
+      "filename": "voynich-007",
+      "filenameHint": null,
+      "topSuggestion": "f2v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f55v",
+          "distance": 12,
+          "label": "55v"
+        },
+        {
+          "ref": "f11v",
+          "distance": 16,
+          "label": "11v"
+        },
+        {
+          "ref": "f78v",
+          "distance": 16,
+          "label": "78v"
+        }
+      ]
+    },
+    {
+      "id": "v1-017",
+      "title": "Herbal Page 14",
+      "filename": "voynich-017",
+      "filenameHint": null,
+      "topSuggestion": "f7v",
+      "distance": 4,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f10v",
+          "distance": 14,
+          "label": "10v"
+        },
+        {
+          "ref": "f6v",
+          "distance": 16,
+          "label": "6v"
+        },
+        {
+          "ref": "f46v",
+          "distance": 16,
+          "label": "46v"
+        }
+      ]
+    },
+    {
+      "id": "v1-019",
+      "title": "Herbal Page 16",
+      "filename": "voynich-019",
+      "filenameHint": null,
+      "topSuggestion": "f8v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f72v (part)",
+          "distance": 14,
+          "label": "72v (part)"
+        },
+        {
+          "ref": "f40v",
+          "distance": 16,
+          "label": "40v"
+        },
+        {
+          "ref": "f52v",
+          "distance": 16,
+          "label": "52v"
+        }
+      ]
+    },
+    {
+      "id": "v1-034",
+      "title": "Herbal Page 31",
+      "filename": "voynich-034",
+      "filenameHint": null,
+      "topSuggestion": "f17r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f69r",
+          "distance": 14,
+          "label": "69r"
+        },
+        {
+          "ref": "f3r",
+          "distance": 16,
+          "label": "3r"
+        },
+        {
+          "ref": "f11r",
+          "distance": 16,
+          "label": "11r"
+        }
+      ]
+    },
+    {
+      "id": "v1-036",
+      "title": "Herbal Page 33",
+      "filename": "voynich-036",
+      "filenameHint": null,
+      "topSuggestion": "f18r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f29r",
+          "distance": 16,
+          "label": "29r"
+        },
+        {
+          "ref": "f66r",
+          "distance": 16,
+          "label": "66r"
+        },
+        {
+          "ref": "f75r",
+          "distance": 16,
+          "label": "75r"
+        }
+      ]
+    },
+    {
+      "id": "v1-038",
+      "title": "Herbal Page 35",
+      "filename": "voynich-038",
+      "filenameHint": null,
+      "topSuggestion": "f19r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f13r",
+          "distance": 14,
+          "label": "13r"
+        },
+        {
+          "ref": "f25r",
+          "distance": 16,
+          "label": "25r"
+        },
+        {
+          "ref": "f39r",
+          "distance": 18,
+          "label": "39r"
+        }
+      ]
+    },
+    {
+      "id": "v1-041",
+      "title": "Herbal Page 38",
+      "filename": "voynich-041",
+      "filenameHint": null,
+      "topSuggestion": "f20v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f21v",
+          "distance": 12,
+          "label": "21v"
+        },
+        {
+          "ref": "f23v",
+          "distance": 14,
+          "label": "23v"
+        },
+        {
+          "ref": "f16v",
+          "distance": 16,
+          "label": "16v"
+        }
+      ]
+    },
+    {
+      "id": "v1-046",
+      "title": "Herbal Page 43",
+      "filename": "voynich-046",
+      "filenameHint": null,
+      "topSuggestion": "f23r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f9r",
+          "distance": 14,
+          "label": "9r"
+        },
+        {
+          "ref": "f21r",
+          "distance": 14,
+          "label": "21r"
+        },
+        {
+          "ref": "f39r",
+          "distance": 14,
+          "label": "39r"
+        }
+      ]
+    },
+    {
+      "id": "v1-048",
+      "title": "Herbal Page 45",
+      "filename": "voynich-048",
+      "filenameHint": null,
+      "topSuggestion": "f24r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f48r",
+          "distance": 12,
+          "label": "48r"
+        },
+        {
+          "ref": "f85r (part)",
+          "distance": 12,
+          "label": "85r (part) (part of 85-86 foldout)"
+        },
+        {
+          "ref": "f22r",
+          "distance": 14,
+          "label": "22r"
+        }
+      ]
+    },
+    {
+      "id": "v1-051",
+      "title": "Herbal Page 48",
+      "filename": "voynich-051",
+      "filenameHint": null,
+      "topSuggestion": "f25v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f17v",
+          "distance": 12,
+          "label": "17v"
+        },
+        {
+          "ref": "f13v",
+          "distance": 14,
+          "label": "13v"
+        },
+        {
+          "ref": "f22v",
+          "distance": 14,
+          "label": "22v"
+        }
+      ]
+    },
+    {
+      "id": "v2-004",
+      "title": "Astronomical Page 5",
+      "filename": "voynich2-004",
+      "filenameHint": null,
+      "topSuggestion": "f29r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f23r",
+          "distance": 14,
+          "label": "23r"
+        },
+        {
+          "ref": "f39r",
+          "distance": 14,
+          "label": "39r"
+        },
+        {
+          "ref": "f18r",
+          "distance": 16,
+          "label": "18r"
+        }
+      ]
+    },
+    {
+      "id": "v2-020",
+      "title": "Astronomical Page 21",
+      "filename": "voynich2-020",
+      "filenameHint": null,
+      "topSuggestion": "f37r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f21r",
+          "distance": 8,
+          "label": "21r"
+        },
+        {
+          "ref": "f73r",
+          "distance": 12,
+          "label": "73r"
+        },
+        {
+          "ref": "f1r",
+          "distance": 16,
+          "label": "1r"
+        }
+      ]
+    },
+    {
+      "id": "v2-023",
+      "title": "Astronomical Page 24",
+      "filename": "voynich2-023",
+      "filenameHint": null,
+      "topSuggestion": "f38v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f48v",
+          "distance": 12,
+          "label": "48v"
+        },
+        {
+          "ref": "f8v",
+          "distance": 16,
+          "label": "8v"
+        },
+        {
+          "ref": "f40v",
+          "distance": 16,
+          "label": "40v"
+        }
+      ]
+    },
+    {
+      "id": "v2-029",
+      "title": "Astronomical Page 30",
+      "filename": "voynich2-029",
+      "filenameHint": null,
+      "topSuggestion": "f41v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f34v",
+          "distance": 16,
+          "label": "34v"
+        },
+        {
+          "ref": "f51v",
+          "distance": 16,
+          "label": "51v"
+        },
+        {
+          "ref": "f8v",
+          "distance": 18,
+          "label": "8v"
+        }
+      ]
+    },
+    {
+      "id": "v2-031",
+      "title": "Astronomical Page 32",
+      "filename": "voynich2-031",
+      "filenameHint": null,
+      "topSuggestion": "f42v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f23v",
+          "distance": 16,
+          "label": "23v"
+        },
+        {
+          "ref": "f25v",
+          "distance": 16,
+          "label": "25v"
+        },
+        {
+          "ref": "f81v",
+          "distance": 16,
+          "label": "81v"
+        }
+      ]
+    },
+    {
+      "id": "v2-036",
+      "title": "Astronomical Page 37",
+      "filename": "voynich2-036",
+      "filenameHint": null,
+      "topSuggestion": "f45r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f29r",
+          "distance": 14,
+          "label": "29r"
+        },
+        {
+          "ref": "f37r",
+          "distance": 14,
+          "label": "37r"
+        },
+        {
+          "ref": "f18r",
+          "distance": 16,
+          "label": "18r"
+        }
+      ]
+    },
+    {
+      "id": "v2-046",
+      "title": "Astronomical Page 47",
+      "filename": "voynich2-046",
+      "filenameHint": null,
+      "topSuggestion": "f50r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f24r",
+          "distance": 14,
+          "label": "24r"
+        },
+        {
+          "ref": "f48r",
+          "distance": 14,
+          "label": "48r"
+        },
+        {
+          "ref": "f65r",
+          "distance": 14,
+          "label": "65r"
+        }
+      ]
+    },
+    {
+      "id": "v2-048",
+      "title": "Astronomical Page 49",
+      "filename": "voynich2-048",
+      "filenameHint": null,
+      "topSuggestion": "f51r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f23r",
+          "distance": 14,
+          "label": "23r"
+        },
+        {
+          "ref": "f95v (part)",
+          "distance": 14,
+          "label": "95v (part)"
+        },
+        {
+          "ref": "f21r",
+          "distance": 16,
+          "label": "21r"
+        }
+      ]
+    },
+    {
+      "id": "v3-000",
+      "title": "Biological Page 1",
+      "filename": "vol3-000",
+      "filenameHint": null,
+      "topSuggestion": "f53v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f54v",
+          "distance": 14,
+          "label": "54v"
+        },
+        {
+          "ref": "f20v",
+          "distance": 16,
+          "label": "20v"
+        },
+        {
+          "ref": "f43v",
+          "distance": 16,
+          "label": "43v"
+        }
+      ]
+    },
+    {
+      "id": "v3-005",
+      "title": "Biological Page 6",
+      "filename": "vol3-005",
+      "filenameHint": null,
+      "topSuggestion": "f56r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f19r",
+          "distance": 16,
+          "label": "19r"
+        },
+        {
+          "ref": "f44r",
+          "distance": 16,
+          "label": "44r"
+        },
+        {
+          "ref": "f13r",
+          "distance": 18,
+          "label": "13r"
+        }
+      ]
+    },
+    {
+      "id": "v3-008",
+      "title": "Biological Page 9",
+      "filename": "vol3-008",
+      "filenameHint": null,
+      "topSuggestion": "f57v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f58v",
+          "distance": 14,
+          "label": "58v"
+        },
+        {
+          "ref": "f65v",
+          "distance": 14,
+          "label": "65v"
+        },
+        {
+          "ref": "f38v",
+          "distance": 16,
+          "label": "38v"
+        }
+      ]
+    },
+    {
+      "id": "v3-016",
+      "title": "Biological Page 17",
+      "filename": "vol3-016",
+      "filenameHint": null,
+      "topSuggestion": "f67v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f106v",
+          "distance": 12,
+          "label": "106v"
+        },
+        {
+          "ref": "f108v",
+          "distance": 12,
+          "label": "108v"
+        },
+        {
+          "ref": "f113v",
+          "distance": 12,
+          "label": "113v"
+        }
+      ]
+    },
+    {
+      "id": "v3-019",
+      "title": "Biological Page 20",
+      "filename": "vol3-019",
+      "filenameHint": null,
+      "topSuggestion": "f69r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f24r",
+          "distance": 14,
+          "label": "24r"
+        },
+        {
+          "ref": "f71r",
+          "distance": 14,
+          "label": "71r"
+        },
+        {
+          "ref": "f84r",
+          "distance": 14,
+          "label": "84r"
+        }
+      ]
+    },
+    {
+      "id": "v3-023",
+      "title": "Biological Page 24",
+      "filename": "vol3-023",
+      "filenameHint": null,
+      "topSuggestion": "f71r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f58r",
+          "distance": 12,
+          "label": "58r"
+        },
+        {
+          "ref": "f73r",
+          "distance": 12,
+          "label": "73r"
+        },
+        {
+          "ref": "f78r",
+          "distance": 12,
+          "label": "78r"
+        }
+      ]
+    },
+    {
+      "id": "v3-034",
+      "title": "Biological Page 35",
+      "filename": "vol3-034",
+      "filenameHint": null,
+      "topSuggestion": "f77v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f76v",
+          "distance": 10,
+          "label": "76v"
+        },
+        {
+          "ref": "f114v",
+          "distance": 10,
+          "label": "114v"
+        },
+        {
+          "ref": "f115v",
+          "distance": 10,
+          "label": "115v"
+        }
+      ]
+    },
+    {
+      "id": "v3-039",
+      "title": "Biological Page 40",
+      "filename": "vol3-039",
+      "filenameHint": null,
+      "topSuggestion": "f80r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f83r",
+          "distance": 10,
+          "label": "83r"
+        },
+        {
+          "ref": "f73r",
+          "distance": 12,
+          "label": "73r"
+        },
+        {
+          "ref": "f76r",
+          "distance": 12,
+          "label": "76r"
+        }
+      ]
+    },
+    {
+      "id": "v3-041",
+      "title": "Biological Page 42",
+      "filename": "vol3-041",
+      "filenameHint": null,
+      "topSuggestion": "f81r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f76r",
+          "distance": 10,
+          "label": "76r"
+        },
+        {
+          "ref": "f77r",
+          "distance": 10,
+          "label": "77r"
+        },
+        {
+          "ref": "f80r",
+          "distance": 12,
+          "label": "80r"
+        }
+      ]
+    },
+    {
+      "id": "v3-047",
+      "title": "Biological Page 48",
+      "filename": "vol3-047",
+      "filenameHint": null,
+      "topSuggestion": "f84r",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f71r",
+          "distance": 10,
+          "label": "71r"
+        },
+        {
+          "ref": "f85r (part)",
+          "distance": 10,
+          "label": "85r (part) (part of 85-86 foldout)"
+        },
+        {
+          "ref": "f24r",
+          "distance": 12,
+          "label": "24r"
+        }
+      ]
+    },
+    {
+      "id": "v3-048",
+      "title": "Biological Page 49",
+      "filename": "vol3-048",
+      "filenameHint": null,
+      "topSuggestion": "f84v",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f115v",
+          "distance": 10,
+          "label": "115v"
+        },
+        {
+          "ref": "f104v",
+          "distance": 12,
+          "label": "104v"
+        },
+        {
+          "ref": "f106v",
+          "distance": 14,
+          "label": "106v"
+        }
+      ]
+    },
+    {
+      "id": "v3-049",
+      "title": "Biological Page 50",
+      "filename": "vol3-049",
+      "filenameHint": null,
+      "topSuggestion": "f85r (part)",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f24r",
+          "distance": 10,
+          "label": "24r"
+        },
+        {
+          "ref": "f21r",
+          "distance": 12,
+          "label": "21r"
+        },
+        {
+          "ref": "f71r",
+          "distance": 12,
+          "label": "71r"
+        }
+      ]
+    },
+    {
+      "id": "v3-051",
+      "title": "Biological Page 52",
+      "filename": "vol3-051",
+      "filenameHint": null,
+      "topSuggestion": "f86v (part)",
+      "distance": 2,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f89v (part)",
+          "distance": 18,
+          "label": "89v (part) and 90r"
+        },
+        {
+          "ref": "f95v",
+          "distance": 18,
+          "label": "95v"
+        },
+        {
+          "ref": "f5v",
+          "distance": 20,
+          "label": "5v"
+        }
+      ]
+    },
+    {
+      "id": "v5-spine",
+      "title": "Book Spine",
+      "filename": "spine",
+      "filenameHint": null,
+      "topSuggestion": "Head",
+      "distance": 0,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "Tail",
+          "distance": 18,
+          "label": "Tail"
+        },
+        {
+          "ref": "f5r",
+          "distance": 20,
+          "label": "5r"
+        },
+        {
+          "ref": "Front cover",
+          "distance": 22,
+          "label": "Front cover"
+        }
+      ]
+    },
+    {
+      "id": "v5-back-cover",
+      "title": "Back Cover",
+      "filename": "back-cover",
+      "filenameHint": null,
+      "topSuggestion": "Tail",
+      "distance": 0,
+      "confidence": "high",
+      "alternates": [
+        {
+          "ref": "f112r",
+          "distance": 18,
+          "label": "112r"
+        },
+        {
+          "ref": "f113r",
+          "distance": 18,
+          "label": "113r"
+        },
+        {
+          "ref": "Back flyleaf recto",
+          "distance": 18,
+          "label": "Back flyleaf recto"
+        }
+      ]
+    }
+  ]
+}

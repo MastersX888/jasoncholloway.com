@@ -41,9 +41,36 @@ const related = [
   { href: "/field-notes/oscar-01", label: "Oscar-01: Missouri's Cold War Launch Room", theme: "Beneath Kansas City" },
 ];
 
+const GBS_VIDEO_ID = "b1YDufouqbY";
+const GBS_VIDEO_URL = `https://www.youtube.com/watch?v=${GBS_VIDEO_ID}`;
+const GBS_EMBED_URL = `https://www.youtube-nocookie.com/embed/${GBS_VIDEO_ID}`;
+
+const videoJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "The Hidden Metropolis Beneath Kansas City",
+  description:
+    "Great Big Story documentary on SubTropolis — the world's largest underground business complex, 150 feet beneath Kansas City, Missouri.",
+  thumbnailUrl: "https://jasoncholloway.com/og/field-notes/subtropolis.png",
+  uploadDate: "2015-11-04",
+  duration: "PT1M37S",
+  embedUrl: GBS_EMBED_URL,
+  contentUrl: GBS_VIDEO_URL,
+  publisher: {
+    "@type": "Organization",
+    name: "Great Big Story",
+    url: "https://www.youtube.com/@GreatBigStory",
+  },
+};
+
 export default function SubTropolisNote() {
   return (
-    <FieldNoteLayout
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoJsonLd) }}
+      />
+      <FieldNoteLayout
       slug="subtropolis"
       title="SubTropolis: The Underground City Beneath Kansas City"
       titleTag="SubTropolis: The Underground City Beneath Kansas City"
@@ -52,17 +79,41 @@ export default function SubTropolisNote() {
       record={
         <>
           <div style={{ marginBottom: "2rem" }}>
-            <video 
-              controls 
-              width="100%" 
-              poster="/og/field-notes/subtropolis.png"
-              style={{ borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)", backgroundColor: "black" }}
+            <div
+              style={{
+                position: "relative",
+                paddingBottom: "56.25%",
+                height: 0,
+                overflow: "hidden",
+                borderRadius: "var(--r-lg)",
+                border: "1px solid var(--border-faint)",
+                backgroundColor: "black",
+              }}
             >
-              <source src="/media/THE_CITY_BENEATH_KANSAS_CITY.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <p style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginTop: "0.5rem", fontStyle: "italic" }}>
-              The City Beneath the City — A documentary short exploring the history of SubTropolis. (Runtime: 4.5m)
+              <iframe
+                src={GBS_EMBED_URL}
+                title="The Hidden Metropolis Beneath Kansas City — Great Big Story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                loading="lazy"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  height: "100%",
+                  border: 0,
+                }}
+              />
+            </div>
+            <p style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginTop: "0.5rem", fontStyle: "italic", lineHeight: 1.6 }}>
+              The City Beneath the City — documentary short on SubTropolis (1:37). Source:{" "}
+              <a href={GBS_VIDEO_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>
+                Great Big Story
+              </a>
+              {" — "}
+              <em>The Hidden Metropolis Beneath Kansas City</em>
             </p>
           </div>
           <p className="fn-body">
@@ -120,5 +171,6 @@ export default function SubTropolisNote() {
       faqs={faqs}
       relatedNotes={related}
     />
+    </>
   );
 }

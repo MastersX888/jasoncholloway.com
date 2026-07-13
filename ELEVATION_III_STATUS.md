@@ -24,8 +24,8 @@
 
 - Bookshop.org affiliate ID for direct product URLs (ISBN search URLs retained; HEAD returns 403 from automated requests)
 - IngramSpark EPUB description: "sixteen" → "seventeen-novel corpus" (ISBN 9798295778926) — fix in IngramSpark dashboard
-- Visual folio verification for remaining ~164 beineckeRef rows in `lib/folios.json`
-- E: drive asset copy: `/media/THE_CITY_BENEATH_KANSAS_CITY.mp4` (SubTropolis field note video)
+- ~~Visual folio verification~~ — **complete**: 166/166 Voynich rows have `beineckeRef` in `lib/folios.json` (130 distance-0 auto + 34 distance-2 finish + `v3-052` corrected to `f85v-86r`)
+- E: drive asset copy: `/media/THE_CITY_BENEATH_KANSAS_CITY.mp4` — **resolved**: SubTropolis field note now embeds Great Big Story YouTube (`b1YDufouqbY`) with attribution + VideoObject JSON-LD
 
 ## Asset Status
 
@@ -47,11 +47,11 @@
 
 ### Missing from public/ — search E: drive
 
-- `/media/THE_CITY_BENEATH_KANSAS_CITY.mp4` — SubTropolis documentary short (referenced in `app/field-notes/subtropolis/page.tsx`)
+_(none blocking — SubTropolis video served via YouTube embed)_
 
 ### [NEEDS AUTHOR] — cannot resolve without E: drive access
 
-- `/media/THE_CITY_BENEATH_KANSAS_CITY.mp4` — author must copy from E: drive to `public/media/`
+_(SubTropolis MP4 no longer required)_
 
 ## JSON-LD · [NEEDS AUTHOR] — unverified sameAs URLs
 

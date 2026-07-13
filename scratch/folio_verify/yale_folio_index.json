@@ -1,0 +1,1280 @@
+[
+  {
+    "label": "['[Front cover]']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006074/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006074/full/!800,800/0/default.jpg",
+    "oid": "1006074"
+  },
+  {
+    "label": "['[Inside front cover]']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006075/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006075/full/!800,800/0/default.jpg",
+    "oid": "1006075"
+  },
+  {
+    "label": "['1r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006076/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006076/full/!800,800/0/default.jpg",
+    "oid": "1006076"
+  },
+  {
+    "label": "['1v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006077/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006077/full/!800,800/0/default.jpg",
+    "oid": "1006077"
+  },
+  {
+    "label": "['2r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006078/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006078/full/!800,800/0/default.jpg",
+    "oid": "1006078"
+  },
+  {
+    "label": "['2v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006079/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006079/full/!800,800/0/default.jpg",
+    "oid": "1006079"
+  },
+  {
+    "label": "['3r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006080/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006080/full/!800,800/0/default.jpg",
+    "oid": "1006080"
+  },
+  {
+    "label": "['3v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006081/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006081/full/!800,800/0/default.jpg",
+    "oid": "1006081"
+  },
+  {
+    "label": "['4r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006082/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006082/full/!800,800/0/default.jpg",
+    "oid": "1006082"
+  },
+  {
+    "label": "['4v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006083/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006083/full/!800,800/0/default.jpg",
+    "oid": "1006083"
+  },
+  {
+    "label": "['5r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006084/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006084/full/!800,800/0/default.jpg",
+    "oid": "1006084"
+  },
+  {
+    "label": "['5v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006085/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006085/full/!800,800/0/default.jpg",
+    "oid": "1006085"
+  },
+  {
+    "label": "['6r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006086/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006086/full/!800,800/0/default.jpg",
+    "oid": "1006086"
+  },
+  {
+    "label": "['6v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006087/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006087/full/!800,800/0/default.jpg",
+    "oid": "1006087"
+  },
+  {
+    "label": "['7r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006088/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006088/full/!800,800/0/default.jpg",
+    "oid": "1006088"
+  },
+  {
+    "label": "['7v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006089/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006089/full/!800,800/0/default.jpg",
+    "oid": "1006089"
+  },
+  {
+    "label": "['8r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006090/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006090/full/!800,800/0/default.jpg",
+    "oid": "1006090"
+  },
+  {
+    "label": "['8v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006091/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006091/full/!800,800/0/default.jpg",
+    "oid": "1006091"
+  },
+  {
+    "label": "['9r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006092/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006092/full/!800,800/0/default.jpg",
+    "oid": "1006092"
+  },
+  {
+    "label": "['9v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006093/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006093/full/!800,800/0/default.jpg",
+    "oid": "1006093"
+  },
+  {
+    "label": "['10r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006094/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006094/full/!800,800/0/default.jpg",
+    "oid": "1006094"
+  },
+  {
+    "label": "['10v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006095/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006095/full/!800,800/0/default.jpg",
+    "oid": "1006095"
+  },
+  {
+    "label": "['11r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006096/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006096/full/!800,800/0/default.jpg",
+    "oid": "1006096"
+  },
+  {
+    "label": "['11v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006097/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006097/full/!800,800/0/default.jpg",
+    "oid": "1006097"
+  },
+  {
+    "label": "['13r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006098/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006098/full/!800,800/0/default.jpg",
+    "oid": "1006098"
+  },
+  {
+    "label": "['13v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006099/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006099/full/!800,800/0/default.jpg",
+    "oid": "1006099"
+  },
+  {
+    "label": "['14r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006100/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006100/full/!800,800/0/default.jpg",
+    "oid": "1006100"
+  },
+  {
+    "label": "['14v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006101/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006101/full/!800,800/0/default.jpg",
+    "oid": "1006101"
+  },
+  {
+    "label": "['15r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006102/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006102/full/!800,800/0/default.jpg",
+    "oid": "1006102"
+  },
+  {
+    "label": "['15v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006103/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006103/full/!800,800/0/default.jpg",
+    "oid": "1006103"
+  },
+  {
+    "label": "['16r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006104/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006104/full/!800,800/0/default.jpg",
+    "oid": "1006104"
+  },
+  {
+    "label": "['16v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006105/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006105/full/!800,800/0/default.jpg",
+    "oid": "1006105"
+  },
+  {
+    "label": "['17r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006106/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006106/full/!800,800/0/default.jpg",
+    "oid": "1006106"
+  },
+  {
+    "label": "['17v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006107/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006107/full/!800,800/0/default.jpg",
+    "oid": "1006107"
+  },
+  {
+    "label": "['18r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006108/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006108/full/!800,800/0/default.jpg",
+    "oid": "1006108"
+  },
+  {
+    "label": "['18v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006109/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006109/full/!800,800/0/default.jpg",
+    "oid": "1006109"
+  },
+  {
+    "label": "['19r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006110/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006110/full/!800,800/0/default.jpg",
+    "oid": "1006110"
+  },
+  {
+    "label": "['19v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006111/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006111/full/!800,800/0/default.jpg",
+    "oid": "1006111"
+  },
+  {
+    "label": "['20r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006112/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006112/full/!800,800/0/default.jpg",
+    "oid": "1006112"
+  },
+  {
+    "label": "['20v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006113/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006113/full/!800,800/0/default.jpg",
+    "oid": "1006113"
+  },
+  {
+    "label": "['21r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006114/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006114/full/!800,800/0/default.jpg",
+    "oid": "1006114"
+  },
+  {
+    "label": "['21v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006115/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006115/full/!800,800/0/default.jpg",
+    "oid": "1006115"
+  },
+  {
+    "label": "['22r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006116/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006116/full/!800,800/0/default.jpg",
+    "oid": "1006116"
+  },
+  {
+    "label": "['22v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006117/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006117/full/!800,800/0/default.jpg",
+    "oid": "1006117"
+  },
+  {
+    "label": "['23r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006118/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006118/full/!800,800/0/default.jpg",
+    "oid": "1006118"
+  },
+  {
+    "label": "['23v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006119/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006119/full/!800,800/0/default.jpg",
+    "oid": "1006119"
+  },
+  {
+    "label": "['24r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006120/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006120/full/!800,800/0/default.jpg",
+    "oid": "1006120"
+  },
+  {
+    "label": "['24v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006121/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006121/full/!800,800/0/default.jpg",
+    "oid": "1006121"
+  },
+  {
+    "label": "['25r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006122/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006122/full/!800,800/0/default.jpg",
+    "oid": "1006122"
+  },
+  {
+    "label": "['25v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006123/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006123/full/!800,800/0/default.jpg",
+    "oid": "1006123"
+  },
+  {
+    "label": "['26r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006124/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006124/full/!800,800/0/default.jpg",
+    "oid": "1006124"
+  },
+  {
+    "label": "['26v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006125/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006125/full/!800,800/0/default.jpg",
+    "oid": "1006125"
+  },
+  {
+    "label": "['27r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006126/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006126/full/!800,800/0/default.jpg",
+    "oid": "1006126"
+  },
+  {
+    "label": "['27v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006127/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006127/full/!800,800/0/default.jpg",
+    "oid": "1006127"
+  },
+  {
+    "label": "['28r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006128/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006128/full/!800,800/0/default.jpg",
+    "oid": "1006128"
+  },
+  {
+    "label": "['28v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006129/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006129/full/!800,800/0/default.jpg",
+    "oid": "1006129"
+  },
+  {
+    "label": "['29r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006130/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006130/full/!800,800/0/default.jpg",
+    "oid": "1006130"
+  },
+  {
+    "label": "['29v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006131/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006131/full/!800,800/0/default.jpg",
+    "oid": "1006131"
+  },
+  {
+    "label": "['30r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006132/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006132/full/!800,800/0/default.jpg",
+    "oid": "1006132"
+  },
+  {
+    "label": "['30v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006133/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006133/full/!800,800/0/default.jpg",
+    "oid": "1006133"
+  },
+  {
+    "label": "['31r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006134/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006134/full/!800,800/0/default.jpg",
+    "oid": "1006134"
+  },
+  {
+    "label": "['31v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006135/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006135/full/!800,800/0/default.jpg",
+    "oid": "1006135"
+  },
+  {
+    "label": "['32r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006136/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006136/full/!800,800/0/default.jpg",
+    "oid": "1006136"
+  },
+  {
+    "label": "['32v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006137/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006137/full/!800,800/0/default.jpg",
+    "oid": "1006137"
+  },
+  {
+    "label": "['33r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006138/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006138/full/!800,800/0/default.jpg",
+    "oid": "1006138"
+  },
+  {
+    "label": "['33v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006139/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006139/full/!800,800/0/default.jpg",
+    "oid": "1006139"
+  },
+  {
+    "label": "['34r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006140/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006140/full/!800,800/0/default.jpg",
+    "oid": "1006140"
+  },
+  {
+    "label": "['34v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006141/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006141/full/!800,800/0/default.jpg",
+    "oid": "1006141"
+  },
+  {
+    "label": "['35r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006142/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006142/full/!800,800/0/default.jpg",
+    "oid": "1006142"
+  },
+  {
+    "label": "['35v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006143/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006143/full/!800,800/0/default.jpg",
+    "oid": "1006143"
+  },
+  {
+    "label": "['36r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006144/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006144/full/!800,800/0/default.jpg",
+    "oid": "1006144"
+  },
+  {
+    "label": "['36v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006145/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006145/full/!800,800/0/default.jpg",
+    "oid": "1006145"
+  },
+  {
+    "label": "['37r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006146/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006146/full/!800,800/0/default.jpg",
+    "oid": "1006146"
+  },
+  {
+    "label": "['37v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006147/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006147/full/!800,800/0/default.jpg",
+    "oid": "1006147"
+  },
+  {
+    "label": "['38r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006148/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006148/full/!800,800/0/default.jpg",
+    "oid": "1006148"
+  },
+  {
+    "label": "['38v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006149/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006149/full/!800,800/0/default.jpg",
+    "oid": "1006149"
+  },
+  {
+    "label": "['39r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006150/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006150/full/!800,800/0/default.jpg",
+    "oid": "1006150"
+  },
+  {
+    "label": "['39v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006151/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006151/full/!800,800/0/default.jpg",
+    "oid": "1006151"
+  },
+  {
+    "label": "['40r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006152/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006152/full/!800,800/0/default.jpg",
+    "oid": "1006152"
+  },
+  {
+    "label": "['40v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006153/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006153/full/!800,800/0/default.jpg",
+    "oid": "1006153"
+  },
+  {
+    "label": "['41r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006154/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006154/full/!800,800/0/default.jpg",
+    "oid": "1006154"
+  },
+  {
+    "label": "['41v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006155/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006155/full/!800,800/0/default.jpg",
+    "oid": "1006155"
+  },
+  {
+    "label": "['42r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006156/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006156/full/!800,800/0/default.jpg",
+    "oid": "1006156"
+  },
+  {
+    "label": "['42v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006157/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006157/full/!800,800/0/default.jpg",
+    "oid": "1006157"
+  },
+  {
+    "label": "['43r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006158/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006158/full/!800,800/0/default.jpg",
+    "oid": "1006158"
+  },
+  {
+    "label": "['43v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006159/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006159/full/!800,800/0/default.jpg",
+    "oid": "1006159"
+  },
+  {
+    "label": "['44r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006160/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006160/full/!800,800/0/default.jpg",
+    "oid": "1006160"
+  },
+  {
+    "label": "['44v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006161/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006161/full/!800,800/0/default.jpg",
+    "oid": "1006161"
+  },
+  {
+    "label": "['45r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006162/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006162/full/!800,800/0/default.jpg",
+    "oid": "1006162"
+  },
+  {
+    "label": "['45v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006163/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006163/full/!800,800/0/default.jpg",
+    "oid": "1006163"
+  },
+  {
+    "label": "['46r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006164/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006164/full/!800,800/0/default.jpg",
+    "oid": "1006164"
+  },
+  {
+    "label": "['46v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006165/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006165/full/!800,800/0/default.jpg",
+    "oid": "1006165"
+  },
+  {
+    "label": "['47r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006166/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006166/full/!800,800/0/default.jpg",
+    "oid": "1006166"
+  },
+  {
+    "label": "['47v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006167/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006167/full/!800,800/0/default.jpg",
+    "oid": "1006167"
+  },
+  {
+    "label": "['48r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006168/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006168/full/!800,800/0/default.jpg",
+    "oid": "1006168"
+  },
+  {
+    "label": "['48v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006169/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006169/full/!800,800/0/default.jpg",
+    "oid": "1006169"
+  },
+  {
+    "label": "['49r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006170/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006170/full/!800,800/0/default.jpg",
+    "oid": "1006170"
+  },
+  {
+    "label": "['49v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006171/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006171/full/!800,800/0/default.jpg",
+    "oid": "1006171"
+  },
+  {
+    "label": "['50r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006172/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006172/full/!800,800/0/default.jpg",
+    "oid": "1006172"
+  },
+  {
+    "label": "['50v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006173/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006173/full/!800,800/0/default.jpg",
+    "oid": "1006173"
+  },
+  {
+    "label": "['51r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006174/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006174/full/!800,800/0/default.jpg",
+    "oid": "1006174"
+  },
+  {
+    "label": "['51v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006175/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006175/full/!800,800/0/default.jpg",
+    "oid": "1006175"
+  },
+  {
+    "label": "['52r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006176/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006176/full/!800,800/0/default.jpg",
+    "oid": "1006176"
+  },
+  {
+    "label": "['52v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006177/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006177/full/!800,800/0/default.jpg",
+    "oid": "1006177"
+  },
+  {
+    "label": "['53r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006178/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006178/full/!800,800/0/default.jpg",
+    "oid": "1006178"
+  },
+  {
+    "label": "['53v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006179/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006179/full/!800,800/0/default.jpg",
+    "oid": "1006179"
+  },
+  {
+    "label": "['54r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006180/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006180/full/!800,800/0/default.jpg",
+    "oid": "1006180"
+  },
+  {
+    "label": "['54v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006181/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006181/full/!800,800/0/default.jpg",
+    "oid": "1006181"
+  },
+  {
+    "label": "['55r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006182/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006182/full/!800,800/0/default.jpg",
+    "oid": "1006182"
+  },
+  {
+    "label": "['55v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006183/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006183/full/!800,800/0/default.jpg",
+    "oid": "1006183"
+  },
+  {
+    "label": "['56r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006184/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006184/full/!800,800/0/default.jpg",
+    "oid": "1006184"
+  },
+  {
+    "label": "['56v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006185/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006185/full/!800,800/0/default.jpg",
+    "oid": "1006185"
+  },
+  {
+    "label": "['57r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006186/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006186/full/!800,800/0/default.jpg",
+    "oid": "1006186"
+  },
+  {
+    "label": "['57v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006187/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006187/full/!800,800/0/default.jpg",
+    "oid": "1006187"
+  },
+  {
+    "label": "['58r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006188/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006188/full/!800,800/0/default.jpg",
+    "oid": "1006188"
+  },
+  {
+    "label": "['58v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006189/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006189/full/!800,800/0/default.jpg",
+    "oid": "1006189"
+  },
+  {
+    "label": "['65r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006190/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006190/full/!800,800/0/default.jpg",
+    "oid": "1006190"
+  },
+  {
+    "label": "['65v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006191/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006191/full/!800,800/0/default.jpg",
+    "oid": "1006191"
+  },
+  {
+    "label": "['66r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006192/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006192/full/!800,800/0/default.jpg",
+    "oid": "1006192"
+  },
+  {
+    "label": "['66v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006193/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006193/full/!800,800/0/default.jpg",
+    "oid": "1006193"
+  },
+  {
+    "label": "['67r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006194/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006194/full/!800,800/0/default.jpg",
+    "oid": "1006194"
+  },
+  {
+    "label": "['67v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006195/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006195/full/!800,800/0/default.jpg",
+    "oid": "1006195"
+  },
+  {
+    "label": "['68r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006196/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006196/full/!800,800/0/default.jpg",
+    "oid": "1006196"
+  },
+  {
+    "label": "['68v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006197/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006197/full/!800,800/0/default.jpg",
+    "oid": "1006197"
+  },
+  {
+    "label": "['69r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006198/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006198/full/!800,800/0/default.jpg",
+    "oid": "1006198"
+  },
+  {
+    "label": "['69v and 70r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006199/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006199/full/!800,800/0/default.jpg",
+    "oid": "1006199"
+  },
+  {
+    "label": "['70v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006200/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006200/full/!800,800/0/default.jpg",
+    "oid": "1006200"
+  },
+  {
+    "label": "['70v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006201/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006201/full/!800,800/0/default.jpg",
+    "oid": "1006201"
+  },
+  {
+    "label": "['71r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006202/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006202/full/!800,800/0/default.jpg",
+    "oid": "1006202"
+  },
+  {
+    "label": "['71v and 72r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006203/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006203/full/!800,800/0/default.jpg",
+    "oid": "1006203"
+  },
+  {
+    "label": "['72v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006204/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006204/full/!800,800/0/default.jpg",
+    "oid": "1006204"
+  },
+  {
+    "label": "['72v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006205/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006205/full/!800,800/0/default.jpg",
+    "oid": "1006205"
+  },
+  {
+    "label": "['73r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006206/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006206/full/!800,800/0/default.jpg",
+    "oid": "1006206"
+  },
+  {
+    "label": "['73v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006207/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006207/full/!800,800/0/default.jpg",
+    "oid": "1006207"
+  },
+  {
+    "label": "['75r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006208/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006208/full/!800,800/0/default.jpg",
+    "oid": "1006208"
+  },
+  {
+    "label": "['75v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006209/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006209/full/!800,800/0/default.jpg",
+    "oid": "1006209"
+  },
+  {
+    "label": "['76r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006210/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006210/full/!800,800/0/default.jpg",
+    "oid": "1006210"
+  },
+  {
+    "label": "['76v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006211/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006211/full/!800,800/0/default.jpg",
+    "oid": "1006211"
+  },
+  {
+    "label": "['77r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006212/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006212/full/!800,800/0/default.jpg",
+    "oid": "1006212"
+  },
+  {
+    "label": "['77v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006213/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006213/full/!800,800/0/default.jpg",
+    "oid": "1006213"
+  },
+  {
+    "label": "['78r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006214/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006214/full/!800,800/0/default.jpg",
+    "oid": "1006214"
+  },
+  {
+    "label": "['78v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006215/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006215/full/!800,800/0/default.jpg",
+    "oid": "1006215"
+  },
+  {
+    "label": "['79r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006216/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006216/full/!800,800/0/default.jpg",
+    "oid": "1006216"
+  },
+  {
+    "label": "['79v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006217/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006217/full/!800,800/0/default.jpg",
+    "oid": "1006217"
+  },
+  {
+    "label": "['80r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006218/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006218/full/!800,800/0/default.jpg",
+    "oid": "1006218"
+  },
+  {
+    "label": "['80v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006219/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006219/full/!800,800/0/default.jpg",
+    "oid": "1006219"
+  },
+  {
+    "label": "['81r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006220/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006220/full/!800,800/0/default.jpg",
+    "oid": "1006220"
+  },
+  {
+    "label": "['81v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006221/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006221/full/!800,800/0/default.jpg",
+    "oid": "1006221"
+  },
+  {
+    "label": "['82r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006222/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006222/full/!800,800/0/default.jpg",
+    "oid": "1006222"
+  },
+  {
+    "label": "['82v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006223/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006223/full/!800,800/0/default.jpg",
+    "oid": "1006223"
+  },
+  {
+    "label": "['83r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006224/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006224/full/!800,800/0/default.jpg",
+    "oid": "1006224"
+  },
+  {
+    "label": "['83v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006225/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006225/full/!800,800/0/default.jpg",
+    "oid": "1006225"
+  },
+  {
+    "label": "['84r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006226/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006226/full/!800,800/0/default.jpg",
+    "oid": "1006226"
+  },
+  {
+    "label": "['84v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006227/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006227/full/!800,800/0/default.jpg",
+    "oid": "1006227"
+  },
+  {
+    "label": "['85r (part) (part of 85-86 foldout)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006228/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006228/full/!800,800/0/default.jpg",
+    "oid": "1006228"
+  },
+  {
+    "label": "['85r (part) 86v (part) (part of 85-86 foldout)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006229/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006229/full/!800,800/0/default.jpg",
+    "oid": "1006229"
+  },
+  {
+    "label": "['86v (part) (part of 85-86 foldout)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006230/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006230/full/!800,800/0/default.jpg",
+    "oid": "1006230"
+  },
+  {
+    "label": "['85v and 86r (foldout)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006231/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006231/full/!800,800/0/default.jpg",
+    "oid": "1006231"
+  },
+  {
+    "label": "['87r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006232/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006232/full/!800,800/0/default.jpg",
+    "oid": "1006232"
+  },
+  {
+    "label": "['87v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1043429/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1043429/full/!800,800/0/default.jpg",
+    "oid": "1043429"
+  },
+  {
+    "label": "['88r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1037112/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1037112/full/!800,800/0/default.jpg",
+    "oid": "1037112"
+  },
+  {
+    "label": "['88v and 89r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006233/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006233/full/!800,800/0/default.jpg",
+    "oid": "1006233"
+  },
+  {
+    "label": "['89v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006234/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006234/full/!800,800/0/default.jpg",
+    "oid": "1006234"
+  },
+  {
+    "label": "['89v (part) and 90r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006235/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006235/full/!800,800/0/default.jpg",
+    "oid": "1006235"
+  },
+  {
+    "label": "['90r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006236/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006236/full/!800,800/0/default.jpg",
+    "oid": "1006236"
+  },
+  {
+    "label": "['90v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006237/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006237/full/!800,800/0/default.jpg",
+    "oid": "1006237"
+  },
+  {
+    "label": "['93r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006238/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006238/full/!800,800/0/default.jpg",
+    "oid": "1006238"
+  },
+  {
+    "label": "['93v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006239/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006239/full/!800,800/0/default.jpg",
+    "oid": "1006239"
+  },
+  {
+    "label": "['94r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006240/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006240/full/!800,800/0/default.jpg",
+    "oid": "1006240"
+  },
+  {
+    "label": "['94v and 95r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006241/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006241/full/!800,800/0/default.jpg",
+    "oid": "1006241"
+  },
+  {
+    "label": "['95v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006242/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006242/full/!800,800/0/default.jpg",
+    "oid": "1006242"
+  },
+  {
+    "label": "['95v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006243/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006243/full/!800,800/0/default.jpg",
+    "oid": "1006243"
+  },
+  {
+    "label": "['96r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006244/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006244/full/!800,800/0/default.jpg",
+    "oid": "1006244"
+  },
+  {
+    "label": "['96v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006245/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006245/full/!800,800/0/default.jpg",
+    "oid": "1006245"
+  },
+  {
+    "label": "['99r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006246/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006246/full/!800,800/0/default.jpg",
+    "oid": "1006246"
+  },
+  {
+    "label": "['99v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006247/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006247/full/!800,800/0/default.jpg",
+    "oid": "1006247"
+  },
+  {
+    "label": "['100r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006248/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006248/full/!800,800/0/default.jpg",
+    "oid": "1006248"
+  },
+  {
+    "label": "['100v and 101r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006249/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006249/full/!800,800/0/default.jpg",
+    "oid": "1006249"
+  },
+  {
+    "label": "['101v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006250/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006250/full/!800,800/0/default.jpg",
+    "oid": "1006250"
+  },
+  {
+    "label": "['101v (part) and 102r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006251/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006251/full/!800,800/0/default.jpg",
+    "oid": "1006251"
+  },
+  {
+    "label": "['102v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006252/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006252/full/!800,800/0/default.jpg",
+    "oid": "1006252"
+  },
+  {
+    "label": "['102v (part)']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006253/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006253/full/!800,800/0/default.jpg",
+    "oid": "1006253"
+  },
+  {
+    "label": "['103r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006254/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006254/full/!800,800/0/default.jpg",
+    "oid": "1006254"
+  },
+  {
+    "label": "['103v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006255/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006255/full/!800,800/0/default.jpg",
+    "oid": "1006255"
+  },
+  {
+    "label": "['104r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006256/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006256/full/!800,800/0/default.jpg",
+    "oid": "1006256"
+  },
+  {
+    "label": "['104v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006257/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006257/full/!800,800/0/default.jpg",
+    "oid": "1006257"
+  },
+  {
+    "label": "['105r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006258/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006258/full/!800,800/0/default.jpg",
+    "oid": "1006258"
+  },
+  {
+    "label": "['105v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006259/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006259/full/!800,800/0/default.jpg",
+    "oid": "1006259"
+  },
+  {
+    "label": "['106r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006260/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006260/full/!800,800/0/default.jpg",
+    "oid": "1006260"
+  },
+  {
+    "label": "['106v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006261/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006261/full/!800,800/0/default.jpg",
+    "oid": "1006261"
+  },
+  {
+    "label": "['107r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006262/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006262/full/!800,800/0/default.jpg",
+    "oid": "1006262"
+  },
+  {
+    "label": "['107v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006263/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006263/full/!800,800/0/default.jpg",
+    "oid": "1006263"
+  },
+  {
+    "label": "['108r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006264/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006264/full/!800,800/0/default.jpg",
+    "oid": "1006264"
+  },
+  {
+    "label": "['108v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006265/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006265/full/!800,800/0/default.jpg",
+    "oid": "1006265"
+  },
+  {
+    "label": "['111r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006266/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006266/full/!800,800/0/default.jpg",
+    "oid": "1006266"
+  },
+  {
+    "label": "['111v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006267/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006267/full/!800,800/0/default.jpg",
+    "oid": "1006267"
+  },
+  {
+    "label": "['112r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006268/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006268/full/!800,800/0/default.jpg",
+    "oid": "1006268"
+  },
+  {
+    "label": "['112v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006269/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006269/full/!800,800/0/default.jpg",
+    "oid": "1006269"
+  },
+  {
+    "label": "['113r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006270/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006270/full/!800,800/0/default.jpg",
+    "oid": "1006270"
+  },
+  {
+    "label": "['113v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006271/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006271/full/!800,800/0/default.jpg",
+    "oid": "1006271"
+  },
+  {
+    "label": "['114r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006272/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006272/full/!800,800/0/default.jpg",
+    "oid": "1006272"
+  },
+  {
+    "label": "['114v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006273/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006273/full/!800,800/0/default.jpg",
+    "oid": "1006273"
+  },
+  {
+    "label": "['115r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006274/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006274/full/!800,800/0/default.jpg",
+    "oid": "1006274"
+  },
+  {
+    "label": "['115v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006275/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006275/full/!800,800/0/default.jpg",
+    "oid": "1006275"
+  },
+  {
+    "label": "['116r']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006276/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006276/full/!800,800/0/default.jpg",
+    "oid": "1006276"
+  },
+  {
+    "label": "['116v']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006277/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006277/full/!800,800/0/default.jpg",
+    "oid": "1006277"
+  },
+  {
+    "label": "['[Back flyleaf recto]']",
+    "image": "https://collections.library.yale.edu/iiif/2/1037113/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1037113/full/!800,800/0/default.jpg",
+    "oid": "1037113"
+  },
+  {
+    "label": "['[Back flyleaf verso-inside back cover]']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006278/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006278/full/!800,800/0/default.jpg",
+    "oid": "1006278"
+  },
+  {
+    "label": "['[Head]']",
+    "image": "https://collections.library.yale.edu/iiif/2/11868207/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/11868207/full/!800,800/0/default.jpg",
+    "oid": "11868207"
+  },
+  {
+    "label": "['[Tail]']",
+    "image": "https://collections.library.yale.edu/iiif/2/11868208/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/11868208/full/!800,800/0/default.jpg",
+    "oid": "11868208"
+  },
+  {
+    "label": "['[Fore-edge]']",
+    "image": "https://collections.library.yale.edu/iiif/2/11868209/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/11868209/full/!800,800/0/default.jpg",
+    "oid": "11868209"
+  },
+  {
+    "label": "['[Spine]']",
+    "image": "https://collections.library.yale.edu/iiif/2/11868210/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/11868210/full/!800,800/0/default.jpg",
+    "oid": "11868210"
+  },
+  {
+    "label": "['[Back cover]']",
+    "image": "https://collections.library.yale.edu/iiif/2/1006279/full/full/0/default.jpg",
+    "thumb": "https://collections.library.yale.edu/iiif/2/1006279/full/!800,800/0/default.jpg",
+    "oid": "1006279"
+  }
+]

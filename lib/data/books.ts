@@ -29,6 +29,9 @@ export interface Book {
   price_pb_is?: string;
   price_hc_msrp?: string;
   price_pb_msrp?: string;
+  interior?: string;
+  laminatePB?: string;
+  laminateHC?: string;
   pageCount: number;
   pageCountPB?: number;
   pageCountHC?: number;
@@ -59,6 +62,9 @@ export const books: Book[] = [
     price_pb_msrp: "18.99",
     price_hc_is: "29.99",
     price_hc_msrp: "33.99",
+    interior: "B&W · Creme paper",
+    laminateHC: "Matte",
+    laminatePB: "Matte",
     pageCount: 178,
     pageCountPB: 178,
     pageCountHC: 156,
@@ -95,6 +101,9 @@ export const books: Book[] = [
     price_pb_msrp: "18.99",
     price_hc_is: "29.99",
     price_hc_msrp: "33.99",
+    interior: "B&W · Creme paper",
+    laminateHC: "Matte",
+    laminatePB: "Matte",
     pageCount: 260,
     pageCountPB: 260,
     pageCountHC: 218,
@@ -131,6 +140,9 @@ export const books: Book[] = [
     price_pb_msrp: "18.99",
     price_hc_is: "29.99",
     price_hc_msrp: "33.99",
+    interior: "B&W · Creme paper",
+    laminateHC: "Matte",
+    laminatePB: "Matte",
     pageCount: 200,
     pageCountPB: 200,
     pageCountHC: 170,
@@ -164,6 +176,7 @@ export const books: Book[] = [
     price_hc_msrp: "49.99",
     price_pb_is: "32.99",
     price_pb_msrp: "36.99",
+    interior: "B&W · Creme paper",
     pageCount: 686,
     pageCountHC: 686,
     pageCountPB: 734,
@@ -196,6 +209,7 @@ export const books: Book[] = [
     price_pb_msrp: "14.99",
     price_hc_is: "24.99",
     price_hc_msrp: "29.99",
+    interior: "B&W · Creme paper",
     pageCount: 84,
     pageCountPB: 84,
     pageCountHC: 84,

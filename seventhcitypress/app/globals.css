@@ -1,42 +1,36 @@
-/* ─── IMPRINT REGISTER — daylight professional ──────────────── */
+/* ─── IMPRINT REGISTER — v1.1 structured daylight ───────────── */
 :root {
-  /* Colors */
-  --bg:           #FAFAF8;
-  --bg-surface:   #F4F1EB;
-  --bg-raised:    #EDEAE3;
-  --bg-elevated:  #E5E1DA;
-  --border:       #D0CCC4;
-  --border-faint: #E2DFD8;
-
-  --ink:          #1C1C2E;
-  --gold:         #4A3F2E;
+  --bg:           #F7F4EF;
+  --bg-surface:   #EFEBE3;
+  --bg-raised:    #E8E3D9;
+  --bg-elevated:  #DDD8CC;
+  --border:       #AFA894;
+  --border-faint: #D8D3C8;
+  --ink:          #1C1A17;
+  --ink-dim:      #3D3A34;
+  --accent:       #1F3A5F;
+  --accent-hover: #16293F;
+  --header-bg:    #1C1A17;
+  --header-text:  #F7F4EF;
+  --text:         #1C1A17;
+  --text-muted:   #4A4740;
+  --text-faint:   #7A766E;
+  --gold:         #8B7355;
   --gold-dim:     #6B5F4A;
-  --gold-glow:    rgba(74, 63, 46, 0.06);
-  --cyan:         #1C1C2E;
-  --cyan-dim:     #3D3D52;
+  --gold-glow:    rgba(139, 115, 85, 0.06);
+  --cyan:         #1F3A5F;
+  --cyan-dim:     #16293F;
   --cyan-glow:    transparent;
-
-  --text:         #1A1A24;
-  --text-muted:   #45455A;
-  --text-faint:   #5E5E72;
-  --text-gold:    #4A3F2E;
-  --text-cyan:    #1C1C2E;
-
-  /* Typography */
-  --font-display: var(--font-eb-garamond), var(--font-cormorant), Georgia, serif;
-  --font-body:    var(--font-inter), system-ui, sans-serif;
+  --text-gold:    #8B7355;
+  --text-cyan:    #1F3A5F;
+  --font-display: var(--font-eb-garamond), Georgia, serif;
+  --font-body:    var(--font-eb-garamond), Georgia, serif;
   --font-mono:    var(--font-jetbrains-mono), monospace;
-
-  /* Spacing */
   --max-w:        1280px;
   --max-w-prose:  72ch;
   --section-gap:  clamp(5rem, 10vw, 10rem);
-
-  /* Animation */
   --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:  cubic-bezier(0.45, 0, 0.55, 1);
-
-  /* Radius */
   --r-sm:  4px;
   --r-md:  8px;
   --r-lg:  16px;
@@ -50,8 +44,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 20px;
-  line-height: 1.8;
+  font-size: 18px;
+  line-height: 1.9;
   min-height: 100vh;
   text-rendering: optimizeLegibility;
 }
@@ -63,7 +57,7 @@ ul, ol { list-style: none; }
 /* ─── TYPOGRAPHY UTILITIES ───────────────────────────────────── */
 .display-xl {
   font-family: var(--font-display);
-  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-size: clamp(3.2rem, 6vw, 6.3rem);
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -71,7 +65,7 @@ ul, ol { list-style: none; }
 }
 .display-lg {
   font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.3rem, 4vw, 4rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.01em;
@@ -129,7 +123,7 @@ ul, ol { list-style: none; }
   border-radius: var(--r-lg);
   padding: 1.5rem;
   transition: border-color 0.3s, box-shadow 0.3s;
-  box-shadow: 0 1px 3px rgba(28, 28, 46, 0.04);
+  box-shadow: 0 1px 3px rgba(28, 26, 23, 0.08);
 }
 
 /* Button */
@@ -145,13 +139,14 @@ ul, ol { list-style: none; }
   transition: all 0.25s var(--ease-out);
 }
 .btn-gold {
-  background: var(--ink);
-  color: var(--bg);
-  border: 1px solid var(--ink);
+  background: var(--accent);
+  color: var(--header-text);
+  border: 1px solid var(--accent);
 }
 .btn-gold:hover {
-  background: #2A2A3E;
-  box-shadow: 0 2px 8px rgba(28, 28, 46, 0.14);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: none;
 }
 .btn-outline {
   border: 1px solid var(--border);
@@ -201,10 +196,9 @@ ul, ol { list-style: none; }
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(250, 250, 248, 0.94);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-faint);
+  background: var(--header-bg);
+  color: var(--header-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .header-inner {
   display: flex;
@@ -223,7 +217,7 @@ ul, ol { list-style: none; }
   font-family: var(--font-display);
   font-size: 1.15rem;
   font-weight: 500;
-  color: var(--ink);
+  color: var(--header-text);
   letter-spacing: 0.02em;
   line-height: 1;
 }
@@ -232,7 +226,8 @@ ul, ol { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--header-text);
+  opacity: 0.65;
 }
 .header-nav {
   display: flex;
@@ -243,13 +238,14 @@ ul, ol { list-style: none; }
   padding: 0.4rem 0.85rem;
   font-size: 0.83rem;
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--header-text);
+  opacity: 0.8;
   border-radius: var(--r-md);
-  transition: color 0.2s, background 0.2s;
+  transition: color 0.2s, opacity 0.2s;
   letter-spacing: 0.02em;
 }
-.nav-link:hover { color: var(--ink); background: var(--bg-raised); }
-.nav-link.active { color: var(--ink); font-weight: 500; }
+.nav-link:hover { color: var(--header-text); opacity: 1; background: transparent; }
+.nav-link.active { color: var(--header-text); opacity: 1; font-weight: 500; }
 
 /* ─── MOBILE NAV ─────────────────────────────────────────────── */
 .mobile-menu-toggle {
@@ -261,7 +257,7 @@ ul, ol { list-style: none; }
   height: 44px;
   padding: 10px;
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--r-sm);
   cursor: pointer;
 }
@@ -269,7 +265,7 @@ ul, ol { list-style: none; }
   display: block;
   width: 100%;
   height: 2px;
-  background: var(--ink);
+  background: var(--header-text);
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .mmt-bar.open:nth-child(1) { transform: translateY(7px) rotate(45deg); }
@@ -310,9 +306,10 @@ ul, ol { list-style: none; }
 
 /* ─── FOOTER ─────────────────────────────────────────────────── */
 .footer {
-  border-top: 1px solid var(--border-faint);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 4rem 0 2rem;
-  background: var(--bg-surface);
+  background: var(--header-bg);
+  color: var(--header-text);
 }
 .footer-grid {
   display: grid;
@@ -325,18 +322,20 @@ ul, ol { list-style: none; }
   font-size: 1.4rem;
   font-weight: 400;
   margin-bottom: 0.25rem;
-  color: var(--ink);
+  color: var(--header-text);
 }
 .footer-brand-sub {
   font-size: 0.72rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--header-text);
+  opacity: 0.65;
   margin-bottom: 1rem;
 }
 .footer-brand-desc {
   font-size: 0.85rem;
-  color: var(--text-muted);
+  color: var(--header-text);
+  opacity: 0.75;
   line-height: 1.7;
   max-width: 28ch;
 }
@@ -345,7 +344,8 @@ ul, ol { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--header-text);
+  opacity: 0.65;
   margin-bottom: 1rem;
 }
 .footer-links {
@@ -355,18 +355,20 @@ ul, ol { list-style: none; }
 }
 .footer-links a {
   font-size: 0.85rem;
-  color: var(--text-muted);
-  transition: color 0.2s;
+  color: var(--header-text);
+  opacity: 0.65;
+  transition: opacity 0.2s;
 }
-.footer-links a:hover { color: var(--ink); }
+.footer-links a:hover { opacity: 1; }
 .footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-faint);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.78rem;
-  color: var(--text-faint);
+  color: var(--header-text);
+  opacity: 0.65;
 }
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -483,7 +485,23 @@ ul, ol { list-style: none; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold-dim); }
 
 /* ─── SELECTION ──────────────────────────────────────────────── */
-::selection { background: rgba(28, 28, 46, 0.12); color: var(--text); }
+::selection { background: rgba(31, 58, 95, 0.15); color: var(--text); }
+
+/* Body/prose links — not nav, not CTAs */
+main p a,
+main li a:not(.btn):not(.nav-link):not(.mobile-nav-link),
+main .footer-brand-desc a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 58, 95, 0.35);
+  transition: color 0.2s, text-decoration-color 0.2s;
+}
+main p a:hover,
+main li a:not(.btn):not(.nav-link):not(.mobile-nav-link):hover,
+main .footer-brand-desc a:hover {
+  color: var(--accent-hover);
+  text-decoration-color: var(--accent-hover);
+}
 
 /* ─── TOUCH TARGETS ──────────────────────────────────────────── */
 @media (max-width: 768px) {

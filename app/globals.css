@@ -1715,3 +1715,55 @@ main[data-register="fiction"] .page-header + .wave-divider {
   }
 }
 
+/* ─── ARTIFACT STRIP (homepage hero) ─────────────────────────── */
+.artifact-strip {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.75rem 0 0;
+  flex-wrap: wrap;
+}
+.artifact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  max-width: 140px;
+}
+.artifact-img-wrap {
+  width: 120px;
+  height: 80px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  background: var(--bg-raised);
+  flex-shrink: 0;
+}
+.artifact-img-wave {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-raised);
+}
+.artifact-caption {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+.artifact-divider {
+  width: 1px;
+  height: 56px;
+  background: var(--border);
+  flex-shrink: 0;
+  align-self: center;
+}
+@media (max-width: 600px) {
+  .artifact-divider { display: none; }
+  .artifact-strip { gap: 1.25rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .artifact-strip { animation: none; }
+}
+

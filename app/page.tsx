@@ -89,68 +89,52 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="hero-artifact-strip animate-fade-up delay-4">
-              <div className="hero-artifact">
-                <div className="hero-artifact-frame">
-                  <Image
+            <div className="artifact-strip animate-fade-up delay-4" role="list">
+              <div className="artifact-item" role="listitem">
+                <div className="artifact-img-wrap">
+                  {/* fallback: voynich-folio-thumb.jpg not in public/ — using /folios/voynich/Vol 1/voynich-009.jpg */}
+                  <img
                     src="/folios/voynich/Vol 1/voynich-009.jpg"
-                    alt="Voynich Manuscript folio detail"
-                    fill
-                    sizes="(max-width: 600px) 280px, 220px"
-                    style={{ objectFit: "cover", objectPosition: "center 30%" }}
+                    alt="Voynich Manuscript folio f68r3 — Beinecke MS 408"
+                    width={120} height={80}
+                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    loading="lazy"
                   />
                 </div>
-                <p className="hero-artifact-caption">
-                  <strong>Voynich MS · Folio 9</strong>
-                  181 Chamber folios mapped
-                </p>
+                <span className="artifact-caption">
+                  Voynich MS · Folio f68r3 · Beinecke MS 408
+                </span>
               </div>
-
-              <div className="hero-artifact">
-                <div className="hero-artifact-frame" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}>
-                  <svg
-                    viewBox="0 0 200 60"
-                    width="100%"
-                    height="100%"
-                    aria-hidden="true"
-                    style={{ maxHeight: "48px" }}
-                  >
+              <div className="artifact-divider" aria-hidden="true" />
+              <div className="artifact-item" role="listitem">
+                <div className="artifact-img-wrap artifact-img-wave">
+                  <svg viewBox="0 0 120 48" width="120" height="48" aria-hidden="true"
+                       style={{ display: "block" }}>
                     <path
-                      d="M0,30 C20,10 40,50 60,30 S100,10 120,30 S160,50 180,30 S200,10 200,30"
-                      fill="none"
-                      stroke="var(--cyan)"
-                      strokeWidth="1.5"
-                      opacity="0.85"
-                    />
-                    <path
-                      d="M0,30 C20,50 40,10 60,30 S100,50 120,30 S160,10 180,30 S200,50 200,30"
-                      fill="none"
-                      stroke="var(--gold-dim)"
-                      strokeWidth="0.75"
-                      opacity="0.5"
+                      d="M0 24 Q10 8 20 24 Q30 40 40 24 Q50 8 60 24 Q70 40 80 24 Q90 8 100 24 Q110 40 120 24"
+                      fill="none" stroke="var(--cyan)" strokeWidth="1.5"
                     />
                   </svg>
                 </div>
-                <p className="hero-artifact-caption">
-                  <strong>111.2 Hz</strong>
-                  Carrier frequency · archaeoacoustic baseline
-                </p>
+                <span className="artifact-caption">
+                  111.2 Hz · Standing wave · limestone chamber
+                </span>
               </div>
-
-              <div className="hero-artifact">
-                <div className="hero-artifact-frame">
-                  <Image
+              <div className="artifact-divider" aria-hidden="true" />
+              <div className="artifact-item" role="listitem">
+                <div className="artifact-img-wrap">
+                  {/* fallback: subtropolis-entrance.jpg not in public/ — using /og/field-notes/kansas-city-locations.png */}
+                  <img
                     src="/og/field-notes/kansas-city-locations.png"
-                    alt="SubTropolis underground grid map fragment"
-                    fill
-                    sizes="(max-width: 600px) 280px, 220px"
-                    style={{ objectFit: "cover", objectPosition: "center" }}
+                    alt="SubTropolis underground facility entrance, Kansas City, Missouri"
+                    width={120} height={80}
+                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    loading="lazy"
                   />
                 </div>
-                <p className="hero-artifact-caption">
-                  <strong>SubTropolis Grid</strong>
-                  Kansas City underground · 2.4M sq ft
-                </p>
+                <span className="artifact-caption">
+                  SubTropolis · Kansas City, MO
+                </span>
               </div>
             </div>
           </div>

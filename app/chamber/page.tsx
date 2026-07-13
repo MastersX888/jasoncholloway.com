@@ -192,6 +192,49 @@ export default function ChamberPage() {
           </div>
         </div>
       </section>
+
+      <section style={{ padding: "4rem 0", borderTop: "1px solid var(--border-faint)" }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <p style={{
+            fontFamily: "var(--font-mono)",
+            fontSize: "0.65rem",
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            color: "var(--cyan)",
+            marginBottom: "0.75rem"
+          }}>
+            Research companion to the Masters X Trilogy
+          </p>
+          <h2 style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(1.5rem, 3vw, 2.2rem)",
+            fontWeight: 500,
+            marginBottom: "1rem",
+            color: "var(--text)"
+          }}>
+            The data is real. The story is the account of what it means.
+          </h2>
+          <p style={{
+            color: "var(--text-muted)",
+            maxWidth: "52ch",
+            margin: "0 auto 2rem",
+            lineHeight: 1.75,
+            fontSize: "0.95rem"
+          }}>
+            The Analysis Chamber precedes the trilogy — the research archive that Andrew Chen
+            built before Blake understood what it proved. The novels are the account of what
+            happened when he understood.
+          </p>
+          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+            <a href="/books/masters-x/" className="btn btn-gold">
+              View the Trilogy
+            </a>
+            <a href="/books/masters-x/the-inheritance-of-frequency/" className="btn btn-outline">
+              Start with Volume I
+            </a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

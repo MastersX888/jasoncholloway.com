@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
+import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
@@ -50,7 +51,7 @@ export default function OmnibusPage() {
                 : undefined,
               offers: omnibus.price_hc_is ? {
                 "@type": "Offer",
-                price: omnibus.price_hc_is,
+                price: omnibus.price_hc_msrp ?? omnibus.price_hc_is,
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
                 url: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")?.url ?? "https://jasoncholloway.com/books/masters-x/omnibus/",
@@ -74,7 +75,7 @@ export default function OmnibusPage() {
                 : undefined,
               offers: omnibus.price_pb_is ? {
                 "@type": "Offer",
-                price: omnibus.price_pb_is,
+                price: omnibus.price_pb_msrp ?? omnibus.price_pb_is,
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
                 url: omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)")?.url ?? "https://jasoncholloway.com/books/masters-x/omnibus/",
@@ -152,14 +153,43 @@ export default function OmnibusPage() {
                   {omnibus.shortDesc}
                 </p>
                 <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                  {omnibus.buyLinks.map((link) => (
-                    <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold">
-                      {link.label}
-                      {link.label.includes("HC") && omnibus.price_hc_is ? ` — $${omnibus.price_hc_is}` : ""}
-                      {link.label.includes("PB") && omnibus.price_pb_is ? ` — $${omnibus.price_pb_is}` : ""}
-                    </a>
-                  ))}
+                  {omnibus.buyLinks.map((link) => {
+                    if (link.url.includes("shop.ingramspark.com") && link.format === "Paperback") {
+                      return (
+                        <BuyDirectButton
+                          key={link.url}
+                          label={link.label}
+                          url={link.url}
+                          ecommPrice={omnibus.price_pb_is ?? ""}
+                          msrpPrice={omnibus.price_pb_msrp}
+                        />
+                      );
+                    }
+                    if (link.url.includes("shop.ingramspark.com") && link.format === "Hardcover") {
+                      return (
+                        <BuyDirectButton
+                          key={link.url}
+                          label={link.label}
+                          url={link.url}
+                          ecommPrice={omnibus.price_hc_is ?? ""}
+                          msrpPrice={omnibus.price_hc_msrp}
+                        />
+                      );
+                    }
+                    return (
+                      <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold">
+                        {link.label}
+                      </a>
+                    );
+                  })}
                 </div>
+                {omnibus.price_pb_msrp && omnibus.price_pb_is && (
+                  <p className="omnibus-savings-note">
+                    All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
+                    <strong>${omnibus.price_hc_is} HC</strong> — save up to $17.98 vs.
+                    buying volumes individually.
+                  </p>
+                )}
               </div>
             </div>
           </div>

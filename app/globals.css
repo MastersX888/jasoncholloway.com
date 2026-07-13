@@ -1295,3 +1295,13 @@ ul, ol { list-style: none; }
   .buy-direct-btn { transition: none; }
 }
 
+.omnibus-savings-note {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  margin-top: 0.75rem;
+  text-transform: uppercase;
+}
+.omnibus-savings-note strong { color: var(--gold); font-style: normal; }
+

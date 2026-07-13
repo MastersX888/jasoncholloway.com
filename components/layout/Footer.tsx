@@ -56,7 +56,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {currentYear} Jason Carroll Holloway · Seventh City Press · All rights reserved</span>
+          <span>© {currentYear} Jason Carroll Holloway · Seventh City Press LLC · All rights reserved</span>
           <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--text-faint)" }}>
             f = 111.2 Hz
           </span>

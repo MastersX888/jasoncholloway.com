@@ -57,7 +57,7 @@ export default function HzNote() {
           </p>
           <p className="fn-body">
             Dr. Paul Devereux, a researcher in archaeoacoustics, and colleagues systematically measured resonant frequencies at multiple megalithic sites across Britain and Ireland. Their work, summarized in the journal{" "}
-            <a href="https://doi.org/10.2307/1261531" target="_blank" rel="noopener noreferrer">
+            <a href="https://doi.org/10.1121/1.414642" target="_blank" rel="noopener noreferrer">
               <em>Journal of the Acoustical Society of America</em>
             </a>{" "}
             and in Devereux&apos;s book <em>Stone Age Soundtracks</em>, found that Neolithic chambers — including chambered tombs and stone circles — consistently produced peak resonant frequencies in the 95–120 Hz range. Devereux hypothesized that these chambers may have been designed, at least in part, for their acoustic properties.

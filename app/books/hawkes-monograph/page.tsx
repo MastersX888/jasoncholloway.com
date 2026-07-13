@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 
 export const metadata: Metadata = {
@@ -187,13 +186,34 @@ export default function HawkesMonographPage() {
 
                 <div style={{ marginTop: "1rem" }}>
                   {ed.buyUrl && ed.ecommPrice ? (
-                    <BuyDirectButton
-                      label={ed.buyLabel ?? `IngramSpark (${ed.format})`}
-                      url={ed.buyUrl}
-                      ecommPrice={ed.ecommPrice}
-                      msrpPrice={ed.msrpPrice}
-                      className="w-full"
-                    />
+                    <a href={ed.buyUrl}
+                       target="_blank" rel="noopener noreferrer"
+                       className="btn btn-gold buy-direct-is"
+                       style={{ width: "100%", justifyContent: "center", flexDirection: "column",
+                                alignItems: "center", gap: "0.15rem", paddingBlock: "0.75rem" }}>
+                      <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
+                                     textTransform: "uppercase", opacity: 0.75 }}>
+                        Buy Direct · Best Price
+                      </span>
+                      <span style={{ display: "flex", alignItems: "baseline", gap: "0.45rem" }}>
+                        {ed.msrpPrice && (
+                          <span style={{ textDecoration: "line-through", opacity: 0.55,
+                                         fontSize: "0.82rem" }}>
+                            ${ed.msrpPrice}
+                          </span>
+                        )}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                          ${ed.ecommPrice}
+                        </span>
+                        {ed.msrpPrice && ed.ecommPrice && (
+                          <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)",
+                                         padding: "0.1em 0.4em", borderRadius: "2px",
+                                         letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                            save ${(parseFloat(ed.msrpPrice) - parseFloat(ed.ecommPrice)).toFixed(2)}
+                          </span>
+                        )}
+                      </span>
+                    </a>
                   ) : ed.buyUrl ? (
                     <a
                       href={ed.buyUrl}

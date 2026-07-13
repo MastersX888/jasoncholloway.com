@@ -1,0 +1,23 @@
+:global(:root){--ink:#1a1815;--soft:#3f3b34;--faint:#7a7469;--gold:#8a6410;--gold-br:#a87c1e;
+--rule:#cdc6b6;--rule-sft:#e6e0d3;--paper:#fdfcf9;--panel:#f4efe4;
+--disp:'Cormorant Garamond',Georgia,serif;--body:'EB Garamond',Georgia,serif;--ui:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',ui-monospace,monospace}
+.rs-wrap{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.08rem;line-height:1.6;max-width:820px;margin:0 auto;padding:64px 24px 96px}
+.rs-eyebrow{font-family:var(--ui);font-size:.72rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.rs-h1{font-family:var(--disp);font-size:clamp(2.1rem,5vw,3.1rem);font-weight:600;line-height:1.08;letter-spacing:.01em;margin-bottom:18px}
+.rs-lede{font-size:1.2rem;color:var(--soft);line-height:1.55;margin-bottom:10px}
+.rs-lede em{color:var(--ink)}
+.rs-intro{margin:22px 0 8px;color:var(--soft)}
+.rs-divider{display:flex;align-items:center;gap:16px;margin:36px 0 8px}
+.rs-divider::before,.rs-divider::after{content:"";flex:1;height:1px;background:var(--rule-sft)}
+.rs-divider span{font-family:var(--ui);font-size:.7rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.rs-list{list-style:none;margin-top:20px}
+.rs-item{display:grid;grid-template-columns:48px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--rule-sft)}
+.rs-num{font-family:var(--mono);font-size:1rem;color:var(--gold);padding-top:6px}
+.rs-title{font-family:var(--disp);font-size:1.5rem;font-weight:600;line-height:1.15;margin-bottom:4px}
+.rs-meta{font-family:var(--ui);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);margin-bottom:8px}
+.rs-shelf{font-family:var(--mono);text-transform:none;letter-spacing:0;color:var(--gold)}
+.rs-annotation{color:var(--soft);font-size:1.04rem;line-height:1.55}
+.rs-foot{margin-top:44px;padding-top:22px;border-top:2px solid var(--gold);font-size:.95rem;color:var(--soft)}
+.rs-foot a{color:var(--gold);text-decoration:none;font-weight:500}
+.rs-foot a:hover{text-decoration:underline}
+.rs-mark{font-family:var(--mono);font-size:.7rem;color:var(--rule);margin-top:8px}

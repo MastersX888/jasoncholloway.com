@@ -1,0 +1,55 @@
+Chapter Sixteen. The Distribution.
+
+One eleven point two hertz. Kansas City.
+
+[short pause]
+
+Andrew sat in the Iceland control module for the last time and looked at the servers.
+
+Seven years of data. Every frequency measurement. Every EEG recording. Every chamber session. Every Moleskine entry that Blake had photographed and emailed. Every mirror specification. Every mineral analysis. The complete 52-week preparation curriculum, rewritten in plain English by Yuki and Marcus, reviewed by Sabrina, approved by the NIH. The curriculum that had started as a research protocol and had become, through the labor of people who believed that knowledge should be free, a textbook.
+
+He had been building the distribution system for eight months. Quietly, the quiet that was Andrew's natural mode, the quiet of a man who built things in back rooms while the people in the front rooms did the visible work. The website was designed. The server architecture was redundant, seven nodes at seven universities on five continents, the redundancy that he had designed because "redundancy defeats suppression" and because seven was not a mystical number, it was an engineering specification, and the specification was: if six servers fail, the seventh survives. If six countries ban the data, the seventh preserves it.
+
+He called Blake. Morning in Kansas City, evening in Iceland. The time difference that had defined their partnership for seven years. Andrew always in the future, Blake always in the past, the two of them meeting across the gap of six hours and an ocean.
+
+"I'm releasing everything."
+
+Long pause. The pause that Blake produced when the thing he was hearing required his full attention and his full attention required silence.
+
+"All of it?"
+
+"All of it. The frequencies. The mirror specs. The EEG protocols. The preparation curriculum. The chamber designs. The mineral analysis. The Specchi formula. I know Nadia already published that, but I'm including it in the package. Everything Andrew Chen has measured in seven years of monitoring, compressed into a downloadable archive and published under Creative Commons licensing."
+
+"Andrew."
+
+"You can't patent breath, Blake. You can't classify listening. The DOD tried to buy us. Cognigenics tried to own us. The journals tried to discredit us. We can fight all of them, one at a time, for the rest of our lives. Or we can make it irrelevant. You can't suppress something that everyone already has."
+
+Blake was quiet for a long time. The phone line carried the particular silence of a transatlantic call, the satellite delay, the faint static, the imperceptible lag that made every silence a fraction longer than the silence intended.
+
+"What happens after?"
+
+"I don't know. Everything. Nothing. It's not ours anymore. It's everyone's."
+
+"When?"
+
+"Tonight. Midnight Reykjavik time."
+
+[pause]
+
+Midnight. The site went live.
+
+Andrew pressed the key. The key was the enter key on a standard laptop keyboard, the key that had launched a billion emails and a thousand startups and that now released seven years of acoustic consciousness research into the public domain. The key made a click. The click was approximately three thousand two hundred hertz, a brief percussive event that lasted four milliseconds and that was, Andrew reflected, the most consequential four milliseconds of his career.
+
+By 6 AM Reykjavik time: 14,000 downloads. By noon: 200,000. The translations began before anyone asked for them. Spanish, Mandarin, Arabic, Hindi, Swahili. The open-source community, the global volunteer network of translators and developers and people who believe that information should be free, did what it always does: it moved faster than any institution.
+
+By the end of the first week: three independent groups, in Buenos Aires, Osaka, and Lagos, had built test chambers from Andrew's published specifications. The Osaka group, a materials science lab at Kyoto University, published a paper within five days demonstrating that locally sourced andesite (a volcanic rock similar to Icelandic basalt) produced comparable frequency responses at one oh nine point three hertz. Not identical. Close. Every geology produces its own song.
+
+Andrew watched the download counter climb. He was alone in the control module. The monitors displayed their eternal readout: the seven point eight three hertz baseline, the Schumann resonance, the frequency of the earth's electromagnetic cavity that the basalt field had been transducing since before humans existed and would continue transducing after the last human stopped listening.
+
+He turned off his workstation monitor. The download counter disappeared. The downloads continued, they would continue whether he watched or not, the way the frequency continued whether anyone measured it or not, the way the earth continued whether anyone was listening or not.
+
+The seven point eight three hertz hummed on the cave monitors. He did not turn those off. He would never turn those off. Someone would come after him, a new keeper, or a student, or a stranger who had downloaded the archive and followed the coordinates to this basalt field in Iceland, and they would find the monitors still running, the frequency still present, the cave still singing.
+
+He sat in the control module and listened to the earth for the last time. Then he stood. Turned off the lights. Closed the door. Locked it. Put the key in an envelope addressed to the University of Iceland Geology Department and set it on the kitchen table of the stone cottage.
+
+He did not look back. Andrew Chen had never been a man who looked back. He was a man who looked at data, and the data was clear: the distribution was complete. The fire had fallen. The Pentecost was not a moment. It was a condition.

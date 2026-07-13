@@ -77,13 +77,14 @@
   {
     "id": "v1-009",
     "folio": "V1-009",
-    "title": "Herbal Page 6",
+    "beineckeRef": "f2v",
+    "title": "Herbal Page — Forked Root",
     "category": "botanical",
     "collection": "voynich",
     "volume": 1,
     "filename": "voynich-009",
     "path": "/folios/voynich/Vol 1/voynich-009.jpg",
-    "description": "Herbal section page from Volume 1.",
+    "description": "Herbal section, folio 2 verso (Beinecke MS 408).",
     "features": [
       "Plant illustration"
     ],
@@ -2364,13 +2365,14 @@
   {
     "id": "v3-052",
     "folio": "V3-052",
-    "title": "Biological Page 53",
-    "category": "biological",
+    "beineckeRef": "f68r3",
+    "title": "Pleiades Rosette Foldout",
+    "category": "astronomical",
     "collection": "voynich",
     "volume": 3,
     "filename": "vol3-052",
     "path": "/folios/voynich/Vol 3/vol3-052.jpg",
-    "description": "Biological section page from Volume 3.",
+    "description": "Astronomical foldout, folio 68 recto panel 3 (Beinecke MS 408). Nine rosette diagrams in a 3×3 grid.",
     "features": [
       "Figures",
       "Tubes"

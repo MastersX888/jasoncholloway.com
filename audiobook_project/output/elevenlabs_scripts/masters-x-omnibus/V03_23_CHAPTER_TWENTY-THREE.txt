@@ -1,0 +1,130 @@
+Chapter Twenty-Three. Andrew's Departure.
+
+Three point nine one five hertz. Kansas City.
+
+
+The night before, he called Blake.
+
+The connection was poor, the Iceland facility's satellite internet had never been reliable in winter, the signal degrading when the aurora was active, the northern lights producing electromagnetic interference that scrambled the data packets and made Blake's voice sound like it was coming through water. Andrew had spent seven years accommodating this interference. He had developed a way of listening through the distortion, the way a doctor develops a way of hearing through a stethoscope, the relevant information was in the pattern, not the fidelity.
+
+"I'm closing it down," Andrew said.
+
+Silence. Not the silence of surprise, the silence of Blake absorbing a thing he already knew. The way a seismograph absorbs a tremor it expected: the needle moves, but the machine was already braced.
+
+"When?"
+
+"Tomorrow. The servers ship to UMKC. The monitors go to Ghana. Kofi's team will maintain the Volta stations. The Moleskines I'm sending to you."
+
+"You don't have to -"
+
+"They're yours. They were always yours. I was holding them for you while you were busy."
+
+Another silence. Through the satellite distortion, Andrew could hear the Quality Hill apartment, the elm branches in the October wind, the furnace cycling, the particular Kansas City quiet of a man sitting on a porch at 9 PM. The 9 PM calls. Six years of 9 PM calls, every night, Kansas City to wherever Andrew was, the institutional heartbeat of two men who had built something together and who maintained it, across distance and time zones and the accumulated exhaustion of a project that had consumed their best years, through the simple technology of a phone call at the same time every night.
+
+"You could come back here," Blake said.
+
+"I could."
+
+"But you won't."
+
+"Not yet. I need to sit somewhere that doesn't have a frequency specification."
+
+Blake laughed, the short, compressed sound that Andrew had been cataloging for seven years, the laugh of a man whose humor had always been expressed at minimum volume, as if joy were a frequency that required dampening to remain tolerable.
+
+"Every place has a frequency specification, Andrew. You just haven't measured them all yet."
+
+"That's the problem. I've measured this one. Seven years of seven point eight three hertz. The same number every night. I dream in seven point eight three hertz. I need a number I haven't memorized."
+
+"Where will you go?"
+
+"My sister's. Annapolis. She's been asking me to visit for four years. She has two kids I've never met. Two kids, Blake. My nieces. I've been measuring the resonance of Icelandic basalt while my sister's children were learning to walk."
+
+"Andrew -"
+
+"Don't. Don't tell me the work mattered. I know the work mattered. The work mattered the way breathing matters, automatically, essentially, without requiring justification. But Jennifer's children are named Sophie and Mae, and they are four and two, and they have an uncle who has sent birthday cards from Iceland with postmarks they cannot read, and I want to sit in a house where the most important frequency is a four-year-old practicing piano."
+
+The satellite connection flickered. The aurora was brightening. Andrew could see it through the control module window, the green curtain unfurling across the sky, the electromagnetic dance that had been his ceiling and his wallpaper for seven years.
+
+"I'm proud of you," Blake said. The words came through flat, the satellite stripping the warmth from them, but Andrew heard the warmth anyway, the way he heard everything, through the interference, through the noise, through the accumulated distortion of distance. He had been listening to Blake's voice for seven years. He knew what it sounded like underneath.
+
+"I know," Andrew said. "I'm proud of us."
+
+
+
+The next morning, he called Jennifer.
+
+She answered on the first ring, the speed of a woman who had been waiting for this call for four years, who had stopped asking "when are you coming home" around year three and replaced it with a silence that was louder than the question.
+
+"I'm closing the facility," he said.
+
+"When?"
+
+"Today. I'll be in Annapolis by Thursday. If the couch is still available."
+
+"The guest room is available, Andrew. We built a guest room two years ago. Sophie calls it Uncle Andrew's room."
+
+He closed his eyes. Sophie calls it Uncle Andrew's room. A four-year-old had named a room for an uncle she had never met, because a four-year-old's faith operates at a frequency that does not require evidence, that accepts that a person exists even when the person has not appeared.
+
+"Tell Sophie I'm coming," he said.
+
+"Tell her yourself."
+
+There was a rustling. A fumbling. The particular sound of a phone being transferred to a smaller person.
+
+"Uncle Andrew?"
+
+The voice was small. Not timid, small in the way children's voices are small: the vocal cords of a four-year-old producing a fundamental frequency of approximately two hundred fifty hertz, the pitch of innocence and total sincerity.
+
+"Hi, Sophie."
+
+"Are you coming to our house?"
+
+"Yes."
+
+"Are you bringing a present?"
+
+Andrew looked around the control module. The monitors. The cables. The seven years of data, cataloged and compressed and distributed across servers that would carry the information into whatever future the information was intended for.
+
+"Yes," he said. "I'm bringing a present."
+
+He would bring her a piece of basalt. A small one, black, volcanic, the same stone that had cradled the frequency for geological epochs. He would not tell Sophie what it was. He would not explain that the stone produced seven point eight three hertz when struck, or that her uncle had spent seven years listening to its relatives. He would tell her it was a rock from Iceland, and she would put it on her shelf next to whatever other objects populated the shelf of a four-year-old, a plastic dinosaur, a stuffed rabbit, a crayon drawing of something with too many legs, and the basalt would sit there, vibrating at the Schumann frequency, unmeasured and unperceived and utterly sufficient. The Iceland facility in November looked the way abandoned things look, functional but emptied, the lights still on but the purpose departed, a body without breath.
+
+Andrew packed methodically. This was his way, the way of a man who had organized seven years of monitoring data, who had built a distribution system capable of surviving six simultaneous server failures, who approached the act of closing a facility the way he approached every act: as a system, with inputs and outputs and a checklist.
+
+The servers: shipped to UMKC. Sixteen drives, 47 terabytes, the digital record of every frequency measurement taken in Iceland since Blake first entered the caves, packed in anti-static foam and addressed to Marcus Chen's office with the particular care of a man who understood that data was not information until someone organized it, and that Marcus, steady, thorough, formerly synesthetic Marcus, was the person who would organize it best.
+
+The monitors: shipped to Ghana. The real-time frequency tracking equipment, the oscilloscopes and spectrum analyzers and the custom-built harmonic detector that Andrew had designed himself, sent to Kofi Mensah at the University of Ghana. The Volta caves would continue to be monitored. The laterite would continue to sing. Someone would listen.
+
+The Moleskines: returned to Blake. Nine notebooks, packed in a wooden box that Andrew had commissioned from a furniture maker in Reykjavik. Icelandic birch, hand-joined, unvarnished, the kind of box that was designed to last longer than the person who made it. The box contained Blake's handwriting, Blake's tremor-annotated pages, Blake's entire cognitive evolution from researcher to perceiver to teacher, recorded in ink that carried one eleven point two hertz because the hand that held the pen carried one eleven point two hertz, the frequency embedded in the pressure variations, the cross-strokes, the molecular indentations of a vibrating hand on notebook paper.
+
+Andrew sealed the box. Addressed it to the Quality Hill apartment. Wrote on the label, in his own handwriting, the handwriting of a data engineer, precise, small, emotionally compressed:
+
+Blake, Here are your notebooks. I was holding them for you while you were busy., A
+
+
+
+Last night. The control module.
+
+Andrew sat in the chair he had occupied for seven years. The chair had molded to him, the particular impression of a body that had sat in the same position for seven years monitoring the same frequencies on the same screens. The monitors glowed: seven point eight three hertz. The earth's electromagnetic resonance, transduced through Icelandic basalt, displayed in green on black.
+
+He had spent seven years watching this number. Seven years of seven point eight three hertz, night and day, through summers of midnight sun and winters of permanent dark. The number never changed. The earth did not have good days and bad days. The earth did not tire of being the earth. The frequency was constant because the frequency was geological, not personal, not subject to mood or circumstance or the particular human habit of believing that important things should fluctuate.
+
+He turned off the monitors.
+
+The screens went dark. The seven point eight three hertz continued, not on the screens, but in the basalt, in the lava field, in the earth. The frequency did not require monitors. It did not require Andrew. It had been present before the monitors were installed and would be present after the monitors were shipped. The frequency was not dependent on observation. Observation was an act of attention, and the earth did not require human attention to exist.
+
+He stood. The chair, released from seven years of Andrew Chen, settled slightly, a faint pneumatic hiss, the sound of a piece of furniture remembering what it was like to be unoccupied.
+
+He turned off the lights. Closed the door. The lock was mechanical, a deadbolt, old, the steel cold in the November wind. He locked it. Put the key in an envelope addressed to the University of Iceland Geology Department and placed it on the kitchen table of the stone cottage, beside a note:
+
+The cave system coordinates are 64.2847 degrees north, 21.1243 degrees west. The monitors have been deactivated. The frequency continues. You don't need the monitors. They were for me.
+
+He walked to the rental car. The same rental agency, the same nondescript silver sedan. The wind from the lava field carried seven point eight three hertz, he knew this, he had measured it for seven years, and now he was hearing it without measurement, his body transducing the field the way the basalt transduced the field, the way every body transduces every field it stands in.
+
+He drove to the airport. He did not look back.
+
+Andrew Chen had spent seven years in a control module listening to the earth. The earth would continue without him. The data had been distributed. The frequency had been released. The keeper's work was done, not the keeper of seven hundred years, but the keeper of seven. The modern keeper. The data architect. The man who sat in the back room and made sure the numbers survived.
+
+He returned the car. Boarded the plane. Kansas City in twelve hours. He would arrive at the Quality Hill apartment and knock on the door and Blake would open it and the two of them would stand there, the perceiver and the measurer, the instrument and the recording apparatus, the fire and the hearth, and they would look at each other, and Blake would say "Coffee?", and Andrew would say "Already had three," and that would be sufficient, because some frequencies do not require words.
+
+But first: Annapolis. First: Sophie and Mae. First: the guest room that a four-year-old had named for an uncle who was finally, after seven years of listening to the earth, going to listen to the sound of a child practicing piano, approximately two hundred sixty-two hertz, Middle C, the note that every beginner learns first because it is where the keyboard begins, which is to say, where the music begins, which is to say, where everything worth measuring begins: at the place where someone who has never played before puts a finger on a key and produces a sound and waits, with the perfect attention of childhood, to hear what happens next.

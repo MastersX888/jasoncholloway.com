@@ -1,0 +1,60 @@
+Chapter Nine. The Institution.
+
+One hundred nine hertz. Kansas City.
+
+
+The patent filing arrived at Nadia's desk in the form of a PDF attachment from the Foundation's intellectual property attorney, a man named Gerald Stern who charged $475 an hour and who communicated bad news the way all good attorneys communicate bad news, with a subject line that contained the word "URGENT" in capitals and a body text that contained the word "unfortunately" in the second sentence.
+
+Cognigenics Inc. had filed United States Patent Application No. 17/892,401: "Method and Apparatus for Acoustic Consciousness Modulation."
+
+Nadia read it at 5:23 AM, alone in the Foundation office, the building dark except for her desk lamp and the server room's green LEDs reflecting off the hallway wall. She read it the way she read everything, once for content, twice for structure, three times for the thing that was hidden in the structure, the architectural flaw, the load-bearing weakness that every institutional document contains if you know where to look.
+
+The patent cited Andrew's open-source data, 147 times. Every frequency measurement, every EEG protocol, every chamber specification that Andrew had published under Creative Commons licensing in the belief that knowledge should be free and that the institutional infrastructure around knowledge should serve the knowledge rather than own it. Cognigenics had taken every specification, cited every source, and circumvented the open-source release with a single proprietary innovation: a mirror-coating formula. A thin-film optical coating applied to the Specchi mirrors that Cognigenics claimed produced "enhanced acoustic feedback" and that was, as far as Nadia could tell from the patent's technical specifications, a variant of the same anti-reflective coating used in camera lenses.
+
+They were patenting the cave. They were patenting the frequency. They were trying to own the sound the earth makes.
+
+
+
+Nadia did not call Blake. Did not call Andrew. Did not call the board. Did not schedule an emergency meeting or draft a response document or begin the institutional process that would normally precede a decision of this magnitude.
+
+She called Eva Černá. Prague. 11:23 AM Central European Time.
+
+"Eva. The Specchi mirror formula, the one from the Strahov archives. You have the original ledger entry?"
+
+"The 1585 delivery receipt. Yes. Why?"
+
+"Can you photograph it and send it to me in the next hour?"
+
+"Nadia, it's in a conservation sleeve. I'd need to -"
+
+"Now, Eva."
+
+The photograph arrived in forty-three minutes. The original ledger entry from the Specchi workshop: a handwritten record of a 1585 delivery to the Premonstratensian monastery at Strahov, listing the mirror specifications, the mineral composition of the reflective coating, and the batch number, all in the hand of a Venetian artisan who had died 441 years ago and whose formula had been sitting in a public archive in Prague for every one of those years.
+
+She called Giacomo in Venice. Confirmed the formula through the Museo del Vetro's records. Then she sat at her desk and wrote an open-access publication, eight pages, formatted for the Foundation's website and for arXiv simultaneous release, releasing the complete Specchi mirror formula to the public domain.
+
+She published it at 6:47 AM. Before the coffee cooled. Before the sun reached the hallway windows.
+
+By noon: 14,000 downloads across 40 countries. By the end of the day, the formula was being translated into Mandarin, Arabic, and Hindi. By Thursday, a materials science lab in São Paulo had published a cost analysis showing the mirrors could be fabricated for $340 per square meter using locally sourced silicates.
+
+By Friday, Cognigenics' patent attorneys had read the publication and filed a cease-and-desist letter.
+
+
+
+Board meeting. Gerald Stern read the cease-and-desist aloud, the legal language flat and threatening and constructed with the particular precision of attorneys who understood that the purpose of a cease-and-desist was not to win a case but to create fear, and that fear was cheaper than litigation.
+
+Margaret Chen: "They're claiming our mirror formula is their trade secret?"
+
+Nadia: "Their trade secret is a sixteenth-century Venetian recipe that was documented in a public archive in Prague. They are claiming ownership of something that was made by artisans who died four hundred years ago. The patent is predicated on a proprietary coating that is, according to our materials analysis, functionally identical to a standard anti-reflective thin-film coating that has been used in optical manufacturing since 1935."
+
+Silence. The board processing the information. Margaret processing the institutional implications.
+
+"Can they win?"
+
+"They can file. Filing costs them $15,000. Defending costs us $350,000. That's not a legal strategy. It's attrition. They don't need to win. They need to exhaust us."
+
+Margaret looked around the table. Five board members, each one carrying the particular expression of people who have built something good and are being told that something good is being attacked, not with arguments but with resources.
+
+"What do you recommend?"
+
+"Nothing. We've already done it. The formula is public. 14,000 downloads. You cannot un-publish knowledge that has been downloaded 14,000 times in 40 countries. The cease-and-desist is addressed to a ship that has already sailed, and the ocean it's sailing in is the internet."

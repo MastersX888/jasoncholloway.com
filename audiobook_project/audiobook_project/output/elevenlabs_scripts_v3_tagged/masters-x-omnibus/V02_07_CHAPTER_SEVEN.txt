@@ -1,0 +1,129 @@
+Chapter Seven. The Testament of Solomon.
+
+Three thirty-three point six hertz. Iceland.
+
+[short pause]
+
+The whiteboard had grown a second diagram.
+
+Blake had bought a second set of markers, red, for the new system, to distinguish it from the blue Ars Notoria notation. The south wall of the cottage now looked like the work of a man who had either decoded a 2,500-year-old manuscript tradition or lost his mind, and the distance between those two interpretations was narrowing daily. Red lines. Blue lines. Latin names in Blake's shaking hand. Hebrew names in a hand that trembled differently, the Hebrew letters less practiced, the wobble of unfamiliarity layered on top of the wobble of one eleven point two hertz, producing a script that looked ancient because it looked uncertain, which was, Blake reflected, probably how all ancient scripts had looked to the men writing them for the first time.
+
+The Testament of Solomon. Not the canonical Solomon, not Proverbs, not Ecclesiastes, not the Song of Songs that the rabbis fought for centuries to keep in the biblical canon because a love poem seemed too human for scripture. This was the other Solomon. The Solomon of the pseudepigrapha, the construction manager, the king who built the Temple not with mortar and geometry alone but with the labor of demons, each conscripted by a specific seal-ring, each forced to serve by the acoustic authority of a frequency it could not resist.
+
+Blake read it the way he had read the Ars Notoria: as engineering. Every demon was a technical description. Every seal was a technical solution. The medieval demonologists who had treated this text as a catalog of supernatural entities had committed the same error as the Church officials who had classified the Ars Notoria as sorcery, they had mistaken the encoding for the content. Ornithias was not a demon. Ornithias was cardiac arrhythmia at the third harmonic. Asmodeus was not a demon. Asmodeus was cognitive dissociation at the fourth harmonic, the specific neurological state that occurred when the visual and auditory cortices received conflicting frequency data and the brain, unable to resolve the contradiction, fractured its unified perceptual field into competing channels.
+
+He mapped twelve demons to twelve uncontrolled harmonic states, writing each one on the whiteboard in red, with the physiological description below the Solomonic name and the frequency value below that:
+
+Ornithias, cardiac arrhythmia, three thirty-three point six hertz unsupported
+
+Kunopegos, hypothermia, six sixty-seven point two hertz sustained without cardiac compensation
+
+Asmodeus, cognitive fracture, four forty-four point eight hertz bilateral without preparation
+
+Beelzeboul, respiratory failure, five fifty-six point zero hertz in sealed chamber
+
+Onoskelis, seizure, 222.4 + four forty-four point eight hertz simultaneous onset
+
+The list continued. Seven more. Each one a physiological disaster that Blake recognized, not from the Testament, but from the Foundation's own adverse event reports. From the Maryland data. From Andrew's clinical summaries of what happened when someone was exposed to the harmonic stack without the preparation protocol.
+
+The seals were the opposite. Each seal-ring contained a counter-frequency, a phase-cancellation pattern that brought the chaotic resonance into alignment. The seal of Ornithias: a specific body position that channeled the three thirty-three point six hertz through the chest cavity in a standing wave rather than a chaotic oscillation. The seal of Asmodeus: a graduated approach to the fourth harmonic, building from the second through the third, giving the neural architecture time to integrate each layer before adding the next.
+
+Preparation. The seals were preparation.
+
+[pause]
+
+Andrew arrived at 2 PM, which meant he had something. Andrew at 2 PM was Andrew with data, he scheduled his own work in blocks, the first from 6 AM to noon (acquisition and analysis), the second from 2 PM to 6 PM (synthesis and reporting), and the gap between them was a sandwich and a walk along the lava field that he took regardless of weather, because the walk was the space in which his mind transitioned from numbers to meaning, and meaning required motion.
+
+He carried his laptop. He set it on the desk next to the Breitling, which he moved an inch to the left with the careful precision of a man who understood that Blake's objects occupied emotional as well as physical space. He opened the laptop. On the screen: the Maryland facility's chamber specifications, overlaid with Blake's demon-seal framework.
+
+"I ran the Maryland protocol against your map," Andrew said. The sentence was flat, the flatness of a man who had found something and was presenting it without editorializing because the data did not need his help.
+
+Blake looked at the screen. The Maryland chamber had activated the third and fourth harmonics simultaneously, three thirty-three point six hertz and four forty-four point eight hertz at full amplitude, without any graduated exposure, without any counter-frequency, without the slow progression from baseline to first harmonic to second that the Foundation's protocol required.
+
+In the Solomonic framework: they had unsealed Ornithias and Asmodeus at the same time. No preparation. No ring. No seal.
+
+"They opened two doors at once," Blake said. "Without teaching anyone how to walk through either one."
+
+"Worse." Andrew scrolled to a second overlay, a timeline showing the Maryland subjects' cardiac and EEG data alongside the Foundation's first cohort. The Foundation data climbed in clean steps, each harmonic introduced after the previous one had been integrated, each step lasting weeks, the neurological architecture given time to stabilize before the next frequency was added. The Maryland data was a vertical line. "They didn't open the doors. They removed the walls. There was nothing graduated about their protocol. Six weeks from baseline to full harmonic stack. The subjects didn't walk through anything. They were thrown."
+
+"And the seizures -"
+
+"Were predictable. Are predictable. In the Solomonic map, Asmodeus produces exactly this, cognitive fracture from bilateral fourth-harmonic exposure without the third harmonic serving as a bridge frequency." He paused. "The 52-week protocol isn't training for the chamber, Blake."
+
+"No."
+
+"It's the seal. It teaches the nervous system to generate its own phase-cancellation. Preparation is the counter-frequency to destruction."
+
+They looked at each other across the desk. The Breitling ticked. The wind pressed against the cottage windows, a gust, then release, then gust, a rhythm that was not musical but geological, the planet breathing against the glass with the patience of something that had been breathing for four billion years and would continue breathing long after the glass and the cottage and the conversation were gone.
+
+"Helena Vance had all of this," Andrew said quietly. "The Ars Notoria. The Testament. The preparation literature. She had the same texts we have. She just read them wrong."
+
+"She read them as obstacles. As inefficiency. As a 52-week delay between her question and her answer."
+
+"She read them as a triage problem." Andrew closed the laptop. "And she decided the triage justified the casualties." Blake traced the transmission on the whiteboard.
+
+Solomon's Temple, 10th century BCE, the first documented acoustic chamber, the Holy of Holies, a perfect cube designed to produce a standing wave at the fundamental frequency of basalt and cedar. The Merkabah mystics, 2nd century BCE, the chariot riders, the men who sat in stone rooms and chanted until their hearts slowed and their perception reorganized and they reported ascending through seven heavens, each heaven a harmonic, each transition requiring the correct password, which was not a word but a frequency. The Ars Notoria, 13th century, the same knowledge, repackaged as angelic meditation, the body positions and chant frequencies encoded in geometric notae because the 13th century had geometry but not acoustics. The Strahov monks, 15th century, the notation preserved in a lead-lined crypt, the preparation reading list in a chained library, the institutional architecture of secrecy protecting the knowledge from the institution that housed it. Moreau's chamber, 19th century, the engineering applied without the theology, the mirrors replacing the chants, the mechanism stripped of its meaning and deployed as technology. The Foundation, present, the knowledge recovered, the preparation restored, the consent protocol built around the understanding that the seal was as important as the frequency, that what the grimoires called protection was what the Foundation called ethics.
+
+"The knowledge survives by changing containers," Blake said, writing it in the Moleskine. "The frequency stays the same. The bottle changes."
+
+He put down the pen. Looked at the timeline on the whiteboard. Three thousand years of transmission. Three millennia of encoding and reencoding, hiding and revealing, burning and preserving. And at every step, two impulses in competition: the impulse to share the knowledge and the impulse to control it. The Keepers and the custodians. The Foundation and Cognigenics. Solomon's temple open to the priests and closed to everyone else.
+
+The Ars Notoria called them angels and demons. The Kabbalists called them mercy and severity. The Christians called them grace and law. The scientists would call them preparation and exposure.
+
+The names didn't matter. The frequencies did.
+
+[pause]
+
+The phone rang at 4 PM. Not Blake's cell, the Foundation's satellite line, the one Andrew had installed for institutional communications, the one that rang with the particular digital trill that meant someone was calling from the continental United States during business hours.
+
+Teresa Morales. Blake had spoken to her twice, both times through Nadia, both times receiving Teresa's observations filtered through Nadia's institutional translation, which compressed everything into operational categories: threat level, response timeline, resource requirements. But Teresa's voice, unfiltered, had a different quality, the quality of a woman who had spent twelve years inside an organization she now understood to be dangerous and who had emerged with the diagnostic precision of someone who had been sick and was now, permanently, immune.
+
+"Mr. Masters. I need to tell you something that Ms. Volkov should hear from you, not from me."
+
+"Go ahead."
+
+"Cognigenics has retained a consultant. Emmanuel Crane Jr. Georgetown theology, doctoral work on medieval mysticism, published in three journals your girlfriend reads." She paused. "Also: Jesuit-trained. Also: security clearance. Also: his father was on the NIH oversight committee that received your Foundation's first protocol submission."
+
+Blake sat down. The basalt floor was cold through his jeans. He set the phone on the desk and switched to speaker. Andrew, who had been reading in the corner, looked up with the expression that meant his listening had shifted from ambient to computational.
+
+"What's his agenda?"
+
+"I don't know. I know his credential. A Jesuit theologian with a security clearance is the most dangerous kind of institutional actor. They understand both the theology and the bureaucracy. They can read your manuscripts and read your budget. They can follow the frequency argument into the grimoire tradition and follow it back out into a Senate subcommittee's appropriations language. There is nobody in Washington or in the Vatican who occupies both spaces. Crane does. And his father, Emmanuel Crane Sr., was a founding board member of the Completion Sect before the Sect was restructured, officially dissolved, practically just renamed. The son understands what his father built."
+
+"What do you recommend?"
+
+"I recommend you tell Nadia. Not because she needs to be warned. Because she is the only person in your organization who will know what to do with this information. I was inside Cognigenics for twelve years, and the thing I learned is that the institution that survives is the one where someone, not the leader, not the scientist, not the man in the cave, someone whose job it is to see the whole board, sees the pieces before they move."
+
+She hung up. Blake looked at Andrew. Andrew looked at the whiteboard, at the twelve demons, the twelve seals, the transmission timeline spanning three millennia.
+
+"The pieces are moving," Andrew said.
+
+"They always were. We just didn't know there was a board."
+
+[pause]
+
+Late. After midnight. Blake stood at the whiteboard in the LED lantern's cold light, looking at the two systems he had drawn. Left side: the Ars Notoria, in blue. The angel-harmonic chart. Michael at two hundred twenty-two hertz, Gabriel at 333, Raphael at 333.6. The notae, circles and triangles and bilateral symmetries, the body as instrument, the prayer as tuning procedure. Right side: the Testament of Solomon, in red. The demon-seal map. Ornithias, Asmodeus, Kunopegos. Chaotic frequencies and their counter-patterns. Destruction and its remediation.
+
+He stepped back. The two systems occupied opposite sides of the whiteboard, but they were not opposites. They were mirror images. The frequencies were the same. The body positions were the same. The harmonic stack was the same. The only difference was context: the Ars Notoria described what happened when a prepared person encountered the frequency. The Testament described what happened when an unprepared person encountered the same frequency.
+
+Angels and demons. Same frequencies. Different preparation.
+
+And between the two systems, in the center of the whiteboard, a gap. An empty space that Blake had not drawn because he had not known what to put there. But standing in the midnight dark, looking at the two mirrored diagrams, he understood what the gap was.
+
+The gap was the seal. The gap was the preparation. The gap was the fifty-two weeks of graduated exposure that turned a demon into an angel, not by changing the frequency but by changing the body that received it.
+
+He picked up the Sharpie, black, the only color he hadn't used, and wrote in the center of the whiteboard, in the handwriting that carried his grandfather's steadiness and his own tremor:
+
+THE TWO TREES
+
+Below it, smaller:
+
+Same garden. Same root system.
+
+One forbidden. One protected.
+
+The difference was never the fruit.
+
+The difference was the readiness to eat it.
+
+He put the cap on the Sharpie. Set it on the desk. The Breitling ticked. The wind pressed. The whiteboard held its two systems in the light of the lantern, the red and blue lines crossing in places where the same frequency appeared on both sides, the intersections glowing faintly, the overlapping ink producing a purple that neither the preparation map nor the destruction map contained alone, a color that existed only where the two systems met, in the gap, in the readiness, in the space that Solomon's Temple had called the Holy of Holies and the Foundation called the protocol and Blake, standing in a stone cottage in Iceland in March, looking at what he had drawn, called the only thing worth building.

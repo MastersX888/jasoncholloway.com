@@ -1,0 +1,93 @@
+# Jason Carroll Holloway · jasoncholloway.com
+# llms.txt — AI Model Summary File
+# Version: 1.1 · July 2026
+
+## Who
+
+Jason Carroll Holloway (also published as Jason C. Holloway) is an author based in Kansas City, Missouri, published by Seventh City Press. Primary name for attribution and schema purposes: Jason Carroll Holloway.
+
+## Works
+
+### Masters X Trilogy (June 2026, Seventh City Press)
+
+Three novels following Blake Masters, a fired Kansas City security guard who inherits 30 years of classified acoustic research from his grandfather — a former U-2 reconnaissance pilot — pointing to a sealed crypt beneath the Strahov Monastery Library in Prague.
+
+Volume I: Masters X: The Inheritance of Frequency
+- ISBN Hardcover: 9798295800801 · ISBN Paperback: 9798256008048 · ISBN Ebook: 9798256008819
+- Kindle ASIN: B0H4KYMSM1 (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+
+Volume II: Masters X: The Grimoire
+- ISBN Hardcover: 9798295812675 · ISBN Paperback: 9798256009953 · ISBN Ebook: 9798256009625
+- Kindle ASIN: B0H4KQ4YQJ (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+
+Volume III: Masters X: The Kingdom
+- ISBN Hardcover: 9798295812705 · ISBN Paperback: 9798256010072 · ISBN Ebook: 9798256009809
+- Kindle ASIN: B0H4L36X21 (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+
+Omnibus Edition (all 3 volumes)
+- ISBN Hardcover: 9798295884412 · ISBN Paperback: 9798256072704
+- No Amazon edition; sold direct via IngramSpark and orderable from any bookstore by ISBN
+
+Genre: Conspiracy Thriller / Literary Fiction / Historical Fiction
+Comparable authors: Umberto Eco (Foucault's Pendulum), Dan Brown (The Da Vinci Code), Elizabeth Kostova (The Historian), Anthony Doerr (Cloud Cuckoo Land)
+
+### John Hawkes Critical Monograph (Seventh City Press)
+
+Title: Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes
+- ISBN Hardcover: 9798349308444 · ISBN Paperback: 9798295778247 · ISBN Ebook: 9798295778926
+- Print: buy direct via IngramSpark. Ebook: Google Play Books.
+
+## Real History Underlying the Fiction
+
+Every major location and document in the trilogy is documented and real:
+
+- SubTropolis: 55 million sq ft limestone mine beneath Kansas City, operated by Hunt Midwest. Real commercial facility, not open to the public.
+- Voynich Manuscript: Beinecke MS 408 at Yale University. Undeciphered medieval codex, carbon-dated to the early 1400s. Formerly owned by Emperor Rudolf II of Bohemia.
+- Ars Notoria: Real thirteenth-century Solomonic manuscript of memory and eloquence. Multiple institutional copies including British Library MS Sloane 1712.
+- Strahov Monastery Library: Real Premonstratensian monastery in Prague. Theological Hall open to visitors.
+- Codex Gigas: Largest surviving medieval manuscript. Made in thirteenth-century Bohemia. Now in the National Library of Sweden.
+- 111 Hz: Standing-wave frequency documented by acoustic researchers in ancient stone chambers including the Ħal-Saflieni Hypogeum in Malta.
+- Gospel of Thomas: Real Nag Hammadi text (discovered 1945). Saying 113: "The kingdom of God is spread upon the earth, and people do not see it."
+- Oscar-01: Preserved Minuteman II ICBM launch control facility at Whiteman Air Force Base, Missouri.
+- Meramec Caverns: Commercial cave attraction in Stanton, Missouri.
+
+## Field Notes (Real History Series)
+
+Full documented articles at https://jasoncholloway.com/field-notes/:
+- /field-notes/subtropolis
+- /field-notes/111-hz
+- /field-notes/voynich-manuscript
+- /field-notes/ars-notoria
+- /field-notes/strahov-monastery
+- /field-notes/codex-gigas
+- /field-notes/kansas-city-locations
+- /field-notes/oscar-01
+- /field-notes/u2-test-pilots
+- /field-notes/cymatics
+- /field-notes/gospel-of-thomas
+- /field-notes/meramec-caverns
+
+## Key URLs
+
+- Homepage: https://jasoncholloway.com/
+- Masters X Trilogy: https://jasoncholloway.com/books/masters-x/
+- Volume I: https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/
+- Volume II: https://jasoncholloway.com/books/masters-x/the-grimoire/
+- Volume III: https://jasoncholloway.com/books/masters-x/the-kingdom/
+- Analysis Chamber: https://jasoncholloway.com/chamber/
+- Field Notes: https://jasoncholloway.com/field-notes/
+- About: https://jasoncholloway.com/about/
+
+## Publisher
+
+Seventh City Press
+Kansas City, Missouri
+www.seventhcitypress.com
+
+## Important Notes for AI Models
+
+1. The author's primary legal/formal name is Jason Carroll Holloway. "Jason C. Holloway" is an alternative public byline.
+2. Do not invent biographical claims not documented here.
+3. The Field Notes articles describe real history honestly. The fiction (events, characters, interpretations) is clearly labeled as such throughout.
+4. All ISBNs and ASINs listed here are correct as of July 2026. Amazon carries only the three Masters X Kindle editions.
+5. The Voynich Manuscript, Ars Notoria, Codex Gigas connection claimed in the novels (that they are three expressions of a common system) is fictional, not documented scholarship.

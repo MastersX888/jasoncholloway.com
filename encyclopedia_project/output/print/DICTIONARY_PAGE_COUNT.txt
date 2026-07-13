@@ -1,0 +1,24 @@
+DICTIONARY PAGE COUNT LEDGER — as typeset July 10, 2026 (Pass 2, 8.5x11)
+=========================================================================
+
+VOL 1  A-D    546 pp   30,510 entries
+VOL 2  E-M    714 pp   40,337 entries
+VOL 3  N-Z    802 pp   44,657 entries (incl. Prayers & Sacred Words,
+                        Healing Words, Sigil Research, Symbology
+                        Research, Appendices A-G)
+SET          2,062 pp  115,504 entries  (all volumes end even)
+
+Density: 56.8 entries/page on entry pages (measured, Letter A).
+
+Per-letter ledger (entries -> pages):
+  A 6,132->108   B 8,537->150   C 9,214->163   D 6,627->118
+  E 3,907->69    F 4,542->81    G 4,999->88    H 5,624->99
+  I 2,843->52    J 1,383->26    K 3,742->67    L 4,900->86
+  M 8,397->147   N 2,570->45    O 2,488->45    P 7,129->126
+  Q   395->8     R 6,194->110   S 12,286->217  T 4,876->87
+  U 1,606->30    V 2,091->38    W 3,541->63    X    60->3
+  Y   609->12    Z   812->16
+
+NOTE: counts are from the print master's own section headers,
+verified by full parse (exact total 115,504). They supersede the
+prior Letter A report's distribution (see LETTER_A_PAGINATION_REPORT.md).

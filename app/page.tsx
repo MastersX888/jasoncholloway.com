@@ -92,12 +92,11 @@ export default function Home() {
             <div className="artifact-strip animate-fade-up delay-4" role="list">
               <div className="artifact-item" role="listitem">
                 <div className="artifact-img-wrap">
-                  {/* fallback: voynich-folio-thumb.jpg not in public/ — using /folios/voynich/Vol 1/voynich-009.jpg */}
                   <img
-                    src="/folios/voynich/Vol 1/voynich-009.jpg"
+                    src="/field-notes/voynich-folio-thumb.jpg"
                     alt="Voynich Manuscript folio f68r3 — Beinecke MS 408"
                     width={120} height={80}
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    style={{ objectFit: "cover", width: "100%", height: "100%", objectPosition: "center 40%" }}
                     loading="lazy"
                   />
                 </div>
@@ -123,9 +122,8 @@ export default function Home() {
               <div className="artifact-divider" aria-hidden="true" />
               <div className="artifact-item" role="listitem">
                 <div className="artifact-img-wrap">
-                  {/* fallback: subtropolis-entrance.jpg not in public/ — using /og/field-notes/kansas-city-locations.png */}
                   <img
-                    src="/og/field-notes/kansas-city-locations.png"
+                    src="/field-notes/subtropolis-entrance.jpg"
                     alt="SubTropolis underground facility entrance, Kansas City, Missouri"
                     width={120} height={80}
                     style={{ objectFit: "cover", width: "100%", height: "100%" }}

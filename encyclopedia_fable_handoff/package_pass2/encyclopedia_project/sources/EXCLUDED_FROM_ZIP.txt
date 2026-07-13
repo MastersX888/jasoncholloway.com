@@ -1,0 +1,6 @@
+Excluded from Pass 2 handoff zip (available in author repo):
+- resonant_frequency_dictionary.txt (~14 MB one-line extract)
+- omnibus_v8_fulltext.txt, annotated_v3_fulltext.txt (large)
+- interior_7x10_*.pdf (superseded)
+
+Use THE_RESONANT_FREQUENCY_DICTIONARY.docx for dictionary typesetting.

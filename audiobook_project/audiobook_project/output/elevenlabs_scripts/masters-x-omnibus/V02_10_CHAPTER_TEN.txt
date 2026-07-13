@@ -1,0 +1,160 @@
+Chapter Ten. Andrew's Algorithm.
+
+Three point nine one five hertz. Iceland.
+
+
+Andrew called at 4:17 AM Prague time, which meant he had been working continuously for approximately fourteen hours and had arrived at a result that couldn't wait for morning.
+
+Blake was not asleep. He'd been lying in the pension's narrow bed, staring at the ceiling's plaster molding: a baroque garland of acanthus leaves and rosettes that the building's eighteenth-century decorator had rendered with the formulaic precision of a craftsman who knew the vocabulary without understanding the grammar. The molding's proportions were wrong by modern standards, the rosettes too large for the room's scale, the garland too regular to create the visual rhythm that the original Gothic builders would have demanded. But the plaster was old and cracked and stained by two centuries of central European winters, and the imperfections gave it a texture that the original design had lacked: the beauty of erosion, the aesthetic that only time could produce.
+
+Outside the window, Prague's nighttime symphony: the distant percussion of a tram on the Malostranská rails, the Vltava's continuous bass note, an ambulance siren somewhere in Staré Město cresting and falling like a Doppler demonstration.
+
+"I'm sending you a rendering," Andrew said. "Open it on the largest screen you have."
+
+Blake's largest screen was his laptop, propped on the pension desk beside the photographed Strahov pages. He opened the file. The rendering loaded in segments. Andrew's custom software generating the image layer by layer, each layer adding spatial detail to a three-dimensional model that assembled itself with the patient precision of a cathedral being built in fast-forward.
+
+The chamber.
+
+Andrew had taken the eight disc cross-sections, applied the proportional relationships encoded in the harmonic ratios, computed the connecting surfaces using the non-Euclidean curvature parameters from the seventh disc, and produced a complete three-dimensional model of the structure described by the Strahov specifications.
+
+It was beautiful. The devastating beauty that Blake had learned to recognize as a marker of functional perfection: the beauty that occurred when every proportion served a purpose and the cumulative effect of purposeful design produced an aesthetic experience that was, itself, evidence that the design was correct. The way a bridge could be beautiful because its curves distributed load efficiently. The way a violin could be beautiful because its body amplified sound.
+
+The chamber was approximately seven meters in diameter at its widest point and five meters tall at its apex. The lower walls were conventional, vertical stone surfaces rising from a circular floor. But at approximately two meters' height, the walls began to curve inward, following the hyperbolic surfaces that Andrew had identified in the disc patterns. The curves were not uniform, they undulated, creating concavities and convexities that Blake recognized as acoustic focusing surfaces.
+
+"The acoustics check out," Andrew said. "I ran the simulation with limestone wall composition at standard density. Fundamental resonance: one eleven point two three hertz. Within one-hundredth of a hertz of the SubTropolis measurement."
+
+"The tolerance."
+
+"The tolerance is remarkable. The original designers, whoever computed these specifications, had a margin of error of less than zero point zero one hertz. To achieve that kind of precision with medieval construction, they would have needed..." Andrew paused. "They would have needed to tune the chamber after construction. Build it to the approximate geometry, then adjust the surface curvatures incrementally until the resonance hit the target frequency."
+
+"As you tune an instrument."
+
+"Exactly. The chamber IS an instrument. The specifications give you the rough dimensions, but the final tuning requires someone standing inside it, listening to the resonance, and making adjustments until the frequency is right."
+
+"Someone who can hear one eleven point two hertz and distinguish it from 111.0."
+
+"Someone with exceptional proprioceptive sensitivity: the ability to feel the frequency in your body."
+
+"A Master."
+
+"A builder who was also a perceiver. Yes." Andrew's voice had the quality Blake had come to think of as his convergence tone, the register his speech assumed when multiple data streams were producing the same conclusion. "Blake, I've been running the Voynich pool diagrams against the chamber model. The proportional match is..."
+
+"Close?"
+
+"Exact. To the level of measurement error in the folio photographs. The Voynich biological section isn't depicting one chamber. It's depicting eight. Connected by the tube system, the acoustic pathways, in a specific configuration."
+
+"Eight chambers."
+
+"Corresponding to eight frequency harmonics. Each chamber tuned to a different harmonic of the one eleven point two hertz fundamental. The first chamber at one eleven point two, the second at 333.6, the third harmonic, the third at 556.0, the fifth harmonic, and so on through the harmonic series."
+
+Blake stared at the rendering on his laptop. One chamber was beautiful. Eight, connected in an overtone series, would be...
+
+"A cathedral," he said. "That's what a cathedral is. Multiple resonance spaces, nave, transepts, choir, ambulatory, chapels, each tuned to different resonances by their dimensions. The Gothic builders weren't designing churches. They were building eight-chamber resonance systems."
+
+"Less precisely. Chartres gets close: the nave resonance is one hundred twelve hertz, the choir is higher, the transepts are different again. But the connecting geometries aren't controlled the way the Strahov specifications dictate. Cathedral acoustics are emergent, they happen because stone and space produce resonance inevitably. The specification system makes it intentional."
+
+"Emergent versus engineered."
+
+"Right. And the Sagrada Família is the closest existing approximation to the engineered version, because Gaudí had access to some version of the specifications."
+
+Blake pulled up the photograph of the Strahov seventh disc. "Andrew, the harmonic series. First, third, fifth harmonics. The same series that defines musical consonance. The same series that cymatics uses to create increasingly complex spatial arrangements."
+
+"Yes."
+
+"And if you apply all harmonics simultaneously..."
+
+"You get the complete cymatics figure. All configurations superimposed. A single image containing every harmony at once."
+
+"The notae."
+
+Andrew was silent. The word hung in the digital space between Prague and Kansas City: the word that connected medieval speculation to modern physics, that connected the Ars Notoria to cymatics, that connected the monks' sacred notes to the quantifiable phenomenon of standing wave interference patterns.
+
+"If the eight-chamber system produces eight harmonics simultaneously," Blake continued, "and those harmonics create a superimposed cymatics pattern, a pattern that contains every pitch relationship at once, then the person standing at the convergence point of all eight chambers..."
+
+"Would experience a complete tonal field," Andrew finished. "Every oscillation, every pattern, every mathematical relationship, all at once."
+
+"The configuration of everything."
+
+"Blake, I need to be very careful here. I can model the acoustics. I can verify the overtones. But 'the configuration of everything' is a claim about what those patterns mean, and meaning isn't a variable I can -"
+
+"I know. I know you can't model consciousness. But you can model the conditions under which consciousness state changes have been documented. The Monroe Institute has forty years of EEG data showing hemispheric synchronization at specific binaural vibrations. If the chamber produces the right frequency environment, and the person inside has the right neurological predisposition, then the state change is predicted by the data you can model."
+
+"Predicted. Not guaranteed."
+
+"Nothing in science is guaranteed. Predicted is sufficient."
+
+Andrew exhaled: the sound that meant his computational mind had reached a decision that his cautious nature wanted to resist.
+
+"I'm building a scale model," he said. "One-seventh scale. Polymer construction, to approximate limestone acoustics. I can have it fabricated and tested within three weeks."
+
+"In SubTropolis?"
+
+"In my garage. SubTropolis is the full-scale site, but I need proof of concept before I commit Foundation resources." A pause. "Nadia would need to approve the budget for full-scale construction. You haven't told her about any of this."
+
+It was not a question. Andrew had the data.
+
+"I'll tell her when there's something concrete to present."
+
+"Blake, the scale model IS concrete. The Strahov pages ARE concrete. You're not waiting for evidence. You're waiting for..."
+
+"A way to explain it."
+
+"Explain what? The research?"
+
+"The research she can understand. The part I can't explain is -" Blake stopped. He was about to articulate something he had been avoiding for weeks, and the articulation would make it real. "The part I can't explain is that I want to do this without her. Not against her. Without her. The research, the chamber, the demonstration, all of it, I want to experience it with someone who can perceive what I perceive. And that's not Nadia."
+
+The confession settled into the connection like a stone dropped into still water. Expanding rings of implication.
+
+"That's the gift's cost," Andrew said quietly. "The isolation function. PKD wrote about it. The inability to share the perceptual experience with anyone who doesn't have the same capacity."
+
+"PKD had twin daughters and three wives."
+
+"PKD was miserable. And honest about why."
+
+Blake looked at the rendering on his screen. The chamber, beautiful and precise and designed to amplify exactly the thing that was making him unable to share his life with the woman who loved him.
+
+"I'll call her tomorrow," he said. "I'll tell her everything."
+
+"Will you?"
+
+"I'll try."
+
+
+
+The scale model arrived in Andrew's garage eighteen days later. Blake was still in Prague. Eva Černá had connected him with a Premonstratensian historian at Strahov who was providing additional context on the monastery's Jesuit-era archives.
+
+Andrew tested the model on a Saturday, using a calibrated speaker system, contact microphones, and a laser vibrometer that measured surface displacement at nanometer resolution. The garage had been cleared of everything except the model and the measurement equipment, his car parked in the driveway, the concrete floor swept clean. The model sat on a reinforced table at the garage's center: a perfect one-seventh replica of the chamber geometry, rendered in acoustic polymer sourced from a materials science lab at UMKC. The polymer's density matched limestone within 3 percent, close enough for proof of concept.
+
+The fundamental tone came in at one eleven point one nine hertz. The first harmonic at three thirty-three point four hertz. The second at five fifty-five point eight hertz.
+
+Within zero point zero four hertz of the specifications across three harmonics.
+
+Andrew sent Blake a three-word message at 11:47 PM Kansas City time:
+
+It works.It works.
+
+What Andrew did not include in the message, because Andrew did not include personal information in research communications, was the context in which the test had been conducted.
+
+Jennifer had left six weeks ago. Not dramatically, the undramatic departure was worse than any dramatic one could have been. She'd packed two suitcases on a Tuesday while Andrew was at the Foundation, and when he came home at 11 PM the closet held only his things and the bathroom counter had the single-occupancy sparseness of a hotel. Her engagement ring sat on the kitchen table, centered on a sticky note that said, in her neat pharmacist's handwriting: I can't compete with a cave. I shouldn't have to try.
+
+She wasn't wrong. The cave, the chamber, the Foundation, Blake's perception, the entire architecturally impossible project, had consumed everything. Not the way an addiction consumed: addictions were indiscriminate. Andrew's consumption was targeted, precise, the focused appetite of an intelligence that had found the only problem interesting enough to justify the cost of solving it. He'd turned down the Stanford position. He'd let his publications lapse. He'd spent his savings on acoustic equipment and polymer samples.
+
+The ring sat on his desk now. Not as sentiment, as calibration. Its mass was known (4.2 grams, 14-karat white gold, princess-cut diamond of 0.6 carats), and Andrew used it as a reference weight when calibrating the laser vibrometer's contact sensors. Jennifer's engagement ring, repurposed as laboratory equipment. He was aware of the symbolism. He chose not to examine it.
+
+He knew this. He built anyway. Because the alternative was to stop, and stopping meant Jennifer had left for nothing, and Stanford had been declined for nothing, and two years of eighteen-hour days had produced nothing but an impressive software system.
+
+The model resonated at one eleven point one nine hertz. Within four-hundredths of a hertz. The data was clean. The proof of concept was proved.
+
+It works.
+
+Two words. Sent to the one person who could appreciate them. Not to Jennifer. Not to his mother in Cupertino, who would have been proud in the undifferentiated way parents were proud of accomplishments they couldn't assess. To Blake. Because Blake would know what those two words meant. Because Blake was the only person for whom those two words carried the full weight of their implications.
+
+Andrew sat in his empty garage, beside his empty apartment, in his increasingly empty life, and watched the laser vibrometer's readout hold steady at one eleven point one nine hertz, and felt the specific loneliness of a man whose best work was in service to someone else's gift.
+
+Blake read it in his pension room at 6:47 AM Prague time: the Breitling on the nightstand confirming the hour, the castle visible through his window in the first grey light, and felt the combination of triumph and dread that characterized every major advance, the data confirming the theory, the theory demanding action, the action requiring decisions that would reshape lives.
+
+He opened his contacts. Nadia's name at the top.
+
+He called Andrew.
+
+The pattern was clear now. Not just in the research, in himself. The trajectory of avoidance, the geometry of distance, the precise architecture of a relationship being disassembled by the subtler demolition of unshared experience.

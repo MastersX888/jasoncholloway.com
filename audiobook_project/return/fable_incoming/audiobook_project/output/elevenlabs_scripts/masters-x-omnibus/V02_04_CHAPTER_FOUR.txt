@@ -1,0 +1,164 @@
+Chapter Four. The Ars Notoria.
+
+One eleven point two hertz. Iceland.
+
+
+The whiteboard had been a mistake.
+
+Not the purchase, that was necessary, three thousand krónur from an office supply store in Reykjavík, forty-two inches by thirty, the kind of board that middle managers use for quarterly projections and Blake Masters was using for the decryption of medieval prayer diagrams. The mistake was carrying it. Two kilometers from the road, across the lava field, in December wind that came off the Mýrdalsjökull glacier at speeds that made the whiteboard into a sail and Blake into the reluctant skipper of a very stupid boat.
+
+Andrew had watched from the cottage window. Said nothing when Blake arrived, sweating and windblown, wrestled the board through the door, and propped it against the south wall. Said nothing for a full minute. Then:
+
+"You could have asked me."
+
+"You would have talked me out of it."
+
+"I would have helped you carry it. Those are different things."
+
+He handed Blake a sandwich, rye bread, smoked fish, butter, and went back to the control module. The sandwich was still warm. Andrew's sandwiches were always warm. He timed them the way he timed calibrations, with a precision that wasn't about food but about the person eating it.
+
+
+
+The Ars Notoria arrived as a digital file from Andrew's Cambridge contact, the Castle translation, 387 pages, formatted in the particular way that academic PDFs are formatted when the scholar has neither budget nor patience for typesetting. Blake printed it on the cottage's inkjet, which protested the job by jamming twice and producing page 214 with a streak across the central diagram that looked, from a certain angle, like a crack in a rose window.
+
+He read it in three days. Sleeping four hours per night. Eating when Andrew's sandwiches appeared outside the door, a knock, the sound of boots retreating on basalt gravel, the food left on a wooden crate that had once held monitoring equipment and now served as a doorstep table. Andrew never intruded during reading marathons. He had learned this in book one, that Blake in a research fugue was not antisocial but aerodynamic, a mind stripped of drag, and any conversation would introduce turbulence that took hours to resolve.
+
+The Ars Notoria. The Notary Art. Attributed to Solomon, dated to approximately 1230 CE in its earliest surviving manuscripts, condemned by the Church as demonic, preserved by the monks who condemned it, the circularity of institutional suppression, which always creates an archive inside the very act of destruction. You confiscate a book, you must store it. You store it, you must catalog it. You catalog it, someone eventually reads the catalog.
+
+Blake read it not as magic. Not as theology. Not as the delusional scribblings of medieval men who believed that drawing circles and chanting Latin could summon angels and grant perfect memory. He read it as engineering.
+
+The notae. That was the thing.
+
+
+
+The notae were the heart of the Ars Notoria, geometric figures, intricate, symmetrical, embedded with Latin text. Medieval scholars were instructed to meditate on them while chanting specific prayers in specific body positions. The Church called this sorcery. The monks who practiced it called it worship. The difference between the two, Blake was beginning to understand, was entirely a matter of who held institutional power over the definition.
+
+He drew the first nota on the whiteboard, the figure associated with the angel Michael. A circle within a circle, bisected by two perpendicular lines, Latin words radiating outward from the center like the spokes of a wheel. He drew it carefully, the Sharpie thick and forgiving in his trembling hand, the lines wobbling at a frequency that gave them an unintentional life, as if the diagram were vibrating on the wall the way it had once vibrated in the mind of the monk who first committed it to vellum.
+
+He stepped back. Looked at it.
+
+A wavefront diagram.
+
+The outer circle: the boundary of the standing wave in a resonant chamber. The inner circle: the node. The perpendicular lines: the four primary reflection paths, north, south, east, west. The Latin words, positioned at specific angular intervals, were not prayers. They were frequency labels, written in the only notation available to a 13th-century monk who understood acoustic architecture but had no mathematical language for it except the names of angels.
+
+Michael was not an angel. Michael was a frequency designation.
+
+
+
+He worked through the night. The December dark was total. Iceland at this latitude gave twenty hours of darkness and four of grey, the grey itself less illumination than the darkness's grudging acknowledgment that the sun still existed somewhere beyond the curve of the earth. Blake worked by the LED lantern he'd brought from Reykjavík and the pale glow of the laptop screen, the two light sources producing shadows that competed with each other on the whiteboard, the Sharpie lines casting different shadows depending on which light he blocked with his body.
+
+Michael: upright position, facing north. The chant frequency, calculated by combining the Latin gematria embedded in the nota's text with the body-cavity resonance of a standing adult male: approximately two hundred twenty-two hertz. The second harmonic. The figura's bilateral symmetry matched the bilateral standing wave of a column of air in a chamber with parallel walls. The mirrors.
+
+Gabriel: kneeling, facing east. The nota's geometry was triangular, three intersecting circles, each containing a different set of Latin directives. Chant frequency derived from the triangulation: approximately three hundred thirty-three hertz. The third harmonic. Three bodies in resonance, or one body in a triangular chamber, or, and this was the observation that made Blake set down the Sharpie and stand with his hand against the basalt wall, feeling the cold stone against his palm, one body touching two surfaces simultaneously, completing the triangle with its own mass.
+
+Raphael: supine, face upward. The nota was circular, the geometry of a dome, the body lying flat, the cranial vault aligned with the ceiling reflection. The chant frequency, embedded in the notation as the gematria of Raphael's name, broken into its Hebrew root components and converted through the system Blake had worked out from the Ars Notoria's own internal key: three thirty-three point six hertz.
+
+Not approximately. Not within tolerance. Exact to one decimal place.
+
+The third harmonic of one eleven point two hertz, specified in a manuscript written in 1230, three centuries before Galileo described the relationship between string length and pitch, five centuries before Helmholtz formalized acoustic resonance theory, seven centuries before the Foundation's monitoring equipment confirmed the identical frequency in the Sub Tropolis chamber.
+
+Blake photographed the whiteboard and sent the image to Andrew.
+
+
+
+Andrew arrived eleven minutes later. He didn't knock. This was significant. Andrew always knocked, the way he always calculated, the way he always left the warm sandwich on the crate. The knock was the protocol. Its absence meant the protocol had been suspended by something more urgent than manners.
+
+He stood in front of the whiteboard. Said nothing for a long time. His eyes moved from nota to nota, from the scrawled frequency values to the body position diagrams Blake had drawn in blue alongside the geometric figures. His fingers were doing the thing they did when he was computing, a subtle tapping against his thigh, each finger corresponding to a variable in whatever equation was running behind his eyes.
+
+"333.6."
+
+"Yes."
+
+"Not approximately."
+
+"Not approximately."
+
+Andrew walked to the whiteboard. Touched the Raphael nota with one finger, tracing the outermost circle. His touch was reverent, not in the religious sense but in the engineering sense, the way a structural engineer touches a load-bearing wall before renovation: with the full understanding that what you are touching is holding something up.
+
+"They had the harmonic stack," Blake said. "In 1230."
+
+"Not just the stack." Andrew turned from the whiteboard. His face had the expression Blake had seen exactly four times in seven years of friendship, the expression that meant Andrew's model of the world had just been revised at the foundation level. "They had the body positions. The notae specify which body orientation produces the optimal coupling for each harmonic. They mapped the human body as an acoustic instrument and wrote the tuning manual."
+
+"And called it magic."
+
+"They called it prayer. The Church called it magic." He paused. "There's a difference."
+
+"Is there?"
+
+Andrew looked at Blake. The LED lantern caught the edge of his glasses. "Prayer is voluntary. Magic is coerced. The Church classified the Ars Notoria as magic because it gave individual practitioners access to the frequency without institutional mediation. That's not a theological distinction. That's a copyright dispute."
+
+Blake almost laughed. Almost. The sound got halfway out and stopped, because the observation was too precise to be funny and too dark to be anything else. Andrew's humor worked that way, it arrived as a fact and detonated as a commentary, and you were never sure whether to laugh or take notes.
+
+
+
+He called Nadia at 9 PM Kansas City time. She was at her desk, he could hear the ambient frequency of the Foundation's HVAC system in the background, a low hum at approximately sixty hertz that Blake had identified during his first visit and Nadia had never noticed because she had been breathing it for so long it had become a component of her silence.
+
+He read her the Raphael finding. The complete derivation: gematria values, body position, chamber geometry, the three thirty-three point six hertz result.
+
+She listened. Nadia's listening had a weight to it that Blake could feel through the satellite connection, a gravitational quality, as if her attention were pulling the words toward her with a force proportional to their importance. He'd learned to gauge what Nadia thought by the density of her silence. Short pauses meant agreement. Long pauses meant she was ahead of him.
+
+This pause was long.
+
+"How many notae are there?"
+
+"Fourteen major, thirty-two minor."
+
+"And each corresponds to a harmonic?"
+
+"The fourteen major ones map to the harmonic stack and its inversions. The thirty-two minor ones. I don't know yet."
+
+She paused again. When she spoke, her voice had the particular quality it took on when she was about to connect two things that Blake had been looking at separately, the institutional eye, the eye that sees systems instead of specimens.
+
+"Thirty-two paths of wisdom."
+
+"What?"
+
+"Sefer Yetzirah. The thirty-two paths of wisdom. Ten sefirot and twenty-two letters of the Hebrew alphabet. The Kabbalistic foundation map." She was speaking faster now, which happened so rarely that Blake made a note of it in the margin of his Moleskine, the pen skidding slightly, the tremor adding its own annotation. "You have a Christian grimoire that uses Jewish cosmological architecture to encode acoustic frequencies. That's not coincidence, Blake. That's a curriculum."
+
+He sat down. Not because he was tired. Because the chair was the only thing that would hold still while the rest of the room reconfigured itself around what she had said. The Ars Notoria, a 13th-century Latin text condemned by the Church, was structured on the Kabbalistic Tree of Life. The thirty-two minor notae corresponded to the thirty-two paths. The fourteen major notae mapped to some other architecture he hadn't yet identified, but Nadia had just given him the key: the Sefer Yetzirah. The Book of Formation. Which was on Eva's reading list. Which Nadia had already read because she read everything and told no one until the telling would land.
+
+"You've been reading the Kabbalistic texts."
+
+"I've been reading Eva's entire list. In order."
+
+"You didn't tell me."
+
+"You were reading the grimoires. I was reading the theology. We're covering the same ground from opposite directions." A pause. "That's how curricula work, Blake. You don't give every student the same book. You give each student the book they need, and the conversation afterwards is where the education happens."
+
+He looked at the whiteboard. The notae stared back, Michael, Gabriel, Raphael, their geometric symmetries reflecting the LED lantern's light in patterns that shifted when Blake shifted, the angles responding to his position in the room the way the notae were designed to respond to the position of the body in the chamber. The monks had not meditated on these figures for decoration. They had meditated on them because the sustained visual attention produced neurological entrainment, the same frequency exposure the chambers produced through the ears, delivered instead through the eyes.
+
+Two sense organs. Same frequency. Different doors into the same room.
+
+"Nadia."
+
+"Yes."
+
+"We're describing the same preparation protocol from two different traditions, and the two traditions match at the mathematical level. Not metaphorically. Not analogically. The numbers are the same."
+
+"I know. That's why the Strahov monks had both texts on the same reading list. They weren't syncretists, Blake. They were engineers. They used whatever worked."
+
+
+
+Late. Three in the morning, Iceland time. The wind had died for the first time in a week, and the silence it left behind was not empty but architectural, a space defined by what had been removed from it, the way a cathedral's acoustic is shaped not by the stone but by the air the stone contains.
+
+Blake lay on the cottage floor. Not in distress. In saturation. He had been staring at the notae for fourteen hours, and the patterns were swimming behind his closed eyes, not as afterimages but as active constructions, his visual cortex continuing to process the geometric data in the absence of input, the notae burning in his neurological dark the way the Strahov monks' notae must have burned behind their closed eyes in the crypt, six hundred years ago, in the dark below the Theological Hall.
+
+He understood, lying there, what the monks had been doing. The hours of meditation on the geometric figures were not prayer. They were not magic. They were exposure therapy. The notae trained the visual system to produce standing-wave patterns internally, to generate the frequencies without external stimulus. The grimoire was not a book of spells. It was a set of neurological exercises, disguised as devotion, protected by the very institutional condemnation that ensured only the most committed practitioners would endure the social cost of using them.
+
+Be still. And know.
+
+Psalm 46:10. The most familiar verse in the Western contemplative tradition. He had heard it at William's funeral, spoken by a minister who meant it as comfort and who could not have known that it was also a technical instruction. Be still: diminish your body's competing vibrations to baseline. And know: when the noise of motion and thought and ordinary consciousness quiets, the residual frequency, the one that was always there, underneath, becomes perceptible.
+
+His tremor settled. Not stopped, it never stopped, but settled, the way water finds level after disturbance. The one eleven point two hertz sinking from his hands into his arms into his chest into the floor and from the floor into the basalt and from the basalt into the lava field and from the lava field into the crust of the planet, which received it the way the earth receives everything: without comment, without judgment, with the patience of four billion years of holding.
+
+He fell asleep on the floor.
+
+Andrew found him in the morning. Curled on his left side beside the whiteboard, the Breitling ticking on the desk above him, the blanket from the bed having migrated to the floor sometime in the night. Blake did not remember pulling it down, but his body must have reached for warmth the way bodies reach, with the autonomic intelligence that predates consciousness and requires no permission.
+
+Andrew stood looking at the whiteboard. The archangels' names in Blake's wobbling hand, annotated with frequency values, connected by colored lines to body position diagrams. Michael at two hundred twenty-two hertz. Gabriel at 333. Raphael at 333.6. The whole diagram looked exactly like what it was: a circuit schematic. Angels as resistors. Harmonics as current. The human body as the board on which the circuit was built.
+
+He covered Blake with a second blanket, the heavy wool one from the storage crate, the one that smelled of lanolin and cold storage and the particular history of Icelandic sheep, which have been producing the same wool at the same altitude for a thousand years.
+
+Then he walked back to the control module, opened his laptop, and began running the nota frequencies through the acoustic modeling software. Because that was what Andrew did. He didn't wake Blake to tell him the discovery was important. He let Blake sleep, and while Blake slept, Andrew turned the wonder into data.
+
+The cottage was silent. The wind was still. The whiteboard glowed faintly in the first grey light of the Arctic morning, four hours of grey before the darkness reclaimed it, the light itself a frequency, a brief oscillation in the twenty-hour dark, the planet's own tremor made visible.

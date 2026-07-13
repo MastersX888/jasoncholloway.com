@@ -4,10 +4,12 @@ import { useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import foliosData from "@/lib/folios.json";
+import { getBeineckeRef, voynichAltText } from "@/lib/folio-display";
 
 interface Folio {
   id: string;
   folio: string;
+  beineckeRef?: string;
   title: string;
   category: string;
   collection: string;
@@ -57,9 +59,11 @@ export default function FolioVisualizerPage() {
   // Filtered folios for browser sidebar
   const filteredFolios = useMemo(() => {
     return (foliosData as Folio[]).filter((f) => {
+      const beinecke = getBeineckeRef(f);
       const matchesSearch = 
         f.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.folio.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        (beinecke && beinecke.toLowerCase().includes(searchQuery.toLowerCase())) ||
         f.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
         f.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (f.storyNotes && f.storyNotes.toLowerCase().includes(searchQuery.toLowerCase())) ||
@@ -320,7 +324,7 @@ export default function FolioVisualizerPage() {
                       }}>
                         <Image
                           src={folio.path}
-                          alt={folio.title}
+                          alt={voynichAltText(folio)}
                           fill
                           unoptimized
                           style={{
@@ -331,7 +335,9 @@ export default function FolioVisualizerPage() {
                       </div>
                       <div style={{ flexGrow: 1, minWidth: 0 }}>
                         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline" }}>
-                          <span style={{ fontSize: "0.72rem", color: "var(--gold)", fontWeight: 600 }}>{folio.folio}</span>
+                          <span style={{ fontSize: "0.72rem", color: "var(--gold)", fontWeight: 600 }}>
+                            {getBeineckeRef(folio) ?? folio.folio}
+                          </span>
                           <span style={{ fontSize: "0.6rem", color: "var(--text-faint)", textTransform: "uppercase" }}>{folio.category}</span>
                         </div>
                         <div style={{ fontSize: "0.8rem", fontWeight: 500, color: "var(--text)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
@@ -414,7 +420,7 @@ export default function FolioVisualizerPage() {
                     >
                       <Image
                         src={layer.folio.path}
-                        alt={layer.folio.title}
+                        alt={voynichAltText(layer.folio)}
                         fill
                         unoptimized
                         style={{

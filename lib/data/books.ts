@@ -27,6 +27,8 @@ export interface Book {
   price_ebook?: string;
   price_hc_is?: string;
   price_pb_is?: string;
+  price_hc_msrp?: string;
+  price_pb_msrp?: string;
   pageCount: number;
   pageCountPB?: number;
   pageCountHC?: number;
@@ -54,7 +56,9 @@ export const books: Book[] = [
     asin_ebook: BUY_LINKS.MX1_KINDLE_ASIN,
     price_ebook: BUY_LINKS.MX1_KINDLE_PRICE,
     price_pb_is: "16.99",
+    price_pb_msrp: "18.99",
     price_hc_is: "29.99",
+    price_hc_msrp: "33.99",
     pageCount: 178,
     pageCountPB: 178,
     pageCountHC: 156,
@@ -87,8 +91,10 @@ export const books: Book[] = [
     isbn_ebook: "9798256009625",
     asin_ebook: BUY_LINKS.MX2_KINDLE_ASIN,
     price_ebook: BUY_LINKS.MX2_KINDLE_PRICE,
-    price_pb_is: "22.99",
-    price_hc_is: "33.99",
+    price_pb_is: "16.99",
+    price_pb_msrp: "18.99",
+    price_hc_is: "29.99",
+    price_hc_msrp: "33.99",
     pageCount: 260,
     pageCountPB: 260,
     pageCountHC: 218,
@@ -121,8 +127,10 @@ export const books: Book[] = [
     isbn_ebook: "9798256009809", // Ebook ISBN
     asin_ebook: BUY_LINKS.MX3_KINDLE_ASIN,
     price_ebook: BUY_LINKS.MX3_KINDLE_PRICE,
-    price_pb_is: "19.99",
-    price_hc_is: "32.99",
+    price_pb_is: "16.99",
+    price_pb_msrp: "18.99",
+    price_hc_is: "29.99",
+    price_hc_msrp: "33.99",
     pageCount: 200,
     pageCountPB: 200,
     pageCountHC: 170,
@@ -152,8 +160,10 @@ export const books: Book[] = [
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_ebook: null, // No ebook version
-    price_hc_is: "49.99",
-    price_pb_is: "36.99",
+    price_hc_is: "44.99",
+    price_hc_msrp: "49.99",
+    price_pb_is: "32.99",
+    price_pb_msrp: "36.99",
     pageCount: 686,
     pageCountHC: 686,
     pageCountPB: 734,
@@ -182,8 +192,10 @@ export const books: Book[] = [
     isbn_ebook: "9798295778926",
     asin_ebook: null,
     price_ebook: "9.99",
-    price_pb_is: "14.98",
+    price_pb_is: "12.99",
+    price_pb_msrp: "14.99",
     price_hc_is: "24.99",
+    price_hc_msrp: "29.99",
     pageCount: 84,
     pageCountPB: 84,
     pageCountHC: 84,

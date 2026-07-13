@@ -1,6 +1,6 @@
-import Image from "next/image";
 import type { Metadata } from "next";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import CoverArtifact from "@/components/ui/CoverArtifact";
 
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
@@ -142,7 +142,7 @@ export default function HawkesMonographPage() {
                 <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "1.2rem", color: "var(--text-muted)", marginBottom: "0.75rem" }}>
                   The Grape and Its Counter-Symbols in the Fiction of John Hawkes
                 </p>
-                <p style={{ fontSize: "0.85rem", color: "var(--text-faint)", marginBottom: "2rem" }}>
+                <p className="criticism-meta" style={{ marginBottom: "2rem" }}>
                   By Jason Carroll Holloway · Seventh City Press · Available Now
                 </p>
 
@@ -169,25 +169,15 @@ export default function HawkesMonographPage() {
                   {ed.format} Edition
                 </div>
                 
-                <div style={{
-                  position: "relative",
-                  aspectRatio: "2/3",
-                  borderRadius: "var(--r-md)",
-                  overflow: "hidden",
-                  boxShadow: "0 12px 36px rgba(0,0,0,0.5)",
-                  width: "100%",
-                  maxWidth: "200px",
-                  margin: "0 auto",
-                  background: "#000",
-                }}>
-                  <Image
-                    src={ed.cover}
-                    alt={`Innocence, Desire, and the Architecture of the Fall Cover (${ed.format})`}
-                    fill
-                    style={{ objectFit: "contain" }}
-                    sizes="200px"
-                  />
-                </div>
+                <CoverArtifact
+                  src={ed.cover}
+                  alt={`Innocence, Desire, and the Architecture of the Fall Cover (${ed.format})`}
+                  format={ed.format === "Hardcover" ? "hc" : ed.format === "Ebook" ? "ebook" : "pb"}
+                  fit="contain"
+                  width="200px"
+                  sizes="200px"
+                  style={{ margin: "0 auto" }}
+                />
 
                 <div style={{ flexGrow: 1, display: "flex", flexDirection: "column", gap: "0.5rem", textAlign: "center", marginTop: "0.5rem" }}>
                   <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text)" }}>{ed.price}</div>

@@ -12,12 +12,12 @@
   --gold-dim:     #8E7235;
   --gold-glow:    rgba(212, 170, 82, 0.20);
   --cyan:         #4CC9C9;
-  --cyan-dim:     #2F9999;
+  --cyan-dim:     #48B8B8;
   --cyan-glow:    rgba(76, 201, 201, 0.12);
 
   --text:         #EDE9DA;
   --text-muted:   #B8B4C8;
-  --text-faint:   #8B88A5;
+  --text-faint:   #9E9BB2;
   --text-gold:    #D4AA52;
   --text-cyan:    #4CC9C9;
 
@@ -572,6 +572,43 @@ ul, ol { list-style: none; }
   text-transform: uppercase;
   color: var(--text-faint);
   margin-top: 0.25rem;
+}
+
+/* ─── HERO ARTIFACT STRIP ────────────────────────────────────── */
+.hero-artifact-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 720px;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-faint);
+}
+.hero-artifact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.hero-artifact-frame {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  overflow: hidden;
+  background: var(--bg-raised);
+  position: relative;
+}
+.hero-artifact-caption {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  line-height: 1.55;
+}
+.hero-artifact-caption strong {
+  display: block;
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-bottom: 0.12em;
 }
 
 /* ─── BOOK CARD ──────────────────────────────────────────────── */
@@ -1292,7 +1329,22 @@ ul, ol { list-style: none; }
   align-self: center;
 }
 @media (prefers-reduced-motion: reduce) {
-  .buy-direct-btn { transition: none; }
+  html { scroll-behavior: auto; }
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .buy-direct-btn,
+  .btn,
+  .btn-gold::after,
+  .card,
+  .book-card,
+  .mobile-nav,
+  .mmt-bar {
+    transition: none;
+  }
 }
 
 .omnibus-savings-note {

@@ -61,7 +61,7 @@ export default function Home() {
           <div className="hero-content">
             <div className="hero-eyebrow animate-fade-up">
               <div className="hero-eyebrow-line" />
-              <span className="label">Official Digital Platform</span>
+              <span className="label">The Masters X Trilogy · Seventh City Press</span>
             </div>
 
             <h1 className="hero-title animate-fade-up delay-1" style={{ fontSize: "clamp(2.5rem, 6vw, 4.8rem)", lineHeight: 1.1 }}>
@@ -88,22 +88,68 @@ export default function Home() {
               </Link>
             </div>
 
-            <div className="hero-stats animate-fade-up delay-4">
-              <div>
-                <div className="hero-stat-num">Available Now</div>
-                <div className="hero-stat-label">Launched June 2026</div>
+            <div className="hero-artifact-strip animate-fade-up delay-4">
+              <div className="hero-artifact">
+                <div className="hero-artifact-frame">
+                  <Image
+                    src="/folios/voynich/Vol 1/voynich-009.jpg"
+                    alt="Voynich Manuscript folio detail"
+                    fill
+                    sizes="(max-width: 600px) 280px, 220px"
+                    style={{ objectFit: "cover", objectPosition: "center 30%" }}
+                  />
+                </div>
+                <p className="hero-artifact-caption">
+                  <strong>Voynich MS · Folio 9</strong>
+                  181 Chamber folios mapped
+                </p>
               </div>
-              <div>
-                <div className="hero-stat-num">111.2</div>
-                <div className="hero-stat-label">Hz, The Carrier Frequency</div>
+
+              <div className="hero-artifact">
+                <div className="hero-artifact-frame" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem" }}>
+                  <svg
+                    viewBox="0 0 200 60"
+                    width="100%"
+                    height="100%"
+                    aria-hidden="true"
+                    style={{ maxHeight: "48px" }}
+                  >
+                    <path
+                      d="M0,30 C20,10 40,50 60,30 S100,10 120,30 S160,50 180,30 S200,10 200,30"
+                      fill="none"
+                      stroke="var(--cyan)"
+                      strokeWidth="1.5"
+                      opacity="0.85"
+                    />
+                    <path
+                      d="M0,30 C20,50 40,10 60,30 S100,50 120,30 S160,10 180,30 S200,50 200,30"
+                      fill="none"
+                      stroke="var(--gold-dim)"
+                      strokeWidth="0.75"
+                      opacity="0.5"
+                    />
+                  </svg>
+                </div>
+                <p className="hero-artifact-caption">
+                  <strong>111.2 Hz</strong>
+                  Carrier frequency · archaeoacoustic baseline
+                </p>
               </div>
-              <div>
-                <div className="hero-stat-num">181</div>
-                <div className="hero-stat-label">Chamber Folios Mapped</div>
-              </div>
-              <div>
-                <div className="hero-stat-num">Seventh</div>
-                <div className="hero-stat-label">City Press Imprint</div>
+
+              <div className="hero-artifact">
+                <div className="hero-artifact-frame">
+                  <Image
+                    src="/og/field-notes/kansas-city-locations.png"
+                    alt="SubTropolis underground grid map fragment"
+                    fill
+                    sizes="(max-width: 600px) 280px, 220px"
+                    style={{ objectFit: "cover", objectPosition: "center" }}
+                  />
+                </div>
+                <p className="hero-artifact-caption">
+                  <strong>SubTropolis Grid</strong>
+                  Kansas City underground · 2.4M sq ft
+                </p>
               </div>
             </div>
           </div>

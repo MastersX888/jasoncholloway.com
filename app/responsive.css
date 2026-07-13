@@ -126,10 +126,10 @@
 /* ─── HERO & TYPE RHYTHM ON SMALL SCREENS ────────────────────── */
 @media (max-width: 600px) {
   .hero { min-height: auto; padding: 6.5rem 0 3.5rem; }
-  .hero-stats {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 1.25rem !important;
+  .hero-artifact-strip {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 280px;
   }
   .section { padding: calc(var(--section-gap) * 0.65) 0; }
   .display-xl { font-size: clamp(2.2rem, 10vw, 3rem) !important; }
@@ -144,6 +144,13 @@
 
 /* ─── REDUCED MOTION ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-fade-up,
+  .animate-fade-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
   .mobile-nav,
   .mmt-bar {
     transition: none;

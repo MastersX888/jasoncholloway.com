@@ -189,16 +189,14 @@ export default function HawkesMonographPage() {
                     <a href={ed.buyUrl}
                        target="_blank" rel="noopener noreferrer"
                        className="btn btn-gold buy-direct-is"
-                       style={{ width: "100%", justifyContent: "center", flexDirection: "column",
-                                alignItems: "center", gap: "0.15rem", paddingBlock: "0.75rem" }}>
+                       style={{ width: "100%", justifyContent: "center" }}>
                       <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
                                      textTransform: "uppercase", opacity: 0.75 }}>
                         Buy Direct · Best Price
                       </span>
-                      <span style={{ display: "flex", alignItems: "baseline", gap: "0.45rem" }}>
+                      <span className="price-row">
                         {ed.msrpPrice && (
-                          <span style={{ textDecoration: "line-through", opacity: 0.55,
-                                         fontSize: "0.82rem" }}>
+                          <span className="price-msrp">
                             ${ed.msrpPrice}
                           </span>
                         )}

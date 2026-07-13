@@ -1331,10 +1331,14 @@ ul, ol { list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .animate-fade-up,
-  .animate-fade-in {
+  .animate-fade-in,
+  .animate-slide-up,
+  .cover-object,
+  .artifact-strip {
     animation: none;
     opacity: 1;
     transform: none;
+    transition: none;
   }
   .buy-direct-btn,
   .btn,
@@ -1349,13 +1353,20 @@ ul, ol { list-style: none; }
 
 .omnibus-savings-note {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-size: 0.68rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
   color: var(--text-faint);
   margin-top: 0.75rem;
-  text-transform: uppercase;
+  line-height: 1.6;
 }
 .omnibus-savings-note strong { color: var(--gold); font-style: normal; }
+
+/* ─── PRICING UTILITIES ──────────────────────────────────────── */
+.price-row { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; }
+.price-msrp { text-decoration: line-through; opacity: 0.55; font-size: 0.82rem; }
+.buy-direct-is { display: flex; flex-direction: column; align-items: center;
+  gap: 0.15rem; padding-block: 0.75rem; }
 
 /* ─── COVER ARTIFACT (materiality) ───────────────────────────── */
 .cover-artifact {
@@ -1546,8 +1557,23 @@ main[data-register="fiction"] .container {
   padding-right: clamp(1.25rem, 5vw, 3rem);
 }
 [data-register="research"] {
-  font-size: 20px;
-  line-height: 1.8;
+  --gold:       #C49A3A;
+  --bg-surface: #0B0B14;
+  --bg-raised:  #111120;
+  --text:       #EAE6D4;
+  --text-muted: #B4B09A;
+  font-size: 18px;
+  line-height: 1.9;
+}
+[data-register="research"] .label {
+  border-left-color: var(--gold);
+  color: var(--gold);
+}
+[data-register="research"] h2,
+[data-register="research"] .fn-h2 {
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid rgba(196, 154, 58, 0.25);
+  margin-bottom: 1.25rem;
 }
 
 main[data-register="fiction"] .display-xl,
@@ -1763,7 +1789,11 @@ main[data-register="fiction"] .page-header + .wave-divider {
   .artifact-divider { display: none; }
   .artifact-strip { gap: 1.25rem; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .artifact-strip { animation: none; }
+@media (max-width: 412px) {
+  .artifact-item { max-width: 100%; width: 100%; }
+}
+@media (max-width: 480px) {
+  .buy-direct-is { min-width: unset; width: 100%; }
+  .btn { min-width: unset; }
 }
 

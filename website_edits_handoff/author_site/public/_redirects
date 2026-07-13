@@ -2,4 +2,5 @@ https://www.jasoncholloway.com/* https://jasoncholloway.com/:splat 301
 /press    https://seventhcitypress.com/    301
 /press/   https://seventhcitypress.com/    301
 
-/press-kit/*    https://seventhcitypress.com/press-kit/:splat    301
+# Optional: redirect press-kit from author site to imprint.
+# /press-kit/*    https://seventhcitypress.com/press-kit/:splat    301

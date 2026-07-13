@@ -152,8 +152,8 @@ export const books: Book[] = [
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_ebook: null, // No ebook version
-    price_hc_is: "49.99",
-    price_pb_is: "36.99",
+    price_hc_is: "29.99",
+    price_pb_is: "19.99",
     pageCount: 686,
     pageCountHC: 686,
     pageCountPB: 734,

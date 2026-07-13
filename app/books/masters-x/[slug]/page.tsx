@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
-import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
@@ -90,7 +89,7 @@ export default function BookPage({ params }: Props) {
         } : undefined,
         "offers": book.price_pb_is ? {
           "@type": "Offer",
-          "price": book.price_pb_is,
+          "price": book.price_pb_msrp ?? book.price_pb_is,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": book.buyLinks.find(l => l.label === "IngramSpark (PB)")?.url ?? `https://jasoncholloway.com/books/masters-x/${book.slug}/`
@@ -108,7 +107,7 @@ export default function BookPage({ params }: Props) {
         } : undefined,
         "offers": book.price_hc_is ? {
           "@type": "Offer",
-          "price": book.price_hc_is,
+          "price": book.price_hc_msrp ?? book.price_hc_is,
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": book.buyLinks.find(l => l.label === "IngramSpark (HC)")?.url ?? `https://jasoncholloway.com/books/masters-x/${book.slug}/`
@@ -268,7 +267,7 @@ export default function BookPage({ params }: Props) {
               </div>
 
               <div>
-                <p className="label" style={{ marginBottom: "0.75rem" }}>{book.series} · {book.title}</p>
+                <p className="label" style={{ marginBottom: "0.75rem" }}>{book.series} · {book.subtitle}</p>
                 <h1 className="display-lg" style={{ marginBottom: "0.5rem" }}>{book.subtitle}</h1>
                 <p style={{ fontFamily: "var(--font-display)", fontStyle: "italic", color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "1rem" }}>
                   By Jason Carroll Holloway · Seventh City Press
@@ -285,22 +284,26 @@ export default function BookPage({ params }: Props) {
                     </a>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                       {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                        <BuyDirectButton
-                          label="IngramSpark (PB)"
-                          url={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
-                          ecommPrice={book.price_pb_is ?? ""}
-                          msrpPrice={book.price_pb_msrp}
-                          className="w-full"
-                        />
+                        <a
+                          href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-gold"
+                          style={{ width: "100%", justifyContent: "center" }}
+                        >
+                          {book.price_pb_is ? `Paperback — $${book.price_pb_is} direct` : "Paperback — Buy Direct"}
+                        </a>
                       )}
                       {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                        <BuyDirectButton
-                          label="IngramSpark (HC)"
-                          url={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
-                          ecommPrice={book.price_hc_is ?? ""}
-                          msrpPrice={book.price_hc_msrp}
-                          className="w-full"
-                        />
+                        <a
+                          href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn btn-gold"
+                          style={{ width: "100%", justifyContent: "center" }}
+                        >
+                          {book.price_hc_is ? `Hardcover — $${book.price_hc_is} direct` : "Hardcover — Buy Direct"}
+                        </a>
                       )}
                     </div>
                     {book.slug === "the-inheritance-of-frequency" && (
@@ -368,13 +371,34 @@ export default function BookPage({ params }: Props) {
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                     {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                      <BuyDirectButton
-                        label="IngramSpark (PB)"
-                        url={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
-                        ecommPrice={book.price_pb_is ?? ""}
-                        msrpPrice={book.price_pb_msrp}
-                        className="w-full"
-                      />
+                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                         target="_blank" rel="noopener noreferrer"
+                         className="btn btn-gold buy-direct-is"
+                         style={{ width: "100%", justifyContent: "center", flexDirection: "column",
+                                  alignItems: "center", gap: "0.15rem", paddingBlock: "0.75rem" }}>
+                        <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
+                                       textTransform: "uppercase", opacity: 0.75 }}>
+                          Buy Direct · Best Price
+                        </span>
+                        <span style={{ display: "flex", alignItems: "baseline", gap: "0.45rem" }}>
+                          {book.price_pb_msrp && (
+                            <span style={{ textDecoration: "line-through", opacity: 0.55,
+                                           fontSize: "0.82rem" }}>
+                              ${book.price_pb_msrp}
+                            </span>
+                          )}
+                          <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                            {book.price_pb_is ? `$${book.price_pb_is}` : "Best Price"}
+                          </span>
+                          {book.price_pb_msrp && book.price_pb_is && (
+                            <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)",
+                                           padding: "0.1em 0.4em", borderRadius: "2px",
+                                           letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                              save ${(parseFloat(book.price_pb_msrp) - parseFloat(book.price_pb_is)).toFixed(2)}
+                            </span>
+                          )}
+                        </span>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -394,13 +418,34 @@ export default function BookPage({ params }: Props) {
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                     {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                      <BuyDirectButton
-                        label="IngramSpark (HC)"
-                        url={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
-                        ecommPrice={book.price_hc_is ?? ""}
-                        msrpPrice={book.price_hc_msrp}
-                        className="w-full"
-                      />
+                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
+                         target="_blank" rel="noopener noreferrer"
+                         className="btn btn-gold buy-direct-is"
+                         style={{ width: "100%", justifyContent: "center", flexDirection: "column",
+                                  alignItems: "center", gap: "0.15rem", paddingBlock: "0.75rem" }}>
+                        <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
+                                       textTransform: "uppercase", opacity: 0.75 }}>
+                          Buy Direct · Best Price
+                        </span>
+                        <span style={{ display: "flex", alignItems: "baseline", gap: "0.45rem" }}>
+                          {book.price_hc_msrp && (
+                            <span style={{ textDecoration: "line-through", opacity: 0.55,
+                                           fontSize: "0.82rem" }}>
+                              ${book.price_hc_msrp}
+                            </span>
+                          )}
+                          <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                            {book.price_hc_is ? `$${book.price_hc_is}` : "Best Price"}
+                          </span>
+                          {book.price_hc_msrp && book.price_hc_is && (
+                            <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)",
+                                           padding: "0.1em 0.4em", borderRadius: "2px",
+                                           letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                              save ${(parseFloat(book.price_hc_msrp) - parseFloat(book.price_hc_is)).toFixed(2)}
+                            </span>
+                          )}
+                        </span>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -416,8 +461,8 @@ export default function BookPage({ params }: Props) {
                   { k: "Author", v: "Jason Carroll Holloway" },
                   { k: "Publisher", v: "Seventh City Press" },
                   { k: "Series", v: `${book.series} Vol. ${book.volume}` },
-                  { k: "Laminate", v: "Matte" },
-                  { k: "Interior Color", v: "Premium Color (70lb)" },
+                  { k: "Laminate", v: book.laminateHC ?? "Matte" },
+                  { k: "Interior", v: book.interior ?? "B&W · Creme paper" },
                   { k: "Ebook ISBN", v: book.isbn_ebook || "" },
                 ].map((row) => (
                   <div key={row.k} style={{

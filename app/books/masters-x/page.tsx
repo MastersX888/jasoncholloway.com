@@ -3,6 +3,10 @@ import Image from "next/image";
 import { books } from "@/lib/data/books";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
+import CoverArtifact from "@/components/ui/CoverArtifact";
+import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import NotaIcon from "@/components/ui/NotaIcon";
+import WaveDivider from "@/components/ui/WaveDivider";
 
 export const metadata: Metadata = {
   title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
@@ -87,6 +91,10 @@ export default function MastersXPage() {
         </div>
       </section>
 
+      <div className="container">
+        <WaveDivider />
+      </div>
+
       {/* Series overview */}
       <section style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", padding: "2rem 0" }}>
         <div className="container">
@@ -137,43 +145,25 @@ export default function MastersXPage() {
                   <div style={{ display: "flex", gap: "1rem" }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Paperback</div>
-                      <div style={{
-                        position: "relative",
-                        aspectRatio: "55/85",
-                        borderRadius: "var(--r-md)",
-                        overflow: "hidden",
-                        boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-                        width: "100%",
-                      }}>
-                        <Image
-                          src={book.coverImagePB}
-                          alt={`${book.subtitle} Paperback`}
-                          fill
-                          style={{ objectFit: "contain" }}
-                          sizes="(max-width: 768px) 42vw, 180px"
-                          priority={i === 0}
-                        />
-                      </div>
+                      <CoverArtifact
+                        src={book.coverImagePB}
+                        alt={`${book.subtitle} Paperback`}
+                        format="pb"
+                        fit="contain"
+                        sizes="(max-width: 768px) 42vw, 180px"
+                        priority={i === 0}
+                      />
                     </div>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
-                      <div style={{
-                        position: "relative",
-                        aspectRatio: "614/921",
-                        borderRadius: "var(--r-md)",
-                        overflow: "hidden",
-                        boxShadow: "0 10px 30px rgba(0,0,0,0.5)",
-                        width: "100%",
-                      }}>
-                        <Image
-                          src={book.coverImageHC}
-                          alt={`${book.subtitle} Hardcover`}
-                          fill
-                          style={{ objectFit: "contain" }}
-                          sizes="(max-width: 768px) 42vw, 180px"
-                          priority={i === 0}
-                        />
-                      </div>
+                      <CoverArtifact
+                        src={book.coverImageHC}
+                        alt={`${book.subtitle} Hardcover`}
+                        format="hc"
+                        fit="contain"
+                        sizes="(max-width: 768px) 42vw, 180px"
+                        priority={i === 0}
+                      />
                     </div>
                   </div>
                 </div>
@@ -204,73 +194,61 @@ export default function MastersXPage() {
         </div>
       </section>
 
-      {/* Omnibus Section */}
+      {/* Omnibus flagship */}
       {(() => {
         const omnibus = books.find(b => b.slug === "omnibus");
         if (!omnibus) return null;
+        const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
+        const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
         return (
-          <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
+          <section className="section omnibus-flagship-hub" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
             <div className="container">
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "4rem", alignItems: "center" }}>
-                
-                {/* Cover display — single HC cover until dedicated PB cover art exists */}
-                <div className="omni-cover" style={{ display: "flex", justifyContent: "center" }}>
-                  <div style={{
-                    position: "relative",
-                    width: "min(280px, 70vw)",
-                    aspectRatio: "614/921",
-                    borderRadius: "var(--r-lg)",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
-                  }}>
-                    <Image
-                      src={omnibus.coverImageHC}
-                      alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      sizes="(max-width: 768px) 70vw, 280px"
-                    />
-                  </div>
-                </div>
-
-                {/* Info and buy links */}
-                <div>
-                  <div className="label" style={{ marginBottom: "0.5rem" }}>Collected Edition</div>
-                  <h2 className="display-md" style={{ marginBottom: "1rem" }}>
-                    {omnibus.subtitle}
-                  </h2>
-                  <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.8, marginBottom: "1.5rem" }}>
-                    {omnibus.description}
+              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                <span className="label">Collected Edition</span>
+              </div>
+              <div className="omnibus-flagship-card">
+                <Link href="/books/masters-x/omnibus" className="omnibus-flagship-slipcase" style={{ textDecoration: "none", color: "inherit" }}>
+                  <CoverArtifact
+                    src={omnibus.coverImageHC}
+                    alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
+                    format="omnibus"
+                    sizes="160px"
+                  />
+                </Link>
+                <div className="omnibus-flagship-body">
+                  <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
+                    <span className="label">Flagship Edition</span>
+                    <div className="omnibus-flagship-title">{omnibus.subtitle}</div>
+                  </Link>
+                  <p className="omnibus-flagship-desc">
+                    {omnibus.shortDesc ?? omnibus.description.split("\n\n")[0]}
                   </p>
-                  
-                  <div className="card" style={{ marginBottom: "1.5rem", background: "var(--bg-raised)", borderColor: "var(--border)" }}>
-                    {[
-                      { k: "Paperback ISBN", v: omnibus.isbn_pb },
-                      { k: "Hardcover ISBN", v: omnibus.isbn_hc },
-                      { k: "Page Count (HC)", v: `${omnibus.pageCountHC ?? omnibus.pageCount} pages` },
-                      { k: "Page Count (PB)", v: `${omnibus.pageCountPB ?? omnibus.pageCount} pages` },
-                    ].map((row) => (
-                      <div key={row.k} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", padding: "0.4rem 0", borderBottom: "1px solid var(--border-faint)" }}>
-                        <span style={{ color: "var(--text-faint)" }}>{row.k}</span>
-                        <span style={{ color: "var(--text-muted)", fontFamily: row.k.includes("ISBN") ? "var(--font-mono)" : undefined }}>{row.v}</span>
-                      </div>
-                    ))}
+                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
+                    {pbLink && (
+                      <BuyDirectButton
+                        label={pbLink.label}
+                        url={pbLink.url}
+                        ecommPrice={omnibus.price_pb_is ?? ""}
+                        msrpPrice={omnibus.price_pb_msrp}
+                      />
+                    )}
+                    {hcLink && (
+                      <BuyDirectButton
+                        label={hcLink.label}
+                        url={hcLink.url}
+                        ecommPrice={omnibus.price_hc_is ?? ""}
+                        msrpPrice={omnibus.price_hc_msrp}
+                      />
+                    )}
                   </div>
-
-                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                    {omnibus.buyLinks.map(link => (
-                      <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className={link.label.includes("Amazon") ? "btn btn-gold" : "btn btn-outline"}>
-                        {link.label}
-                        {link.label.includes("HC") && omnibus.price_hc_is ? ` — $${omnibus.price_hc_is}` : ""}
-                        {link.label.includes("PB") && omnibus.price_pb_is ? ` — $${omnibus.price_pb_is}` : ""}
-                      </a>
-                    ))}
-                    <Link href="/books/masters-x/omnibus" className="btn btn-gold">
-                      Omnibus Details
-                    </Link>
-                  </div>
+                  {omnibus.price_pb_msrp && omnibus.price_pb_is && (
+                    <p className="omnibus-savings-note">
+                      All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
+                      <strong>${omnibus.price_hc_is} HC</strong> — save up to $17.98 vs.
+                      buying volumes individually.
+                    </p>
+                  )}
                 </div>
-
               </div>
             </div>
           </section>
@@ -307,13 +285,15 @@ function BookBody({ book }: { book: typeof books[0] }) {
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_pb}</span></div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
               {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block" }}>
-                  Buy Direct {book.price_pb_is ? `($${book.price_pb_is})` : "(Best Price)"} →
+                <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+                  <NotaIcon variant="forward" size={12} />
+                  Buy Direct {book.price_pb_is ? `($${book.price_pb_is})` : "(Best Price)"}
                 </a>
               )}
               {book.buyLinks.find(l => l.label === "Bookshop.org") && (
-                <a href={book.buyLinks.find(l => l.label === "Bookshop.org")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--text-muted)", display: "inline-block" }}>
-                  Order via Bookshop.org →
+                <a href={book.buyLinks.find(l => l.label === "Bookshop.org")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+                  <NotaIcon variant="external" size={12} />
+                  Order via Bookshop.org
                 </a>
               )}
             </div>
@@ -323,8 +303,9 @@ function BookBody({ book }: { book: typeof books[0] }) {
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_hc}</span></div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
               {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" style={{ fontSize: "0.78rem", color: "var(--gold)", display: "inline-block" }}>
-                  Buy Direct {book.price_hc_is ? `($${book.price_hc_is})` : "(Best Price)"} →
+                <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+                  <NotaIcon variant="forward" size={12} />
+                  Buy Direct {book.price_hc_is ? `($${book.price_hc_is})` : "(Best Price)"}
                 </a>
               )}
               <span style={{ fontSize: "0.78rem", color: "var(--text-faint)", display: "inline-block" }}>

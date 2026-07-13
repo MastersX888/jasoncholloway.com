@@ -1230,3 +1230,64 @@ ul, ol { list-style: none; }
   .fn-author-box { flex-direction: column; }
 }
 
+/* ─── BUY DIRECT BUTTON ─────────────────────────────────────────── */
+.buy-direct-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.65rem 1.1rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--r-sm);
+  background: transparent;
+  color: var(--text);
+  transition: background 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+  text-decoration: none;
+  min-width: 200px;
+}
+.buy-direct-btn:hover {
+  background: var(--gold-glow);
+  border-color: var(--gold);
+}
+.buy-direct-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.buy-direct-pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.buy-direct-msrp {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-faint);
+  text-decoration: line-through;
+  text-decoration-color: var(--text-faint);
+}
+.buy-direct-price {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: -0.01em;
+}
+.buy-direct-badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 0.15em 0.45em;
+  border-radius: 2px;
+  white-space: nowrap;
+  align-self: center;
+}
+@media (prefers-reduced-motion: reduce) {
+  .buy-direct-btn { transition: none; }
+}
+

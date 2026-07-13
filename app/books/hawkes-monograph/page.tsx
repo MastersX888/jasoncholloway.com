@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
+import BuyDirectButton from "@/components/ui/BuyDirectButton";
 
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
@@ -18,6 +19,8 @@ export default function HawkesMonographPage() {
     cover: string;
     isbn: string;
     price: string;
+    ecommPrice?: string;
+    msrpPrice?: string;
     details: string;
     features: string;
     buyLabel?: string;
@@ -28,7 +31,9 @@ export default function HawkesMonographPage() {
       format: "Paperback",
       cover: "/covers/hawkes-paperback-web.png",
       isbn: "9798295778247",
-      price: "$14.98",
+      price: "$12.99 (reg. $14.99)",
+      ecommPrice: "12.99",
+      msrpPrice: "14.99",
       details: "Trade Paperback · 6×9 in · 84 pages",
       features: "Premium cream paper, matte cover finish",
       buyLabel: "Buy Paperback Direct",
@@ -38,7 +43,9 @@ export default function HawkesMonographPage() {
       format: "Hardcover",
       cover: "/covers/hawkes-hardcover-web.png",
       isbn: "9798349308444",
-      price: "$24.99",
+      price: "$24.99 (reg. $29.99)",
+      ecommPrice: "24.99",
+      msrpPrice: "29.99",
       details: "Digital Cloth™ Cover w/Jacket · 6.14×9.21 in · 84 pages",
       features: "Stitch-bound, gold foil element stamping",
       buyLabel: "Buy Hardcover Direct",
@@ -81,7 +88,11 @@ export default function HawkesMonographPage() {
         } : undefined,
         "offers": {
           "@type": "Offer",
-          "price": ed.price.replace("$", ""),
+          "price": ed.format === "Paperback"
+            ? "14.99"
+            : ed.format === "Hardcover"
+              ? "29.99"
+              : "9.99",
           "priceCurrency": "USD",
           "availability": "https://schema.org/InStock",
           "url": ed.buyUrl ?? "https://jasoncholloway.com/books/hawkes-monograph/"
@@ -185,7 +196,15 @@ export default function HawkesMonographPage() {
                 </div>
 
                 <div style={{ marginTop: "1rem" }}>
-                  {ed.buyUrl ? (
+                  {ed.buyUrl && ed.ecommPrice ? (
+                    <BuyDirectButton
+                      label={ed.buyLabel ?? `IngramSpark (${ed.format})`}
+                      url={ed.buyUrl}
+                      ecommPrice={ed.ecommPrice}
+                      msrpPrice={ed.msrpPrice}
+                      className="w-full"
+                    />
+                  ) : ed.buyUrl ? (
                     <a
                       href={ed.buyUrl}
                       target="_blank"

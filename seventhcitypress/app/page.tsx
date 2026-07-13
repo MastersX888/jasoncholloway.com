@@ -207,6 +207,23 @@ export default function PressPage() {
               Press materials, review copy requests, and downloadable media kit for the Masters X Trilogy.
             </p>
 
+            <a
+              href="/press-kit/Masters_X_Press_Kit.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="animate-fade-up delay-3"
+              style={{
+                fontSize: "0.78rem",
+                color: "var(--text-faint)",
+                textDecoration: "underline",
+                marginTop: "0.5rem",
+                display: "inline-block",
+                marginBottom: "2rem",
+              }}
+            >
+              Download Press Kit (PDF)
+            </a>
+
             <div className="hero-stats animate-fade-up delay-4">
               <div>
                 <div className="hero-stat-num">3 Novels</div>

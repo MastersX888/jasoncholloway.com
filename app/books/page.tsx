@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import { books } from "@/lib/data/books";
+import CoverArtifact from "@/components/ui/CoverArtifact";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -113,25 +113,14 @@ export default function BooksIndexPage() {
                   textAlign: "center",
                 }}
               >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "120px",
-                    aspectRatio: "55/85",
-                    borderRadius: "var(--r-sm)",
-                    overflow: "hidden",
-                    boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  <Image
-                    src={book.coverImagePB}
-                    alt={book.subtitle}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="120px"
-                  />
-                </div>
+                <CoverArtifact
+                  src={book.coverImagePB}
+                  alt={book.subtitle}
+                  format="pb"
+                  width="120px"
+                  sizes="120px"
+                  style={{ marginBottom: "1.25rem" }}
+                />
                 <div
                   style={{
                     fontSize: "0.68rem",
@@ -165,23 +154,35 @@ export default function BooksIndexPage() {
             ))}
           </div>
 
-          <div
-            style={{
-              display: "flex",
-              gap: "1rem",
-              marginTop: "2rem",
-              flexWrap: "wrap",
-            }}
-          >
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <Link href="/books/masters-x" className="btn btn-gold">
               View the Trilogy
             </Link>
-            {omnibus && (
-              <Link href="/books/masters-x/omnibus" className="btn btn-outline">
-                Omnibus Edition — ${omnibus.price_hc_is} HC / ${omnibus.price_pb_is} PB · Buy Direct (save up to $17.98)
-              </Link>
-            )}
           </div>
+
+          {omnibus && (
+            <Link href="/books/masters-x/omnibus" className="omnibus-flagship-card">
+              <div className="omnibus-flagship-slipcase">
+                <CoverArtifact
+                  src={omnibus.coverImageHC}
+                  alt="Masters X Omnibus — Complete Trilogy Hardcover"
+                  format="omnibus"
+                  sizes="140px"
+                />
+              </div>
+              <div className="omnibus-flagship-body">
+                <span className="label">Collected Edition</span>
+                <div className="omnibus-flagship-title">Masters X: The Complete Trilogy</div>
+                <p className="omnibus-flagship-desc">
+                  All three novels in a single volume — hardcover and paperback.
+                  The flagship collected edition from Seventh City Press.
+                </p>
+                <span className="omnibus-flagship-price">
+                  ${omnibus.price_hc_is} HC / ${omnibus.price_pb_is} PB · Buy Direct (save up to $17.98)
+                </span>
+              </div>
+            </Link>
+          )}
         </div>
       </section>
 
@@ -201,25 +202,13 @@ export default function BooksIndexPage() {
                 alignItems: "start",
               }}
             >
-              <div
-                style={{
-                  position: "relative",
-                  width: "120px",
-                  aspectRatio: "55/85",
-                  borderRadius: "var(--r-sm)",
-                  overflow: "hidden",
-                  boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
-                  flexShrink: 0,
-                }}
-              >
-                <Image
-                  src={hawkes.coverImagePB}
-                  alt="Innocence, Desire, and the Architecture of the Fall"
-                  fill
-                  style={{ objectFit: "cover" }}
-                  sizes="120px"
-                />
-              </div>
+              <CoverArtifact
+                src={hawkes.coverImagePB}
+                alt="Innocence, Desire, and the Architecture of the Fall"
+                format="pb"
+                width="120px"
+                sizes="120px"
+              />
               <div>
                 <div
                   style={{

@@ -1,10 +1,10 @@
 import { use } from "react";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import CoverArtifact from "@/components/ui/CoverArtifact";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -242,43 +242,25 @@ export default function BookPage({ params }: Props) {
                 <div style={{ display: "flex", gap: "1rem" }}>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Paperback</div>
-                    <div style={{
-                      position: "relative",
-                      aspectRatio: "55/85",
-                      borderRadius: "var(--r-md)",
-                      overflow: "hidden",
-                      boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
-                      width: "100%",
-                    }}>
-                      <Image
-                        src={book.coverImagePB}
-                        alt={`${book.subtitle} Paperback Cover`}
-                        fill
-                        style={{ objectFit: "contain" }}
-                        sizes="(max-width: 768px) 45vw, 180px"
-                        priority
-                      />
-                    </div>
+                    <CoverArtifact
+                      src={book.coverImagePB}
+                      alt={`${book.subtitle} Paperback Cover`}
+                      format="pb"
+                      fit="contain"
+                      sizes="(max-width: 768px) 45vw, 180px"
+                      priority
+                    />
                   </div>
                   <div style={{ flex: 1 }}>
                     <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
-                    <div style={{
-                      position: "relative",
-                      aspectRatio: "614/921",
-                      borderRadius: "var(--r-md)",
-                      overflow: "hidden",
-                      boxShadow: "0 15px 45px rgba(0,0,0,0.6)",
-                      width: "100%",
-                    }}>
-                      <Image
-                        src={book.coverImageHC}
-                        alt={`${book.subtitle} Hardcover Cover`}
-                        fill
-                        style={{ objectFit: "contain" }}
-                        sizes="(max-width: 768px) 45vw, 180px"
-                        priority
-                      />
-                    </div>
+                    <CoverArtifact
+                      src={book.coverImageHC}
+                      alt={`${book.subtitle} Hardcover Cover`}
+                      format="hc"
+                      fit="contain"
+                      sizes="(max-width: 768px) 45vw, 180px"
+                      priority
+                    />
                   </div>
                 </div>
               </div>

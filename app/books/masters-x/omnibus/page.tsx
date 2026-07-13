@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import { books } from "@/lib/data/books";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import CoverArtifact from "@/components/ui/CoverArtifact";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
@@ -115,25 +115,14 @@ export default function OmnibusPage() {
 
             <div className="resp-book-hero" style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: "3.5rem", alignItems: "start" }}>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div
-                  style={{
-                    position: "relative",
-                    width: "min(280px, 70vw)",
-                    aspectRatio: "614/921",
-                    borderRadius: "var(--r-lg)",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 55px rgba(0,0,0,0.6)",
-                  }}
-                >
-                  <Image
-                    src={omnibus.coverImageHC}
-                    alt="Masters X Omnibus Edition — Complete Trilogy Hardcover"
-                    fill
-                    style={{ objectFit: "cover" }}
-                    sizes="(max-width: 768px) 70vw, 280px"
-                    priority
-                  />
-                </div>
+                <CoverArtifact
+                  src={omnibus.coverImageHC}
+                  alt="Masters X Omnibus Edition — Complete Trilogy Hardcover"
+                  format="omnibus"
+                  width="min(280px, 70vw)"
+                  sizes="(max-width: 768px) 70vw, 280px"
+                  priority
+                />
               </div>
 
               <div>

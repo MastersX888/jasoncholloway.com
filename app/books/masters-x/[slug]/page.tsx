@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
+import BuyDirectButton from "@/components/ui/BuyDirectButton";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -300,14 +301,22 @@ export default function BookPage({ params }: Props) {
                     </a>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
                       {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                        <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: "center", fontSize: "0.85rem" }}>
-                          Paperback — Buy Direct
-                        </a>
+                        <BuyDirectButton
+                          label="IngramSpark (PB)"
+                          url={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                          ecommPrice={book.price_pb_is ?? ""}
+                          msrpPrice={book.price_pb_msrp}
+                          className="w-full"
+                        />
                       )}
                       {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                        <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ justifyContent: "center", fontSize: "0.85rem" }}>
-                          Hardcover — Buy Direct
-                        </a>
+                        <BuyDirectButton
+                          label="IngramSpark (HC)"
+                          url={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
+                          ecommPrice={book.price_hc_is ?? ""}
+                          msrpPrice={book.price_hc_msrp}
+                          className="w-full"
+                        />
                       )}
                     </div>
                     {book.slug === "the-inheritance-of-frequency" && (
@@ -371,9 +380,13 @@ export default function BookPage({ params }: Props) {
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                     {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                        Buy Direct {book.price_pb_is ? `— $${book.price_pb_is}` : "— Best Price"}
-                      </a>
+                      <BuyDirectButton
+                        label="IngramSpark (PB)"
+                        url={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                        ecommPrice={book.price_pb_is ?? ""}
+                        msrpPrice={book.price_pb_msrp}
+                        className="w-full"
+                      />
                     )}
                   </div>
                 </div>
@@ -393,9 +406,13 @@ export default function BookPage({ params }: Props) {
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                     {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
-                        Buy Direct {book.price_hc_is ? `— $${book.price_hc_is}` : "— Best Price"}
-                      </a>
+                      <BuyDirectButton
+                        label="IngramSpark (HC)"
+                        url={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
+                        ecommPrice={book.price_hc_is ?? ""}
+                        msrpPrice={book.price_hc_msrp}
+                        className="w-full"
+                      />
                     )}
                   </div>
                 </div>

@@ -1248,6 +1248,10 @@ ul, ol { list-style: none; }
   background: var(--gold-glow);
   border-color: var(--gold);
 }
+.buy-direct-btn.w-full {
+  width: 100%;
+  min-width: 0;
+}
 .buy-direct-label {
   font-family: var(--font-mono);
   font-size: 0.68rem;

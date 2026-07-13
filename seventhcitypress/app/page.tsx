@@ -162,7 +162,7 @@ function CoverThumb({ label, src }: { label: string; src: string }) {
         overflow: "hidden",
         boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
         border: "1px solid var(--border-faint)",
-        background: "#000",
+        background: "var(--bg-raised)",
       }}>
         <Image src={src} alt={label} fill style={{ objectFit: "contain" }} sizes="120px" />
       </div>
@@ -301,7 +301,7 @@ export default function PressPage() {
                   upward. Every location in the novels can be visited, looked up, or
                   found in a scholarly bibliography — and much of the underlying data
                   is published openly through the{" "}
-                  <a href="https://jasoncholloway.com/chamber/research-archive/" style={{ color: "var(--cyan)", textDecoration: "none" }}>Analysis Chamber</a>,
+                  <a href="https://jasoncholloway.com/chamber/research-archive/" style={{ color: "var(--ink)", textDecoration: "underline", textDecorationColor: "var(--border)" }}>Analysis Chamber</a>,
                   a research archive on the author site that runs the same measurements
                   the characters run in the books.
                 </p>

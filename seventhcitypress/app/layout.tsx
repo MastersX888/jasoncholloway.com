@@ -74,6 +74,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-register="imprint"
       className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>

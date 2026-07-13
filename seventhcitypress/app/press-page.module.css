@@ -106,8 +106,8 @@
 }
 
 .book-row:hover {
-  background: rgba(154,112,23,.04);
-  border-color: var(--gold);
+  background: rgba(28, 28, 46, 0.03);
+  border-color: var(--gold-dim);
 }
 
 .book-meta {
@@ -210,8 +210,8 @@
 }
 
 .kit-file-card:hover {
-  background: rgba(154,112,23,.04);
-  border-color: var(--gold);
+  background: rgba(28, 28, 46, 0.03);
+  border-color: var(--gold-dim);
 }
 
 .kf-meta-row {

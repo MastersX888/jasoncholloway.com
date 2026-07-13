@@ -3,6 +3,7 @@ import Image from "next/image";
 import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
+import WaveDivider from "@/components/ui/WaveDivider";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -156,6 +157,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="container">
+        <WaveDivider />
+      </div>
+
       {/* ─── FEATURED WORKS ─── */}
       <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)" }}>
         <div className="container">
@@ -297,6 +302,10 @@ export default function Home() {
         </div>
       </section>
 
+      <div className="container">
+        <WaveDivider />
+      </div>
+
       {/* ─── PULL QUOTES ─── */}
       <section className="section" style={{ borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
         <div className="container">
@@ -310,6 +319,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <WaveDivider />
+      </div>
 
       {/* ─── GROUNDED IN REAL PLACES ─── */}
       <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
@@ -337,6 +350,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <WaveDivider />
+      </div>
 
       {/* ─── VIRTUAL ANALYSIS CHAMBER ─── */}
       <section className="section">

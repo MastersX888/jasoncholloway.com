@@ -2,6 +2,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import WaveDivider from "@/components/ui/WaveDivider";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
@@ -184,6 +185,10 @@ export default function OmnibusPage() {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <WaveDivider />
+      </div>
 
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="container">

@@ -8,7 +8,7 @@ export default function ChamberLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <div data-register="research" className="register-research">
       {children}
       {/* ─── BRIDGE BACK TO CATALOG ─── */}
       <div
@@ -40,6 +40,6 @@ export default function ChamberLayout({
           </a>
         </div>
       </div>
-    </>
+    </div>
   );
 }

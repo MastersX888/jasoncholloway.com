@@ -157,7 +157,7 @@ export default function RootLayout({
         <WebMCPProvider />
         <div className="bg-sacred-geometry" />
         <Header />
-        <main>{children}</main>
+        <main data-register="fiction">{children}</main>
         <Footer />
       </body>
     </html>

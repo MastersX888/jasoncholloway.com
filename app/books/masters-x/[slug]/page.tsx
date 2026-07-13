@@ -5,6 +5,8 @@ import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import NotaIcon from "@/components/ui/NotaIcon";
+import WaveDivider from "@/components/ui/WaveDivider";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -224,7 +226,7 @@ export default function BookPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])]) }}
       />
-      <section className="page-header" style={{ paddingBottom: "4rem" }}>
+      <section className="page-header vol-page" data-volume={slug} style={{ paddingBottom: "4rem" }}>
         <div className="container">
           <div className="page-header-inner">
             <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
@@ -313,6 +315,10 @@ export default function BookPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <div className="container">
+        <WaveDivider />
+      </div>
 
       {/* Description & Editions */}
       <section className="section" style={{ paddingTop: "3rem" }}>
@@ -461,21 +467,20 @@ export default function BookPage({ params }: Props) {
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.4rem" }}>
                     {volumeRealElements.map(el => (
-                      <Link key={el.href} href={el.href} style={{
+                      <Link key={el.href} href={el.href} className="nota-link" style={{
                         fontSize: "0.82rem",
                         color: "var(--gold)",
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.35rem",
                         padding: "0.3rem 0",
                         borderBottom: "1px solid var(--border-faint)",
                       }}>
-                        <span style={{ opacity: 0.6 }}>→</span> {el.label}
+                        <NotaIcon variant="forward" size={13} />
+                        {el.label}
                       </Link>
                     ))}
                   </div>
-                  <Link href="/field-notes" style={{ display: "block", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--text-faint)" }}>
-                    All Field Notes →
+                  <Link href="/field-notes" className="nota-link" style={{ display: "flex", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--text-faint)" }}>
+                    <NotaIcon variant="forward" size={12} />
+                    All Field Notes
                   </Link>
                 </div>
               )}
@@ -486,6 +491,10 @@ export default function BookPage({ params }: Props) {
 
       {/* FAQ Section */}
       {volumeFaqs.length > 0 && (
+        <>
+          <div className="container">
+            <WaveDivider />
+          </div>
         <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
           <div className="container" style={{ maxWidth: "800px" }}>
             <div className="section-label-row">
@@ -501,6 +510,7 @@ export default function BookPage({ params }: Props) {
             </div>
           </div>
         </section>
+        </>
       )}
 
       {/* Navigation between books */}
@@ -509,7 +519,10 @@ export default function BookPage({ params }: Props) {
           <div style={{ display: "flex", justifyContent: "space-between", gap: "2rem" }}>
             {prevBook ? (
               <Link href={`/books/masters-x/${prevBook.slug}`} className="card" style={{ flex: 1, textDecoration: "none" }}>
-                <div style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.4rem" }}>← Previous</div>
+                <div className="nota-nav-label" style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.4rem" }}>
+                  <NotaIcon variant="back" size={12} />
+                  Previous
+                </div>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem" }}>Volume {prevBook.volume}: {prevBook.subtitle}</div>
               </Link>
             ) : <div style={{ flex: 1 }} />}
@@ -520,7 +533,10 @@ export default function BookPage({ params }: Props) {
 
             {nextBook ? (
               <Link href={`/books/masters-x/${nextBook.slug}`} className="card" style={{ flex: 1, textDecoration: "none", textAlign: "right" }}>
-                <div style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.4rem" }}>Next →</div>
+                <div className="nota-nav-label" style={{ fontSize: "0.7rem", color: "var(--text-faint)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.4rem", justifyContent: "flex-end" }}>
+                  Next
+                  <NotaIcon variant="forward" size={12} />
+                </div>
                 <div style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem" }}>Volume {nextBook.volume}: {nextBook.subtitle}</div>
               </Link>
             ) : <div style={{ flex: 1 }} />}

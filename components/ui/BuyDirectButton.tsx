@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { buildBookItem, trackBeginCheckout } from "@/lib/analytics/gtag";
 
 interface BuyDirectButtonProps {
   label: string;
@@ -6,6 +9,9 @@ interface BuyDirectButtonProps {
   ecommPrice: string;
   msrpPrice?: string;
   className?: string;
+  itemId?: string;
+  itemName?: string;
+  itemVariant?: string;
 }
 
 export default function BuyDirectButton({
@@ -14,6 +20,9 @@ export default function BuyDirectButton({
   ecommPrice,
   msrpPrice,
   className = "",
+  itemId,
+  itemName,
+  itemVariant,
 }: BuyDirectButtonProps) {
   const hasDiscount = msrpPrice && msrpPrice !== ecommPrice;
   const savingsAmt = hasDiscount
@@ -26,6 +35,16 @@ export default function BuyDirectButton({
       target="_blank"
       rel="noopener noreferrer"
       className={`buy-direct-btn ${className}`}
+      onClick={() => {
+        if (!itemId || !itemName) return;
+        const item = buildBookItem({
+          itemId,
+          itemName,
+          itemVariant,
+          price: ecommPrice,
+        });
+        trackBeginCheckout([item], item.price);
+      }}
     >
       <span className="buy-direct-label">{label}</span>
       <span className="buy-direct-pricing">

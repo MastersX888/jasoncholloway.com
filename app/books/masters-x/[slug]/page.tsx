@@ -6,6 +6,9 @@ import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
+import BookViewTracker from "@/components/analytics/BookViewTracker";
+import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
+import { buildBookItem } from "@/lib/analytics/gtag";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -219,8 +222,36 @@ export default function BookPage({ params }: Props) {
     }))
   } : null;
 
+  const bookDisplayName = `${book.title}: ${book.subtitle}`;
+  const pbLink = book.buyLinks.find((l) => l.label === "IngramSpark (PB)");
+  const hcLink = book.buyLinks.find((l) => l.label === "IngramSpark (HC)");
+  const viewItems = [
+    ...(book.isbn_pb
+      ? [
+          buildBookItem({
+            itemId: book.isbn_pb,
+            itemName: `${bookDisplayName} (Paperback)`,
+            itemVariant: "Paperback",
+            price: book.price_pb_is,
+          }),
+        ]
+      : []),
+    ...(book.isbn_hc
+      ? [
+          buildBookItem({
+            itemId: book.isbn_hc,
+            itemName: `${bookDisplayName} (Hardcover)`,
+            itemVariant: "Hardcover",
+            price: book.price_hc_is,
+          }),
+        ]
+      : []),
+  ];
+  const viewValue = viewItems[0]?.price;
+
   return (
     <>
+      <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])]) }}
@@ -283,27 +314,31 @@ export default function BookPage({ params }: Props) {
                       Read on Kindle — ${book.price_ebook || "6.99"}
                     </a>
                     <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                      {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                        <a
-                          href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      {pbLink && book.isbn_pb && (
+                        <TrackedBuyLink
+                          href={pbLink.url}
+                          itemId={book.isbn_pb}
+                          itemName={`${bookDisplayName} (Paperback)`}
+                          itemVariant="Paperback"
+                          price={book.price_pb_is}
                           className="btn btn-gold"
                           style={{ width: "100%", justifyContent: "center" }}
                         >
                           {book.price_pb_is ? `Paperback — $${book.price_pb_is} direct` : "Paperback — Buy Direct"}
-                        </a>
+                        </TrackedBuyLink>
                       )}
-                      {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                        <a
-                          href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      {hcLink && book.isbn_hc && (
+                        <TrackedBuyLink
+                          href={hcLink.url}
+                          itemId={book.isbn_hc}
+                          itemName={`${bookDisplayName} (Hardcover)`}
+                          itemVariant="Hardcover"
+                          price={book.price_hc_is}
                           className="btn btn-gold"
                           style={{ width: "100%", justifyContent: "center" }}
                         >
                           {book.price_hc_is ? `Hardcover — $${book.price_hc_is} direct` : "Hardcover — Buy Direct"}
-                        </a>
+                        </TrackedBuyLink>
                       )}
                     </div>
                     {book.slug === "the-inheritance-of-frequency" && (
@@ -370,11 +405,16 @@ export default function BookPage({ params }: Props) {
                     </div>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                    {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
-                         target="_blank" rel="noopener noreferrer"
-                         className="btn btn-gold buy-direct-is"
-                         style={{ width: "100%", justifyContent: "center" }}>
+                    {pbLink && book.isbn_pb && (
+                      <TrackedBuyLink
+                        href={pbLink.url}
+                        itemId={book.isbn_pb}
+                        itemName={`${bookDisplayName} (Paperback)`}
+                        itemVariant="Paperback"
+                        price={book.price_pb_is}
+                        className="btn btn-gold buy-direct-is"
+                        style={{ width: "100%", justifyContent: "center" }}
+                      >
                         <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
                                        textTransform: "uppercase", opacity: 0.75 }}>
                           Buy Direct · Best Price
@@ -396,7 +436,7 @@ export default function BookPage({ params }: Props) {
                             </span>
                           )}
                         </span>
-                      </a>
+                      </TrackedBuyLink>
                     )}
                   </div>
                 </div>
@@ -415,11 +455,16 @@ export default function BookPage({ params }: Props) {
                     </div>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
-                    {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                      <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
-                         target="_blank" rel="noopener noreferrer"
-                         className="btn btn-gold buy-direct-is"
-                         style={{ width: "100%", justifyContent: "center" }}>
+                    {hcLink && book.isbn_hc && (
+                      <TrackedBuyLink
+                        href={hcLink.url}
+                        itemId={book.isbn_hc}
+                        itemName={`${bookDisplayName} (Hardcover)`}
+                        itemVariant="Hardcover"
+                        price={book.price_hc_is}
+                        className="btn btn-gold buy-direct-is"
+                        style={{ width: "100%", justifyContent: "center" }}
+                      >
                         <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
                                        textTransform: "uppercase", opacity: 0.75 }}>
                           Buy Direct · Best Price
@@ -441,7 +486,7 @@ export default function BookPage({ params }: Props) {
                             </span>
                           )}
                         </span>
-                      </a>
+                      </TrackedBuyLink>
                     )}
                   </div>
                 </div>
@@ -479,7 +524,7 @@ export default function BookPage({ params }: Props) {
               <div className="card" style={{ background: "var(--gold-glow)", borderColor: "var(--gold-dim)" }}>
                 <div className="label" style={{ marginBottom: "0.5rem" }}>Digital Edition</div>
                 <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
-                  Kindle edition available on Amazon. EPUB edition (ISBN above) distributed to library and retail ebook systems.
+                  Kindle edition on Amazon. EPUB (ISBN above) distributed via IngramSpark to participating library and retail partners.
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                   {book.asin_ebook && (

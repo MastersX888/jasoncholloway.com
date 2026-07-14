@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import BookViewTracker from "@/components/analytics/BookViewTracker";
+import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
+import { buildBookItem } from "@/lib/analytics/gtag";
 
 export const metadata: Metadata = {
   title: "Innocence, Desire, and the Architecture of the Fall",
@@ -61,6 +64,20 @@ export default function HawkesMonographPage() {
     }
   ];
 
+  const monographTitle =
+    "Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes";
+  const viewItems = editions
+    .filter((ed) => ed.isbn && ed.ecommPrice)
+    .map((ed) =>
+      buildBookItem({
+        itemId: ed.isbn,
+        itemName: `${monographTitle} (${ed.format})`,
+        itemVariant: ed.format,
+        price: ed.ecommPrice,
+      })
+    );
+  const viewValue = viewItems[0]?.price;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Book",
@@ -121,6 +138,7 @@ export default function HawkesMonographPage() {
 
   return (
     <>
+      <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
@@ -186,10 +204,15 @@ export default function HawkesMonographPage() {
 
                 <div style={{ marginTop: "1rem" }}>
                   {ed.buyUrl && ed.ecommPrice ? (
-                    <a href={ed.buyUrl}
-                       target="_blank" rel="noopener noreferrer"
-                       className="btn btn-gold buy-direct-is"
-                       style={{ width: "100%", justifyContent: "center" }}>
+                    <TrackedBuyLink
+                      href={ed.buyUrl}
+                      itemId={ed.isbn}
+                      itemName={`${monographTitle} (${ed.format})`}
+                      itemVariant={ed.format}
+                      price={ed.ecommPrice}
+                      className="btn btn-gold buy-direct-is"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
                       <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em",
                                      textTransform: "uppercase", opacity: 0.75 }}>
                         Buy Direct · Best Price
@@ -211,7 +234,7 @@ export default function HawkesMonographPage() {
                           </span>
                         )}
                       </span>
-                    </a>
+                    </TrackedBuyLink>
                   ) : ed.buyUrl ? (
                     <a
                       href={ed.buyUrl}

@@ -2,7 +2,7 @@
 // Derived from IngramSpark records and printed proof files.
 // Amazon carries ONLY the three Masters X Kindle editions (see buyLinks.ts).
 // Author spellings standardized to "Jason Carroll Holloway" across all titles.
-import { BUY_LINKS } from "./buyLinks";
+import { BUY_LINKS, bookshopIsbnUrl } from "./buyLinks";
 
 export interface BookLink {
   label: string;
@@ -79,7 +79,7 @@ export const books: Book[] = [
       { label: "Kindle Edition (Amazon)", url: `https://www.amazon.com/dp/${BUY_LINKS.MX1_KINDLE_ASIN}`, format: "Ebook" },
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=oYEloaPR0fGBR12tYLxinWD2T2BHRoAzXT3DiCBYyA2", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=v62PtydEkfxow8AfXuvbd9dtoSpnyxAAHmRQxMUuZFb", format: "Hardcover" },
-      { label: "Bookshop.org (Independent)", url: "https://bookshop.org/search?keywords=9798256008048", format: "Paperback" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798256008048"), format: "Paperback" },
     ],
   },
   {
@@ -118,7 +118,7 @@ export const books: Book[] = [
       { label: "Kindle Edition (Amazon)", url: `https://www.amazon.com/dp/${BUY_LINKS.MX2_KINDLE_ASIN}`, format: "Ebook" },
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=tQ1ogc5ZoVGesfjTi07TDRzxnZu6iGrMQZwwoLpr8H0", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=jbxhmyTXaZYP9tOaUe5x3PaTlo0m50dkqx0QIcP0kQO", format: "Hardcover" },
-      { label: "Bookshop.org (Independent)", url: "https://bookshop.org/search?keywords=9798256009953", format: "Paperback" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798256009953"), format: "Paperback" },
     ],
   },
   {
@@ -157,7 +157,7 @@ export const books: Book[] = [
       { label: "Kindle Edition (Amazon)", url: `https://www.amazon.com/dp/${BUY_LINKS.MX3_KINDLE_ASIN}`, format: "Ebook" },
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=xkYCcaKlPEx7bhKAnxXKal6Yo1SWaPR9bZLFI0lrzsK", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=9U4mGdswEJmFH7KEFg6ksvEDygOX4FAcr2zBs7eH72i", format: "Hardcover" },
-      { label: "Bookshop.org (Independent)", url: "https://bookshop.org/search?keywords=9798256010072", format: "Paperback" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798256010072"), format: "Paperback" },
     ],
   },
   {
@@ -190,6 +190,8 @@ export const books: Book[] = [
     buyLinks: [
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=QCSm4Cs8X0r8XkWm865RXOqXWvU4FbMlEf4GhiViHuy", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=5euticmifKEyNYtkmPSmmxiTwypmN5nErByeUkomLfk", format: "Hardcover" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798256072704"), format: "Paperback" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798295884412"), format: "Hardcover" },
     ],
   },
   {
@@ -223,6 +225,8 @@ export const books: Book[] = [
     buyLinks: [
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve", format: "Hardcover" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798295778247"), format: "Paperback" },
+      { label: "Bookshop.org (Independent)", url: bookshopIsbnUrl("9798349308444"), format: "Hardcover" },
     ],
   }
 ];

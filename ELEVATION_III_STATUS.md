@@ -1,4 +1,14 @@
-# ELEVATION III STATUS — 13-JUL-2026
+# ELEVATION III STATUS — 14-JUL-2026 (IV closure pass)
+
+## IV Closure — 14-JUL-2026
+
+- GA4 conversion tracking: `components/analytics/` (`G-79RDL3BDEH`), `view_item` + `begin_checkout` on book pages, `generate_lead` on `/chapters-sent/`
+- Bookshop.org affiliate `126177` wired in `lib/data/buyLinks.ts` + all `books.ts` buy links (trilogy PB, omnibus PB/HC, Hawkes PB/HC)
+- Bookshop list URL on trilogy hub + omnibus page (`BOOKSHOP_LIST_URL`)
+- Trilogy hub Bookshop link matcher fixed (`label.startsWith("Bookshop.org")`)
+- Omnibus page unified to inline two-price `TrackedBuyLink` pattern (matches `[slug]`)
+- Ebook copy: trilogy digital card — Kindle on Amazon; EPUB via IngramSpark partners (removed vague “retail ebook systems”)
+- `ASSET_GAP_REPORT.md` published — 0 blocking media gaps; 181/181 folio paths present locally
 
 ## Completed Tasks
 
@@ -19,10 +29,12 @@
 - III-6A: reduced-motion guard merged (animate-fade-up, artifact-strip, cover-object)
 - III-6B: 412px artifact-item + 480px buy-direct-is/btn full-width rules added; chamber layer-card selector not present — skipped
 - III-6C: mobile CTA audit documented (see Mobile CTA Audit)
+- Folio `beineckeRef`: 166/166 Voynich rows mapped in `lib/folios.json` (commit `e4f9cc9`)
+- SubTropolis field note: Great Big Story YouTube embed (`b1YDufouqbY`) + VideoObject JSON-LD
 
 ## Deferred — [NEEDS AUTHOR]
 
-- Bookshop.org affiliate ID for direct product URLs (ISBN search URLs retained; HEAD returns 403 from automated requests)
+- ~~Bookshop.org affiliate ID~~ — **complete**: `126177` in `buyLinks.ts` + `books.ts` (14-JUL-2026)
 - IngramSpark EPUB description: "sixteen" → "seventeen-novel corpus" (ISBN 9798295778926) — fix in IngramSpark dashboard
 - ~~Visual folio verification~~ — **complete**: 166/166 Voynich rows have `beineckeRef` in `lib/folios.json` (130 distance-0 auto + 34 distance-2 finish + `v3-052` corrected to `f85v-86r`)
 - E: drive asset copy: `/media/THE_CITY_BENEATH_KANSAS_CITY.mp4` — **resolved**: SubTropolis field note now embeds Great Big Story YouTube (`b1YDufouqbY`) with attribution + VideoObject JSON-LD
@@ -72,7 +84,7 @@ Pages with multiple `btn-gold` elements visible in the same ~100vh zone at ≤76
 | `/` | Yes | "Explore Masters X" + "Hawkes Monograph" gold CTAs in paired catalog cards (same section) |
 | `/books/masters-x/` | Yes | Each volume card: Kindle + Buy Direct gold buttons; 3 cards stack in viewport |
 | `/books/masters-x/the-grimoire/` | Yes | Hero: Kindle + IngramSpark PB/HC buy-direct gold buttons simultaneously visible |
-| `/books/masters-x/omnibus/` | No | BuyDirectButton pattern (non-gold) for IS; outline for back link |
+| `/books/masters-x/omnibus/` | Yes | Hero: two gold `buy-direct-is` PB/HC buttons side-by-side (14-JUL-2026 inline two-price) |
 | `/books/hawkes-monograph/` | Yes | PB + HC edition cards each with gold buy-direct buttons side-by-side |
 | `/chamber/` | No | Conversion strip: 1 gold + 1 outline |
 
@@ -83,4 +95,5 @@ Pages with multiple `btn-gold` elements visible in the same ~100vh zone at ≤76
 - Imprint routes: **5** (`/`, `/_not-found`, `/contact`, `/sitemap.xml` — 4 content pages)
 - Author deploy: `npx wrangler pages deploy out --project-name=jasoncholloway --branch=main`
 - Imprint deploy: `cd seventhcitypress && npx wrangler pages deploy out --project-name=seventhcitypress --branch=main`
+- **Latest author deploy:** `https://7055ea47.jasoncholloway.pages.dev` (13-JUL-2026, `e4f9cc9`)
 - **Post-deploy:** Purge all cache on both Cloudflare Pages projects

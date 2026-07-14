@@ -19,4 +19,21 @@ export const BUY_LINKS = {
   MX1_KINDLE_PRICE: "6.99",
   MX2_KINDLE_PRICE: "6.99",
   MX3_KINDLE_PRICE: "6.99",
+
+  // Bookshop.org affiliate (list live Jul 2026)
+  BOOKSHOP_AFFILIATE_ID: "126177",
+  BOOKSHOP_LIST_URL:
+    "https://bookshop.org/lists/masters-x-trilogy-seventh-city-press?affiliate=126177",
 };
+
+/** ISBN search with affiliate attribution. */
+export function bookshopIsbnUrl(isbn: string): string {
+  return `https://bookshop.org/search?keywords=${isbn}&affiliate=${BUY_LINKS.BOOKSHOP_AFFILIATE_ID}`;
+}
+
+/** Append affiliate param to an existing Bookshop URL. */
+export function bookshopAffiliateUrl(url: string): string {
+  const parsed = new URL(url);
+  parsed.searchParams.set("affiliate", BUY_LINKS.BOOKSHOP_AFFILIATE_ID);
+  return parsed.toString();
+}

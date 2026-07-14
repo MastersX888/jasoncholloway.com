@@ -1,8 +1,11 @@
 import Link from "next/link";
 import { books } from "@/lib/data/books";
-import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import { BUY_LINKS } from "@/lib/data/buyLinks";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import WaveDivider from "@/components/ui/WaveDivider";
+import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
+import BookViewTracker from "@/components/analytics/BookViewTracker";
+import { buildBookItem } from "@/lib/analytics/gtag";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
@@ -97,8 +100,42 @@ export default function OmnibusPage() {
     ],
   };
 
+  const omnibusDisplayName = `${omnibus.title}: ${omnibus.subtitle}`;
+  const pbLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)");
+  const hcLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)");
+  const bookshopPbLink = omnibus.buyLinks.find(
+    (l) => l.label.startsWith("Bookshop.org") && l.format === "Paperback"
+  );
+  const bookshopHcLink = omnibus.buyLinks.find(
+    (l) => l.label.startsWith("Bookshop.org") && l.format === "Hardcover"
+  );
+  const viewItems = [
+    ...(omnibus.isbn_pb
+      ? [
+          buildBookItem({
+            itemId: omnibus.isbn_pb,
+            itemName: `${omnibusDisplayName} (Paperback)`,
+            itemVariant: "Paperback",
+            price: omnibus.price_pb_is,
+          }),
+        ]
+      : []),
+    ...(omnibus.isbn_hc
+      ? [
+          buildBookItem({
+            itemId: omnibus.isbn_hc,
+            itemName: `${omnibusDisplayName} (Hardcover)`,
+            itemVariant: "Hardcover",
+            price: omnibus.price_hc_is,
+          }),
+        ]
+      : []),
+  ];
+  const viewValue = viewItems[0]?.price;
+
   return (
     <>
+      <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
@@ -142,37 +179,73 @@ export default function OmnibusPage() {
                 <p style={{ color: "var(--text-muted)", lineHeight: 1.85, fontSize: "0.95rem", marginBottom: "2rem" }}>
                   {omnibus.shortDesc}
                 </p>
-                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap" }}>
-                  {omnibus.buyLinks.map((link) => {
-                    if (link.url.includes("shop.ingramspark.com") && link.format === "Paperback") {
-                      return (
-                        <BuyDirectButton
-                          key={link.url}
-                          label={link.label}
-                          url={link.url}
-                          ecommPrice={omnibus.price_pb_is ?? ""}
-                          msrpPrice={omnibus.price_pb_msrp}
-                        />
-                      );
-                    }
-                    if (link.url.includes("shop.ingramspark.com") && link.format === "Hardcover") {
-                      return (
-                        <BuyDirectButton
-                          key={link.url}
-                          label={link.label}
-                          url={link.url}
-                          ecommPrice={omnibus.price_hc_is ?? ""}
-                          msrpPrice={omnibus.price_hc_msrp}
-                        />
-                      );
-                    }
-                    return (
-                      <a key={link.label} href={link.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold">
-                        {link.label}
-                      </a>
-                    );
-                  })}
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem", marginBottom: "1rem" }}>
+                  {pbLink && omnibus.isbn_pb && (
+                    <TrackedBuyLink
+                      href={pbLink.url}
+                      itemId={omnibus.isbn_pb}
+                      itemName={`${omnibusDisplayName} (Paperback)`}
+                      itemVariant="Paperback"
+                      price={omnibus.price_pb_is}
+                      className="btn btn-gold buy-direct-is"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
+                        Buy Direct · Best Price
+                      </span>
+                      <span className="price-row">
+                        {omnibus.price_pb_msrp && (
+                          <span className="price-msrp">${omnibus.price_pb_msrp}</span>
+                        )}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                          {omnibus.price_pb_is ? `$${omnibus.price_pb_is}` : "Best Price"}
+                        </span>
+                        {omnibus.price_pb_msrp && omnibus.price_pb_is && (
+                          <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)", padding: "0.1em 0.4em", borderRadius: "2px", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                            save ${(parseFloat(omnibus.price_pb_msrp) - parseFloat(omnibus.price_pb_is)).toFixed(2)}
+                          </span>
+                        )}
+                      </span>
+                    </TrackedBuyLink>
+                  )}
+                  {hcLink && omnibus.isbn_hc && (
+                    <TrackedBuyLink
+                      href={hcLink.url}
+                      itemId={omnibus.isbn_hc}
+                      itemName={`${omnibusDisplayName} (Hardcover)`}
+                      itemVariant="Hardcover"
+                      price={omnibus.price_hc_is}
+                      className="btn btn-gold buy-direct-is"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
+                        Buy Direct · Best Price
+                      </span>
+                      <span className="price-row">
+                        {omnibus.price_hc_msrp && (
+                          <span className="price-msrp">${omnibus.price_hc_msrp}</span>
+                        )}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
+                          {omnibus.price_hc_is ? `$${omnibus.price_hc_is}` : "Best Price"}
+                        </span>
+                        {omnibus.price_hc_msrp && omnibus.price_hc_is && (
+                          <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)", padding: "0.1em 0.4em", borderRadius: "2px", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+                            save ${(parseFloat(omnibus.price_hc_msrp) - parseFloat(omnibus.price_hc_is)).toFixed(2)}
+                          </span>
+                        )}
+                      </span>
+                    </TrackedBuyLink>
+                  )}
                 </div>
+                {(bookshopPbLink || bookshopHcLink) && (
+                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: "0.75rem" }}>
+                    Also on{" "}
+                    <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" style={{ color: "var(--gold)" }}>
+                      Bookshop.org
+                    </a>{" "}
+                    (independent bookstores).
+                  </p>
+                )}
                 {omnibus.price_pb_msrp && omnibus.price_pb_is && (
                   <p className="omnibus-savings-note">
                     All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
@@ -203,6 +276,68 @@ export default function OmnibusPage() {
                     {p}
                   </p>
                 ))}
+              </div>
+
+              <div className="section-label-row" style={{ marginBottom: "2rem" }}>
+                <span className="label">Print Editions</span>
+              </div>
+              <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", marginBottom: "2.5rem" }}>
+                <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                  <div>
+                    <div style={{ fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.5rem", fontWeight: 600 }}>Paperback Edition</div>
+                    <div style={{ fontSize: "0.8rem", color: "var(--text-faint)", marginBottom: "1rem" }}>
+                      ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{omnibus.isbn_pb}</span><br />
+                      {omnibus.pageCountPB ?? omnibus.pageCount} pages
+                    </div>
+                  </div>
+                  {pbLink && omnibus.isbn_pb && (
+                    <TrackedBuyLink
+                      href={pbLink.url}
+                      itemId={omnibus.isbn_pb}
+                      itemName={`${omnibusDisplayName} (Paperback)`}
+                      itemVariant="Paperback"
+                      price={omnibus.price_pb_is}
+                      className="btn btn-gold buy-direct-is"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
+                        Buy Direct · Best Price
+                      </span>
+                      <span className="price-row">
+                        {omnibus.price_pb_msrp && <span className="price-msrp">${omnibus.price_pb_msrp}</span>}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>${omnibus.price_pb_is}</span>
+                      </span>
+                    </TrackedBuyLink>
+                  )}
+                </div>
+                <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                  <div>
+                    <div style={{ fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.5rem", fontWeight: 600 }}>Hardcover Edition</div>
+                    <div style={{ fontSize: "0.8rem", color: "var(--text-faint)", marginBottom: "1rem" }}>
+                      ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{omnibus.isbn_hc}</span><br />
+                      {omnibus.pageCountHC ?? omnibus.pageCount} pages
+                    </div>
+                  </div>
+                  {hcLink && omnibus.isbn_hc && (
+                    <TrackedBuyLink
+                      href={hcLink.url}
+                      itemId={omnibus.isbn_hc}
+                      itemName={`${omnibusDisplayName} (Hardcover)`}
+                      itemVariant="Hardcover"
+                      price={omnibus.price_hc_is}
+                      className="btn btn-gold buy-direct-is"
+                      style={{ width: "100%", justifyContent: "center" }}
+                    >
+                      <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
+                        Buy Direct · Best Price
+                      </span>
+                      <span className="price-row">
+                        {omnibus.price_hc_msrp && <span className="price-msrp">${omnibus.price_hc_msrp}</span>}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>${omnibus.price_hc_is}</span>
+                      </span>
+                    </TrackedBuyLink>
+                  )}
+                </div>
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>

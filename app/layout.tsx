@@ -76,6 +76,7 @@ export const metadata: Metadata = {
 };
 
 import WebMCPProvider from "@/components/WebMCPProvider";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 
 export default function RootLayout({
   children,
@@ -154,6 +155,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <GoogleAnalytics />
         <WebMCPProvider />
         <div className="bg-sacred-geometry" />
         <Header />

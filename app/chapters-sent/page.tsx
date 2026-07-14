@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
+import LeadConversionTracker from "@/components/analytics/LeadConversionTracker";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function ChaptersSentPage() {
   
   return (
     <div className="container" style={{ padding: "6rem 0", maxWidth: "800px" }}>
+      <LeadConversionTracker />
       <div style={{ textAlign: "center", marginBottom: "4rem" }}>
         <h1 className="display-lg" style={{ marginBottom: "1.5rem" }}>
           Your downloads are ready.

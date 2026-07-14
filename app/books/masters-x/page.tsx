@@ -1,10 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
+import { BUY_LINKS } from "@/lib/data/buyLinks";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 
@@ -230,6 +232,9 @@ export default function MastersXPage() {
                         url={pbLink.url}
                         ecommPrice={omnibus.price_pb_is ?? ""}
                         msrpPrice={omnibus.price_pb_msrp}
+                        itemId={omnibus.isbn_pb}
+                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Paperback)`}
+                        itemVariant="Paperback"
                       />
                     )}
                     {hcLink && (
@@ -238,6 +243,9 @@ export default function MastersXPage() {
                         url={hcLink.url}
                         ecommPrice={omnibus.price_hc_is ?? ""}
                         msrpPrice={omnibus.price_hc_msrp}
+                        itemId={omnibus.isbn_hc}
+                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Hardcover)`}
+                        itemVariant="Hardcover"
                       />
                     )}
                   </div>
@@ -248,6 +256,11 @@ export default function MastersXPage() {
                       buying volumes individually.
                     </p>
                   )}
+                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.75rem" }}>
+                    <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ color: "var(--gold)" }}>
+                      View full catalog on Bookshop.org →
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -284,14 +297,22 @@ function BookBody({ book }: { book: typeof books[0] }) {
             <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text)" }}>Paperback</div>
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_pb}</span></div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
-              {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
-                <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+              {book.buyLinks.find(l => l.label === "IngramSpark (PB)") && book.isbn_pb && (
+                <TrackedBuyLink
+                  href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                  itemId={book.isbn_pb}
+                  itemName={`${book.title}: ${book.subtitle} (Paperback)`}
+                  itemVariant="Paperback"
+                  price={book.price_pb_is}
+                  className="nota-link"
+                  style={{ fontSize: "0.78rem", color: "var(--gold)" }}
+                >
                   <NotaIcon variant="forward" size={12} />
                   Buy Direct {book.price_pb_is ? `($${book.price_pb_is})` : "(Best Price)"}
-                </a>
+                </TrackedBuyLink>
               )}
-              {book.buyLinks.find(l => l.label === "Bookshop.org") && (
-                <a href={book.buyLinks.find(l => l.label === "Bookshop.org")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
+              {book.buyLinks.find(l => l.label.startsWith("Bookshop.org")) && (
+                <a href={book.buyLinks.find(l => l.label.startsWith("Bookshop.org"))!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>
                   <NotaIcon variant="external" size={12} />
                   Order via Bookshop.org
                 </a>
@@ -302,11 +323,19 @@ function BookBody({ book }: { book: typeof books[0] }) {
             <div style={{ fontSize: "0.82rem", fontWeight: 600, color: "var(--text)" }}>Hardcover</div>
             <div style={{ fontSize: "0.75rem", color: "var(--text-faint)" }}>ISBN: <span style={{ fontFamily: "var(--font-mono)" }}>{book.isbn_hc}</span></div>
             <div style={{ display: "flex", flexDirection: "column", gap: "0.25rem", marginTop: "0.5rem" }}>
-              {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && (
-                <a href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+              {book.buyLinks.find(l => l.label === "IngramSpark (HC)") && book.isbn_hc && (
+                <TrackedBuyLink
+                  href={book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url}
+                  itemId={book.isbn_hc}
+                  itemName={`${book.title}: ${book.subtitle} (Hardcover)`}
+                  itemVariant="Hardcover"
+                  price={book.price_hc_is}
+                  className="nota-link"
+                  style={{ fontSize: "0.78rem", color: "var(--gold)" }}
+                >
                   <NotaIcon variant="forward" size={12} />
                   Buy Direct {book.price_hc_is ? `($${book.price_hc_is})` : "(Best Price)"}
-                </a>
+                </TrackedBuyLink>
               )}
               <span style={{ fontSize: "0.78rem", color: "var(--text-faint)", display: "inline-block" }}>
                 Orderable from any bookstore by ISBN
@@ -315,15 +344,23 @@ function BookBody({ book }: { book: typeof books[0] }) {
           </div>
         </div>
 
-        {book.qrCodePB && book.buyLinks.find(l => l.label === "IngramSpark (PB)") && (
+        {book.qrCodePB && book.buyLinks.find(l => l.label === "IngramSpark (PB)") && book.isbn_pb && (
           <div style={{ marginTop: "1.25rem", padding: "1.25rem", borderRadius: "var(--r-md)", background: "var(--bg-surface)", border: "1px solid var(--border)", display: "flex", gap: "1.25rem", alignItems: "center", flexWrap: "wrap" }}>
              <Image src={book.qrCodePB} alt="QR Code to buy direct" width={80} height={80} style={{ borderRadius: "8px", flexShrink: 0, border: "1px solid var(--border-faint)", background: "white", padding: "4px" }} />
              <div style={{ flex: 1, minWidth: "180px" }}>
                <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--gold)", marginBottom: "0.25rem" }}>Buy Direct & Save (Paperback)</div>
                <div style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.4 }}>Scan or click to purchase directly from the publisher — the best price on print editions.</div>
-               <a href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url} target="_blank" rel="noopener noreferrer" className="btn btn-gold btn-sm" style={{ padding: "0.5rem 1rem", fontSize: "0.8rem", display: "inline-block", textAlign: "center" }}>
+               <TrackedBuyLink
+                 href={book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url}
+                 itemId={book.isbn_pb}
+                 itemName={`${book.title}: ${book.subtitle} (Paperback)`}
+                 itemVariant="Paperback"
+                 price={book.price_pb_is}
+                 className="btn btn-gold btn-sm"
+                 style={{ padding: "0.5rem 1rem", fontSize: "0.8rem", display: "inline-block", textAlign: "center" }}
+               >
                   Buy Now {book.price_pb_is ? `($${book.price_pb_is})` : ""}
-               </a>
+               </TrackedBuyLink>
              </div>
           </div>
         )}

@@ -95,5 +95,5 @@ Pages with multiple `btn-gold` elements visible in the same ~100vh zone at ≤76
 - Imprint routes: **5** (`/`, `/_not-found`, `/contact`, `/sitemap.xml` — 4 content pages)
 - Author deploy: `npx wrangler pages deploy out --project-name=jasoncholloway --branch=main`
 - Imprint deploy: `cd seventhcitypress && npx wrangler pages deploy out --project-name=seventhcitypress --branch=main`
-- **Latest author deploy:** `https://7055ea47.jasoncholloway.pages.dev` (13-JUL-2026, `e4f9cc9`)
+- **Latest author deploy:** `https://95deea44.jasoncholloway.pages.dev` (14-JUL-2026, `a4c5eba`)
 - **Post-deploy:** Purge all cache on both Cloudflare Pages projects

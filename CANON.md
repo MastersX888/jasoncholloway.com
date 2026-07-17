@@ -12,6 +12,14 @@ This file documents the locked narrative, biographical, and bibliographical fact
 *   **Volumes Published Status:** **Available now** (launched June 2026).  
     *(Do not use "Releasing June 2026" / "Forthcoming" on consumer-facing pages — the launch window has opened.)*
 
+### B. Authority identifiers (locked)
+
+*   **ISNI:** 0000 0005 3044 7935 · URI: https://isni.org/isni/0000000530447935
+*   **Goodreads author ID:** 20924993
+*   **Wikidata:** Q140275300 · https://www.wikidata.org/wiki/Q140275300
+*   **Amazon Author Store:** B08P54N4XZ · https://www.amazon.com/stores/Jason-Holloway/author/B08P54N4XZ
+*   **JSON-LD source of truth:** `lib/data/authorAuthority.ts` (`sameAs` + `identifier`)
+
 ---
 
 ## 2 · BIBLIOGRAPHIC CANON

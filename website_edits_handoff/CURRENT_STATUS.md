@@ -1,5 +1,7 @@
 # Current Status — July 12, 2026
 
+> **Superseded for ops (Jul 16, 2026):** See `../FOUNDATION_STATUS.md` and `../debt_consolidation_handoff/AUDIT_REPORT.md` for live-verified status.
+
 ## Live and verified ✅
 
 | Item | Status |

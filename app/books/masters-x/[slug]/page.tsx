@@ -8,6 +8,7 @@ import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
+import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
 type Props = { params: Promise<{ slug: string }> };
 
@@ -142,19 +143,19 @@ export default function BookPage({ params }: Props) {
       { q: "Do I need to read Masters X in order?", a: "Yes — the trilogy is designed to be read in sequence. Volume I establishes all the characters, locations, and the core mystery. Volume II deepens the preparation protocol. Volume III resolves everything. Starting with Volume I is the only recommended path." },
       { q: "Is The Inheritance of Frequency a standalone novel?", a: "It functions as a complete first act with a satisfying arc, but the story continues directly into The Grimoire. The three volumes are best understood as a single, continuous novel published in three parts." },
       { q: "Is the Voynich Manuscript in this novel?", a: "Yes. The Folio Visualizer in the Analysis Chamber is built around 181 Voynich Manuscript folios and Ars Notoria notae. The novel's plot pivots on Nadia's discovery that the Voynich Manuscript, the Ars Notoria, and the Codex Gigas are three expressions of a single system." },
-      { q: "Where can I buy The Inheritance of Frequency?", a: "The Kindle edition is available on Amazon. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
+      { q: "Where can I buy The Inheritance of Frequency?", a: "Kindle on Amazon ($6.99) or EPUB on Google Play Books. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
     ],
     "the-grimoire": [
       { q: "Do I need to read Volume I before The Grimoire?", a: "Yes. The Grimoire picks up immediately after the events of The Inheritance of Frequency and assumes full knowledge of the first volume's revelations." },
       { q: "What is the Ars Notoria, really?", a: "The Ars Notoria is a real thirteenth-century Solomonic manuscript, available in institutional collections worldwide. It uses geometric figures called notae and structured prayers to develop memory and eloquence. The Grimoire's fictional reading is that the notae are interfaces — cognitive technology, not magic. Read the full history in the Field Notes." },
       { q: "Is Chartres Cathedral's acoustics real?", a: "Cathedral acoustics are a real and documented field. The specific frequency relationships in the novel are the trilogy's fictional architecture, built on real acoustic research into medieval sacred spaces." },
-      { q: "Where can I buy The Grimoire?", a: "The Kindle edition is available on Amazon. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
+      { q: "Where can I buy The Grimoire?", a: "Kindle on Amazon ($6.99) or EPUB on Google Play Books. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
     ],
     "the-kingdom": [
       { q: "Do I need to read Volumes I and II before The Kingdom?", a: "Absolutely. The Kingdom is the culmination of a three-volume story. It will not make sense without the first two volumes." },
       { q: "What is the 111 Hz frequency in the novel?", a: "111 Hz is a standing-wave frequency documented by acoustic researchers in multiple ancient stone chambers worldwide, including the Hħal-Saflieni Hypogeum in Malta. The trilogy uses this documented research as its scientific foundation." },
       { q: "Is 'The Kingdom of God is within you' a real saying?", a: "Saying 113 of the Gospel of Thomas reads: 'The kingdom of God is spread upon the earth, and people do not see it.' The Gospel of Thomas is a real first-century text discovered at Nag Hammadi, Egypt in 1945. It is available in scholarly translation." },
-      { q: "Where can I buy The Kingdom?", a: "The Kindle edition is available on Amazon. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
+      { q: "Where can I buy The Kingdom?", a: "Kindle on Amazon ($6.99) or EPUB on Google Play Books. Hardcover and paperback editions are sold direct from the publisher via IngramSpark and can be ordered from any bookstore or library by ISBN. See the edition links on this page." },
     ],
   };
 
@@ -524,12 +525,24 @@ export default function BookPage({ params }: Props) {
               <div className="card" style={{ background: "var(--gold-glow)", borderColor: "var(--gold-dim)" }}>
                 <div className="label" style={{ marginBottom: "0.5rem" }}>Digital Edition</div>
                 <div style={{ fontSize: "0.85rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
-                  Kindle edition on Amazon. EPUB (ISBN above) distributed via IngramSpark to participating library and retail partners.
+                  Kindle on Amazon (${book.price_ebook || "6.99"}). EPUB on Google Play Books (ISBN above). Same manuscript; Kindle uses a separate cover and ASIN.
                 </div>
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                   {book.asin_ebook && (
                     <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
                       Buy Kindle Edition — ${book.price_ebook || "6.99"}
+                    </a>
+                  )}
+                  {book.isbn_ebook && (
+                    <a
+                      href={googlePlayIsbnUrl(book.isbn_ebook)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nota-link"
+                      style={{ fontSize: "0.82rem", color: "var(--text-muted)", justifyContent: "center" }}
+                    >
+                      <NotaIcon variant="external" size={12} />
+                      Google Play Books (EPUB)
                     </a>
                   )}
                 </div>

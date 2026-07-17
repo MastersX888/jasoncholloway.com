@@ -44,7 +44,7 @@ export const catalog: CatalogBook[] = [
     editions: [
       { format: "Paperback", isbn: "9798256008048", asin: "B0H2GQX2G3", price: "$16.99", pageCount: 178, specifications: "Trade Paperback · 5.5×8.5 in" },
       { format: "Hardcover", isbn: "9798295800801", asin: "B0GY7HJPYB", price: "$29.99", pageCount: 156, specifications: "Jacketed Case Laminate · 6.14×9.21 in" },
-      { format: "Ebook", isbn: "9798256008819", price: "$6.99", pageCount: 267, specifications: "Kindle / EPUB" },
+      { format: "Ebook", isbn: "9798256008819", price: "$6.99", pageCount: 267, specifications: "Kindle (Amazon) · EPUB (Google Play Books)" },
     ],
   },
   {
@@ -63,7 +63,7 @@ export const catalog: CatalogBook[] = [
     editions: [
       { format: "Paperback", isbn: "9798256009953", asin: "B0H2JM96QG", price: "$22.99", pageCount: 260, specifications: "Trade Paperback · 5.5×8.5 in" },
       { format: "Hardcover", isbn: "9798295812675", asin: "B0GZCMNDSR", price: "$33.99", pageCount: 218, specifications: "Jacketed Case Laminate · 6.14×9.21 in" },
-      { format: "Ebook", isbn: "9798256009625", price: "$6.99", pageCount: 385, specifications: "Kindle / EPUB" },
+      { format: "Ebook", isbn: "9798256009625", price: "$6.99", pageCount: 385, specifications: "Kindle (Amazon) · EPUB (Google Play Books)" },
     ],
   },
   {
@@ -82,7 +82,7 @@ export const catalog: CatalogBook[] = [
     editions: [
       { format: "Paperback", isbn: "9798256010072", asin: "B0H2L5Y1B3", price: "$19.99", pageCount: 200, specifications: "Trade Paperback · 5.5×8.5 in" },
       { format: "Hardcover", isbn: "9798295812705", asin: "B0GZCX3L8S", price: "$32.99", pageCount: 170, specifications: "Jacketed Case Laminate · 6.14×9.21 in" },
-      { format: "Ebook", isbn: "9798256009809", price: "$5.99", pageCount: 291, specifications: "Kindle / EPUB" },
+      { format: "Ebook", isbn: "9798256009809", price: "$6.99", pageCount: 291, specifications: "Kindle (Amazon) · EPUB (Google Play Books)" },
     ],
   },
   {

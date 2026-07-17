@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
 
 export const metadata: Metadata = {
   title: "About",
@@ -52,9 +53,8 @@ export default function AboutPage() {
                 "conspiracy fiction"
               ],
               "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
-              "sameAs": [
-                "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway"
-              ]
+              "identifier": authorIsniIdentifier,
+              "sameAs": [...authorSameAs]
             }
           })
         }}

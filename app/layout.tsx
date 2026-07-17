@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
@@ -128,10 +129,8 @@ export default function RootLayout({
                     "conspiracy fiction"
                   ],
                   "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
-                  "sameAs": [
-                    "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway",
-                    "https://seventhcitypress.com/"
-                  ]
+                  "identifier": authorIsniIdentifier,
+                  "sameAs": [...authorSameAs]
                 },
                 {
                   "@type": "Organization",

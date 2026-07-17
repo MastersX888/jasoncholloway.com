@@ -1,0 +1,11 @@
+name = "www-to-apex"
+main = "src/index.js"
+compatibility_date = "2026-06-16"
+
+[[routes]]
+pattern = "www.jasoncholloway.com/*"
+zone_name = "jasoncholloway.com"
+
+[[routes]]
+pattern = "www.seventhcitypress.com/*"
+zone_name = "seventhcitypress.com"

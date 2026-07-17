@@ -31,6 +31,11 @@ export function bookshopIsbnUrl(isbn: string): string {
   return `https://bookshop.org/search?keywords=${isbn}&affiliate=${BUY_LINKS.BOOKSHOP_AFFILIATE_ID}`;
 }
 
+/** Google Play Books search by EPUB ISBN (resolves to product once live). */
+export function googlePlayIsbnUrl(isbn: string): string {
+  return `https://play.google.com/store/search?q=${isbn}&c=books`;
+}
+
 /** Append affiliate param to an existing Bookshop URL. */
 export function bookshopAffiliateUrl(url: string): string {
   const parsed = new URL(url);

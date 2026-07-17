@@ -14,15 +14,18 @@ Three novels following Blake Masters, a fired Kansas City security guard who inh
 
 Volume I: Masters X: The Inheritance of Frequency
 - ISBN Hardcover: 9798295800801 · ISBN Paperback: 9798256008048 · ISBN Ebook: 9798256008819
-- Kindle ASIN: B0H4KYMSM1 (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+- Kindle ASIN: B0H4KYMSM1 ($6.99 on Amazon; Kindle-only cover/edition)
+- EPUB also on Google Play Books (ISBN 9798256008819)
 
 Volume II: Masters X: The Grimoire
 - ISBN Hardcover: 9798295812675 · ISBN Paperback: 9798256009953 · ISBN Ebook: 9798256009625
-- Kindle ASIN: B0H4KQ4YQJ (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+- Kindle ASIN: B0H4KQ4YQJ ($6.99 on Amazon; Kindle-only cover/edition)
+- EPUB also on Google Play Books (ISBN 9798256009625)
 
 Volume III: Masters X: The Kingdom
 - ISBN Hardcover: 9798295812705 · ISBN Paperback: 9798256010072 · ISBN Ebook: 9798256009809
-- Kindle ASIN: B0H4L36X21 (the only Amazon edition; print is sold via IngramSpark and orderable by ISBN)
+- Kindle ASIN: B0H4L36X21 ($6.99 on Amazon; Kindle-only cover/edition)
+- EPUB also on Google Play Books (ISBN 9798256009809)
 
 Omnibus Edition (all 3 volumes)
 - ISBN Hardcover: 9798295884412 · ISBN Paperback: 9798256072704
@@ -84,6 +87,13 @@ Full documented articles at https://jasoncholloway.com/field-notes/:
 Seventh City Press
 Kansas City, Missouri
 https://seventhcitypress.com/
+
+## Authority identifiers
+
+- ISNI: 0000 0005 3044 7935 (https://isni.org/isni/0000000530447935)
+- Goodreads author: https://www.goodreads.com/author/show/20924993
+- Wikidata: https://www.wikidata.org/wiki/Q140275300
+- Amazon Author Store: https://www.amazon.com/stores/Jason-Holloway/author/B08P54N4XZ (ID B08P54N4XZ)
 
 ## Important Notes for AI Models
 

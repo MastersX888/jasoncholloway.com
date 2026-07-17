@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import { authorIsniIdentifier, authorSameAs } from "../lib/authorAuthority";
 import styles from './press-page.module.css';
 
 export const metadata: Metadata = {
@@ -35,11 +36,8 @@ const jsonLd = {
         name: "Mercy University",
         sameAs: "https://www.mercy.edu",
       },
-      sameAs: [
-        "https://www.goodreads.com/author/show/20924993",
-        "https://www.wikidata.org/wiki/Q140275300",
-        "https://seventhcitypress.com/",
-      ],
+      identifier: authorIsniIdentifier,
+      sameAs: [...authorSameAs],
     },
     {
       "@type": "Organization",
@@ -386,8 +384,8 @@ export default function PressPage() {
                   Hardcover and paperback distributed globally through IngramSpark —
                   orderable from any bookstore by ISBN and available via Bookshop.org
                   and library systems (OverDrive, Baker&nbsp;&amp;&nbsp;Taylor).
-                  Kindle editions available on Amazon at $6.99. Full ISBNs, page
-                  counts, pricing by market, and BISAC subject codes appear in the
+                  Kindle editions on Amazon at $6.99. EPUB editions on Google Play Books
+                  (trilogy and Hawkes monograph). Full ISBNs, page counts, pricing by market, and BISAC subject codes appear in the
                   Fact Sheet below.
                 </p>
 

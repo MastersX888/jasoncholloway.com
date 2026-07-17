@@ -12,7 +12,8 @@
 | `assets/scp-logo-profile-720.png` | **Profile photo / logo** (heptagram from book spine) |
 | `assets/scp-logo-profile-250.png` | Minimum-size logo variant |
 | `assets/scp-heptagram-mark-1024.png` | Mark only, no text |
-| `assets/scp-logo-lockup-1200.png` | Mark + SEVENTH CITY PRESS wordmark |
+| `assets/scp-logo-google-workspace-320x132.png` | **Google Workspace custom logo** (320×132 banner, dark) |
+| `assets/scp-logo-google-workspace-320x132-light.png` | Workspace logo alternate (cream ground) |
 | `seventhcitypress-google-business-assets.zip` | All assets + CSV for upload |
 
 ---

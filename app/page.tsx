@@ -436,7 +436,7 @@ export default function Home() {
                 { label: "Imprint", value: "Seventh City Press" },
                 { label: "Release Date", value: "June 1, 2026" },
                 { label: "Formats Available", value: "Hardcover · Paperback · Ebook" },
-                { label: "Global Distribution", value: "IngramSpark · Bookshop.org · Kindle" },
+                { label: "Global Distribution", value: "IngramSpark · Bookshop.org · Kindle · Google Play" },
               ].map((item) => (
                 <div key={item.label} style={{ display: "flex", justifyContent: "space-between", fontSize: "0.85rem", paddingBottom: "1rem", borderBottom: "1px solid var(--border-faint)" }}>
                   <span style={{ color: "var(--text-faint)" }}>{item.label}</span>

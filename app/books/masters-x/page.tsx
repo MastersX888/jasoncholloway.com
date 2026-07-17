@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
-import { BUY_LINKS } from "@/lib/data/buyLinks";
+import { BUY_LINKS, googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
@@ -289,6 +289,12 @@ function BookBody({ book }: { book: typeof books[0] }) {
         {book.asin_ebook && (
           <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", marginBottom: "1rem", fontSize: "1rem", padding: "0.8rem" }}>
             Kindle Edition (Amazon) — ${book.price_ebook || "6.99"}
+          </a>
+        )}
+        {book.isbn_ebook && (
+          <a href={googlePlayIsbnUrl(book.isbn_ebook)} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+            <NotaIcon variant="external" size={12} />
+            Google Play Books (EPUB)
           </a>
         )}
 

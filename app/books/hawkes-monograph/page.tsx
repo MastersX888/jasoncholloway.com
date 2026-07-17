@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import NotaIcon from "@/components/ui/NotaIcon";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
+import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
 
 export const metadata: Metadata = {
@@ -245,21 +247,25 @@ export default function HawkesMonographPage() {
                     >
                       {ed.buyLabel ?? `Buy ${ed.format} Direct`}
                     </a>
-                  ) : (
-                    <div
+                  ) : ed.format === "Ebook" ? (
+                    <a
+                      href={googlePlayIsbnUrl(ed.isbn)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="nota-link"
                       style={{
                         fontSize: "0.82rem",
                         color: "var(--text-muted)",
-                        textAlign: "center",
+                        justifyContent: "center",
                         padding: "0.85rem 0.5rem",
                         border: "1px solid var(--border-faint)",
                         borderRadius: "var(--r-md)",
-                        lineHeight: 1.5,
                       }}
                     >
-                      {ed.statusNote}
-                    </div>
-                  )}
+                      <NotaIcon variant="external" size={12} />
+                      Google Play Books — {ed.price.replace("$", "")}
+                    </a>
+                  ) : null}
                 </div>
               </div>
             ))}

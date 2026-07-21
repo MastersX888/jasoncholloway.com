@@ -73,7 +73,7 @@ No further action needed unless you add new print SKUs or change prices (then re
 |------|--------|
 | C1 | Countries → United States ONLY |
 | C2 | US shipping policy: $5.99 flat Standard |
-| C3 | Return policy URL: `https://jasoncholloway.com/contact/` |
+| C3 | Return policy URL: `https://jasoncholloway.com/returns/` |
 | C4 | Feeds → Fetch now on `jasoncholloway.com/feeds/google-shopping.csv` |
 
 </details>

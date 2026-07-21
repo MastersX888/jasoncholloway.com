@@ -71,7 +71,7 @@ Seventh City Press sells print via **IngramSpark (USD, US shipping)**. Restrict 
 ### Step 3 — Return policy (US)
 
 Same page → **Return policy** for United States  
-URL: `https://jasoncholloway.com/contact/`
+URL: `https://jasoncholloway.com/returns/`
 
 ### Step 4 — Re-fetch the feed
 

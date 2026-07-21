@@ -51,6 +51,7 @@ export default function Footer() {
               <a href="https://seventhcitypress.com/">Seventh City Press</a>
               <Link href="/about">About the Author</Link>
               <Link href="/contact">Contact</Link>
+              <Link href="/returns">Returns &amp; Refunds</Link>
             </nav>
           </div>
         </div>

@@ -14,11 +14,18 @@ $copy = @(
 )
 foreach ($item in $copy) {
   $from = Join-Path $src $item
-  if (Test-Path $from) {
-    Copy-Item $from (Join-Path $tmp $item) -Recurse -Force
+  if (-not (Test-Path $from)) { continue }
+  $to = Join-Path $tmp $item
+  # Junction large/static trees instead of copying (saves ~200MB+ on low-disk systems).
+  if ($item -in @('public', 'fonts', 'node_modules')) {
+    New-Item -ItemType Junction -Path $to -Target $from | Out-Null
+  } else {
+    Copy-Item $from $to -Recurse -Force
   }
 }
-New-Item -ItemType Junction -Path (Join-Path $tmp "node_modules") -Target (Join-Path $src "node_modules") | Out-Null
+if (-not (Test-Path (Join-Path $tmp 'node_modules'))) {
+  New-Item -ItemType Junction -Path (Join-Path $tmp 'node_modules') -Target (Join-Path $src 'node_modules') | Out-Null
+}
 
 Push-Location $tmp
 try {

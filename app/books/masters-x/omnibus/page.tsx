@@ -22,6 +22,21 @@ export const metadata: Metadata = {
     description:
       "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
     url: "https://jasoncholloway.com/books/masters-x/omnibus/",
+    images: omnibus
+      ? [
+          {
+            url: `https://jasoncholloway.com${omnibus.coverImageHC}`,
+            alt: `${omnibus.title}: ${omnibus.subtitle} — cover`,
+          },
+        ]
+      : undefined,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Masters X Omnibus Edition — Complete Trilogy",
+    description:
+      "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
+    images: omnibus ? [`https://jasoncholloway.com${omnibus.coverImageHC}`] : undefined,
   },
 };
 

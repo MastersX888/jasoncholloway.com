@@ -38,6 +38,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = volumeTitles[slug] ?? book.subtitle;
   const description = volumeDescs[slug] ?? book.excerpt;
+  const coverUrl = `https://jasoncholloway.com${book.coverImagePB}`;
+  const coverAlt = `${book.title}: ${book.subtitle} — cover`;
 
   return {
     title,
@@ -48,14 +50,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? [...book.keywords, "Chartres cathedral acoustics", "medieval grimoire fiction", "Ars Notoria explained", "Iceland novel"]
       : [...book.keywords, "books about frequency", "sound healing fiction", "Kansas City novel", "Gospel of Thomas"],
     openGraph: {
+      type: "book",
       title,
       description,
       url: `https://jasoncholloway.com/books/masters-x/${slug}/`,
+      images: [{ url: coverUrl, alt: coverAlt }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [coverUrl],
     },
     alternates: {
       canonical: `https://jasoncholloway.com/books/masters-x/${slug}/`,

@@ -1,0 +1,12 @@
+# Publish Wave 2 Pinterest pins via bookmarklet URLs (open each, click board Save in browser)
+$pins = @(
+  @{ board = 'Frequency'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fchamber%2F&media=https%3A%2F%2Fjasoncholloway.com%2Fog%2Ffield-notes%2Fcymatics.png&description=Analysis%20Chamber%20Interactive%20Research%20Tools'; pin = 18 },
+  @{ board = 'Frequency'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fchamber%2Fharmonic-stack%2F&media=https%3A%2F%2Fjasoncholloway.com%2Ffolios%2Farsnotoria%2FArs_Notoria_Screenshot_3.png&description=Harmonic%20Stack%20Ars%20Notoria%20Acoustic%20Spec'; pin = 19 },
+  @{ board = 'Voynich'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fchamber%2Ffolio-visualizer%2F&media=https%3A%2F%2Fjasoncholloway.com%2Ffolios%2Fvoynich%2FVol%25202%2Fvoynich2-000.jpg&description=Voynich%20Astronomical%20Folio%20f27r'; pin = 20 },
+  @{ board = 'Voynich'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Ffield-notes%2Fvoynich-manuscript%2F&media=https%3A%2F%2Fjasoncholloway.com%2Ffolios%2Fvoynich%2FVol%25204%2Ff88r.jpg&description=Voynich%20Pharmaceutical%20Folio%20f88r'; pin = 21 },
+  @{ board = 'Voynich'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fchamber%2Ffolio-visualizer%2F&media=https%3A%2F%2Fjasoncholloway.com%2Ffolios%2Fvoynich%2FVol%25204%2Ff99r.jpg&description=Voynich%20Recipe%20Folio%20f99r'; pin = 22 },
+  @{ board = 'Literary'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fbooks%2Fmasters-x%2F&media=https%3A%2F%2Fjasoncholloway.com%2Fcovers%2Fomnibus-hardcover-v3.png&description=Masters%20X%20Trilogy%20Complete%20Series'; pin = 23 },
+  @{ board = 'Literary'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Ffield-notes%2F&media=https%3A%2F%2Fjasoncholloway.com%2Fog%2Ffield-notes%2Fhub.png&description=Field%20Notes%20Hub%20Real%20History%20Research'; pin = 24 },
+  @{ board = 'Prague'; url = 'https://www.pinterest.com/pin/create/button/?url=https%3A%2F%2Fjasoncholloway.com%2Fchamber%2Freading-sequence%2F&media=https%3A%2F%2Fjasoncholloway.com%2Fcovers%2Fbook1-paperback.png&description=Reading%20Sequence%20Where%20to%20Start%20Masters%20X'; pin = 25 }
+)
+$pins | ForEach-Object { Write-Output "Pin $($_.pin) [$($_.board)]: $($_.url)" }

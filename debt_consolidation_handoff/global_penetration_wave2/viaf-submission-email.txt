@@ -1,0 +1,87 @@
+To: oclcviaf@oclc.org
+Cc: info@isni.org
+Subject: VIAF cluster request — Jason Carroll Holloway (ISNI 0000 0005 3044 7935)
+
+Dear VIAF team,
+
+I am writing to request a VIAF cluster for the author Jason Carroll Holloway, or to confirm linkage of existing authority records to his live ISNI.
+
+---
+
+AUTHOR
+
+Name: Jason Carroll Holloway
+Sort name: Holloway, Jason Carroll
+ISNI: 0000 0005 3044 7935
+ISNI URI: https://isni.org/isni/0000000530447935
+Wikidata: https://www.wikidata.org/wiki/Q140275300
+Occupation: Writer (literary fiction / conspiracy thriller)
+Country: United States
+Publisher: Seventh City Press LLC, Kansas City, Missouri, USA
+
+---
+
+IDENTIFIERS & WEB PRESENCE
+
+Author website: https://jasoncholloway.com/
+Publisher website: https://seventhcitypress.com/
+Goodreads author: https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway
+Amazon Author Central: https://www.amazon.com/stores/Jason-Holloway/author/B08P54N4XZ
+Open Library author: https://openlibrary.org/authors/OL16482975A/Jason_Carroll_Holloway
+
+---
+
+PRIMARY WORKS (English, 2025–2026)
+
+Series: Masters X (literary conspiracy trilogy)
+
+1. Masters X: The Inheritance of Frequency — Volume One
+   ISBN-13 (PB): 9798256008048
+   ISBN-13 (HC): 9798295800801
+   ISBN-13 (EPUB): 9798256008819
+   Kindle ASIN: B0H4KYMSM1
+
+2. Masters X: The Grimoire — Volume Two
+   ISBN-13 (PB): 9798256009953
+   ISBN-13 (HC): 9798295812675
+   ISBN-13 (EPUB): 9798256009625
+   Kindle ASIN: B0H4KQ4YQJ
+
+3. Masters X: The Kingdom — Volume Three
+   ISBN-13 (PB): 9798256010072
+   ISBN-13 (HC): 9798295812705
+   ISBN-13 (EPUB): 9798256009809
+   Kindle ASIN: B0H4L36X21
+
+4. Masters X: The Complete Trilogy (omnibus, print only)
+   ISBN-13 (PB): 9798256072704
+   ISBN-13 (HC): 9798295884412
+
+Separate work:
+Innocence, Desire, and the Architecture of the Fall (Hawkes)
+ISBN-13 (EPUB): 9798295778926
+
+All titles distributed via IngramSpark (wide retail + library). Publisher of record: Seventh City Press LLC.
+
+---
+
+REQUEST
+
+Please create or merge a VIAF cluster for Jason Carroll Holloway using the ISNI above as the authoritative personal-name identifier. If a cluster already exists under a variant form of the name, please merge rather than duplicate.
+
+I am the author and can confirm identity. Happy to provide additional documentation (publisher letter, ISBN assignment records, or Wikidata item edits) if required.
+
+Thank you for maintaining the global authority file.
+
+Best regards,
+
+Jason Carroll Holloway
+Seventh City Press LLC
+jason@jasoncholloway.com
+https://jasoncholloway.com/
+
+---
+NOTES FOR SENDER (delete before send)
+- Send from jason@jasoncholloway.com or press@seventhcitypress.com
+- Optional: CC your IngramSpark rep if they maintain VIAF/NACO ties
+- No auto-reply expected; allow 2–8 weeks

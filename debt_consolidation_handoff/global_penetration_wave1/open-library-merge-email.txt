@@ -1,0 +1,21 @@
+To: openlibrary@archive.org
+Subject: Merge duplicate work — The Grimoire (Jason Carroll Holloway)
+
+Hello,
+
+I'm the author/publisher for these records. Please merge this duplicate work into the canonical Masters X Vol II work.
+
+Duplicate (remove/redirect):
+https://openlibrary.org/works/OL45676361W
+Title: "The Grimoire" — 1 edition
+
+Primary (keep):
+https://openlibrary.org/works/OL45676377W
+Title: "Masters X: The Grimoire: Volume Two" — 4 editions
+
+Same book and author (Jason Carroll Holloway / Seventh City Press). The 1-edition record is a stray duplicate created during catalog setup.
+
+Thank you,
+Jason Carroll Holloway
+Seventh City Press
+https://jasoncholloway.com/

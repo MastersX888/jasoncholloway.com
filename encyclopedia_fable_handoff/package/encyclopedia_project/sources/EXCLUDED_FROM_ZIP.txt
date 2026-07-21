@@ -1,3 +1,0 @@
-resonant_frequency_dictionary.txt (~13.7M chars) excluded from handoff zip.
-Full path: encyclopedia_project/sources/resonant_frequency_dictionary.txt (repo)
-See EXTERNAL_ASSETS.md at package root.

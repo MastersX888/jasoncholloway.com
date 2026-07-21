@@ -1,0 +1,31 @@
+{
+  "baseUrl": "https://jasoncholloway.com",
+  "outputDir": "pinterest-assets/crops",
+  "pinSize": { "width": 1000, "height": 1500 },
+  "sources": [
+    { "id": "voynich-f1r", "url": "https://jasoncholloway.com/folios/voynich/Vol%201/voynich-004.jpg", "pins": [1] },
+    { "id": "voynich-f68r3", "url": "https://jasoncholloway.com/folios/voynich/Vol%203/vol3-052.jpg", "pins": [2] },
+    { "id": "voynich-rosette", "url": "https://jasoncholloway.com/folios/voynich/Vol%204/f85v-86r.jpg", "pins": [3] },
+    { "id": "voynich-f27r", "url": "https://jasoncholloway.com/folios/voynich/Vol%202/voynich2-000.jpg", "pins": [20] },
+    { "id": "voynich-f88r", "url": "https://jasoncholloway.com/folios/voynich/Vol%204/f88r.jpg", "pins": [21] },
+    { "id": "voynich-f99r", "url": "https://jasoncholloway.com/folios/voynich/Vol%204/f99r.jpg", "pins": [22] },
+    { "id": "strahov-og", "url": "https://jasoncholloway.com/og/field-notes/strahov-monastery.png", "pins": [6, 7, 8] },
+    { "id": "codex-gigas-og", "url": "https://jasoncholloway.com/og/field-notes/codex-gigas.png", "pins": [9] },
+    { "id": "ars-notoria-3", "url": "https://jasoncholloway.com/folios/arsnotoria/Ars_Notoria_Screenshot_3.png", "pins": [10, 19] },
+    { "id": "ars-notoria-5", "url": "https://jasoncholloway.com/folios/arsnotoria/Ars_Notoria_Screenshot_5.png", "pins": ["D-15"] },
+    { "id": "cymatics-og", "url": "https://jasoncholloway.com/og/field-notes/cymatics.png", "pins": [16] },
+    { "id": "gospel-thomas-og", "url": "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png", "pins": [17] },
+    { "id": "field-notes-hub-og", "url": "https://jasoncholloway.com/og/field-notes/hub.png", "pins": [18, 24] },
+    { "id": "111hz-og", "url": "https://jasoncholloway.com/og/field-notes/111-hz.png", "pins": [15] },
+    { "id": "book1-pb", "url": "https://jasoncholloway.com/covers/book1-paperback.png", "pins": [5, 25] },
+    { "id": "book2-pb", "url": "https://jasoncholloway.com/covers/book2-paperback.png", "pins": [13] },
+    { "id": "book3-pb", "url": "https://jasoncholloway.com/covers/book3-paperback.png", "pins": [14] },
+    { "id": "omnibus-hc", "url": "https://jasoncholloway.com/covers/omnibus-hardcover-v3.png", "pins": [11, 23] }
+  ],
+  "pin18ImageFix": {
+    "pinId": "1110700326880461590",
+    "oldMedia": "https://jasoncholloway.com/og/field-notes/cymatics.png",
+    "newMedia": "https://jasoncholloway.com/og/field-notes/hub.png",
+    "note": "Replace Pin 18 image on Pinterest to avoid duplicate cymatics.png on Frequency board"
+  }
+}

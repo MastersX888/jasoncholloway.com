@@ -1,0 +1,6 @@
+.bundle.b64
+.anthropic.key.tmp
+.anthropic.zip.tmp
+node_modules/
+.wrangler/
+.dev.vars

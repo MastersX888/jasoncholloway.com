@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bridge — Couples Dashboard</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { margin: 0; padding: 0; background: #0f1117; color: #e8e4df; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    html, body, #root { width: 100%; height: 100%; min-height: 100vh; }
+    #boot-msg { display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column; gap: 8px; }
+  </style>
+  <script>
+    window.__bridgeLiveUrl = "https://the-bridge.zh5779485.workers.dev/";
+    window.__bridgeIsLocalFile = location.protocol === "file:";
+    window.__bridgeBootError = function(msg) {
+      var live = window.__bridgeLiveUrl;
+      var extra = window.__bridgeIsLocalFile
+        ? '<p style="margin-top:14px"><a href="' + live + '" style="display:inline-block;background:#e8a849;color:#0f1117;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600">Open Live App →</a></p>'
+        : '';
+      document.getElementById('root').innerHTML = '<div id="boot-msg"><div style="font-size:22px;color:#e8a849;font-family:Georgia,serif;margin-bottom:12px;">⊶ The Bridge</div><div style="max-width:420px;text-align:center;line-height:1.6;color:#d4727a;padding:0 20px;">' + msg + extra + '</div></div>';
+    };
+    if (window.__bridgeIsLocalFile) {
+      document.addEventListener('DOMContentLoaded', function() {
+        var el = document.getElementById('boot-msg');
+        if (el) el.innerHTML += '<p style="font-size:12px;color:#8a8793;margin-top:10px;max-width:340px;text-align:center">Local file mode — first compile may take up to a minute.<br><a href="' + window.__bridgeLiveUrl + '" style="color:#e8a849">Or open the live app</a></p>';
+      });
+    }
+    setTimeout(function() {
+      if (!window.__bridgeMounted) {
+        window.__bridgeBootError(window.__bridgeIsLocalFile
+          ? 'Still loading after 90s. The downloaded file compiles slowly in-browser — use the live app for the best experience.'
+          : 'Still loading after 90s. Check your connection or try refreshing.');
+      }
+    }, 90000);
+  </script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js" onerror="__bridgeBootError('Could not load React. Check internet connection or use the live app.')"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" onerror="__bridgeBootError('Could not load ReactDOM. Check internet connection or use the live app.')"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js" onerror="__bridgeBootError('Could not load Babel. Check internet connection or use the live app.')"></script>
+  <script src="cycles-engine.js"></script>
+  <script src="cycles-engine-fallback.js"></script>
+</head>
+<body>
+  <div id="root">
+    <div id="boot-msg">
+      <div style="font-size: 32px; color: #e8a849; font-family: Georgia, serif;">⊶ The Bridge</div>
+      <div style="font-size: 14px; color: #8a8793;">Loading…</div>
+    </div>
+  </div>
+  <script type="text/babel">
+const { useState, useEffect, useCallback, useRef } = React;
+
+// Cloud backend — data persists in Cloudflare KV (survives browser cache clears)
+const BRIDGE_API = "https://the-bridge.zh5779485.workers.dev";
+
+let sessionToken = null;
+try { sessionToken = sessionStorage.getItem("bridge_session"); } catch (e) {}
+
+function setSession(token) {
+  sessionToken = token;
+  try { sessionStorage.setItem("bridge_session", token); } catch (e) {}
+}
+
+function clearSession() {
+  sessionToken = null;
+  try { sessionStorage.removeItem("bridge_session"); } catch (e) {}
+}
+
+function bridgeHeaders() {
+  const h = { "Content-Type": "application/json" };
+  if (sessionToken) h.Authorization = "Bearer " + sessionToken;
+  return h;
+}
+
+async function authFetch(path, options = {}) {
+  const res = await fetch(BRIDGE_API + path, {
+    ...options,
+    headers: { ...bridgeHeaders(), ...(options.headers || {}) },
+  });
+  const data = await res.json().catch(() => ({}));
+  return { res, data };
+}
+
+async function fetchAuthStatus() {
+  const { data } = await authFetch("/api/bridge/auth/status");
+  return data.ok ? data : { users: {}, bootstrapOpen: true };
+}
+
+async function fetchAuthMe() {
+  const { res, data } = await authFetch("/api/bridge/auth/me");
+  if (!res.ok) return null;
+  return data.user;
+}
+
+async function loginUser(user, password, totpCode) {
+  const { res, data } = await authFetch("/api/bridge/auth/login", {
+    method: "POST",
+    body: JSON.stringify({ user, password, totpCode }),
+  });
+  if (!res.ok) throw new Error(data.error || "Sign in failed");
+  setSession(data.sessionToken);
+  return data.user;
+}
+
+async function logoutUser() {
+  await authFetch("/api/bridge/auth/logout", { method: "POST" });
+  clearSession();
+}
+
+async function startEnroll(user, password, confirmPassword) {
+  const { res, data } = await authFetch("/api/bridge/auth/enroll/start", {
+    method: "POST",
+    body: JSON.stringify({ user, password, confirmPassword }),
+  });
+  if (!res.ok) throw new Error(data.error || "Setup failed");
+  return data;
+}
+
+async function confirmEnroll(user, password, totpCode) {
+  const { res, data } = await authFetch("/api/bridge/auth/enroll/confirm", {
+    method: "POST",
+    body: JSON.stringify({ user, password, totpCode }),
+  });
+  if (!res.ok) throw new Error(data.error || "Verification failed");
+  setSession(data.sessionToken);
+  return data.user;
+}
+
+function urlBase64ToUint8Array(base64String) {
+  const padding = "=".repeat((4 - (base64String.length % 4)) % 4);
+  const base64 = (base64String + padding).replace(/-/g, "+").replace(/_/g, "/");
+  const raw = atob(base64);
+  return Uint8Array.from([...raw].map((ch) => ch.charCodeAt(0)));
+}
+
+async function registerBridgePush() {
+  if (!("serviceWorker" in navigator) || !("PushManager" in window)) {
+    return { ok: false, error: "Push not supported in this browser" };
+  }
+  try {
+    const reg = await navigator.serviceWorker.register("/sw.js");
+    await navigator.serviceWorker.ready;
+    const perm = await Notification.requestPermission();
+    if (perm !== "granted") return { ok: false, error: "Notification permission denied" };
+    const { data } = await authFetch("/api/bridge/push/vapid-public");
+    if (!data.ok || !data.publicKey) return { ok: false, error: "Push not configured on server yet" };
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) {
+      sub = await reg.pushManager.subscribe({
+        userVisibleOnly: true,
+        applicationServerKey: urlBase64ToUint8Array(data.publicKey),
+      });
+    }
+    const { res, data: subData } = await authFetch("/api/bridge/push/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ subscription: sub.toJSON() }),
+    });
+    if (!res.ok) return { ok: false, error: subData.error || "Subscribe failed" };
+    return { ok: true };
+  } catch (e) {
+    return { ok: false, error: e.message || "Push registration failed" };
+  }
+}
+
+async function unregisterBridgePush() {
+  await authFetch("/api/bridge/push/subscribe", { method: "DELETE" });
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    const sub = await reg.pushManager.getSubscription();
+    if (sub) await sub.unsubscribe();
+  } catch (e) {}
+  return { ok: true };
+}
+
+const MOODS = ["😊 Great", "🙂 Good", "😐 Okay", "😔 Low", "😤 Frustrated", "😰 Anxious"];
+const ENERGY = ["⚡ High", "🔋 Medium", "🪫 Low", "💤 Exhausted"];
+const LOVE_LANGS = ["Words", "Touch", "Time", "Acts", "Gifts"];
+
+const PROMPTS_POOL = [
+  "What's one thing your partner did recently that made you smile?",
+  "If we had a free weekend with no obligations, what would you want to do together?",
+  "What's something you've been wanting to tell me but haven't found the right moment?",
+  "Describe a memory of us that still makes you feel warm.",
+  "What's one small thing I could do this week that would make your day easier?",
+  "What are you most looking forward to in our future together?",
+  "Is there something weighing on you that I might be able to help with?",
+  "What's a new experience you'd like us to try together?",
+  "When do you feel most connected to me?",
+  "What's something about our routine you'd like to change?",
+  "What's a strength of mine that you appreciate but rarely mention?",
+  "Describe your ideal evening together in detail.",
+  "What's one fear or worry you'd like to share with me?",
+  "How do you feel about the balance of responsibilities in our home?",
+  "What made you fall in love with me? Is that thing still present?",
+  "What's something I misunderstand about you?",
+  "If our relationship had a soundtrack, what song would be playing right now?",
+  "What's a boundary you need me to respect more?",
+  "Describe a moment this week where you felt truly seen by me.",
+  "What's one thing we used to do together that you miss?",
+];
+
+const CHALLENGES = [
+  { title: "5-Minute Debrief", desc: "Before bed or after waking, share three things: a highlight, a lowlight, and something you're grateful for about each other.", days: 7 },
+  { title: "Love Note Hunt", desc: "Hide three handwritten notes for your partner to find throughout the week. Be specific about what you love.", days: 7 },
+  { title: "Tech-Free Hour", desc: "Spend one hour together each day this week with no screens. Talk, cook, walk—whatever feels right.", days: 7 },
+  { title: "Ask Deeper", desc: "Each day, ask your partner one question you've never asked before. Listen without planning your response.", days: 5 },
+  { title: "Appreciation Blitz", desc: "Send your partner three specific appreciation texts throughout the day. Not 'thanks' — tell them exactly what they did and how it made you feel.", days: 3 },
+  { title: "Memory Lane", desc: "Each night, share one favorite memory from your relationship. Try to pick ones your partner might have forgotten.", days: 5 },
+  { title: "Role Reversal", desc: "Take over one of your partner's regular responsibilities for the week. Notice what they do that you take for granted.", days: 7 },
+  { title: "Dream Together", desc: "Spend 15 minutes each day planning something you want to do together — a trip, a project, a goal. Build it out together.", days: 5 },
+];
+
+const PROFILE_SECTIONS = [
+  { key: "origin", label: "Our Story", icon: "◎", desc: "How you met, early memories, what brought you together" },
+  { key: "patterns", label: "Communication Patterns", icon: "⟳", desc: "How you typically talk, argue, make up, celebrate" },
+  { key: "tensions", label: "Recurring Tensions", icon: "△", desc: "Recurring friction points, unresolved dynamics, triggers" },
+  { key: "strengths", label: "Relationship Strengths", icon: "◈", desc: "What you do well together, shared values, moments of deep connection" },
+  { key: "dreams", label: "Shared Dreams", icon: "◇", desc: "Goals, future plans, things you both want to build" },
+  { key: "individuals", label: "Who We Are Individually", icon: "◑", desc: "Each person's personality, needs, history, love language evidence" },
+];
+
+const INGEST_TYPES = [
+  { key: "texts", label: "Text Messages", icon: "✉", hint: "Paste a conversation thread — include both sides if possible" },
+  { key: "journal", label: "Journal Entry", icon: "✎", hint: "A personal entry about the relationship — either person's" },
+  { key: "voice", label: "Voice Transcript", icon: "◉", hint: "Transcribe or paste notes from a phone call or conversation" },
+  { key: "narrative", label: "Free Narrative", icon: "≡", hint: "Anything — a story, a vent, a memory, stream of consciousness" },
+  { key: "conflict", label: "Conflict Description", icon: "△", hint: "Describe a recent disagreement from your perspective" },
+  { key: "appreciation", label: "Appreciation List", icon: "♡", hint: "Things you love, admire, or appreciate about your partner" },
+];
+
+const c = {
+  bg: "#0f1117", surface: "#1a1c25", surfaceHover: "#22252f", border: "#2a2d38",
+  text: "#e8e4df", textMuted: "#8a8793", accent: "#e8a849", accentSoft: "rgba(232,168,73,0.12)",
+  rose: "#d4727a", roseSoft: "rgba(212,114,122,0.12)", sage: "#7bab8a", sageSoft: "rgba(123,171,138,0.12)",
+  lavender: "#9b8ec4", lavenderSoft: "rgba(155,142,196,0.12)", teal: "#5eaaa8", tealSoft: "rgba(94,170,168,0.12)",
+};
+
+const font = { display: "'Georgia', 'Times New Roman', serif", body: "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" };
+
+function getDateKey() { return new Date().toISOString().slice(0, 10); }
+function getDayOfYear() { const now = new Date(); return Math.floor((now - new Date(now.getFullYear(), 0, 0)) / 86400000); }
+function todaysPrompt() { return PROMPTS_POOL[getDayOfYear() % PROMPTS_POOL.length]; }
+
+function LoadingDots() {
+  return (
+    <span style={{ display: "inline-flex", gap: 2, marginLeft: 4 }}>
+      {[0, 150, 300].map((d, i) => (
+        <span key={i} style={{ animation: `bounce 1s ${d}ms infinite`, display: "inline-block" }}>.</span>
+      ))}
+      <style>{`@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }`}</style>
+    </span>
+  );
+}
+
+async function load(key) {
+  try {
+    const res = await fetch(`${BRIDGE_API}/api/bridge/kv?key=${encodeURIComponent(key)}`, {
+      headers: sessionToken ? { Authorization: "Bearer " + sessionToken } : {},
+    });
+    if (!res.ok) return null;
+    const data = await res.json();
+    return data.value ? JSON.parse(data.value) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function save(key, val) {
+  try {
+    await fetch(`${BRIDGE_API}/api/bridge/kv`, {
+      method: "PUT",
+      headers: bridgeHeaders(),
+      body: JSON.stringify({ key, value: JSON.stringify(val) }),
+    });
+  } catch (e) {
+    console.error("Storage:", e);
+  }
+}
+
+async function callClaude(messages, system, maxTokens = 1000) {
+  try {
+    const res = await fetch(`${BRIDGE_API}/api/bridge/claude`, {
+      method: "POST",
+      headers: bridgeHeaders(),
+      body: JSON.stringify({ model: "claude-sonnet-4-6", max_tokens: maxTokens, system, messages }),
+    });
+    const data = await res.json();
+    if (!res.ok) return data.error || "Connection issue — please try again.";
+    return data.text || "";
+  } catch (e) {
+    return "Connection issue — please try again.";
+  }
+}
+
+function buildCounselorSystem(profile) {
+  const base = `You are a warm, professional couples communication facilitator embedded in "The Bridge" — a shared dashboard for Jason and Tiffany, a couple navigating different work schedules (Tiffany works evenings). Your role:
+
+- You are NOT a therapist. You are a skilled communication facilitator drawing on Gottman Method, attachment theory, and nonviolent communication.
+- Be warm, direct, occasionally playful. No clinical jargon unless explaining a concept.
+- When given check-in data or conversation context, offer specific, actionable observations — not generic advice.
+- Highlight patterns with curiosity, not judgment. Use "I notice..." and "I'm curious about..." framing.
+- If you see signs of contempt, stonewalling, or persistent disconnection, name it gently and suggest professional support.
+- Celebrate wins explicitly.
+- Keep responses to 2-4 paragraphs unless asked to go deeper.`;
+
+  if (!profile || Object.keys(profile).length === 0) return base;
+
+  const profileContext = Object.entries(profile)
+    .filter(([, v]) => v?.summary)
+    .map(([k, v]) => {
+      const section = PROFILE_SECTIONS.find(s => s.key === k);
+      return `\n## ${section?.label || k}\n${v.summary}`;
+    }).join("\n");
+
+  if (!profileContext) return base;
+
+  return `${base}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+RELATIONSHIP PROFILE (synthesized from uploads by Jason & Tiffany)
+This is your primary context for understanding this couple. Reference it naturally — don't recite it back.
+━━━━━━━━━━━━━━━━━━━━━━━━━━━
+${profileContext}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━`;
+}
+
+async function extractInsights(rawText, ingestType, existingProfile) {
+  const existingContext = existingProfile
+    ? Object.entries(existingProfile)
+        .filter(([, v]) => v?.summary)
+        .map(([k, v]) => `${k}: ${v.summary}`)
+        .join("\n")
+    : "None yet.";
+
+  const system = `You are an expert relationship analyst. Given raw content submitted by one partner in a couple (Jason and Tiffany), extract structured insights to build a relationship profile. Be empathetic, non-judgmental, and specific. Return ONLY valid JSON — no markdown, no preamble.`;
+
+  const prompt = `Content type: ${ingestType}
+Raw content: """
+${rawText.slice(0, 4000)}
+"""
+
+Existing profile context:
+${existingContext}
+
+Extract insights and return this exact JSON shape:
+{
+  "origin": "new insight about their story/history, or null if none",
+  "patterns": "new insight about communication patterns, or null if none",
+  "tensions": "new insight about friction points or triggers, or null if none",
+  "strengths": "new insight about relationship strengths, or null if none",
+  "dreams": "new insight about shared goals/dreams, or null if none",
+  "individuals": "new insight about individual personalities/needs, or null if none",
+  "summary": "2-3 sentence overall synthesis of this specific upload",
+  "tags": ["array", "of", "3-5", "thematic", "keywords"]
+}
+
+Only include fields where you found real evidence. Be specific — use names, quote themes, identify concrete patterns.`;
+
+  try {
+    const raw = await callClaude([{ role: "user", content: prompt }], system, 1200);
+    const cleaned = raw.replace(/```json|```/g, "").trim();
+    return JSON.parse(cleaned);
+  } catch (e) {
+    return { summary: "Upload processed but structured extraction failed. Raw content retained.", tags: [] };
+  }
+}
+
+function mergeIntoProfile(existing, extracted, uploadMeta) {
+  const merged = { ...existing };
+  PROFILE_SECTIONS.forEach(({ key }) => {
+    if (extracted[key]) {
+      const prev = merged[key] || { summary: "", sources: [] };
+      merged[key] = {
+        summary: prev.summary
+          ? `${prev.summary}\n\n[${uploadMeta.date}] ${extracted[key]}`
+          : `[${uploadMeta.date}] ${extracted[key]}`,
+        sources: [...(prev.sources || []), uploadMeta],
+        lastUpdated: Date.now(),
+      };
+    }
+  });
+  return merged;
+}
+
+function TheBridge() {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [authStatus, setAuthStatus] = useState(null);
+  const [authScreen, setAuthScreen] = useState(null); // "login" | "setup"
+  const [tab, setTab] = useState("home");
+  const [checkIns, setCheckIns] = useState({});
+  const [notes, setNotes] = useState([]);
+  const [challenge, setChallenge] = useState(null);
+  const [chatHistory, setChatHistory] = useState([]);
+  const [profile, setProfile] = useState({});
+  const [uploads, setUploads] = useState([]);
+  const [cycleConfig, setCycleConfig] = useState(() => (window.BridgeCycles ? window.BridgeCycles.defaultProfiles() : {}));
+  const [loading, setLoading] = useState(true);
+
+  const loadAppData = useCallback(async () => {
+    const [ci, n, ch, chat, prof, ups, cc] = await Promise.all([
+      load("bridge:checkins"),
+      load("bridge:notes"),
+      load("bridge:challenge"),
+      load("bridge:chat"),
+      load("bridge:profile"),
+      load("bridge:uploads"),
+      load("bridge:cycle-config"),
+    ]);
+    setCheckIns(ci || {});
+    setNotes(n || []);
+    setChallenge(ch || null);
+    setChatHistory(chat || []);
+    setProfile(prof || {});
+    setUploads(ups || []);
+    setCycleConfig(cc || (window.BridgeCycles ? window.BridgeCycles.defaultProfiles() : {}));
+  }, []);
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const [status, me] = await Promise.all([fetchAuthStatus(), fetchAuthMe()]);
+        setAuthStatus(status);
+        if (me) {
+          setCurrentUser(me);
+          await loadAppData();
+        }
+      } catch (e) {
+        console.error("Bridge init:", e);
+        setAuthStatus({ users: {}, bootstrapOpen: true });
+      } finally {
+        setLoading(false);
+      }
+    })();
+  }, [loadAppData]);
+
+  const handleUserSelect = (name) => {
+    clearSession();
+    setCurrentUser(name);
+    const enrolled = authStatus?.users?.[name]?.enrolled;
+    setAuthScreen(enrolled ? "login" : "setup");
+  };
+
+  const handleAuthSuccess = async (user) => {
+    setCurrentUser(user);
+    setAuthScreen(null);
+    setLoading(true);
+    await loadAppData();
+    setLoading(false);
+  };
+
+  const handleLogout = async () => {
+    await logoutUser();
+    setCurrentUser(null);
+    setAuthScreen(null);
+    setCheckIns({});
+    setNotes([]);
+    setChallenge(null);
+    setChatHistory([]);
+    setProfile({});
+    setUploads([]);
+    const status = await fetchAuthStatus();
+    setAuthStatus(status);
+  };
+
+  const saveCheckIn = useCallback(async (user, data) => {
+    const key = `${getDateKey()}:${user}`;
+    const updated = { ...checkIns, [key]: { ...data, ts: Date.now() } };
+    setCheckIns(updated);
+    await save("bridge:checkins", updated);
+  }, [checkIns]);
+
+  const addNote = useCallback(async (note) => {
+    const updated = [note, ...notes].slice(0, 100);
+    setNotes(updated);
+    await save("bridge:notes", updated);
+  }, [notes]);
+
+  const setActiveChallenge = useCallback(async (ch) => {
+    setChallenge(ch);
+    await save("bridge:challenge", ch);
+  }, []);
+
+  const updateChat = useCallback(async (msgs) => {
+    setChatHistory(msgs);
+    await save("bridge:chat", msgs.slice(-40));
+  }, []);
+
+  const updateProfile = useCallback(async (newProfile) => {
+    setProfile(newProfile);
+    await save("bridge:profile", newProfile);
+  }, []);
+
+  const addUpload = useCallback(async (upload) => {
+    const updated = [upload, ...uploads].slice(0, 50);
+    setUploads(updated);
+    await save("bridge:uploads", updated);
+  }, [uploads]);
+
+  const updateCycleConfig = useCallback(async (newConfig) => {
+    setCycleConfig(newConfig);
+    await save("bridge:cycle-config", newConfig);
+  }, []);
+
+  if (loading) {
+    return (
+      <div style={s.loadWrap}>
+        <div style={s.loadTitle}>⊶ The Bridge</div>
+        <div style={s.loadSub}>Loading your shared space<LoadingDots /></div>
+      </div>
+    );
+  }
+
+  if (!currentUser || authScreen) {
+    if (authScreen === "login") {
+      return (
+        <LoginView
+          user={currentUser}
+          onSuccess={handleAuthSuccess}
+          onBack={() => { setCurrentUser(null); setAuthScreen(null); }}
+        />
+      );
+    }
+    if (authScreen === "setup") {
+      return (
+        <SetupView
+          user={currentUser}
+          onSuccess={handleAuthSuccess}
+          onBack={() => { setCurrentUser(null); setAuthScreen(null); }}
+        />
+      );
+    }
+    return (
+      <UserSelect
+        onSelect={handleUserSelect}
+        checkIns={checkIns}
+        profile={profile}
+        authStatus={authStatus}
+      />
+    );
+  }
+
+  const partner = currentUser === "Jason" ? "Tiffany" : "Jason";
+  const profileScore = Object.values(profile).filter(v => v?.summary).length;
+
+  return (
+    <div style={s.shell}>
+      <header style={s.header}>
+        <div style={s.headerLeft}>
+          <span style={s.logo}>⊶</span>
+          <span style={s.brandName}>The Bridge</span>
+          {profileScore > 0 && (
+            <span style={s.profilePill}>{profileScore}/6 profile</span>
+          )}
+        </div>
+        <button style={s.userBadge} onClick={handleLogout}>
+          {currentUser === "Jason" ? "🌙" : "☀️"} {currentUser} · Sign out
+        </button>
+      </header>
+
+      <main style={s.main}>
+        {tab === "home" && <HomeView currentUser={currentUser} partner={partner} checkIns={checkIns} notes={notes} challenge={challenge} profile={profile} onTabChange={setTab} />}
+        {tab === "checkin" && <CheckInView currentUser={currentUser} partner={partner} checkIns={checkIns} onSave={saveCheckIn} />}
+        {tab === "cycles" && <CyclesView currentUser={currentUser} partner={partner} checkIns={checkIns} cycleConfig={cycleConfig} onUpdateConfig={updateCycleConfig} />}
+        {tab === "notes" && <NotesView currentUser={currentUser} partner={partner} notes={notes} onAdd={addNote} />}
+        {tab === "talk" && <TalkView currentUser={currentUser} partner={partner} chatHistory={chatHistory} onUpdateChat={updateChat} checkIns={checkIns} profile={profile} />}
+        {tab === "profile" && <ProfileView currentUser={currentUser} partner={partner} profile={profile} uploads={uploads} onUpdateProfile={updateProfile} onAddUpload={addUpload} />}
+        {tab === "grow" && <GrowView challenge={challenge} onSetChallenge={setActiveChallenge} />}
+      </main>
+
+      <nav style={s.nav}>
+        {[
+          { id: "home", icon: "⌂", label: "Home" },
+          { id: "checkin", icon: "◉", label: "Check In" },
+          { id: "cycles", icon: "◐", label: "Cycles" },
+          { id: "notes", icon: "✉", label: "Notes" },
+          { id: "talk", icon: "◬", label: "Counsel" },
+          { id: "profile", icon: "◈", label: "Profile", accent: profileScore < 3 },
+          { id: "grow", icon: "❋", label: "Grow" },
+        ].map(t => (
+          <button key={t.id} onClick={() => setTab(t.id)} style={{ ...s.navBtn, ...(tab === t.id ? s.navBtnActive : {}), ...(t.accent && tab !== t.id ? s.navBtnAccent : {}) }}>
+            <span style={s.navIcon}>{t.icon}</span>
+            <span style={s.navLabel}>{t.label}</span>
+          </button>
+        ))}
+      </nav>
+
+      <LiveChatPanel currentUser={currentUser} partner={partner} />
+    </div>
+  );
+}
+
+function UserSelect({ onSelect, checkIns, profile, authStatus }) {
+  const today = getDateKey();
+  const profileScore = Object.values(profile).filter(v => v?.summary).length;
+  const needsSetup = authStatus?.bootstrapOpen;
+  return (
+    <div style={s.selectWrap}>
+      <div style={s.selectInner}>
+        <div style={s.selectLogo}>⊶</div>
+        <h1 style={s.selectTitle}>The Bridge</h1>
+        <p style={s.selectSub}>Your shared space to connect, communicate, and grow — even when schedules don't align.</p>
+        {needsSetup && (
+          <div style={{ ...s.profileBanner, background: c.accentSoft, borderColor: c.accent + "44", color: c.accent }}>
+            <span style={s.profileBannerIcon}>🔐</span>
+            First visit? Choose your name to set up password + authenticator app (2-step verification).
+          </div>
+        )}
+        {!needsSetup && (
+          <div style={{ ...s.profileBanner, background: c.tealSoft, borderColor: c.teal + "44" }}>
+            <span style={s.profileBannerIcon}>🔐</span>
+            Sign in with your password and 6-digit authenticator code.
+          </div>
+        )}
+        {profileScore > 0 && (
+          <div style={s.profileBanner}>
+            <span style={s.profileBannerIcon}>◈</span>
+            Relationship profile {profileScore}/6 complete — counselor context active
+          </div>
+        )}
+        <div style={s.selectGrid}>
+          {["Jason", "Tiffany"].map(name => (
+            <button key={name} style={s.selectCard} onClick={() => onSelect(name)}>
+              <span style={s.selectEmoji}>{name === "Jason" ? "🌙" : "☀️"}</span>
+              <span style={s.selectName}>{name}</span>
+              {authStatus?.users?.[name]?.enrolled
+                ? <span style={s.checkedBadge}>🔐 Sign in</span>
+                : <span style={{ ...s.checkedBadge, color: c.accent, background: c.accentSoft }}>Set up 2FA</span>}
+              {checkIns[`${today}:${name}`] && <span style={s.checkedBadge}>✓ Checked in</span>}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function LoginView({ user, onSuccess, onBack }) {
+  const [password, setPassword] = useState("");
+  const [totpCode, setTotpCode] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  const submit = async (e) => {
+    e.preventDefault();
+    setError("");
+    setBusy(true);
+    try {
+      const signedIn = await loginUser(user, password, totpCode);
+      await onSuccess(signedIn);
+    } catch (err) {
+      setError(err.message || "Sign in failed");
+    }
+    setBusy(false);
+  };
+
+  return (
+    <div style={s.selectWrap}>
+      <div style={s.selectInner}>
+        <button style={s.backBtn} onClick={onBack}>← Back</button>
+        <div style={s.selectLogo}>🔐</div>
+        <h1 style={s.selectTitle}>Sign in as {user}</h1>
+        <p style={s.selectSub}>Password + code from your authenticator app (Google Authenticator, Authy, 1Password, etc.)</p>
+        <form onSubmit={submit} style={{ textAlign: "left", marginTop: 20 }}>
+          <label style={s.fieldLabel}>Password</label>
+          <input style={s.input} type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="current-password" required />
+          <label style={{ ...s.fieldLabel, marginTop: 14 }}>6-digit code</label>
+          <input style={s.input} type="text" inputMode="numeric" pattern="[0-9]*" maxLength={6} value={totpCode} onChange={e => setTotpCode(e.target.value.replace(/\D/g, ""))} placeholder="000000" required />
+          {error && <p style={s.authError}>{error}</p>}
+          <button type="submit" style={{ ...s.primaryBtn, opacity: busy ? 0.6 : 1 }} disabled={busy}>
+            {busy ? "Signing in..." : "Sign In"}
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+function SetupView({ user, onSuccess, onBack }) {
+  const [step, setStep] = useState(1);
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [totpCode, setTotpCode] = useState("");
+  const [qrUrl, setQrUrl] = useState("");
+  const [error, setError] = useState("");
+  const [busy, setBusy] = useState(false);
+
+  const startSetup = async (e) => {
+    e.preventDefault();
+    setError("");
+    setBusy(true);
+    try {
+      const data = await startEnroll(user, password, confirmPassword);
+      setQrUrl(data.qrUrl);
+      setStep(2);
+    } catch (err) {
+      setError(err.message || "Setup failed");
+    }
+    setBusy(false);
+  };
+
+  const finishSetup = async (e) => {
+    e.preventDefault();
+    setError("");
+    setBusy(true);
+    try {
+      const signedIn = await confirmEnroll(user, password, totpCode);
+      await onSuccess(signedIn);
+    } catch (err) {
+      setError(err.message || "Verification failed");
+    }
+    setBusy(false);
+  };
+
+  return (
+    <div style={s.selectWrap}>
+      <div style={s.selectInner}>
+        <button style={s.backBtn} onClick={onBack}>← Back</button>
+        <div style={s.selectLogo}>🔐</div>
+        <h1 style={s.selectTitle}>Set up {user}'s access</h1>
+        <p style={s.selectSub}>Create a password and link an authenticator app. You'll need both every time you sign in.</p>
+
+        {step === 1 && (
+          <form onSubmit={startSetup} style={{ textAlign: "left", marginTop: 20 }}>
+            <label style={s.fieldLabel}>Choose a password (10+ characters)</label>
+            <input style={s.input} type="password" value={password} onChange={e => setPassword(e.target.value)} autoComplete="new-password" required minLength={10} />
+            <label style={{ ...s.fieldLabel, marginTop: 14 }}>Confirm password</label>
+            <input style={s.input} type="password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} autoComplete="new-password" required minLength={10} />
+            {error && <p style={s.authError}>{error}</p>}
+            <button type="submit" style={{ ...s.primaryBtn, opacity: busy ? 0.6 : 1 }} disabled={busy}>
+              {busy ? "Preparing..." : "Continue to Authenticator"}
+            </button>
+          </form>
+        )}
+
+        {step === 2 && (
+          <form onSubmit={finishSetup} style={{ textAlign: "left", marginTop: 20 }}>
+            <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.6, marginBottom: 14 }}>
+              Scan this QR code with Google Authenticator, Authy, or 1Password. Then enter the 6-digit code it shows.
+            </p>
+            {qrUrl && <img src={qrUrl} alt="Authenticator QR code" style={{ display: "block", margin: "0 auto 16px", borderRadius: 8, border: `1px solid ${c.border}` }} />}
+            <label style={s.fieldLabel}>6-digit verification code</label>
+            <input style={s.input} type="text" inputMode="numeric" pattern="[0-9]*" maxLength={6} value={totpCode} onChange={e => setTotpCode(e.target.value.replace(/\D/g, ""))} placeholder="000000" required />
+            {error && <p style={s.authError}>{error}</p>}
+            <button type="submit" style={{ ...s.primaryBtn, opacity: busy ? 0.6 : 1 }} disabled={busy}>
+              {busy ? "Verifying..." : "Complete Setup"}
+            </button>
+          </form>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function HomeView({ currentUser, partner, checkIns, notes, challenge, profile, onTabChange }) {
+  const today = getDateKey();
+  const myCI = checkIns[`${today}:${currentUser}`];
+  const partnerCI = checkIns[`${today}:${partner}`];
+  const partnerNotes = notes.filter(n => n.from === partner).slice(0, 2);
+  const profileScore = Object.values(profile).filter(v => v?.summary).length;
+
+  return (
+    <div style={s.viewWrap}>
+      <div style={s.greeting}>
+        <h2 style={s.greetText}>
+          {new Date().getHours() < 12 ? "Good morning" : new Date().getHours() < 17 ? "Good afternoon" : "Good evening"}, {currentUser}
+        </h2>
+        <p style={s.greetDate}>{new Date().toLocaleDateString("en-US", { weekday: "long", month: "long", day: "numeric" })}</p>
+      </div>
+
+      {profileScore < 2 && (
+        <button style={s.onboardCard} onClick={() => onTabChange("profile")}>
+          <span style={s.onboardIcon}>◈</span>
+          <div>
+            <div style={s.onboardTitle}>Build your Relationship Profile</div>
+            <div style={s.onboardSub}>Upload texts, journals, or voice transcripts so your counselor truly knows you.</div>
+          </div>
+          <span style={s.onboardArrow}>→</span>
+        </button>
+      )}
+
+      <div style={s.card}>
+        <h3 style={s.cardTitle}>{partner}'s Check-In Today</h3>
+        {partnerCI ? (
+          <>
+            <div style={s.ciGrid}>
+              <div style={s.ciItem}><span style={s.ciLabel}>Mood</span><span style={s.ciVal}>{partnerCI.mood}</span></div>
+              <div style={s.ciItem}><span style={s.ciLabel}>Energy</span><span style={s.ciVal}>{partnerCI.energy}</span></div>
+              {partnerCI.loveLang && <div style={s.ciItem}><span style={s.ciLabel}>Needs</span><span style={s.ciVal}>{partnerCI.loveLang}</span></div>}
+            </div>
+            {partnerCI.note && <p style={s.partnerNote}>"{partnerCI.note}"</p>}
+          </>
+        ) : (
+          <p style={s.muted}>{partner} hasn't checked in today yet.</p>
+        )}
+      </div>
+
+      <div style={{ ...s.card, borderColor: c.accent }}>
+        <h3 style={s.cardTitle}>Today's Prompt</h3>
+        <p style={s.promptText}>{todaysPrompt()}</p>
+        <p style={{ fontSize: 12, color: c.accent, margin: 0 }}>Answer independently, then share.</p>
+      </div>
+
+      {partnerNotes.length > 0 && (
+        <div style={s.card}>
+          <h3 style={s.cardTitle}>Notes from {partner}</h3>
+          {partnerNotes.map((n, i) => (
+            <div key={i} style={s.miniNote}>
+              <p style={s.miniNoteText}>{n.text}</p>
+              <span style={s.miniNoteDate}>{new Date(n.ts).toLocaleDateString()}</span>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {challenge && (() => {
+        const days = Math.floor((Date.now() - challenge.startDate) / 86400000) + 1;
+        return days <= challenge.days && (
+          <div style={{ ...s.card, borderColor: c.lavender }}>
+            <h3 style={s.cardTitle}>Active Challenge · Day {days}/{challenge.days}</h3>
+            <p style={{ fontSize: 15, fontWeight: 600, margin: "0 0 6px", fontFamily: font.display }}>{challenge.title}</p>
+            <div style={s.progressBar}><div style={{ ...s.progressFill, width: `${Math.min(100, (days / challenge.days) * 100)}%` }} /></div>
+          </div>
+        );
+      })()}
+
+      {!myCI && <div style={s.nudge}>You haven't checked in today — {partner} would love to see how you're doing.</div>}
+    </div>
+  );
+}
+
+function CheckInView({ currentUser, partner, checkIns, onSave }) {
+  const today = getDateKey();
+  const ex = checkIns[`${today}:${currentUser}`];
+  const [mood, setMood] = useState(ex?.mood || "");
+  const [energy, setEnergy] = useState(ex?.energy || "");
+  const [loveLang, setLoveLang] = useState(ex?.loveLang || "");
+  const [note, setNote] = useState(ex?.note || "");
+  const [saved, setSaved] = useState(false);
+
+  return (
+    <div style={s.viewWrap}>
+      <h2 style={s.viewTitle}>Daily Check-In</h2>
+      <p style={s.viewSub}>Let {partner} know where you're at today.</p>
+      {[
+        { label: "How are you feeling?", opts: MOODS, val: mood, set: setMood },
+        { label: "Energy level?", opts: ENERGY, val: energy, set: setEnergy },
+        { label: "What kind of love would help today?", opts: LOVE_LANGS, val: loveLang, set: setLoveLang },
+      ].map(({ label, opts, val, set }) => (
+        <div key={label} style={s.card}>
+          <h3 style={s.fieldLabel}>{label}</h3>
+          <div style={s.chipGrid}>
+            {opts.map(o => <button key={o} style={{ ...s.chip, ...(val === o ? s.chipActive : {}) }} onClick={() => set(o)}>{o}</button>)}
+          </div>
+        </div>
+      ))}
+      <div style={s.card}>
+        <h3 style={s.fieldLabel}>Anything on your mind?</h3>
+        <textarea style={s.textarea} placeholder={`Share what's going on — ${partner} will see this...`} value={note} onChange={e => setNote(e.target.value)} rows={4} />
+      </div>
+      <button style={{ ...s.primaryBtn, ...(saved ? { background: c.sage } : {}), opacity: !mood ? 0.5 : 1 }} onClick={() => { onSave(currentUser, { mood, energy, loveLang, note }); setSaved(true); setTimeout(() => setSaved(false), 2500); }} disabled={!mood}>
+        {saved ? "✓ Saved" : ex ? "Update Check-In" : "Save Check-In"}
+      </button>
+    </div>
+  );
+}
+
+function NotesView({ currentUser, partner, notes, onAdd }) {
+  const [text, setText] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const filtered = filter === "all" ? notes : filter === "sent" ? notes.filter(n => n.from === currentUser) : notes.filter(n => n.from === partner);
+
+  return (
+    <div style={s.viewWrap}>
+      <h2 style={s.viewTitle}>Love Notes</h2>
+      <p style={s.viewSub}>Leave something for {partner} to find when they check in.</p>
+      <div style={s.card}>
+        <textarea style={s.textarea} placeholder={`Write something for ${partner}...`} value={text} onChange={e => setText(e.target.value)} rows={3} />
+        <button style={{ ...s.primaryBtn, opacity: text.trim() ? 1 : 0.5 }} onClick={() => { if (text.trim()) { onAdd({ from: currentUser, to: partner, text: text.trim(), ts: Date.now() }); setText(""); } }} disabled={!text.trim()}>
+          Send Note
+        </button>
+      </div>
+      <div style={s.filterRow}>
+        {[["all", "All"], ["sent", "From me"], ["received", `From ${partner}`]].map(([f, l]) => (
+          <button key={f} style={{ ...s.filterBtn, ...(filter === f ? s.filterActive : {}) }} onClick={() => setFilter(f)}>{l}</button>
+        ))}
+      </div>
+      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+        {filtered.length === 0 && <p style={s.muted}>No notes here yet.</p>}
+        {filtered.map((n, i) => (
+          <div key={i} style={{ ...s.noteCard, ...(n.from === currentUser ? s.noteCardMine : s.noteCardTheirs) }}>
+            <div style={s.noteHeader}>
+              <span style={s.noteFrom}>{n.from}</span>
+              <span style={s.noteDate}>{new Date(n.ts).toLocaleDateString()} · {new Date(n.ts).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>
+            </div>
+            <p style={s.noteText}>{n.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function ProfileView({ currentUser, partner, profile, uploads, onUpdateProfile, onAddUpload }) {
+  const [subTab, setSubTab] = useState("overview");
+  const [ingestType, setIngestType] = useState("texts");
+  const [rawText, setRawText] = useState("");
+  const [authoredBy, setAuthoredBy] = useState(currentUser);
+  const [processing, setProcessing] = useState(false);
+  const [processStatus, setProcessStatus] = useState("");
+  const [expandedSection, setExpandedSection] = useState(null);
+  const fileRef = useRef(null);
+
+  const profileScore = Object.values(profile).filter(v => v?.summary).length;
+
+  const handleProcess = async () => {
+    if (!rawText.trim()) return;
+    setProcessing(true);
+    setProcessStatus("Reading your content...");
+
+    try {
+      setProcessStatus("Extracting relationship insights...");
+      const extracted = await extractInsights(rawText, ingestType, profile);
+
+      setProcessStatus("Updating relationship profile...");
+      const uploadMeta = {
+        id: Date.now(),
+        type: ingestType,
+        authoredBy,
+        date: new Date().toLocaleDateString(),
+        preview: rawText.slice(0, 120) + (rawText.length > 120 ? "..." : ""),
+        summary: extracted.summary,
+        tags: extracted.tags || [],
+        ts: Date.now(),
+      };
+
+      const newProfile = mergeIntoProfile(profile, extracted, uploadMeta);
+      await onUpdateProfile(newProfile);
+      await onAddUpload(uploadMeta);
+
+      setRawText("");
+      setProcessStatus("✓ Profile updated successfully");
+      setTimeout(() => { setProcessStatus(""); setSubTab("overview"); }, 2000);
+    } catch (err) {
+      setProcessStatus("Something went wrong. Try again.");
+      setTimeout(() => setProcessStatus(""), 3000);
+    }
+    setProcessing(false);
+  };
+
+  return (
+    <div style={s.viewWrap}>
+      <h2 style={s.viewTitle}>Relationship Profile</h2>
+      <p style={s.viewSub}>Your private context vault — the more you add, the better your counselor knows you.</p>
+
+      <div style={s.filterRow}>
+        {[["overview", "◈ Profile"], ["ingest", "⊕ Add Content"], ["uploads", `⊞ Uploads (${uploads.length})`]].map(([id, label]) => (
+          <button key={id} style={{ ...s.filterBtn, ...(subTab === id ? s.filterActive : {}) }} onClick={() => setSubTab(id)}>{label}</button>
+        ))}
+      </div>
+
+      {subTab === "overview" && (
+        <div>
+          <div style={s.card}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+              <h3 style={s.cardTitle}>Profile Completeness</h3>
+              <span style={{ fontSize: 13, color: profileScore >= 4 ? c.sage : c.accent }}>{profileScore}/6 sections</span>
+            </div>
+            <div style={s.progressBar}>
+              <div style={{ ...s.progressFill, width: `${(profileScore / 6) * 100}%`, background: profileScore >= 4 ? `linear-gradient(90deg, ${c.sage}, ${c.teal})` : `linear-gradient(90deg, ${c.lavender}, ${c.accent})` }} />
+            </div>
+            {profileScore === 0 && <p style={{ ...s.muted, marginTop: 10 }}>No profile data yet. Add content using the "Add Content" tab.</p>}
+          </div>
+
+          {PROFILE_SECTIONS.map(({ key, label, icon, desc }) => {
+            const data = profile[key];
+            const isExpanded = expandedSection === key;
+            return (
+              <div key={key} style={{ ...s.card, ...(data ? {} : { opacity: 0.6 }) }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", cursor: data ? "pointer" : "default" }} onClick={() => data && setExpandedSection(isExpanded ? null : key)}>
+                  <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                    <span style={{ fontSize: 18, color: data ? c.teal : c.textMuted }}>{icon}</span>
+                    <div>
+                      <h3 style={{ fontSize: 14, fontWeight: 600, margin: 0, color: data ? c.text : c.textMuted }}>{label}</h3>
+                      {!data && <p style={{ fontSize: 12, color: c.textMuted, margin: "2px 0 0" }}>{desc}</p>}
+                      {data && <p style={{ fontSize: 11, color: c.textMuted, margin: "2px 0 0" }}>{data.sources?.length || 0} source{data.sources?.length !== 1 ? "s" : ""} · Updated {new Date(data.lastUpdated).toLocaleDateString()}</p>}
+                    </div>
+                  </div>
+                  {data && <span style={{ color: c.textMuted, fontSize: 12 }}>{isExpanded ? "▲" : "▼"}</span>}
+                </div>
+
+                {data && isExpanded && (
+                  <div style={{ marginTop: 14, paddingTop: 14, borderTop: `1px solid ${c.border}` }}>
+                    <div style={{ fontSize: 13, lineHeight: 1.7, color: c.text, whiteSpace: "pre-wrap" }}>{data.summary}</div>
+                    {data.sources?.length > 0 && (
+                      <div style={{ marginTop: 10 }}>
+                        <p style={{ fontSize: 11, color: c.textMuted, margin: "0 0 6px", textTransform: "uppercase", letterSpacing: "0.05em" }}>Sources</p>
+                        {data.sources.map((src, i) => (
+                          <div key={i} style={{ fontSize: 11, color: c.textMuted, marginBottom: 3 }}>
+                            {src.date} · {INGEST_TYPES.find(t => t.key === src.type)?.label || src.type} by {src.authoredBy}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {subTab === "ingest" && (
+        <div>
+          <div style={s.card}>
+            <h3 style={s.fieldLabel}>Content Type</h3>
+            <div style={s.chipGrid}>
+              {INGEST_TYPES.map(({ key, label, icon }) => (
+                <button key={key} style={{ ...s.chip, ...(ingestType === key ? s.chipActive : {}) }} onClick={() => setIngestType(key)}>
+                  {icon} {label}
+                </button>
+              ))}
+            </div>
+            <p style={{ fontSize: 12, color: c.textMuted, marginTop: 8, marginBottom: 0 }}>
+              {INGEST_TYPES.find(t => t.key === ingestType)?.hint}
+            </p>
+          </div>
+
+          <div style={s.card}>
+            <h3 style={s.fieldLabel}>Who authored this content?</h3>
+            <div style={s.chipGrid}>
+              {["Jason", "Tiffany", "Both"].map(name => (
+                <button key={name} style={{ ...s.chip, ...(authoredBy === name ? s.chipActive : {}) }} onClick={() => setAuthoredBy(name)}>{name}</button>
+              ))}
+            </div>
+          </div>
+
+          <div style={s.card}>
+            <h3 style={{ ...s.fieldLabel, margin: "0 0 8px" }}>Paste or type your content</h3>
+            <textarea
+              style={{ ...s.textarea, minHeight: 160 }}
+              placeholder={`Paste your ${INGEST_TYPES.find(t => t.key === ingestType)?.label.toLowerCase()} here...\n\nNo formatting needed — just raw content. The AI will extract the insights.\n\nTip: include names when possible so we can distinguish perspectives.`}
+              value={rawText}
+              onChange={e => setRawText(e.target.value)}
+              rows={8}
+            />
+            <div style={{ fontSize: 11, color: c.textMuted, marginTop: 6 }}>
+              {rawText.length > 0 ? `${rawText.length.toLocaleString()} characters · first 4,000 will be analyzed` : "Characters: 0"}
+            </div>
+          </div>
+
+          {processStatus && (
+            <div style={s.statusMsg}>
+              {processStatus.startsWith("✓") ? "✓" : <LoadingDots />} {processStatus.replace("✓ ", "")}
+            </div>
+          )}
+
+          <button
+            style={{ ...s.primaryBtn, opacity: rawText.trim() && !processing ? 1 : 0.4 }}
+            onClick={handleProcess}
+            disabled={!rawText.trim() || processing}
+          >
+            {processing ? "Analyzing..." : "Extract & Add to Profile"}
+          </button>
+
+          <div style={{ ...s.card, marginTop: 16, background: c.tealSoft, borderColor: c.teal + "44" }}>
+            <h3 style={{ ...s.cardTitle, color: c.teal }}>How this works</h3>
+            <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.6, margin: 0 }}>
+              Your content is sent to Claude for a one-time analysis pass. It extracts insights into six profile categories (communication patterns, tensions, strengths, etc.) and merges them into your shared profile. The raw text is not stored — only the extracted insights are kept. All data is saved to secure cloud storage (Cloudflare KV), not your browser, so it survives cache clears. Your counselor then uses this profile as its core context for every conversation.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {subTab === "uploads" && (
+        <div>
+          {uploads.length === 0 && (
+            <div style={{ ...s.card, textAlign: "center", padding: "32px 20px" }}>
+              <p style={{ fontSize: 28, margin: "0 0 10px" }}>◈</p>
+              <p style={{ ...s.muted, margin: 0 }}>No content uploaded yet. Start in the "Add Content" tab.</p>
+            </div>
+          )}
+          {uploads.map((u, i) => (
+            <div key={i} style={s.card}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 8 }}>
+                <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                  <span style={{ fontSize: 16 }}>{INGEST_TYPES.find(t => t.key === u.type)?.icon || "◎"}</span>
+                  <div>
+                    <span style={{ fontSize: 13, fontWeight: 600 }}>{INGEST_TYPES.find(t => t.key === u.type)?.label || u.type}</span>
+                    <span style={{ fontSize: 11, color: c.textMuted, marginLeft: 8 }}>by {u.authoredBy}</span>
+                  </div>
+                </div>
+                <span style={{ fontSize: 11, color: c.textMuted }}>{u.date}</span>
+              </div>
+              {u.summary && <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.5, margin: "0 0 8px" }}>{u.summary}</p>}
+              {u.tags?.length > 0 && (
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                  {u.tags.map((tag, j) => (
+                    <span key={j} style={s.tag}>{tag}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function LiveChatPanel({ currentUser, partner }) {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([]);
+  const [online, setOnline] = useState([]);
+  const [typingUser, setTypingUser] = useState(null);
+  const [connected, setConnected] = useState(false);
+  const [input, setInput] = useState("");
+  const [unread, setUnread] = useState(0);
+  const wsRef = useRef(null);
+  const scrollRef = useRef(null);
+  const typingTimer = useRef(null);
+  const lastSeenRef = useRef(0);
+  const openRef = useRef(false);
+
+  useEffect(() => { openRef.current = open; if (open) setUnread(0); }, [open]);
+
+  useEffect(() => {
+    if (!sessionToken || !currentUser) return;
+    let closed = false;
+    let retry = 0;
+
+    const connect = () => {
+      const wsUrl = BRIDGE_API.replace(/^http/i, "ws") + "/api/bridge/live/ws?token=" + encodeURIComponent(sessionToken);
+      const ws = new WebSocket(wsUrl);
+      wsRef.current = ws;
+
+      ws.onopen = () => { setConnected(true); retry = 0; };
+      ws.onclose = () => {
+        setConnected(false);
+        if (!closed) setTimeout(connect, Math.min(1000 * (2 ** retry++), 15000));
+      };
+      ws.onmessage = (ev) => {
+        let data;
+        try { data = JSON.parse(ev.data); } catch (e) { return; }
+        if (data.type === "init") {
+          setMessages(data.messages || []);
+          setOnline(data.online || []);
+          lastSeenRef.current = (data.messages || []).slice(-1)[0]?.ts || Date.now();
+          return;
+        }
+        if (data.type === "msg") {
+          setMessages((prev) => [...prev, data]);
+          if (!openRef.current && data.user !== currentUser) setUnread((n) => n + 1);
+          if (data.user !== currentUser) setTypingUser(null);
+          return;
+        }
+        if (data.type === "presence") setOnline(data.online || []);
+        if (data.type === "typing") setTypingUser(data.active ? data.user : null);
+      };
+    };
+
+    connect();
+    return () => { closed = true; wsRef.current?.close(); };
+  }, [currentUser]);
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [messages, typingUser, open]);
+
+  const partnerOnline = online.includes(partner);
+
+  const sendTyping = (active) => {
+    if (wsRef.current?.readyState === WebSocket.OPEN) {
+      wsRef.current.send(JSON.stringify({ type: "typing", active }));
+    }
+  };
+
+  const handleInput = (value) => {
+    setInput(value);
+    sendTyping(true);
+    clearTimeout(typingTimer.current);
+    typingTimer.current = setTimeout(() => sendTyping(false), 1200);
+  };
+
+  const sendMessage = () => {
+    const text = input.trim();
+    if (!text || wsRef.current?.readyState !== WebSocket.OPEN) return;
+    wsRef.current.send(JSON.stringify({ type: "msg", text }));
+    setInput("");
+    sendTyping(false);
+  };
+
+  const partnerEmoji = partner === "Jason" ? "🌙" : "☀️";
+
+  if (!open) {
+    return (
+      <button style={s.liveFab} onClick={() => setOpen(true)} title={"Chat with " + partner}>
+        <span style={{ fontSize: 22 }}>{partnerEmoji}</span>
+        {unread > 0 && <span style={s.liveBadge}>{unread > 9 ? "9+" : unread}</span>}
+        {partnerOnline && <span style={s.liveFabDot} />}
+      </button>
+    );
+  }
+
+  return (
+    <div style={s.livePanel}>
+      <div style={s.liveHeader}>
+        <div style={s.liveHeaderLeft}>
+          <span style={{ fontSize: 20 }}>{partnerEmoji}</span>
+          <div>
+            <div style={s.liveHeaderName}>{partner}</div>
+            <div style={s.liveHeaderStatus}>
+              <span style={{ ...s.liveStatusDot, background: partnerOnline ? c.sage : c.textMuted }} />
+              {partnerOnline ? "Active now" : connected ? "Offline" : "Reconnecting…"}
+            </div>
+          </div>
+        </div>
+        <button style={s.liveMinBtn} onClick={() => setOpen(false)} title="Minimize">—</button>
+      </div>
+
+      <div style={s.liveMessages} ref={scrollRef}>
+        {messages.length === 0 && (
+          <div style={s.liveEmpty}>
+            <div style={{ fontSize: 28, marginBottom: 8 }}>💬</div>
+            <div style={{ fontWeight: 600, marginBottom: 4 }}>Your private line</div>
+            <div style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.5 }}>
+              Message {partner} in real time — like Messenger, but just for the two of you.
+            </div>
+          </div>
+        )}
+        {messages.map((msg) => {
+          const mine = msg.user === currentUser;
+          return (
+            <div key={msg.id} style={{ ...s.liveRow, justifyContent: mine ? "flex-end" : "flex-start" }}>
+              <div style={{ maxWidth: "78%" }}>
+                {!mine && <div style={s.liveMsgName}>{msg.user}</div>}
+                <div style={{ ...s.liveBubble, ...(mine ? s.liveBubbleMine : s.liveBubbleTheirs) }}>
+                  {msg.text}
+                </div>
+                <div style={{ ...s.liveMsgTime, textAlign: mine ? "right" : "left" }}>
+                  {new Date(msg.ts).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}
+                </div>
+              </div>
+            </div>
+          );
+        })}
+        {typingUser && typingUser !== currentUser && (
+          <div style={{ ...s.liveRow, justifyContent: "flex-start" }}>
+            <div style={{ ...s.liveBubble, ...s.liveBubbleTheirs, opacity: 0.85 }}>
+              {typingUser} is typing<LoadingDots />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div style={s.liveInputRow}>
+        <input
+          style={s.liveInput}
+          placeholder={"Message " + partner + "…"}
+          value={input}
+          onChange={(e) => handleInput(e.target.value)}
+          onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); sendMessage(); } }}
+        />
+        <button
+          style={{ ...s.liveSendBtn, opacity: input.trim() ? 1 : 0.45 }}
+          onClick={sendMessage}
+          disabled={!input.trim()}
+          title="Send"
+        >
+          ↑
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function TalkView({ currentUser, partner, chatHistory, onUpdateChat, checkIns, profile }) {
+  const [input, setInput] = useState("");
+  const [thinking, setThinking] = useState(false);
+  const scrollRef = useRef(null);
+  const today = getDateKey();
+  const profileScore = Object.values(profile).filter(v => v?.summary).length;
+
+  useEffect(() => {
+    if (scrollRef.current) scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+  }, [chatHistory, thinking]);
+
+  const buildContext = () => {
+    const myCI = checkIns[`${today}:${currentUser}`];
+    const partnerCI = checkIns[`${today}:${partner}`];
+    let ctx = `Currently speaking with: ${currentUser}. Partner: ${partner}.\n`;
+    if (myCI) ctx += `${currentUser} today: mood=${myCI.mood}, energy=${myCI.energy}, needs=${myCI.loveLang || "unspecified"}, note="${myCI.note || "none"}".\n`;
+    if (partnerCI) ctx += `${partner} today: mood=${partnerCI.mood}, energy=${partnerCI.energy}, needs=${partnerCI.loveLang || "unspecified"}, note="${partnerCI.note || "none"}".\n`;
+    return ctx;
+  };
+
+  const quickActions = [
+    { label: "Analyze our check-ins today", msg: "Can you look at our check-in data and share any observations or suggestions?" },
+    { label: "Give us a conversation starter", msg: "Give us a meaningful conversation starter for tonight based on what you know about us." },
+    { label: "Help us navigate conflict", msg: "We've been having a disagreement. Help us find a constructive path forward." },
+    { label: "Appreciation exercise", msg: "Guide us through a quick appreciation exercise we can do together or separately." },
+    { label: "Schedule mismatch strategies", msg: "Our schedules don't overlap much. What are specific strategies for our situation?" },
+  ];
+
+  const sendMessage = async (msgText) => {
+    if (!msgText.trim()) return;
+    const ctx = buildContext();
+    const userMsg = { role: "user", content: `[Context: ${ctx}]\n\n${msgText}` };
+    const displayMsg = { role: "user", content: msgText, user: currentUser, ts: Date.now() };
+    const apiMessages = [...chatHistory.filter(m => m.role).map(m => ({ role: m.role, content: m.content })), userMsg];
+    const newHistory = [...chatHistory, displayMsg];
+    onUpdateChat(newHistory);
+    setInput("");
+    setThinking(true);
+    const response = await callClaude(apiMessages, buildCounselorSystem(profile));
+    onUpdateChat([...newHistory, { role: "assistant", content: response, ts: Date.now() }]);
+    setThinking(false);
+  };
+
+  return (
+    <div style={s.talkWrap}>
+      <div style={{ flexShrink: 0, marginBottom: 8 }}>
+        <h2 style={s.viewTitle}>Communication Counselor</h2>
+        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+          <p style={{ ...s.viewSub, margin: 0 }}>AI-guided support for connection and growth.</p>
+          {profileScore > 0 && <span style={s.profilePill}>◈ Profile active</span>}
+        </div>
+      </div>
+
+      {chatHistory.length === 0 && (
+        <div style={{ flexShrink: 0, marginBottom: 12 }}>
+          {profileScore === 0 && (
+            <div style={{ ...s.card, borderColor: c.teal + "66", background: c.tealSoft, marginBottom: 10 }}>
+              <p style={{ fontSize: 13, color: c.teal, margin: 0 }}>
+                ◈ Tip: Build your Relationship Profile so the counselor has real context about who you are as a couple. Go to the Profile tab to get started.
+              </p>
+            </div>
+          )}
+          <p style={{ fontSize: 12, color: c.textMuted, margin: "0 0 8px" }}>Start with a prompt:</p>
+          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+            {quickActions.map((qa, i) => (
+              <button key={i} style={s.quickBtn} onClick={() => sendMessage(qa.msg)}>{qa.label}</button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div style={s.chatScroll} ref={scrollRef}>
+        {chatHistory.map((msg, i) => (
+          <div key={i} style={msg.role === "user" ? s.chatUser : s.chatAssistant}>
+            <span style={s.chatSender}>{msg.role === "user" ? (msg.user || currentUser) : "Counselor"}</span>
+            <div style={s.chatBubble}>
+              {msg.content.split("\n").filter(l => l.trim()).map((line, j) => (
+                <p key={j} style={s.chatLine}>{line}</p>
+              ))}
+            </div>
+            {msg.ts && <span style={s.chatTime}>{new Date(msg.ts).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</span>}
+          </div>
+        ))}
+        {thinking && (
+          <div style={s.chatAssistant}>
+            <span style={s.chatSender}>Counselor</span>
+            <div style={s.chatBubble}><p style={s.chatLine}>Thinking<LoadingDots /></p></div>
+          </div>
+        )}
+      </div>
+
+      <div style={s.chatInputRow}>
+        <textarea
+          style={s.chatInput}
+          placeholder="Ask for guidance, share what's on your mind... (Enter to send)"
+          value={input}
+          onChange={e => setInput(e.target.value)}
+          onKeyDown={e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); sendMessage(input); } }}
+          rows={2}
+        />
+        <button style={{ ...s.sendBtn, opacity: input.trim() && !thinking ? 1 : 0.4 }} onClick={() => sendMessage(input)} disabled={!input.trim() || thinking}>↑</button>
+      </div>
+    </div>
+  );
+}
+
+function TrendChart({ series, width, height, showHormones }) {
+  const W = width || 340;
+  const H = height || 168;
+  const pad = { t: 14, r: 10, b: 30, l: 34 };
+  const w = W - pad.l - pad.r;
+  const h = H - pad.t - pad.b;
+  const pts = (series || []).filter((d) => d.baseline != null || d.actual != null);
+  if (!pts.length) return <p style={s.muted}>Check in daily to build your 30-day trend.</p>;
+
+  const x = (i) => pad.l + (i / Math.max(pts.length - 1, 1)) * w;
+  const y = (v) => pad.t + h - (Math.min(100, Math.max(0, v || 0)) / 100) * h;
+
+  const pathFor = (key) => {
+    let d = "";
+    pts.forEach((pt, i) => {
+      const val = pt[key];
+      if (val == null) return;
+      d += (d && !d.endsWith("Z") ? "" : "") + `${i === 0 || !d ? "M" : " L"} ${x(i).toFixed(1)} ${y(val).toFixed(1)}`;
+    });
+    return d;
+  };
+
+  const last = pts[pts.length - 1];
+  const labelStep = Math.max(1, Math.floor(pts.length / 6));
+
+  return (
+    <div>
+      <svg width="100%" viewBox={`0 0 ${W} ${H}`} style={{ display: "block" }}>
+        {[0, 25, 50, 75, 100].map((v) => (
+          <g key={v}>
+            <line x1={pad.l} y1={y(v)} x2={W - pad.r} y2={y(v)} stroke={c.border} strokeWidth={0.5} />
+            <text x={pad.l - 5} y={y(v) + 3} fill={c.textMuted} fontSize={8} textAnchor="end">{v}</text>
+          </g>
+        ))}
+        {pts.some((d) => d.baseline != null) && (
+          <path d={pathFor("baseline")} fill="none" stroke={c.lavender} strokeWidth={1.6} strokeDasharray="5 4" opacity={0.85} />
+        )}
+        {showHormones && pts.some((d) => d.estrogen != null) && (
+          <path d={pathFor("estrogen")} fill="none" stroke={c.rose} strokeWidth={1.2} opacity={0.55} />
+        )}
+        {showHormones && pts.some((d) => d.progesterone != null) && (
+          <path d={pathFor("progesterone")} fill="none" stroke={c.teal} strokeWidth={1.2} opacity={0.55} />
+        )}
+        {showHormones && pts.some((d) => d.testosterone != null) && (
+          <path d={pathFor("testosterone")} fill="none" stroke={c.sage} strokeWidth={1.2} opacity={0.65} />
+        )}
+        {pts.some((d) => d.actual != null) && (
+          <path d={pathFor("actual")} fill="none" stroke={c.accent} strokeWidth={2.2} />
+        )}
+        {pts.map((d, i) => (
+          i % labelStep === 0 || i === pts.length - 1 ? (
+            <text key={d.date} x={x(i)} y={H - 8} fill={c.textMuted} fontSize={7} textAnchor="middle">{d.date.slice(5)}</text>
+          ) : null
+        ))}
+        {last?.moonEmoji && (
+          <text x={x(pts.length - 1)} y={pad.t - 2} fontSize={12} textAnchor="middle">{last.moonEmoji}</text>
+        )}
+      </svg>
+      <div style={s.chartLegend}>
+        <span style={{ color: c.accent }}>● Mood (logged)</span>
+        <span style={{ color: c.lavender }}>— Clinical baseline</span>
+        {showHormones === "female" && <span style={{ color: c.rose }}>— Estrogen</span>}
+        {showHormones === "male" && <span style={{ color: c.sage }}>— Testosterone</span>}
+      </div>
+    </div>
+  );
+}
+
+function CyclesView({ currentUser, partner, checkIns, cycleConfig, onUpdateConfig }) {
+  const BC = window.BridgeCycles;
+  const [viewUser, setViewUser] = useState(currentUser);
+  const [pushMsg, setPushMsg] = useState("");
+  const [saving, setSaving] = useState(false);
+  const today = new Date();
+  const todayKey = BC ? BC.dateKey(today) : getDateKey();
+
+  const cfg = cycleConfig || (BC ? BC.defaultProfiles() : {});
+  const myCfg = cfg[currentUser] || {};
+  const profile = cfg[viewUser] || {};
+  const isFemale = profile.sex === "female";
+  const series = BC ? BC.buildSeries(checkIns, cfg, viewUser, 30) : [];
+  const lastPt = series[series.length - 1];
+  const moon = BC ? BC.moonPhaseLabel(today) : null;
+  const moonPct = BC ? BC.moonIllumination(today) : 0;
+
+  let cycleDay = null;
+  let phaseName = null;
+  if (BC && isFemale && profile.lastPeriodStart) {
+    cycleDay = BC.femaleCycleDay(profile.lastPeriodStart, today, profile.cycleLength);
+    phaseName = BC.femalePhase(cycleDay, profile.cycleLength);
+  }
+
+  const resonance = lastPt?.resonance;
+  const alerts = BC ? BC.notificationCandidates(cfg, checkIns, today) : [];
+
+  const patchUser = (field, value) => {
+    const next = { ...cfg, [currentUser]: { ...myCfg, [field]: value } };
+    onUpdateConfig(next);
+  };
+
+  const saveAll = async () => {
+    setSaving(true);
+    await onUpdateConfig(cfg);
+    setSaving(false);
+  };
+
+  const togglePush = async () => {
+    setPushMsg("");
+    if (!myCfg.pushEnabled) {
+      const r = await registerBridgePush();
+      if (!r.ok) { setPushMsg(r.error); return; }
+      patchUser("pushEnabled", true);
+      setPushMsg("Push enabled — cycle & partner alerts daily.");
+    } else {
+      await unregisterBridgePush();
+      patchUser("pushEnabled", false);
+      setPushMsg("Push disabled.");
+    }
+  };
+
+  return (
+    <div style={s.viewWrap}>
+      <h2 style={s.viewTitle}>Cycles & Rhythms</h2>
+      <p style={s.viewSub}>Clinical hormone baselines, lunar chronobiology, and logged mood trends — not pop astrology.</p>
+
+      <div style={s.card}>
+        <div style={s.cardTitle}>Today · Lunar</div>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 10 }}>
+          <span style={{ fontSize: 36 }}>{moon?.emoji || "🌙"}</span>
+          <div>
+            <div style={{ fontSize: 16, fontWeight: 600 }}>{moon?.name || "Moon"}</div>
+            <div style={{ fontSize: 12, color: c.textMuted }}>{moonPct}% illuminated</div>
+          </div>
+        </div>
+        <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.55, margin: 0 }}>{moon?.note}</p>
+      </div>
+
+      <div style={s.card}>
+        <div style={s.cardTitle}>Your setup</div>
+        <label style={s.fieldLabel}>Birth date (natal lunar reference)</label>
+        <input type="date" style={s.input} value={myCfg.birthDate || ""} onChange={(e) => patchUser("birthDate", e.target.value)} />
+        <label style={{ ...s.fieldLabel, marginTop: 10 }}>Birth time (optional)</label>
+        <input type="time" style={s.input} value={myCfg.birthTime || "12:00"} onChange={(e) => patchUser("birthTime", e.target.value)} />
+        {myCfg.sex === "female" && (
+          <>
+            <label style={{ ...s.fieldLabel, marginTop: 10 }}>Last period start</label>
+            <input type="date" style={s.input} value={myCfg.lastPeriodStart || ""} onChange={(e) => patchUser("lastPeriodStart", e.target.value)} />
+            <label style={{ ...s.fieldLabel, marginTop: 10 }}>Cycle length (days)</label>
+            <input type="number" min={21} max={40} style={s.input} value={myCfg.cycleLength || 28} onChange={(e) => patchUser("cycleLength", +e.target.value || 28)} />
+          </>
+        )}
+        <button style={s.secondaryBtn} onClick={saveAll} disabled={saving}>{saving ? "Saving…" : "Save cycle profile"}</button>
+        <button style={{ ...s.primaryBtn, marginTop: 8, background: myCfg.pushEnabled ? c.teal : c.accent }} onClick={togglePush}>
+          {myCfg.pushEnabled ? "🔔 Push alerts on" : "Enable push notifications"}
+        </button>
+        {pushMsg && <p style={{ fontSize: 12, color: c.teal, marginTop: 8 }}>{pushMsg}</p>}
+      </div>
+
+      <div style={s.filterRow}>
+        {[currentUser, partner].map((name) => (
+          <button key={name} style={{ ...s.filterBtn, ...(viewUser === name ? s.filterActive : {}) }} onClick={() => setViewUser(name)}>
+            {name === "Jason" ? "🌙" : "☀️"} {name}
+          </button>
+        ))}
+      </div>
+
+      <div style={s.card}>
+        <div style={s.cardTitle}>{viewUser} · 30-day trend</div>
+        {isFemale && cycleDay && (
+          <div style={{ fontSize: 13, marginBottom: 10, color: c.rose }}>
+            Cycle day {cycleDay} · {phaseName?.label || "—"} phase
+          </div>
+        )}
+        {!isFemale && profile.sex === "male" && (
+          <div style={{ fontSize: 13, marginBottom: 10, color: c.sage }}>
+            Circadian testosterone + ~30-day infradian rhythm baseline
+          </div>
+        )}
+        <TrendChart series={series} showHormones={isFemale ? "female" : profile.sex === "male"} />
+        {lastPt?.clinical && (
+          <p style={{ fontSize: 12, color: c.textMuted, marginTop: 10, lineHeight: 1.5 }}>{lastPt.clinical}</p>
+        )}
+      </div>
+
+      {resonance && (
+        <div style={{ ...s.card, borderColor: c.lavender + "55" }}>
+          <div style={s.cardTitle}>Lunar–natal physiology window</div>
+          <div style={{ fontSize: 15, fontWeight: 600, color: c.lavender, marginBottom: 6 }}>{resonance.label}</div>
+          <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.55, margin: 0 }}>
+            {resonance.detail} Natal Moon in {resonance.natalSign}, transiting {resonance.transitSign} ({resonance.separation}° separation).
+            Score {resonance.score}/100.
+          </p>
+        </div>
+      )}
+
+      {alerts.length > 0 && (
+        <div style={s.card}>
+          <div style={s.cardTitle}>Today's signals</div>
+          {alerts.filter((a) => a.user === currentUser || a.user === "both").map((a, i) => (
+            <div key={i} style={{ fontSize: 13, padding: "8px 0", borderBottom: i < alerts.length - 1 ? `1px solid ${c.border}` : "none" }}>
+              <strong>{a.title}</strong> — {a.body}
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div style={{ ...s.nudge, marginTop: 4 }}>
+        Baselines are educational models (estradiol/progesterone curves, diurnal testosterone). Pair with daily check-ins for personal calibration — not medical advice.
+      </div>
+    </div>
+  );
+}
+
+function GrowView({ challenge, onSetChallenge }) {
+  const [showAll, setShowAll] = useState(false);
+  const daysSince = challenge ? Math.floor((Date.now() - challenge.startDate) / 86400000) + 1 : 0;
+  const isComplete = challenge && daysSince > challenge.days;
+
+  return (
+    <div style={s.viewWrap}>
+      <h2 style={s.viewTitle}>Grow Together</h2>
+      <p style={s.viewSub}>Structured challenges to strengthen your connection.</p>
+
+      {challenge && !isComplete && (
+        <div style={{ ...s.card, borderColor: c.lavender }}>
+          <div style={{ fontSize: 10, fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.08em", color: c.lavender, marginBottom: 8 }}>Active Challenge</div>
+          <h3 style={{ fontSize: 20, fontFamily: font.display, margin: "0 0 8px" }}>{challenge.title}</h3>
+          <p style={{ fontSize: 14, color: c.textMuted, lineHeight: 1.6, margin: "0 0 14px" }}>{challenge.desc}</p>
+          <div style={s.progressBar}><div style={{ ...s.progressFill, width: `${Math.min(100, (daysSince / challenge.days) * 100)}%` }} /></div>
+          <p style={{ fontSize: 12, color: c.textMuted, margin: "4px 0 12px" }}>Day {daysSince} of {challenge.days}</p>
+          <button style={s.secondaryBtn} onClick={() => onSetChallenge(null)}>End Challenge</button>
+        </div>
+      )}
+
+      {challenge && isComplete && (
+        <div style={{ ...s.card, borderColor: c.sage, textAlign: "center" }}>
+          <h3 style={{ fontSize: 22, fontFamily: font.display, margin: "0 0 8px" }}>🎉 Challenge Complete!</h3>
+          <p style={{ fontSize: 14, color: c.textMuted, lineHeight: 1.6, margin: "0 0 14px" }}>You finished "{challenge.title}" — well done, both of you.</p>
+          <button style={s.primaryBtn} onClick={() => onSetChallenge(null)}>Choose a New Challenge</button>
+        </div>
+      )}
+
+      {(!challenge || showAll || isComplete) && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+          {CHALLENGES.map((ch, i) => (
+            <div key={i} style={s.card}>
+              <h3 style={{ fontSize: 16, fontFamily: font.display, margin: "0 0 6px", fontWeight: 600 }}>{ch.title}</h3>
+              <p style={{ fontSize: 13, color: c.textMuted, lineHeight: 1.5, margin: "0 0 12px" }}>{ch.desc}</p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <span style={{ fontSize: 12, color: c.lavender }}>{ch.days} days</span>
+                <button style={s.startBtn} onClick={() => { onSetChallenge({ ...ch, startDate: Date.now() }); setShowAll(false); }}>Start</button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {challenge && !isComplete && !showAll && (
+        <button style={s.secondaryBtn} onClick={() => setShowAll(true)}>Browse All Challenges</button>
+      )}
+    </div>
+  );
+}
+
+const s = {
+  shell: { display: "flex", flexDirection: "column", height: "100vh", background: c.bg, color: c.text, fontFamily: font.body, fontSize: 14, overflow: "hidden" },
+  header: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 20px", borderBottom: `1px solid ${c.border}`, flexShrink: 0 },
+  headerLeft: { display: "flex", alignItems: "center", gap: 10 },
+  logo: { fontSize: 22, color: c.accent, fontFamily: font.display },
+  brandName: { fontSize: 16, fontFamily: font.display, fontWeight: 600, letterSpacing: "0.02em" },
+  profilePill: { fontSize: 10, background: c.tealSoft, color: c.teal, border: `1px solid ${c.teal}44`, borderRadius: 10, padding: "2px 8px", letterSpacing: "0.04em" },
+  userBadge: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 20, padding: "6px 14px", color: c.text, cursor: "pointer", fontSize: 13 },
+  main: { flex: 1, overflowY: "auto", padding: "0 0 80px 0" },
+  nav: { display: "flex", justifyContent: "space-around", padding: "6px 8px", borderTop: `1px solid ${c.border}`, background: c.surface, position: "fixed", bottom: 0, left: 0, right: 0, zIndex: 10 },
+  navBtn: { display: "flex", flexDirection: "column", alignItems: "center", gap: 2, padding: "6px 10px", background: "none", border: "none", color: c.textMuted, cursor: "pointer", borderRadius: 8, minWidth: 44 },
+  navBtnActive: { color: c.accent },
+  navBtnAccent: { color: c.teal },
+  navIcon: { fontSize: 16 },
+  navLabel: { fontSize: 9, letterSpacing: "0.05em", textTransform: "uppercase" },
+  loadWrap: { display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "100vh", background: c.bg, color: c.text, fontFamily: font.display },
+  loadTitle: { fontSize: 32, color: c.accent, marginBottom: 8 },
+  loadSub: { fontSize: 14, color: c.textMuted, fontFamily: font.body },
+  selectWrap: { display: "flex", alignItems: "center", justifyContent: "center", height: "100vh", background: c.bg, padding: 20 },
+  selectInner: { textAlign: "center", maxWidth: 420 },
+  selectLogo: { fontSize: 48, color: c.accent, fontFamily: font.display, marginBottom: 8 },
+  selectTitle: { fontSize: 36, fontFamily: font.display, color: c.text, margin: "0 0 10px", letterSpacing: "-0.01em" },
+  selectSub: { fontSize: 14, color: c.textMuted, lineHeight: 1.6, margin: "0 0 16px" },
+  profileBanner: { background: c.tealSoft, border: `1px solid ${c.teal}44`, borderRadius: 8, padding: "8px 14px", fontSize: 12, color: c.teal, display: "flex", alignItems: "center", gap: 8, marginBottom: 20, textAlign: "left" },
+  profileBannerIcon: { fontSize: 16, flexShrink: 0 },
+  selectGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 },
+  selectCard: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 12, padding: "28px 20px", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 10 },
+  selectEmoji: { fontSize: 36 },
+  selectName: { fontSize: 18, fontFamily: font.display, fontWeight: 600 },
+  checkedBadge: { fontSize: 11, color: c.sage, background: c.sageSoft, padding: "3px 10px", borderRadius: 12 },
+  viewWrap: { padding: "24px 20px" },
+  viewTitle: { fontSize: 22, fontFamily: font.display, fontWeight: 600, margin: "0 0 4px" },
+  viewSub: { fontSize: 13, color: c.textMuted, margin: "0 0 20px", lineHeight: 1.5 },
+  greeting: { marginBottom: 20 },
+  greetText: { fontSize: 22, fontFamily: font.display, fontWeight: 600, margin: 0 },
+  greetDate: { fontSize: 13, color: c.textMuted, margin: "4px 0 0" },
+  onboardCard: { display: "flex", alignItems: "center", gap: 12, width: "100%", background: c.tealSoft, border: `1px solid ${c.teal}55`, borderRadius: 10, padding: "14px 16px", cursor: "pointer", marginBottom: 14, textAlign: "left" },
+  onboardIcon: { fontSize: 22, color: c.teal, flexShrink: 0 },
+  onboardTitle: { fontSize: 14, fontWeight: 600, color: c.teal, margin: "0 0 3px" },
+  onboardSub: { fontSize: 12, color: c.textMuted, lineHeight: 1.4 },
+  onboardArrow: { fontSize: 18, color: c.teal, flexShrink: 0, marginLeft: "auto" },
+  card: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 10, padding: "16px 18px", marginBottom: 14 },
+  cardTitle: { fontSize: 13, fontWeight: 600, color: c.textMuted, margin: "0 0 12px", textTransform: "uppercase", letterSpacing: "0.06em" },
+  ciGrid: { display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginBottom: 10 },
+  ciItem: { display: "flex", flexDirection: "column", gap: 3 },
+  ciLabel: { fontSize: 11, color: c.textMuted, textTransform: "uppercase", letterSpacing: "0.04em" },
+  ciVal: { fontSize: 13, fontWeight: 500 },
+  partnerNote: { fontSize: 14, fontStyle: "italic", marginTop: 10, lineHeight: 1.5, opacity: 0.85 },
+  promptText: { fontSize: 17, fontFamily: font.display, lineHeight: 1.5, margin: "0 0 10px" },
+  miniNote: { padding: "8px 0", borderBottom: `1px solid ${c.border}` },
+  miniNoteText: { fontSize: 13, lineHeight: 1.5, margin: "0 0 4px" },
+  miniNoteDate: { fontSize: 11, color: c.textMuted },
+  progressBar: { height: 6, background: c.surfaceHover, borderRadius: 3, overflow: "hidden", marginBottom: 6 },
+  progressFill: { height: "100%", background: `linear-gradient(90deg, ${c.lavender}, ${c.accent})`, borderRadius: 3, transition: "width 0.5s" },
+  nudge: { background: c.accentSoft, border: `1px solid ${c.accent}33`, borderRadius: 10, padding: "12px 16px", fontSize: 13, color: c.accent, lineHeight: 1.5, marginTop: 8 },
+  muted: { fontSize: 13, color: c.textMuted, fontStyle: "italic" },
+  fieldLabel: { fontSize: 14, fontWeight: 600, margin: "0 0 10px" },
+  chipGrid: { display: "flex", flexWrap: "wrap", gap: 8 },
+  chip: { background: c.surfaceHover, border: `1px solid ${c.border}`, borderRadius: 20, padding: "8px 14px", color: c.textMuted, cursor: "pointer", fontSize: 13 },
+  chipActive: { background: c.accentSoft, borderColor: c.accent, color: c.accent },
+  textarea: { width: "100%", background: c.surfaceHover, border: `1px solid ${c.border}`, borderRadius: 8, padding: "10px 14px", color: c.text, fontSize: 14, fontFamily: font.body, resize: "vertical", outline: "none", boxSizing: "border-box", lineHeight: 1.5 },
+  primaryBtn: { width: "100%", background: c.accent, color: c.bg, border: "none", borderRadius: 8, padding: "12px 20px", fontSize: 14, fontWeight: 600, cursor: "pointer", marginTop: 10 },
+  secondaryBtn: { width: "100%", background: "transparent", border: `1px solid ${c.border}`, borderRadius: 8, padding: "10px 20px", color: c.textMuted, fontSize: 13, cursor: "pointer", marginTop: 10 },
+  startBtn: { background: c.accentSoft, border: `1px solid ${c.accent}44`, borderRadius: 6, padding: "6px 16px", color: c.accent, fontSize: 13, fontWeight: 600, cursor: "pointer" },
+  composeBox: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 10, padding: "14px 16px", marginBottom: 16 },
+  filterRow: { display: "flex", gap: 8, marginBottom: 14, flexWrap: "wrap" },
+  filterBtn: { background: "none", border: `1px solid ${c.border}`, borderRadius: 16, padding: "5px 14px", color: c.textMuted, fontSize: 12, cursor: "pointer" },
+  filterActive: { borderColor: c.accent, color: c.accent, background: c.accentSoft },
+  noteCard: { borderRadius: 10, padding: "12px 16px", borderLeft: "3px solid" },
+  noteCardMine: { background: c.accentSoft, borderColor: c.accent },
+  noteCardTheirs: { background: c.roseSoft, borderColor: c.rose },
+  noteHeader: { display: "flex", justifyContent: "space-between", marginBottom: 6 },
+  noteFrom: { fontSize: 12, fontWeight: 600, textTransform: "uppercase", letterSpacing: "0.05em" },
+  noteDate: { fontSize: 11, color: c.textMuted },
+  noteText: { fontSize: 14, lineHeight: 1.6, margin: 0 },
+  statusMsg: { background: c.tealSoft, border: `1px solid ${c.teal}44`, borderRadius: 8, padding: "10px 14px", fontSize: 13, color: c.teal, marginBottom: 10, display: "flex", alignItems: "center", gap: 8 },
+  tag: { background: c.lavenderSoft, color: c.lavender, border: `1px solid ${c.lavender}33`, borderRadius: 12, padding: "2px 10px", fontSize: 11 },
+  talkWrap: { display: "flex", flexDirection: "column", height: "calc(100vh - 110px)", padding: "16px 20px 0" },
+  chatScroll: { flex: 1, overflowY: "auto", display: "flex", flexDirection: "column", gap: 14, paddingBottom: 10 },
+  chatUser: { alignSelf: "flex-end", maxWidth: "84%", textAlign: "right" },
+  chatAssistant: { alignSelf: "flex-start", maxWidth: "84%" },
+  chatSender: { fontSize: 11, color: c.textMuted, textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: 4 },
+  chatBubble: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 10, padding: "10px 14px" },
+  chatLine: { margin: "0 0 4px", fontSize: 14, lineHeight: 1.6 },
+  chatTime: { fontSize: 10, color: c.textMuted, marginTop: 4, display: "block" },
+  chatInputRow: { display: "flex", gap: 8, padding: "10px 0", flexShrink: 0, alignItems: "flex-end" },
+  chatInput: { flex: 1, background: c.surface, border: `1px solid ${c.border}`, borderRadius: 10, padding: "10px 14px", color: c.text, fontSize: 14, fontFamily: font.body, resize: "none", outline: "none", lineHeight: 1.5 },
+  sendBtn: { width: 40, height: 40, borderRadius: 20, background: c.accent, color: c.bg, border: "none", fontSize: 18, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, fontWeight: 700 },
+  quickBtn: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 8, padding: "10px 14px", color: c.text, fontSize: 13, cursor: "pointer", textAlign: "left" },
+  quickChip: { background: c.surface, border: `1px solid ${c.border}`, borderRadius: 16, padding: "5px 12px", color: c.textMuted, fontSize: 11, cursor: "pointer" },
+  input: { width: "100%", background: c.surfaceHover, border: `1px solid ${c.border}`, borderRadius: 8, padding: "10px 14px", color: c.text, fontSize: 14, fontFamily: font.body, outline: "none", boxSizing: "border-box", marginBottom: 4 },
+  backBtn: { background: "none", border: "none", color: c.textMuted, cursor: "pointer", fontSize: 13, marginBottom: 12, padding: 0 },
+  authError: { fontSize: 13, color: c.rose, margin: "10px 0 0", lineHeight: 1.5 },
+  liveFab: { position: "fixed", right: 18, bottom: 78, width: 56, height: 56, borderRadius: 28, background: c.accent, border: "none", boxShadow: "0 8px 28px rgba(0,0,0,0.35)", cursor: "pointer", zIndex: 50, display: "flex", alignItems: "center", justifyContent: "center" },
+  liveFabDot: { position: "absolute", top: 6, right: 6, width: 10, height: 10, borderRadius: 5, background: c.sage, border: `2px solid ${c.accent}` },
+  liveBadge: { position: "absolute", top: -4, right: -4, minWidth: 20, height: 20, borderRadius: 10, background: c.rose, color: "#fff", fontSize: 11, fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", padding: "0 5px" },
+  livePanel: { position: "fixed", right: 18, bottom: 78, width: "min(360px, calc(100vw - 24px))", height: "min(520px, calc(100vh - 120px))", background: c.surface, border: `1px solid ${c.border}`, borderRadius: 16, boxShadow: "0 12px 40px rgba(0,0,0,0.45)", zIndex: 50, display: "flex", flexDirection: "column", overflow: "hidden" },
+  liveHeader: { display: "flex", alignItems: "center", justifyContent: "space-between", padding: "12px 14px", borderBottom: `1px solid ${c.border}`, background: c.surfaceHover, flexShrink: 0 },
+  liveHeaderLeft: { display: "flex", alignItems: "center", gap: 10 },
+  liveHeaderName: { fontSize: 15, fontWeight: 600 },
+  liveHeaderStatus: { fontSize: 11, color: c.textMuted, display: "flex", alignItems: "center", gap: 6, marginTop: 2 },
+  liveStatusDot: { width: 7, height: 7, borderRadius: 4, display: "inline-block" },
+  liveMinBtn: { background: "none", border: "none", color: c.textMuted, fontSize: 22, lineHeight: 1, cursor: "pointer", padding: "4px 8px" },
+  liveMessages: { flex: 1, overflowY: "auto", padding: "14px 12px", display: "flex", flexDirection: "column", gap: 10, background: c.bg },
+  liveEmpty: { textAlign: "center", color: c.textMuted, padding: "40px 16px" },
+  liveRow: { display: "flex", width: "100%" },
+  liveMsgName: { fontSize: 10, color: c.textMuted, marginBottom: 3, textTransform: "uppercase", letterSpacing: "0.04em" },
+  liveBubble: { borderRadius: 16, padding: "9px 13px", fontSize: 14, lineHeight: 1.5, wordBreak: "break-word" },
+  liveBubbleMine: { background: c.accent, color: c.bg, borderBottomRightRadius: 4 },
+  liveBubbleTheirs: { background: c.surfaceHover, color: c.text, border: `1px solid ${c.border}`, borderBottomLeftRadius: 4 },
+  liveMsgTime: { fontSize: 10, color: c.textMuted, marginTop: 4 },
+  liveInputRow: { display: "flex", gap: 8, padding: "10px 12px", borderTop: `1px solid ${c.border}`, background: c.surface, flexShrink: 0 },
+  liveInput: { flex: 1, background: c.surfaceHover, border: `1px solid ${c.border}`, borderRadius: 20, padding: "10px 14px", color: c.text, fontSize: 14, fontFamily: font.body, outline: "none" },
+  liveSendBtn: { width: 38, height: 38, borderRadius: 19, background: c.accent, color: c.bg, border: "none", fontSize: 17, fontWeight: 700, cursor: "pointer", flexShrink: 0 },
+  chartLegend: { display: "flex", flexWrap: "wrap", gap: 12, fontSize: 10, color: c.textMuted, marginTop: 6 },
+};
+
+try {
+  ReactDOM.render(<TheBridge />, document.getElementById('root'));
+  window.__bridgeMounted = true;
+} catch (err) {
+  window.__bridgeBootError('App failed to start: ' + (err.message || err));
+}
+  </script>
+</body>
+</html>

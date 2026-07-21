@@ -66,6 +66,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   metadataBase: new URL("https://seventhcitypress.com"),
+  verification: {
+    yandex: "35271039e1472ca8",
+  },
 };
 
 export default function RootLayout({
@@ -78,6 +81,8 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
+        <meta name="yandex-verification" content="35271039e1472ca8" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

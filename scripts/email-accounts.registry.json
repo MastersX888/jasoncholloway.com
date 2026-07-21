@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "description": "Single source of truth for email. Only 'logins' need Thunderbird + MCP setup. 'aliases' deliver to a login inbox. 'website_only' are forwards/contacts — no client setup.",
+  "logins": [
+    {
+      "id": "gmail-personal",
+      "email": "zh5779485@gmail.com",
+      "display_name": "Gmail Personal",
+      "provider": "google",
+      "auth": "oauth-preferred",
+      "imap_host": "imap.gmail.com",
+      "imap_port": 993,
+      "smtp_host": "smtp.gmail.com",
+      "smtp_port": 465,
+      "notes": "Personal Gmail. Use Google OAuth in Thunderbird."
+    },
+    {
+      "id": "scp-jason",
+      "email": "jason@seventhcitypress.com",
+      "display_name": "Seventh City Press",
+      "provider": "google-workspace",
+      "auth": "oauth-preferred",
+      "imap_host": "imap.gmail.com",
+      "imap_port": 993,
+      "smtp_host": "smtp.gmail.com",
+      "smtp_port": 465,
+      "notes": "Primary Workspace login. Aliases below deliver here if Scenario A."
+    },
+    {
+      "id": "proton-personal",
+      "email": "lgh333@protonmail.com",
+      "display_name": "Proton Personal",
+      "provider": "proton-bridge",
+      "auth": "proton-bridge",
+      "imap_host": "127.0.0.1",
+      "imap_port": 1143,
+      "smtp_host": "127.0.0.1",
+      "smtp_port": 1025,
+      "requires": ["Proton Mail Bridge running"],
+      "notes": "Use Bridge credentials from the Bridge app, not your Proton login."
+    }
+  ],
+  "aliases": [
+    {
+      "email": "info@seventhcitypress.com",
+      "delivers_to": "scp-jason",
+      "setup": "No separate Thunderbird account. Configure 'Send mail as' in Gmail for jason@."
+    },
+    {
+      "email": "social@seventhcitypress.com",
+      "delivers_to": "scp-jason",
+      "setup": "Alias on jason@ unless separate Workspace user."
+    },
+    {
+      "email": "media@seventhcitypress.com",
+      "delivers_to": "scp-jason",
+      "setup": "Alias on jason@ unless separate Workspace user."
+    }
+  ],
+  "website_only": [
+    { "email": "press@seventhcitypress.com", "note": "Site contact / press kits" },
+    { "email": "jason@jasoncholloway.com", "note": "Author site press" },
+    { "email": "dispatch@jasoncholloway.com", "note": "Chapters-sent page" }
+  ]
+}

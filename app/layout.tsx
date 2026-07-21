@@ -74,6 +74,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
   },
   metadataBase: new URL("https://jasoncholloway.com"),
+  verification: {
+    yandex: "998186f9ff7ecbd7",
+  },
 };
 
 import WebMCPProvider from "@/components/WebMCPProvider";
@@ -85,6 +88,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
+        <meta name="yandex-verification" content="998186f9ff7ecbd7" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

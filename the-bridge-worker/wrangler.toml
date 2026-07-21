@@ -1,0 +1,25 @@
+name = "the-bridge"
+compatibility_date = "2026-06-14"
+compatibility_flags = ["nodejs_compat"]
+main = "src/index.js"
+
+[triggers]
+crons = ["0 14 * * *"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+not_found_handling = "single-page-application"
+
+[[kv_namespaces]]
+binding = "BRIDGE_KV"
+id = "6f0e96702c3d4da4ad652abd51b5d82e"
+
+[[durable_objects.bindings]]
+name = "LIVE_CHAT"
+class_name = "BridgeLiveChat"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["BridgeLiveChat"]

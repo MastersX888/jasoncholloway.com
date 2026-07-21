@@ -187,6 +187,17 @@ export const tasks: SweepTask[] = [
     effort: 'Variable',
     detail: 'HC art is reused on PB slots. Commission or label honestly when art exists.',
   },
+  {
+    id: 'PUB-08',
+    role: 'publishing',
+    priority: 'P1',
+    title: 'Photograph HC case covers for website + Pinterest',
+    status: 'open',
+    owner: 'JASON',
+    effort: '30 min',
+    detail: 'Remove dust jackets from all 4 HCs, photograph case covers on dark background. Save as public/covers/book1-case.png, book2-case.png, book3-case.png, omnibus-case.png. Replaces placeholder images.',
+    dueContext: 'Unlocks the "Two Covers" website section and 6 Pinterest pins.',
+  },
 
   // ── MARKETING ───────────────────────────────────────────────────
   {
@@ -198,6 +209,17 @@ export const tasks: SweepTask[] = [
     owner: 'JASON',
     effort: '30 min',
     detail: 'Designed pin assets exist at debt_consolidation_handoff/global_penetration_wave1/pinterest-assets/designed/. Upload D-01 through D-15 to Pinterest.',
+  },
+  {
+    id: 'MKT-01B',
+    role: 'marketing',
+    priority: 'P1',
+    title: 'Pinterest — Case Cover reveal pins (6 pins)',
+    status: 'open',
+    owner: 'JASON',
+    effort: '45 min',
+    detail: 'Photograph all 4 case covers (jacket removed), create 6 Pinterest pins per pinterest-case-cover-pins.md. "Two Covers. One Book." is the hook.',
+    dueContext: 'High-engagement format: reveal/before-after content performs well on Pinterest.',
   },
   {
     id: 'MKT-02',

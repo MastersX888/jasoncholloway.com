@@ -2,6 +2,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS } from "@/lib/data/buyLinks";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import CaseCoverShowcase from "@/components/ui/CaseCoverShowcase";
 import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
@@ -389,8 +390,7 @@ export default function OmnibusPage() {
               <div className="card">
                 <div className="label" style={{ marginBottom: "1rem" }}>
                   Publication Details
-                </div>
-                {[
+                </div>                {[
                   { k: "Publisher", v: "Seventh City Press" },
                   { k: "Hardcover ISBN", v: omnibus.isbn_hc ?? "" },
                   { k: "Paperback ISBN", v: omnibus.isbn_pb ?? "" },
@@ -431,6 +431,19 @@ export default function OmnibusPage() {
           </div>
         </div>
       </section>
+
+      {omnibus.coverImageCase && (
+        <>
+          <div className="container">
+            <WaveDivider />
+          </div>
+          <section className="section">
+            <div className="container">
+              <CaseCoverShowcase book={omnibus} variant="full" />
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }

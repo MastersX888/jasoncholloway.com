@@ -19,6 +19,7 @@ export interface Book {
   coverImage: string;      // Default display cover (Paperback)
   coverImageHC: string;    // Hardcover cover path
   coverImagePB: string;    // Paperback cover path
+  coverImageCase?: string; // Case cover (boards under dust jacket) — the hidden second cover
   qrCodePB?: string;       // QR Code image path for Paperback direct buy
   isbn_hc?: string;
   isbn_pb?: string;
@@ -52,6 +53,7 @@ export const books: Book[] = [
     coverImage: "/covers/book1-paperback.png",
     coverImageHC: "/covers/book1-hardcover-v3.png",
     coverImagePB: "/covers/book1-paperback.png",
+    coverImageCase: "/covers/book1-case.png",
     qrCodePB: "/media/qr1.png",
     isbn_hc: "9798295800801",
     isbn_pb: "9798256008048",
@@ -91,6 +93,7 @@ export const books: Book[] = [
     coverImage: "/covers/book2-paperback.png",
     coverImageHC: "/covers/book2-hardcover-v3.png",
     coverImagePB: "/covers/book2-paperback.png",
+    coverImageCase: "/covers/book2-case.png",
     qrCodePB: "/media/qr2.png",
     isbn_hc: "9798295812675",
     isbn_pb: "9798256009953",
@@ -130,6 +133,7 @@ export const books: Book[] = [
     coverImage: "/covers/book3-paperback.png",
     coverImageHC: "/covers/book3-hardcover-v3.png",
     coverImagePB: "/covers/book3-paperback.png",
+    coverImageCase: "/covers/book3-case.png",
     qrCodePB: "/media/qr3.png",
     isbn_hc: "9798295812705",
     isbn_pb: "9798256010072",
@@ -169,6 +173,7 @@ export const books: Book[] = [
     coverImage: "/covers/omnibus-hardcover-v3.png",
     coverImageHC: "/covers/omnibus-hardcover-v3.png",
     coverImagePB: "/covers/omnibus-hardcover-v3.png",
+    coverImageCase: "/covers/omnibus-case.png",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_ebook: null, // No ebook version

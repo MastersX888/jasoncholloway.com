@@ -4,6 +4,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import CaseCoverShowcase from "@/components/ui/CaseCoverShowcase";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
@@ -587,6 +588,10 @@ export default function BookPage({ params }: Props) {
                     All Field Notes
                   </Link>
                 </div>
+              )}
+
+              {book.coverImageCase && (
+                <CaseCoverShowcase book={book} variant="compact" />
               )}
             </div>
           </div>

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:ops": "NEXT_PUBLIC_OPS_ENABLED=true next dev",
     "build": "next build",
+    "build:ops": "NEXT_PUBLIC_OPS_ENABLED=true next build",
     "start": "next start",
     "lint": "eslint",
     "sweep": "node scripts/daily-sweep.mjs"

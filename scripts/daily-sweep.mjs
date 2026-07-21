@@ -179,7 +179,7 @@ function printResults(results) {
   console.log(`    6. Check Google Play review status (5 min)`);
 
   console.log();
-  console.log(`  ${c.dim}Full dashboard: http://localhost:3000/ops/${c.reset}`);
+  console.log(`  ${c.dim}Local ops dashboard: npm run dev:ops → http://localhost:3000/ops/${c.reset}`);
   console.log(line('═'));
   console.log();
 }

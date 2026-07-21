@@ -1,3 +1,12 @@
+/ops
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/ops/
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
+/ops/*
+  X-Robots-Tag: noindex, nofollow, noarchive, nosnippet
+
 /*
   Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </.well-known/agent-skills/index.json>; rel="describedby", </auth.md>; rel="service-doc"
 

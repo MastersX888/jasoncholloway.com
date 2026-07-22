@@ -36,6 +36,7 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN || secrets.CF_API_TOKEN || vars.CLOUDFLARE_API_TOKEN || vars.CF_API_TOKEN }}
 
       - name: Purge Cloudflare cache
+        continue-on-error: true
         run: |
           ZONE_ID=$(curl -sf "https://api.cloudflare.com/client/v4/zones?name=jasoncholloway.com" \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \

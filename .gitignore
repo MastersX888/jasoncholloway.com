@@ -50,3 +50,12 @@ business_cards/
 *.zip
 *_out.txt
 *.py
+!pinterest-agent/**/*.py
+
+# Operation Pinboard — secrets & runtime output
+pinterest-agent/.env
+pinterest-agent/.pinterest_token.json
+pinterest-agent/output/
+pinterest-agent/logs/
+pinterest-agent/__pycache__/
+pinterest-agent/**/__pycache__/

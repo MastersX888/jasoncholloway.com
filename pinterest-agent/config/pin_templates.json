@@ -1,0 +1,95 @@
+{
+  "templates": {
+    "book_promo": {
+      "title_pattern": "{book_title} — {format} | Masters X Trilogy",
+      "description_pattern": "{hook} By Jason Carroll Holloway. {format} from Seventh City Press. ISBN {isbn}. #MastersXTrilogy #ConspiracyFiction #KansasCityFiction #LiteraryThriller #SeventhCityPress",
+      "link_rule": "jasoncholloway.com/books/ or amazon.com/dp/{ASIN}",
+      "keywords": ["Masters X Trilogy", "Jason Carroll Holloway", "Seventh City Press", "literary conspiracy fiction"]
+    },
+    "field_note": {
+      "title_pattern": "{subject} — Real History Behind Masters X",
+      "description_pattern": "{fact} This is documented history, not fiction — and it grounds the Masters X Trilogy. Read the full Field Note on jasoncholloway.com. #FactsBehindFiction #MastersX #RealHistory #SeventhCityPress",
+      "link_rule": "jasoncholloway.com/field-notes/",
+      "keywords": ["real history", "Voynich Manuscript", "Strahov Monastery", "111 Hz"]
+    },
+    "kansas_city": {
+      "title_pattern": "{location} — Kansas City in Masters X",
+      "description_pattern": "{fact} Every place in Masters X is real and visitable. Fiction built on documented geography. #KansasCity #KC #MastersXTrilogy #LiteraryKC",
+      "link_rule": "jasoncholloway.com/field-notes/",
+      "keywords": ["Kansas City", "SubTropolis", "Missouri"]
+    },
+    "manuscript": {
+      "title_pattern": "{subject} — Medieval Source for Masters X",
+      "description_pattern": "{fact} Referenced in the Masters X Trilogy by Jason Carroll Holloway. #MedievalManuscripts #Voynich #ArsNotoria #CodexGigas",
+      "link_rule": "jasoncholloway.com/field-notes/ or jasoncholloway.com/chamber/",
+      "keywords": ["medieval manuscripts", "illuminated manuscripts", "Voynich Manuscript"]
+    },
+    "acoustic_science": {
+      "title_pattern": "{subject} — The Science Behind Masters X",
+      "description_pattern": "{fact} Real science, documented research. The frequency architecture behind the Masters X Trilogy. #Cymatics #AcousticScience #111Hz #Archaeoacoustics",
+      "link_rule": "jasoncholloway.com/field-notes/ or jasoncholloway.com/chamber/",
+      "keywords": ["cymatics", "111 Hz", "Chladni patterns", "Schumann resonance"]
+    },
+    "monograph": {
+      "title_pattern": "Innocence, Desire, and the Architecture of the Fall — {angle}",
+      "description_pattern": "A critical and quantitative analysis of John Hawkes's novel corpus. By Jason Carroll Holloway. From Seventh City Press. ISBN {isbn}. #JohnHawkes #LiteraryCriticism #StructuralAnalysis",
+      "link_rule": "jasoncholloway.com/books/hawkes-monograph/",
+      "keywords": ["John Hawkes", "literary criticism", "structuralism"]
+    },
+    "case_cover": {
+      "title_pattern": "Two Covers. One Book. — {book_title}",
+      "description_pattern": "Hardcover collectors know the secret: a printed case laminate under the dust jacket. {hook} Seventh City Press · Jason Carroll Holloway. #TwoCoversOneBook #Hardcover #MastersXTrilogy #BookDesign",
+      "link_rule": "jasoncholloway.com/books/masters-x/",
+      "keywords": ["hardcover", "case cover", "book design", "Masters X"]
+    }
+  },
+  "seed_pins": [
+    {
+      "template": "field_note",
+      "board_legacy": "Voynich Manuscript & Codices",
+      "subject": "Voynich Manuscript",
+      "fact": "Beinecke MS 408 — 240 parchment pages of undeciphered script, held at Yale since 1969.",
+      "link": "https://jasoncholloway.com/field-notes/voynich-manuscript/",
+      "image_url": "https://jasoncholloway.com/folios/voynich/Vol%201/voynich-004.jpg",
+      "alt_text": "Voynich Manuscript folio f1r, Beinecke MS 408"
+    },
+    {
+      "template": "field_note",
+      "board_legacy": "Prague & Strahov Library",
+      "subject": "Strahov Monastery Library",
+      "fact": "Baroque theological hall in Prague — Premonstratensian monastery since 1143.",
+      "link": "https://jasoncholloway.com/field-notes/strahov-monastery/",
+      "image_url": "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
+      "alt_text": "Strahov Monastery library interior, Prague"
+    },
+    {
+      "template": "book_promo",
+      "board_legacy": "Literary Conspiracy Thrillers",
+      "book_title": "The Inheritance of Frequency",
+      "format": "Paperback",
+      "hook": "A fired Kansas City security guard inherits classified acoustic research linking SubTropolis to the Voynich Manuscript.",
+      "isbn": "9798256008048",
+      "link": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+      "image_url": "https://jasoncholloway.com/covers/book1-paperback.png",
+      "alt_text": "Masters X Vol I The Inheritance of Frequency paperback cover"
+    },
+    {
+      "template": "acoustic_science",
+      "board_legacy": "Frequency & Esoteric History",
+      "subject": "Cymatics",
+      "fact": "Hans Jenny documented how sound organizes matter into visible patterns — real physics behind the trilogy's frequency engine.",
+      "link": "https://jasoncholloway.com/field-notes/cymatics/",
+      "image_url": "https://jasoncholloway.com/og/field-notes/cymatics.png",
+      "alt_text": "Cymatics pattern visualization"
+    },
+    {
+      "template": "case_cover",
+      "board_legacy": "Literary Conspiracy Thrillers",
+      "book_title": "Masters X Omnibus",
+      "hook": "Cathedral-within figure on the case laminate — the hidden second cover.",
+      "link": "https://jasoncholloway.com/books/masters-x/omnibus/",
+      "image_url": "https://jasoncholloway.com/covers/omnibus-case.png",
+      "alt_text": "Masters X omnibus hardcover case laminate art"
+    }
+  ]
+}

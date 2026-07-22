@@ -99,6 +99,20 @@ Hook: **"Two Covers. One Book."** · link to omnibus + volume pages.
 
 **Old app (denied):** Seventh City Press Operations · App ID **1592987** — do not reuse.
 
+## Phase 4 — Pinterest API agent (Operation Pinboard)
+
+Python agent at repo root: **`pinterest-agent/`**
+
+```bash
+cd pinterest-agent
+pip install -r requirements.txt
+cp .env.example .env   # App ID 1593046 + secret
+python pinboard.py auth
+python pinboard.py all
+```
+
+See `pinterest-agent/README.md` for full pipeline.
+
 ### Create a new app
 
 1. https://developers.pinterest.com/apps/ → **Create app**

@@ -1,0 +1,60 @@
+{
+  "imprint": "Seventh City Press LLC",
+  "author": "Jason Carroll Holloway",
+  "location": "Kansas City, Missouri",
+  "websites": {
+    "author": "https://jasoncholloway.com",
+    "imprint": "https://seventhcitypress.com",
+    "press_contact": "press@seventhcitypress.com"
+  },
+  "tagline": "Fiction built on real research. Criticism built on close reading.",
+  "brand_voice": "Authoritative, literary, grounded in documented history. Never hype. Never genre-pulp.",
+  "isbn_matrix": [
+    {"title": "The Inheritance of Frequency", "format": "Paperback", "isbn": "9798256008048", "volume": "I"},
+    {"title": "The Inheritance of Frequency", "format": "Hardcover", "isbn": "9798295800801", "volume": "I"},
+    {"title": "The Inheritance of Frequency", "format": "EPUB", "isbn": "9798256008819", "volume": "I"},
+    {"title": "The Inheritance of Frequency", "format": "Kindle", "isbn": "B0H4KYMSM1", "volume": "I"},
+    {"title": "The Grimoire", "format": "Paperback", "isbn": "9798256009953", "volume": "II"},
+    {"title": "The Grimoire", "format": "Hardcover", "isbn": "9798295812675", "volume": "II"},
+    {"title": "The Grimoire", "format": "EPUB", "isbn": "9798256009625", "volume": "II"},
+    {"title": "The Grimoire", "format": "Kindle", "isbn": "B0H4KQ4YQJ", "volume": "II"},
+    {"title": "The Kingdom", "format": "Paperback", "isbn": "9798256010072", "volume": "III"},
+    {"title": "The Kingdom", "format": "Hardcover", "isbn": "9798295812705", "volume": "III"},
+    {"title": "The Kingdom", "format": "EPUB", "isbn": "9798256009809", "volume": "III"},
+    {"title": "The Kingdom", "format": "Kindle", "isbn": "B0H4L36X21", "volume": "III"},
+    {"title": "Complete Trilogy (Omnibus)", "format": "Paperback", "isbn": "9798256072704"},
+    {"title": "Complete Trilogy (Omnibus)", "format": "Hardcover", "isbn": "9798295884412"},
+    {"title": "Innocence, Desire and the Architecture of the Fall", "format": "Paperback", "isbn": "9798295778247"},
+    {"title": "Innocence, Desire and the Architecture of the Fall", "format": "Hardcover", "isbn": "9798349308444"},
+    {"title": "Innocence, Desire and the Architecture of the Fall", "format": "EPUB", "isbn": "9798295778926"}
+  ],
+  "primary_links": {
+    "homepage": "https://jasoncholloway.com",
+    "books": "https://jasoncholloway.com/books/",
+    "field_notes": "https://jasoncholloway.com/field-notes/",
+    "analysis_chamber": "https://jasoncholloway.com/chamber/",
+    "omnibus": "https://jasoncholloway.com/books/masters-x/omnibus/",
+    "imprint": "https://seventhcitypress.com",
+    "contact": "https://seventhcitypress.com/contact/"
+  },
+  "content_pillars": [
+    "P1:Trilogy",
+    "P2:Facts Behind Fiction",
+    "P3:Kansas City",
+    "P4:Medieval Manuscripts",
+    "P5:Acoustic Science",
+    "P6:Author/Imprint",
+    "P7:Hawkes Monograph",
+    "P8:Reader Experience"
+  ],
+  "factual_anchors": {
+    "voynich_manuscript": "Yale Beinecke Rare Book & Manuscript Library, MS 408",
+    "subtropolis": "SubTropolis, Kansas City, Missouri — real underground business complex",
+    "strahov_monastery": "Strahov Monastery, Prague, Czech Republic",
+    "schumann_resonance": "7.83 Hz fundamental frequency",
+    "chladni": "Ernst Chladni (1756–1827), father of acoustics",
+    "hans_jenny": "Hans Jenny (1904–1972), coined 'cymatics'",
+    "ars_notoria": "Ars Notoria — medieval grimoire, part of Lesser Key of Solomon tradition",
+    "codex_gigas": "Codex Gigas — National Library of Sweden, Stockholm"
+  }
+}

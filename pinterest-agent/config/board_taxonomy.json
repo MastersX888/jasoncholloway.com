@@ -1,0 +1,60 @@
+{
+  "boards": [
+    {
+      "name": "Masters X Trilogy — Books & Editions",
+      "pillar": "P1:Trilogy",
+      "description": "All editions of the Masters X trilogy by Jason Carroll Holloway — paperback, hardcover, ebook, and omnibus. Published by Seventh City Press.",
+      "target_pin_count": 15,
+      "pin_types": ["book_cover", "format_comparison", "edition_announcement", "buy_link", "series_overview"]
+    },
+    {
+      "name": "Facts Behind the Fiction — Real History in Masters X",
+      "pillar": "P2:Facts Behind Fiction",
+      "description": "The documented historical events, real locations, and verified research behind the Masters X trilogy. Every claim is sourced.",
+      "target_pin_count": 25,
+      "pin_types": ["field_note", "historical_document", "archival_photo", "source_citation", "timeline"]
+    },
+    {
+      "name": "The Real Kansas City — Locations from Masters X",
+      "pillar": "P3:Kansas City",
+      "description": "Real Kansas City locations featured in the Masters X trilogy — SubTropolis, the West Bottoms, Union Station, and more.",
+      "target_pin_count": 15,
+      "pin_types": ["kansas_city", "location_photo", "map_pin", "then_and_now", "local_history"]
+    },
+    {
+      "name": "Medieval Manuscripts & Esoteric Archives",
+      "pillar": "P4:Medieval Manuscripts",
+      "description": "Real medieval manuscripts and esoteric texts referenced in Masters X — Voynich MS 408 at Yale Beinecke, Ars Notoria, Codex Gigas, Strahov Monastery holdings.",
+      "target_pin_count": 20,
+      "pin_types": ["manuscript", "archive_reference", "illumination", "catalog_entry", "scholarly_link"]
+    },
+    {
+      "name": "Acoustic Science & Cymatics — The Frequency Is Real",
+      "pillar": "P5:Acoustic Science",
+      "description": "The real science of cymatics, Chladni patterns, Schumann resonance (7.83 Hz), and acoustic phenomena explored in Masters X.",
+      "target_pin_count": 15,
+      "pin_types": ["acoustic_science", "cymatics_visual", "experiment", "scientist_profile", "frequency_data"]
+    },
+    {
+      "name": "Seventh City Press — Author & Imprint",
+      "pillar": "P6:Author/Imprint",
+      "description": "Seventh City Press LLC — independent publisher based in Kansas City, Missouri. Author updates, press information, and imprint news.",
+      "target_pin_count": 10,
+      "pin_types": ["author_update", "press_release", "imprint_branding", "event", "interview"]
+    },
+    {
+      "name": "John Hawkes — Innocence, Desire, and the Architecture of the Fall",
+      "pillar": "P7:Hawkes Monograph",
+      "description": "Critical monograph on John Hawkes by Jason Carroll Holloway. Close reading, literary criticism, and analysis of Hawkes's experimental fiction.",
+      "target_pin_count": 8,
+      "pin_types": ["monograph", "literary_criticism", "book_promo", "excerpt", "scholarly_reference"]
+    },
+    {
+      "name": "Reading Masters X — Guides, Maps & Companion Content",
+      "pillar": "P8:Reader Experience",
+      "description": "Reading guides, character maps, timelines, and companion content for the Masters X trilogy. Enhance your reading experience.",
+      "target_pin_count": 12,
+      "pin_types": ["reading_guide", "character_map", "timeline", "glossary", "discussion_prompt"]
+    }
+  ]
+}

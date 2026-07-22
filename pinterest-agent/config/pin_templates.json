@@ -1,0 +1,43 @@
+{
+  "templates": {
+    "book_promo": {
+      "title_pattern": "{title} — {format} Edition | Masters X Vol. {volume}",
+      "description_pattern": "{title} by Jason Carroll Holloway. Volume {volume} of the Masters X trilogy. {tagline} ISBN: {isbn}. Published by Seventh City Press.\n\n#MastersX #JasonCarrollHolloway #SeventhCityPress #LiteraryFiction #HistoricalFiction #{volume_hashtag}",
+      "link_rule": "primary_links.books",
+      "keywords": ["masters x", "jason carroll holloway", "seventh city press", "literary fiction", "historical fiction", "kansas city author"]
+    },
+    "field_note": {
+      "title_pattern": "Field Note: {subject} — Facts Behind Masters X",
+      "description_pattern": "The real history behind Masters X: {description}. Every claim in this trilogy is built on documented research.\n\nRead more: {link}\n\n#FactsBehindFiction #MastersX #HistoricalResearch #LiteraryFiction #RealHistory #{pillar_hashtag}",
+      "link_rule": "primary_links.field_notes",
+      "keywords": ["facts behind fiction", "historical research", "documented history", "masters x research", "real locations"]
+    },
+    "kansas_city": {
+      "title_pattern": "{location} — Real Kansas City in Masters X",
+      "description_pattern": "{location}, Kansas City, Missouri — a real location featured in the Masters X trilogy. {description}\n\n#KansasCity #KCMO #MastersX #RealLocations #LiteraryTourism #{location_hashtag}",
+      "link_rule": "primary_links.field_notes",
+      "keywords": ["kansas city", "kcmo", "subtropolis", "west bottoms", "union station", "real locations", "literary tourism"]
+    },
+    "manuscript": {
+      "title_pattern": "{manuscript_name} — Medieval Manuscripts in Masters X",
+      "description_pattern": "{manuscript_name}: {description}. Location: {repository}. Referenced in the Masters X trilogy as part of the esoteric manuscript tradition.\n\n#MedievalManuscripts #RareBooks #Archives #MastersX #EsotericTexts #{manuscript_hashtag}",
+      "link_rule": "primary_links.field_notes",
+      "keywords": ["medieval manuscripts", "rare books", "voynich manuscript", "ars notoria", "codex gigas", "esoteric texts", "beinecke library"]
+    },
+    "acoustic_science": {
+      "title_pattern": "{phenomenon} — The Frequency Is Real | Masters X",
+      "description_pattern": "The science is real: {description}. Schumann resonance at 7.83 Hz, Chladni patterns, cymatics — the acoustic phenomena in Masters X are grounded in documented physics.\n\n#Cymatics #AcousticScience #SchumannResonance #Chladni #MastersX #ScienceInFiction #{science_hashtag}",
+      "link_rule": "primary_links.field_notes",
+      "keywords": ["cymatics", "acoustic science", "schumann resonance", "7.83 hz", "chladni patterns", "hans jenny", "frequency"]
+    },
+    "monograph": {
+      "title_pattern": "{subject} — From 'Innocence, Desire and the Architecture of the Fall'",
+      "description_pattern": "From the critical monograph on John Hawkes by Jason Carroll Holloway: {description}. Close reading and literary criticism built on the text itself.\n\nISBN: {isbn}\n\n#JohnHawkes #LiteraryCriticism #CloseReading #ExperimentalFiction #SeventhCityPress",
+      "link_rule": "primary_links.books",
+      "keywords": ["john hawkes", "literary criticism", "close reading", "experimental fiction", "postmodern literature", "monograph"]
+    }
+  },
+  "global_hashtags": ["#SeventhCityPress", "#JasonCarrollHolloway", "#MastersX", "#LiteraryFiction"],
+  "max_description_length": 500,
+  "max_title_length": 100
+}

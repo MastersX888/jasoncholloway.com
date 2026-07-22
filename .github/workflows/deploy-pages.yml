@@ -2,7 +2,7 @@ name: Deploy to Cloudflare Pages
 
 on:
   push:
-    branches: [main]
+    branches: [main, cursor/ops-dashboard-3e24]
   workflow_dispatch:
 
 concurrency:

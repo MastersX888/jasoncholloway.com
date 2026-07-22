@@ -35,6 +35,10 @@ try {
   $builtOut = Join-Path $tmp "out"
   if (-not (Test-Path $builtOut)) { throw "Build did not produce out/" }
 
+  # Production: never ship /ops
+  $opsPath = Join-Path $builtOut "ops"
+  if (Test-Path $opsPath) { Remove-Item $opsPath -Recurse -Force }
+
   # Merge into live out without deleting the directory root.
   Get-ChildItem $builtOut -Force | ForEach-Object {
     $dest = Join-Path $liveOut $_.Name

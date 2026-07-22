@@ -99,11 +99,12 @@ Build already merged these into `out/` — **one wrangler deploy publishes them*
 4. **Commit** or discard uncommitted working tree changes
 
 ### P1 — Dashboard (Jason manual)
-4. Add `seventhcitypress.com` to Google Search Console + submit sitemap
-5. Wikidata Q140275300 — add P856 = `https://seventhcitypress.com/`
-6. Google Business Profile import (`seventhcitypress/google_business/`)
-7. ISNI registration
-8. Hawkes EPUB "sixteen novels" fix in IngramSpark dashboard
+4. Add `seventhcitypress.com` to Google Search Console + submit sitemap *(HTML meta tag ready via `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`)*
+5. ~~Wikidata Q140275300 — P856~~ **done** (Jul 22 — includes seventhcitypress.com)
+6. Google Business Profile import (`seventhcitypress/google_business/`) — CSV + logo URL ready
+7. ~~ISNI registration~~ **done** (0000 0005 3044 7935 on site + Open Library)
+8. ~~Open Library author + 15 ISBNs~~ **done** (Jul 22)
+9. Hawkes EPUB "sixteen novels" fix in IngramSpark dashboard
 
 ### P2 — Creative pipelines (not blocking web foundation)
 9. Encyclopedia print (BookVault)

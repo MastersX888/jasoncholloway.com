@@ -27,13 +27,13 @@
 | ID | Item | Status | Owner |
 |----|------|--------|-------|
 | P1-10 | Add seventhcitypress.com to Google Search Console | open | [JASON] |
-| P1-11 | Wikidata Q140275300 — P856 = seventhcitypress.com | open | [JASON] |
-| P1-12 | Google Business Profile import | open | [JASON] |
+| P1-11 | Wikidata Q140275300 — P856 = seventhcitypress.com | **done** | [CURSOR] | Jul 22 — verified via API |
+| P1-12 | Google Business Profile import | open | [JASON] | CSV + logo URL ready |
 | P1-13 | Verify Goodreads / BookBub / Amazon Author Central | open | [JASON] |
 | P1-15 | ISNI on site JSON-LD + llms.txt | **fixed-source** | [CURSOR] | Jul 16 |
-| P1-15b | Wikidata P213 + Open Library | open | [JASON] | ISNI_AUTHORITY_BATCH.md |
+| P1-15b | Wikidata P213 + Open Library | **partial** | [JASON] | OL 15/15 ISBNs done Jul 22 |
 | P1-16 | LoC PCN / VIAF | open | [JASON] |
-| P1-17 | Google Books Partner + Open Library | open | [JASON] |
+| P1-17 | Google Books Partner | open | [JASON] | Waiting on approval |
 | P1-20 | Hawkes EPUB "sixteen novels" in IngramSpark | open | [JASON][EXT] |
 
 ### Website (verified closed on live — removed from active debt)

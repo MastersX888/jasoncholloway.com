@@ -1,4 +1,5 @@
 name: Deploy Seventh City Press to Cloudflare Pages
+# Last retry: 2026-07-22
 
 on:
   push:

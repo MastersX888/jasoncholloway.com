@@ -17,8 +17,9 @@ logger = setup_logging()
 
 class PinterestClient:
     BASE_URL = "https://api.pinterest.com/v5"
+    SANDBOX_URL = "https://api-sandbox.pinterest.com/v5"
 
-    def __init__(self, access_token: str | None = None):
+    def __init__(self, access_token: str | None = None, sandbox: bool = False):
         token = access_token or os.environ.get("PINTEREST_ACCESS_TOKEN")
         if not token and TOKEN_FILE.exists():
             token = load_json(TOKEN_FILE).get("access_token")
@@ -27,6 +28,9 @@ class PinterestClient:
                 "No Pinterest access token. Run: python pinboard.py auth"
             )
         self.token = token
+        self.sandbox = sandbox
+        if sandbox:
+            self.BASE_URL = self.SANDBOX_URL
         self.headers = {
             "Authorization": f"Bearer {self.token}",
             "Content-Type": "application/json",

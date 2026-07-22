@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+!pinterest-agent/.env.example
 scripts/email-mcp-secrets.local.txt
 
 # vercel
@@ -56,6 +58,8 @@ business_cards/
 pinterest-agent/.env
 pinterest-agent/.pinterest_token.json
 pinterest-agent/output/
+!pinterest-agent/output/.gitkeep
 pinterest-agent/logs/
+!pinterest-agent/logs/.gitkeep
 pinterest-agent/__pycache__/
 pinterest-agent/**/__pycache__/

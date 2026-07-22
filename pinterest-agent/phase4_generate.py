@@ -15,11 +15,18 @@ def render_template(pattern: str, values: dict) -> str:
 
 
 def resolve_board_id(board_name: str, audit: dict, legacy_map: dict) -> str | None:
+    name_lower = board_name.lower()
+    for board in audit.get("boards", []):
+        if board["name"].lower() == name_lower:
+            return board["id"]
     target = legacy_map.get(board_name, board_name).lower()
     for board in audit.get("boards", []):
         if board["name"].lower() == target:
             return board["id"]
         if target in board["name"].lower() or board["name"].lower() in target:
+            return board["id"]
+    for board in audit.get("boards", []):
+        if name_lower in board["name"].lower() or board["name"].lower() in name_lower:
             return board["id"]
     return None
 

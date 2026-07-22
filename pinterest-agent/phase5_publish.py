@@ -46,6 +46,7 @@ def publish(dry_run: bool = True) -> dict:
 
     results = {"boards_created": [], "pins_created": [], "errors": []}
 
+    # Skip board creation if content_plan has missing boards — they need manual or separate handling
     for board_spec in plan.get("missing_boards", []):
         if dry_run:
             print(f"[DRY RUN] Would create board: {board_spec['name']}")

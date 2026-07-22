@@ -52,6 +52,7 @@ export default function Footer() {
               <Link href="/about">About the Author</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/returns">Returns &amp; Refunds</Link>
+              <a href="https://seventhcitypress.com/privacy/">Privacy Policy</a>
             </nav>
           </div>
         </div>

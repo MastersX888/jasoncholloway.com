@@ -1,0 +1,54 @@
+name: Deploy Seventh City Press to Cloudflare Pages
+
+on:
+  push:
+    branches: [main, cursor/ops-dashboard-3e24]
+    paths:
+      - "seventhcitypress/**"
+      - ".github/workflows/deploy-seventhcitypress.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-seventhcitypress
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Cloudflare
+    defaults:
+      run:
+        working-directory: seventhcitypress
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: seventhcitypress/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler pages deploy out --project-name=seventhcitypress --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN || secrets.CF_API_TOKEN || vars.CLOUDFLARE_API_TOKEN || vars.CF_API_TOKEN }}
+
+      - name: Purge Cloudflare cache
+        continue-on-error: true
+        run: |
+          ZONE_ID=$(curl -sf "https://api.cloudflare.com/client/v4/zones?name=seventhcitypress.com" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" | jq -r '.result[0].id')
+          curl -sf -X POST "https://api.cloudflare.com/client/v4/zones/${ZONE_ID}/purge_cache" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"purge_everything":true}'
+          echo "Cache purged for seventhcitypress.com"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN || secrets.CF_API_TOKEN || vars.CLOUDFLARE_API_TOKEN || vars.CF_API_TOKEN }}

@@ -35,6 +35,7 @@ export default function Footer() {
             <nav className="footer-links">
               <a href="/">Press Home</a>
               <a href="/contact/">Contact</a>
+              <a href="/privacy/">Privacy Policy</a>
               <a href="/press-kit/Masters_X_Press_Kit.pdf" download>Download Press Kit</a>
               <a href="https://jasoncholloway.com/about/">About the Author</a>
               <a href="https://jasoncholloway.com/chamber/research-archive/">Research Archive</a>

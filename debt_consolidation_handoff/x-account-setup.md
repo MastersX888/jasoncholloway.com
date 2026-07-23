@@ -79,11 +79,11 @@ You should see the branded OG image, title, and description.
 
 | Location | Instagram | Facebook | X |
 |----------|-----------|----------|---|
-| Footer (both sites) | ✅ | ✅ | ⏳ handle pending |
-| About page sidebar | ✅ | ✅ | ⏳ |
-| Contact page sidebar | ✅ | ✅ | ⏳ |
-| JSON-LD sameAs | ✅ | ✅ | ⏳ |
-| twitter:site meta | — | — | ⏳ |
+| Footer (both sites) | ✅ | ✅ | ✅ |
+| About page sidebar | ✅ | ✅ | ✅ |
+| Contact page sidebar | ✅ | ✅ | ✅ |
+| JSON-LD sameAs | ✅ | ✅ | ✅ |
+| twitter:site meta | — | — | ✅ |
 
 ---
 

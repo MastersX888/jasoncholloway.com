@@ -5,12 +5,11 @@
 
 export const SOCIAL_INSTAGRAM_URL = "https://www.instagram.com/jasonhollowaykc/";
 export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/jasonhollowaykc";
-/** Set when X account is live, e.g. "https://x.com/jasonhollowaykc" */
-export const SOCIAL_X_URL = "";
+export const SOCIAL_X_URL = "https://x.com/jasonhollowaykc";
 export const SOCIAL_YOUTUBE_URL = "";
 
 /** X @handle for twitter:site / twitter:creator (with or without @) */
-export const SOCIAL_X_HANDLE = "";
+export const SOCIAL_X_HANDLE = "jasonhollowaykc";
 
 export type SocialLink = {
   href: string;

@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",
+    description:
+      "The Stage Curtain formation. Jesse James. Route 66. Constant 58°F. William Masters tracing the branching pattern that appears in rivers, veins, trees, and lightning.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.png", alt: "Illustration: flowstone formations in Meramec Caverns, Missouri" }],
+  },
 };
 
 const faqs = [

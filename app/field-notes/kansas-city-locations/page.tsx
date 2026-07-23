@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Real Kansas City of Masters X: A Reader's Map | Field Notes",
+    description:
+      "Quality Hill, Hotel Phillips, KC Streetcar, West Bottoms, Miller Nichols Library. Every location in Masters X is real. The events are fiction.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/kansas-city-locations.png", alt: "Illustration: Kansas City skyline viewed from the West Bottoms bluffs" }],
+  },
 };
 
 const faqs = [

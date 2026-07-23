@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cymatics: Sound You Can See | Field Notes",
+    description:
+      "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge from nowhere — hexagons, stars, mandalas. Ernst Chladni documented it in 1787.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/cymatics.png", alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate" }],
+  },
 };
 
 const faqs = [

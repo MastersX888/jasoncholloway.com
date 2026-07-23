@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Devil's Bible: Why the Codex Gigas Was Made in Bohemia | Field Notes",
+    description:
+      "92 cm tall, 75 kg, made by one monk over decades. Emperor Rudolf II owned it. The Swedish army took it in 1648. The trilogy's prologue starts forty years after its completion.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/codex-gigas.png", alt: "Illustration: the full-page Devil illustration from the Codex Gigas" }],
+  },
 };
 
 const faqs = [

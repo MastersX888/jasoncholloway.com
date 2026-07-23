@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "What Test Pilots Saw from 70,000 Feet | Field Notes",
+    description:
+      "Above 99% of the atmosphere. Stars in daytime. Earth's curvature. The documented experience of U-2 pilots in the 1950s — and what William Masters claims he saw in 1956.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/u2-test-pilots.png", alt: "Illustration: view from 70,000 feet — deep black sky above, earth's curvature below" }],
+  },
 };
 
 const faqs = [

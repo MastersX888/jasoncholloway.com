@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge",
+    description:
+      "A real 13th-century manuscript promising instant knowledge through geometric figures. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png", alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria" }],
+  },
 };
 
 const faqs = [

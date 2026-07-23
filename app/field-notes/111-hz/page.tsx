@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     url: "https://jasoncholloway.com/field-notes/111-hz/",
     images: [{ url: "https://jasoncholloway.com/og/field-notes/111-hz.png", width: 1200, height: 630, alt: "Illustration: waveform diagram etched like a medieval manuscript" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",
+    description:
+      "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. A recurring resonant frequency across ancient stone structures. The honest explainer.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/111-hz.png", alt: "Illustration: waveform diagram etched like a medieval manuscript" }],
+  },
 };
 
 const faqs = [

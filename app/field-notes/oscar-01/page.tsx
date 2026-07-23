@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)",
+    description:
+      "60 feet underground. Two officers. Two keys out of reach. 150 Minuteman II missiles across Missouri. Oscar-01 is preserved — you can stand in the capsule where James Masters worked.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/oscar-01.png", alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground" }],
+  },
 };
 
 const faqs = [

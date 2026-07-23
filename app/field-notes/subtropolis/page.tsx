@@ -14,6 +14,13 @@ export const metadata: Metadata = {
     url: "https://jasoncholloway.com/field-notes/subtropolis/",
     images: [{ url: "https://jasoncholloway.com/og/field-notes/subtropolis.png", width: 1200, height: 630, alt: "Illustration: limestone pillars in an underground corridor" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",
+    description:
+      "270-million-year-old limestone, 1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/subtropolis.png", alt: "Illustration: limestone pillars in an underground corridor" }],
+  },
 };
 
 const faqs = [

@@ -13,6 +13,13 @@ export const metadata: Metadata = {
     url: "https://jasoncholloway.com/field-notes/voynich-manuscript/",
     images: [{ url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png", width: 1200, height: 630, alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript" }],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read | Field Notes",
+    description:
+      "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia. The real history behind Masters X.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png", alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript" }],
+  },
 };
 
 const faqs = [

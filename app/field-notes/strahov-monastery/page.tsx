@@ -20,6 +20,13 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague",
+    description:
+      "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings. And in the fiction: a sealed chamber beneath the Theological Hall since the thirteenth century.",
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png", alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall" }],
+  },
 };
 
 const faqs = [

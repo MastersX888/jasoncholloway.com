@@ -60,10 +60,26 @@ export const metadata: Metadata = {
     title: "Seventh City Press — Independent Literary Imprint",
     description:
       "Publisher of the Masters X Trilogy by Jason Carroll Holloway. Literary fiction where acoustic science, medieval manuscripts, and Kansas City's hidden geography converge.",
-    images: [{ url: "/og-image.png" }],
+    images: [
+      {
+        url: "https://seventhcitypress.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Seventh City Press — Independent Literary Imprint | Kansas City, Missouri",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Seventh City Press — Independent Literary Imprint",
+    description:
+      "Publisher of the Masters X Trilogy by Jason Carroll Holloway. Literary fiction where acoustic science, medieval manuscripts, and Kansas City's hidden geography converge.",
+    images: [
+      {
+        url: "https://seventhcitypress.com/og-image.png",
+        alt: "Seventh City Press — Independent Literary Imprint | Kansas City, Missouri",
+      },
+    ],
   },
   metadataBase: new URL("https://seventhcitypress.com"),
   verification: {

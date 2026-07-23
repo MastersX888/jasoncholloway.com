@@ -69,9 +69,26 @@ export const metadata: Metadata = {
     title: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
     description:
       "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Jason Carroll Holloway — Masters X Trilogy",
+    description:
+      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — Voynich Manuscript, Ars Notoria, 111 Hz.",
+    images: [
+      {
+        url: "https://jasoncholloway.com/opengraph-image",
+        alt: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
+      },
+    ],
   },
   metadataBase: new URL("https://jasoncholloway.com"),
   verification: {

@@ -136,7 +136,10 @@ export default function RootLayout({
                     contactType: "Press",
                     email: "press@seventhcitypress.com",
                   },
-                  sameAs: ["https://jasoncholloway.com/"],
+                  sameAs: [
+                    "https://jasoncholloway.com/",
+                    "https://www.facebook.com/profile.php?id=61592288371057",
+                  ],
                 },
               ],
             }),

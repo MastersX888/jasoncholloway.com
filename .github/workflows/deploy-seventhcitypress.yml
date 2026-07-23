@@ -34,6 +34,8 @@ jobs:
 
       - name: Build static export
         run: npm run build
+        env:
+          GOOGLE_SITE_VERIFICATION: ${{ secrets.GOOGLE_SITE_VERIFICATION_SCP || secrets.GOOGLE_SITE_VERIFICATION }}
 
       - name: Deploy to Cloudflare Pages
         run: npx wrangler pages deploy out --project-name=seventhcitypress --branch=main

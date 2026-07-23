@@ -36,6 +36,9 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+/** Set at build time via GOOGLE_SITE_VERIFICATION (GitHub secret GOOGLE_SITE_VERIFICATION_SCP). */
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION?.trim();
+
 export const metadata: Metadata = {
   title: {
     default: "Seventh City Press — Independent Literary Imprint",
@@ -89,6 +92,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://seventhcitypress.com"),
   verification: {
     yandex: "35271039e1472ca8",
+    ...(googleSiteVerification ? { google: googleSiteVerification } : {}),
   },
 };
 
@@ -105,6 +109,9 @@ export default function RootLayout({
         <SocialMeLinks />
         <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
         <meta name="yandex-verification" content="35271039e1472ca8" />
+        {googleSiteVerification ? (
+          <meta name="google-site-verification" content={googleSiteVerification} />
+        ) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

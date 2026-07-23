@@ -41,15 +41,13 @@ Seventh City Press is a **publisher without a public retail storefront**. When G
 
 Bulk import may still need a real address for verification even if hidden on Maps.
 
-### 3. Logo upload (manual — bulk CSV can't host local files)
+### 3. Logo (live URL — bulk import ready)
 
-Google's **Logo** column needs a **public URL**, not a local path. After import:
+The **Logo** column in `GOOGLE_BUSINESS_IMPORT.csv` points to:
 
-1. Business Profile Manager → **Seventh City Press** → **Edit profile**
-2. **Add profile photo** → upload `assets/scp-logo-profile-720.png`
-3. Or upload to `seventhcitypress.com` and paste URL in a later bulk update
+`https://seventhcitypress.com/brand/scp-logo-profile-720.png`
 
-**Recommended:** upload `scp-logo-profile-720.png` manually (720×720, square, heptagram on black).
+After deploy, confirm that URL loads in a browser. If bulk import rejects the URL, upload `assets/scp-logo-profile-720.png` manually in Business Profile Manager.
 
 ---
 

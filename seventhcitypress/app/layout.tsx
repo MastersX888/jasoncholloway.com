@@ -138,7 +138,8 @@ export default function RootLayout({
                   },
                   sameAs: [
                     "https://jasoncholloway.com/",
-                    "https://www.facebook.com/profile.php?id=61592288371057",
+                    "https://www.facebook.com/jasonhollowaykc",
+                    "https://www.instagram.com/jasonhollowaykc/",
                   ],
                 },
               ],

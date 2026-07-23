@@ -18,8 +18,8 @@ export const AUTHOR_AMAZON_STORE_URL =
  * X/Twitter:  https://x.com/<handle>
  * YouTube:    https://www.youtube.com/@<handle>
  */
-export const SOCIAL_INSTAGRAM_URL = ""; // e.g. "https://www.instagram.com/seventhcitypress/"
-export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61592288371057";
+export const SOCIAL_INSTAGRAM_URL = "https://www.instagram.com/jasonhollowaykc/";
+export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/jasonhollowaykc";
 export const SOCIAL_X_URL = ""; // e.g. "https://x.com/jasoncholloway"
 export const SOCIAL_YOUTUBE_URL = ""; // e.g. "https://www.youtube.com/@seventhcitypress"
 

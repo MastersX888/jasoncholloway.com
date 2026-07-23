@@ -6,7 +6,7 @@ export const AUTHOR_SITE_URL = "https://jasoncholloway.com/";
 export const IMPRINT_SITE_URL = "https://seventhcitypress.com/";
 
 export const SOCIAL_INSTAGRAM_URL = "https://www.instagram.com/jasonhollowaykc/";
-export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/jasonhollowaykc";
+export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61588710027163";
 export const SOCIAL_X_URL = "https://x.com/jasonhollowaykc";
 export const SOCIAL_PINTEREST_URL = "https://www.pinterest.com/seventhcitypress/";
 export const SOCIAL_YOUTUBE_URL = "";

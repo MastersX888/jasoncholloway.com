@@ -7,7 +7,7 @@ export const AUTHOR_SITE_URL = "https://jasoncholloway.com/";
 export const IMPRINT_SITE_URL = "https://seventhcitypress.com/";
 
 export const SOCIAL_INSTAGRAM_URL = "https://www.instagram.com/jasonhollowaykc/";
-export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/jasonhollowaykc";
+export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/profile.php?id=61588710027163";
 export const SOCIAL_X_URL = "https://x.com/jasonhollowaykc";
 export const SOCIAL_PINTEREST_URL = "https://www.pinterest.com/seventhcitypress/";
 export const SOCIAL_YOUTUBE_URL = "";
@@ -23,7 +23,7 @@ export type SocialLink = {
 
 const SOCIAL_CATALOG: SocialLink[] = [
   { href: SOCIAL_INSTAGRAM_URL, label: "Instagram", handle: "@jasonhollowaykc" },
-  { href: SOCIAL_FACEBOOK_URL, label: "Facebook", handle: "facebook.com/jasonhollowaykc" },
+  { href: SOCIAL_FACEBOOK_URL, label: "Facebook", handle: "Jason Carroll Holloway (Author Page)" },
   { href: SOCIAL_X_URL, label: "X", handle: "@jasonhollowaykc" },
   { href: SOCIAL_PINTEREST_URL, label: "Pinterest", handle: "pinterest.com/seventhcitypress" },
   { href: SOCIAL_YOUTUBE_URL, label: "YouTube", handle: "" },

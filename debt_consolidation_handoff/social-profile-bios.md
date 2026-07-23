@@ -13,7 +13,7 @@ Use these exactly. Character counts are included so nothing gets cut off.
 | Author site | https://jasoncholloway.com |
 | Publisher site | https://seventhcitypress.com |
 | Instagram | https://www.instagram.com/jasonhollowaykc/ |
-| Facebook | https://www.facebook.com/jasonhollowaykc |
+| Facebook | https://www.facebook.com/profile.php?id=61588710027163 |
 | X | https://x.com/jasonhollowaykc |
 | Pinterest | https://www.pinterest.com/seventhcitypress/ |
 

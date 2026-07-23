@@ -3,6 +3,7 @@ import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/fon
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { imprintSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/social";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -74,6 +75,9 @@ export const metadata: Metadata = {
     title: "Seventh City Press — Independent Literary Imprint",
     description:
       "Publisher of the Masters X Trilogy by Jason Carroll Holloway. Literary fiction where acoustic science, medieval manuscripts, and Kansas City's hidden geography converge.",
+    ...(xHandleForMetadata(SOCIAL_X_HANDLE)
+      ? { site: xHandleForMetadata(SOCIAL_X_HANDLE), creator: xHandleForMetadata(SOCIAL_X_HANDLE) }
+      : {}),
     images: [
       {
         url: "https://seventhcitypress.com/og-image.png",
@@ -136,11 +140,7 @@ export default function RootLayout({
                     contactType: "Press",
                     email: "press@seventhcitypress.com",
                   },
-                  sameAs: [
-                    "https://jasoncholloway.com/",
-                    "https://www.facebook.com/jasonhollowaykc",
-                    "https://www.instagram.com/jasonhollowaykc/",
-                  ],
+                  sameAs: imprintSameAs(),
                 },
               ],
             }),

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
+import SocialLinks from "@/components/layout/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About",
@@ -205,6 +206,10 @@ export default function AboutPage() {
                 <a href="mailto:jason@seventhcitypress.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
                   Contact Jason Directly
                 </a>
+              </div>
+
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
+                <SocialLinks title="Connect" />
               </div>
             </div>
           </div>

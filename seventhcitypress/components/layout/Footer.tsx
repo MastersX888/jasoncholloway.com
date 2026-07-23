@@ -1,16 +1,4 @@
-import {
-  SOCIAL_INSTAGRAM_URL,
-  SOCIAL_FACEBOOK_URL,
-  SOCIAL_X_URL,
-  SOCIAL_YOUTUBE_URL,
-} from "@/lib/data/social";
-
-const socialLinks = [
-  { href: SOCIAL_INSTAGRAM_URL, label: "Instagram" },
-  { href: SOCIAL_FACEBOOK_URL, label: "Facebook" },
-  { href: SOCIAL_X_URL, label: "X / Twitter" },
-  { href: SOCIAL_YOUTUBE_URL, label: "YouTube" },
-].filter((s) => s.href);
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,16 +17,9 @@ export default function Footer() {
             <p style={{ fontSize: "0.82rem", color: "var(--text-faint)" }}>
               press@seventhcitypress.com
             </p>
-            {socialLinks.length > 0 && (
-              <div style={{ marginTop: "1.25rem" }}>
-                <div className="footer-col-title">Follow</div>
-                <nav className="footer-links">
-                  {socialLinks.map((s) => (
-                    <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer">{s.label}</a>
-                  ))}
-                </nav>
-              </div>
-            )}
+            <div style={{ marginTop: "1.25rem" }}>
+              <SocialLinks />
+            </div>
           </div>
 
           <div>

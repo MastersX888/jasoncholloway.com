@@ -1,11 +1,15 @@
 /**
- * Social profile URLs — keep in sync with /lib/data/socialProfiles.ts (author site).
+ * Canonical social profile URLs — single source for footers, about/contact, JSON-LD.
+ * Keep seventhcitypress/lib/data/social.ts in sync when updating.
  */
 
 export const SOCIAL_INSTAGRAM_URL = "https://www.instagram.com/jasonhollowaykc/";
 export const SOCIAL_FACEBOOK_URL = "https://www.facebook.com/jasonhollowaykc";
+/** Set when X account is live, e.g. "https://x.com/jasonhollowaykc" */
 export const SOCIAL_X_URL = "";
 export const SOCIAL_YOUTUBE_URL = "";
+
+/** X @handle for twitter:site / twitter:creator (with or without @) */
 export const SOCIAL_X_HANDLE = "";
 
 export type SocialLink = {
@@ -22,16 +26,7 @@ export function getActiveSocialLinks(): SocialLink[] {
   ].filter((link) => Boolean(link.href));
 }
 
-export function imprintSameAs(): string[] {
-  return [
-    "https://jasoncholloway.com/",
-    ...(SOCIAL_FACEBOOK_URL ? [SOCIAL_FACEBOOK_URL] : []),
-    ...(SOCIAL_INSTAGRAM_URL ? [SOCIAL_INSTAGRAM_URL] : []),
-    ...(SOCIAL_X_URL ? [SOCIAL_X_URL] : []),
-    ...(SOCIAL_YOUTUBE_URL ? [SOCIAL_YOUTUBE_URL] : []),
-  ];
-}
-
+/** Normalize "@handle" → "handle" for Next.js Metadata API */
 export function xHandleForMetadata(handle: string): string | undefined {
   const trimmed = handle.trim();
   if (!trimmed) return undefined;

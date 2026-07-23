@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
+import { authorIsniIdentifier, authorSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/authorAuthority";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
@@ -83,6 +83,9 @@ export const metadata: Metadata = {
     title: "Jason Carroll Holloway — Masters X Trilogy",
     description:
       "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — Voynich Manuscript, Ars Notoria, 111 Hz.",
+    ...(xHandleForMetadata(SOCIAL_X_HANDLE)
+      ? { site: xHandleForMetadata(SOCIAL_X_HANDLE), creator: xHandleForMetadata(SOCIAL_X_HANDLE) }
+      : {}),
     images: [
       {
         url: "https://jasoncholloway.com/opengraph-image",

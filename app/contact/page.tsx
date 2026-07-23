@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
+import SocialLinks from "@/components/layout/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Contact & Press",
@@ -110,12 +111,16 @@ export default function ContactPage() {
               </div>
 
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <div className="label-cyan" style={{ marginBottom: "0.75rem" }}>Mailing Address</div>
+                <div className="label" style={{ marginBottom: "0.75rem" }}>Mailing Address</div>
                 <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.6, margin: 0 }}>
                   Seventh City Press<br />
                   9169 W State St #4418<br />
                   Garden City, ID 83714
                 </p>
+              </div>
+
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
+                <SocialLinks title="Connect" />
               </div>
             </div>
           </div>

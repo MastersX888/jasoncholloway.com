@@ -91,7 +91,7 @@ export default function StrahovMonasteryNote() {
       fiction={
         <>
           <p className="fn-body">
-            In <em>The Grimoire</em>, Volume II of the Masters X Trilogy, Andrew Vance presents his discovery of the Strahov preparation protocol: a curriculum of twenty-three texts, read at twenty-three desks, in a specific sequence, before the monks descended to the acoustic chamber beneath the Theological Hall. The library, in Andrew's reading, is not a repository but a preparation chamber — a structured progression through specific knowledge states required before the chamber below could be safely entered.
+            In <em>The Grimoire</em>, Volume II of the Masters X Trilogy, Andrew Chen presents his discovery of the Strahov preparation protocol: a curriculum of twenty-three texts, read at twenty-three desks, in a specific sequence, before the monks descended to the acoustic chamber beneath the Theological Hall. The library, in Andrew's reading, is not a repository but a preparation chamber — a structured progression through specific knowledge states required before the chamber below could be safely entered.
           </p>
           <p className="fn-body">
             The twenty-three-desk inventory, the preparation function, the sealed crypt, and everything that happens in that crypt are the trilogy's fiction. The library, the monastery, the order, the frescoes, and the chained manuscripts are exactly as documented.

@@ -1082,6 +1082,46 @@ ul, ol { list-style: none; }
 }
 .fn-body a:hover { color: #e0bc66; }
 
+/* Blog prose */
+.blog-prose { max-width: var(--max-w-prose); margin: 0 auto; }
+.blog-body {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+}
+.blog-body a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-decoration-color: var(--gold-dim);
+  text-underline-offset: 3px;
+}
+.blog-body a:hover { color: #e0bc66; }
+.blog-h1 { display: none; }
+.blog-h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--gold);
+  margin: 2rem 0 1rem;
+}
+.blog-h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 1.5rem 0 0.75rem;
+}
+.blog-dek {
+  font-style: italic;
+  color: var(--text-faint);
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+.blog-hr {
+  border: none;
+  border-top: 1px solid var(--border-faint);
+  margin: 2rem 0;
+}
+
 /* Field Note excerpt block */
 .fn-excerpt {
   border-left: 3px solid var(--gold-dim);

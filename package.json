@@ -9,7 +9,8 @@
     "build:ops": "NEXT_PUBLIC_OPS_ENABLED=true next build",
     "start": "next start",
     "lint": "eslint",
-    "sweep": "node scripts/daily-sweep.mjs"
+    "sweep": "node scripts/daily-sweep.mjs",
+    "content-preview": "node scripts/build-content-preview.mjs"
   },
   "dependencies": {
     "feed": "^5.2.1",

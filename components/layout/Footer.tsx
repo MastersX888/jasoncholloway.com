@@ -40,6 +40,7 @@ export default function Footer() {
             <div className="footer-col-title">Research & Field Notes</div>
             <nav className="footer-links">
               <Link href="/field-notes">Field Notes Hub</Link>
+              <Link href="/blog/">The Facts Behind the Fiction</Link>
               <Link href="/field-notes/subtropolis">SubTropolis</Link>
               <Link href="/field-notes/111-hz">111 Hz</Link>
               <Link href="/field-notes/voynich-manuscript">Voynich Manuscript</Link>

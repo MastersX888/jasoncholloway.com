@@ -120,7 +120,7 @@ export default function ContactPage() {
               </div>
 
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <SocialLinks title="Connect" />
+                <SocialLinks title="Connect" variant="full" />
               </div>
             </div>
           </div>

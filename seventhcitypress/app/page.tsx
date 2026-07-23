@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
+import SocialLinks from "@/components/layout/SocialLinks";
 import { authorIsniIdentifier, authorSameAs } from "../lib/authorAuthority";
 import styles from './press-page.module.css';
 
@@ -465,6 +466,9 @@ export default function PressPage() {
                 <Link href="/contact/" className="btn btn-outline" style={{ display: "inline-flex" }}>
                   Contact the Communications Desk
                 </Link>
+              </div>
+              <div style={{ maxWidth: "420px", margin: "2rem auto 0" }}>
+                <SocialLinks title="Connect" variant="full" />
               </div>
             </section>
 

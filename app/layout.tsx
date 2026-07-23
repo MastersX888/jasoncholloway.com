@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { authorIsniIdentifier, authorSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/authorAuthority";
+import { authorIsniIdentifier, authorSameAs, publisherSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/authorAuthority";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialMeLinks from "@/components/layout/SocialMeLinks";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -108,6 +109,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
+        <SocialMeLinks />
         <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
         <meta name="yandex-verification" content="998186f9ff7ecbd7" />
         <script
@@ -171,7 +173,8 @@ export default function RootLayout({
                     "@type": "ContactPoint",
                     "contactType": "General",
                     "email": "info@seventhcitypress.com"
-                  }
+                  },
+                  "sameAs": publisherSameAs()
                 }
               ]
             })

@@ -366,6 +366,20 @@ ul, ol { list-style: none; }
   transition: opacity 0.2s;
 }
 .footer-links a:hover { opacity: 1; }
+.social-links a.social-link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.social-link-handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.55;
+  letter-spacing: 0.02em;
+}
+.social-links a.social-link-row:hover .social-link-handle {
+  opacity: 0.85;
+}
 .footer-bottom {
   display: flex;
   align-items: center;

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
+import SocialLinks from "@/components/layout/SocialLinks";
 import WaveDivider from "@/components/ui/WaveDivider";
 import type { Metadata } from "next";
 
@@ -79,7 +80,7 @@ export default function Home() {
               <NewsletterForm compact={false} />
             </div>
 
-            <div className="hero-ctas animate-fade-up delay-3" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginBottom: "3.5rem" }}>
+            <div className="hero-ctas animate-fade-up delay-3" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginBottom: "1.5rem" }}>
               <Link href="/books/masters-x" className="btn btn-outline">
                 Explore the Catalog
               </Link>
@@ -87,6 +88,10 @@ export default function Home() {
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", display: "inline-block", marginRight: "0.4rem" }} />
                 Analysis Chamber
               </Link>
+            </div>
+
+            <div className="animate-fade-up delay-3" style={{ maxWidth: "380px", marginBottom: "3.5rem" }}>
+              <SocialLinks title="Connect" variant="full" />
             </div>
 
             <div className="artifact-strip animate-fade-up delay-4" role="list">

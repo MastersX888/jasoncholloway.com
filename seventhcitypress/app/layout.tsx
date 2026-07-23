@@ -3,6 +3,7 @@ import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/fon
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import SocialMeLinks from "@/components/layout/SocialMeLinks";
 import { imprintSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/social";
 
 const cormorantGaramond = Cormorant_Garamond({
@@ -101,6 +102,7 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <SocialMeLinks />
         <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
         <meta name="yandex-verification" content="35271039e1472ca8" />
         <script

@@ -13,16 +13,20 @@ export {
   SOCIAL_INSTAGRAM_URL,
   SOCIAL_FACEBOOK_URL,
   SOCIAL_X_URL,
+  SOCIAL_PINTEREST_URL,
   SOCIAL_YOUTUBE_URL,
   SOCIAL_X_HANDLE,
   getActiveSocialLinks,
+  socialMeUrls,
   xHandleForMetadata,
+  publisherSameAs,
 } from "@/lib/data/socialProfiles";
 
 import {
   SOCIAL_INSTAGRAM_URL,
   SOCIAL_FACEBOOK_URL,
   SOCIAL_X_URL,
+  SOCIAL_PINTEREST_URL,
   SOCIAL_YOUTUBE_URL,
 } from "@/lib/data/socialProfiles";
 
@@ -36,6 +40,7 @@ export const authorSameAs = [
   ...(SOCIAL_INSTAGRAM_URL ? [SOCIAL_INSTAGRAM_URL] : []),
   ...(SOCIAL_FACEBOOK_URL ? [SOCIAL_FACEBOOK_URL] : []),
   ...(SOCIAL_X_URL ? [SOCIAL_X_URL] : []),
+  ...(SOCIAL_PINTEREST_URL ? [SOCIAL_PINTEREST_URL] : []),
   ...(SOCIAL_YOUTUBE_URL ? [SOCIAL_YOUTUBE_URL] : []),
 ] as const;
 

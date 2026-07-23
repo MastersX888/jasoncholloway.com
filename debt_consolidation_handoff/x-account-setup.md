@@ -29,8 +29,10 @@ Assets are in the repo (also on the live site after deploy):
 
 | Asset | File | Dimensions |
 |-------|------|------------|
-| Profile photo | `public/social/x-profile-400.png` | 400×400 (cream heptagram mark) |
+| Profile photo | `public/social/x-profile-400.png` | 400×400 (author headshot — same as Instagram / About page) |
 | Header banner | `public/social/x-header-1500x500.png` | 1500×500 (SCP wordmark strip) |
+
+**Author vs publisher:** `@jasonhollowaykc` is your personal author account — use your headshot for the profile photo and SCP branding in the header. Reserve the cream heptagram mark for publisher accounts (Seventh City Press Facebook Page, Pinterest).
 
 Live URLs after deploy:
 - https://jasoncholloway.com/social/x-profile-400.png
@@ -87,7 +89,7 @@ You should see the branded OG image, title, and description.
 
 ## Brand consistency checklist
 
-- [ ] Profile = cream heptagram mark (same as Pinterest)
+- [ ] Profile = author headshot (same as Instagram and `jasoncholloway.com/about/`)
 - [ ] Header = cream wordmark strip (same as email signature)
 - [ ] Website link = jasoncholloway.com
 - [ ] Bio mentions Seventh City Press + Masters X

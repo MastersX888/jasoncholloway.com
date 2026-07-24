@@ -2,50 +2,62 @@
 
 *The Facts Behind the Fiction, No. 6 · Jason Carroll Holloway · Seventh City Press*
 
-Thriller architecture usually requires three factions. One to guard the secret, one to exploit it, one to destroy it — the triangle generates plot the way a three-phase motor generates torque, and readers of the genre can feel the machinery even when they enjoy it. So when readers assume the Masters X Trilogy's triangle — the Keepers, the Custodians, the Completion Sect — was engineered for torque, the assumption is fair. It also happens to be wrong in the way this whole series exists to document.
+The document that gave the Masters X Trilogy its politics is a translation. In 1984, American intelligence took a Chinese government journal on paranormal research, rendered it into English for internal circulation, and filed it. It sits today in the CIA's declassified reading room under the RDP96-00792R designation, alongside a great deal of similar material from the same program years.
 
-I didn't invent the three factions. I found them in a declassified CIA file, already arguing.
+Readers assume the trilogy's three factions — the Keepers, the Custodians, the Completion Sect — were engineered for plot. Three-way conflicts are how thrillers manufacture pressure, and the assumption is fair. It is also backwards. I did not invent the three positions. I found them in the file, already arguing.
 
-## The document
+## One government published. The other classified.
 
-The file carries the designation CIA-RDP96-00792R, and it is a translation, dated to 1984: Langley rendering a Chinese government journal on paranormal research into English for internal circulation. Sit with what that sentence contains. On one side, a state Human Science Research Commission — a peer-reviewed journal, national conferences, funded experiments, the full institutional apparatus of a government studying claims of extraordinary human capacities *openly*. On the other side, an intelligence agency translating that open literature and filing it under classification. The line I kept returning to in my research notes is the one the trilogy eventually absorbed whole: both sides were studying the same thing. One government published. The other classified.
+Start with what the document *is*, because its shape is the whole argument.
 
-That asymmetry — openness versus secrecy as *policies* toward the identical subject — is the political physics of the entire trilogy, and I found it in the file, not the other way around.
+On one side sits a state research establishment studying claims of extraordinary human capacities in the open: a commission, conferences, funded experiments, a journal you could subscribe to. On the other side sits an intelligence agency that reads the journal, translates it, and stamps the translation.
 
-## Three camps, on the record
+Two governments, one subject, opposite policies. One published. The other classified the act of reading.
 
-Inside the translated material, the debate has three recognizable positions, and I want to describe them as the document presents them rather than as the fiction stylizes them.
+That asymmetry is the political physics of the entire trilogy, and it came from the record rather than from me. Everything the Keepers and the Custodians argue about across eight hundred pages is a costume drama built on that one structural fact: secrecy and daylight are *policies*, chosen, and the choosing is where the story lives.
 
-The first camp is the skeptics — those who condemned the research as "feudal sorcery," a phrase carrying the full ideological weight of a modernizing state embarrassed by its own countryside. Their program was suppression: stop the work, discredit the workers, protect the institutions from contamination.
+## Three positions in the material
 
-The second camp is the preservers — researchers and officials who argued that if the phenomena were real, the only defensible response was open verification: publish the methods, replicate the results, let the work survive or die in daylight.
+Inside the translated literature, the debate sorts into three recognizable postures. I want to describe them as a reader of the file rather than as a novelist who needed them to be tidy.
 
-The third camp does not argue in the document so much as *attend*: the military interest, present wherever a state studies capacities that might be applied.
+The first is suppression. The research drew condemnation as superstition — "feudal sorcery" is the phrase that recurs in the era's polemics, carrying the full ideological weight of a modernizing state embarrassed by its own countryside. The program these critics wanted was straightforward: stop the work, discredit the workers, protect the institutions.
 
-Suppress. Verify. Weaponize. In the trilogy those camps become the Custodians, the Keepers, and the Completion Sect — institutionalized, mythologized, given eight centuries of backstory. But when Nadia briefs Blake on the factions' logic, she is doing historiography, not invention. The novel says as much through her line: every government that discovered this made the same choice — meaning, faced the same three-way fork the 1984 file preserves.
+The second is verification. Other researchers and officials argued that if the phenomena were real, the only defensible response was to publish the methods, replicate the results, and let the claims live or die in daylight.
+
+The third does not argue so much as *attend*. Military and security interest is present wherever a state studies a capacity that might be applied, and it is present here — most visibly in the fact that the translation exists at all.
+
+Suppress, verify, weaponize. In the novels those become the Custodians, the Keepers, and the Completion Sect, institutionalized and given eight centuries of invented backstory. When Nadia briefs Blake on the factions' logic, she is doing historiography.
+
+One caveat, and it is not a small one: the three-way sort is my reading of the translated material, not a heading inside it. The document is public. A reader who pulls it from the reading room and comes back with a better taxonomy will have earned the correction, and I would rather print that than defend a tidy structure.
 
 ## Why a translation is stranger than a report
 
-It is worth pausing on the document's genre, because the genre is what made it novelistically irresistible. CIA-RDP96-00792R is not an intelligence assessment of paranormal claims; the Agency produced those too, and they read as you'd expect — findings, confidence levels, recommendations. This is a *translation*: the raw open literature of one government, carried across a language barrier and filed by another. Which means the file preserves the original debate in its own voices — the skeptics' polemics, the preservers' methodological appeals, the institutional throat-clearing — rather than an analyst's summary of them. For a novelist, that difference is everything. A summary gives you conclusions; a translation gives you *people arguing*, and factions are made of people arguing. The three camps in my trilogy have the texture they have because their source was never a finding. It was a transcript of a fight.
+The genre is what made the file novelistically irresistible.
+
+Intelligence agencies produce assessments of paranormal claims — findings, confidence levels, recommendations — and those read exactly as you would expect. This is not that. This is raw open literature from one government, carried across a language barrier and filed by another.
+
+A summary gives you conclusions. A translation gives you people arguing: the skeptics' polemics, the methodologists' appeals, the institutional throat-clearing, all preserved in their own voices because nobody bothered to smooth them out. Factions are made of people arguing. The three in my trilogy have the texture they have because their source was never a finding. It was a transcript of a fight.
 
 ## The Army's own file
 
-The 1984 translation is not the only declassified document in the trilogy's load-bearing wall. The other is American: the Gateway Process assessment — formally, the *Analysis and Assessment of Gateway Process* — a real U.S. Army evaluation of consciousness-alteration methods, examining the Monroe Institute's audio-driven techniques and attempting to construct a theoretical account of how such methods might work. Whatever a reader concludes about its physics, the document's existence is the point: the American security establishment did not merely spy on other governments' consciousness research; it commissioned an internal assessment of its own.
+The American counterpart is the Gateway Process assessment — formally the *Analysis and Assessment of Gateway Process*, prepared for the U.S. Army in 1983 — an internal evaluation of consciousness-alteration methods that examines the Monroe Institute's audio-driven techniques and attempts a theoretical account of how they might work.
 
-Readers of the first essay in this series will recognize where the Gateway lineage surfaces in the trilogy: the 136.6 Hz rung of the frequency ladder, which the novels map to the Monroe focus-level framework. The rung's referent is real — the framework exists, the assessment exists — and the rung's *grade* is the ladder's weakest: a documented body of practice, not a documented body of findings. The distinction is the whole reason the ladder is graded at all.
+Whatever a reader concludes about its physics, and the physics is where most readers get off the bus, the document's existence is the point. The American security establishment did not only read other governments' consciousness research. It commissioned its own assessment.
+
+This is where the trilogy's 136.6 Hz rung comes from — the frequency the novels map to the Monroe focus-level framework, and the weakest rung on the ladder I laid out in [The Frequency That Was Already There](https://jasoncholloway.com/blog/the-frequency-that-was-already-there/). The framework exists. The assessment exists. Neither is a body of scientific findings, and the novels do not get to pretend otherwise.
 
 ## The fourth answer
 
-Here is where the fiction stops transcribing the record and starts arguing with it.
+Here the fiction stops transcribing and starts arguing.
 
-The historical debate offers three answers to the discovery of a dangerous capacity: suppress it, verify it, weaponize it. The trilogy's ending proposes a fourth, and it arrives not as a battle but as a file format. Andrew Chen's Distribution File: two hundred forty-seven pages — preparation protocols, chamber specifications, harmonic derivations, a facilitator's manual, an acoustic appendix — released at midnight under CC0, the license that reserves nothing. In the novel's accounting: 1.2 million downloads in the first week, forty-seven countries, three independent replications.
+The record offers three responses to a dangerous capacity: suppress it, verify it, weaponize it. The trilogy proposes a fourth, and it arrives not as a battle but as a file format. Andrew Chen's Distribution File — two hundred forty-seven pages of preparation protocols, chamber specifications, harmonic derivations, a facilitator's manual, and an acoustic appendix — goes onto the open internet at midnight under CC0, the license that reserves nothing.
 
-Chen's design brief, stated inside the fiction, is the trilogy's thesis about secrets generally: the opposite of classification is not leaking. A leak preserves the scarcity that gives a secret its power; it merely relocates the power. The opposite of classification is making the work boring — reproducible, documented, free — until there is nothing left to guard and no one left to guard it from. The file cannot be un-released. That is the fourth answer, and it is fiction: no such file exists, no such release happened, and the grade on every download statistic is *invented*. But it is fiction constructed as a direct reply to two real declassified documents, which is a different thing from fiction constructed in a vacuum, and the difference is the reason this essay exists.
+Chen's design brief is the trilogy's thesis in one move: the opposite of classification is not leaking. A leak preserves the scarcity that gives a secret its power and merely relocates it to whoever leaked. The opposite of classification is making the work boring — reproducible, documented, free — until there is nothing left to guard and nobody left to guard it from.
 
-## The seam, kept visible
+None of that happened. No such file exists, no such release occurred, and every download figure in the novel's front matter is invented down to the digit. But it is fiction written as a direct reply to two real declassified documents, which is a different thing from fiction written in a vacuum.
 
-The grade card, then. The 1984 CIA translation of the Chinese journal: real and declassified. The three camps inside it — suppress, verify, weaponize: on the record. The Gateway Process assessment: real and declassified. The Monroe framework it evaluates: a real body of practice, claims ungraded by science. The Keepers, the Custodians, the Completion Sect, their eight centuries of history, Nadia's briefing, Andrew Chen, and every page of the Distribution File: invented — with the factions' *logic* transcribed from the documented debate and only the names, as one of our research notes puts it, being ours.
+What is in the world: the 1984 translation and its debate, the Gateway assessment, the Monroe framework as a documented body of practice. What is in the novels: the Keepers, the Custodians, the Completion Sect, their eight centuries, Nadia's briefing, Andrew Chen, and every page of the Distribution File. The factions' logic is transcribed. Only the names are ours.
 
-The encyclopedia will shelve these side by side: the Distribution File excerpted honestly as the artifact it is, with the real declassified sources annotated beside it, so a reader can hold the fiction in one hand and its documentary parents in the other. That is the whole editorial method, applied to the trilogy's politics. Until it prints, the research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/), and the books — including the omnibus, where the Distribution File runs complete — are at [jasoncholloway.com](https://jasoncholloway.com/books/masters-x/).
+The research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/). The books — including the omnibus, where the Distribution File runs complete — are at [jasoncholloway.com/books/masters-x/](https://jasoncholloway.com/books/masters-x/).
 
 The facts are in the files. The fiction is in the books.

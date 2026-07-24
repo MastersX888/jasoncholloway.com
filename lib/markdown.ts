@@ -8,66 +8,42 @@ function escapeHtml(s: string): string {
     .replace(/"/g, "&quot;");
 }
 
-/** Site-ready closing: Field Notes + books only (no encyclopedia announce). */
+/**
+ * Site-ready copy: Field Notes + books only. The encyclopedia is unannounced, so
+ * any sentence naming it is dropped before render as a guard against drafts that
+ * reintroduce the CTA. Paragraphs left empty by the filter are removed.
+ */
 export function siteReadyMarkdown(md: string): string {
+  const mentionsUnannounced = (sentence: string) =>
+    /Masters X Universe Encyclopedia/i.test(sentence);
+
   return md
-    .replace(
-      /The full apparatus — tables, sources, and every grade — arrives in the Masters X Universe Encyclopedia\. Until then, /g,
-      ""
-    )
-    .replace(
-      /The full apparatus — the entry on the Ars Notoria, the notae plates, the sources, and the honest grades — arrives in the Masters X Universe Encyclopedia\. Until then, /g,
-      ""
-    )
-    .replace(
-      /Essay One of the encyclopedia, "Sound Into Form," walks this whole chain with sources graded line by line, alongside entries on the Strahov discs and Tanaka's protocols\. Until it prints, /g,
-      ""
-    )
-    .replace(
-      /The full five-tradition essay, with sources, arrives in the Masters X Universe Encyclopedia; /g,
-      ""
-    )
-    .replace(
-      /The full entry — with the parallel table and every source — arrives in the Masters X Universe Encyclopedia\. /g,
-      ""
-    )
-    .replace(
-      /The encyclopedia will shelve these side by side:[\s\S]*?That is the whole editorial method, applied to the trilogy's politics\. Until it prints, /g,
-      ""
-    )
-    .replace(
-      /The full entries — Kansas City and Quality Hill, Moreau, the church research file — arrive in the Masters X Universe Encyclopedia\. /g,
-      ""
-    )
-    .replace(
-      /Every one of those essays ran on the same rule, and it is the rule the trilogy exists to argue for: label the seam\. What was measured, what was documented, what was invented — kept distinct, kept public, kept checkable\. The full apparatus arrives in the Masters X Universe Encyclopedia from Seventh City Press\. /g,
-      "Every one of those essays ran on the same rule, and it is the rule the trilogy exists to argue for: label the seam. What was measured, what was documented, what was invented — kept distinct, kept public, kept checkable. "
-    )
-    .replace(
-      /The two-register rule that governs the encyclopedia, the Field Notes, and these essays/g,
-      "The two-register rule that governs the Field Notes and these essays"
-    )
-    .replace(/for the encyclopedia's bibliography/g, "in the research archive")
-    .replace(/the encyclopedia's entry on William Masters/g, "the Field Notes entry on William Masters")
-    .replace(/the encyclopedia's honesty rule/g, "the Field Notes honesty rule")
-    .replace(/the encyclopedia's job/g, "the Field Notes job")
-    .replace(
-      /Which brings me to the coda, and a look inside the encyclopedia project this whole series has been trailing\.[\s\S]*?A fictional document about ending secrecy deserves, of all things, transparent packaging\.\n\n/g,
-      ""
-    );
+    .split("\n")
+    .map((line) => {
+      if (!mentionsUnannounced(line)) return line;
+      const kept = line
+        .split(/(?<=[.!?])\s+/)
+        .filter((sentence) => !mentionsUnannounced(sentence))
+        .join(" ")
+        .trim();
+      return kept;
+    })
+    .filter((line, i, lines) => {
+      const isBlank = line.trim() === "";
+      return !(isBlank && lines[i - 1]?.trim() === "");
+    })
+    .join("\n");
 }
 
 export function markdownToHtml(md: string): string {
   const lines = md.split("\n");
   const out: string[] = [];
-  let inParagraph = false;
   let paragraph: string[] = [];
 
   const flushParagraph = () => {
     if (paragraph.length === 0) return;
     out.push(`<p class="blog-body">${inlineFormat(paragraph.join(" "))}</p>`);
     paragraph = [];
-    inParagraph = false;
   };
 
   const inlineFormat = (text: string): string => {
@@ -112,7 +88,6 @@ export function markdownToHtml(md: string): string {
       out.push(`<p class="blog-dek">${inlineFormat(trimmed.slice(1, -1))}</p>`);
       continue;
     }
-    inParagraph = true;
     paragraph.push(trimmed);
   }
   flushParagraph();

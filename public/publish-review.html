@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publish Review — The Facts Behind the Fiction</title>
+<style>
+  :root {
+    --bg:#08080F; --surface:#13131E; --surface2:#191926; --border:#272740;
+    --text:#EDE9DA; --muted:#B8B4C8; --gold:#D4AA52;
+    --hold:#ef4444; --verify:#f59e0b; --ready:#22c55e;
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); line-height:1.75;
+         font-family:Georgia,'Iowan Old Style',serif; }
+  .wrap { max-width:820px; margin:0 auto; padding:2rem 1.25rem 6rem; }
+  h1 { font-size:1.9rem; color:var(--gold); margin:0 0 .4rem; }
+  .subtitle { color:var(--muted); font-size:.9rem; margin:0 0 2rem; }
+  .panel { background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--gold);
+           padding:1.1rem 1.4rem; border-radius:4px; margin-bottom:1.25rem; }
+  .panel h2 { margin:0 0 .6rem; font-size:1rem; color:var(--gold); letter-spacing:.02em; }
+  .panel ul { margin:0; padding-left:1.15rem; }
+  .panel li { margin:.4rem 0; font-size:.92rem; }
+  .panel.warn { border-left-color:var(--hold); }
+  .toolbar { position:sticky; top:0; z-index:20; background:var(--bg); border-bottom:1px solid var(--border);
+             padding:.7rem 0; margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:.45rem; align-items:center; }
+  .toolbar button { background:var(--surface); border:1px solid var(--border); color:var(--text);
+                    padding:.38rem .8rem; border-radius:4px; cursor:pointer; font-size:.82rem;
+                    font-family:system-ui,sans-serif; }
+  .toolbar button:hover { border-color:var(--gold); }
+  .toolbar button.active { border-color:var(--gold); color:var(--gold); }
+  .spacer { flex:1; }
+  .progress { font-family:system-ui,sans-serif; font-size:.78rem; color:var(--muted); }
+  .legend { display:flex; gap:1.1rem; flex-wrap:wrap; font-size:.78rem; color:var(--muted);
+            margin-bottom:1.75rem; font-family:system-ui,sans-serif; }
+  .badge { font-family:system-ui,sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.06em;
+           padding:.16rem .5rem; border-radius:3px; vertical-align:middle; }
+  .badge-ready { background:rgba(34,197,94,.18); color:var(--ready); }
+  .badge-hold { background:rgba(239,68,68,.18); color:var(--hold); }
+  .badge-verify { background:rgba(245,158,11,.18); color:var(--verify); }
+  .toc { background:var(--surface); border:1px solid var(--border); border-radius:4px;
+         padding:1rem 1.25rem; margin-bottom:2rem; }
+  .toc strong { color:var(--gold); font-size:.85rem; font-family:system-ui,sans-serif;
+                letter-spacing:.05em; display:block; margin-bottom:.5rem; }
+  .toc a { color:var(--muted); text-decoration:none; display:block; padding:.18rem 0; font-size:.88rem; }
+  .toc a:hover { color:var(--gold); }
+  .toc .done::after { content:" ✓"; color:var(--ready); }
+  h2.section { color:var(--gold); font-size:1.25rem; margin:3rem 0 1rem; padding-top:1.1rem;
+               border-top:1px solid var(--border); }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:4px;
+          margin-bottom:1.6rem; overflow:hidden; }
+  .card.status-hold { border-left:4px solid var(--hold); }
+  .card.status-verify { border-left:4px solid var(--verify); }
+  .card.status-ready { border-left:4px solid var(--ready); }
+  .card.decided-approve { border-left-color:var(--ready); }
+  .card.decided-changes { border-left-color:var(--verify); }
+  .card.decided-hold { border-left-color:var(--hold); }
+  .card-header { padding:1.05rem 1.35rem; background:var(--surface2); border-bottom:1px solid var(--border); }
+  .card-header h3 { margin:0; font-size:1.08rem; line-height:1.45; }
+  .num { color:var(--gold); font-family:system-ui,sans-serif; font-size:.72rem; letter-spacing:.08em;
+         display:block; margin-bottom:.2rem; }
+  .meta { margin:.4rem 0 0; font-size:.8rem; color:var(--muted); font-family:system-ui,sans-serif; }
+  .url { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.76rem; }
+  .note { margin:.6rem 0 0; padding:.6rem .75rem; background:rgba(239,68,68,.09);
+          border-left:2px solid var(--hold); font-size:.85rem; color:#fca5a5; font-style:italic; }
+  .card-body { padding:1.4rem 1.5rem; }
+  .prose h3 { color:var(--gold); font-size:1.35rem; margin:0 0 .3rem; }
+  .prose h4 { color:var(--gold); font-size:1.02rem; margin:1.9rem 0 .5rem; }
+  .prose h5 { color:var(--text); font-size:.94rem; margin:1.4rem 0 .4rem;
+              font-family:system-ui,sans-serif; letter-spacing:.03em; }
+  .prose p { margin:.85rem 0; }
+  .prose a { color:var(--gold); }
+  .prose em { color:var(--muted); }
+  .prose code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.85em;
+                background:rgba(255,255,255,.06); padding:.1rem .3rem; border-radius:3px; }
+  .prose hr { border:none; border-top:1px solid var(--border); margin:1.8rem 0; }
+  .prose ul, .prose ol { margin:.8rem 0; padding-left:1.3rem; }
+  .prose li { margin:.35rem 0; }
+  .prose table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.86rem;
+                 font-family:system-ui,sans-serif; }
+  .prose th, .prose td { border:1px solid var(--border); padding:.45rem .6rem; text-align:left;
+                         vertical-align:top; }
+  .prose th { background:var(--surface2); color:var(--gold); font-weight:600; }
+  .prose blockquote { margin:.9rem 0; padding:.9rem 1.1rem; background:var(--surface2);
+                      border-left:3px solid var(--gold); border-radius:0 3px 3px 0; position:relative; }
+  .prose blockquote p { margin:.4rem 0; }
+  .social blockquote::after { content:attr(data-chars) " chars";
+    position:absolute; top:.45rem; right:.6rem; font-family:system-ui,sans-serif; font-size:.66rem;
+    color:var(--muted); background:var(--bg); padding:.1rem .4rem; border-radius:3px; }
+  .signoff { display:flex; flex-wrap:wrap; align-items:center; gap:.6rem;
+             padding:.85rem 1.35rem; background:var(--surface2); border-top:1px solid var(--border);
+             font-family:system-ui,sans-serif; font-size:.82rem; }
+  .signoff-label { color:var(--muted); margin-right:.3rem; }
+  .signoff .opt { display:inline-flex; align-items:center; gap:.3rem; cursor:pointer;
+                  padding:.25rem .6rem; border:1px solid var(--border); border-radius:4px; }
+  .signoff .opt:hover { border-color:var(--gold); }
+  .signoff .approve { color:var(--ready); }
+  .signoff .changes { color:var(--verify); }
+  .signoff .reject { color:var(--hold); }
+  .signoff textarea { flex:1 1 100%; background:var(--bg); color:var(--text); border:1px solid var(--border);
+                      border-radius:4px; padding:.5rem .6rem; font-family:inherit; font-size:.82rem;
+                      resize:vertical; }
+  .hidden { display:none !important; }
+  @media print {
+    body { background:#fff; color:#111; }
+    .toolbar, .signoff, .toc { display:none; }
+    .card, .panel { background:#fff; border:1px solid #ccc; break-inside:avoid; }
+    .card-header { background:#f4f4f4; }
+    h1, h2.section, .prose h3, .prose h4 { color:#222; }
+    a { color:#222; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Publish Review</h1>
+  <p class="subtitle">The Facts Behind the Fiction · Jason Carroll Holloway · Seventh City Press · Generated 2026-07-24</p>
+
+  <div class="panel">
+    <h2>What you are approving</h2>
+    <ul>
+      <li><strong>7 blog essays</strong>, fully revised through the three-pass audit, ready for <code>jasoncholloway.com/blog/</code></li>
+      <li><strong>7 social sets</strong> (X, Bluesky, Instagram, and LinkedIn on pillar essays), each written from the revised essay it links to</li>
+      <li><strong>Essay 05 is shown but held</strong> — unrevised, unrouted, and excluded from social</li>
+    </ul>
+  </div>
+
+  <div class="panel warn">
+    <h2>Correction on the Billings research file</h2>
+    <ul>
+      <li><code>ROGER_BILLINGS_MASTERS_X_ANALYSIS.md</code> could not be restored from git. I scanned all 134 commits in this repository and the file has never been committed here.</li>
+      <li>It is listed in <code>content_fable_handoff/package/reference/universe_memory/01_RESEARCH_CATALOG.md</code> as a 12 KB file in your research archive, which means it lives on your machine rather than in this repo.</li>
+      <li>Essay 05 stays on hold until you supply that file or confirm its claims from the public record directly.</li>
+    </ul>
+  </div>
+
+  <div class="legend">
+    <span><span class="badge badge-ready">READY</span> revised and verified</span>
+    <span><span class="badge badge-hold">HOLD</span> do not publish</span>
+    <span>Character counts appear on every social post</span>
+    <span>Your decisions and notes save in this browser</span>
+  </div>
+
+  <div class="toolbar">
+    <button class="active" data-filter="all">Everything</button>
+    <button data-filter="blog">Blog only</button>
+    <button data-filter="social">Social only</button>
+    <button data-filter="hold">Holds</button>
+    <button data-filter="undecided">Undecided</button>
+    <span class="spacer"></span>
+    <span class="progress" id="progress"></span>
+    <button id="export">Copy decisions</button>
+    <button onclick="window.print()">Print</button>
+  </div>
+
+  <nav class="toc">
+    <strong>BLOG — in publish order</strong>
+    <a href="#blog-01" data-toc="blog-01">1. Essay 01 — The Frequency That Was Already There</a><a href="#blog-03" data-toc="blog-03">2. Essay 03 — Sound Into Form: What Hans Jenny Actually Proved</a><a href="#blog-04" data-toc="blog-04">3. Essay 04 — Why Kansas City? The Ground Itself Is Significant</a><a href="#blog-02" data-toc="blog-02">4. Essay 02 — The Grimoire That Was Actually a Study Aid</a><a href="#blog-07" data-toc="blog-07">5. Essay 07 — The Stone Remembers: A Fire in Westport</a><a href="#blog-06" data-toc="blog-06">6. Essay 06 — Three Factions, One Declassified Document</a><a href="#blog-08" data-toc="blog-08">7. Essay 08 — A Document That Cannot Be Un-Released</a>
+    <a href="#blog-05" data-toc="blog-05">— Essay 05 — The Man Who Built a City Under Zion (HOLD)</a>
+    <strong style="margin-top:.9rem">SOCIAL</strong>
+    <a href="#social-01" data-toc="social-01">Essay 01 — The Frequency That Was Already There</a><a href="#social-03" data-toc="social-03">Essay 03 — Sound Into Form</a><a href="#social-04" data-toc="social-04">Essay 04 — Why Kansas City?</a><a href="#social-02" data-toc="social-02">Essay 02 — The Grimoire That Was a Study Aid</a><a href="#social-07" data-toc="social-07">Essay 07 — The Stone Remembers</a><a href="#social-06" data-toc="social-06">Essay 06 — Three Factions, One Declassified Document</a><a href="#social-08" data-toc="social-08">Essay 08 — A Document That Cannot Be Un-Released</a>
+  </nav>
+
+  <h2 class="section" data-group="blog">Blog essays</h2>
+  
+<article class="card status-ready" id="blog-01" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 01</span> The Frequency That Was Already There <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 1 of 7 · 889 words · ~4 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/the-frequency-that-was-already-there/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>The Frequency That Was Already There</h3>
+<p><em>The Facts Behind the Fiction, No. 1 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>Every page of the Distribution File carries the same footer: f = 111.2 Hz. Two hundred forty-seven pages, one stamp. Readers ask about it more than anything else in the trilogy. Where did the number come from? Is it real?</p>
+<p>The number is fiction — but only by one decimal place. The stone underneath it was measured before I started writing.</p>
+<h4>What was actually measured</h4>
+<p>Archaeoacoustics is a modest field. Researchers record how sound behaves in ancient built spaces — resonant frequencies, reverberation, standing waves — and ask whether those properties were designed or incidental. The careful practitioners make careful claims. That is why the field is worth taking seriously.</p>
+<p>The site everyone cites is the Ħal-Saflieni Hypogeum in Malta: an underground temple complex carved from limestone around 3600–2500 BCE, now a UNESCO World Heritage Site limited to eighty visitors per day. In the Oracle Chamber, researchers have documented a pronounced resonance around 110–111 Hz. A male voice chanting in that range produces an intense reverberant effect. Cook, Pajot, and Leuchter (2008) reported a shift in prefrontal activity in subjects exposed to that resonance. One study. Small sample. That caveat belongs in every sentence that cites it, and it belongs in mine.</p>
+<p>Malta is not alone. Paul Devereux and colleagues measured resonances at Neolithic chambers across Britain and Ireland and found peak frequencies consistently in the 95–120 Hz band. Aaron Watson and David Keating did the same at Camster Round in Scotland. Iegor Reznikoff and Michel Dauvois observed that Palaeolithic paintings at Lascaux and other French caves cluster disproportionately in zones of highest acoustic resonance — published in 1988, received by mainstream archaeology with interest and caution in roughly equal measure.</p>
+<p>I assembled the full record — sites, studies, citations, and an FAQ — in the <a href="https://jasoncholloway.com/field-notes/111-hz/" target="_blank" rel="noopener">111 Hz Field Note</a>. The short version: a recurring resonance near 110 Hz in ancient stone enclosures is documented. Whether anyone intended it is not.</p>
+<h4>Why the fiction adds a decimal</h4>
+<p>Why does the trilogy say 111.2 instead of 110?</p>
+<p>If I had written 110 Hz, I would have been borrowing the authority of the measured literature for claims the literature does not make. The archaeoacousticians measured a resonance. They did not measure Blake Masters' bilateral tremor — locked in CANON at exactly 111.2 Hz — or a preparation protocol, or a perception chamber. One decimal past the real number is the fiction signing its own work. Close enough to honor the source. Distinct enough that nobody mistakes my invention for their measurement.</p>
+<p>Precision is also a character trait. William Masters is an engineer. A man who leaves seven leather notebooks for his grandson does not write &quot;about 110.&quot; He writes 111.2, with the instrumentation to defend the second decimal.</p>
+<h4>The frequency ladder</h4>
+<p>The trilogy's frequency system is a ladder. Every rung has a real referent — which is why each one needs a label.</p>
+<p><strong>7.83 Hz</strong> — the Schumann resonance, the fundamental of the cavity between Earth's surface and the ionosphere. Textbook geophysics. <em>In the world.</em></p>
+<p><strong>110 Hz</strong> — the archaeoacoustic band above. <em>In the world</em>, with the caveat that the literature is thinner than a thriller needs it to be.</p>
+<p><strong>111.2 Hz</strong> — the trilogy's carrier frequency, Blake's tremor, the Distribution File footer. <em>In the novels.</em></p>
+<p><strong>136.6 Hz</strong> — connected in the books to transcendence states, mapped to the Monroe Institute's focus-level framework. The U.S. Army assessed that framework in the Gateway Process document — a real declassified file, and its own essay. The traditions are documented. The claims inside them are not scientific findings. <em>Contested at best.</em></p>
+<p>Chapter headers map this ladder onto real places — the Kansas City limestone under <a href="https://jasoncholloway.com/field-notes/subtropolis/" target="_blank" rel="noopener">SubTropolis</a>, the Strahov crypt in Prague, Icelandic basalt. Every referent is documented. The claim that they form one coherent system is the novel. <em>The rungs are real. The ladder is fiction.</em></p>
+<h4>Sound has shapes</h4>
+<p>One more piece of real science holds the frequency system up. In 1787, Ernst Chladni drew a violin bow along a sand-covered metal plate and showed that sand migrates to the nodal lines — the places the plate is still — forming geometric figures that change with frequency. Hans Jenny extended the work in the 1960s: shift from 800 to 865 cycles per second and the pattern does not adjust — it transforms into a categorically different figure.</p>
+<p>In a universe where sound produces form, 111.2 is not interchangeable with 111.3. The <a href="https://jasoncholloway.com/field-notes/cymatics/" target="_blank" rel="noopener">Cymatics Field Note</a> covers Chladni and Jenny in full, including where popular cymatics claims outrun the research.</p>
+<h4>Why label any of this</h4>
+<p>The trilogy is about the danger of ungraded patterns. Umberto Eco's warning — that pattern-hunters manufacture the pattern they seek — runs through everything Blake Masters does. A book built on that warning cannot hand its readers an unmarked mixture of measurement and invention.</p>
+<p>So: the Schumann resonance is in the world. The 110 Hz chamber literature is in the world, thin but real. The 111.2 Hz carrier, the tremor, the protocol, the chamber — in the novels.</p>
+<p>The research layer is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-01">
+    <span class="signoff-label">Essay 01 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-01" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-01" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-01" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-02" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 02</span> The Grimoire That Was Actually a Study Aid <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 4 of 7 · 845 words · ~4 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>The Grimoire That Was Actually a Study Aid</h3>
+<p><em>The Facts Behind the Fiction, No. 2 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>In <em>The Inheritance of Frequency</em>, Nadia sits on a kitchen floor with a facsimile page between her hands and says the line the trilogy pivots on: &quot;The Ars Notoria isn't magic. It's technology. Cognitive technology.&quot;</p>
+<p>Readers assume I invented the manuscript. I did not. The Ars Notoria is real, catalogued, requestable at the British Library. What I invented is narrower — and stranger for its narrowness.</p>
+<h4>The manuscript on the record</h4>
+<p>The Ars Notoria — the Notory Art — belongs to the Solomonic tradition: medieval texts attributed, nominally, to King Solomon. The earliest surviving manuscripts date to the mid-thirteenth century. Institutional copies survive across Europe, including British Library MS Sloane 1712 and holdings at the Bibliothèque nationale de France. Robert Turner translated it into English in 1657; modern scholarly editions exist, and Claire Fanger and Julien Véronèse have spent careers on it.</p>
+<p>What the text promises: the rapid acquisition of the seven liberal arts — grammar, rhetoric, logic, arithmetic, geometry, music, astronomy — through structured contemplation of geometric figures called <em>notae</em>, combined with specific prayers on a prescribed schedule. Not wealth, not love, not power over demons. Knowledge, memory, and eloquence on an accelerated timetable. A medieval manual for learning faster.</p>
+<p>The notae are dense, elaborate diagrams — geometric structures carrying prayers in Latin, Hebrew, Greek, and occasionally scripts nobody has identified — meant to be gazed at in sequence while the orations are recited. As objects, they are unlike anything else in medieval book culture: not illustrations of a text but apparently <em>instruments</em> of it. The full account is in the <a href="https://jasoncholloway.com/field-notes/ars-notoria/" target="_blank" rel="noopener">Ars Notoria Field Note</a>.</p>
+<h4>Condemned as cheating</h4>
+<p>The medieval world took this book seriously enough to condemn it — by the Inquisition, and by Albertus Magnus. The grounds were not devil-worship. The Ars Notoria promised an illicit shortcut: knowledge acquired without the sanctioned labor of study. Condemned as cheating.</p>
+<p>Institutions rarely mobilize against texts they consider trivial. The vehemence suggests the manuscript was circulating widely among exactly the educated class the universities were built to produce.</p>
+<h4>How a banned book survives</h4>
+<p>Condemned books in the manuscript era did not disappear; they went expensive. Copies continued to be produced for centuries on good vellum, with the notae executed carefully — patrons paying scribes serious money for a text the authorities had ruled against. By 1657 it had crossed into print in English through Turner's translation. A text survives seven hundred years of official disapproval only if a chain of readers, generation after generation, privately concluded it was worth the risk and the price. The trilogy's Keepers are fiction. The behavior they are modeled on — quiet, well-funded, multi-generational custodianship of a condemned text — is the Ars Notoria's actual transmission history.</p>
+<h4>What a modern reader notices</h4>
+<p>Strip away the angelic language and describe the method operationally: extended visual contemplation of complex structured figures; recitation on a fixed schedule; prescribed postures; repetition across weeks and months; a curriculum sequenced from foundational to advanced. A cognitive scientist recognizes elaborative encoding, spaced repetition, and structured retrieval practice — seven centuries before anyone had the vocabulary.</p>
+<p>Does that mean medieval practitioners empirically discovered spaced repetition and encoded it as prayer? Maybe. Maybe it is a coincidence of forms. The resemblance is real and striking, and it is the documented foundation the fiction stands on.</p>
+<h4>Where the fiction begins</h4>
+<p><strong>In the world:</strong> the manuscript, the notae, the promise of accelerated learning, the condemnation, the surviving copies, the scholarly reappraisal.</p>
+<p><strong>In the novels:</strong> that it works — and how. Nadia's argument, developed across two volumes, is that the notae are interfaces: calibrated visual objects designed to produce specific neurological states in a prepared observer, with fasting rules, postures, and prayer sequences functioning as a protocol for reaching cortical coherence before engaging the figures. No historian makes that claim. No cognitive scientist makes it. It is the trilogy's one experiment the lab has never run.</p>
+<p>One further invention points forward: the trilogy's claim that the notae are <em>frozen sound</em> — cymatics patterns copied from standing waves by monks who watched geometry form in water and sand. The figures are real. The mechanism is mine. See <a href="https://jasoncholloway.com/blog/sound-into-form-hans-jenny/" target="_blank" rel="noopener">Sound Into Form</a> and the <a href="https://jasoncholloway.com/field-notes/cymatics/" target="_blank" rel="noopener">Cymatics Field Note</a>.</p>
+<h4>Why this manuscript</h4>
+<p>The occult corpus is enormous. The trilogy could have run on the Lesser Key, on Agrippa, on Dee's Enochian tables — all in my research library, none of which carries the story. The Ars Notoria does, for one reason: it is the only major text in that tradition whose stated purpose is <em>cognition</em>. It doesn't summon anything. It claims to change what a mind can hold and how fast. A trilogy about perception needed an operational manual, and the thirteenth century had already written one and been condemned for it.</p>
+<p>The research is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-02">
+    <span class="signoff-label">Essay 02 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-02" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-02" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-02" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-03" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 03</span> Sound Into Form: What Hans Jenny Actually Proved <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 2 of 7 · 846 words · ~4 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/sound-into-form-hans-jenny/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>Sound Into Form: What Hans Jenny Actually Proved</h3>
+<p><em>The Facts Behind the Fiction, No. 3 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>The oldest special effect in my trilogy requires no computer. A metal plate, a violin bow, a spoonful of fine sand. Draw the bow along the plate's edge and the sand jumps into a symmetrical geometric figure — as if the tone had drawn it. The demonstration is from 1787. You can reproduce it on your kitchen table tonight: level the plate, sift the sand, keep the bow pressure light.</p>
+<p>Everything strange in the Masters X universe stands on that plate. What the plate proves is one thing. What the novels build on top of it is another, and the two are worth keeping apart.</p>
+<h4>Chladni: frequency becomes figure</h4>
+<p>Ernst Chladni (1756–1827) documented the phenomenon systematically in his 1787 <em>Entdeckungen über die Theorie des Klanges</em>. A bowed plate vibrates in modes; at a resonant frequency, some regions move violently while the nodal lines stay still. Sand bounces off the moving regions and collects on the still ones. The figure you see is a map of the silence — the geometry of where the plate is <em>not</em> moving. Change the frequency and the figure changes.</p>
+<p><em>Measured.</em> Reproducible by anyone. Disputed by no one.</p>
+<h4>Jenny: one phenomenon, three registers</h4>
+<p>Hans Jenny (1904–1972), a Swiss physician, took Chladni's parlor demonstration and turned it into a research program. Crystal oscillators replaced violin bows. Liquids, pastes, and powders replaced sand. He published the results in the two-volume <em>Kymatik</em> (1967, 1972) — translated as <em>Cymatics</em>, the term he coined.</p>
+<p>Two findings matter for the fiction. First, sensitivity: a small frequency change can produce a categorically different pattern — Jenny documented a shift from 800 to 865 cycles per second that transforms the figure rather than adjusting it. In a world where sound makes form, the decimal places matter. That is why 111.2 Hz cannot be treated as interchangeable with 111 or 112.</p>
+<p>Second, conditionality. Turn the tone off and the pattern collapses. Turn it back on and the <em>same</em> pattern returns. Order is not built and then left standing; it is maintained by the frequency. Jenny's summary — &quot;one can hear what one sees&quot; — names his triad: the wave you hear, the pattern you see, the periodicity you feel, one phenomenon apprehended three ways.</p>
+<p>What Jenny did not prove — and the <a href="https://jasoncholloway.com/field-notes/cymatics/" target="_blank" rel="noopener">Cymatics Field Note</a> draws this boundary explicitly — is anything about healing frequencies, water memory, or consciousness. The physics is real. A good deal of what circulates under the word &quot;cymatics&quot; outruns it.</p>
+<h4>Where the record ends</h4>
+<p>There is no evidence that <em>viewing</em> a cymatics pattern alters consciousness. The documented phenomenon is sound organizing matter. The trilogy's central conceit is that the resulting geometry, contemplated by a prepared observer, does something to the observer. That claim is entirely in the novels.</p>
+<p>The trilogy proposes that medieval practitioners, chanting daily for decades in resonant stone over water basins, saw standing-wave patterns form and copied them — that the Ars Notoria's notae are cymatics figures, frozen sound — and that a scribe in Bohemia in 1267 fixed seven hundred twelve of them onto vellum without knowing what he was drawing. Every clause of that is mine. No historian makes the claim.</p>
+<p><em>Sound makes form</em> is measured. <em>Form remakes the observer</em> is invented.</p>
+<h4>Water</h4>
+<p>Jenny filmed liquids as well as powders, and liquids are where his footage is most arresting — standing patterns holding on a vibrating water surface. The research note in my files that became a structural principle is one sentence long: water amplifies cymatics effects.</p>
+<p>The trilogy keeps returning to water: Brother Aldric's basin in the 1267 prologue, Father Moreau's river, the Ozark lake with its ninety documented feet of dark. In the novels, water is the medium in which the frequency becomes visible enough to copy.</p>
+<p>In <em>The Grimoire</em>, Nadia maps the Strahov chamber's resonance into a stable hexagonal figure, then watches footage of Kofi Asante's drumming in Ghana producing a five-sided standing wave in red laterite clay. Both specific patterns, and Nadia's inference that they share a structural origin, are invented. The dependence of pattern on material, geometry, and frequency — the thing that makes her inference feel like science — is real. The Ghana cave acoustics are labeled fiction in the Field Notes.</p>
+<h4>Yuki Tanaka</h4>
+<p>The trilogy's researchers do not merely cite cymatics; they practice it. Yuki Tanaka's disc experiments — controlled frequency, documented media, repeated trials, one variable at a time — are fictional experiments conducted correctly. The characters' method is real method. Only their results are invented.</p>
+<p>Hans Jenny gives the Masters X universe not proof of anything mystical but a demonstration — bench-top, repeatable, gorgeous — that frequency and form are already married in the physical world. The novels propose one further wedding, and they say so out loud.</p>
+<p>The research is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-03">
+    <span class="signoff-label">Essay 03 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-03" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-03" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-03" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-04" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 04</span> Why Kansas City? The Ground Itself Is Significant <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 3 of 7 · 1,173 words · ~5 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/why-kansas-city/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>Why Kansas City? The Ground Itself Is Significant</h3>
+<p><em>The Facts Behind the Fiction, No. 4 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>Somewhere around the second century, people on the Missouri River bluffs built rooms inside their burial mounds — stone-vault tombs, constructed chambers with doorways, sealed inside the earthworks. Roughly thirty Hopewell-tradition sites are documented in the Kansas City area, the westernmost reach of a mound-building culture that spread along the eastern river systems between about 100 BCE and 700 CE.</p>
+<p>I read that in a site report years into the research and set the page down. The impulse the whole trilogy runs on — cutting significant chambers into this specific ground — was not something I invented and not something modern. People were doing it here before Rome fell.</p>
+<p>Readers assume Kansas City is hometown convenience. I live here; I wrote what I could see. The convenience ran the other direction. Twenty years of research taught me I live somewhere strange: four traditions and one living man have looked at the same thirty miles of river bluff and concluded, in vocabularies that never borrowed from each other, that this ground matters.</p>
+<h4>The people who were already building underground</h4>
+<p>The Hopewell record is the oldest layer, and Missouri's prehistory runs deeper still. The state's rock art — documented over decades by Carol Diaz-Granados and James Duncan — is among the richest in the interior of the continent. What the mounds establish for my purposes is narrow and sufficient: chamber-building in this ground has a two-thousand-year precedent, on the public archaeological record, with no help from me.</p>
+<p>The trilogy does not stage a scene in a Hopewell mound. It inherits a habit.</p>
+<h4>The name for the thing</h4>
+<p>The second tradition gave the trilogy its central abstraction, and the credit belongs upstream. The Osage, whose historic corridor runs through western Missouri, carry the concept of <em>Wah-kon-tah</em> — renderings vary across sources and periods — often described as the sacred mystery that connects everything. It is not a doctrine so much as a relationship: practiced, not notated.</p>
+<p>That distinction is the quiet joke underneath eight hundred pages. Masters X is a story about people building instruments, protocols, and chambers to reach something one of this continent's older traditions simply <em>practiced</em> without the machinery. When the novels gesture at what the Foundation is chasing, they are gesturing at something the Osage already had a name for. The name is not mine, and the books say so.</p>
+<h4>Zion, sixty-three acres of it</h4>
+<p>The third tradition arrives with a date and a survey plat. In July 1831, Joseph Smith declared Independence, Missouri — twenty minutes from my desk — the &quot;center place&quot; of Zion, recorded in Doctrine and Covenants 57. The theology that grew around the declaration is more specific than most people outside the Latter Day Saint movement realize: the Garden of Eden placed in Jackson County, Adam-ondi-Ahman seventy miles north, a city plat drawn with sites for twenty-four temples. On August 3, 1831, a sixty-three-acre parcel — the Temple Lot — was dedicated for the first of them.</p>
+<p>The temple was never built. The lot was never abandoned. It is maintained today, held by denominations of the movement, a mown green rectangle keeping a hundred-ninety-year-old appointment.</p>
+<p>Whatever a reader makes of the theology, the fact pattern is extraordinary: an American prairie town formally designated the center of a cosmology, with the designation still honored by its inheritors.</p>
+<p>And this is the claim readers most expect me to have exploited, so: there is no Temple Lot scene in the trilogy. We checked during the research audit. The site exerts gravity on the story without ever appearing in it, which is how significance actually behaves.</p>
+<p>One more building belongs here. In 1994 the Community of Christ completed its temple in Independence — architect Gyo Obata — a sanctuary that spirals a hundred ninety-five feet upward on a nautilus form. Readers who know the trilogy's fixation on growth ratios assume I invented a Fibonacci spire standing in the prophesied Zion. I did not. The building is there, and it is open to visitors.</p>
+<h4>The constant is the stone</h4>
+<p>Under the mounds, the corridor, and the platted Zion runs the fourth tradition, which is not a belief system but a rock formation.</p>
+<p>The Bethany Falls limestone was laid down when the middle of North America was a shallow sea. Kansas City's builders quarried it hard through the boom of 1880 to 1920, raising the city above while hollowing the ground beneath. By mid-century someone noticed the worked-out chambers held a constant sixty-five degrees year-round, and the quarries became warehouses, and the warehouses became <a href="https://jasoncholloway.com/field-notes/subtropolis/" target="_blank" rel="noopener">SubTropolis</a>: roughly fifty-five million square feet of excavated footprint, the largest underground business complex in the world, with about seventeen hundred people commuting into the ground every working day.</p>
+<p>The trilogy's bedrock tunnels run 160 feet down. The real facility's depth is in the same conversation. Some settings you do not have to invent.</p>
+<p>The stone also handed the trilogy's most quoted line its documentary anchor. In 2011 Westport Presbyterian Church burned — roof, interior, everything — except the 1904 limestone walls, which stood. &quot;The stone remembers&quot; was in the manuscript before I found the fire that proved it. That one gets <a href="https://jasoncholloway.com/blog/the-stone-remembers/" target="_blank" rel="noopener">its own essay</a>.</p>
+<h4>What nobody has measured</h4>
+<p>Here is the gap. There is no published acoustics study of the Kansas City underground. The chambers of Malta and Britain have been recorded and analyzed; the chambers under my own city have not. The fiction is <em>sited</em> here, not <em>sourced</em> here. Whatever Bethany Falls limestone does to a standing wave at 160 feet, nobody has put it in a journal — which is a silence a novel may fill, provided it admits it is filling one.</p>
+<h4>The fifth</h4>
+<p>Four traditions, then: the mound builders who cut rooms into this ground, the Osage who named the connecting mystery, the Latter Day Saint movement that surveyed Zion here to the acre, and the limestone that made all the burrowing possible.</p>
+<p>The fifth is a living man — an engineer with a prophetic calling and a large underground holding in the same formation, documented in land records and public reporting. His biography out-strange-ed anything I had drafted, and he is getting an essay of his own rather than a paragraph here. What the novel adds to all five is a fictional sixth: William Masters, whose Foundation inverts the pattern the fifth seeker set.</p>
+<p>At some point, as Nadia says in the trilogy, coincidence becomes evidence. My job is to keep telling you which side of that line each sentence is standing on. The mounds, the corridor, the plat, and the limestone are in the world. The convergence that explains them is in the novels.</p>
+<p>The reader's map of the real Kansas City is in the <a href="https://jasoncholloway.com/field-notes/kansas-city-locations/" target="_blank" rel="noopener">Field Notes</a>, along with the rest of the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">research layer</a>. The books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-04">
+    <span class="signoff-label">Essay 04 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-04" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-04" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-04" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-hold" id="blog-05" data-status="hold" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 05</span> The Man Who Built a City Under Zion <span class="badge badge-hold">HOLD</span></h3>
+    <p class="meta">Not scheduled · 1,307 words · ~6 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/the-man-who-built-a-city-under-zion/</span></p>
+    <p class="note">Roger Billings. Not revised, not routed on the site (404s), no social drafted. The research file it cites, ROGER_BILLINGS_MASTERS_X_ANALYSIS.md, is not in this repository — it is listed in the research catalog as a 12 KB file in your local archive. Shown here as the unrevised draft so you can judge the sourcing.</p>
+  </header>
+  <div class="card-body prose"><h3>The Man Who Built a City Under Zion</h3>
+<p><em>The Facts Behind the Fiction, No. 5 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>Every novelist who works from research eventually meets the fact that embarrasses the fiction — the documented thing so improbable that putting it in a novel unaltered would read as laziness. Mine lives twenty minutes from my desk, in Independence, Missouri, a hundred and eighty acres down.</p>
+<p>A sourcing note before anything else, because this essay concerns a living person: everything factual below is drawn from public records, published reporting, and his son's public statements. Where the record is silent, this essay is silent. The parallels to my fiction are conceded openly at the end, and the divergences matter more than the resemblances.</p>
+<h4>The public record</h4>
+<p>Roger Billings entered the public record as a prodigy. As a teenager — seventeen, in the standard telling — he converted a car to run on hydrogen, decades before hydrogen energy had a lobby or a market. The work was real engineering, and it made him, in the small world of alternative energy, a genuine pioneer. He went on to found research ventures and an educational institution, the Academy, and to accumulate the kind of résumé — inventor, entrepreneur, institution-builder — that profiles get written about.</p>
+<p>In 1980, he relocated to Independence, Missouri. And here the story acquires its second axis, because by his own account the relocation was not about markets or family or weather. It was prophetic. Independence is the ground that Joseph Smith designated, in 1831, as the center place of Zion — the fact pattern the previous essay in this series laid out. Billings came to Independence, founded his own church within the broader Restoration tradition — the Church of Jesus Christ in Zion — and holds within it the office his tradition describes as patriarch and prophet.</p>
+<h4>The record beneath the surface</h4>
+<p>Then there is the land. Billings acquired approximately one hundred eighty acres of underground space — worked limestone, the Bethany Falls formation, the same Pennsylvanian-age stone that hosts <a href="https://jasoncholloway.com/field-notes/subtropolis/" target="_blank" rel="noopener">SubTropolis</a> on the other side of the metro. And he developed it: laboratories, work space, living quarters, an operating campus inside the rock. An engineer-prophet, running research facilities in the ground his own tradition identifies as the New Jerusalem.</p>
+<p>Read that sentence again as a fiction editor would. A hydrogen pioneer. Who founded his own church. Who calls himself its patriarch and prophet. Who bought a hundred eighty acres of underground limestone inside the prophesied Zion. And built laboratories in it. If I had submitted that character in a first draft, any competent editor would have flagged him as overwritten — too many axes of strangeness in one man. He is not a draft. He is a matter of county land records and published interviews, and my research file on him (<code>ROGER_BILLINGS_MASTERS_X_ANALYSIS.md</code>, for those keeping score against the encyclopedia's bibliography) is one of the thickest in the archive.</p>
+<h4>The parallel, conceded</h4>
+<p>Readers of <em>The Inheritance of Frequency</em> will already have made the mapping, so let me concede it rather than be caught at it. William Masters, the trilogy's founding figure, is an engineer of unusual gifts who becomes convinced that something immense sleeps under the Kansas City corridor; who acquires underground limestone; who builds a private research campus in it; who documents everything in notebooks; and who chooses silence over publication for most of his life. The resemblance to the documented figure is not accidental, and the encyclopedia's entry on William Masters says so with a straight face: the strangest thing in the Masters X universe is that its most implausible character has a documented counterpart.</p>
+<p>But the divergences are the actual content of the fiction, and they are deliberate. Billings' compound is, on the record, private — fenced, surveilled, access-controlled, as any private research facility would be. His tradition's claims run through his church. William Masters' arc bends the opposite way at every joint the story controls. The Masters Foundation for Acoustic Research is written consent-first: nobody in the trilogy is brought into the chambers unknowing. Its findings are hoarded for two books and then, in the trilogy's ending, given away entirely — the Distribution File, released to the public domain at midnight, 247 pages that cannot be un-released. Where the real pattern is a prophet holding ground privately against a foretold future, the fictional pattern is an engineer's estate finally refusing to hold anything at all.</p>
+<p>That inversion is the trilogy's ethical argument, and it only lands because the documented case exists. Fiction can't meaningfully disagree with a straw man. It can disagree with a land record.</p>
+<h4>The editorial care note, expanded</h4>
+<p>A word on method, because writing about a living private-ish figure alongside one's own fiction imposes obligations that writing about Neolithic builders does not.</p>
+<p>The rule this essay follows — and the encyclopedia entry follows, and the video episode follows — is attribution over atmosphere. Every factual clause traces to a category of source that can be named in the sentence: land records, published reporting, the subject's own public statements, his son's public statements. Nothing is sourced to rumor, to &quot;locals say,&quot; or to the genre's favorite instrument, the unattributed ominous implication. Where the record describes laboratories, this essay says laboratories; where the record is silent — about interiors, about intentions beyond the stated ones — this essay is silent too, and says that it is being silent, which is different from hinting.</p>
+<p>The reason is not only fairness, though fairness would suffice. It is that atmosphere is precisely the corruption the trilogy is about. A book built on Eco's warning — that pattern-hunters manufacture the pattern — cannot then manufacture a sinister pattern around a real man because sinister sells. The documented facts are strange enough to carry the essay without a single raised eyebrow, and if they weren't, the essay shouldn't exist.</p>
+<h4>Why this is the fifth tradition and not a curiosity</h4>
+<p>The previous essay counted four traditions that identified the Kansas City corridor as significant ground: the Hopewell builders with their stone-vault chambers, the Osage naming of <em>Wah-kon-tah</em>, the Latter Day Saint survey of Zion, and the limestone itself. It would be easy to file Billings as a colorful footnote to the third. I think that undersells what his case demonstrates.</p>
+<p>The first four traditions are historical: you can visit their traces, but their choosing happened long ago. Billings is the demonstration that the choosing <em>continues</em> — that in 1980, a modern engineer with modern resources, acting on the old designation, looked at the same ground and committed his life and his acreage to it. The corridor's pull, whatever one believes about its source, is still operating on living people with the means to act on it. For a trilogy whose thesis is that this ground keeps recruiting its seekers across millennia, the fifth seeker is not a footnote. He is the proof of continuity — the reason the novel's invented sixth seeker, arriving a generation later, asks no more suspension of disbelief than the newspaper does.</p>
+<p>The grade card for this essay, then, is short. The biography, the church, the offices, the acreage, the laboratories: documented — public records, reporting, and family statements, plainly attributed. The interior life, the motives beyond the stated ones, anything underground that the record does not describe: unknown, and this essay does not speculate. William Masters, the Foundation, the consent protocols, the midnight release: invented, and built as a deliberate inversion.</p>
+<p>The full entry — with the parallel table and every source — arrives in the Masters X Universe Encyclopedia. The research layer is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>, starting with the <a href="https://jasoncholloway.com/field-notes/kansas-city-locations/" target="_blank" rel="noopener">Kansas City reader's map</a>, and the books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-05">
+    <span class="signoff-label">Essay 05 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-05" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-05" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-05" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-06" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 06</span> Three Factions, One Declassified Document <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 6 of 7 · 1,103 words · ~5 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/three-factions-one-declassified-document/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>Three Factions, One Declassified Document</h3>
+<p><em>The Facts Behind the Fiction, No. 6 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>The document that gave the Masters X Trilogy its politics is a translation. In 1984, American intelligence took a Chinese government journal on paranormal research, rendered it into English for internal circulation, and filed it. It sits today in the CIA's declassified reading room under the RDP96-00792R designation, alongside a great deal of similar material from the same program years.</p>
+<p>Readers assume the trilogy's three factions — the Keepers, the Custodians, the Completion Sect — were engineered for plot. Three-way conflicts are how thrillers manufacture pressure, and the assumption is fair. It is also backwards. I did not invent the three positions. I found them in the file, already arguing.</p>
+<h4>One government published. The other classified.</h4>
+<p>Start with what the document <em>is</em>, because its shape is the whole argument.</p>
+<p>On one side sits a state research establishment studying claims of extraordinary human capacities in the open: a commission, conferences, funded experiments, a journal you could subscribe to. On the other side sits an intelligence agency that reads the journal, translates it, and stamps the translation.</p>
+<p>Two governments, one subject, opposite policies. One published. The other classified the act of reading.</p>
+<p>That asymmetry is the political physics of the entire trilogy, and it came from the record rather than from me. Everything the Keepers and the Custodians argue about across eight hundred pages is a costume drama built on that one structural fact: secrecy and daylight are <em>policies</em>, chosen, and the choosing is where the story lives.</p>
+<h4>Three positions in the material</h4>
+<p>Inside the translated literature, the debate sorts into three recognizable postures. I want to describe them as a reader of the file rather than as a novelist who needed them to be tidy.</p>
+<p>The first is suppression. The research drew condemnation as superstition — &quot;feudal sorcery&quot; is the phrase that recurs in the era's polemics, carrying the full ideological weight of a modernizing state embarrassed by its own countryside. The program these critics wanted was straightforward: stop the work, discredit the workers, protect the institutions.</p>
+<p>The second is verification. Other researchers and officials argued that if the phenomena were real, the only defensible response was to publish the methods, replicate the results, and let the claims live or die in daylight.</p>
+<p>The third does not argue so much as <em>attend</em>. Military and security interest is present wherever a state studies a capacity that might be applied, and it is present here — most visibly in the fact that the translation exists at all.</p>
+<p>Suppress, verify, weaponize. In the novels those become the Custodians, the Keepers, and the Completion Sect, institutionalized and given eight centuries of invented backstory. When Nadia briefs Blake on the factions' logic, she is doing historiography.</p>
+<p>One caveat, and it is not a small one: the three-way sort is my reading of the translated material, not a heading inside it. The document is public. A reader who pulls it from the reading room and comes back with a better taxonomy will have earned the correction, and I would rather print that than defend a tidy structure.</p>
+<h4>Why a translation is stranger than a report</h4>
+<p>The genre is what made the file novelistically irresistible.</p>
+<p>Intelligence agencies produce assessments of paranormal claims — findings, confidence levels, recommendations — and those read exactly as you would expect. This is not that. This is raw open literature from one government, carried across a language barrier and filed by another.</p>
+<p>A summary gives you conclusions. A translation gives you people arguing: the skeptics' polemics, the methodologists' appeals, the institutional throat-clearing, all preserved in their own voices because nobody bothered to smooth them out. Factions are made of people arguing. The three in my trilogy have the texture they have because their source was never a finding. It was a transcript of a fight.</p>
+<h4>The Army's own file</h4>
+<p>The American counterpart is the Gateway Process assessment — formally the <em>Analysis and Assessment of Gateway Process</em>, prepared for the U.S. Army in 1983 — an internal evaluation of consciousness-alteration methods that examines the Monroe Institute's audio-driven techniques and attempts a theoretical account of how they might work.</p>
+<p>Whatever a reader concludes about its physics, and the physics is where most readers get off the bus, the document's existence is the point. The American security establishment did not only read other governments' consciousness research. It commissioned its own assessment.</p>
+<p>This is where the trilogy's 136.6 Hz rung comes from — the frequency the novels map to the Monroe focus-level framework, and the weakest rung on the ladder I laid out in <a href="https://jasoncholloway.com/blog/the-frequency-that-was-already-there/" target="_blank" rel="noopener">The Frequency That Was Already There</a>. The framework exists. The assessment exists. Neither is a body of scientific findings, and the novels do not get to pretend otherwise.</p>
+<h4>The fourth answer</h4>
+<p>Here the fiction stops transcribing and starts arguing.</p>
+<p>The record offers three responses to a dangerous capacity: suppress it, verify it, weaponize it. The trilogy proposes a fourth, and it arrives not as a battle but as a file format. Andrew Chen's Distribution File — two hundred forty-seven pages of preparation protocols, chamber specifications, harmonic derivations, a facilitator's manual, and an acoustic appendix — goes onto the open internet at midnight under CC0, the license that reserves nothing.</p>
+<p>Chen's design brief is the trilogy's thesis in one move: the opposite of classification is not leaking. A leak preserves the scarcity that gives a secret its power and merely relocates it to whoever leaked. The opposite of classification is making the work boring — reproducible, documented, free — until there is nothing left to guard and nobody left to guard it from.</p>
+<p>None of that happened. No such file exists, no such release occurred, and every download figure in the novel's front matter is invented down to the digit. But it is fiction written as a direct reply to two real declassified documents, which is a different thing from fiction written in a vacuum.</p>
+<p>What is in the world: the 1984 translation and its debate, the Gateway assessment, the Monroe framework as a documented body of practice. What is in the novels: the Keepers, the Custodians, the Completion Sect, their eight centuries, Nadia's briefing, Andrew Chen, and every page of the Distribution File. The factions' logic is transcribed. Only the names are ours.</p>
+<p>The research layer is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books — including the omnibus, where the Distribution File runs complete — are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-06">
+    <span class="signoff-label">Essay 06 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-06" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-06" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-06" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-07" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 07</span> The Stone Remembers: A Fire in Westport <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 5 of 7 · 1,044 words · ~5 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/the-stone-remembers/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>The Stone Remembers: A Fire in Westport</h3>
+<p><em>The Facts Behind the Fiction, No. 7 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>&quot;The stone remembers&quot; sat in the Masters X manuscript for most of a decade on probation. It is Father Moreau's line, and it is exactly the kind of sentence a novelist should distrust — too round, too quotable, the metaphor claiming work the world never authorized.</p>
+<p>Then a research pass turned up a fire four miles from my desk, and the line came off probation.</p>
+<h4>The correction that improved the book</h4>
+<p>The fire comes second. The correction comes first, because it is the less flattering story.</p>
+<p>Early drafts described the Cathedral of the Immaculate Conception — the landmark on the Quality Hill bluff, the highest ground in downtown Kansas City — as limestone. It seemed safe. This is a limestone city, the trilogy is practically <em>about</em> the limestone, and the cathedral crowns a bluff two hundred feet above the West Bottoms. Of course it was limestone.</p>
+<p>It is red brick. Built 1882 to 1912, brick throughout, with the gold-leaf dome added in 1960. Our church-by-church research pass caught the error before it reached print.</p>
+<p>One wrong wall material in a novel might not seem worth the paragraph. It matters because of what this trilogy claims about ground truth. A book arguing that the physical city is stranger than fiction has noticed forfeits the argument the moment it gets the physical city wrong. Every real place in the books — the corner table at Miller Nichols Library, the grade of the walk from Quality Hill down into the West Bottoms, the Hotel Phillips lobby — is rendered as exactly as I could manage, and the <a href="https://jasoncholloway.com/field-notes/kansas-city-locations/" target="_blank" rel="noopener">reader's map of the real Kansas City</a> exists so anyone can check me.</p>
+<p>The corrected fact turned out better than the assumed one. A red brick cathedral wearing a gold crown on the city's highest bluff, above a floodplain, is a more precise image of Kansas City than another limestone facade: the city's aspirations built in one material, its foundations in another.</p>
+<h4>The fire</h4>
+<p>Westport Presbyterian Church was built in 1904, in the neighborhood that was once the last outfitting stop for wagon trains heading west. Stone walls, timber roof, a century of congregational life inside.</p>
+<p>In 2011 it burned. The fire took the roof. It took the interior — sanctuary, woodwork, everything combustible that a hundred and seven years had accumulated. Photographs from the morning after show what fire photographs from stone buildings always show, and what I had somehow never registered until I was looking for it: the walls, standing. The 1904 limestone, smoke-darkened and roofless, holding its full height around a burned-out interior.</p>
+<p>The congregation rebuilt inside the standing walls, which is its own sentence about what stone makes possible. The fire could erase the contents but not the fact of the church, because the fact was mineral.</p>
+<p>I found the fire years after Moreau's line was written. Nothing was predicted; church fires are not rare, and a 2011 fire preceded my finding it by the better part of a decade. What the discovery changed was the line's status. &quot;The stone remembers&quot; had been a metaphor waiting on a warrant, and the warrant had been sitting on the public record the whole time. The fire is documented. Putting the line in a priest's mouth is invention. The resonance between them is the reader's to keep.</p>
+<h4>What a church audit looks like</h4>
+<p>Both stories came out of the same instrument, which deserves a note of its own.</p>
+<p>The research behind both stories is a building-by-building audit of Kansas City's historic religious architecture: construction dates, wall materials, fires, rebuilds, and siting — which congregations built on the bluffs and which in the bottoms, and what the difference cost them across a century of floods and fires. It started as fact-checking for a handful of scenes and turned into something closer to a materials census, because every checked fact raised two more.</p>
+<p>St. Francis Xavier's original church, for instance, burned in September 1925 and was answered with an exterior sculpture carved from twenty-one thousand pounds of Bedford limestone — a congregation replying to fire in the one vocabulary fire had respected.</p>
+<p>The audit exists so that when the novels say <em>stone</em>, <em>brick</em>, <em>1904</em>, or <em>bluff</em>, a reader with a library card can catch me if I am wrong. Once, as above, the audit caught me first.</p>
+<h4>The boom that built and hollowed the city</h4>
+<p>Both stories sit on the same half-century of geology-as-economics.</p>
+<p>Between roughly 1880 and 1920, Kansas City quarried its own foundation. The Bethany Falls limestone came out of the bluffs and went up into the city: churches, warehouses, retaining walls, the bones of every neighborhood old enough to have bones. The boom built the city above and hollowed the ground beneath, and the hollowing never really stopped. It changed vocabulary — quarry to warehouse to <a href="https://jasoncholloway.com/field-notes/subtropolis/" target="_blank" rel="noopener">SubTropolis</a>, where roughly seventeen hundred people now work inside the mined-out seam.</p>
+<p>So when the trilogy treats Kansas City as a place whose surface and depths are the same substance in different states, that is municipal history, not mysticism. The 1904 walls that survived the 2011 fire and the chambers 160 feet under the bluffs are the same formation, the same boom, the same stone in two postures.</p>
+<h4>What the fiction adds</h4>
+<p>Not much, in this one. The cathedral's brick and its 1960 dome, the Quality Hill bluff, the Westport fire and the standing walls, the rebuilding, the quarrying boom, the hollowed ground: all documented. Father Moreau, his river, his line, and every event the novels stage inside the real geography: invented.</p>
+<p>The trilogy's only addition here is the proposal it always makes — that the stone's persistence is not merely structural but significant, that what survives fires and holds temperature and carries standing waves might be holding something else as well. That belongs to the novels, and it is labeled everywhere it appears. But it is fiction whose best line got audited against the record and kept.</p>
+<p>The research layer is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-07">
+    <span class="signoff-label">Essay 07 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-07" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-07" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-07" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="blog-08" data-status="ready" data-kind="blog">
+  <header class="card-header">
+    <h3><span class="num">Essay 08</span> A Document That Cannot Be Un-Released <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Publish slot 7 of 7 · 948 words · ~4 min read</p>
+    <p class="meta"><span class="url">https://jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/</span></p>
+    
+  </header>
+  <div class="card-body prose"><h3>A Document That Cannot Be Un-Released</h3>
+<p><em>The Facts Behind the Fiction, No. 8 · Jason Carroll Holloway · Seventh City Press</em></p>
+<p>Masters X ends at midnight with a file going onto the open internet. Two hundred forty-seven pages, released under a CC0 dedication — the license that reserves nothing, not even attribution — and an eight-hundred-year war loses its object. There is nothing left to fight over. The file cannot be un-released.</p>
+<p>Conspiracy trilogies are supposed to end with a chamber stormed and a patriarch unmasked. Mine ends with a license.</p>
+<h4>The artifact</h4>
+<p>The Distribution File is written as an artifact rather than a summary. Readers encounter its actual pages, and the omnibus carries it complete. Its five parts have the shape of a working manual: Preparation Protocols; Chamber Specifications; Harmonic Frequency Derivations; a Facilitator Training Manual; and an Acoustic Research Appendix. Every page carries the running footer this whole run of essays started with: f = 111.2 Hz.</p>
+<p>Its front matter reports its own reception in the dry voice of a changelog — 1,204,881 downloads in the first week, readers in forty-seven countries, three independent replications of the core protocol. Andrew Chen, the Foundation researcher who compiles and releases it, appends a design brief.</p>
+<p>The brief is invented. The argument inside it is not.</p>
+<h4>Make the work boring</h4>
+<p>The intuitive opposite of classification is leaking. Chen rejects the intuition.</p>
+<p>A leak preserves everything that gives a secret its power: the scarcity, the drama, the sorting of the world into those who know and those who do not. It relocates that power to whoever did the leaking. The mystery survives its own exposure. Often it grows.</p>
+<p>The actual opposite of classification is to make the work <em>boring</em> — documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from, no initiation left to sell. Public domain as a one-way door.</p>
+<p>Ending a mystery by ending its scarcity is not a compromise between the trilogy's three factions. It dissolves the board they were playing on.</p>
+<h4>Why a file format can carry an ending</h4>
+<p>A craft note, since &quot;the trilogy ends with a document&quot; is the sort of choice a writer should be able to defend.</p>
+<p>Endings resolve pressure. For two and a half books, the pressure in Masters X is scarcity: one protocol, three factions, each defined entirely by its answer to the question of who may know. A confrontation would have resolved a battle and left the scarcity untouched — whoever won the chamber becomes the next custodian, and the cycle continues one victor older.</p>
+<p>The only ending that actually discharges that pressure destroys the scarcity itself. And scarcity of information is destroyed by exactly one instrument: unrestricted copying. Hence a license. The quietest legal object in the world doing what no gunfight in the genre has managed. The midnight timestamp is drama. The CC0 dedication is the plot.</p>
+<h4>What it argues with</h4>
+<p>Chen's brief is fiction. Its interlocutors are not.</p>
+<p>Two declassified documents stand behind the trilogy's politics, and I walked both in <a href="https://jasoncholloway.com/blog/three-factions-one-declassified-document/" target="_blank" rel="noopener">Three Factions, One Declassified Document</a>: a 1984 American translation of a Chinese government journal on paranormal research, one state publishing openly while another classified its reading of the publication; and the U.S. Army's Gateway Process assessment, a security establishment privately evaluating consciousness-alteration methods. Between them they preserve a real three-way fork — suppress, verify, weaponize.</p>
+<p>The Distribution File is the fourth tine, and its real-world referent has nothing to do with the paranormal literature. It is the open-science tradition: reproducibility as arbiter, methods sections detailed enough for strangers to replicate, public archives against paywalled scarcity. CC0 itself is a real instrument from the Creative Commons toolbox, built for precisely the gesture Chen makes with it.</p>
+<p>So the <em>choice</em> the file represents — daylight as policy, radical enough to be boring — is documented, with living practitioners. The file, the downloads, the replications: invented, every digit.</p>
+<p>A trilogy published by a one-author imprint, arguing that the answer to gatekeeping is to publish the whole thing yourself, is at minimum practicing what it preaches.</p>
+<h4>Reprinting a fictional document honestly</h4>
+<p>One editorial problem, because it is the interesting one and I have not seen it handled well elsewhere.</p>
+<p>The Distribution File is a fictional document that claims to be free. Reproduce it as an unmarked facsimile and you have manufactured exactly the thing the trilogy's ethics forbid: a fake primary source loose in the world, indistinguishable from a real one, which is how most forgeries begin their careers. Leave it out and you are describing the story's most important object secondhand.</p>
+<p>The working rule is the same one everything else here runs on. Present the pages, label them, and shelve the real declassified sources alongside the fictional claims they parented, so a reader holds the fiction in one hand and its documentary parents in the other. A novel about ending secrecy deserves transparent packaging more than most.</p>
+<h4>The method, once</h4>
+<p>Every one of these essays ran on one rule, and it is the rule the trilogy exists to argue for: say what was measured, what was documented, and what was invented, and keep the three distinct where a reader can check them.</p>
+<p>That is not modesty. A book claiming the world is stranger than fiction has noticed only earns the claim if it gets the world right.</p>
+<p>The research layer is live in the <a href="https://jasoncholloway.com/field-notes/" target="_blank" rel="noopener">Field Notes</a>. The books — including the omnibus, where the Distribution File runs complete — are at <a href="https://jasoncholloway.com/books/masters-x/" target="_blank" rel="noopener">jasoncholloway.com/books/masters-x/</a>.</p>
+<p>The facts are in the files. The fiction is in the books.</p></div>
+  <div class="signoff" data-key="blog-08">
+    <span class="signoff-label">Essay 08 decision</span>
+    <label class="opt approve"><input type="radio" name="blog-08" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="blog-08" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="blog-08" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+  <h2 class="section" data-group="social">Social posts</h2>
+  <div class="panel">
+    <p><strong>Source:</strong> revised essays in <code>content/blog/</code> only. The Fable social pack (<code>content_fable_handoff/return/social/</code>) is <strong>not</strong> used. <strong>Excluded:</strong> Essay 05 (Roger Billings — HOLD) and any encyclopedia announcement. <strong>Author:</strong> Jason Carroll Holloway · Seventh City Press</p>
+<h3>Rules carried over from the blog</h3>
+<ul><li>Never imply 111.2 Hz, the Distribution File, or its statistics were measured or real</li><li>Real claims get a source or an explicit gap; fiction is named as fiction</li><li>Links: blog post first, Field Note second</li><li>No <em>grade card</em> / <em>the seam</em> / <em>apparatus</em> vocabulary</li><li>Sign-off used sparingly on social — it is the essay's close, not a hashtag</li></ul>
+<h3>Posting order</h3>
+<table><thead><tr><th>Slot</th><th>Essay</th><th>Blog URL</th><th>Primary Field Note</th></tr></thead><tbody><tr><td>1</td><td>01 Frequency</td><td><code>/blog/the-frequency-that-was-already-there/</code></td><td><code>/field-notes/111-hz/</code></td></tr><tr><td>2</td><td>03 Cymatics</td><td><code>/blog/sound-into-form-hans-jenny/</code></td><td><code>/field-notes/cymatics/</code></td></tr><tr><td>3</td><td>04 Kansas City</td><td><code>/blog/why-kansas-city/</code></td><td><code>/field-notes/kansas-city-locations/</code></td></tr><tr><td>4</td><td>02 Ars Notoria</td><td><code>/blog/the-grimoire-that-was-a-study-aid/</code></td><td><code>/field-notes/ars-notoria/</code></td></tr><tr><td>5</td><td>07 Stone Remembers</td><td><code>/blog/the-stone-remembers/</code></td><td><code>/field-notes/kansas-city-locations/</code></td></tr><tr><td>6</td><td>06 Three Factions</td><td><code>/blog/three-factions-one-declassified-document/</code></td><td><code>/field-notes/</code></td></tr><tr><td>7</td><td>08 Cannot Be Un-Released</td><td><code>/blog/a-document-that-cannot-be-unreleased/</code></td><td><code>/field-notes/subtropolis/</code></td></tr></tbody></table>
+<p>Two-week cadence per slot works: X/Bluesky on publish day, Instagram carousel two days later, LinkedIn on pillar slots only (1, 3, 7).</p>
+<hr>
+  </div>
+  
+<article class="card status-ready" id="social-01" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 1 · Essay 01 — The Frequency That Was Already There <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 01 · links to /blog/the-frequency-that-was-already-there/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="373"><p>Every page of the Distribution File in my trilogy carries the same footer: f = 111.2 Hz. </p><p> The number is fiction. The stone under it isn't. </p><p> Researchers have documented a resonance near 110 Hz in Neolithic chambers from Malta to Scotland. I added one decimal so nobody confuses my invention with their measurement. </p><p> jasoncholloway.com/blog/the-frequency-that-was-already-there/ </p><p></p></blockquote>
+<p><strong>Post B (standalone)</strong></p>
+<blockquote data-chars="237"><p>Why 111.2 and not 110? </p><p> Because 110 Hz belongs to the archaeoacousticians. They measured a resonance. They did not measure a fictional tremor, a protocol, or a chamber. </p><p> One decimal past the real number is the fiction signing its own work. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="694"><p>Every page of the Distribution File carries the same footer: f = 111.2 Hz. Readers ask about it more than anything else in the trilogy. </p><p> Here is the honest version. Archaeoacoustics has documented a recurring resonance near 110 Hz in ancient stone chambers — the Ħal-Saflieni Hypogeum in Malta, Neolithic sites across Britain and Ireland, painted zones at Lascaux. That literature is real, and thinner than a thriller would like. </p><p> 111.2 Hz is mine. The decimal is deliberate: close enough to honor the source, distinct enough that no one mistakes invention for measurement. </p><p> Full essay: jasoncholloway.com/blog/the-frequency-that-was-already-there/ Research: jasoncholloway.com/field-notes/111-hz/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="961"><p>110 Hz is measured. 111.2 Hz is mine. </p><p> The Ħal-Saflieni Hypogeum is an underground temple complex in Malta, carved from limestone somewhere between 3600 and 2500 BCE. Eighty visitors a day are allowed inside. In the Oracle Chamber, researchers have documented a pronounced resonance around 110–111 Hz. </p><p> Paul Devereux and colleagues found peak frequencies in the 95–120 Hz band at Neolithic chambers across Britain and Ireland. Reznikoff and Dauvois noticed that Palaeolithic paintings cluster in the most acoustically resonant zones of French caves. </p><p> That is the documented part, caveats included — the neurological study everyone cites had a small sample, and one study is one study. </p><p> The trilogy runs on 111.2 Hz instead. The extra decimal is the fiction signing its own work: close enough to honor the research, far enough that nobody mistakes my invention for their measurement. </p><p> Full essay linked in bio. Research layer at jasoncholloway.com/field-notes/111-hz/ </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><code>f = 111.2 Hz</code> — footer stamp on a manuscript page</li><li><strong>Malta, 3600 BCE</strong> — Hypogeum, 80 visitors a day, resonance documented near 110 Hz</li><li><strong>Britain &amp; Ireland</strong> — Neolithic chambers, peaks in the 95–120 Hz band</li><li><strong>Lascaux</strong> — paintings cluster where the resonance is strongest</li><li><strong>The caveat</strong> — one small-sample study is not a finding. The literature is real and thin.</li><li><strong>The decimal is the fiction</strong> — 110 is theirs. 111.2 is mine. Full essay in bio.</li></ol>
+<h4>LinkedIn</h4>
+<blockquote data-chars="984"><p>I write conspiracy fiction, which means I have a professional obligation most novelists skip: telling readers exactly where my research stops and my invention starts. </p><p> The Masters X Trilogy runs on a frequency — 111.2 Hz — stamped on every page of a fictional document at the center of the plot. Readers ask whether it is real more than they ask about anything else in the books. </p><p> The honest version: archaeoacoustics, a small and careful field, has documented a recurring resonance near 110 Hz in ancient stone chambers from Malta to Scotland. Whether builders intended it is unresolved. One frequently cited neurological study had a small sample, and that caveat belongs in every sentence that cites it. </p><p> So the novels use 111.2 instead of 110. One decimal past the real number, because borrowing the authority of measured literature for claims that literature does not make is the failure mode of this entire genre. </p><p> Essay: jasoncholloway.com/blog/the-frequency-that-was-already-there/ </p><p></p></blockquote></div>
+  <div class="signoff" data-key="social-01">
+    <span class="signoff-label">Essay 01 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-01" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-01" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-01" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-03" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 2 · Essay 03 — Sound Into Form <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 03 · links to /blog/sound-into-form-hans-jenny/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="294"><p>The oldest special effect in my trilogy needs no computer. </p><p> A metal plate. A violin bow. A spoonful of sand. </p><p> Draw the bow and the sand jumps into a geometric figure. Chladni demonstrated it in 1787. You can do it on your kitchen table tonight. </p><p> jasoncholloway.com/blog/sound-into-form-hans-jenny/ </p><p></p></blockquote>
+<p><strong>Post B (thread, 3)</strong></p>
+<blockquote data-chars="525"><p>1/ Hans Jenny found that shifting a tone from 800 to 865 cycles per second does not adjust the pattern in the medium. It transforms it into a categorically different figure. </p><p> 2/ That is why the trilogy's 111.2 Hz cannot be swapped for 111 or 112. In a world where sound makes form, decimals are not decoration. </p><p> 3/ What Jenny did not prove: anything about healing frequencies, water memory, or consciousness. Sound organizes matter. That the resulting geometry reorganizes the <em>observer</em> is my invention, and the novels say so. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="684"><p>Ernst Chladni, 1787: bow a sand-covered metal plate and the sand collects on the nodal lines — the places the plate is still. The figure you see is a map of the silence. </p><p> Hans Jenny turned that parlor demonstration into a research program in the 1960s, swapping crystal oscillators for violin bows and publishing <em>Kymatik</em>. Two findings carried into my trilogy: patterns are exquisitely sensitive to frequency, and they collapse the moment the tone stops. Order is maintained, not built. </p><p> Where the record ends: there is no evidence that <em>viewing</em> a cymatics pattern does anything to consciousness. That claim is entirely the novels'. </p><p> jasoncholloway.com/blog/sound-into-form-hans-jenny/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="941"><p>Sound has shapes. That part is not mystical — it is 1787. </p><p> Ernst Chladni drew a violin bow along a sand-covered metal plate and showed that the sand migrates to the nodal lines, the regions where the plate is not moving. Change the frequency, change the figure. Anyone can reproduce it. </p><p> Hans Jenny, a Swiss physician, spent the 1960s turning that demonstration into a discipline he named cymatics. He documented how a shift from 800 to 865 cycles per second transforms a pattern rather than nudging it, and how patterns collapse when the tone stops and return identically when it resumes. </p><p> That is the real floor under everything strange in my trilogy. Here is the ceiling: nothing in the research says that looking at one of these patterns changes the person looking. The novels claim it does. That claim is mine, and I would rather say so than let it pass as physics. </p><p> Essay linked in bio. Research at jasoncholloway.com/field-notes/cymatics/ </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><strong>1787</strong> — a plate, a bow, a spoonful of sand</li><li><strong>Nodal lines</strong> — the figure is a map of where the plate is still</li><li><strong>Jenny, 1967</strong> — oscillators replace bows; <em>Kymatik</em> published</li><li><strong>800 → 865 cps</strong> — the pattern does not adjust. It transforms.</li><li><strong>Turn the tone off</strong> — the pattern collapses. Order is maintained, not built.</li><li><strong>Where the record ends</strong> — sound makes form: measured. Form remakes the observer: invented.</li></ol></div>
+  <div class="signoff" data-key="social-03">
+    <span class="signoff-label">Essay 03 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-03" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-03" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-03" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-04" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 3 · Essay 04 — Why Kansas City? <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 04 · links to /blog/why-kansas-city/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="336"><p>People assume I set a conspiracy trilogy in Kansas City because I live here. </p><p> The convenience ran the other way. Around the second century, people on these river bluffs were building stone-vault tombs — rooms with doorways, sealed inside burial mounds. </p><p> Chamber-building here predates Rome's fall. </p><p> jasoncholloway.com/blog/why-kansas-city/ </p><p></p></blockquote>
+<p><strong>Post B (standalone)</strong></p>
+<blockquote data-chars="325"><p>In 1831 Joseph Smith declared Independence, Missouri the center place of Zion. On August 3, a sixty-three-acre parcel was dedicated for a temple. </p><p> The temple was never built. The lot was never abandoned. It is mowed and maintained today. </p><p> There is no Temple Lot scene in my trilogy. Some places exert gravity without appearing. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="851"><p>Why Kansas City? Not hometown convenience — I checked. </p><p> Roughly thirty Hopewell-tradition sites are documented in the area, some containing stone-vault tombs: constructed chambers with doorways, built inside the earthworks. That is chamber-building on this ground with a two-thousand-year head start on me. </p><p> Add the Osage concept of <em>Wah-kon-tah</em>, the sacred mystery that connects everything — practiced, not notated. Add a sixty-three-acre parcel in Independence dedicated as the center place of Zion in 1831 and still maintained. Add Bethany Falls limestone, quarried out from under the city until the empty chambers became the largest underground business complex in the world. </p><p> The honest gap: nobody has published an acoustics study of the Kansas City underground. My fiction is sited here, not sourced here. </p><p> jasoncholloway.com/blog/why-kansas-city/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="1181"><p>Four traditions looked at the same thirty miles of Missouri river bluff and decided, in vocabularies that never borrowed from each other, that this ground matters. </p><p> The Hopewell built rooms inside their burial mounds here — stone-vault tombs with doorways, roughly thirty documented sites at the westernmost edge of the tradition. </p><p> The Osage, whose historic corridor runs through western Missouri, carry the concept of <em>Wah-kon-tah</em>: the sacred mystery that connects everything. Practiced, not notated. My trilogy is about people building machinery to reach something one of this continent's older traditions simply did. </p><p> In 1831 Independence was declared the center place of Zion, and a sixty-three-acre parcel was dedicated for a temple that was never built. The lot is still mowed. </p><p> Underneath all of it: Bethany Falls limestone, quarried until the hollowed chambers became SubTropolis, where about seventeen hundred people go to work underground every day. </p><p> And the gap I will not paper over: no one has published an acoustics study of the Kansas City underground. The novel is sited here. It is not sourced here. </p><p> Essay in bio · jasoncholloway.com/field-notes/kansas-city-locations/ </p><p></p></blockquote>
+<p><strong>Carousel (7 slides)</strong></p>
+<ol><li><strong>Why Kansas City?</strong> — four traditions, one riverbank</li><li><strong>c. 100 BCE–700 CE</strong> — Hopewell mounds with stone-vault chambers inside</li><li><strong>Wah-kon-tah</strong> — the Osage name for the connecting mystery</li><li><strong>August 3, 1831</strong> — 63 acres dedicated in Independence. Temple never built. Lot still mowed.</li><li><strong>Bethany Falls limestone</strong> — quarried out; 55M sq ft of excavated footprint below the city</li><li><strong>The gap</strong> — no published acoustics study of the KC underground. Sited, not sourced.</li><li><strong>Full essay in bio</strong> — the reader's map is in the Field Notes</li></ol>
+<h4>LinkedIn</h4>
+<blockquote data-chars="933"><p>Writers are told to research the setting. I ended up researching the ground. </p><p> My trilogy is set in Kansas City, and readers assume that is hometown convenience. Twenty years of research suggested otherwise. Roughly thirty Hopewell-tradition sites are documented here, some with constructed stone chambers inside the burial mounds. The Osage carry the concept of <em>Wah-kon-tah</em>. In 1831 Independence was formally designated the center place of Zion, with a sixty-three-acre temple parcel still maintained today. And under all of it sits Bethany Falls limestone, quarried so thoroughly that the empty chambers became the largest underground business complex in the world. </p><p> The part I make a point of publishing: there is no acoustics study of the Kansas City underground. My fiction is sited here, not sourced here, and a novel is only entitled to fill a silence if it admits the silence is there. </p><p> jasoncholloway.com/blog/why-kansas-city/ </p><p></p></blockquote></div>
+  <div class="signoff" data-key="social-04">
+    <span class="signoff-label">Essay 04 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-04" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-04" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-04" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-02" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 4 · Essay 02 — The Grimoire That Was a Study Aid <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 02 · links to /blog/the-grimoire-that-was-a-study-aid/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="353"><p>The medieval Church condemned the Ars Notoria — not for devil-worship, but for cheating. </p><p> The manuscript promised the seven liberal arts through contemplation of geometric figures and scheduled prayer. Knowledge without the sanctioned labor of study. </p><p> It is real. British Library, MS Sloane 1712. </p><p> jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/ </p><p></p></blockquote>
+<p><strong>Post B (standalone)</strong></p>
+<blockquote data-chars="301"><p>Describe the Ars Notoria method operationally: extended contemplation of complex figures, recitation on a fixed schedule, repetition across months, a curriculum sequenced foundational to advanced. </p><p> A cognitive scientist would recognize elaborative encoding and spaced repetition. Seven centuries early. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="769"><p>Readers assume I invented the manuscript at the center of my trilogy. I did not. The Ars Notoria is real, catalogued, and requestable at the British Library. </p><p> What it promises is the strange part: rapid acquisition of the seven liberal arts through contemplation of geometric figures called <em>notae</em>, combined with specific prayers on a prescribed schedule. Not wealth. Not power over demons. Knowledge and memory, on an accelerated timetable. A thirteenth-century manual for learning faster. </p><p> It was condemned — by the Inquisition and by Albertus Magnus — on the grounds that it was an illicit shortcut. Institutions rarely mobilize against texts they think are trivial. </p><p> What I invented is narrow: that it works. </p><p> jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="1115"><p>A medieval grimoire condemned as cheating. </p><p> The Ars Notoria belongs to the Solomonic tradition, with surviving manuscripts from the mid-thirteenth century, institutional copies including British Library MS Sloane 1712, and an English translation by Robert Turner in 1657. Claire Fanger and Julien Véronèse have spent careers on it. </p><p> Its promise: the seven liberal arts — grammar, rhetoric, logic, arithmetic, geometry, music, astronomy — acquired through structured contemplation of dense geometric figures paired with scheduled prayer. </p><p> The condemnation was not about demons. It was about shortcuts: knowledge obtained without the sanctioned labor of study. </p><p> And condemned books in the manuscript era did not vanish. They went expensive — copied on good vellum for centuries by patrons who privately decided the text was worth the risk. </p><p> Everything above is on the record. What my trilogy adds is one sentence: that the method works, and here is how. No historian claims that. No cognitive scientist claims that. It is the one experiment the lab has never run. </p><p> Essay in bio · jasoncholloway.com/field-notes/ars-notoria/ </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><strong>Condemned as cheating</strong> — not devil-worship</li><li><strong>The Ars Notoria</strong> — 13th century, Solomonic tradition, MS Sloane 1712</li><li><strong>What it promises</strong> — the seven liberal arts, accelerated</li><li><strong>The notae</strong> — geometric figures meant to be gazed at, not read</li><li><strong>How a banned book survives</strong> — it goes expensive: good vellum, careful scribes, centuries</li><li><strong>What I invented</strong> — that it works. Full essay in bio.</li></ol></div>
+  <div class="signoff" data-key="social-02">
+    <span class="signoff-label">Essay 02 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-02" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-02" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-02" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-07" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 5 · Essay 07 — The Stone Remembers <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 07 · links to /blog/the-stone-remembers/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="314"><p>In 2011 a Kansas City church burned. The fire took the roof, the sanctuary, the woodwork — everything a hundred and seven years had accumulated inside. </p><p> The 1904 limestone walls stood. </p><p> &quot;The stone remembers&quot; had been in my manuscript for a decade before I found the fire. </p><p> jasoncholloway.com/blog/the-stone-remembers/ </p><p></p></blockquote>
+<p><strong>Post B (standalone)</strong></p>
+<blockquote data-chars="337"><p>For years my drafts called the Cathedral of the Immaculate Conception limestone. It seemed safe — this is a limestone city. </p><p> It is red brick. 1882–1912, with the gold dome added in 1960. Our research pass caught it before print. </p><p> A novel claiming the real city is stranger than fiction forfeits the claim the moment it gets the city wrong. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="907"><p>Two Kansas City buildings, one editorial lesson. </p><p> First, a correction. My early drafts described the Cathedral of the Immaculate Conception as limestone, because this is a limestone city and I did not check. It is red brick, built 1882 to 1912, with a gold-leaf dome added in 1960. The research pass caught me. The corrected fact turned out better than the assumption: a brick cathedral wearing a gold crown on the highest bluff above a floodplain is a more precise image of this city than another limestone facade. </p><p> Second, a fire. Westport Presbyterian burned in 2011 — roof gone, interior gone, the 1904 limestone walls standing. The congregation rebuilt inside them. </p><p> Father Moreau's line &quot;the stone remembers&quot; was written years before I found that fire. The fire is documented. Putting the line in a priest's mouth is invention. The resonance is yours to keep. </p><p> jasoncholloway.com/blog/the-stone-remembers/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="1073"><p>The fire took everything except the walls. </p><p> Westport Presbyterian Church was built in 1904, in the neighborhood that was once the last outfitting stop for wagon trains heading west. In 2011 it burned. Roof, sanctuary, woodwork, a century of accumulated interior — gone. Photographs from the next morning show the 1904 limestone standing at full height around a burned-out shell, smoke-darkened and roofless. </p><p> The congregation rebuilt inside the standing walls. The fire could erase the contents but not the fact of the church, because the fact was mineral. </p><p> &quot;The stone remembers&quot; sat in my manuscript on probation for most of a decade — too round, too quotable, a metaphor claiming work the world never authorized. Then a research pass turned up this fire four miles from my desk. </p><p> Nothing was predicted. Church fires are not rare, and the fire preceded my finding it by years. What changed was the line's status: a metaphor waiting on a warrant, and the warrant had been on the public record the whole time. </p><p> Essay in bio · jasoncholloway.com/field-notes/kansas-city-locations/ </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><strong>2011</strong> — Westport Presbyterian burns</li><li><strong>What the fire took</strong> — roof, sanctuary, woodwork, 107 years of interior</li><li><strong>What stood</strong> — the 1904 limestone walls</li><li><strong>They rebuilt inside them</strong> — the contents were erased; the fact was mineral</li><li><strong>The correction</strong> — the cathedral I called limestone is red brick. The audit caught me first.</li><li><strong>&quot;The stone remembers&quot;</strong> — written before the fire was found. Full essay in bio.</li></ol></div>
+  <div class="signoff" data-key="social-07">
+    <span class="signoff-label">Essay 07 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-07" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-07" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-07" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-06" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 6 · Essay 06 — Three Factions, One Declassified Document <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 06 · links to /blog/three-factions-one-declassified-document/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="344"><p>In 1984, American intelligence translated a Chinese government journal on paranormal research and filed the translation. </p><p> Two governments, one subject, opposite policies. One published. The other classified the act of reading. </p><p> That asymmetry is the politics of my entire trilogy. </p><p> jasoncholloway.com/blog/three-factions-one-declassified-document/ </p><p></p></blockquote>
+<p><strong>Post B (thread, 3)</strong></p>
+<blockquote data-chars="521"><p>1/ Readers assume my trilogy's three factions were engineered for plot. Three-way conflict is how thrillers make pressure. Fair assumption, wrong. </p><p> 2/ The positions were already in the record: suppress the research, verify it in the open, or apply it. In the novels those become the Custodians, the Keepers, and the Completion Sect. </p><p> 3/ My caveat, since it matters: the three-way sort is my reading of the translated material, not a heading inside it. The file is public. A better taxonomy earns a correction I would print. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="802"><p>A translation is stranger than a report, and that is why this document ended up structuring my trilogy. </p><p> Intelligence agencies produce assessments of paranormal claims — findings, confidence levels, recommendations. Those read exactly as you would expect. What I found instead was raw open literature from one government, carried across a language barrier and filed by another in 1984. </p><p> A summary gives you conclusions. A translation gives you people arguing, in their own voices, because nobody smoothed them out. Factions are made of people arguing. </p><p> The three positions I take from it — suppress, verify, apply — are my reading, not a heading in the file. The document is public and I would rather say that than defend a tidy structure. </p><p> jasoncholloway.com/blog/three-factions-one-declassified-document/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="1049"><p>One government published. The other classified the act of reading. </p><p> In 1984 American intelligence took a Chinese government journal on paranormal research, translated it for internal circulation, and filed it. On one side: a state research establishment studying claims of extraordinary human capacities in the open — commission, conferences, funded experiments, a journal you could subscribe to. On the other: an agency that reads the journal and stamps the translation. </p><p> Two governments, one subject, opposite policies. That asymmetry is the political physics of my whole trilogy, and it came from the record rather than from me. </p><p> Inside the translated material the debate sorts into three postures: suppress the work, verify it in daylight, or attend to what it might be used for. Those became the Custodians, the Keepers, and the Completion Sect. </p><p> One caveat I insist on: the three-way sort is my reading, not a heading in the document. The file is public. A reader who comes back with a better taxonomy has earned a correction. </p><p> Essay linked in bio. </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><strong>1984</strong> — a translation, not an assessment</li><li><strong>The asymmetry</strong> — one state published. The other classified its reading.</li><li><strong>Suppress</strong> — stop the work, discredit the workers</li><li><strong>Verify</strong> — publish the methods, replicate, let it die in daylight</li><li><strong>Attend</strong> — military interest follows any applicable capacity</li><li><strong>The caveat</strong> — the three-way sort is my reading of the file, not a heading in it</li></ol></div>
+  <div class="signoff" data-key="social-06">
+    <span class="signoff-label">Essay 06 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-06" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-06" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-06" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+
+<article class="card status-ready" id="social-08" data-status="ready" data-kind="social">
+  <header class="card-header">
+    <h3>Slot 7 · Essay 08 — A Document That Cannot Be Un-Released <span class="badge badge-ready">READY</span></h3>
+    <p class="meta">Derived from Essay 08 · links to /blog/a-document-that-cannot-be-unreleased/</p>
+  </header>
+  <div class="card-body prose social"><h4>X</h4>
+<p><strong>Post A</strong></p>
+<blockquote data-chars="268"><p>My conspiracy trilogy ends with a license. </p><p> Not a chamber stormed, not a patriarch unmasked. A 247-page file goes onto the open internet at midnight under CC0, and an eight-hundred-year war loses its object. </p><p> jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/ </p><p></p></blockquote>
+<p><strong>Post B (thread, 3)</strong></p>
+<blockquote data-chars="513"><p>1/ The intuitive opposite of classification is leaking. My trilogy argues that is wrong. </p><p> 2/ A leak preserves everything that gives a secret power — the scarcity, the drama, the sorting of people into those who know and those who don't. It just relocates the power to whoever leaked. </p><p> 3/ The actual opposite of classification is making the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from. </p><p></p></blockquote>
+<h4>Bluesky</h4>
+<blockquote data-chars="873"><p>Endings resolve pressure. For two and a half books the pressure in my trilogy is scarcity: one protocol, three factions, each defined by its answer to who may know. </p><p> A confrontation ending would have resolved a battle and left the scarcity untouched. Whoever wins the chamber becomes the next custodian and the cycle continues, one victor older. </p><p> The only ending that discharges that pressure destroys the scarcity itself — and scarcity of information is destroyed by exactly one instrument: unrestricted copying. So the trilogy ends with a CC0 dedication. The midnight timestamp is drama. The license is the plot. </p><p> The file is invented, down to every download figure in its front matter. The tradition it argues from — reproducibility, public archives, methods detailed enough for strangers to replicate — is not. </p><p> jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/ </p><p></p></blockquote>
+<h4>Instagram</h4>
+<p><strong>Caption</strong></p>
+<blockquote data-chars="1048"><p>The trilogy ends with a license. </p><p> Two hundred forty-seven pages go onto the open internet at midnight under CC0 — the license that reserves nothing, not even attribution — and an eight-hundred-year war over a secret simply loses its object. </p><p> The argument inside the fiction: the intuitive opposite of classification is leaking, and that intuition is wrong. A leak preserves the scarcity that gives a secret its power and merely relocates that power to whoever leaked. The mystery survives its own exposure. Often it grows. </p><p> The actual opposite of classification is to make the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from, no initiation left to sell. </p><p> The file is fiction — the pages, the downloads, the replications, invented down to the digit. CC0 is real, and so is the tradition the ending argues from: open science, public archives, methods sections detailed enough that a stranger can check you. </p><p> Essay linked in bio. </p><p></p></blockquote>
+<p><strong>Carousel (6 slides)</strong></p>
+<ol><li><strong>247 pages. Midnight. CC0.</strong></li><li><strong>Not a confrontation</strong> — a conspiracy trilogy that ends with a file format</li><li><strong>Why leaking fails</strong> — it preserves scarcity and relocates the power</li><li><strong>Make the work boring</strong> — documented, reproducible, free</li><li><strong>Public domain is a one-way door</strong> — the file cannot be un-released</li><li><strong>Invented, and labeled</strong> — the file is fiction. CC0 and open science are not.</li></ol>
+<h4>LinkedIn</h4>
+<blockquote data-chars="1008"><p>I ended a conspiracy trilogy with a Creative Commons license instead of a confrontation, and the reasoning applies well outside fiction. </p><p> For most of the story, the pressure is scarcity: one body of knowledge, three factions, each defined entirely by its answer to who may know. A confrontation ending resolves a battle but leaves the scarcity intact — whoever wins becomes the next gatekeeper. </p><p> The character who ends it argues that the opposite of classification is not leaking. A leak preserves the scarcity that makes a secret valuable and relocates that power to the leaker. The real opposite is making the work boring: documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. </p><p> The document in the novel is invented, including every statistic it reports about itself. The tradition it borrows from — reproducibility, public archives, methods detailed enough for outsiders to verify — is not. </p><p> jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/ </p><p></p></blockquote></div>
+  <div class="signoff" data-key="social-08">
+    <span class="signoff-label">Essay 08 social decision</span>
+    <label class="opt approve"><input type="radio" name="social-08" value="approve"> Approve</label>
+    <label class="opt changes"><input type="radio" name="social-08" value="changes"> Needs changes</label>
+    <label class="opt reject"><input type="radio" name="social-08" value="hold"> Hold</label>
+    <textarea placeholder="Notes (saved in this browser)" rows="2"></textarea>
+  </div>
+</article>
+  <article class="card status-hold" id="social-held" data-status="hold" data-kind="social">
+  <header class="card-header"><h3>Held — do not schedule <span class="badge badge-hold">HOLD</span></h3></header>
+  <div class="card-body prose"><h4>Held — do not schedule</h4>
+<table><thead><tr><th>Item</th><th>Reason</th></tr></thead><tbody><tr><td>Essay 05 / Roger Billings social</td><td>Author HOLD pending sourcing review</td></tr><tr><td>Encyclopedia announcement</td><td>Unannounced; no CTA in any channel</td></tr><tr><td>Any post asserting the CIA file's three camps as a heading in the document</td><td>Reading is the author's; keep the caveat attached</td></tr></tbody></table></div>
+</article>
+
+  <h2 class="section" data-group="blog">Editorial audit</h2>
+  <article class="card status-ready" data-status="ready" data-kind="blog">
+    <header class="card-header"><h3>Full audit record <span class="badge badge-ready">READY</span></h3>
+      <p class="meta">Pass-by-pass results, source tables, and open questions</p></header>
+    <div class="card-body prose"><p><strong>Series:</strong> 8 essays · <strong>Publishable now:</strong> 7 (Essay 05 Roger Billings on HOLD) <strong>Passes:</strong> (1) AI decontamination · (2) Source/credibility · (3) Jason Carroll Holloway voice <strong>Status:</strong> All 7 publishable essays revised in <code>content/blog/*.md</code> · Social derived in <code>SOCIAL_FROM_BLOG.md</code></p>
+<hr>
+<h4>Summary</h4>
+<table><thead><tr><th>#</th><th>Post</th><th>Pass 1 — fingerprints fixed</th><th>Pass 2 — flags</th><th>Pass 3</th><th>Ready</th></tr></thead><tbody><tr><td>01</td><td>Frequency Already There</td><td>meta trimmed; single deliberate <em>ungraded</em> retained (Eco)</td><td>none</td><td>A-</td><td><strong>Y</strong></td></tr><tr><td>02</td><td>Grimoire Study Aid</td><td>&quot;connects this essay to the next&quot; → forward link</td><td>none</td><td>A-</td><td><strong>Y</strong></td></tr><tr><td>03</td><td>Sound Into Form</td><td>&quot;This essay separates…&quot; opener cut</td><td>none</td><td>A-</td><td><strong>Y</strong></td></tr><tr><td>04</td><td>Why Kansas City</td><td>&quot;The honest answer&quot; opener, <em>apparatus</em>, <em>stated plainly</em>, &quot;which is exactly&quot;, encyclopedia CTA</td><td>Fibonacci reading softened; Bethany Falls age ⚠</td><td>A-</td><td><strong>Y</strong></td></tr><tr><td>05</td><td>Man Under Zion</td><td>—</td><td>Billings sourcing unverified</td><td>—</td><td><strong>HOLD</strong></td></tr><tr><td>06</td><td>Three Factions</td><td>three-phase motor/torque, &quot;Sit with that sentence&quot;, <em>grade card</em> header, <em>load-bearing</em>, encyclopedia CTA</td><td>CIA three-camp sort now labeled as author's reading</td><td>A-</td><td><strong>Y</strong></td></tr><tr><td>07</td><td>Stone Remembers</td><td><em>grade card</em> meta, &quot;this series has rules&quot;, encyclopedia bibliography ref + CTA</td><td>none</td><td>A</td><td><strong>Y</strong></td></tr><tr><td>08</td><td>Cannot Be Un-Released</td><td>encyclopedia making-of section cut, &quot;Eight essays, one method&quot; recap cut, cross-ref by title</td><td>DF statistics labeled invented</td><td>A-</td><td><strong>Y</strong></td></tr></tbody></table>
+<p>Automated rescan (<code>grep</code> over the removal table) returns clean on all seven publishable posts. The single remaining hit is <em>ungraded patterns</em> in 01, kept deliberately: it sits in the Umberto Eco passage and is the one place the word carries argument rather than scaffolding.</p>
+<hr>
+<h4>Voice reference (pass 3 benchmark)</h4>
+<p><strong>Sounds like Jason / Masters X:</strong></p>
+<ul><li>Opens on a concrete detail from the trilogy or a document on the desk</li><li>First person when it matters; otherwise lets the record speak</li><li>Labels fiction without performing honesty (<em>in the world</em> / <em>in the novels</em>)</li><li>Links to Field Notes as the public research layer</li><li>Closes: <em>The facts are in the files. The fiction is in the books.</em></li></ul>
+<p><strong>Does not sound like Jason:</strong></p>
+<ul><li>Meta-commentary about what &quot;this essay&quot; is doing</li><li>Repeated scaffolding: <em>the honest answer</em>, <em>stated plainly</em>, <em>the grade card</em>, <em>the seam</em>, <em>load-bearing</em></li><li>Essay-series throat-clearing (<em>Essay three walks</em>, <em>the sixth essay in this series</em>)</li><li>Encyclopedia / apparatus CTAs (not announced yet)</li><li>Balanced triplets and thesis sentences that read like LLM polish</li></ul>
+<hr>
+<h4>AI fingerprint hits (pass 1) — patterns removed</h4>
+<table><thead><tr><th>Pattern</th><th>Count (draft)</th><th>Action</th><th>Remaining</th></tr></thead><tbody><tr><td>&quot;The honest answer&quot;</td><td>12+ across series</td><td>Cut or use once max per post</td><td>0</td></tr><tr><td>&quot;stated plainly&quot; / &quot;plainly&quot; (self-referential)</td><td>18+</td><td>Remove</td><td>0</td></tr><tr><td>&quot;grade&quot; / &quot;graded&quot; / &quot;grade card&quot;</td><td>40+</td><td>Replace with <em>measured / documented / invented</em></td><td>1 (Eco, intentional)</td></tr><tr><td>&quot;the seam&quot;</td><td>25+</td><td>Keep ≤2 per post; prefer <em>where the record ends</em></td><td>0</td></tr><tr><td>&quot;load-bearing&quot;</td><td>8</td><td>Remove</td><td>0</td></tr><tr><td>&quot;this essay&quot; / &quot;this series&quot;</td><td>35+</td><td>Cut meta; cross-link by title only</td><td>0</td></tr><tr><td>&quot;apparatus&quot;</td><td>15+</td><td>Remove or → <em>Field Notes</em></td><td>0</td></tr><tr><td>Encyclopedia CTAs</td><td>8 closings</td><td>→ Field Notes + books only</td><td>0</td></tr><tr><td>&quot;which is exactly why&quot;</td><td>6</td><td>Cut</td><td>0</td></tr><tr><td>Motor/torque metaphors, &quot;sit with that sentence&quot;</td><td>4</td><td>Cut</td><td>0</td></tr></tbody></table>
+<p><strong>Code follow-up:</strong> <code>siteReadyMarkdown()</code> in <code>lib/markdown.ts</code> previously carried a dozen brittle string-match scrubbers for the encyclopedia CTAs. Now that the source markdown is clean, it was replaced with a sentence-level guard that drops any sentence naming the unannounced encyclopedia.</p>
+<hr>
+<h4>Source validation (pass 2) — by post</h4>
+<h5>01 · The Frequency That Was Already There</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>Hypogeum 110–111 Hz, 80 visitors/day</td><td>✓</td><td>Field Note 111-hz; UNESCO</td></tr><tr><td>Cook, Pajot, Leuchter 2008 — small sample</td><td>✓</td><td>Field Note; caveat retained</td></tr><tr><td>Devereux et al., 95–120 Hz band</td><td>✓</td><td>JASA / <em>Stone Age Soundtracks</em> — link in Field Note</td></tr><tr><td>Watson &amp; Keating, Camster Round</td><td>✓</td><td>Field Note</td></tr><tr><td>Reznikoff &amp; Dauvois 1988, Lascaux</td><td>✓</td><td>Field Note</td></tr><tr><td>Schumann 7.83 Hz</td><td>✓</td><td>Textbook geophysics</td></tr><tr><td>111.2 Hz tremor, Blake</td><td>✓</td><td>CANON.md line 68</td></tr><tr><td>136.6 Hz / Monroe / Gateway</td><td>⚠ contested</td><td>Documented practice; claims not science — labeled</td></tr><tr><td>KC underground acoustics — no published study</td><td>✓</td><td>Honest gap retained</td></tr></tbody></table>
+<h5>02 · The Grimoire That Was a Study Aid</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>Ars Notoria real, Sloane 1712, Turner 1657</td><td>✓</td><td>Field Note ars-notoria</td></tr><tr><td>Fanger / Véronèse scholarship</td><td>✓</td><td>Standard; Field Note aligned</td></tr><tr><td>Albertus Magnus condemnation</td><td>✓</td><td>Scholarly record</td></tr><tr><td>Notae as cognitive technology (Nadia)</td><td>✗ fiction</td><td>Labeled</td></tr><tr><td>Frozen sound / cymatics (notae)</td><td>✗ fiction</td><td>Labeled; → Essay 03</td></tr></tbody></table>
+<h5>03 · Sound Into Form</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>Chladni 1787, nodal lines</td><td>✓</td><td>Field Note cymatics</td></tr><tr><td>Jenny <em>Kymatik</em> 1967/72, 800→865 cps</td><td>✓</td><td>Field Note</td></tr><tr><td>No evidence viewing patterns alters consciousness</td><td>✓</td><td>Honest gap</td></tr><tr><td>Kofi Asante Ghana — fiction label</td><td>✓</td><td>Field Note</td></tr><tr><td>Yuki Tanaka methodology — fiction</td><td>✓</td><td>Labeled</td></tr></tbody></table>
+<h5>04 · Why Kansas City?</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>Hopewell, ~30 sites, stone-vault tombs</td><td>✓</td><td>Archaeological record; <strong>not</strong> in the KC-locations Field Note — link now points to the Field Note only for the trilogy's location map</td></tr><tr><td>Diaz-Granados &amp; Duncan, Missouri rock art</td><td>✓</td><td>Published scholarship</td></tr><tr><td>Osage <em>Wah-kon-tah</em></td><td>✓</td><td>Credited upstream; rendering-varies caveat added</td></tr><tr><td>D&amp;C 57, Temple Lot Aug 3 1831, 63 acres</td><td>✓</td><td>Public record</td></tr><tr><td>No Temple Lot scene in trilogy</td><td>✓</td><td>Verified in research audit</td></tr><tr><td>Community of Christ temple 1994, Obata, 195 ft nautilus spire</td><td>✓</td><td>Public record</td></tr><tr><td>&quot;Fibonacci as architectural DNA&quot;</td><td>⚠ softened</td><td>Interpretive reading, not the architect's stated program — revised to describe the nautilus form and attribute the Fibonacci reading to readers</td></tr><tr><td>SubTropolis 55M sq ft, ~1,700 workers, 65°F, 160 ft</td><td>✓</td><td>Field Note subtropolis</td></tr><tr><td>Bethany Falls &quot;270 million years / Pennsylvanian-age&quot;</td><td>⚠</td><td>Field Note says both; Pennsylvanian is ~323–299 Ma, so the 270 Ma figure reads Permian. Essay now says &quot;when the middle of North America was a shallow sea&quot; without a number. <strong>Author to reconcile the Field Note.</strong></td></tr><tr><td>No KC underground acoustics study</td><td>✓</td><td>Honest gap retained</td></tr><tr><td>Fifth seeker (Billings)</td><td>⚠</td><td>Essay 05 HOLD — unnamed teaser only; &quot;180-acre&quot; figure removed from the teaser</td></tr></tbody></table>
+<h5>05 · The Man Who Built a City Under Zion — <strong>HOLD</strong></h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Notes</th></tr></thead><tbody><tr><td>Roger Billings biography</td><td>⚠</td><td>Author must verify <code>ROGER_BILLINGS_MASTERS_X_ANALYSIS.md</code> before any publish. File not present in repo (removed with <code>encyclopedia_project</code> in <code>3795ac2</code>; recoverable at <code>876d358</code>).</td></tr></tbody></table>
+<h5>06 · Three Factions</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>CIA-RDP96-00792R, 1984 translation of Chinese journal</td><td>⚠</td><td>Real CREST designation family; <strong>essay now describes it as sitting &quot;under the RDP96-00792R designation, alongside similar material&quot;</strong> rather than asserting a single exact document. Verify the specific record before any print prop.</td></tr><tr><td>Three camps: suppress / verify / weaponize</td><td>⚠ → resolved editorially</td><td>No independent research file in repo; only Fable-generated content. Essay now states explicitly that the three-way sort is the author's reading, not a heading in the file.</td></tr><tr><td>&quot;Feudal sorcery&quot; phrasing</td><td>✓</td><td>Recurs in the era's polemics; hedged as such</td></tr><tr><td>Gateway Process assessment, US Army 1983</td><td>✓</td><td>Declassified; date added</td></tr><tr><td>Distribution File CC0 ending</td><td>✗ fiction</td><td>Labeled</td></tr><tr><td>Download statistics</td><td>✗ fiction</td><td>Figure removed from 06; retained only in 08 as in-universe front matter</td></tr></tbody></table>
+<h5>07 · The Stone Remembers</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>Cathedral = red brick 1882–1912, gold dome 1960</td><td>✓</td><td>KC churches research</td></tr><tr><td>Westport Presbyterian 1904, fire 2011, walls stood, rebuilt within</td><td>✓</td><td>Public record</td></tr><tr><td>St. Francis Xavier 1925 fire, 21,000 lb Bedford limestone sculpture</td><td>✓</td><td>Research file</td></tr><tr><td>Quarrying boom 1880–1920</td><td>✓</td><td>Municipal history</td></tr><tr><td>Moreau line &quot;stone remembers&quot;</td><td>✗ fiction</td><td>Fire = documentary anchor; relationship stated plainly in prose</td></tr></tbody></table>
+<h5>08 · A Document That Cannot Be Un-Released</h5>
+<table><thead><tr><th>Claim</th><th>Status</th><th>Source</th></tr></thead><tbody><tr><td>DF 247 pp, five parts, f=111.2 footer</td><td>✓ in-universe</td><td>CANON / omnibus</td></tr><tr><td>Andrew Chen compiler</td><td>✓</td><td>CANON.md line 74 (not &quot;Blackwood&quot;, not &quot;Vance&quot;)</td></tr><tr><td>CC0 as real license</td><td>✓</td><td>Creative Commons</td></tr><tr><td>1,204,881 downloads / 47 countries / 3 replications</td><td>✗ fiction</td><td>Labeled &quot;invented down to the digit&quot;</td></tr><tr><td>Gateway + 1984 translation cross-reference</td><td>✓</td><td>Cross-linked to Essay 06 by title</td></tr><tr><td>Encyclopedia making-of section</td><td>—</td><td><strong>Cut</strong> from site version (unannounced); editorial-problem discussion retained without product CTA</td></tr></tbody></table>
+<hr>
+<h4>Voice score (pass 3) — before → after</h4>
+<table><thead><tr><th>#</th><th>Title</th><th>Before</th><th>After</th><th>Notes</th></tr></thead><tbody><tr><td>01</td><td>Frequency Already There</td><td>B+</td><td>A-</td><td>Less meta; Field Note as authority</td></tr><tr><td>02</td><td>Grimoire Study Aid</td><td>B</td><td>A-</td><td>Cut &quot;middle register&quot;; tighter Nadia transition</td></tr><tr><td>03</td><td>Sound Into Form</td><td>B+</td><td>A-</td><td>Removed essay-self-reference in opener</td></tr><tr><td>04</td><td>Why Kansas City</td><td>B</td><td>A-</td><td>Opens on Hopewell stone-vault tombs; &quot;five traditions&quot; rhetoric replaced with four documented + one held</td></tr><tr><td>05</td><td>Man Under Zion</td><td>—</td><td>HOLD</td><td>Billings sourcing</td></tr><tr><td>06</td><td>Three Factions</td><td>C+</td><td>A-</td><td>Motor metaphor gone; caveat now strengthens rather than weakens the piece</td></tr><tr><td>07</td><td>Stone Remembers</td><td>B+</td><td>A</td><td>Strongest in the run; correction-first structure intact</td></tr><tr><td>08</td><td>Cannot Be Un-Released</td><td>B</td><td>A-</td><td>Encyclopedia coda cut; craft note on the file-format ending kept</td></tr></tbody></table>
+<p>Word counts after revision: 845–1,175, consistent with the 01–03 benchmarks.</p>
+<hr>
+<h4>Publish order (SEO + internal links)</h4>
+<ol><li><strong>01</strong> Frequency — pillar; links 111-hz, cymatics</li><li><strong>03</strong> Cymatics — pairs with 01; links ars-notoria</li><li><strong>04</strong> Kansas City — local SEO; links kansas-city-locations, subtropolis, 07</li><li><strong>02</strong> Ars Notoria — links ars-notoria, cymatics, 03</li><li><strong>07</strong> Stone Remembers — links kansas-city-locations, subtropolis</li><li><strong>06</strong> Three Factions — links 01</li><li><strong>08</strong> DF / CC0 — capstone; links 06, omnibus</li></ol>
+<p><strong>After Essay 05 cleared:</strong> insert between 04 and 07.</p>
+<hr>
+<h4>Open items for the author</h4>
+<ol><li><strong>Essay 05 / Roger Billings</strong> — restore <code>ROGER_BILLINGS_MASTERS_X_ANALYSIS.md</code> (<code>git checkout 876d358 -- encyclopedia_project</code>) and verify before the post or its social leaves HOLD.</li><li><strong>CIA record</strong> — pull the specific reading-room document and confirm the designation before it appears as a print prop or a firmer citation.</li><li><strong>Bethany Falls age</strong> — the SubTropolis Field Note carries both &quot;Pennsylvanian-age&quot; and &quot;270 million years,&quot; which do not agree. Blog copy now avoids the number; the Field Note still needs a decision.</li><li><strong>Community of Christ spire</strong> — confirm whether the Fibonacci reading is the architect's stated program or a reader interpretation, if it is ever to be stated more firmly than the current phrasing.</li></ol>
+<hr>
+<h4>Social derivation</h4>
+<p>See <code>SOCIAL_FROM_BLOG.md</code> — X, Bluesky, Instagram, and LinkedIn posts drafted from the revised blog copy, not from the Fable social pack. Essay 05 and any encyclopedia announcement are excluded.</p></div>
+  </article>
+</div>
+
+<script>
+  const KEY = 'mx-publish-review';
+  const load = () => { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } };
+  const save = (s) => localStorage.setItem(KEY, JSON.stringify(s));
+  let state = load();
+
+  const cards = [...document.querySelectorAll('.card')];
+  const decidable = [...document.querySelectorAll('.signoff')];
+
+  function paint(key) {
+    const box = document.querySelector('.signoff[data-key="' + key + '"]');
+    if (!box) return;
+    const card = box.closest('.card');
+    const v = state[key] || {};
+    card.classList.remove('decided-approve','decided-changes','decided-hold');
+    if (v.decision) card.classList.add('decided-' + v.decision);
+    const link = document.querySelector('[data-toc="' + key + '"]');
+    if (link) link.classList.toggle('done', v.decision === 'approve');
+  }
+
+  decidable.forEach(box => {
+    const key = box.dataset.key;
+    const saved = state[key] || {};
+    if (saved.decision) {
+      const input = box.querySelector('input[value="' + saved.decision + '"]');
+      if (input) input.checked = true;
+    }
+    if (saved.note) box.querySelector('textarea').value = saved.note;
+    box.querySelectorAll('input').forEach(input => {
+      input.addEventListener('change', () => {
+        state[key] = { ...(state[key] || {}), decision: input.value };
+        save(state); paint(key); progress();
+      });
+    });
+    box.querySelector('textarea').addEventListener('input', (e) => {
+      state[key] = { ...(state[key] || {}), note: e.target.value };
+      save(state);
+    });
+    paint(key);
+  });
+
+  function progress() {
+    const total = decidable.length;
+    const done = decidable.filter(b => (state[b.dataset.key] || {}).decision).length;
+    document.getElementById('progress').textContent = done + ' of ' + total + ' reviewed';
+  }
+  progress();
+
+  document.querySelectorAll('.toolbar button[data-filter]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.toolbar button[data-filter]').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => {
+        let show = true;
+        if (f === 'blog' || f === 'social') show = c.dataset.kind === f;
+        else if (f === 'hold') show = c.dataset.status === 'hold';
+        else if (f === 'undecided') {
+          const box = c.querySelector('.signoff');
+          show = !box || !(state[box.dataset.key] || {}).decision;
+        }
+        c.classList.toggle('hidden', !show);
+      });
+      document.querySelectorAll('.section').forEach(t => {
+        t.classList.toggle('hidden', (f === 'blog' || f === 'social') && t.dataset.group !== f);
+      });
+    });
+  });
+
+  document.getElementById('export').addEventListener('click', async () => {
+    const lines = ['Publish review decisions — ' + new Date().toISOString().slice(0,10), ''];
+    decidable.forEach(box => {
+      const key = box.dataset.key;
+      const v = state[key] || {};
+      lines.push(box.querySelector('.signoff-label').textContent + ': ' + (v.decision || 'undecided') + (v.note ? ' — ' + v.note : ''));
+    });
+    const text = lines.join('\n');
+    try { await navigator.clipboard.writeText(text); document.getElementById('export').textContent = 'Copied'; }
+    catch { window.prompt('Copy your decisions:', text); }
+    setTimeout(() => { document.getElementById('export').textContent = 'Copy decisions'; }, 1800);
+  });
+</script>
+</body>
+</html>

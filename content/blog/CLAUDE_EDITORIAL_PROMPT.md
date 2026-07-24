@@ -30,7 +30,7 @@ content/blog/01_frequency_that_was_already_there.md   ← REVISED (use as voice 
 content/blog/02_grimoire_study_aid.md                 ← REVISED (use as voice benchmark)
 content/blog/03_sound_into_form.md                    ← REVISED (use as voice benchmark)
 content/blog/04_why_kansas_city.md                    ← NEEDS REVISION
-content/blog/05_man_under_zion.HOLD.md                ← DO NOT PUBLISH — author HOLD
+content/blog/held/05_man_under_zion.md                ← CUT FROM SERIES, do not publish or reference
 content/blog/06_three_factions_declassified.md          ← NEEDS REVISION
 content/blog/07_stone_remembers.md                      ← NEEDS REVISION
 content/blog/08_document_cannot_be_unreleased.md        ← NEEDS REVISION
@@ -57,7 +57,7 @@ content/blog/08_document_cannot_be_unreleased.md        ← NEEDS REVISION
 
 | Item | Rule |
 |------|------|
-| Roger Billings / Essay 05 | **HOLD** — do not revise for publish, do not derive social |
+| Roger Billings / Essay 05 | **CUT** from the series. No publish, no social, no references in other essays. |
 | Encyclopedia announce | **HOLD** — remove encyclopedia CTAs from site-facing copy |
 | Andrew Chen | Correct name (not Andrew Vance) |
 | Closing line | Every published essay ends: *The facts are in the files. The fiction is in the books.* |
@@ -83,6 +83,7 @@ Read each post and strip patterns that read as LLM-generated scaffolding. **Essa
 | "apparatus" | Remove or → *Field Notes* |
 | Encyclopedia CTAs in closings | → Field Notes + books |
 | "which is exactly why" | Cut |
+| **Em-dashes** | **Remove every one.** Restructure the sentence: commas for asides, a colon for definitions and lists, a period for the dramatic pause. En-dashes stay only in numeric ranges. |
 | Motor/torque metaphors, "sit with that sentence" | Cut |
 | Balanced triplets, thesis sentences that sound polished-generic | Rewrite as concrete prose |
 

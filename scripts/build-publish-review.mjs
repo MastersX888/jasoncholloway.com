@@ -16,19 +16,10 @@ const OUT = path.join(ROOT, "public/publish-review.html");
 const SITE = "https://jasoncholloway.com";
 
 const POSTS = [
-  { id: "01", slot: 1, file: "01_frequency_that_was_already_there.md", slug: "the-frequency-that-was-already-there", title: "The Frequency That Was Already There", status: "ready" },
-  { id: "02", slot: 4, file: "02_grimoire_study_aid.md", slug: "the-grimoire-that-was-a-study-aid", title: "The Grimoire That Was Actually a Study Aid", status: "ready" },
-  { id: "03", slot: 2, file: "03_sound_into_form.md", slug: "sound-into-form-hans-jenny", title: "Sound Into Form: What Hans Jenny Actually Proved", status: "ready" },
-  { id: "04", slot: 3, file: "04_why_kansas_city.md", slug: "why-kansas-city", title: "Why Kansas City? The Ground Itself Is Significant", status: "ready" },
-  {
-    id: "05",
-    slot: null,
-    file: "05_man_under_zion.HOLD.md",
-    slug: "the-man-who-built-a-city-under-zion",
-    title: "The Man Who Built a City Under Zion",
-    status: "hold",
-    note: "Roger Billings. Not revised, not routed on the site (404s), no social drafted. The research file it cites, ROGER_BILLINGS_MASTERS_X_ANALYSIS.md, is not in this repository — it is listed in the research catalog as a 12 KB file in your local archive. Shown here as the unrevised draft so you can judge the sourcing.",
-  },
+  { id: "01", slot: 1, file: "01_frequency_that_was_already_there.md", slug: "the-frequency-that-was-already-there", title: "The Frequency That Was Already There", status: "live" },
+  { id: "02", slot: 4, file: "02_grimoire_study_aid.md", slug: "the-grimoire-that-was-a-study-aid", title: "The Grimoire That Was Actually a Study Aid", status: "live" },
+  { id: "03", slot: 2, file: "03_sound_into_form.md", slug: "sound-into-form-hans-jenny", title: "Sound Into Form: What Hans Jenny Actually Proved", status: "live" },
+  { id: "04", slot: 3, file: "04_why_kansas_city.md", slug: "why-kansas-city", title: "Why Kansas City? The Ground Itself Is Significant", status: "live" },
   { id: "06", slot: 6, file: "06_three_factions_declassified.md", slug: "three-factions-one-declassified-document", title: "Three Factions, One Declassified Document", status: "ready" },
   { id: "07", slot: 5, file: "07_stone_remembers.md", slug: "the-stone-remembers", title: "The Stone Remembers: A Fire in Westport", status: "ready" },
   { id: "08", slot: 7, file: "08_document_cannot_be_unreleased.md", slug: "a-document-that-cannot-be-unreleased", title: "A Document That Cannot Be Un-Released", status: "ready" },
@@ -170,12 +161,12 @@ function words(md) {
 function parseSocial(md) {
   const preambleEnd = md.indexOf("\n## Slot 1");
   const preamble = preambleEnd === -1 ? md : md.slice(0, preambleEnd);
-  const heldStart = md.indexOf("\n## Held — do not schedule");
+  const heldStart = md.indexOf("\n## Held: do not schedule");
   const held = heldStart === -1 ? "" : md.slice(heldStart);
   const body = md.slice(preambleEnd === -1 ? 0 : preambleEnd, heldStart === -1 ? undefined : heldStart);
 
   const slots = [];
-  const re = /^## (Slot \d+ · Essay (\d+) — .+)$/gm;
+  const re = /^## (Slot \d+ · Essay (\d+): .+)$/gm;
   const marks = [...body.matchAll(re)];
   marks.forEach((m, i) => {
     const start = m.index;
@@ -194,7 +185,7 @@ const social = parseSocial(socialRaw);
 const auditRaw = read("BLOG_EDITORIAL_AUDIT.md");
 
 function badge(status) {
-  const label = { ready: "READY", hold: "HOLD", verify: "VERIFY" }[status] ?? status.toUpperCase();
+  const label = { live: "LIVE", ready: "AWAITING APPROVAL", hold: "HOLD", verify: "VERIFY" }[status] ?? status.toUpperCase();
   return `<span class="badge badge-${status}">${label}</span>`;
 }
 
@@ -235,9 +226,9 @@ const socialCards = social.slots
   .map((s) => {
     const post = POSTS.find((p) => p.id === s.essay);
     return `
-<article class="card status-ready" id="social-${s.essay}" data-status="ready" data-kind="social">
+<article class="card status-${post ? post.status : "ready"}" id="social-${s.essay}" data-status="${post ? post.status : "ready"}" data-kind="social">
   <header class="card-header">
-    <h3>${esc(s.heading)} ${badge("ready")}</h3>
+    <h3>${esc(s.heading)} ${badge(post ? post.status : "ready")}</h3>
     <p class="meta">Derived from Essay ${s.essay}${post ? ` · links to /blog/${post.slug}/` : ""}</p>
   </header>
   <div class="card-body prose social">${mdToHtml(s.content, { headingOffset: 1 })}</div>
@@ -248,20 +239,21 @@ const socialCards = social.slots
 
 const heldCard = social.held
   ? `<article class="card status-hold" id="social-held" data-status="hold" data-kind="social">
-  <header class="card-header"><h3>Held — do not schedule ${badge("hold")}</h3></header>
+  <header class="card-header"><h3>Held: do not schedule ${badge("hold")}</h3></header>
   <div class="card-body prose">${mdToHtml(social.held.replace(/^## /m, "### "), { headingOffset: 1 })}</div>
 </article>`
   : "";
 
 const generated = new Date().toISOString().slice(0, 10);
-const readyCount = POSTS.filter((p) => p.status === "ready").length;
+const liveCount = POSTS.filter((p) => p.status === "live").length;
+const pendingCount = POSTS.filter((p) => p.status === "ready").length;
 
 const html = `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Publish Review — The Facts Behind the Fiction</title>
+<title>Publish Review: The Facts Behind the Fiction</title>
 <style>
   :root {
     --bg:#08080F; --surface:#13131E; --surface2:#191926; --border:#272740;
@@ -293,7 +285,8 @@ const html = `<!DOCTYPE html>
             margin-bottom:1.75rem; font-family:system-ui,sans-serif; }
   .badge { font-family:system-ui,sans-serif; font-size:.62rem; font-weight:700; letter-spacing:.06em;
            padding:.16rem .5rem; border-radius:3px; vertical-align:middle; }
-  .badge-ready { background:rgba(34,197,94,.18); color:var(--ready); }
+  .badge-ready { background:rgba(245,158,11,.18); color:var(--verify); }
+  .badge-live { background:rgba(34,197,94,.18); color:var(--ready); }
   .badge-hold { background:rgba(239,68,68,.18); color:var(--hold); }
   .badge-verify { background:rgba(245,158,11,.18); color:var(--verify); }
   .toc { background:var(--surface); border:1px solid var(--border); border-radius:4px;
@@ -309,7 +302,8 @@ const html = `<!DOCTYPE html>
           margin-bottom:1.6rem; overflow:hidden; }
   .card.status-hold { border-left:4px solid var(--hold); }
   .card.status-verify { border-left:4px solid var(--verify); }
-  .card.status-ready { border-left:4px solid var(--ready); }
+  .card.status-ready { border-left:4px solid var(--verify); }
+  .card.status-live { border-left:4px solid var(--ready); }
   .card.decided-approve { border-left-color:var(--ready); }
   .card.decided-changes { border-left-color:var(--verify); }
   .card.decided-hold { border-left-color:var(--hold); }
@@ -375,26 +369,25 @@ const html = `<!DOCTYPE html>
   <p class="subtitle">The Facts Behind the Fiction · Jason Carroll Holloway · Seventh City Press · Generated ${generated}</p>
 
   <div class="panel">
-    <h2>What you are approving</h2>
+    <h2>Where this stands</h2>
     <ul>
-      <li><strong>${readyCount} blog essays</strong>, fully revised through the three-pass audit, ready for <code>jasoncholloway.com/blog/</code></li>
-      <li><strong>${social.slots.length} social sets</strong> (X, Bluesky, Instagram, and LinkedIn on pillar essays), each written from the revised essay it links to</li>
-      <li><strong>Essay 05 is shown but held</strong> — unrevised, unrouted, and excluded from social</li>
+      <li><strong>${liveCount} essays are live</strong> at <code>jasoncholloway.com/blog/</code>: essays 01 through 04, in publish slots 1 to 4</li>
+      <li><strong>${pendingCount} essays are revised and waiting</strong> on your approval: essays 06, 07, and 08</li>
+      <li><strong>${social.slots.length} social sets</strong> covering X, Bluesky, Instagram, and LinkedIn, each written from the essay it links to</li>
     </ul>
   </div>
 
-  <div class="panel warn">
-    <h2>Correction on the Billings research file</h2>
+  <div class="panel">
+    <h2>Two changes since the last review</h2>
     <ul>
-      <li><code>ROGER_BILLINGS_MASTERS_X_ANALYSIS.md</code> could not be restored from git. I scanned all 134 commits in this repository and the file has never been committed here.</li>
-      <li>It is listed in <code>content_fable_handoff/package/reference/universe_memory/01_RESEARCH_CATALOG.md</code> as a 12 KB file in your research archive, which means it lives on your machine rather than in this repo.</li>
-      <li>Essay 05 stays on hold until you supply that file or confirm its claims from the public record directly.</li>
+      <li><strong>Em-dashes are gone.</strong> All ${POSTS.length} essays, the social pack, and the page metadata were rewritten to zero em-dashes. Sentences were restructured rather than having punctuation swapped, so the rhythm changed in places. En-dashes remain only in number ranges such as 3600–2500 BCE.</li>
+      <li><strong>The Billings essay is cut.</strong> Essay 05 is out of the series, off the site, and absent from social. Its draft is parked at <code>content/blog/held/05_man_under_zion.md</code>. Essay 04 previously closed on a teaser for it; that section is rewritten to stand on four traditions with William Masters as the invented addition.</li>
     </ul>
   </div>
 
   <div class="legend">
-    <span><span class="badge badge-ready">READY</span> revised and verified</span>
-    <span><span class="badge badge-hold">HOLD</span> do not publish</span>
+    <span><span class="badge badge-live">LIVE</span> published</span>
+    <span><span class="badge badge-ready">AWAITING APPROVAL</span> revised, not published</span>
     <span>Character counts appear on every social post</span>
     <span>Your decisions and notes save in this browser</span>
   </div>
@@ -412,13 +405,12 @@ const html = `<!DOCTYPE html>
   </div>
 
   <nav class="toc">
-    <strong>BLOG — in publish order</strong>
+    <strong>BLOG, in publish order</strong>
     ${[...POSTS]
       .filter((p) => p.slot)
       .sort((a, b) => a.slot - b.slot)
-      .map((p) => `<a href="#blog-${p.id}" data-toc="blog-${p.id}">${p.slot}. Essay ${p.id} — ${esc(p.title)}</a>`)
+      .map((p) => `<a href="#blog-${p.id}" data-toc="blog-${p.id}">${p.slot}. Essay ${p.id}: ${esc(p.title)}</a>`)
       .join("")}
-    <a href="#blog-05" data-toc="blog-05">— Essay 05 — ${esc("The Man Who Built a City Under Zion")} (HOLD)</a>
     <strong style="margin-top:.9rem">SOCIAL</strong>
     ${social.slots.map((s) => `<a href="#social-${s.essay}" data-toc="social-${s.essay}">${esc(s.heading.replace(/^Slot \d+ · /, ""))}</a>`).join("")}
   </nav>
@@ -434,8 +426,8 @@ const html = `<!DOCTYPE html>
   ${heldCard}
 
   <h2 class="section" data-group="blog">Editorial audit</h2>
-  <article class="card status-ready" data-status="ready" data-kind="blog">
-    <header class="card-header"><h3>Full audit record ${badge("ready")}</h3>
+  <article class="card status-live" data-status="live" data-kind="blog">
+    <header class="card-header"><h3>Full audit record</h3>
       <p class="meta">Pass-by-pass results, source tables, and open questions</p></header>
     <div class="card-body prose">${mdToHtml(auditRaw.replace(/^# .*$/m, ""), { headingOffset: 2 })}</div>
   </article>
@@ -511,11 +503,11 @@ const html = `<!DOCTYPE html>
   });
 
   document.getElementById('export').addEventListener('click', async () => {
-    const lines = ['Publish review decisions — ' + new Date().toISOString().slice(0,10), ''];
+    const lines = ['Publish review decisions, ' + new Date().toISOString().slice(0,10), ''];
     decidable.forEach(box => {
       const key = box.dataset.key;
       const v = state[key] || {};
-      lines.push(box.querySelector('.signoff-label').textContent + ': ' + (v.decision || 'undecided') + (v.note ? ' — ' + v.note : ''));
+      lines.push(box.querySelector('.signoff-label').textContent + ': ' + (v.decision || 'undecided') + (v.note ? ': ' + v.note : ''));
     });
     const text = lines.join('\\n');
     try { await navigator.clipboard.writeText(text); document.getElementById('export').textContent = 'Copied'; }
@@ -528,5 +520,5 @@ const html = `<!DOCTYPE html>
 
 fs.writeFileSync(OUT, html);
 console.log(`Wrote ${OUT} (${(fs.statSync(OUT).size / 1024).toFixed(1)} KB)`);
-console.log(`  ${POSTS.length} blog essays (${readyCount} ready, ${POSTS.length - readyCount} hold)`);
+console.log(`  ${POSTS.length} blog essays (${liveCount} live, ${pendingCount} awaiting approval)`);
 console.log(`  ${social.slots.length} social sets`);

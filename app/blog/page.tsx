@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { getPublishedBlogPosts } from "@/lib/data/blogPosts";
 
 export const metadata: Metadata = {
-  title: "The Facts Behind the Fiction — Essays",
+  title: "The Facts Behind the Fiction: Essays",
   description:
-    "Essays on the real research behind the Masters X Trilogy: 111 Hz archaeoacoustics, cymatics, Kansas City geography, declassified files — with the seam between fact and fiction stated plainly.",
+    "Essays on the real research behind the Masters X Trilogy: 111 Hz archaeoacoustics, cymatics, Kansas City geography, and declassified files, with the line between fact and fiction named in every piece.",
   alternates: { canonical: "https://jasoncholloway.com/blog/" },
   openGraph: {
-    title: "The Facts Behind the Fiction — Essays by Jason Carroll Holloway",
+    title: "The Facts Behind the Fiction: Essays by Jason Carroll Holloway",
     description:
-      "Real documents, measured frequencies, and places behind the Masters X Trilogy — with the seam labeled.",
+      "Real documents, measured frequencies, and real places behind the Masters X Trilogy, each one labeled.",
     url: "https://jasoncholloway.com/blog/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/hub.png", width: 1200, height: 630, alt: "The Facts Behind the Fiction — Masters X research essays" }],
+    images: [{ url: "https://jasoncholloway.com/og/field-notes/hub.png", width: 1200, height: 630, alt: "The Facts Behind the Fiction: Masters X research essays" }],
   },
 };
 

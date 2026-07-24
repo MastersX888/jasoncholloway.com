@@ -53,7 +53,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
 
         <form action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="29ea1914-9c58-4abf-b4e1-4e71e9a27186" />
-          <input type="hidden" name="subject" value="Chapter request — Masters X opening chapters" />
+          <input type="hidden" name="subject" value="Chapter request: Masters X opening chapters" />
           <input type="hidden" name="from_name" value="jasoncholloway.com" />
           <input type="hidden" name="redirect" value="https://jasoncholloway.com/chapters-sent/" />
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />

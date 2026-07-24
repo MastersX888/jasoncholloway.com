@@ -30,7 +30,7 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: "New Contact Form Submission — JasonCHolloway.com",
+          subject: "New Contact Form Submission: JasonCHolloway.com",
           from_name: "JasonCHolloway.com Website",
         }),
       });

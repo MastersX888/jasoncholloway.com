@@ -13,7 +13,13 @@ export interface BlogPost {
   metaDescription: string;
 }
 
-/** Published on jasoncholloway.com/blog/ — post 05 (Billings) on HOLD until author review. */
+/**
+ * Published on jasoncholloway.com/blog/.
+ *
+ * Essays 01 through 04 are live. Essays 06 through 08 are revised and awaiting author approval,
+ * so they carry "draft" until cleared. The Billings essay was cut from the series;
+ * its draft is parked in content/blog/held/ and has no entry here.
+ */
 export const blogPosts: BlogPost[] = [
   {
     slug: "the-frequency-that-was-already-there",
@@ -24,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/111-hz.png",
     fieldNotes: ["/field-notes/111-hz/", "/field-notes/cymatics/"],
-    metaTitle: "The Frequency That Was Already There — 111.2 Hz Explained",
+    metaTitle: "The Frequency That Was Already There: 111.2 Hz Explained",
     metaDescription:
       "111.2 Hz runs under every page of the Masters X Distribution File. The archaeoacoustics behind it is real. The decimal is fiction. The honest account.",
   },
@@ -37,7 +43,7 @@ export const blogPosts: BlogPost[] = [
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/ars-notoria.png",
     fieldNotes: ["/field-notes/ars-notoria/", "/field-notes/cymatics/"],
-    metaTitle: "The Grimoire That Was Actually a Study Aid — Ars Notoria",
+    metaTitle: "The Grimoire That Was Actually a Study Aid: Ars Notoria",
     metaDescription:
       "The Ars Notoria is a real 13th-century manual for accelerated learning, condemned as cheating. In Masters X, the only invention is that it works.",
   },
@@ -58,65 +64,53 @@ export const blogPosts: BlogPost[] = [
     slug: "why-kansas-city",
     seriesNumber: 4,
     title: "Why Kansas City? The Ground Itself Is Significant",
-    dek: "Five independent traditions across two millennia identified the KC/Independence corridor as sacred ground.",
+    dek: "Four independent traditions across two millennia identified the KC/Independence corridor as significant ground.",
     status: "published",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/kansas-city-locations.png",
     fieldNotes: ["/field-notes/kansas-city-locations/", "/field-notes/subtropolis/"],
     metaTitle: "Why Kansas City? The Ground Itself Is Significant",
     metaDescription:
-      "Five independent traditions across two millennia identified the KC/Independence corridor as sacred ground. The research behind the Masters X setting.",
-  },
-  {
-    slug: "the-man-who-built-a-city-under-zion",
-    seriesNumber: 5,
-    title: "The Man Who Built a City Under Zion",
-    dek: "Roger Billings — HOLD. Not published until author reviews sourcing.",
-    status: "hold",
-    datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/subtropolis.png",
-    fieldNotes: ["/field-notes/subtropolis/", "/field-notes/kansas-city-locations/"],
-    metaTitle: "The Man Who Built a City Under Zion",
-    metaDescription: "HOLD — pending author review of Roger Billings sourcing.",
+      "Four independent traditions across two millennia identified the KC/Independence corridor as significant ground. The research behind the Masters X setting.",
   },
   {
     slug: "three-factions-one-declassified-document",
     seriesNumber: 6,
     title: "Three Factions, One Declassified Document",
-    dek: "CIA-RDP96-00792R (1984): the declassified translation whose three camps became the Masters X factions.",
-    status: "published",
+    dek: "A 1984 declassified translation, and the three positions inside it that became the Masters X factions.",
+    status: "draft",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/hub.png",
     fieldNotes: [],
     metaTitle: "Three Factions, One Declassified Document",
     metaDescription:
-      "CIA-RDP96-00792R (1984): the declassified translation whose three camps — suppress, verify, weaponize — became the Masters X factions. The record.",
+      "A 1984 declassified translation of a Chinese paranormal-research journal, and the three positions inside it that became the Masters X factions.",
   },
   {
     slug: "the-stone-remembers",
     seriesNumber: 7,
     title: "The Stone Remembers: A Fire in Westport",
-    dek: "In 2011 a Kansas City church burned to its 1904 limestone walls — and the walls stood.",
-    status: "published",
+    dek: "In 2011 a Kansas City church burned to its 1904 limestone walls, and the walls stood.",
+    status: "draft",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/kansas-city-locations.png",
     fieldNotes: ["/field-notes/kansas-city-locations/"],
     metaTitle: "The Stone Remembers: A Fire in Westport",
     metaDescription:
-      "In 2011 a Kansas City church burned to its 1904 limestone walls — and the walls stood. A correction, a fire, and the record behind the trilogy's line.",
+      "In 2011 a Kansas City church burned to its 1904 limestone walls, and the walls stood. A correction, a fire, and the record behind the trilogy's line.",
   },
   {
     slug: "a-document-that-cannot-be-unreleased",
     seriesNumber: 8,
     title: "A Document That Cannot Be Un-Released",
     dek: "Masters X ends with a file: 247 pages, CC0, midnight. On the ethics of giving knowledge away.",
-    status: "published",
+    status: "draft",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/hub.png",
     fieldNotes: [],
     metaTitle: "A Document That Cannot Be Un-Released",
     metaDescription:
-      "Masters X ends with a file: 247 pages, CC0, midnight. On the ethics of giving knowledge away — and how to reprint a fictional document honestly.",
+      "Masters X ends with a file: 247 pages, CC0, midnight. On the ethics of giving knowledge away, and how to reprint a fictional document honestly.",
   },
 ];
 
@@ -125,7 +119,6 @@ const slugToFile: Record<string, string> = {
   "the-grimoire-that-was-a-study-aid": "02_grimoire_study_aid",
   "sound-into-form-hans-jenny": "03_sound_into_form",
   "why-kansas-city": "04_why_kansas_city",
-  "the-man-who-built-a-city-under-zion": "05_man_under_zion",
   "three-factions-one-declassified-document": "06_three_factions_declassified",
   "the-stone-remembers": "07_stone_remembers",
   "a-document-that-cannot-be-unreleased": "08_document_cannot_be_unreleased",

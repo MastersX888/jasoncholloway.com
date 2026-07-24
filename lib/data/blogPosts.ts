@@ -16,8 +16,7 @@ export interface BlogPost {
 /**
  * Published on jasoncholloway.com/blog/.
  *
- * Essays 01 through 04 are live. Essays 06 through 08 are revised and awaiting author approval,
- * so they carry "draft" until cleared. The Billings essay was cut from the series;
+ * Essays 01 through 04 and 06 through 08 are live. The Billings essay was cut from the series;
  * its draft is parked in content/blog/held/ and has no entry here.
  */
 export const blogPosts: BlogPost[] = [
@@ -78,7 +77,7 @@ export const blogPosts: BlogPost[] = [
     seriesNumber: 6,
     title: "Three Factions, One Declassified Document",
     dek: "A 1984 declassified translation, and the three positions inside it that became the Masters X factions.",
-    status: "draft",
+    status: "published",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/hub.png",
     fieldNotes: [],
@@ -91,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     seriesNumber: 7,
     title: "The Stone Remembers: A Fire in Westport",
     dek: "In 2011 a Kansas City church burned to its 1904 limestone walls, and the walls stood.",
-    status: "draft",
+    status: "published",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/kansas-city-locations.png",
     fieldNotes: ["/field-notes/kansas-city-locations/"],
@@ -104,7 +103,7 @@ export const blogPosts: BlogPost[] = [
     seriesNumber: 8,
     title: "A Document That Cannot Be Un-Released",
     dek: "Masters X ends with a file: 247 pages, CC0, midnight. On the ethics of giving knowledge away.",
-    status: "draft",
+    status: "published",
     datePublished: "2026-07-23",
     ogImage: "/og/field-notes/hub.png",
     fieldNotes: [],

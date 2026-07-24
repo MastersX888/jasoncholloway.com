@@ -20,9 +20,9 @@ const POSTS = [
   { id: "02", slot: 4, file: "02_grimoire_study_aid.md", slug: "the-grimoire-that-was-a-study-aid", title: "The Grimoire That Was Actually a Study Aid", status: "live" },
   { id: "03", slot: 2, file: "03_sound_into_form.md", slug: "sound-into-form-hans-jenny", title: "Sound Into Form: What Hans Jenny Actually Proved", status: "live" },
   { id: "04", slot: 3, file: "04_why_kansas_city.md", slug: "why-kansas-city", title: "Why Kansas City? The Ground Itself Is Significant", status: "live" },
-  { id: "06", slot: 6, file: "06_three_factions_declassified.md", slug: "three-factions-one-declassified-document", title: "Three Factions, One Declassified Document", status: "ready" },
-  { id: "07", slot: 5, file: "07_stone_remembers.md", slug: "the-stone-remembers", title: "The Stone Remembers: A Fire in Westport", status: "ready" },
-  { id: "08", slot: 7, file: "08_document_cannot_be_unreleased.md", slug: "a-document-that-cannot-be-unreleased", title: "A Document That Cannot Be Un-Released", status: "ready" },
+  { id: "06", slot: 6, file: "06_three_factions_declassified.md", slug: "three-factions-one-declassified-document", title: "Three Factions, One Declassified Document", status: "live" },
+  { id: "07", slot: 5, file: "07_stone_remembers.md", slug: "the-stone-remembers", title: "The Stone Remembers: A Fire in Westport", status: "live" },
+  { id: "08", slot: 7, file: "08_document_cannot_be_unreleased.md", slug: "a-document-that-cannot-be-unreleased", title: "A Document That Cannot Be Un-Released", status: "live" },
 ];
 
 function read(rel) {
@@ -371,8 +371,8 @@ const html = `<!DOCTYPE html>
   <div class="panel">
     <h2>Where this stands</h2>
     <ul>
-      <li><strong>${liveCount} essays are live</strong> at <code>jasoncholloway.com/blog/</code>: essays 01 through 04, in publish slots 1 to 4</li>
-      <li><strong>${pendingCount} essays are revised and waiting</strong> on your approval: essays 06, 07, and 08</li>
+      <li><strong>${liveCount} essays are live</strong> at <code>jasoncholloway.com/blog/</code>: the full seven-essay series (01 through 04 and 06 through 08; essay 05 cut)</li>
+      <li><strong>Essay 08 correction:</strong> the Distribution File is not in the Omnibus Edition; the complete labeled PDF is free from the Research Archive</li>
       <li><strong>${social.slots.length} social sets</strong> covering X, Bluesky, Instagram, and LinkedIn, each written from the essay it links to</li>
     </ul>
   </div>

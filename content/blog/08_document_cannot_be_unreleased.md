@@ -8,7 +8,7 @@ Conspiracy trilogies are supposed to end with a chamber stormed and a patriarch 
 
 ## The artifact
 
-The Distribution File is written as an artifact rather than a summary. Readers encounter its actual pages, and the omnibus carries it complete. Its five parts have the shape of a working manual: Preparation Protocols; Chamber Specifications; Harmonic Frequency Derivations; a Facilitator Training Manual; and an Acoustic Research Appendix. Every page carries the running footer this whole run of essays started with: f = 111.2 Hz.
+The Distribution File is written as an artifact rather than a summary. The novels excerpt it in scene; the Omnibus Edition does not reprint it whole. The complete two hundred forty-seven pages are free for download from the [Research Archive](https://jasoncholloway.com/chamber/research-archive/), labeled as fiction. Its five parts have the shape of a working manual: Preparation Protocols; Chamber Specifications; Harmonic Frequency Derivations; a Facilitator Training Manual; and an Acoustic Research Appendix. Every page carries the running footer this whole run of essays started with: f = 111.2 Hz.
 
 Its front matter reports its own reception in the dry voice of a changelog, claiming 1,204,881 downloads in the first week, readers in forty-seven countries, and three independent replications of the core protocol. Andrew Chen, the Foundation researcher who compiles and releases it, appends a design brief.
 
@@ -58,6 +58,6 @@ Every one of these essays ran on one rule, and it is the rule the trilogy exists
 
 That is not modesty. A book claiming the world is stranger than fiction has noticed only earns the claim if it gets the world right.
 
-The research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/). The books, including the omnibus where the Distribution File runs complete, are at [jasoncholloway.com/books/masters-x/](https://jasoncholloway.com/books/masters-x/).
+The research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/). The books are at [jasoncholloway.com/books/masters-x/](https://jasoncholloway.com/books/masters-x/). The complete Distribution File is free from the [Research Archive](https://jasoncholloway.com/chamber/research-archive/).
 
 The facts are in the files. The fiction is in the books.

@@ -58,6 +58,6 @@ None of that happened. No such file exists, no such release occurred, and every 
 
 What is in the world: the 1984 translation and its debate, the Gateway assessment, the Monroe framework as a documented body of practice. What is in the novels: the Keepers, the Custodians, the Completion Sect, their eight centuries, Nadia's briefing, Andrew Chen, and every page of the Distribution File. The factions' logic is transcribed. Only the names are ours.
 
-The research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/). The books, including the omnibus where the Distribution File runs complete, are at [jasoncholloway.com/books/masters-x/](https://jasoncholloway.com/books/masters-x/).
+The research layer is live in the [Field Notes](https://jasoncholloway.com/field-notes/). The books are at [jasoncholloway.com/books/masters-x/](https://jasoncholloway.com/books/masters-x/). The complete Distribution File is free from the [Research Archive](https://jasoncholloway.com/chamber/research-archive/).
 
 The facts are in the files. The fiction is in the books.

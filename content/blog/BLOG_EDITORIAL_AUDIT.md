@@ -58,9 +58,9 @@ Two side effects worth knowing. The essays got slightly shorter, since replacing
 | 02 | Grimoire Study Aid | forward-link meta cut | none | A- | 0 | **Live** |
 | 03 | Sound Into Form | "This essay separates" opener cut | none | A- | 0 | **Live** |
 | 04 | Why Kansas City | "The honest answer" opener, *apparatus*, *stated plainly*, encyclopedia CTA, Billings teaser | Fibonacci reading softened; limestone age dropped | A- | 0 | **Live** |
-| 06 | Three Factions | motor and torque metaphor, "Sit with that sentence", *grade card* header, *load-bearing* | CIA three-camp sort labeled as author's reading | A- | 0 | Awaiting approval |
-| 07 | Stone Remembers | *grade card* meta, "this series has rules", encyclopedia CTA | none | A | 0 | Awaiting approval |
-| 08 | Cannot Be Un-Released | encyclopedia making-of cut, series recap cut | Distribution File statistics labeled invented | A- | 0 | Awaiting approval |
+| 06 | Three Factions | motor and torque metaphor, "Sit with that sentence", *grade card* header, *load-bearing* | CIA three-camp sort labeled as author's reading | A- | 0 | **Live** |
+| 07 | Stone Remembers | *grade card* meta, "this series has rules", encyclopedia CTA | none | A | 0 | **Live** |
+| 08 | Cannot Be Un-Released | encyclopedia making-of cut, series recap cut | Distribution File statistics labeled invented; omnibus claim corrected | A- | 0 | **Live** |
 
 A grep rescan over the pass-1 removal table returns clean on all seven essays, with no exceptions remaining. The single deliberate holdout from the previous round, *ungraded patterns* in the Umberto Eco passage of essay 01, is now *unlabeled patterns*, which loses nothing.
 
@@ -176,7 +176,7 @@ A grep rescan over the pass-1 removal table returns clean on all seven essays, w
 ### 08 · A Document That Cannot Be Un-Released
 | Claim | Status | Source |
 |-------|--------|--------|
-| 247 pages, five parts, f=111.2 footer | Verified in-universe | `CANON.md` and the omnibus |
+| 247 pages, five parts, f=111.2 footer | Verified in-universe | `CANON.md`; full PDF free at Research Archive, not in omnibus |
 | Andrew Chen as compiler | Verified | `CANON.md`, not "Blackwood" and not "Vance" |
 | CC0 as a real license | Verified | Creative Commons |
 | 1,204,881 downloads, 47 countries, 3 replications | Fiction | Labeled "invented down to the digit" |
@@ -192,11 +192,11 @@ A grep rescan over the pass-1 removal table returns clean on all seven essays, w
 | 2 | 03 Cymatics | cymatics | Live |
 | 3 | 04 Kansas City | kansas-city-locations, subtropolis, essay 07 | Live |
 | 4 | 02 Ars Notoria | ars-notoria, cymatics, essay 03 | Live |
-| 5 | 07 Stone Remembers | kansas-city-locations, subtropolis | Awaiting approval |
-| 6 | 06 Three Factions | essay 01 | Awaiting approval |
-| 7 | 08 Cannot Be Un-Released | essay 06, omnibus | Awaiting approval |
+| 5 | 07 Stone Remembers | kansas-city-locations, subtropolis | Live |
+| 6 | 06 Three Factions | essay 01 | Live |
+| 7 | 08 Cannot Be Un-Released | essay 06, Research Archive | Live |
 
-Essay 04 links forward to essay 07, and essay 08 links back to essay 06. Both of those targets are currently unpublished, so the links resolve to 404 until essays 06 through 08 are cleared. Approving the remaining three closes the loop. If they are going to sit unapproved for a while, say so and the two forward links can be removed from the live essays.
+Essay 04 links forward to essay 07, and essay 08 links back to essay 06. All seven essays are live; internal links resolve.
 
 ---
 

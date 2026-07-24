@@ -10,11 +10,11 @@ Then a research pass turned up a fire four miles from my desk, and the line came
 
 The fire comes second. The correction comes first, because it is the less flattering story.
 
-Early drafts described the Cathedral of the Immaculate Conception, the landmark on the Quality Hill bluff and the highest ground in downtown Kansas City, as limestone. It seemed safe. This is a limestone city, the trilogy is practically *about* the limestone, and the cathedral crowns a bluff two hundred feet above the West Bottoms. Of course it was limestone.
+Early drafts described the Cathedral of the Immaculate Conception, the landmark on the bluff above the West Bottoms and the highest ground in downtown Kansas City, as limestone. It seemed safe. This is a limestone city, the trilogy is practically *about* the limestone, and the cathedral crowns that bluff two hundred feet above the floodplain. Of course it was limestone.
 
 It is red brick. Built 1882 to 1912, brick throughout, with the gold-leaf dome added in 1960. Our church-by-church research pass caught the error before it reached print.
 
-One wrong wall material in a novel might not seem worth the paragraph. It matters because of what this trilogy claims about ground truth. A book arguing that the physical city is stranger than fiction has noticed forfeits the argument the moment it gets the physical city wrong. Every real place in the books is rendered as exactly as I could manage, from the corner table at Miller Nichols Library to the grade of the walk from Quality Hill down into the West Bottoms to the Hotel Phillips lobby, and the [reader's map of the real Kansas City](https://jasoncholloway.com/field-notes/kansas-city-locations/) exists so anyone can check me.
+One wrong wall material in a novel might not seem worth the paragraph. It matters because of what this trilogy claims about ground truth. A book arguing that the physical city is stranger than fiction has noticed forfeits the argument the moment it gets the physical city wrong. Every real place in the books is rendered as exactly as I could manage, from the corner table at Miller Nichols Library to the kitchen in the Quality Hill apartment to the Hotel Phillips lobby, and the [reader's map of the real Kansas City](https://jasoncholloway.com/field-notes/kansas-city-locations/) exists so anyone can check me.
 
 The corrected fact turned out better than the assumed one. A red brick cathedral wearing a gold crown on the city's highest bluff, above a floodplain, is a more precise image of Kansas City than another limestone facade: the city's aspirations built in one material, its foundations in another.
 
@@ -48,7 +48,7 @@ So when the trilogy treats Kansas City as a place whose surface and depths are t
 
 ## What the fiction adds
 
-Not much, in this one. The cathedral's brick and its 1960 dome, the Quality Hill bluff, the Westport fire and the standing walls, the rebuilding, the quarrying boom, the hollowed ground: all documented. Father Moreau, his river, his line, and every event the novels stage inside the real geography: invented.
+Not much, in this one. The cathedral's brick and its 1960 dome, the bluff above the West Bottoms, the Westport fire and the standing walls, the rebuilding, the quarrying boom, the hollowed ground: all documented. Father Moreau, his river, his line, and every event the novels stage inside the real geography: invented.
 
 The trilogy's only addition here is the proposal it always makes, that the stone's persistence is not merely structural but significant, that what survives fires and holds temperature and carries standing waves might be holding something else as well. That belongs to the novels, and it is labeled everywhere it appears. But it is fiction whose best line got audited against the record and kept.
 

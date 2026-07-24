@@ -33,7 +33,7 @@ export const themes: { id: string; label: string; notes: FieldNote[] }[] = [
         slug: "kansas-city-locations",
         label: "Map",
         title: "The Real Kansas City of Masters X: A Reader's Map",
-        desc: "Miller Nichols Library, Westport, Quality Hill, West Bottoms, Hotel Phillips — every real Kansas City location in the trilogy, mapped and annotated.",
+        desc: "Miller Nichols Library, Westport, the Quality Hill apartment, West Bottoms, Hotel Phillips: every real Kansas City location in the trilogy, mapped and annotated.",
       },
       {
         href: "/field-notes/meramec-caverns",

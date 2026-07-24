@@ -8,7 +8,7 @@
 
 | Real anchor | Research file | Key facts |
 |-------------|---------------|-----------|
-| Cathedral of the Immaculate Conception | `KC_CHURCHES_RESEARCH_ANALYSIS.md`, `KC_Churches_Research/Cathedral_Immaculate_Conception/` | Red brick (not limestone); Quality Hill bluff; gold-leaf cupola (1960); built 1882–1912 |
+| Cathedral of the Immaculate Conception | `KC_CHURCHES_RESEARCH_ANALYSIS.md`, `KC_Churches_Research/Cathedral_Immaculate_Conception/` | Red brick (not limestone); bluff above the West Bottoms; gold-leaf cupola (1960); built 1882–1912 |
 | St. Francis Xavier | `KC_CHURCHES_RESEARCH_ANALYSIS.md`, `KC_Churches_Research/St_Francis_Xavier/` | Original church destroyed by fire **Sept 19, 1925**; Iannelli 21,000-lb Bedford limestone exterior sculpture |
 | Westport Presbyterian | `KC_CHURCHES_RESEARCH_ANALYSIS.md` | Limestone walls; survived 2011 fire when interior burned |
 | SubTropolis | `KC_Churches_Research/SubTropolis/` | Underground limestone complex; bedrock tunnel depth **160 ft** (CANON) |

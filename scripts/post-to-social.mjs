@@ -104,11 +104,13 @@ function showStatus() {
 // Extract content for a specific slot
 function getSlotContent(slot) {
   const content = fs.readFileSync(SOCIAL_CONTENT, "utf8");
-  const slotPattern = new RegExp(`## Slot ${slot}[\\s\\S]*?(?=## Slot \\d+|$)`, "m");
+  
+  // Match slot section - format is "## Slot N · Essay Title"
+  const slotPattern = new RegExp(`## Slot ${slot} ·[\\s\\S]*?(?=## Slot \\d+ ·|$)`);
   const match = content.match(slotPattern);
   
   if (!match) {
-    throw new Error(`Content for slot ${slot} not found`);
+    throw new Error(`Content for slot ${slot} not found in SOCIAL_FROM_BLOG.md`);
   }
   
   return match[0];
@@ -120,20 +122,22 @@ async function postToX(slot) {
   
   const content = getSlotContent(slot);
   
-  // Extract X posts (Post A and Post B)
-  const xSection = content.match(/### X\n\n([\s\S]*?)(?=### |$)/);
+  // Extract X posts (Post A and Post B) - match until next ### section
+  const xSection = content.match(/### X[\s\S]*?(?=### [A-Z])/);
   if (!xSection) {
+    console.error("Could not parse X section from content");
     throw new Error("X content not found");
   }
   
   console.log("Content to post:");
-  console.log(xSection[1]);
+  console.log(xSection[0].trim());
   console.log("\n⚠️  Manual posting required:");
   console.log("1. Copy the content above");
   console.log("2. Post to X at https://x.com/compose/tweet");
-  console.log("3. Confirm when posted");
+  console.log("3. Confirm when posted\n");
   
   markPosted(slot, "x");
+  console.log("✅ Marked as posted to X");
 }
 
 // Post to Bluesky
@@ -142,19 +146,20 @@ async function postToBluesky(slot) {
   
   const content = getSlotContent(slot);
   
-  const bskySection = content.match(/### Bluesky\n\n([\s\S]*?)(?=### |$)/);
+  const bskySection = content.match(/### Bluesky[\s\S]*?(?=### [A-Z])/);
   if (!bskySection) {
     throw new Error("Bluesky content not found");
   }
   
   console.log("Content to post:");
-  console.log(bskySection[1]);
+  console.log(bskySection[0].trim());
   console.log("\n⚠️  Manual posting required:");
   console.log("1. Copy the content above");
   console.log("2. Post to Bluesky at https://bsky.app");
-  console.log("3. Confirm when posted");
+  console.log("3. Confirm when posted\n");
   
   markPosted(slot, "bluesky");
+  console.log("✅ Marked as posted to Bluesky");
 }
 
 // Post to Instagram
@@ -163,20 +168,22 @@ async function postToInstagram(slot) {
   
   const content = getSlotContent(slot);
   
-  const igSection = content.match(/### Instagram\n\n([\s\S]*?)(?=### |$)/);
+  // Instagram section may be last, so match until ### or end
+  const igSection = content.match(/### Instagram[\s\S]*?(?=### [A-Z]|---\n\n## Slot|$)/);
   if (!igSection) {
     throw new Error("Instagram content not found");
   }
   
   console.log("Content to post:");
-  console.log(igSection[1]);
+  console.log(igSection[0].trim());
   console.log("\n⚠️  Manual posting required:");
   console.log("1. Copy the caption above");
   console.log("2. Create carousel with images described in the content");
   console.log("3. Post via Instagram app or Meta Business Suite");
-  console.log("4. Confirm when posted");
+  console.log("4. Confirm when posted\n");
   
   markPosted(slot, "instagram");
+  console.log("✅ Marked as posted to Instagram");
 }
 
 // Main command handler

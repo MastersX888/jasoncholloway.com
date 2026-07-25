@@ -5,6 +5,9 @@
 #   cd C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway
 #   powershell -ExecutionPolicy Bypass -File scratch\free_disk_space.ps1
 #
+# Move published / handoff content to E: (larger reclaim):
+#   powershell -ExecutionPolicy Bypass -File scratch\archive_published_to_e.ps1 -RemoveSource
+#
 # Optional: also clear npm + wrangler caches (~500MB–2GB+)
 #   powershell -ExecutionPolicy Bypass -File scratch\free_disk_space.ps1 -Deep
 

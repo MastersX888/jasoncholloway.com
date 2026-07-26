@@ -2,7 +2,7 @@
 
 *The Facts Behind the Fiction, No. 1 · Jason Carroll Holloway · Seventh City Press*
 
-Every page of the Distribution File carries the same footer: f = 111.2 Hz. Two hundred forty-seven pages, one stamp. Readers ask about it more than anything else in the trilogy. Where did the number come from? Is it real?
+Every page of the Distribution File carries the same footer: f = 111.2 Hz. Two hundred forty-seven pages, one stamp. If the trilogy has a heartbeat, that is it. Where did the number come from? Is it real?
 
 The number is fiction, but only by one decimal place. The stone underneath it was measured before I started writing.
 

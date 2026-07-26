@@ -6,7 +6,7 @@ Somewhere around the second century, people on the Missouri River bluffs built r
 
 I read that in a site report years into the research and set the page down. The impulse the whole trilogy runs on, cutting significant chambers into this specific ground, was not something I invented and not something modern. People were doing it here before Rome fell.
 
-Readers assume Kansas City is hometown convenience. I live here; I wrote what I could see. The convenience ran the other direction. Twenty years of research taught me I live somewhere strange: four traditions have looked at the same thirty miles of river bluff and concluded, in vocabularies that never borrowed from each other, that this ground matters.
+Kansas City probably reads as hometown convenience. I live here; I wrote what I could see. But the convenience ran the other direction. The research taught me I live somewhere strange: four traditions have looked at the same thirty miles of river bluff and concluded, in vocabularies that never borrowed from each other, that this ground matters.
 
 ## The people who were already building underground
 

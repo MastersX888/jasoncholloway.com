@@ -4,7 +4,7 @@
 
 The document that gave the Masters X Trilogy its politics is a translation. In 1984, American intelligence took a Chinese government journal on paranormal research, rendered it into English for internal circulation, and filed it. It sits today in the CIA's declassified reading room under the RDP96-00792R designation, alongside a great deal of similar material from the same program years.
 
-Readers assume the trilogy's three factions, the Keepers and the Custodians and the Completion Sect, were engineered for plot. Three-way conflicts are how thrillers manufacture pressure, and the assumption is fair. It is also backwards. I did not invent the three positions. I found them in the file, already arguing.
+The trilogy's three factions, the Keepers and the Custodians and the Completion Sect, were not engineered for plot. Three-way conflicts are how thrillers manufacture pressure, and the assumption that these were designed that way is fair. It is also backwards. I did not invent the three positions. I found them in the file, already arguing.
 
 ## One government published. The other classified.
 

@@ -2,7 +2,7 @@
 
 *The Facts Behind the Fiction, No. 7 · Jason Carroll Holloway · Seventh City Press*
 
-"The stone remembers" sat in the Masters X manuscript for most of a decade on probation. It is Father Moreau's line, and it is exactly the kind of sentence a novelist should distrust: too round, too quotable, the metaphor claiming work the world never authorized.
+"The stone remembers" sat in the Masters X manuscript on probation. It is Father Moreau's line, and it is exactly the kind of sentence a novelist should distrust: too round, too quotable, the metaphor claiming work the world never authorized.
 
 Then a research pass turned up a fire four miles from my desk, and the line came off probation.
 
@@ -14,7 +14,7 @@ Early drafts described the Cathedral of the Immaculate Conception, the landmark 
 
 It is red brick. Built 1882 to 1912, brick throughout, with the gold-leaf dome added in 1960. Our church-by-church research pass caught the error before it reached print.
 
-One wrong wall material in a novel might not seem worth the paragraph. It matters because of what this trilogy claims about ground truth. A book arguing that the physical city is stranger than fiction has noticed forfeits the argument the moment it gets the physical city wrong. Every real place in the books is rendered as exactly as I could manage, from the corner table at Miller Nichols Library to the kitchen in the Quality Hill apartment to the Hotel Phillips lobby, and the [reader's map of the real Kansas City](https://jasoncholloway.com/field-notes/kansas-city-locations/) exists so anyone can check me.
+One wrong wall material in a novel might not seem worth the paragraph. It matters because of what this trilogy claims about ground truth. A book that asks to be trusted on the physical city has to earn that trust building by building. Every real place in the books is rendered as exactly as I could manage, from the corner table at Miller Nichols Library to the kitchen in the Quality Hill apartment to the Hotel Phillips lobby, and the [reader's map of the real Kansas City](https://jasoncholloway.com/field-notes/kansas-city-locations/) exists so anyone can check me.
 
 The corrected fact turned out better than the assumed one. A red brick cathedral wearing a gold crown on the city's highest bluff, above a floodplain, is a more precise image of Kansas City than another limestone facade: the city's aspirations built in one material, its foundations in another.
 

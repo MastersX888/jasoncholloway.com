@@ -4,7 +4,7 @@
 
 In *The Inheritance of Frequency*, Nadia sits on a kitchen floor with a facsimile page between her hands and says the line the trilogy pivots on: "The Ars Notoria isn't magic. It's technology. Cognitive technology."
 
-Readers assume I invented the manuscript. I did not. The Ars Notoria is real, catalogued, requestable at the British Library. What I invented is narrower, and stranger for its narrowness.
+I did not invent the manuscript at the center of this trilogy. The Ars Notoria is real, catalogued, requestable at the British Library. What I invented is narrower, and stranger for its narrowness.
 
 ## The manuscript on the record
 

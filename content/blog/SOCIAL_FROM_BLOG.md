@@ -12,6 +12,10 @@
 - No *grade card*, *the seam*, or *apparatus* vocabulary
 - No em-dashes
 - Sign-off used sparingly on social, since it is the essay's close and not a hashtag
+- No "readers assume" or "readers ask" language; the author is a debut novelist without an established audience
+- No timeline exaggerations; the concentrated writing work happened over the last couple of years
+- No challenge-language that invites adversarial scrutiny ("forfeits the claim," etc.)
+- Voice: curious, genuine, process-sharing. Not authoritative, not performative.
 
 ## Posting order
 
@@ -38,7 +42,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > The number is fiction. The stone under it isn't.
 >
-> Researchers have documented a resonance near 110 Hz in Neolithic chambers from Malta to Scotland. I added one decimal so nobody confuses my invention with their measurement.
+> Archaeoacousticians have documented a resonance near 110 Hz in Neolithic chambers from Malta to Scotland. The extra decimal is the fiction signing its own work.
 >
 > jasoncholloway.com/blog/the-frequency-that-was-already-there/
 
@@ -51,9 +55,9 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 
 ### Bluesky
 
-> Every page of the Distribution File carries the same footer: f = 111.2 Hz. Readers ask about it more than anything else in the trilogy.
+> Every page of the Distribution File carries the same footer: f = 111.2 Hz. If the trilogy has a heartbeat, that is it.
 >
-> Here is the honest version. Archaeoacoustics has documented a recurring resonance near 110 Hz in ancient stone chambers, including the Ħal-Saflieni Hypogeum in Malta, Neolithic sites across Britain and Ireland, and painted zones at Lascaux. That literature is real, and thinner than a thriller would like.
+> Here is what I found during the research. Archaeoacoustics, a small and careful field, has documented a recurring resonance near 110 Hz in ancient stone chambers, including the Ħal-Saflieni Hypogeum in Malta, Neolithic sites across Britain and Ireland, and painted zones at Lascaux. That literature is real, and thinner than a thriller needs it to be.
 >
 > 111.2 Hz is mine. The decimal is deliberate: close enough to honor the source, distinct enough that no one mistakes invention for measurement.
 >
@@ -69,7 +73,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > Paul Devereux and colleagues found peak frequencies in the 95 to 120 Hz band at Neolithic chambers across Britain and Ireland. Reznikoff and Dauvois noticed that Palaeolithic paintings cluster in the most acoustically resonant zones of French caves.
 >
-> That is the documented part, caveats included. The neurological study everyone cites had a small sample, and one study is one study.
+> That is the documented part, caveats included. The neurological study often cited had a small sample, and one study is one study.
 >
 > The trilogy runs on 111.2 Hz instead. The extra decimal is the fiction signing its own work: close enough to honor the research, far enough that nobody mistakes my invention for their measurement.
 >
@@ -85,13 +89,13 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 
 ### LinkedIn
 
-> I write conspiracy fiction, which means I have a professional obligation most novelists skip: telling readers exactly where my research stops and my invention starts.
+> I write conspiracy fiction, and I think a lot about where research stops and invention starts.
 >
-> The Masters X Trilogy runs on a frequency, 111.2 Hz, stamped on every page of a fictional document at the center of the plot. Readers ask whether it is real more than they ask about anything else in the books.
+> The Masters X Trilogy runs on a frequency, 111.2 Hz, stamped on every page of a fictional document at the center of the plot. If you pick up any of the three books, that number is probably the first thing you notice.
 >
-> The honest version: archaeoacoustics, a small and careful field, has documented a recurring resonance near 110 Hz in ancient stone chambers from Malta to Scotland. Whether builders intended it is unresolved. One frequently cited neurological study had a small sample, and that caveat belongs in every sentence that cites it.
+> Here is what the research turned up: archaeoacoustics, a small and careful field, has documented a recurring resonance near 110 Hz in ancient stone chambers from Malta to Scotland. Whether builders intended it is unresolved. One frequently cited neurological study had a small sample, and that caveat belongs in every sentence that cites it.
 >
-> So the novels use 111.2 instead of 110. One decimal past the real number, because borrowing the authority of measured literature for claims that literature does not make is the failure mode of this entire genre.
+> So the novels use 111.2 instead of 110. One decimal past the real number, because borrowing the authority of measured literature for claims that literature does not make is how this genre loses credibility.
 >
 > Essay: jasoncholloway.com/blog/the-frequency-that-was-already-there/
 
@@ -123,7 +127,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > Hans Jenny turned that parlor demonstration into a research program in the 1960s, swapping crystal oscillators for violin bows and publishing *Kymatik*. Two findings carried into my trilogy: patterns are exquisitely sensitive to frequency, and they collapse the moment the tone stops. Order is maintained, not built.
 >
-> Where the record ends: there is no evidence that *viewing* a cymatics pattern does anything to consciousness. That claim is entirely the novels'.
+> Where the record ends: there is no evidence that *viewing* a cymatics pattern does anything to consciousness. That claim is the novels', not the science.
 >
 > jasoncholloway.com/blog/sound-into-form-hans-jenny/
 
@@ -136,7 +140,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > Hans Jenny, a Swiss physician, spent the 1960s turning that demonstration into a discipline he named cymatics. He documented how a shift from 800 to 865 cycles per second transforms a pattern rather than nudging it, and how patterns collapse when the tone stops and return identically when it resumes.
 >
-> That is the real floor under everything strange in my trilogy. Here is the ceiling: nothing in the research says that looking at one of these patterns changes the person looking. The novels claim it does. That claim is mine, and I would rather say so than let it pass as physics.
+> That is the real floor under everything strange in my trilogy. Here is the ceiling: nothing in the research says that looking at one of these patterns changes the person looking. The novels claim it does. That claim is mine, and I would rather name it than let it pass as physics.
 >
 > Essay linked in bio. Research at jasoncholloway.com/field-notes/cymatics/
 
@@ -155,9 +159,9 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 ### X
 
 **Post A**
-> People assume I set a conspiracy trilogy in Kansas City because I live here.
+> I set a conspiracy trilogy in Kansas City, and I expected it would read as hometown convenience.
 >
-> The convenience ran the other way. Around the second century, people on these river bluffs were building stone-vault tombs: rooms with doorways, sealed inside burial mounds.
+> Then the research started. Around the second century, people on these river bluffs were building stone-vault tombs: rooms with doorways, sealed inside burial mounds.
 >
 > Chamber-building here predates Rome's fall.
 >
@@ -166,13 +170,13 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 **Post B (standalone)**
 > In 1831 Joseph Smith declared Independence, Missouri the center place of Zion. On August 3, a sixty-three-acre parcel was dedicated for a temple.
 >
-> The temple was never built. The lot was never abandoned. It is mowed and maintained today.
+> The temple was never built. The lot was never abandoned. It is mowed and maintained today, surrounded by three denominations, all with a claim to the same ground.
 >
 > There is no Temple Lot scene in my trilogy. Some places exert gravity without appearing.
 
 ### Bluesky
 
-> Why Kansas City? Not hometown convenience. I checked.
+> Why Kansas City? The honest answer is that I started with convenience and ended with something stranger.
 >
 > Roughly thirty Hopewell-tradition sites are documented in the area, some containing stone-vault tombs: constructed chambers with doorways, built inside the earthworks. That is chamber-building on this ground with a two-thousand-year head start on me.
 >
@@ -210,11 +214,11 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 
 ### LinkedIn
 
-> Writers are told to research the setting. I ended up researching the ground.
+> I set the trilogy in Kansas City because I live here, and then the research complicated that convenience.
 >
-> My trilogy is set in Kansas City, and readers assume that is hometown convenience. Twenty years of research suggested otherwise. Roughly thirty Hopewell-tradition sites are documented here, some with constructed stone chambers inside the burial mounds. The Osage carry the concept of *Wah-kon-tah*. In 1831 Independence was formally designated the center place of Zion, with a sixty-three-acre temple parcel still maintained today. And under all of it sits Bethany Falls limestone, quarried so thoroughly that the empty chambers became the largest underground business complex in the world.
+> Roughly thirty Hopewell-tradition sites are documented in the area, some with constructed stone chambers inside the burial mounds. The Osage carry the concept of *Wah-kon-tah*. In 1831 Independence was formally designated the center place of Zion, with a sixty-three-acre temple parcel still maintained today. And under all of it sits Bethany Falls limestone, quarried so thoroughly that the empty chambers became the largest underground business complex in the world.
 >
-> The part I make a point of publishing: there is no acoustics study of the Kansas City underground. My fiction is sited here, not sourced here, and a novel is only entitled to fill a silence if it admits the silence is there.
+> What I keep coming back to in these essays: there is no acoustics study of the Kansas City underground. My fiction is sited here, not sourced here, and a novel is only as trustworthy as its willingness to say where the record goes quiet.
 >
 > jasoncholloway.com/blog/why-kansas-city/
 
@@ -236,15 +240,15 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 **Post B (standalone)**
 > Describe the Ars Notoria method operationally: extended contemplation of complex figures, recitation on a fixed schedule, repetition across months, a curriculum sequenced foundational to advanced.
 >
-> A cognitive scientist would recognize elaborative encoding and spaced repetition. Seven centuries early.
+> Strip the medieval vocabulary away and what remains looks a lot like elaborative encoding and spaced repetition. Whether that resemblance is meaningful or coincidental is a question nobody has formally tested.
 
 ### Bluesky
 
-> Readers assume I invented the manuscript at the center of my trilogy. I did not. The Ars Notoria is real, catalogued, and requestable at the British Library.
+> I did not invent the manuscript at the center of my trilogy. The Ars Notoria is real, catalogued, and requestable at the British Library.
 >
 > What it promises is the strange part: rapid acquisition of the seven liberal arts through contemplation of geometric figures called *notae*, combined with specific prayers on a prescribed schedule. Not wealth. Not power over demons. Knowledge and memory, on an accelerated timetable. A thirteenth-century manual for learning faster.
 >
-> It was condemned by the Inquisition and by Albertus Magnus, on the grounds that it was an illicit shortcut. Institutions rarely mobilize against texts they think are trivial.
+> It was condemned by the Inquisition and by Albertus Magnus, on the grounds that it was an illicit shortcut.
 >
 > What I invented is narrow: that it works.
 >
@@ -263,7 +267,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > And condemned books in the manuscript era did not vanish. They went expensive, copied on good vellum for centuries by patrons who privately decided the text was worth the risk.
 >
-> Everything above is on the record. What my trilogy adds is one sentence: that the method works, and here is how. No historian claims that. No cognitive scientist claims that. It is the one experiment the lab has never run.
+> Everything above is on the record. What my trilogy adds is one claim: that the method works, and here is how. No historian claims that. No cognitive scientist claims that. It is the one experiment the lab has never run, and that gap is where the fiction lives.
 >
 > Essay in bio · jasoncholloway.com/field-notes/ars-notoria/
 
@@ -286,26 +290,26 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > The 1904 limestone walls stood.
 >
-> "The stone remembers" had been in my manuscript for a decade before I found the fire.
+> "The stone remembers" was in my manuscript before I found the fire. The fire was already on the public record.
 >
 > jasoncholloway.com/blog/the-stone-remembers/
 
 **Post B (standalone)**
-> For years my drafts called the Cathedral of the Immaculate Conception limestone. It seemed safe, since this is a limestone city.
+> An early draft described the Cathedral of the Immaculate Conception as limestone. Seemed safe, since this is a limestone city.
 >
-> It is red brick. 1882 to 1912, with the gold dome added in 1960. Our research pass caught it before print.
+> It is red brick. 1882 to 1912, with the gold dome added in 1960. The research pass caught it.
 >
-> A novel claiming the real city is stranger than fiction forfeits the claim the moment it gets the city wrong.
+> I am grateful it did. Getting the physical city right matters to me more than almost anything else in this project.
 
 ### Bluesky
 
 > Two Kansas City buildings, one editorial lesson.
 >
-> First, a correction. My early drafts described the Cathedral of the Immaculate Conception as limestone, because this is a limestone city and I did not check. It is red brick, built 1882 to 1912, with a gold-leaf dome added in 1960. The research pass caught me. The corrected fact turned out better than the assumption: a brick cathedral wearing a gold crown on the highest bluff above a floodplain is a more precise image of this city than another limestone facade.
+> First, a correction. An early draft described the Cathedral of the Immaculate Conception as limestone, because this is a limestone city and I did not check carefully enough. It is red brick, built 1882 to 1912, with a gold-leaf dome added in 1960. The research pass caught me. The corrected fact turned out richer than the assumption: a brick cathedral wearing a gold crown on the highest bluff above a floodplain is a more precise image of this city than another limestone facade.
 >
 > Second, a fire. Westport Presbyterian burned in 2011. Roof gone, interior gone, the 1904 limestone walls standing. The congregation rebuilt inside them.
 >
-> Father Moreau's line "the stone remembers" was written years before I found that fire. The fire is documented. Putting the line in a priest's mouth is invention. The resonance is yours to keep.
+> Father Moreau's line "the stone remembers" was written before I found that fire. The fire is documented. Putting the line in a priest's mouth is invention. The resonance is yours to keep.
 >
 > jasoncholloway.com/blog/the-stone-remembers/
 
@@ -318,9 +322,9 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > The congregation rebuilt inside the standing walls. The fire could erase the contents but not the fact of the church, because the fact was mineral.
 >
-> "The stone remembers" sat in my manuscript on probation for most of a decade. Too round, too quotable, a metaphor claiming work the world never authorized. Then a research pass turned up this fire four miles from my desk.
+> "The stone remembers" was in my manuscript before I found the fire. It had been sitting there, a metaphor waiting on a warrant. Too round, too quotable, the kind of line a novelist should distrust. Then a research pass turned up this fire four miles from my desk, and the warrant had been on the public record the whole time.
 >
-> Nothing was predicted. Church fires are not rare, and the fire preceded my finding it by years. What changed was the line's status: a metaphor waiting on a warrant, and the warrant had been on the public record the whole time.
+> Nothing was predicted. Church fires are not rare. What changed was the line's standing: a metaphor that earned its keep.
 >
 > Essay in bio · jasoncholloway.com/field-notes/kansas-city-locations/
 
@@ -329,7 +333,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 2. **What the fire took.** Roof, sanctuary, woodwork, 107 years of interior
 3. **What stood.** The 1904 limestone walls
 4. **They rebuilt inside them.** The contents were erased; the fact was mineral
-5. **The correction.** The cathedral I called limestone is red brick. The audit caught me first.
+5. **The correction.** The cathedral I called limestone is red brick. The research pass caught me.
 6. **"The stone remembers."** Written before the fire was found. Full essay in bio.
 
 ---
@@ -348,11 +352,11 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 > jasoncholloway.com/blog/three-factions-one-declassified-document/
 
 **Post B (thread, 3)**
-> 1/ Readers assume my trilogy's three factions were engineered for plot. Three-way conflict is how thrillers make pressure. Fair assumption, wrong.
+> 1/ The trilogy's three factions, the Keepers, the Custodians, and the Completion Sect, were not engineered for plot. I found the positions already in the record, already arguing.
 >
-> 2/ The positions were already in the record: suppress the research, verify it in the open, or apply it. In the novels those become the Custodians, the Keepers, and the Completion Sect.
+> 2/ The three stances: suppress the research, verify it in the open, or apply it. The translated material contains people arguing about all three.
 >
-> 3/ My caveat, since it matters: the three-way sort is my reading of the translated material, not a heading inside it. The file is public. A better taxonomy earns a correction I would print.
+> 3/ My caveat, since it matters: the three-way sort is my reading of the translated material, not a heading inside it. The file is public. If someone reads it differently, I would want to know.
 
 ### Bluesky
 
@@ -377,7 +381,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > Inside the translated material the debate sorts into three postures: suppress the work, verify it in daylight, or attend to what it might be used for. Those became the Custodians, the Keepers, and the Completion Sect.
 >
-> One caveat I insist on: the three-way sort is my reading, not a heading in the document. The file is public. A reader who comes back with a better taxonomy has earned a correction.
+> One caveat: the three-way sort is my reading, not a heading in the document. The file is public. Anyone who reads it differently has something worth hearing.
 >
 > Essay linked in bio.
 
@@ -430,7 +434,7 @@ Two-week cadence per slot works: X and Bluesky on publish day, Instagram carouse
 >
 > The argument inside the fiction: the intuitive opposite of classification is leaking, and that intuition is wrong. A leak preserves the scarcity that gives a secret its power and merely relocates that power to whoever leaked. The mystery survives its own exposure. Often it grows.
 >
-> The actual opposite of classification is to make the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from, no initiation left to sell.
+> The actual opposite of classification is to make the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from.
 >
 > The file is fiction. The pages, the downloads, the replications, invented down to the digit. CC0 is real, and so is the tradition the ending argues from: open science, public archives, methods sections detailed enough that a stranger can check you.
 >

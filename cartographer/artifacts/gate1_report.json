@@ -1,0 +1,37 @@
+{
+  "books": {
+    "1": {
+      "file": "MASTERS_X_BOOK1_DEMY_9798256008048.txt",
+      "lines": 4645,
+      "words": 33863,
+      "paragraphs": 507,
+      "scenes": 175,
+      "slug_lines": 175
+    },
+    "2": {
+      "file": "MASTERS_X_BOOK2_DEMY_9798256009953.txt",
+      "lines": 7459,
+      "words": 60954,
+      "paragraphs": 807,
+      "scenes": 283,
+      "slug_lines": 283
+    },
+    "3": {
+      "file": "MASTERS_X_BOOK3_DEMY_9798256010072.txt",
+      "lines": 5455,
+      "words": 44208,
+      "paragraphs": 625,
+      "scenes": 211,
+      "slug_lines": 209
+    }
+  },
+  "audio_slug_candidates": {
+    "1": 69,
+    "2": 66,
+    "3": 48
+  },
+  "total_paragraphs": 1939,
+  "total_scenes": 669,
+  "total_slug_lines": 667,
+  "total_words": 139025
+}

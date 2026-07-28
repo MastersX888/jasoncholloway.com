@@ -1,0 +1,15 @@
+{
+  "total_entity_occurrences": 3784,
+  "distinct_entities": 653,
+  "distinct_capitalized_or_place": 570,
+  "by_category": {
+    "proper_noun_phrase": 1178,
+    "gazetteer": 942,
+    "motion": 222,
+    "spatial_predicate": 450,
+    "address": 215,
+    "distance_time": 334,
+    "measurement": 421,
+    "street": 22
+  }
+}

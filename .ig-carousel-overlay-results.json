@@ -1,0 +1,64 @@
+{
+  "slides_processed": 43,
+  "post_only": true,
+  "deleted_old": true,
+  "verified_at": "2026-07-27T05:26:49Z",
+  "new_posts": [
+    {
+      "slot": 1,
+      "success": true,
+      "post_id": "coXGL",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSMQbcjfSl/",
+      "slides": 6
+    },
+    {
+      "slot": 2,
+      "success": true,
+      "post_id": "gvcox",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSMawbjYH1/",
+      "slides": 6
+    },
+    {
+      "slot": 3,
+      "success": true,
+      "post_id": "LceYV",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSMpa1jXg5/",
+      "slides": 7
+    },
+    {
+      "slot": 4,
+      "success": true,
+      "post_id": "lnFhK",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSM0wGDWgQ/",
+      "slides": 6
+    },
+    {
+      "slot": 5,
+      "success": true,
+      "post_id": "2jWCS",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSM_o4CMVJ/",
+      "slides": 6
+    },
+    {
+      "slot": 6,
+      "success": true,
+      "post_id": "4rGvi",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSNLAfDYgS/",
+      "slides": 6
+    },
+    {
+      "slot": 7,
+      "success": true,
+      "post_id": "corML",
+      "status": "published",
+      "url": "https://www.instagram.com/p/DbSNYbojjaz/",
+      "slides": 6
+    }
+  ]
+}

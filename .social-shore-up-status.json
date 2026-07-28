@@ -1,0 +1,569 @@
+{
+  "instagram": {
+    "keep": [
+      "https://www.instagram.com/p/DbSMQbcjfSl/",
+      "https://www.instagram.com/p/DbSMawbjYH1/",
+      "https://www.instagram.com/p/DbSMpa1jXg5/",
+      "https://www.instagram.com/p/DbSM0wGDWgQ/",
+      "https://www.instagram.com/p/DbSM_o4CMVJ/",
+      "https://www.instagram.com/p/DbSNLAfDYgS/",
+      "https://www.instagram.com/p/DbSNYbojjaz/"
+    ],
+    "delete_still_live": [
+      "https://www.instagram.com/p/DbRCSJoF1iy/",
+      "https://www.instagram.com/p/DbRCDsjl4IG/",
+      "https://www.instagram.com/p/DbRB38zl8LU/",
+      "https://www.instagram.com/p/DbRBrbTl01E/",
+      "https://www.instagram.com/p/DbRBb7IDdeh/",
+      "https://www.instagram.com/p/DbRBLzSjUpX/",
+      "https://www.instagram.com/p/DbRA7wTDZvY/"
+    ],
+    "note": "Force suite pass: 0/7 old IG gone; 7 still live. Keepers retained.",
+    "deleted_via_playwright": [],
+    "playwright_at": "2026-07-27T22:35:46.938253+00:00",
+    "account": {
+      "logged_in_guess": true,
+      "has_correct_name": false,
+      "wrong_account_suspected": false,
+      "wrong_hits": [],
+      "name_signals": [],
+      "url": "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+      "ok_to_delete": true,
+      "forced": true
+    }
+  },
+  "facebook_author": {
+    "keep_new_elevated": [
+      "https://facebook.com/1224164874114610_122097503355290334",
+      "https://facebook.com/1224164874114610_122097503799290334",
+      "https://facebook.com/1224164874114610_122097504603290334",
+      "https://facebook.com/1224164874114610_122097505695290334",
+      "https://facebook.com/1224164874114610_122097506355290334",
+      "https://facebook.com/1224164874114610_122097506853290334",
+      "https://facebook.com/1224164874114610_122097507585290334"
+    ],
+    "delete_still_live": [
+      "https://facebook.com/1224164874114610_122097149271290334",
+      "https://facebook.com/1224164874114610_122097148227290334",
+      "https://facebook.com/1224164874114610_122097146733290334",
+      "https://facebook.com/1224164874114610_122097145863290334",
+      "https://facebook.com/1224164874114610_122097144261290334",
+      "https://facebook.com/1224164874114610_122097141645290334",
+      "https://facebook.com/1224164874114610_122097140487290334"
+    ],
+    "note": "Force suite pass: 0/7 old FB Author gone; 7 still live. Keepers retained.",
+    "deleted_via_playwright": [],
+    "playwright_at": "2026-07-27T22:35:46.938315+00:00",
+    "account": {
+      "logged_in_guess": true,
+      "has_correct_name": false,
+      "wrong_account_suspected": false,
+      "wrong_hits": [],
+      "name_signals": [],
+      "url": "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+      "ok_to_delete": true,
+      "forced": true
+    }
+  },
+  "facebook_scp": {
+    "status": "Posted 7/7 unique imprint catalog posts (not essay-mirror).",
+    "voice": "imprint/catalog from SOCIAL_SCP_FACEBOOK_CATALOG softened \u2014 no hard sell",
+    "posts": [
+      {
+        "label": "FB SCP 1",
+        "success": true,
+        "post_id": "FF7CZ",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099552955409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 2",
+        "success": true,
+        "post_id": "OOXgv",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099553165409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 3",
+        "success": true,
+        "post_id": "yykSj",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099553543409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 4",
+        "success": true,
+        "post_id": "ggrXx",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099553723409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 5",
+        "success": true,
+        "post_id": "TTFC1",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099554035409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 6",
+        "success": true,
+        "post_id": "jjhw2",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099554131409612",
+        "error": null
+      },
+      {
+        "label": "FB SCP 7",
+        "success": true,
+        "post_id": "eelyr",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099554191409612",
+        "error": null
+      }
+    ],
+    "prior_essay_mirror_note": "Essay-mirror/mid sets probed; delete via Business Suite if still live. Keep overnight catalog 122099552\u2026\u2013122099554\u2026",
+    "essay_mirror_probe_at": "2026-07-27T23:03:05.538512+00:00",
+    "essay_mirror_probe": {
+      "old": [
+        {
+          "id": "1172985912572281_122098986723409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098985175409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098984173409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098982523409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098981161409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098979223409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        },
+        {
+          "id": "1172985912572281_122098977759409612",
+          "status": 200,
+          "not_found": true,
+          "has_id": true,
+          "kind": "old"
+        }
+      ],
+      "mid": [
+        {
+          "id": "1172985912572281_122099394513409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099395233409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099396073409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099396601409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099397525409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099398413409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        },
+        {
+          "id": "1172985912572281_122099399121409612",
+          "status": 200,
+          "not_found": false,
+          "has_id": true,
+          "kind": "mid"
+        }
+      ],
+      "overnight_keep_sample": []
+    }
+  },
+  "pinterest": {
+    "status": "7 elevated pins live via Outstand; prior Outstand pin records had no platformPostIds (likely never published or already cleared).",
+    "note": "Pinterest cleanup pass (Outstand + optional native API).",
+    "cleanup_at": "2026-07-27T23:03:05.538480+00:00",
+    "outstand_keep": 7,
+    "outstand_junk_deleted": [],
+    "api": {
+      "has_token": false
+    }
+  },
+  "bluesky": {
+    "status": "Author keep=7 deleted_junk=0; feed scanned 7 posts.",
+    "cleanup_at": "2026-07-27T23:03:05.538371+00:00",
+    "author_deleted": [],
+    "author_listed": [
+      {
+        "rkey": "3mrl3gs76le2e",
+        "createdAt": "2026-07-26T19:09:48.227Z",
+        "text": "Every page of the Distribution File carries a footer: f = 111.2 Hz.\r  Archaeoacousticians have docum"
+      },
+      {
+        "rkey": "3mrjxzijmnv2z",
+        "createdAt": "2026-07-26T08:36:01.280Z",
+        "text": "My conspiracy trilogy ends with a license. 247 pages, midnight, CC0.\r  The intuitive opposite of cla"
+      },
+      {
+        "rkey": "3mrjxyyviw62v",
+        "createdAt": "2026-07-26T08:35:44.915Z",
+        "text": "In 1984 American intelligence translated a Chinese journal on paranormal research and filed it. One "
+      },
+      {
+        "rkey": "3mrjxyhuzrb2e",
+        "createdAt": "2026-07-26T08:35:26.755Z",
+        "text": "An early draft called the cathedral limestone. It's red brick, 1882. The research pass caught me.\r  "
+      },
+      {
+        "rkey": "3mrjxwzff4f2w",
+        "createdAt": "2026-07-26T08:34:38.318Z",
+        "text": "The Ars Notoria is real. British Library, MS Sloane 1712.\r  It promised the liberal arts via geometr"
+      },
+      {
+        "rkey": "3mrjxvcldl32g",
+        "createdAt": "2026-07-26T08:33:40.686Z",
+        "text": "Why Kansas City? Convenience, then something stranger.\r  Hopewell stone-vault tombs, two thousand ye"
+      },
+      {
+        "rkey": "3mrjxtsnwvp23",
+        "createdAt": "2026-07-26T08:32:50.556Z",
+        "text": "Chladni, 1787: bow a sand-covered plate and the sand maps the silence.\r  Jenny found that shifting f"
+      }
+    ]
+  },
+  "closeout_audit_at": "2026-07-28T02:51:49Z",
+  "closeout_file": ".social-workflow-closeout.json",
+  "closeout_note": "IG keepers 7/7 alive; IG old 7/7 STILL alive per embed CDN probe. X overnight 7/7 gone. Bluesky imprint 7/7 with images. System: freed ~4.3GB (pw profiles + installer temps + state.vscdb.backup). Trilogy KC audit parked for Opus 5.",
+  "x": {
+    "status": "User wiped ALL X posts. Feed empty. DO NOT touch X. DO NOT re-post until explicitly asked. Future X rebuild must use message-in-image overlays.",
+    "user_cleared_at": "2026-07-27T23:24:39.640110+00:00",
+    "no_new_posts_until_asked": true,
+    "closeout_oembed": "all_7_overnight_404",
+    "overnight_cleanup": {
+      "at": "2026-07-27T22:29:59.306367+00:00",
+      "deleted_or_gone": [
+        "2081665359384322092",
+        "2081665432956654036",
+        "2081665510857445747",
+        "2081665544374128758",
+        "2081665579501449552"
+      ],
+      "still_live": [
+        "2081665395551793634",
+        "2081665475252047990"
+      ],
+      "urls_gone": [
+        "https://x.com/jasonhollowaykc/status/2081665359384322092",
+        "https://x.com/jasonhollowaykc/status/2081665432956654036",
+        "https://x.com/jasonhollowaykc/status/2081665510857445747",
+        "https://x.com/jasonhollowaykc/status/2081665544374128758",
+        "https://x.com/jasonhollowaykc/status/2081665579501449552"
+      ],
+      "urls_live": [
+        "https://x.com/jasonhollowaykc/status/2081665395551793634",
+        "https://x.com/jasonhollowaykc/status/2081665475252047990"
+      ],
+      "note": "Overnight jaHn2 spam batch cleanup via headed Playwright. Do NOT post new X until still_live empty.",
+      "no_new_posts_until_clean": true
+    }
+  },
+  "linkedin_threads_tiktok": {
+    "status": "Not connected in Outstand social-accounts. No action possible."
+  },
+  "meta_biz_assist": {
+    "required_account": "Jason Carroll Holloway",
+    "content_url": "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+    "status": "force_suite_attempted",
+    "at": "2026-07-27T22:35:46.938339+00:00",
+    "ig_gone": 0,
+    "fb_gone": 0,
+    "fb_clicked_ok": 0,
+    "ig_clicked_ok": 0,
+    "morning_action": "If still live: in open Suite Content window, \u22ef \u2192 Delete ONLY old posts in delete_still_live. KEEP DbSM*/DbSN* and elevated FB 122097503\u2026\u2013122097507\u2026"
+  },
+  "overnight": {
+    "at": "2026-07-27T09:00:46.687341+00:00",
+    "results": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.overnight-shore-up-results.json",
+    "x_account_id": "jaHn2",
+    "posted_ok": 14,
+    "posted_total": 14,
+    "meta_cleanup": "blocked_overnight",
+    "bluesky_imprint_ok": 7,
+    "summary": "X 7/7, FB SCP catalog 7/7, Bluesky imprint 7/7. Meta old-post deletes still pending interactive Business Suite session."
+  },
+  "bluesky_imprint": {
+    "status": "Posted 7/7 unique imprint catalog posts with message-in-image overlays on seventhcitypress.bsky.social.",
+    "posts": [
+      {
+        "label": "Bluesky imprint 1",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjku2qkz2u"
+      },
+      {
+        "label": "Bluesky imprint 2",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjlec57y2h"
+      },
+      {
+        "label": "Bluesky imprint 3",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjlsofz227"
+      },
+      {
+        "label": "Bluesky imprint 4",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjmb54nk27"
+      },
+      {
+        "label": "Bluesky imprint 5",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjmom5lt2p"
+      },
+      {
+        "label": "Bluesky imprint 6",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjn4n5e52e"
+      },
+      {
+        "label": "Bluesky imprint 7",
+        "success": true,
+        "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjnkf3vu27"
+      }
+    ],
+    "cleanup_at": "2026-07-27T23:03:05.538424+00:00",
+    "keep_rkeys": [
+      "3mrmjku2qkz2u",
+      "3mrmjlec57y2h",
+      "3mrmjlsofz227",
+      "3mrmjmb54nk27",
+      "3mrmjmom5lt2p",
+      "3mrmjn4n5e52e",
+      "3mrmjnkf3vu27"
+    ],
+    "deleted_junk": [
+      {
+        "rkey": "3mrjyc7oj552e",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreiauuomvfjdczuyxgqzoehvanaf6mzxkpiyg2rve3fcvscot3lkgeq",
+            "rev": "3mrnyw6kjaj23"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjybrfmxs2h",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreig2zyl47y3tmgfrs5maf3p67rk6lxzhpcpln6jfclcwfnki2q2sgu",
+            "rev": "3mrnyw6z6752n"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjyb7lub32p",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreih5y2wevqy33gkrcoqqauwsyheg6gp5b3fo3xwjyxjx5orkzt5n3m",
+            "rev": "3mrnyw7hnyh2e"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjyaojxtv2e",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreifsr25paj6tkpxyjuzuevugpjbyp7yxuxmvdtuz2u4y23dn5f4c6y",
+            "rev": "3mrnyw7wds52n"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjya4qs4r2e",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreibudjiqshblsscoyjsceubt73lqdjaom2bhxzhsdb7zyelznmusfm",
+            "rev": "3mrnywahock2g"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjy7qhusj2w",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreihtpyicsgqezdt2jkxjyd7ltazd6gawrawoxy3nvcqcv27k3uzs7m",
+            "rev": "3mrnywaw4lq2q"
+          }
+        },
+        "ok": true
+      },
+      {
+        "rkey": "3mrjy7aaq3d2n",
+        "status": 200,
+        "body": {
+          "commit": {
+            "cid": "bafyreibjtiy53qmzsoty6zckx4garyh5foapgc26fpkgzky7balyront24",
+            "rev": "3mrnywbfpz52n"
+          }
+        },
+        "ok": true
+      }
+    ],
+    "listed": [
+      {
+        "rkey": "3mrmjnkf3vu27",
+        "createdAt": "2026-07-27T08:56:44.143887Z",
+        "text": "Scholarly list \u00b7 Hawkes monograph  129 grapes. Seventeen novels. Method before interpretation.  jaso"
+      },
+      {
+        "rkey": "3mrmjn4n5e52e",
+        "createdAt": "2026-07-27T08:56:29.348421Z",
+        "text": "Imprint note \u00b7 Field Notes  The record beside the fiction. Measured claims kept measured; invented c"
+      },
+      {
+        "rkey": "3mrmjmom5lt2p",
+        "createdAt": "2026-07-27T08:56:15.090218Z",
+        "text": "Catalog \u00b7 Vol. III \u2014 The Kingdom  Documentation over confrontation. An ending that chooses open rele"
+      },
+      {
+        "rkey": "3mrmjmb54nk27",
+        "createdAt": "2026-07-27T08:56:00.856952Z",
+        "text": "Catalog \u00b7 Vol. II \u2014 The Grimoire  Preparation as curriculum. The Ars Notoria named as source, not de"
+      },
+      {
+        "rkey": "3mrmjlsofz227",
+        "createdAt": "2026-07-27T08:55:45.627524Z",
+        "text": "Catalog \u00b7 Vol. I \u2014 The Inheritance of Frequency  Underground Kansas City. Measured stone. A decimal "
+      },
+      {
+        "rkey": "3mrmjlec57y2h",
+        "createdAt": "2026-07-27T08:55:30.379507Z",
+        "text": "Catalog note \u00b7 Masters X Trilogy  Three novels. One frequency. Kansas City limestone, manuscript tra"
+      },
+      {
+        "rkey": "3mrmjku2qkz2u",
+        "createdAt": "2026-07-27T08:55:13.239417Z",
+        "text": "Seventh City Press \u2014 independent Kansas City imprint.  Fiction that cites its sources. Research publ"
+      },
+      {
+        "rkey": "3mrjyc7oj552e",
+        "createdAt": "2026-07-26T08:40:54.054Z",
+        "text": "A conspiracy trilogy that ends not with a confrontation but a license. 247 pages, midnight, CC0.\r  J"
+      },
+      {
+        "rkey": "3mrjybrfmxs2h",
+        "createdAt": "2026-07-26T08:40:39.065Z",
+        "text": "In 1984 American intelligence translated a Chinese journal on paranormal research. One government pu"
+      },
+      {
+        "rkey": "3mrjyb7lub32p",
+        "createdAt": "2026-07-26T08:40:20.360Z",
+        "text": "Westport Presbyterian burned in 2011. The 1904 limestone walls stood.\r  \"The stone remembers\" was in"
+      },
+      {
+        "rkey": "3mrjyaojxtv2e",
+        "createdAt": "2026-07-26T08:40:02.521Z",
+        "text": "The Ars Notoria is real. British Library, MS Sloane 1712. A medieval manuscript condemned not for de"
+      },
+      {
+        "rkey": "3mrjya4qs4r2e",
+        "createdAt": "2026-07-26T08:39:43.852Z",
+        "text": "Why set a conspiracy trilogy in Kansas City? Hopewell stone-vault tombs. The Osage concept of Wah-ko"
+      },
+      {
+        "rkey": "3mrjy7qhusj2w",
+        "createdAt": "2026-07-26T08:39:31.019Z",
+        "text": "A metal plate, a violin bow, a spoonful of sand. Chladni showed it in 1787. Hans Jenny made it a dis"
+      },
+      {
+        "rkey": "3mrjy7aaq3d2n",
+        "createdAt": "2026-07-26T08:39:13.973Z",
+        "text": "Every page of the Distribution File in the Masters X Trilogy carries a footer: f = 111.2 Hz.\r  The n"
+      }
+    ],
+    "note": "Imprint keep=7 deleted=7"
+  },
+  "morning_gaps": [
+    "Delete remaining old IG: DbRCSJoF1iy, DbRCDsjl4IG, DbRB38zl8LU, DbRBrbTl01E, DbRBb7IDdeh, DbRBLzSjUpX, DbRA7wTDZvY",
+    "Delete remaining old FB Author stories: 122097149271290334, 122097148227290334, 122097146733290334, 122097145863290334, 122097144261290334, 122097141645290334, 122097140487290334"
+  ],
+  "scp_pinterest_standard": {
+    "at": "2026-07-28T03:27:38.836796+00:00",
+    "results": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.scp-pinterest-standard-results.json",
+    "note": "FB SCP + Bluesky imprint aligned to elevated Pinterest field-note graphics",
+    "bluesky_rkeys": [
+      "3mrohm3ovfi2n",
+      "3mrohm5hm5b2g",
+      "3mrohm7c3wa2n",
+      "3mrohmaxdkv27",
+      "3mrohmcshdo2u",
+      "3mrohmemehb2g",
+      "3mrohmgdpwr2g"
+    ]
+  }
+}

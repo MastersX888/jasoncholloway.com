@@ -1,0 +1,489 @@
+{
+  "started_at": "2026-07-27T22:25:02.725636+00:00",
+  "mode": "suite_force_delete",
+  "fb_attempts": [
+    {
+      "marker": "122097149271290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097149271290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-71290334.png"
+    },
+    {
+      "marker": "122097148227290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097148227290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-27290334.png"
+    },
+    {
+      "marker": "122097146733290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097146733290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-33290334.png"
+    },
+    {
+      "marker": "122097145863290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097145863290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-63290334.png"
+    },
+    {
+      "marker": "122097144261290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097144261290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-61290334.png"
+    },
+    {
+      "marker": "122097141645290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097141645290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-45290334.png"
+    },
+    {
+      "marker": "122097140487290334",
+      "kind": "fb",
+      "ok": false,
+      "open": {
+        "marker": "122097140487290334",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-fb-87290334.png"
+    }
+  ],
+  "ig_attempts": [
+    {
+      "marker": "DbRCSJoF1iy",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRCSJoF1iy",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-CSJoF1iy.png"
+    },
+    {
+      "marker": "DbRCDsjl4IG",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRCDsjl4IG",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-CDsjl4IG.png"
+    },
+    {
+      "marker": "DbRB38zl8LU",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRB38zl8LU",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-B38zl8LU.png"
+    },
+    {
+      "marker": "DbRBrbTl01E",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRBrbTl01E",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-BrbTl01E.png"
+    },
+    {
+      "marker": "DbRBb7IDdeh",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRBb7IDdeh",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-Bb7IDdeh.png"
+    },
+    {
+      "marker": "DbRBLzSjUpX",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRBLzSjUpX",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-BLzSjUpX.png"
+    },
+    {
+      "marker": "DbRA7wTDZvY",
+      "kind": "ig",
+      "ok": false,
+      "open": {
+        "marker": "DbRA7wTDZvY",
+        "opened": false,
+        "strategy": null,
+        "detail": {
+          "ok": false,
+          "tried": [],
+          "hitCount": 0
+        },
+        "strategies_extra": []
+      },
+      "menu_before": [],
+      "error": "could not open actions menu",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-no-menu-ig-A7wTDZvY.png"
+    },
+    {
+      "marker": "DbRCSJoF1iy",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRCSJoF1iy/",
+      "chose": null,
+      "error": "menu=[]",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nodelete-DbRCSJoF1iy.png"
+    },
+    {
+      "marker": "DbRCDsjl4IG",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRCDsjl4IG/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRCDsjl4IG.png"
+    },
+    {
+      "marker": "DbRB38zl8LU",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRB38zl8LU/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRB38zl8LU.png"
+    },
+    {
+      "marker": "DbRBrbTl01E",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRBrbTl01E/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRBrbTl01E.png"
+    },
+    {
+      "marker": "DbRBb7IDdeh",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRBb7IDdeh/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRBb7IDdeh.png"
+    },
+    {
+      "marker": "DbRBLzSjUpX",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRBLzSjUpX/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRBLzSjUpX.png"
+    },
+    {
+      "marker": "DbRA7wTDZvY",
+      "kind": "ig-www",
+      "ok": false,
+      "url": "https://www.instagram.com/p/DbRA7wTDZvY/",
+      "error": "no more options",
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-meta-force-ig-www-nomore-DbRA7wTDZvY.png"
+    }
+  ],
+  "login_ok": true,
+  "fb_title": "Meta Business Suite",
+  "fb_url": "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+  "ig_switch": {
+    "ok": true,
+    "ig_asset_guess": "2553973561729360",
+    "via": "asset_id_url",
+    "url": "https://business.facebook.com/latest/posts/published_posts?asset_id=2553973561729360"
+  },
+  "ig_verify_keep": [
+    {
+      "shortcode": "DbSNYbojjaz",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMawbjYH1",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "fb_verify_keep": [
+    {
+      "id": "1224164874114610_122097507585290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503355290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506853290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503799290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097505695290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097504603290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506355290334",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "ig_verify_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "fb_verify_old": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "finished_at": "2026-07-27T22:35:46.940861+00:00"
+}

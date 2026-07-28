@@ -1,0 +1,254 @@
+{
+  "audited_at": "2026-07-28T02:51:49.870941+00:00",
+  "instagram_keepers": [
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602829,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSMawbjYH1",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602840,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602832,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602835,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602839,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602836,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbSNYbojjaz",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602839,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    }
+  ],
+  "instagram_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602833,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602833,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602834,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602836,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602833,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602840,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "verdict": "ALIVE",
+      "status": 200,
+      "len": 602840,
+      "title": "Instagram",
+      "embedded": false,
+      "has_cdn": true,
+      "unavailable": false
+    }
+  ],
+  "bluesky_imprint": [
+    {
+      "rkey": "3mrmjku2qkz2u",
+      "ok": true,
+      "images": 1,
+      "text": "Seventh City Press \u2014 independent Kansas City imprint.\n\nFiction that cites its so",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjku2qkz2u"
+    },
+    {
+      "rkey": "3mrmjlec57y2h",
+      "ok": true,
+      "images": 1,
+      "text": "Catalog note \u00b7 Masters X Trilogy\n\nThree novels. One frequency. Kansas City limes",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjlec57y2h"
+    },
+    {
+      "rkey": "3mrmjlsofz227",
+      "ok": true,
+      "images": 1,
+      "text": "Catalog \u00b7 Vol. I \u2014 The Inheritance of Frequency\n\nUnderground Kansas City. Measur",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjlsofz227"
+    },
+    {
+      "rkey": "3mrmjmb54nk27",
+      "ok": true,
+      "images": 1,
+      "text": "Catalog \u00b7 Vol. II \u2014 The Grimoire\n\nPreparation as curriculum. The Ars Notoria nam",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjmb54nk27"
+    },
+    {
+      "rkey": "3mrmjmom5lt2p",
+      "ok": true,
+      "images": 1,
+      "text": "Catalog \u00b7 Vol. III \u2014 The Kingdom\n\nDocumentation over confrontation. An ending th",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjmom5lt2p"
+    },
+    {
+      "rkey": "3mrmjn4n5e52e",
+      "ok": true,
+      "images": 1,
+      "text": "Imprint note \u00b7 Field Notes\n\nThe record beside the fiction. Measured claims kept ",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjn4n5e52e"
+    },
+    {
+      "rkey": "3mrmjnkf3vu27",
+      "ok": true,
+      "images": 1,
+      "text": "Scholarly list \u00b7 Hawkes monograph\n\n129 grapes. Seventeen novels. Method before i",
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrmjnkf3vu27"
+    }
+  ],
+  "bluesky_author": {
+    "status": 200,
+    "count": 7
+  },
+  "x_overnight_sample": [
+    {
+      "id": "2081665359384322092",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665395551793634",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665475252047990",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665510857445747",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665544374128758",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665579501449552",
+      "status": 404,
+      "gone": true
+    },
+    {
+      "id": "2081665432956654036",
+      "status": 404,
+      "gone": true
+    }
+  ],
+  "notes": {
+    "facebook": "Facebook public HTML is unreliable for liveness (login walls / SPA shells). Confirm elevated Author keepers + SCP catalog visually in Business Suite / Page.",
+    "pinterest": "Prior status: 7 elevated pins via Outstand; no public pin API without token.",
+    "x": "User reported full wipe; overnight oembeds should be 404."
+  },
+  "summary": {
+    "ig_keepers_alive": 7,
+    "ig_keepers_total": 7,
+    "ig_old_alive": 7,
+    "ig_old_gone_or_unclear": 0,
+    "bluesky_imprint_with_images": 7,
+    "bluesky_author_posts": 7,
+    "x_overnight_gone": 7,
+    "x_overnight_checked": 7
+  }
+}

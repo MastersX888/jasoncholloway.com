@@ -1,0 +1,419 @@
+{
+  "started_at": "2026-07-27T23:02:39.384116+00:00",
+  "bluesky": {
+    "author": {
+      "listed": [
+        {
+          "rkey": "3mrl3gs76le2e",
+          "createdAt": "2026-07-26T19:09:48.227Z",
+          "text": "Every page of the Distribution File carries a footer: f = 111.2 Hz.\r  Archaeoacousticians have docum"
+        },
+        {
+          "rkey": "3mrjxzijmnv2z",
+          "createdAt": "2026-07-26T08:36:01.280Z",
+          "text": "My conspiracy trilogy ends with a license. 247 pages, midnight, CC0.\r  The intuitive opposite of cla"
+        },
+        {
+          "rkey": "3mrjxyyviw62v",
+          "createdAt": "2026-07-26T08:35:44.915Z",
+          "text": "In 1984 American intelligence translated a Chinese journal on paranormal research and filed it. One "
+        },
+        {
+          "rkey": "3mrjxyhuzrb2e",
+          "createdAt": "2026-07-26T08:35:26.755Z",
+          "text": "An early draft called the cathedral limestone. It's red brick, 1882. The research pass caught me.\r  "
+        },
+        {
+          "rkey": "3mrjxwzff4f2w",
+          "createdAt": "2026-07-26T08:34:38.318Z",
+          "text": "The Ars Notoria is real. British Library, MS Sloane 1712.\r  It promised the liberal arts via geometr"
+        },
+        {
+          "rkey": "3mrjxvcldl32g",
+          "createdAt": "2026-07-26T08:33:40.686Z",
+          "text": "Why Kansas City? Convenience, then something stranger.\r  Hopewell stone-vault tombs, two thousand ye"
+        },
+        {
+          "rkey": "3mrjxtsnwvp23",
+          "createdAt": "2026-07-26T08:32:50.556Z",
+          "text": "Chladni, 1787: bow a sand-covered plate and the sand maps the silence.\r  Jenny found that shifting f"
+        }
+      ],
+      "keep_count": 7,
+      "junk_count": 0,
+      "deleted": []
+    },
+    "imprint": {
+      "listed": [
+        {
+          "rkey": "3mrmjnkf3vu27",
+          "createdAt": "2026-07-27T08:56:44.143887Z",
+          "text": "Scholarly list \u00b7 Hawkes monograph  129 grapes. Seventeen novels. Method before interpretation.  jaso"
+        },
+        {
+          "rkey": "3mrmjn4n5e52e",
+          "createdAt": "2026-07-27T08:56:29.348421Z",
+          "text": "Imprint note \u00b7 Field Notes  The record beside the fiction. Measured claims kept measured; invented c"
+        },
+        {
+          "rkey": "3mrmjmom5lt2p",
+          "createdAt": "2026-07-27T08:56:15.090218Z",
+          "text": "Catalog \u00b7 Vol. III \u2014 The Kingdom  Documentation over confrontation. An ending that chooses open rele"
+        },
+        {
+          "rkey": "3mrmjmb54nk27",
+          "createdAt": "2026-07-27T08:56:00.856952Z",
+          "text": "Catalog \u00b7 Vol. II \u2014 The Grimoire  Preparation as curriculum. The Ars Notoria named as source, not de"
+        },
+        {
+          "rkey": "3mrmjlsofz227",
+          "createdAt": "2026-07-27T08:55:45.627524Z",
+          "text": "Catalog \u00b7 Vol. I \u2014 The Inheritance of Frequency  Underground Kansas City. Measured stone. A decimal "
+        },
+        {
+          "rkey": "3mrmjlec57y2h",
+          "createdAt": "2026-07-27T08:55:30.379507Z",
+          "text": "Catalog note \u00b7 Masters X Trilogy  Three novels. One frequency. Kansas City limestone, manuscript tra"
+        },
+        {
+          "rkey": "3mrmjku2qkz2u",
+          "createdAt": "2026-07-27T08:55:13.239417Z",
+          "text": "Seventh City Press \u2014 independent Kansas City imprint.  Fiction that cites its sources. Research publ"
+        },
+        {
+          "rkey": "3mrjyc7oj552e",
+          "createdAt": "2026-07-26T08:40:54.054Z",
+          "text": "A conspiracy trilogy that ends not with a confrontation but a license. 247 pages, midnight, CC0.\r  J"
+        },
+        {
+          "rkey": "3mrjybrfmxs2h",
+          "createdAt": "2026-07-26T08:40:39.065Z",
+          "text": "In 1984 American intelligence translated a Chinese journal on paranormal research. One government pu"
+        },
+        {
+          "rkey": "3mrjyb7lub32p",
+          "createdAt": "2026-07-26T08:40:20.360Z",
+          "text": "Westport Presbyterian burned in 2011. The 1904 limestone walls stood.\r  \"The stone remembers\" was in"
+        },
+        {
+          "rkey": "3mrjyaojxtv2e",
+          "createdAt": "2026-07-26T08:40:02.521Z",
+          "text": "The Ars Notoria is real. British Library, MS Sloane 1712. A medieval manuscript condemned not for de"
+        },
+        {
+          "rkey": "3mrjya4qs4r2e",
+          "createdAt": "2026-07-26T08:39:43.852Z",
+          "text": "Why set a conspiracy trilogy in Kansas City? Hopewell stone-vault tombs. The Osage concept of Wah-ko"
+        },
+        {
+          "rkey": "3mrjy7qhusj2w",
+          "createdAt": "2026-07-26T08:39:31.019Z",
+          "text": "A metal plate, a violin bow, a spoonful of sand. Chladni showed it in 1787. Hans Jenny made it a dis"
+        },
+        {
+          "rkey": "3mrjy7aaq3d2n",
+          "createdAt": "2026-07-26T08:39:13.973Z",
+          "text": "Every page of the Distribution File in the Masters X Trilogy carries a footer: f = 111.2 Hz.\r  The n"
+        }
+      ],
+      "keep_count": 7,
+      "junk_count": 7,
+      "deleted": [
+        {
+          "rkey": "3mrjyc7oj552e",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreiauuomvfjdczuyxgqzoehvanaf6mzxkpiyg2rve3fcvscot3lkgeq",
+              "rev": "3mrnyw6kjaj23"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjybrfmxs2h",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreig2zyl47y3tmgfrs5maf3p67rk6lxzhpcpln6jfclcwfnki2q2sgu",
+              "rev": "3mrnyw6z6752n"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjyb7lub32p",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreih5y2wevqy33gkrcoqqauwsyheg6gp5b3fo3xwjyxjx5orkzt5n3m",
+              "rev": "3mrnyw7hnyh2e"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjyaojxtv2e",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreifsr25paj6tkpxyjuzuevugpjbyp7yxuxmvdtuz2u4y23dn5f4c6y",
+              "rev": "3mrnyw7wds52n"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjya4qs4r2e",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreibudjiqshblsscoyjsceubt73lqdjaom2bhxzhsdb7zyelznmusfm",
+              "rev": "3mrnywahock2g"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjy7qhusj2w",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreihtpyicsgqezdt2jkxjyd7ltazd6gawrawoxy3nvcqcv27k3uzs7m",
+              "rev": "3mrnywaw4lq2q"
+            }
+          },
+          "ok": true
+        },
+        {
+          "rkey": "3mrjy7aaq3d2n",
+          "status": 200,
+          "body": {
+            "commit": {
+              "cid": "bafyreibjtiy53qmzsoty6zckx4garyh5foapgc26fpkgzky7balyront24",
+              "rev": "3mrnywbfpz52n"
+            }
+          },
+          "ok": true
+        }
+      ]
+    }
+  },
+  "pinterest": {
+    "outstand": {
+      "posts": [
+        {
+          "id": "gvacx",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169983/",
+          "platformPostId": "1110700326881169983",
+          "snippet": "A Document That Cannot Be Un-Released - A conspiracy trilogy that ends not with "
+        },
+        {
+          "id": "KlAD9",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169918/",
+          "platformPostId": "1110700326881169918",
+          "snippet": "Three Factions, One Declassified Document - In 1984 American intelligence transl"
+        },
+        {
+          "id": "4rCni",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169891/",
+          "platformPostId": "1110700326881169891",
+          "snippet": "The Stone Remembers - In 2011 a Kansas City church burned. The fire took everyth"
+        },
+        {
+          "id": "repO4",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169864/",
+          "platformPostId": "1110700326881169864",
+          "snippet": "The Grimoire That Was a Study Aid - The Ars Notoria, a medieval manuscript conde"
+        },
+        {
+          "id": "i4C7B",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169837/",
+          "platformPostId": "1110700326881169837",
+          "snippet": "Why Kansas City? - Four traditions looked at the same thirty miles of Missouri r"
+        },
+        {
+          "id": "5HXOD",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169827/",
+          "platformPostId": "1110700326881169827",
+          "snippet": "Sound Into Form: Hans Jenny and Cymatics - A metal plate, a violin bow, a spoonf"
+        },
+        {
+          "id": "dmcjO",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169807/",
+          "platformPostId": "1110700326881169807",
+          "snippet": "The Frequency That Was Already There - Archaeoacousticians documented a resonanc"
+        }
+      ],
+      "keep": [
+        {
+          "id": "gvacx",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169983/",
+          "platformPostId": "1110700326881169983",
+          "snippet": "A Document That Cannot Be Un-Released - A conspiracy trilogy that ends not with "
+        },
+        {
+          "id": "KlAD9",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169918/",
+          "platformPostId": "1110700326881169918",
+          "snippet": "Three Factions, One Declassified Document - In 1984 American intelligence transl"
+        },
+        {
+          "id": "4rCni",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169891/",
+          "platformPostId": "1110700326881169891",
+          "snippet": "The Stone Remembers - In 2011 a Kansas City church burned. The fire took everyth"
+        },
+        {
+          "id": "repO4",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169864/",
+          "platformPostId": "1110700326881169864",
+          "snippet": "The Grimoire That Was a Study Aid - The Ars Notoria, a medieval manuscript conde"
+        },
+        {
+          "id": "i4C7B",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169837/",
+          "platformPostId": "1110700326881169837",
+          "snippet": "Why Kansas City? - Four traditions looked at the same thirty miles of Missouri r"
+        },
+        {
+          "id": "5HXOD",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169827/",
+          "platformPostId": "1110700326881169827",
+          "snippet": "Sound Into Form: Hans Jenny and Cymatics - A metal plate, a violin bow, a spoonf"
+        },
+        {
+          "id": "dmcjO",
+          "status": "published",
+          "url": "https://www.pinterest.com/pin/1110700326881169807/",
+          "platformPostId": "1110700326881169807",
+          "snippet": "The Frequency That Was Already There - Archaeoacousticians documented a resonanc"
+        }
+      ],
+      "junk": [],
+      "deleted": []
+    },
+    "api": {
+      "has_token": false
+    }
+  },
+  "fb_scp_probe": {
+    "old": [
+      {
+        "id": "1172985912572281_122098986723409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098985175409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098984173409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098982523409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098981161409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098979223409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      },
+      {
+        "id": "1172985912572281_122098977759409612",
+        "status": 200,
+        "not_found": true,
+        "has_id": true,
+        "kind": "old"
+      }
+    ],
+    "mid": [
+      {
+        "id": "1172985912572281_122099394513409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099395233409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099396073409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099396601409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099397525409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099398413409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      },
+      {
+        "id": "1172985912572281_122099399121409612",
+        "status": 200,
+        "not_found": false,
+        "has_id": true,
+        "kind": "mid"
+      }
+    ],
+    "overnight_keep_sample": []
+  },
+  "finished_at": "2026-07-27T23:03:05.542857+00:00"
+}

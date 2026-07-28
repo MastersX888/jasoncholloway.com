@@ -1,0 +1,153 @@
+{
+  "started_at": "2026-07-27T08:57:40.471857+00:00",
+  "accounts": {
+    "x": "jaHn2",
+    "fb_author": "7BvrW",
+    "fb_scp": "IwQhX",
+    "pinterest": "pxPfM",
+    "ig": "1vWPG",
+    "bsky_author": "J15V3",
+    "bsky_imprint": "4RSwi"
+  },
+  "posts": [
+    {
+      "label": "X slot 1",
+      "success": true,
+      "post_id": "VV1JN",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665359384322092",
+      "error": null
+    },
+    {
+      "label": "X slot 2",
+      "success": true,
+      "post_id": "rrlP4",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665395551793634",
+      "error": null
+    },
+    {
+      "label": "X slot 3",
+      "success": true,
+      "post_id": "KK2O9",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665432956654036",
+      "error": null
+    },
+    {
+      "label": "X slot 4",
+      "success": true,
+      "post_id": "dd8ZO",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665475252047990",
+      "error": null
+    },
+    {
+      "label": "X slot 5",
+      "success": true,
+      "post_id": "ii9gB",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665510857445747",
+      "error": null
+    },
+    {
+      "label": "X slot 6",
+      "success": true,
+      "post_id": "22hQS",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665544374128758",
+      "error": null
+    },
+    {
+      "label": "X slot 7",
+      "success": true,
+      "post_id": "55VRD",
+      "status": "published",
+      "url": "https://x.com/i/status/2081665579501449552",
+      "error": null
+    },
+    {
+      "label": "FB SCP 1",
+      "success": true,
+      "post_id": "FF7CZ",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099552955409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 2",
+      "success": true,
+      "post_id": "OOXgv",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099553165409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 3",
+      "success": true,
+      "post_id": "yykSj",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099553543409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 4",
+      "success": true,
+      "post_id": "ggrXx",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099553723409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 5",
+      "success": true,
+      "post_id": "TTFC1",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099554035409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 6",
+      "success": true,
+      "post_id": "jjhw2",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099554131409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 7",
+      "success": true,
+      "post_id": "eelyr",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099554191409612",
+      "error": null
+    }
+  ],
+  "meta_cleanup": {
+    "status": "blocked_overnight",
+    "note": "Outstand delete-remote 500; Playwright Business Suite needs interactive Jason Carroll Holloway login. All 7 old IG shortcodes still oEmbed-live.",
+    "old_ig_still_live": [
+      "https://www.instagram.com/p/DbRCSJoF1iy/",
+      "https://www.instagram.com/p/DbRCDsjl4IG/",
+      "https://www.instagram.com/p/DbRB38zl8LU/",
+      "https://www.instagram.com/p/DbRBrbTl01E/",
+      "https://www.instagram.com/p/DbRBb7IDdeh/",
+      "https://www.instagram.com/p/DbRBLzSjUpX/",
+      "https://www.instagram.com/p/DbRA7wTDZvY/"
+    ],
+    "old_fb_author_still_live": [
+      "https://facebook.com/1224164874114610_122097149271290334",
+      "https://facebook.com/1224164874114610_122097148227290334",
+      "https://facebook.com/1224164874114610_122097146733290334",
+      "https://facebook.com/1224164874114610_122097145863290334",
+      "https://facebook.com/1224164874114610_122097144261290334",
+      "https://facebook.com/1224164874114610_122097141645290334",
+      "https://facebook.com/1224164874114610_122097140487290334"
+    ]
+  },
+  "finished_at": "2026-07-27T09:00:46.682177+00:00",
+  "summary": {
+    "ok": 14,
+    "total": 14
+  }
+}

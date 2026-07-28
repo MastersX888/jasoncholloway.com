@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seventh City Press Facebook &mdash; Catalog Posts (Preview)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0d0d;--card:#161616;--border:#2a2a2a;--text:#e0e0e0;--muted:#888;--accent:#c8ff00;--approve:#22c55e;--reject:#ef4444;--pending:#eab308;--warn:#f59e0b}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 0 120px}
+header{background:linear-gradient(135deg,#111 0%,#1a1a1a 100%);border-bottom:1px solid var(--border);padding:32px 40px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+header h1{font-size:24px;font-weight:600;letter-spacing:-.5px}
+header p{color:var(--muted);font-size:14px;margin-top:4px}
+.summary-bar{display:flex;gap:24px;margin-top:12px;font-size:13px;flex-wrap:wrap}
+.summary-bar .stat{padding:4px 12px;border-radius:20px;background:#222}
+.summary-bar .stat.approved{color:var(--approve);border:1px solid var(--approve)}
+.summary-bar .stat.pending{color:var(--pending);border:1px solid var(--pending)}
+.summary-bar .stat.rejected{color:var(--reject);border:1px solid var(--reject)}
+main{max-width:900px;margin:0 auto;padding:24px 40px}
+.notice{background:#1a1500;border:1px solid var(--accent);border-radius:10px;padding:16px 20px;margin-bottom:24px;font-size:14px}
+.notice strong{color:var(--accent)}
+.notice p{margin-top:8px;color:var(--muted)}
+.deletion-section{background:#1a1208;border:1px solid var(--warn);border-radius:10px;padding:20px 24px;margin-bottom:32px}
+.deletion-section h2{font-size:16px;color:var(--warn);margin-bottom:8px}
+.deletion-section p{font-size:13px;color:var(--muted);margin-bottom:12px}
+.deletion-list{list-style:none}
+.deletion-list li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #2a2210;font-size:14px}
+.deletion-list li:last-child{border-bottom:none}
+.deletion-list input[type=checkbox]{margin-top:4px;accent-color:var(--warn);width:16px;height:16px;flex-shrink:0}
+.deletion-list label{cursor:pointer;flex:1}
+.deletion-list a{color:var(--accent);text-decoration:none;font-size:13px}
+.deletion-list a:hover{text-decoration:underline}
+.deletion-list .essay-title{color:var(--text);font-weight:600}
+.deletion-hint{font-size:12px;color:var(--muted);margin-top:12px}
+.post{margin-bottom:32px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
+.post-header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;padding:20px 24px;border-bottom:1px solid var(--border);background:#1a1a1a;flex-wrap:wrap}
+.post-header h2{font-size:17px;font-weight:600;line-height:1.4}
+.post-num{color:var(--accent);font-weight:700;margin-right:6px}
+.post-subtitle{font-size:13px;color:var(--muted);margin-top:4px}
+.approval-controls{display:flex;gap:8px;align-items:center;flex-shrink:0}
+.approval-controls button{padding:8px 16px;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-approve{background:var(--approve);color:#000}
+.btn-approve:hover{background:#16a34a}
+.btn-reject{background:var(--reject);color:#fff}
+.btn-reject:hover{background:#dc2626}
+.status-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px;color:var(--pending);border:1px solid var(--pending)}
+.post-body{padding:24px}
+.field-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:6px}
+.headline-block{font-size:18px;font-weight:600;margin-bottom:20px;padding:12px 16px;background:#111;border-left:3px solid var(--accent);border-radius:0 6px 6px 0}
+.body-block{background:#111;border:1px solid var(--border);border-radius:8px;padding:16px 20px;font-size:14px;white-space:pre-wrap;word-wrap:break-word;line-height:1.75;margin-bottom:16px}
+.link-block{margin-bottom:16px}
+.link-block a{color:var(--accent);font-size:14px;word-break:break-all}
+.image-concept{background:#0f0f0f;border:1px dashed #444;border-radius:8px;padding:14px 18px;font-size:13px;color:var(--muted);font-style:italic;line-height:1.6}
+footer{position:fixed;bottom:0;left:0;right:0;background:#111;border-top:1px solid var(--border);padding:16px 40px;display:flex;justify-content:space-between;align-items:center;gap:16px;z-index:100;flex-wrap:wrap}
+footer .gate{font-size:14px;font-weight:600;color:var(--reject)}
+footer .gate.ready{color:var(--approve)}
+#export-btn{background:var(--accent);color:#000;border:none;padding:12px 24px;border-radius:8px;font-size:14px;font-weight:700;cursor:pointer}
+#export-btn:hover{transform:scale(1.02)}
+@media(max-width:640px){header,main,footer{padding-left:20px;padding-right:20px}}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Seventh City Press Facebook &mdash; Catalog Posts (Preview)</h1>
+  <p>Third-person publisher voice &middot; 9 catalog posts &middot; Source: <code>SOCIAL_SCP_FACEBOOK_CATALOG.md</code></p>
+  <div class="summary-bar">
+    <span class="stat approved" id="count-approved">0 Approved</span>
+    <span class="stat pending" id="count-pending">9 Pending</span>
+    <span class="stat rejected" id="count-rejected">0 Rejected</span>
+  </div>
+</header>
+
+<main>
+  <div class="notice">
+    <strong>Publisher-voice catalog posts &mdash; not author essay mirrors.</strong>
+    <p>These posts promote the Seventh City Press imprint catalog (Masters X Trilogy, Hawkes monograph, Field Notes, press desk) in third-person publisher tone. They do <em>not</em> mirror the author&rsquo;s &ldquo;Facts Behind the Fiction&rdquo; essay copy on the Jason Carroll Holloway Author Page.</p>
+  </div>
+
+  <section class="deletion-section">
+    <h2>Manual deletion checklist &mdash; 7 live essay posts on SCP Facebook</h2>
+    <p>Outstand records were cleared, but these published essay-mirror posts may still be visible on the Page. Switch to <strong>Page admin</strong> in Meta Business Suite, then delete each post (Content &rarr; Posts &rarr; &hellip; &rarr; Delete post).</p>
+    <ul class="deletion-list" id="deletion-list">
+      <li>
+        <input type="checkbox" id="del-1">
+        <label for="del-1">
+          <span class="essay-title">Essay 01 &mdash; The Frequency That Was Already There</span><br>
+          <a href="https://facebook.com/1172985912572281_122098977759409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098977759409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-2">
+        <label for="del-2">
+          <span class="essay-title">Essay 03 &mdash; Sound Into Form: What Hans Jenny Actually Proved</span><br>
+          <a href="https://facebook.com/1172985912572281_122098979223409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098979223409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-3">
+        <label for="del-3">
+          <span class="essay-title">Essay 04 &mdash; Why Kansas City? The Ground Itself Is Significant</span><br>
+          <a href="https://facebook.com/1172985912572281_122098981161409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098981161409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-4">
+        <label for="del-4">
+          <span class="essay-title">Essay 02 &mdash; The Grimoire That Was Actually a Study Aid</span><br>
+          <a href="https://facebook.com/1172985912572281_122098982523409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098982523409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-5">
+        <label for="del-5">
+          <span class="essay-title">Essay 07 &mdash; The Stone Remembers: A Fire in Westport</span><br>
+          <a href="https://facebook.com/1172985912572281_122098984173409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098984173409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-6">
+        <label for="del-6">
+          <span class="essay-title">Essay 06 &mdash; Three Factions, One Declassified Document</span><br>
+          <a href="https://facebook.com/1172985912572281_122098985175409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098985175409612</a>
+        </label>
+      </li>
+      <li>
+        <input type="checkbox" id="del-7">
+        <label for="del-7">
+          <span class="essay-title">Essay 08 &mdash; A Document That Cannot Be Un-Released</span><br>
+          <a href="https://facebook.com/1172985912572281_122098986723409612" target="_blank" rel="noopener">facebook.com/1172985912572281_122098986723409612</a>
+        </label>
+      </li>
+    </ul>
+    <p class="deletion-hint">Delete these <em>before</em> publishing the new catalog batch. Checklist state is saved in your browser.</p>
+  </section>
+
+  <div id="posts"></div>
+</main>
+
+<footer>
+  <span class="gate" id="gate-message">Do not post until all 9 posts are approved.</span>
+  <button id="export-btn" onclick="exportApprovals()">Export Approvals &darr;</button>
+</footer>
+
+<script>
+const POSTS = [
+  {
+    num: 1,
+    title: "Imprint catalog — the Masters X Trilogy",
+    headline: "Three novels. One frequency. Now from Seventh City Press.",
+    body: `Seventh City Press has released the Masters X Trilogy by Jason Carroll Holloway: a three-volume literary conspiracy series sited in Kansas City and braided through medieval manuscripts, archaeoacoustics, and the limestone world beneath the city.
+
+The volumes are The Inheritance of Frequency, The Grimoire, and The Kingdom, each available in hardcover and paperback, with Kindle editions on Amazon and EPUB on Google Play Books. A complete omnibus collects all three novels in one volume for readers who prefer a single spine on the shelf.
+
+The series follows Blake Masters from a safety deposit box timed fifty-seven years in advance to a sealed crypt beneath Prague, through a preparation protocol drawn from real grimoire tradition, to a final argument about what happens when classified knowledge meets open release. Every location in the novels can be visited or verified in a bibliography; much of the underlying research is published openly on the author site.
+
+Seventh City Press is an independent imprint founded to publish work that refuses the split between imaginative and intellectual labor. The Masters X Trilogy is its flagship fiction list.`,
+    link: "https://seventhcitypress.com/",
+    imageConcept: "Row of three Masters X paperback covers (Vol. I–III) on a neutral surface, soft directional light, no text overlay. Optional: omnibus hardcover at the edge of frame."
+  },
+  {
+    num: 2,
+    title: "Volume I — The Inheritance of Frequency",
+    headline: "Vol. I: Seven notebooks. Thirty years of research. One box that opens on schedule.",
+    body: `Masters X: The Inheritance of Frequency opens the trilogy beneath Kansas City.
+
+Blake Masters loses his job guarding the subterranean limestone vaults of SubTropolis after photographing geometric carvings in a tunnel no official map acknowledges. A safety deposit box his grandfather paid for fifty-seven years in advance arrives on the day Blake is finally ready to open it. Inside: seven notebooks of classified acoustic research and a cross-reference to a crypt sealed beneath the Strahov Library in Prague since the thirteenth century.
+
+Volume I introduces the Distribution File, the 111.2 Hz signature that runs through the fiction (distinct from measured archaeoacoustic literature), and Sister Nadia Volkov, whose dissertation treats grimoires as cognitive technologies long before the plot proves her right.
+
+Trade paperback and hardcover ship through IngramSpark to bookstores and libraries worldwide. Kindle edition available on Amazon.`,
+    link: "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+    imageConcept: "Vol. I hardcover cover artifact on limestone texture or SubTropolis-style pillar background, documentary product photography."
+  },
+  {
+    num: 3,
+    title: "Volume II — The Grimoire",
+    headline: "Vol. II: Twenty-three texts before the crypt. The Ars Notoria as preparation, not decoration.",
+    body: `Masters X: The Grimoire is the middle movement of the trilogy: the preparation protocol.
+
+Blake, writing from a stone cottage on the Icelandic coast with a bilateral tremor the frequency left behind, maps the twenty-three-text curriculum the Premonstratensian monks required before any candidate entered the Strahov crypt. The list spans Christian, Jewish, Hermetic, and Islamic sources, including the Ars Notoria, the Sefer Yetzirah, and the Gospel of Mary. Meanwhile Nadia holds the William Masters Foundation together from Kansas City while Andrew Chen's work reveals that medieval cathedral proportions may be acoustic specifications, not ornament.
+
+Volume II is the longest book in the series (260 pages in paperback) and the volume where the trilogy's research layer around real manuscript tradition is most explicit. Seventh City Press publishes it alongside the author's Field Notes on the Ars Notoria and related sources for readers who want the record beside the fiction.
+
+Hardcover, paperback, and Kindle available now.`,
+    link: "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+    imageConcept: "Vol. II cover beside an open facsimile manuscript page (geometric notae, no readable text), candlelit reading-room atmosphere."
+  },
+  {
+    num: 4,
+    title: "Volume III — The Kingdom",
+    headline: "Vol. III: The demonstration, the argument, and what open release costs.",
+    body: `Masters X: The Kingdom closes the trilogy in Kansas City.
+
+Blake returns with a restructured nervous system and a preparation protocol that can expand human consciousness safely, but Father Crane's published theological critique forces a question the Foundation cannot dodge: if the frequency is what the tradition described as the kingdom within, is every week of preparation gatekeeping prayer?
+
+Twenty-three candidates. Seventy-two hours. A limestone chamber where the frequency has resonated since before the city was built. Four hundred twelve listening sites in sixty-one countries. And an ending that chooses documentation over confrontation: a file released under CC0, the license that reserves nothing, not even attribution.
+
+Volume III is where the series' argument about classification, leakage, and public science becomes explicit. Seventh City Press recommends pairing the novel with the author's Field Notes and blog essays for readers who want the fiction labeled as fiction and the sources cited as sources.`,
+    link: "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+    imageConcept: "Vol. III cover on a desk beside a neat stack of printed pages and a closed laptop at night, echoing the trilogy's release motif without quoting essay copy."
+  },
+  {
+    num: 5,
+    title: "Omnibus edition",
+    headline: "One volume. The complete Masters X Trilogy.",
+    body: `For readers who want the full arc in a single sitting, Seventh City Press offers Masters X: The Complete Trilogy in hardcover and paperback omnibus editions.
+
+The omnibus collects all three novels, from Blake's inheritance in the Kansas City underground through the grimoire preparation protocol to the kingdom demonstration and its open-source aftermath, in one ISBN-backed volume suitable for libraries and book clubs. The hardcover omnibus runs 686 pages; the paperback edition is formatted for extended reading comfort.
+
+The omnibus is the entry point Seventh City Press suggests for reviewers, instructors, and booksellers who need one title on the shelf rather than three. Full ISBN matrix, BISAC codes, and trade terms appear in the press fact sheet on the imprint site.
+
+Order through IngramSpark, Bookshop.org, or any bookstore by ISBN.`,
+    link: "https://jasoncholloway.com/books/masters-x/omnibus/",
+    imageConcept: "Omnibus hardcover cover, slight three-quarter angle, matte finish visible, neutral background."
+  },
+  {
+    num: 6,
+    title: "Monograph — scholarly list (Post 1 of 2)",
+    headline: "Beyond the trilogy: literary criticism from Seventh City Press.",
+    body: `Seventh City Press does not only publish conspiracy fiction. The imprint's scholarly list opens with Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes by Jason Carroll Holloway.
+
+Originally completed as a graduate thesis at Mercy University, this monograph is the first comprehensive motif analysis across John Hawkes's complete seventeen-novel corpus. Holloway traces the word "grape" through Hawkes's mature fiction (129 documented occurrences) and maps its counter-symbols: the Camera, the Wounded Body, the Architecture of Enclosure, and the Child. The argument is structural: Hawkes built fiction from spatial and symbolic logic, not plot alone.
+
+The monograph is available in trade paperback, hardcover, and EPUB on Google Play Books. It shares the imprint's commitment to work that thinks on the page, whether the page holds a novel or a critical study.`,
+    link: "https://jasoncholloway.com/books/hawkes-monograph/",
+    imageConcept: "Hawkes monograph paperback cover on a library table with pencil and index cards, academic still life, no visible quoted text."
+  },
+  {
+    num: 7,
+    title: "Monograph — the grape motif (Post 2 of 2)",
+    headline: "129 grapes. Seventeen novels. One architecture.",
+    body: `Why begin a publisher's Facebook catalog with a John Hawkes monograph?
+
+Because Seventh City Press was founded on a single premise: imaginative and intellectual work belong on the same list. Jason Carroll Holloway's Hawkes study demonstrates the method the trilogy applies in fiction: count what repeats, map where it clusters, name the gap between what the archive shows and what the novelist invents.
+
+The monograph's central claim is quantitative before it is interpretive. The grape appears 129 times across Hawkes's fiction, concentrated where innocence, desire, and enclosure converge. Holloway reads that recurrence as deliberate literary engineering beneath apparent chaos, the same discipline the Masters X novels apply to frequency, manuscript tradition, and Kansas City geography.
+
+Readers of the trilogy who want Holloway's scholarly voice without the conspiracy plot will find it here. Review copies available to accredited critics through the imprint communications desk.`,
+    link: "https://jasoncholloway.com/books/hawkes-monograph/",
+    imageConcept: "Close-up of wine grapes on vine or in a bowl beside the monograph cover, muted natural light, metaphor for the title motif, no typography overlay."
+  },
+  {
+    num: 8,
+    title: "Field Notes and the Analysis Chamber",
+    headline: "The research layer: Field Notes and the Analysis Chamber.",
+    body: `Seventh City Press publishes fiction that cites its sources. The Field Notes on jasoncholloway.com are the open research layer behind the Masters X Trilogy: archaeoacoustics and 111 Hz, cymatics, Kansas City locations and SubTropolis, the Voynich Manuscript, the Ars Notoria, declassified translation files, and more.
+
+Each note distinguishes measured claims from invented ones. Where no published study exists (for example, acoustics of the Kansas City underground), the Field Notes say so. That honesty is part of what the imprint stands for.
+
+The Analysis Chamber goes further: an interactive research archive where readers can run the same measurements the characters run in the novels. It is unusual for a fiction list to ship with a reproducible methods layer; Seventh City Press treats that layer as part of the catalog, not a marketing afterthought.
+
+Start with the Field Notes hub, then follow links from any Masters X volume page.`,
+    link: "https://jasoncholloway.com/field-notes/",
+    imageConcept: "Open field notebook on a desk with map fragment of Kansas City river bluff, pen, reading glasses, documentary still life (no legible notebook text)."
+  },
+  {
+    num: 9,
+    title: "Press desk and review copies",
+    headline: "Press kit, ISBNs, and review copies — Seventh City Press communications desk.",
+    body: `Booksellers, librarians, reviewers, and journalists can find complete press materials for the Masters X Trilogy at seventhcitypress.com.
+
+The downloadable press kit includes a full release, fact sheet with fourteen active ISBNs and BISAC codes, author bios in four lengths, and series synopses. Cover art for all three volumes and the omnibus is available for catalog use. Review copies and interview requests are handled through the imprint contact form.
+
+Seventh City Press distributes hardcover and paperback globally through IngramSpark, with Kindle editions on Amazon and EPUB on Google Play Books. The Hawkes monograph shares the same trade infrastructure.
+
+The name Seventh City Press refers to the seven cities of the Aldric tradition in the Masters X fiction. The imprint's real address is Kansas City, Missouri, where the trilogy is sited and where Holloway lives and writes.`,
+    link: "https://seventhcitypress.com/",
+    imageConcept: "Flat lay of press kit PDF on tablet, trilogy paperback covers fanned beside it, \"FOR IMMEDIATE RELEASE\" visible on screen only if legible, professional desk lighting."
+  }
+];
+
+const approvals = {};
+POSTS.forEach(p => approvals[p.num] = "pending");
+
+function escapeHtml(t) {
+  return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+}
+
+function renderPost(p) {
+  return `
+<div class="post" id="post-${p.num}" data-post="${p.num}">
+  <div class="post-header">
+    <div>
+      <h2><span class="post-num">POST ${p.num}</span> ${escapeHtml(p.title)}</h2>
+    </div>
+    <div class="approval-controls">
+      <button class="btn-approve" onclick="setApproval(${p.num},'approved')">Approve</button>
+      <button class="btn-reject" onclick="setApproval(${p.num},'rejected')">Reject</button>
+      <span class="status-label" id="status-${p.num}">PENDING</span>
+    </div>
+  </div>
+  <div class="post-body">
+    <div class="field-label">Headline</div>
+    <div class="headline-block">${escapeHtml(p.headline)}</div>
+    <div class="field-label">Body</div>
+    <div class="body-block">${escapeHtml(p.body)}</div>
+    <div class="field-label">Link</div>
+    <div class="link-block"><a href="${escapeHtml(p.link)}" target="_blank" rel="noopener">${escapeHtml(p.link)}</a></div>
+    <div class="field-label">Image concept</div>
+    <div class="image-concept">${escapeHtml(p.imageConcept)}</div>
+  </div>
+</div>`;
+}
+
+function updateCounts() {
+  const vals = Object.values(approvals);
+  const approved = vals.filter(v => v === "approved").length;
+  const pending = vals.filter(v => v === "pending").length;
+  const rejected = vals.filter(v => v === "rejected").length;
+  document.getElementById("count-approved").textContent = approved + " Approved";
+  document.getElementById("count-pending").textContent = pending + " Pending";
+  document.getElementById("count-rejected").textContent = rejected + " Rejected";
+  const gate = document.getElementById("gate-message");
+  if (approved === POSTS.length) {
+    gate.textContent = "All 9 posts approved — ready to publish via Outstand (account IwQhX).";
+    gate.classList.add("ready");
+  } else if (rejected > 0) {
+    gate.textContent = "Do not post — " + rejected + " post(s) rejected. Revise in SOCIAL_SCP_FACEBOOK_CATALOG.md.";
+    gate.classList.remove("ready");
+  } else {
+    gate.textContent = "Do not post until all 9 posts are approved (" + approved + "/" + POSTS.length + " so far).";
+    gate.classList.remove("ready");
+  }
+}
+
+function setApproval(num, status) {
+  approvals[num] = status;
+  const label = document.getElementById("status-" + num);
+  const colors = { approved: "var(--approve)", rejected: "var(--reject)", pending: "var(--pending)" };
+  label.textContent = status.toUpperCase();
+  label.style.color = colors[status];
+  label.style.borderColor = colors[status];
+  const post = document.getElementById("post-" + num);
+  post.style.borderColor = status === "approved" ? "var(--approve)" : status === "rejected" ? "var(--reject)" : "var(--border)";
+  updateCounts();
+  localStorage.setItem("scp-fb-approvals", JSON.stringify(approvals));
+}
+
+function exportApprovals() {
+  const lines = POSTS.map(p => "Post " + p.num + ": " + p.title + " — " + approvals[p.num].toUpperCase());
+  const dels = [1,2,3,4,5,6,7].map(n => {
+    const cb = document.getElementById("del-" + n);
+    return "Delete essay post " + n + ": " + (cb.checked ? "DONE" : "PENDING");
+  });
+  const text = "Seventh City Press Facebook Catalog Approvals\n" + new Date().toISOString() + "\n\n" +
+    lines.join("\n") + "\n\nManual deletion checklist:\n" + dels.join("\n");
+  const blob = new Blob([text], { type: "text/plain" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "scp-facebook-approvals.txt";
+  a.click();
+}
+
+function initDeletionChecklist() {
+  const saved = localStorage.getItem("scp-fb-deletions");
+  if (saved) {
+    try {
+      const state = JSON.parse(saved);
+      [1,2,3,4,5,6,7].forEach(n => {
+        const cb = document.getElementById("del-" + n);
+        if (cb && state[n]) cb.checked = true;
+      });
+    } catch {}
+  }
+  [1,2,3,4,5,6,7].forEach(n => {
+    document.getElementById("del-" + n).addEventListener("change", () => {
+      const state = {};
+      [1,2,3,4,5,6,7].forEach(i => {
+        state[i] = document.getElementById("del-" + i).checked;
+      });
+      localStorage.setItem("scp-fb-deletions", JSON.stringify(state));
+    });
+  });
+}
+
+function init() {
+  const saved = localStorage.getItem("scp-fb-approvals");
+  if (saved) { try { Object.assign(approvals, JSON.parse(saved)); } catch {} }
+  document.getElementById("posts").innerHTML = POSTS.map(renderPost).join("");
+  POSTS.forEach(p => { if (approvals[p.num] !== "pending") setApproval(p.num, approvals[p.num]); });
+  initDeletionChecklist();
+  updateCounts();
+}
+
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+{
+  "started_at": "2026-07-27T22:10:20.883575+00:00",
+  "overnight": [
+    {
+      "id": "2081665359384322092",
+      "url": "https://x.com/jasonhollowaykc/status/2081665359384322092",
+      "ok": false,
+      "steps": [
+        "caret fail: Locator.click: Timeout 8000ms exceeded.\nCall log:\n  - waiting for locator(\"article[data-testid=\\\"tweet\\\"]\").first.locator(\"[data-testid=\\\"caret\\\"]\").first\n    - locator resolved to <button role=\"button\" type=\"button\" aria-label=\"More\" data-testid=\"caret\" aria-haspopup=\"menu\" aria-expanded=\"false\" class=\"css-175oi2r r-1777fci r-bt1l66 r-bztko3 r-lrvibr r-1loqt21 r-1ny4l3l\">\u2026</button>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-testid=\"mask\" class=\"css-175oi2r r-1p0dtai r-1d2f490 r-1xcajam r-zchlnj r-ipm5af r-1ffj0ar\"></div> from <div id=\"layers\" class=\"r-zchlnj r-1d2f490 r-u8s1d r-ipm5af\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is visible, enabled and stable\n      - scrolling into view if needed\n      - done scrolling\n      - <div data-testid=\"mask\" class=\"css-175oi2r r-1p0dtai r-1d2f490 r-1xcajam r-zchlnj r-ipm5af r-1ffj0ar\"></div> from <div id=\"layers\" class=\"r-zchlnj r-1d2f490 r-u8s1d r-ipm5af\">\u2026</div> subtree intercepts pointer events\n    - retrying click action\n      - waiting 100ms\n    12 \u00d7 waiting for element to be visible, enabled and stable\n       - element is visible, enabled and stable\n       - scrolling into view if needed\n       - done scrolling\n       - <div data-testid=\"mask\" class=\"css-175oi2r r-1p0dtai r-1d2f490 r-1xcajam r-zchlnj r-ipm5af r-1ffj0ar\"></div> from <div id=\"layers\" class=\"r-zchlnj r-1d2f490 r-u8s1d r-ipm5af\">\u2026</div> subtree intercepts pointer events\n     - retrying click action\n       - waiting 500ms\n"
+      ],
+      "screenshot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-caret-fail-2081665359384322092.png"
+    },
+    {
+      "id": "2081665395551793634",
+      "url": "https://x.com/jasonhollowaykc/status/2081665395551793634",
+      "ok": true,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]",
+        "assumed deleted after confirm"
+      ]
+    },
+    {
+      "id": "2081665432956654036",
+      "url": "https://x.com/jasonhollowaykc/status/2081665432956654036",
+      "ok": false,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]"
+      ],
+      "screenshot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-still-live-2081665432956654036.png"
+    },
+    {
+      "id": "2081665475252047990",
+      "url": "https://x.com/jasonhollowaykc/status/2081665475252047990",
+      "ok": false,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]"
+      ],
+      "screenshot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-still-live-2081665475252047990.png"
+    },
+    {
+      "id": "2081665510857445747",
+      "url": "https://x.com/jasonhollowaykc/status/2081665510857445747",
+      "ok": false,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]"
+      ],
+      "screenshot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-still-live-2081665510857445747.png"
+    },
+    {
+      "id": "2081665544374128758",
+      "url": "https://x.com/jasonhollowaykc/status/2081665544374128758",
+      "ok": true,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]",
+        "assumed deleted after confirm"
+      ]
+    },
+    {
+      "id": "2081665579501449552",
+      "url": "https://x.com/jasonhollowaykc/status/2081665579501449552",
+      "ok": false,
+      "steps": [
+        "opened caret",
+        "clicked Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirmed via [data-testid=\"confirmationSheetConfirm\"]"
+      ],
+      "screenshot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-still-live-2081665579501449552.png"
+    }
+  ],
+  "login_ok": true,
+  "profile_snapshot": null,
+  "profile_after_shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-profile-after.png",
+  "visible_tweet_previews": [
+    "Every page of the Distribution File in my trilogy carries the same footer: f = 111.2 Hz.\n\nThe number is fiction. The stone under it isn't.\n\nArchaeoacousticians ",
+    "Every page of the Distribution File in my trilogy carries the same footer: f = 111.2 Hz.\n\nThe number is fiction. The stone under it isn't.\n\nArchaeoacousticians ",
+    "My conspiracy trilogy ends with a license.\n\nNot a chamber stormed, not a patriarch unmasked. A 247-page file goes onto the open internet at midnight under CC0, ",
+    "In 1984, American intelligence translated a Chinese government journal on paranormal research and filed the translation.\n\nTwo governments, one subject, opposite"
+  ],
+  "finished_at": "2026-07-27T22:19:38.346897+00:00",
+  "deleted_ok": 2,
+  "deleted_fail": 5
+}

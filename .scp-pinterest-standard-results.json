@@ -1,0 +1,229 @@
+{
+  "started_at": "2026-07-28T03:25:26.965915+00:00",
+  "posts": [
+    {
+      "label": "Bluesky 1",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohm3ovfi2n",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohm3ovfi2n",
+      "rkey": "3mrohm3ovfi2n"
+    },
+    {
+      "label": "Bluesky 2",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohm5hm5b2g",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohm5hm5b2g",
+      "rkey": "3mrohm5hm5b2g"
+    },
+    {
+      "label": "Bluesky 3",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohm7c3wa2n",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohm7c3wa2n",
+      "rkey": "3mrohm7c3wa2n"
+    },
+    {
+      "label": "Bluesky 4",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohmaxdkv27",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohmaxdkv27",
+      "rkey": "3mrohmaxdkv27"
+    },
+    {
+      "label": "Bluesky 5",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohmcshdo2u",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohmcshdo2u",
+      "rkey": "3mrohmcshdo2u"
+    },
+    {
+      "label": "Bluesky 6",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohmemehb2g",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohmemehb2g",
+      "rkey": "3mrohmemehb2g"
+    },
+    {
+      "label": "Bluesky 7",
+      "success": true,
+      "url": "https://bsky.app/profile/seventhcitypress.bsky.social/post/3mrohmgdpwr2g",
+      "uri": "at://did:plc:3sihllsqld5rvvlt47v33swz/app.bsky.feed.post/3mrohmgdpwr2g",
+      "rkey": "3mrohmgdpwr2g"
+    },
+    {
+      "label": "FB SCP 1",
+      "success": true,
+      "post_id": "Sk3R6",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216033409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 2",
+      "success": true,
+      "post_id": "BKlJJ",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216069409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 3",
+      "success": true,
+      "post_id": "jJSY6",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216159409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 4",
+      "success": true,
+      "post_id": "8eXKQ",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216297409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 5",
+      "success": true,
+      "post_id": "ei4yS",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216465409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 6",
+      "success": true,
+      "post_id": "ilnSh",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100216729409612",
+      "error": null
+    },
+    {
+      "label": "FB SCP 7",
+      "success": true,
+      "post_id": "3Uh57",
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122100217041409612",
+      "error": null
+    }
+  ],
+  "dry_run": false,
+  "bluesky_deleted": [
+    {
+      "rkey": "3mrmjn4n5e52e",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "rkey": "3mrmjmom5lt2p",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "rkey": "3mrmjmb54nk27",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "rkey": "3mrmjlsofz227",
+      "status": 200,
+      "ok": true
+    },
+    {
+      "rkey": "3mrmjlec57y2h",
+      "status": 200,
+      "ok": true
+    }
+  ],
+  "fb_outstand_delete": [
+    {
+      "id": "eelyr",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "jjhw2",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "TTFC1",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "ggrXx",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "yykSj",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "OOXgv",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "FF7CZ",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "XIGoe",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "Q9W6y",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "1TQbG",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "EuhaA",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "jyzq2",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "XI1De",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    },
+    {
+      "id": "CMSdF",
+      "remote": 404,
+      "body": "404 Not Found",
+      "local": 200
+    }
+  ],
+  "finished_at": "2026-07-28T03:27:38.779293+00:00",
+  "summary": {
+    "ok": 14,
+    "total": 14
+  }
+}

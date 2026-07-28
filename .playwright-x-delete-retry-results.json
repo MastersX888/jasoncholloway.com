@@ -1,0 +1,72 @@
+{
+  "started_at": "2026-07-27T22:25:02.302761+00:00",
+  "results": [
+    {
+      "id": "2081665359384322092",
+      "url": "https://x.com/jasonhollowaykc/status/2081665359384322092",
+      "ok": true,
+      "steps": [
+        "caret force-click",
+        "Delete via [data-testid=\"Dropdown\"] [role=\"menuitem\"]:has-text(\"Delete\")",
+        "confirm [data-testid=\"confirmationSheetConfirm\"]"
+      ]
+    },
+    {
+      "id": "2081665395551793634",
+      "url": "https://x.com/jasonhollowaykc/status/2081665395551793634",
+      "ok": false,
+      "steps": [
+        "caret fail: Locator.wait_for: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"article[data-testid=\\\"tweet\\\"]\").first to be visible\n"
+      ],
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-retry-caret-2081665395551793634.png"
+    },
+    {
+      "id": "2081665432956654036",
+      "url": "https://x.com/jasonhollowaykc/status/2081665432956654036",
+      "ok": true,
+      "steps": [
+        "already gone"
+      ],
+      "already_gone": true
+    },
+    {
+      "id": "2081665475252047990",
+      "url": "https://x.com/jasonhollowaykc/status/2081665475252047990",
+      "ok": false,
+      "steps": [
+        "caret fail: Locator.wait_for: Timeout 15000ms exceeded.\nCall log:\n  - waiting for locator(\"article[data-testid=\\\"tweet\\\"]\").first to be visible\n"
+      ],
+      "shot": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-x-retry-caret-2081665475252047990.png"
+    },
+    {
+      "id": "2081665510857445747",
+      "url": "https://x.com/jasonhollowaykc/status/2081665510857445747",
+      "ok": true,
+      "steps": [
+        "already gone"
+      ],
+      "already_gone": true
+    },
+    {
+      "id": "2081665544374128758",
+      "url": "https://x.com/jasonhollowaykc/status/2081665544374128758",
+      "ok": true,
+      "steps": [
+        "already gone"
+      ],
+      "already_gone": true
+    },
+    {
+      "id": "2081665579501449552",
+      "url": "https://x.com/jasonhollowaykc/status/2081665579501449552",
+      "ok": true,
+      "steps": [
+        "already gone"
+      ],
+      "already_gone": true
+    }
+  ],
+  "finished_at": "2026-07-27T22:29:59.612517+00:00",
+  "gone": 5,
+  "live": 2
+}

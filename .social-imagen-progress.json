@@ -1,0 +1,347 @@
+{
+  "completed": {
+    "slot1-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:23:33.352Z"
+    },
+    "slot1-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:25:32.888Z"
+    },
+    "slot1-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:25:48.737Z"
+    },
+    "slot1-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:26:02.334Z"
+    },
+    "slot1-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:26:20.111Z"
+    },
+    "slot1-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\ig-slot1-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\ig-slot1-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:26:39.576Z"
+    },
+    "slot1-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\slot1-frequency-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot1\\slot1-frequency-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:26:59.685Z"
+    },
+    "slot1-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot1\\pinterest-slot1-frequency.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot1-frequency.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:27:14.065Z"
+    },
+    "slot2-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:27:25.794Z"
+    },
+    "slot2-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:27:39.056Z"
+    },
+    "slot2-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:27:50.964Z"
+    },
+    "slot2-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:28:05.683Z"
+    },
+    "slot2-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:28:17.840Z"
+    },
+    "slot2-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\ig-slot2-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\ig-slot2-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:28:29.717Z"
+    },
+    "slot2-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\slot2-cymatics-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot2\\slot2-cymatics-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:28:40.698Z"
+    },
+    "slot2-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot2\\pinterest-slot2-cymatics.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot2-cymatics.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:28:52.133Z"
+    },
+    "slot3-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:29:03.049Z"
+    },
+    "slot3-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:29:14.177Z"
+    },
+    "slot3-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:29:26.888Z"
+    },
+    "slot3-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:29:40.991Z"
+    },
+    "slot3-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:29:58.576Z"
+    },
+    "slot3-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:30:19.790Z"
+    },
+    "slot3-ig-slide07": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\ig-slot3-slide07.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\ig-slot3-slide07.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:30:37.904Z"
+    },
+    "slot3-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\slot3-kansas-city-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot3\\slot3-kansas-city-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:30:58.337Z"
+    },
+    "slot3-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot3\\pinterest-slot3-kansas-city.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot3-kansas-city.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:31:21.327Z"
+    },
+    "slot4-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:31:44.947Z"
+    },
+    "slot4-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:32:13.898Z"
+    },
+    "slot4-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:32:30.446Z"
+    },
+    "slot4-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:33:08.103Z"
+    },
+    "slot4-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:33:22.722Z"
+    },
+    "slot4-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\ig-slot4-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\ig-slot4-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:33:42.633Z"
+    },
+    "slot4-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\slot4-ars-notoria-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot4\\slot4-ars-notoria-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:34:24.327Z"
+    },
+    "slot4-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot4\\pinterest-slot4-ars-notoria.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot4-ars-notoria.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:34:42.341Z"
+    },
+    "slot5-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:35:02.282Z"
+    },
+    "slot5-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:35:20.234Z"
+    },
+    "slot5-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:35:38.733Z"
+    },
+    "slot5-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:35:56.629Z"
+    },
+    "slot5-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:36:26.212Z"
+    },
+    "slot5-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\ig-slot5-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\ig-slot5-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:37:09.789Z"
+    },
+    "slot5-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\slot5-stone-remembers-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot5\\slot5-stone-remembers-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:38:24.913Z"
+    },
+    "slot5-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot5\\pinterest-slot5-stone-remembers.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot5-stone-remembers.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:38:38.013Z"
+    },
+    "slot6-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:39:04.206Z"
+    },
+    "slot6-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:39:38.567Z"
+    },
+    "slot6-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:40:10.152Z"
+    },
+    "slot6-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:40:23.271Z"
+    },
+    "slot6-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:40:34.555Z"
+    },
+    "slot6-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\ig-slot6-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\ig-slot6-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:41:13.194Z"
+    },
+    "slot6-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\slot6-three-factions-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot6\\slot6-three-factions-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:41:31.152Z"
+    },
+    "slot6-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot6\\pinterest-slot6-three-factions.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot6-three-factions.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:41:52.589Z"
+    },
+    "slot7-ig-slide03": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide03.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide03.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:42:34.385Z"
+    },
+    "slot7-ig-slide04": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide04.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide04.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:42:46.622Z"
+    },
+    "slot7-ig-slide05": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide05.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide05.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T05:43:02.512Z"
+    },
+    "slot7-ig-slide06-placeholder": "removed",
+    "slot7-ig-slide01": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide01.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide01.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T07:41:39.588Z"
+    },
+    "slot7-ig-slide02": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide02.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide02.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T07:41:53.982Z"
+    },
+    "slot7-ig-slide06": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\ig-slot7-slide06.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\ig-slot7-slide06.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T07:42:21.225Z"
+    },
+    "slot7-hero-xfb": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\slot7-unreleased-hero.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\slot7\\slot7-unreleased-hero.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T07:42:34.875Z"
+    },
+    "slot7-pinterest": {
+      "path": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\public\\social\\imagen\\slot7\\pinterest-slot7-unreleased.png",
+      "desktop": "C:\\Users\\zh577\\Desktop\\social-imagen\\pinterest\\pinterest-slot7-unreleased.png",
+      "model": "gemini-2.5-flash-image",
+      "generatedAt": "2026-07-26T07:43:09.016Z"
+    }
+  }
+}

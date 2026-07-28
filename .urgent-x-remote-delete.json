@@ -1,0 +1,509 @@
+{
+  "accounts": {
+    "success": true,
+    "data": [
+      {
+        "id": "IwQhX",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "Seventh City Press",
+        "network": "facebook",
+        "username": "Seventh City Press",
+        "profile_picture_url": "https://scontent-zrh1-1.xx.fbcdn.net/v/t39.30808-1/752534129_122094330279291296_2934035874748235821_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=105&ccb=1-7&_nc_sid=f907e8&_nc_ohc=m-gkHyy9RXYQ7kNvwHktz2R&_nc_oc=AdoSXIte1gaN5Me96pySDHQvf_81dsLRQb-6dlIYrYoIKt0stmm7yoDQyw8x0C15ov0&_nc_zt=24&_nc_ht=scontent-zrh1-1.xx&edm=AJdBtusEAAAA&_nc_gid=AxDMVKaFVmEIZKZyFIYkpQ&_nc_tpa=Q5bMBQEMVa2QglzwsNjL_kxwi7hJS9JKtWiHsfYiAp9xh3zGJ1-PfhiHEuHseruuF-EntYo1JEOsS-gZMQ&oh=00_AQCXMCjWDC8gbJNdITYyLjnJpVFyaZjt1OI4T0crnqYWEA&oe=6A6C6C34",
+        "network_unique_id": "1172985912572281",
+        "customer_social_network_id": 9748,
+        "accountType": "page",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:18:13.129Z"
+      },
+      {
+        "id": "7BvrW",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "Jason Carroll Holloway",
+        "network": "facebook",
+        "username": "Jason Carroll Holloway",
+        "profile_picture_url": "https://scontent-zrh1-1.xx.fbcdn.net/v/t39.30808-1/754555073_122094445041291296_8871100313845590851_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=110&ccb=1-7&_nc_sid=f907e8&_nc_ohc=PI5A9vYBhbAQ7kNvwFpNrxb&_nc_oc=AdrgmpS5YJVBjsn7xLpdHKNxd8PyVdvoJ0ZZKNKQ6A-BXQv3CpnuZ7P7vIeu7Huew5g&_nc_zt=24&_nc_ht=scontent-zrh1-1.xx&edm=AJdBtusEAAAA&_nc_gid=5kHEZqft-hHx8RjJB0Q41Q&_nc_tpa=Q5bMBQECc4RxyFhLRLMAg-LLnzwgyvcxg0KUq0QOR3Qx34ILoQcls6VkY22Tcult9fj5mGug67WMccVWhg&oh=00_AQD3Nb_KpU_MmyS8vyFm0BbK36YImrz7iwPtJrMIRxzqIg&oe=6A6C654F",
+        "network_unique_id": "1224164874114610",
+        "customer_social_network_id": 9748,
+        "accountType": "page",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:18:13.015Z"
+      },
+      {
+        "id": "jaHn2",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "x",
+        "network": "x",
+        "username": "jasonhollowaykc",
+        "profile_picture_url": "https://pbs.twimg.com/profile_images/2080138617582755841/jjm5dMh9_normal.png",
+        "network_unique_id": "1903730910329012224",
+        "customer_social_network_id": 9782,
+        "accountType": "personal",
+        "isActive": 1,
+        "createdAt": "2026-07-27T06:28:32.077Z"
+      },
+      {
+        "id": "1vWPG",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "jasonhollowaykc",
+        "network": "instagram",
+        "username": "jasonhollowaykc",
+        "profile_picture_url": "https://scontent-zrh1-1.cdninstagram.com/v/t51.82787-19/724247265_18129223750552327_6175889727408361787_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=100&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDI0LkMzIn0%3D&_nc_ohc=lQiHtl-q5pkQ7kNvwFqBdkX&_nc_oc=AdoqIcCwm70xHu8fu-NJbJbYGzl_UAMvtvhX_R3V9OHf6C9aLyej3PpjwmnP_GZqjm4&_nc_zt=24&_nc_ht=scontent-zrh1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_gid=TlKNSuvDy8XAobL8LxQHYg&_nc_tpa=Q5bMBQHyXE7trPhLikXk8e9ZHoybAzcMsPIbFAw7zzQtduh_M3IFRuvK4taVqZV1OFN6mIOXjEdrJeNf&oh=00_AQAPMd-slWJ13j1b1tpyqtHwHO3hIEXYikxSVqFuyMjxaQ&oe=6A6C89E4",
+        "network_unique_id": "27770497409284030",
+        "customer_social_network_id": 9747,
+        "accountType": "personal",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:01:45.558Z"
+      },
+      {
+        "id": "pxPfM",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "SeventhCityPress",
+        "network": "pinterest",
+        "username": "SeventhCityPress",
+        "profile_picture_url": "https://i.pinimg.com/600x600_R/40/9f/24/409f247c7f6ae7bed40a85c276cc257c.jpg",
+        "network_unique_id": "SeventhCityPress",
+        "customer_social_network_id": 9751,
+        "accountType": "personal",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:08:34.561Z"
+      },
+      {
+        "id": "4RSwi",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "bluesky",
+        "network": "bluesky",
+        "username": "seventhcitypress.bsky.social",
+        "profile_picture_url": "https://cdn.bsky.app/img/avatar/plain/did:plc:3sihllsqld5rvvlt47v33swz/bafkreigg6qi6qfaunaufl3syz2vajxdlfwvtozo3rmv6yzyql7lqp5dbwu",
+        "network_unique_id": "did:plc:3sihllsqld5rvvlt47v33swz",
+        "customer_social_network_id": 9749,
+        "accountType": "personal",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:16:53.444Z"
+      },
+      {
+        "id": "J15V3",
+        "orgId": "D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0",
+        "tenant_id": null,
+        "nickname": "bluesky",
+        "network": "bluesky",
+        "username": "jasonhollowaykc.bsky.social",
+        "profile_picture_url": "https://cdn.bsky.app/img/avatar/plain/did:plc:7edaxfuf3jrzxecuf7zgcsch/bafkreihpga7idospynwy4tfzpulzs26mfckyql6kcavrvkmwro7m4g4uku",
+        "network_unique_id": "did:plc:7edaxfuf3jrzxecuf7zgcsch",
+        "customer_social_network_id": 9749,
+        "accountType": "personal",
+        "isActive": 1,
+        "createdAt": "2026-07-26T06:14:59.521Z"
+      }
+    ],
+    "count": 7,
+    "total": 7,
+    "limit": 50,
+    "offset": 0
+  },
+  "posts_after_cancel": [],
+  "remote_deletes": [
+    {
+      "tweet": [
+        "VV1JN",
+        "2081665359384322092"
+      ],
+      "ok": false,
+      "attempts": [
+        {
+          "method": "DELETE",
+          "path": "/posts/delete-remote",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "accountId": "jaHn2"
+          },
+          "status": 500,
+          "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+        },
+        {
+          "method": "DELETE",
+          "path": "/posts/delete-remote",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "socialAccountId": "jaHn2"
+          },
+          "status": 500,
+          "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+        },
+        {
+          "method": "DELETE",
+          "path": "/posts/delete-remote",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "accountId": "jaHn2",
+            "network": "x"
+          },
+          "status": 500,
+          "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+        },
+        {
+          "method": "DELETE",
+          "path": "/posts/delete-remote",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "accountId": "jaHn2",
+            "network": "twitter"
+          },
+          "status": 500,
+          "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+        },
+        {
+          "method": "POST",
+          "path": "/posts/delete-remote",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "accountId": "jaHn2"
+          },
+          "status": 404,
+          "text": "404 Not Found"
+        },
+        {
+          "method": "DELETE",
+          "path": "/posts/VV1JN/remote",
+          "body": {},
+          "status": 404,
+          "text": "{\"success\":false,\"error\":\"Post not found\"}"
+        },
+        {
+          "method": "POST",
+          "path": "/posts/VV1JN/delete-remote",
+          "body": {},
+          "status": 404,
+          "text": "404 Not Found"
+        },
+        {
+          "method": "DELETE",
+          "path": "/social-accounts/jaHn2/posts/2081665359384322092",
+          "body": {},
+          "status": 404,
+          "text": "404 Not Found"
+        },
+        {
+          "method": "DELETE",
+          "path": "/posts/remote/2081665359384322092",
+          "body": {
+            "accountId": "jaHn2"
+          },
+          "status": 404,
+          "text": "404 Not Found"
+        },
+        {
+          "method": "POST",
+          "path": "/posts/remote/delete",
+          "body": {
+            "platformPostId": "2081665359384322092",
+            "accountId": "jaHn2"
+          },
+          "status": 404,
+          "text": "404 Not Found"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665359384322092",
+      "body": {
+        "platformPostId": "2081665359384322092",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665359384322092",
+      "body": {
+        "platformPostId": "2081665359384322092",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665395551793634",
+      "body": {
+        "platformPostId": "2081665395551793634",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665395551793634",
+      "body": {
+        "platformPostId": "2081665395551793634",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665432956654036",
+      "body": {
+        "platformPostId": "2081665432956654036",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665432956654036",
+      "body": {
+        "platformPostId": "2081665432956654036",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665475252047990",
+      "body": {
+        "platformPostId": "2081665475252047990",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665475252047990",
+      "body": {
+        "platformPostId": "2081665475252047990",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665510857445747",
+      "body": {
+        "platformPostId": "2081665510857445747",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665510857445747",
+      "body": {
+        "platformPostId": "2081665510857445747",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665544374128758",
+      "body": {
+        "platformPostId": "2081665544374128758",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665544374128758",
+      "body": {
+        "platformPostId": "2081665544374128758",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665579501449552",
+      "body": {
+        "platformPostId": "2081665579501449552",
+        "accountId": "jaHn2"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    },
+    {
+      "tweet_id": "2081665579501449552",
+      "body": {
+        "platformPostId": "2081665579501449552",
+        "socialAccountId": "jaHn2",
+        "network": "x"
+      },
+      "status": 500,
+      "text": "{\"success\":false,\"error\":\"Internal server error\"}"
+    }
+  ],
+  "live_checks": [
+    {
+      "tweet_id": "2081665359384322092",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665359384322092",
+          "status": 200,
+          "len": 104662,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"C0uwz8xfz/0Kli6DJVn2Fg==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665359384322092&lang=en&token=1",
+          "status": 200,
+          "len": 7335,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"created_at\":\"2026-07-27T08:57:51.000Z\",\"display_text_range\":[0,278],\"entities\":{},\"id_str\":\"2081665359384322092\",\"text\":\"Every page of the Distrib"
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665359384322092",
+          "status": 200,
+          "len": 1054,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665359384322092\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665395551793634",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665395551793634",
+          "status": 200,
+          "len": 102432,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"7iAp+jc1hUQSpCLo1vrALw==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665395551793634&lang=en&token=1",
+          "status": 200,
+          "len": 7473,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"possibly_sensitive\":false,\"created_at\":\"2026-07-27T08:58:00.000Z\",\"display_text_range\":[0,269],\"entities\":{\"urls\":[{\"display_url\":\"jasoncholloway."
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665395551793634",
+          "status": 200,
+          "len": 1105,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665395551793634\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665432956654036",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665432956654036",
+          "status": 200,
+          "len": 104461,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"FOeZOLpAqj9vsQpMsqKiWg==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665432956654036&lang=en&token=1",
+          "status": 200,
+          "len": 7318,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"created_at\":\"2026-07-27T08:58:09.000Z\",\"display_text_range\":[0,263],\"entities\":{},\"id_str\":\"2081665432956654036\",\"text\":\"I set a conspiracy trilog"
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665432956654036",
+          "status": 200,
+          "len": 1009,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665432956654036\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665475252047990",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665475252047990",
+          "status": 200,
+          "len": 104605,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"FHot1l4bbcm3Dd7yEC0GyQ==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665475252047990&lang=en&token=1",
+          "status": 200,
+          "len": 7336,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"created_at\":\"2026-07-27T08:58:19.000Z\",\"display_text_range\":[0,279],\"entities\":{},\"id_str\":\"2081665475252047990\",\"text\":\"The medieval Church conde"
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665475252047990",
+          "status": 200,
+          "len": 1051,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665475252047990\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665510857445747",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665510857445747",
+          "status": 200,
+          "len": 104676,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"vfXVgvzoKD1ph57cdL3keA==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665510857445747&lang=en&token=1",
+          "status": 200,
+          "len": 7339,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"created_at\":\"2026-07-27T08:58:27.000Z\",\"display_text_range\":[0,280],\"entities\":{},\"id_str\":\"2081665510857445747\",\"text\":\"In 2011 a Kansas City chu"
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665510857445747",
+          "status": 200,
+          "len": 1062,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665510857445747\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665544374128758",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665544374128758",
+          "status": 200,
+          "len": 104570,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"54VTCTkjHRscrrPpe5zwKA==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665544374128758&lang=en&token=1",
+          "status": 200,
+          "len": 7337,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"created_at\":\"2026-07-27T08:58:35.000Z\",\"display_text_range\":[0,280],\"entities\":{},\"id_str\":\"2081665544374128758\",\"text\":\"In 1984, American intelli"
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665544374128758",
+          "status": 200,
+          "len": 1052,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665544374128758\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    },
+    {
+      "tweet_id": "2081665579501449552",
+      "checks": [
+        {
+          "url": "https://x.com/i/status/2081665579501449552",
+          "status": 200,
+          "len": 101969,
+          "snippet": "<!DOCTYPE html><html lang=\"en\" dir=\"ltr\" data-app-env=\"prod\" data-app-version=\"6a95da9bc7f7f7ceb3f75e1b284933abb14db8d0\"><head><meta charSet=\"utf-8\" nonce=\"YIpQuklUjBEGhGBUNU2f7A==\"/><meta name=\"viewp"
+        },
+        {
+          "url": "https://cdn.syndication.twimg.com/tweet-result?id=2081665579501449552&lang=en&token=1",
+          "status": 200,
+          "len": 7444,
+          "snippet": "{\"__typename\":\"Tweet\",\"favorite_count\":0,\"lang\":\"en\",\"possibly_sensitive\":false,\"created_at\":\"2026-07-27T08:58:44.000Z\",\"display_text_range\":[0,232],\"entities\":{\"urls\":[{\"display_url\":\"jasoncholloway."
+        },
+        {
+          "url": "https://publish.twitter.com/oembed?url=https://x.com/jasonhollowaykc/status/2081665579501449552",
+          "status": 200,
+          "len": 1042,
+          "snippet": "{\"url\":\"https:\\/\\/x.com\\/jasonhollowaykc\\/status\\/2081665579501449552\",\"author_name\":\"Jason Carroll Holloway\",\"author_url\":\"https:\\/\\/x.com\\/jasonhollowaykc\",\"html\":\"\\u003Cblockquote class=\\\"twitter-t"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+  "fetched": 43,
+  "counts": {
+    "ig": 7,
+    "fb_author": 7,
+    "fb_scp": 7,
+    "pinterest": 7,
+    "x": 7
+  },
+  "ig": {
+    "keep": [
+      {
+        "id": "corML",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSNYbojjaz/",
+        "shortcode": "DbSNYbojjaz",
+        "platformPostId": "18096722657197964",
+        "publishedAt": "2026-07-27T05:25:56.204Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot7-slide01.jpg",
+          "ig-slot7-slide02.jpg",
+          "ig-slot7-slide03.jpg",
+          "ig-slot7-slide04.jpg",
+          "ig-slot7-slide05.jpg",
+          "ig-slot7-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/75f83f97-f140-4cdc-b3ab-a99c502467d6/ig-slot7-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9c8608a3-2da5-4d7a-b57e-923fe42b56f1/ig-slot7-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/41c84e25-18d6-4243-a164-f98bb092834c/ig-slot7-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/982b912c-9b89-4af8-8332-70ea5e52f3b5/ig-slot7-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/8592ebc2-e6bf-4dba-9fdd-c2528f971045/ig-slot7-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/debe4543-ad9f-4e49-8f9f-8bcfd5d4749d/ig-slot7-slide06.jpg"
+        ],
+        "snippet": "The trilogy ends with a license.  Two hundred forty-seven pages go onto the open",
+        "error": null
+      },
+      {
+        "id": "4rGvi",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSNLAfDYgS/",
+        "shortcode": "DbSNLAfDYgS",
+        "platformPostId": "18334079551283210",
+        "publishedAt": "2026-07-27T05:24:05.384Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot6-slide01.jpg",
+          "ig-slot6-slide02.jpg",
+          "ig-slot6-slide03.jpg",
+          "ig-slot6-slide04.jpg",
+          "ig-slot6-slide05.jpg",
+          "ig-slot6-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/dcfb24ec-37a0-4d33-bdda-5736a383a2f4/ig-slot6-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/f80c427d-c2ed-4d93-8d5b-cdf9159464fd/ig-slot6-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/8f38e7bc-10bb-44b2-92d2-f9c8accd0309/ig-slot6-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/742c8312-1920-4c5f-b058-ffc378ab0119/ig-slot6-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/405eb269-bd98-4b4b-a8ca-a2ff4f530b87/ig-slot6-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e1385c4a-78a3-4e21-9835-41f684c2eb8b/ig-slot6-slide06.jpg"
+        ],
+        "snippet": "One government published. The other classified the act of reading.  In 1984 Amer",
+        "error": null
+      },
+      {
+        "id": "2jWCS",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSM_o4CMVJ/",
+        "shortcode": "DbSM_o4CMVJ",
+        "platformPostId": "18088271027406154",
+        "publishedAt": "2026-07-27T05:22:30.820Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot5-slide01.jpg",
+          "ig-slot5-slide02.jpg",
+          "ig-slot5-slide03.jpg",
+          "ig-slot5-slide04.jpg",
+          "ig-slot5-slide05.jpg",
+          "ig-slot5-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/b0d34358-646d-42ed-ad76-6e78f88e29d5/ig-slot5-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/ae6670ca-64d1-4c71-bd2b-ca59b219121e/ig-slot5-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/41df3a7d-bbaf-4982-9bdd-b08c99982267/ig-slot5-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/30dc7c43-12e2-4411-9ab5-3ad82b8e81c5/ig-slot5-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/ceb13dac-5f9f-4df4-90f9-bbde0ea88397/ig-slot5-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/d0e13698-c75e-4bcd-a8bf-74366e0c0194/ig-slot5-slide06.jpg"
+        ],
+        "snippet": "The fire took everything except the walls.  Westport Presbyterian Church was bui",
+        "error": null
+      },
+      {
+        "id": "lnFhK",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSM0wGDWgQ/",
+        "shortcode": "DbSM0wGDWgQ",
+        "platformPostId": "18090109265406883",
+        "publishedAt": "2026-07-27T05:21:02.987Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot4-slide01.jpg",
+          "ig-slot4-slide02.jpg",
+          "ig-slot4-slide03.jpg",
+          "ig-slot4-slide04.jpg",
+          "ig-slot4-slide05.jpg",
+          "ig-slot4-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/6ff54728-d6ef-4d65-a169-4d63b3080ad3/ig-slot4-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/3dc1e432-373b-4ef1-880e-d4c82693836e/ig-slot4-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/87352e22-5a17-4ba6-9284-b3cdbb342882/ig-slot4-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/177da09b-b474-418f-8f73-10dad2aa22ea/ig-slot4-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/c938856b-f3d4-4a89-92b1-e204e8436da0/ig-slot4-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/ea9b699f-43e1-44cf-8939-0e125b7af9f6/ig-slot4-slide06.jpg"
+        ],
+        "snippet": "A medieval grimoire condemned as cheating.  The Ars Notoria belongs to the Solom",
+        "error": null
+      },
+      {
+        "id": "LceYV",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSMpa1jXg5/",
+        "shortcode": "DbSMpa1jXg5",
+        "platformPostId": "18020562635699329",
+        "publishedAt": "2026-07-27T05:19:29.263Z",
+        "media_count": 7,
+        "filenames": [
+          "ig-slot3-slide01.jpg",
+          "ig-slot3-slide02.jpg",
+          "ig-slot3-slide03.jpg",
+          "ig-slot3-slide04.jpg",
+          "ig-slot3-slide05.jpg",
+          "ig-slot3-slide06.jpg",
+          "ig-slot3-slide07.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/1e7d4c81-ce69-44b9-9f73-ea8491cc1eee/ig-slot3-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/83b0f8e1-775d-4251-880e-4a623a017681/ig-slot3-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/184a8f3d-01a3-4809-ae0e-0eaf7dafcb82/ig-slot3-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/a726305a-9463-4ee0-b616-88ff4ac5f436/ig-slot3-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9c5d8b1d-09a3-46cf-808d-2017247009cf/ig-slot3-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e82069e4-e233-48ba-8ffb-7121d00b1a9b/ig-slot3-slide06.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/c312586b-e69e-4d2a-9fc6-31ec99dec632/ig-slot3-slide07.jpg"
+        ],
+        "snippet": "Four traditions looked at the same thirty miles of Missouri river bluff and deci",
+        "error": null
+      },
+      {
+        "id": "gvcox",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSMawbjYH1/",
+        "shortcode": "DbSMawbjYH1",
+        "platformPostId": "18039056375820378",
+        "publishedAt": "2026-07-27T05:17:27.729Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot2-slide01.jpg",
+          "ig-slot2-slide02.jpg",
+          "ig-slot2-slide03.jpg",
+          "ig-slot2-slide04.jpg",
+          "ig-slot2-slide05.jpg",
+          "ig-slot2-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/08bea164-0f34-4fe7-a080-4a4831b3f073/ig-slot2-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/b28805e8-8fa5-430c-8e9d-e84d2b34f6c2/ig-slot2-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/33b9959a-e0c7-4331-9537-499cd96bca57/ig-slot2-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/af7f1e5d-196c-423f-8055-109aac6415f7/ig-slot2-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/a28c3834-3d70-4777-afd0-dd7a7927acf8/ig-slot2-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/7fdac92e-ff9e-4109-895a-1e06b079f2bb/ig-slot2-slide06.jpg"
+        ],
+        "snippet": "Sound has shapes. That part is not mystical. It is 1787.  Ernst Chladni drew a v",
+        "error": null
+      },
+      {
+        "id": "coXGL",
+        "status": "published",
+        "url": "https://www.instagram.com/p/DbSMQbcjfSl/",
+        "shortcode": "DbSMQbcjfSl",
+        "platformPostId": "18086650376532860",
+        "publishedAt": "2026-07-27T05:15:53.973Z",
+        "media_count": 6,
+        "filenames": [
+          "ig-slot1-slide01.jpg",
+          "ig-slot1-slide02.jpg",
+          "ig-slot1-slide03.jpg",
+          "ig-slot1-slide04.jpg",
+          "ig-slot1-slide05.jpg",
+          "ig-slot1-slide06.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/02af2589-c970-4a4e-9c16-919400af3ee8/ig-slot1-slide01.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/170171fe-38b4-4a1f-a1bb-16218b7af7d3/ig-slot1-slide02.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/1c4b484e-dd31-4a45-9179-fc311c37188e/ig-slot1-slide03.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e5f6c72f-9c2e-4676-9dcd-a7ed64105991/ig-slot1-slide04.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/b1c456c0-a595-4ff1-a0f1-aa893c6c9f79/ig-slot1-slide05.jpg",
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/0ed9cfd6-c8d1-4cdf-8522-d0324d019c4d/ig-slot1-slide06.jpg"
+        ],
+        "snippet": "110 Hz is measured. 111.2 Hz is mine.  The Hal-Saflieni Hypogeum is an undergrou",
+        "error": null
+      }
+    ],
+    "delete_candidates": []
+  },
+  "fb_author": {
+    "keep": [
+      {
+        "id": "i4FcB",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097507585290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097507585290334",
+        "publishedAt": "2026-07-27T05:33:33.705Z",
+        "media_count": 1,
+        "filenames": [
+          "slot7-unreleased-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/d5aa1f87-2db7-4277-818c-a8dbde18fbf1/slot7-unreleased-xfb.jpg"
+        ],
+        "snippet": "The trilogy ends with a license.  Two hundred forty-seven pages go onto the open",
+        "error": null
+      },
+      {
+        "id": "I819X",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097506853290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097506853290334",
+        "publishedAt": "2026-07-27T05:33:01.160Z",
+        "media_count": 1,
+        "filenames": [
+          "slot6-factions-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e87ba3b2-876a-4c2c-a881-6604f37a0f83/slot6-factions-xfb.jpg"
+        ],
+        "snippet": "One government published. The other classified the act of reading.  In 1984 Amer",
+        "error": null
+      },
+      {
+        "id": "3Jtjk",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097506355290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097506355290334",
+        "publishedAt": "2026-07-27T05:32:16.575Z",
+        "media_count": 1,
+        "filenames": [
+          "slot5-stone-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/1a90260c-f67a-4f01-9d4f-81d803c9b310/slot5-stone-xfb.jpg"
+        ],
+        "snippet": "The fire took everything except the walls.  Westport Presbyterian Church was bui",
+        "error": null
+      },
+      {
+        "id": "Pz6b0",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097505695290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097505695290334",
+        "publishedAt": "2026-07-27T05:31:39.742Z",
+        "media_count": 1,
+        "filenames": [
+          "slot4-grimoire-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/dff918e0-cde8-43b3-b306-c51ebceae6a2/slot4-grimoire-xfb.jpg"
+        ],
+        "snippet": "A medieval grimoire condemned as cheating.  The Ars Notoria belongs to the Solom",
+        "error": null
+      },
+      {
+        "id": "Tb991",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097504603290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097504603290334",
+        "publishedAt": "2026-07-27T05:31:04.083Z",
+        "media_count": 1,
+        "filenames": [
+          "slot3-kansas-city-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/60db442f-5da7-4fa0-966e-904c41ee1efb/slot3-kansas-city-xfb.jpg"
+        ],
+        "snippet": "Four traditions looked at the same thirty miles of Missouri river bluff and deci",
+        "error": null
+      },
+      {
+        "id": "i4CoB",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097503799290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097503799290334",
+        "publishedAt": "2026-07-27T05:30:27.168Z",
+        "media_count": 1,
+        "filenames": [
+          "slot2-cymatics-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9ea69138-dd40-410e-9bfe-1aeabd4c191a/slot2-cymatics-xfb.jpg"
+        ],
+        "snippet": "Sound has shapes. That part is not mystical. It is 1787.  Ernst Chladni drew a v",
+        "error": null
+      },
+      {
+        "id": "Q97Yy",
+        "status": "published",
+        "url": "https://facebook.com/1224164874114610_122097503355290334",
+        "shortcode": null,
+        "platformPostId": "1224164874114610_122097503355290334",
+        "publishedAt": "2026-07-27T05:29:51.157Z",
+        "media_count": 1,
+        "filenames": [
+          "slot1-frequency-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/a2f264b5-c7a2-4df7-99c4-68cf7f112df5/slot1-frequency-xfb.jpg"
+        ],
+        "snippet": "110 Hz is measured. 111.2 Hz is mine.  The Hal-Saflieni Hypogeum is an undergrou",
+        "error": null
+      }
+    ],
+    "delete_candidates": []
+  },
+  "fb_scp": {
+    "keep": [
+      {
+        "id": "XIGoe",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099399121409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099399121409612",
+        "publishedAt": "2026-07-27T05:33:52.990Z",
+        "media_count": 1,
+        "filenames": [
+          "slot7-unreleased-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/d5aa1f87-2db7-4277-818c-a8dbde18fbf1/slot7-unreleased-xfb.jpg"
+        ],
+        "snippet": "The Masters X Trilogy ends with a license.  Not a chamber stormed, not a patriar",
+        "error": null
+      },
+      {
+        "id": "Q9W6y",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099398413409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099398413409612",
+        "publishedAt": "2026-07-27T05:33:08.360Z",
+        "media_count": 1,
+        "filenames": [
+          "slot6-factions-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e87ba3b2-876a-4c2c-a881-6604f37a0f83/slot6-factions-xfb.jpg"
+        ],
+        "snippet": "In 1984 American intelligence took a Chinese government journal on paranormal re",
+        "error": null
+      },
+      {
+        "id": "1TQbG",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099397525409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099397525409612",
+        "publishedAt": "2026-07-27T05:32:29.307Z",
+        "media_count": 1,
+        "filenames": [
+          "slot5-stone-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/1a90260c-f67a-4f01-9d4f-81d803c9b310/slot5-stone-xfb.jpg"
+        ],
+        "snippet": "In 2011 Westport Presbyterian Church burned. The fire took the roof, the sanctua",
+        "error": null
+      },
+      {
+        "id": "EuhaA",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099396601409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099396601409612",
+        "publishedAt": "2026-07-27T05:31:50.281Z",
+        "media_count": 1,
+        "filenames": [
+          "slot4-grimoire-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/dff918e0-cde8-43b3-b306-c51ebceae6a2/slot4-grimoire-xfb.jpg"
+        ],
+        "snippet": "The medieval Church condemned the Ars Notoria. Not for devil-worship, but for ch",
+        "error": null
+      },
+      {
+        "id": "jyzq2",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099396073409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099396073409612",
+        "publishedAt": "2026-07-27T05:31:14.501Z",
+        "media_count": 1,
+        "filenames": [
+          "slot3-kansas-city-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/60db442f-5da7-4fa0-966e-904c41ee1efb/slot3-kansas-city-xfb.jpg"
+        ],
+        "snippet": "Four traditions looked at the same thirty miles of Missouri river bluff and deci",
+        "error": null
+      },
+      {
+        "id": "XI1De",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099395233409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099395233409612",
+        "publishedAt": "2026-07-27T05:30:39.569Z",
+        "media_count": 1,
+        "filenames": [
+          "slot2-cymatics-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9ea69138-dd40-410e-9bfe-1aeabd4c191a/slot2-cymatics-xfb.jpg"
+        ],
+        "snippet": "A metal plate. A violin bow. A spoonful of sand.  In 1787 Ernst Chladni drew a b",
+        "error": null
+      },
+      {
+        "id": "CMSdF",
+        "status": "published",
+        "url": "https://facebook.com/1172985912572281_122099394513409612",
+        "shortcode": null,
+        "platformPostId": "1172985912572281_122099394513409612",
+        "publishedAt": "2026-07-27T05:29:59.449Z",
+        "media_count": 1,
+        "filenames": [
+          "slot1-frequency-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/a2f264b5-c7a2-4df7-99c4-68cf7f112df5/slot1-frequency-xfb.jpg"
+        ],
+        "snippet": "Every page of the Distribution File in the Masters X Trilogy carries the same fo",
+        "error": null
+      }
+    ],
+    "delete_candidates": []
+  },
+  "pinterest": {
+    "keep": [
+      {
+        "id": "gvacx",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169983/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169983",
+        "publishedAt": "2026-07-27T05:34:02.091Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot7-unreleased.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/526d59eb-114b-4e86-9cf1-f5f08a78faec/pinterest-slot7-unreleased.jpg"
+        ],
+        "snippet": "A Document That Cannot Be Un-Released - A conspiracy trilogy that ends not with ",
+        "error": null
+      },
+      {
+        "id": "KlAD9",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169918/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169918",
+        "publishedAt": "2026-07-27T05:33:18.395Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot6-three-factions.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/197166e2-451b-4ca6-9705-06acef2341ab/pinterest-slot6-three-factions.jpg"
+        ],
+        "snippet": "Three Factions, One Declassified Document - In 1984 American intelligence transl",
+        "error": null
+      },
+      {
+        "id": "4rCni",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169891/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169891",
+        "publishedAt": "2026-07-27T05:32:38.044Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot5-stone-remembers.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/419924ca-5aae-4604-8698-20efe51574ab/pinterest-slot5-stone-remembers.jpg"
+        ],
+        "snippet": "The Stone Remembers - In 2011 a Kansas City church burned. The fire took everyth",
+        "error": null
+      },
+      {
+        "id": "repO4",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169864/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169864",
+        "publishedAt": "2026-07-27T05:31:59.734Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot4-ars-notoria.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/71fcb8f5-95ec-4157-aa41-ec73b8b82dc0/pinterest-slot4-ars-notoria.jpg"
+        ],
+        "snippet": "The Grimoire That Was a Study Aid - The Ars Notoria, a medieval manuscript conde",
+        "error": null
+      },
+      {
+        "id": "i4C7B",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169837/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169837",
+        "publishedAt": "2026-07-27T05:31:21.973Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot3-kansas-city.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9add7502-1a0a-410c-93a7-5271e9bab849/pinterest-slot3-kansas-city.jpg"
+        ],
+        "snippet": "Why Kansas City? - Four traditions looked at the same thirty miles of Missouri r",
+        "error": null
+      },
+      {
+        "id": "5HXOD",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169827/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169827",
+        "publishedAt": "2026-07-27T05:30:46.931Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot2-cymatics.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/90afab69-4819-4064-86de-ec183520b1b5/pinterest-slot2-cymatics.jpg"
+        ],
+        "snippet": "Sound Into Form: Hans Jenny and Cymatics - A metal plate, a violin bow, a spoonf",
+        "error": null
+      },
+      {
+        "id": "dmcjO",
+        "status": "published",
+        "url": "https://www.pinterest.com/pin/1110700326881169807/",
+        "shortcode": null,
+        "platformPostId": "1110700326881169807",
+        "publishedAt": "2026-07-27T05:30:08.708Z",
+        "media_count": 1,
+        "filenames": [
+          "pinterest-slot1-frequency.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/0a8c0df4-3909-4e12-a1d4-e8c68d7fe1a5/pinterest-slot1-frequency.jpg"
+        ],
+        "snippet": "The Frequency That Was Already There - Archaeoacousticians documented a resonanc",
+        "error": null
+      }
+    ],
+    "delete_candidates": []
+  },
+  "x": {
+    "listed": [
+      {
+        "id": "nBuLl",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot7-unreleased-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/d5aa1f87-2db7-4277-818c-a8dbde18fbf1/slot7-unreleased-xfb.jpg"
+        ],
+        "snippet": "My conspiracy trilogy ends with a license.  Not a chamber stormed, not a patriar",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "8xTnI",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot6-factions-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/e87ba3b2-876a-4c2c-a881-6604f37a0f83/slot6-factions-xfb.jpg"
+        ],
+        "snippet": "In 1984, American intelligence translated a Chinese government journal on parano",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "LciHV",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot5-stone-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/1a90260c-f67a-4f01-9d4f-81d803c9b310/slot5-stone-xfb.jpg"
+        ],
+        "snippet": "In 2011 a Kansas City church burned. The fire took the roof, the sanctuary, the ",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "D5eQo",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot4-grimoire-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/dff918e0-cde8-43b3-b306-c51ebceae6a2/slot4-grimoire-xfb.jpg"
+        ],
+        "snippet": "The medieval Church condemned the Ars Notoria. Not for devil-worship, but for ch",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "OdLDv",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot3-kansas-city-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/60db442f-5da7-4fa0-966e-904c41ee1efb/slot3-kansas-city-xfb.jpg"
+        ],
+        "snippet": "I set a conspiracy trilogy in Kansas City, and I expected it would read as homet",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "Mp2IC",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot2-cymatics-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/9ea69138-dd40-410e-9bfe-1aeabd4c191a/slot2-cymatics-xfb.jpg"
+        ],
+        "snippet": "The oldest special effect in my trilogy needs no computer.  A metal plate. A vio",
+        "error": "Failed to refresh token: Unauthorized"
+      },
+      {
+        "id": "co4CL",
+        "status": "failed",
+        "url": "",
+        "shortcode": null,
+        "platformPostId": null,
+        "publishedAt": null,
+        "media_count": 1,
+        "filenames": [
+          "slot1-frequency-xfb.jpg"
+        ],
+        "media_urls": [
+          "https://media.outstand.so/D1RTmfkyHGvicBlsAFeRs9FbgnLeNMN0/a2f264b5-c7a2-4df7-99c4-68cf7f112df5/slot1-frequency-xfb.jpg"
+        ],
+        "snippet": "Every page of the Distribution File in my trilogy carries the same footer: f = 1",
+        "error": "Failed to refresh token: Unauthorized"
+      }
+    ]
+  },
+  "deleted": [],
+  "kept": [],
+  "execute": false
+}

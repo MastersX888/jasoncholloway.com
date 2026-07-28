@@ -1,0 +1,355 @@
+{
+  "deleted": {
+    "x": [
+      {
+        "id": "LoDPV",
+        "status": 200
+      },
+      {
+        "id": "GTbtp",
+        "status": 200
+      },
+      {
+        "id": "WAEIz",
+        "status": 200
+      },
+      {
+        "id": "EZFvA",
+        "status": 200
+      },
+      {
+        "id": "xvOB8",
+        "status": 200
+      },
+      {
+        "id": "mtq8d",
+        "status": 200
+      },
+      {
+        "id": "ireKB",
+        "status": 200
+      }
+    ],
+    "fb_author": [
+      {
+        "id": "rXxF4",
+        "status": 200
+      },
+      {
+        "id": "4e8Di",
+        "status": 200
+      },
+      {
+        "id": "4e8Ui",
+        "status": 200
+      },
+      {
+        "id": "xvm48",
+        "status": 200
+      },
+      {
+        "id": "X8OPe",
+        "status": 200
+      },
+      {
+        "id": "rXgC4",
+        "status": 200
+      },
+      {
+        "id": "H6Um5",
+        "status": 200
+      }
+    ],
+    "fb_scp": [],
+    "pinterest": [
+      {
+        "id": "df0bO",
+        "status": 200
+      },
+      {
+        "id": "8gdDI",
+        "status": 200
+      },
+      {
+        "id": "3Sybk",
+        "status": 200
+      },
+      {
+        "id": "AuCf7",
+        "status": 200
+      },
+      {
+        "id": "Om0zv",
+        "status": 200
+      },
+      {
+        "id": "aVDjb",
+        "status": 200
+      },
+      {
+        "id": "vdq5g",
+        "status": 200
+      }
+    ]
+  },
+  "posts": [
+    {
+      "label": "Slot 1 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "co4CL"
+    },
+    {
+      "label": "Slot 1 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097503355290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:29:51.194Z",
+      "post_id": "Q97Yy"
+    },
+    {
+      "label": "Slot 1 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099394513409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:29:59.483Z",
+      "post_id": "CMSdF"
+    },
+    {
+      "label": "Slot 1 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169807/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:30:08.748Z",
+      "post_id": "dmcjO"
+    },
+    {
+      "label": "Slot 2 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "Mp2IC"
+    },
+    {
+      "label": "Slot 2 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097503799290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:30:27.204Z",
+      "post_id": "i4CoB"
+    },
+    {
+      "label": "Slot 2 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099395233409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:30:39.606Z",
+      "post_id": "XI1De"
+    },
+    {
+      "label": "Slot 2 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169827/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:30:46.965Z",
+      "post_id": "5HXOD"
+    },
+    {
+      "label": "Slot 3 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "OdLDv"
+    },
+    {
+      "label": "Slot 3 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097504603290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:04.117Z",
+      "post_id": "Tb991"
+    },
+    {
+      "label": "Slot 3 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099396073409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:14.536Z",
+      "post_id": "jyzq2"
+    },
+    {
+      "label": "Slot 3 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169837/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:22.008Z",
+      "post_id": "i4C7B"
+    },
+    {
+      "label": "Slot 4 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "D5eQo"
+    },
+    {
+      "label": "Slot 4 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097505695290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:39.778Z",
+      "post_id": "Pz6b0"
+    },
+    {
+      "label": "Slot 4 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099396601409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:50.322Z",
+      "post_id": "EuhaA"
+    },
+    {
+      "label": "Slot 4 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169864/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:31:59.768Z",
+      "post_id": "repO4"
+    },
+    {
+      "label": "Slot 5 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "LciHV"
+    },
+    {
+      "label": "Slot 5 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097506355290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:32:16.625Z",
+      "post_id": "3Jtjk"
+    },
+    {
+      "label": "Slot 5 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099397525409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:32:29.342Z",
+      "post_id": "1TQbG"
+    },
+    {
+      "label": "Slot 5 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169891/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:32:38.081Z",
+      "post_id": "4rCni"
+    },
+    {
+      "label": "Slot 6 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "8xTnI"
+    },
+    {
+      "label": "Slot 6 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097506853290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:33:01.199Z",
+      "post_id": "I819X"
+    },
+    {
+      "label": "Slot 6 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099398413409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:33:08.396Z",
+      "post_id": "Q9W6y"
+    },
+    {
+      "label": "Slot 6 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169918/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:33:18.429Z",
+      "post_id": "KlAD9"
+    },
+    {
+      "label": "Slot 7 - X",
+      "success": false,
+      "status": "failed",
+      "url": null,
+      "error": "Failed to refresh token: Unauthorized",
+      "publishedAt": null,
+      "post_id": "nBuLl"
+    },
+    {
+      "label": "Slot 7 - FB Author",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122097507585290334",
+      "error": null,
+      "publishedAt": "2026-07-27T05:33:33.751Z",
+      "post_id": "i4FcB"
+    },
+    {
+      "label": "Slot 7 - FB SCP",
+      "success": true,
+      "status": "published",
+      "url": "https://facebook.com/1172985912572281_122099399121409612",
+      "error": null,
+      "publishedAt": "2026-07-27T05:33:53.025Z",
+      "post_id": "XIGoe"
+    },
+    {
+      "label": "Slot 7 - Pinterest",
+      "success": true,
+      "status": "published",
+      "url": "https://www.pinterest.com/pin/1110700326881169983/",
+      "error": null,
+      "publishedAt": "2026-07-27T05:34:02.125Z",
+      "post_id": "gvacx"
+    }
+  ],
+  "platforms": [
+    "x",
+    "fb_author",
+    "fb_scp",
+    "pinterest"
+  ]
+}

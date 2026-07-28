@@ -1,0 +1,526 @@
+{
+  "$schema": "Photographic grounds only via Gemini/Imagen. Message typography is applied by scripts/overlay_carousel.py and scripts/overlay_platform_heroes.py — see content/social/REDESIGN_BRIEF.md.",
+  "style_suffix": "documentary photograph, cinematic natural light, muted earth tones, subtle film grain, photorealistic. Leave clear lower third for later typography overlay. No baked-in text, no watermark, no logo, no signature, no artist signature, no captions, no labels",
+  "assets": [
+    {
+      "id": "slot1-ig-slide01",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide01.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Ancient limestone oracle chamber in the underground Hypogeum temple Malta, narrow shaft of warm light on carved stone walls, archaeoacoustic research atmosphere, empty chamber, documentary film still, 35mm"
+    },
+    {
+      "id": "slot1-ig-slide02",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide02.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Descending carved limestone corridor in Malta Hypogeum neolithic underground temple, distant human silhouette for scale, moody underground photography, warm amber light"
+    },
+    {
+      "id": "slot1-ig-slide03",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide03.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Interior of Neolithic stone chamber Ireland, low ceiling megalithic rough walls, archaeological survey lighting, cool misty atmosphere, documentary photography"
+    },
+    {
+      "id": "slot1-ig-slide04",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide04.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Paleolithic cave interior France, ochre mineral pigments on limestone wall, single torchlight glow, acoustic resonance mood, prehistoric atmosphere, no recognizable famous cave art"
+    },
+    {
+      "id": "slot1-ig-slide05",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide05.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Research desk with open field notebook, printed audio spectrogram waveform, pencil and reading glasses, warm desk lamp, honest scientific caveat mood, still life documentary"
+    },
+    {
+      "id": "slot1-ig-slide06",
+      "slot": 1,
+      "platform": "instagram",
+      "filename": "ig-slot1-slide06.png",
+      "desktop_subdir": "slot1",
+      "aspect_ratio": "1:1",
+      "prompt": "Extreme close-up limestone wall texture with subtle ancient chisel marks, single warm light raking across stone surface, macro documentary photography"
+    },
+    {
+      "id": "slot1-hero-xfb",
+      "slot": 1,
+      "platform": "x-facebook",
+      "filename": "slot1-frequency-hero.png",
+      "desktop_subdir": "slot1",
+      "also_copy_as": ["slot1-frequency-stamp-x.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Dramatic low angle view of Malta Hypogeum oracle chamber, carved limestone acoustic chamber, shaft of light, empty sacred space, National Geographic documentary photography"
+    },
+    {
+      "id": "slot1-pinterest",
+      "slot": 1,
+      "platform": "pinterest",
+      "filename": "pinterest-slot1-frequency.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Vertical composition of underground limestone temple chamber Malta, warm light beam from above, ancient carved stone, archaeoacoustics mood, cinematic portrait orientation documentary"
+    },
+    {
+      "id": "slot2-ig-slide01",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide01.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "Chladni plate experiment on wooden kitchen table, metal plate with sand forming geometric nodal pattern, violin bow beside plate, 18th century science demonstration recreated, warm domestic light"
+    },
+    {
+      "id": "slot2-ig-slide02",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide02.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "Macro photograph of sand on vibrating metal plate forming symmetrical cymatics figure, nodal lines clearly visible, black background, scientific beauty"
+    },
+    {
+      "id": "slot2-ig-slide03",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide03.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "1960s Swiss research laboratory, crystal oscillator and oscilloscope, cymatics research equipment on bench, Hans Jenny era aesthetic, documentary archival photography"
+    },
+    {
+      "id": "slot2-ig-slide04",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide04.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "Two distinct cymatics sand patterns on metal plates side by side showing categorical transformation not gradual change, scientific comparison still life, dramatic side lighting"
+    },
+    {
+      "id": "slot2-ig-slide05",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide05.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "Cymatics sand pattern collapsing and scattering on metal plate as vibration stops, dynamic moment, motion blur at edges, scientific photography"
+    },
+    {
+      "id": "slot2-ig-slide06",
+      "slot": 2,
+      "platform": "instagram",
+      "filename": "ig-slot2-slide06.png",
+      "desktop_subdir": "slot2",
+      "aspect_ratio": "1:1",
+      "prompt": "Silhouette of researcher observing cymatics pattern through glass plate, contemplative mood, boundary between measured science and observer, cinematic documentary portrait"
+    },
+    {
+      "id": "slot2-hero-xfb",
+      "slot": 2,
+      "platform": "x-facebook",
+      "filename": "slot2-cymatics-hero.png",
+      "desktop_subdir": "slot2",
+      "also_copy_as": ["slot2-cymatics-x.png", "slot2-cymatics-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Stunning chladni cymatics sand pattern on circular metal plate, geometric mandala-like figure, dramatic side lighting, violin bow at edge, scientific art, photorealistic"
+    },
+    {
+      "id": "slot2-pinterest",
+      "slot": 2,
+      "platform": "pinterest",
+      "filename": "pinterest-slot2-cymatics.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Vertical composition chladni plate with sand cymatics pattern and violin bow, warm kitchen table, geometric figure glowing in side light, science demonstration documentary"
+    },
+    {
+      "id": "slot3-ig-slide01",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide01.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Missouri River bluff at golden hour, native tall grass prairie in foreground, Kansas City distant skyline, American Midwest landscape documentary photography, warm light"
+    },
+    {
+      "id": "slot3-ig-slide02",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide02.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Ancient Native American burial mound covered in grass on a Missouri river bluff, Hopewell tradition earthwork, archaeological site photography, morning mist, solemn atmosphere"
+    },
+    {
+      "id": "slot3-ig-slide03",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide03.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Simple mown green rectangle of grass on an American prairie, a maintained empty lot surrounded by modest buildings, the absence of a temple, quiet documentary photography, overcast sky"
+    },
+    {
+      "id": "slot3-ig-slide04",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide04.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Bethany Falls limestone outcrop exposed in a road cut, geological strata layers clearly visible, Midwestern geological survey photography, afternoon sun"
+    },
+    {
+      "id": "slot3-ig-slide05",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide05.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Underground limestone warehouse Kansas City SubTropolis, massive carved pillars, fluorescent lighting in vast underground chamber, industrial documentary photography"
+    },
+    {
+      "id": "slot3-ig-slide06",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide06.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Empty field notebook open on a rock, pen resting on blank page, bluff landscape in background out of focus, research gap metaphor, contemplative still life documentary"
+    },
+    {
+      "id": "slot3-ig-slide07",
+      "slot": 3,
+      "platform": "instagram",
+      "filename": "ig-slot3-slide07.png",
+      "desktop_subdir": "slot3",
+      "aspect_ratio": "1:1",
+      "prompt": "Kansas City Missouri skyline at dusk viewed from river bluff with limestone retaining wall in foreground, American Midwest urban landscape, cinematic documentary"
+    },
+    {
+      "id": "slot3-hero-xfb",
+      "slot": 3,
+      "platform": "x-facebook",
+      "filename": "slot3-kansas-city-hero.png",
+      "desktop_subdir": "slot3",
+      "also_copy_as": ["slot3-kc-x.png", "slot3-kc-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Missouri River bluff at golden hour with exposed Bethany Falls limestone formation, native grass, Kansas City in distance, sweeping American landscape documentary"
+    },
+    {
+      "id": "slot3-pinterest",
+      "slot": 3,
+      "platform": "pinterest",
+      "filename": "pinterest-slot3-kansas-city.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Kansas City Missouri river bluff at golden hour, Bethany Falls limestone outcrop, subtle ancient Hopewell burial mound earthwork in middle distance, American Midwest documentary landscape vertical"
+    },
+    {
+      "id": "slot4-ig-slide01",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide01.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Medieval illuminated manuscript page with dense geometric diagram on aged vellum parchment, candlelit scriptorium atmosphere, extreme close-up, British Library aesthetic, documentary photography"
+    },
+    {
+      "id": "slot4-ig-slide02",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide02.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Open medieval codex with geometric notae figures visible on vellum pages, reading room library table, single overhead lamp, archival research atmosphere, scholarly documentary"
+    },
+    {
+      "id": "slot4-ig-slide03",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide03.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Seven liberal arts represented as seven ancient books arranged on stone shelf, medieval university atmosphere, candlelight, grammar rhetoric logic arithmetic geometry music astronomy, still life"
+    },
+    {
+      "id": "slot4-ig-slide04",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide04.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Single elaborate geometric mandala figure drawn in ink on aged parchment, concentric circles and angular patterns, contemplation object, extreme close-up documentary photograph"
+    },
+    {
+      "id": "slot4-ig-slide05",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide05.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Medieval scribe at wooden desk copying illuminated manuscript onto vellum by candlelight, meticulous craftsmanship, preservation of forbidden knowledge, historical documentary recreation"
+    },
+    {
+      "id": "slot4-ig-slide06",
+      "slot": 4,
+      "platform": "instagram",
+      "filename": "ig-slot4-slide06.png",
+      "desktop_subdir": "slot4",
+      "aspect_ratio": "1:1",
+      "prompt": "Modern researcher hands examining facsimile medieval manuscript page with geometric diagram, white cotton gloves, magnifying glass, archival table, scholarly atmosphere, documentary still life"
+    },
+    {
+      "id": "slot4-hero-xfb",
+      "slot": 4,
+      "platform": "x-facebook",
+      "filename": "slot4-ars-notoria-hero.png",
+      "desktop_subdir": "slot4",
+      "also_copy_as": ["slot4-grimoire-x.png", "slot4-grimoire-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Medieval illuminated manuscript open to page with elaborate geometric notae diagram on vellum, dramatic candlelight, British Library reading room atmosphere, scholarly art photography"
+    },
+    {
+      "id": "slot4-pinterest",
+      "slot": 4,
+      "platform": "pinterest",
+      "filename": "pinterest-slot4-ars-notoria.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Medieval illuminated manuscript on vellum with dense geometric notae figures, candlelit scriptorium, British Library aesthetic, aged parchment texture, vertical composition, documentary"
+    },
+    {
+      "id": "slot5-ig-slide01",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide01.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Historic stone church exterior after fire, roof missing, limestone walls standing at full height, smoke-darkened stone against blue sky, aftermath documentary photography, morning light"
+    },
+    {
+      "id": "slot5-ig-slide02",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide02.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Interior of burned church looking up through missing roof to sky, charred wooden beams, intact limestone walls surrounding emptiness, fire aftermath documentary photography"
+    },
+    {
+      "id": "slot5-ig-slide03",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide03.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Extreme close-up of smoke-darkened limestone church wall surface, soot patterns and mineral texture, evidence of survival, macro documentary photograph"
+    },
+    {
+      "id": "slot5-ig-slide04",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide04.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Restored church interior inside original stone walls, modern renovation within historic limestone shell, architectural rehabilitation, warm natural light, documentary architecture photography"
+    },
+    {
+      "id": "slot5-ig-slide05",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide05.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Red brick cathedral with gold dome on hilltop bluff against dramatic sky, Kansas City landmark, urban landscape documentary photography, the correction"
+    },
+    {
+      "id": "slot5-ig-slide06",
+      "slot": 5,
+      "platform": "instagram",
+      "filename": "ig-slot5-slide06.png",
+      "desktop_subdir": "slot5",
+      "aspect_ratio": "1:1",
+      "prompt": "Limestone wall in warm golden light, ancient carved surface with deep texture, the persistence of mineral memory, abstract contemplative documentary photograph"
+    },
+    {
+      "id": "slot5-hero-xfb",
+      "slot": 5,
+      "platform": "x-facebook",
+      "filename": "slot5-stone-remembers-hero.png",
+      "desktop_subdir": "slot5",
+      "also_copy_as": ["slot5-stone-x.png", "slot5-stone-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Historic limestone church walls standing after fire, roofless shell, smoke-darkened stone against morning sky, the stone remembers, dramatic documentary photography"
+    },
+    {
+      "id": "slot5-pinterest",
+      "slot": 5,
+      "platform": "pinterest",
+      "filename": "pinterest-slot5-stone-remembers.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Vertical view looking up inside roofless stone church after fire, limestone walls at full height framing open sky, dramatic light, architectural documentary, survival of stone"
+    },
+    {
+      "id": "slot6-ig-slide01",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide01.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Declassified government document stamped pages fanned on desk, redaction marks visible, Cold War intelligence aesthetic, overhead documentary photograph, dramatic shadows"
+    },
+    {
+      "id": "slot6-ig-slide02",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide02.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Split image concept: published scientific journal open on left side, classified folder stamped CONFIDENTIAL on right side, contrasting transparency and secrecy, documentary still life"
+    },
+    {
+      "id": "slot6-ig-slide03",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide03.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Locked filing cabinet in stark government office, single key, fluorescent lighting, bureaucratic suppression atmosphere, minimalist documentary photography"
+    },
+    {
+      "id": "slot6-ig-slide04",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide04.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Open laboratory notebook with handwritten research methodology notes and data tables, peer review and replication atmosphere, scientific verification, warm desk lamp, documentary still life"
+    },
+    {
+      "id": "slot6-ig-slide05",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide05.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Military intelligence briefing room with projection screen and single chair, austere institutional atmosphere, attention and application, Cold War documentary aesthetic"
+    },
+    {
+      "id": "slot6-ig-slide06",
+      "slot": 6,
+      "platform": "instagram",
+      "filename": "ig-slot6-slide06.png",
+      "desktop_subdir": "slot6",
+      "aspect_ratio": "1:1",
+      "prompt": "Handwritten margin note on yellowed document page reading caveat, single word in focus with document text blurred behind, macro documentary photograph"
+    },
+    {
+      "id": "slot6-hero-xfb",
+      "slot": 6,
+      "platform": "x-facebook",
+      "filename": "slot6-three-factions-hero.png",
+      "desktop_subdir": "slot6",
+      "also_copy_as": ["slot6-factions-x.png", "slot6-factions-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Declassified intelligence document on desk with translation notes alongside original foreign language text, 1984 Cold War intelligence research, dramatic single lamp, documentary photography"
+    },
+    {
+      "id": "slot6-pinterest",
+      "slot": 6,
+      "platform": "pinterest",
+      "filename": "pinterest-slot6-three-factions.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Vertical composition of declassified government documents fanned across desk with classification stamps and translation notes, Cold War intelligence aesthetic, documentary photography"
+    },
+    {
+      "id": "slot7-ig-slide01",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide01.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Thin neat stack of printed white paper about one inch tall on a wooden desk at night, warm desk lamp illuminating the pages, modern slim laptop closed beside it, intimate quiet midnight atmosphere, documentary photography 35mm"
+    },
+    {
+      "id": "slot7-ig-slide02",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide02.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Modern slim laptop open on desk at night, minimal white screen glowing softly, warm desk lamp beside it, contemporary home office, quiet contemplative atmosphere, documentary still life photography"
+    },
+    {
+      "id": "slot7-ig-slide03",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide03.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Leaked classified documents scattered dramatically versus neatly organized open-access publication on table, chaos vs order contrast, documentary comparison still life"
+    },
+    {
+      "id": "slot7-ig-slide04",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide04.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Tediously detailed technical manual open to methods section, dense reproducible procedures, deliberately boring document, scientific rigor, overhead documentary photograph"
+    },
+    {
+      "id": "slot7-ig-slide05",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide05.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Open door to bright daylight, a one-way threshold, architectural metaphor for irreversible release, minimalist documentary photography, contemplative"
+    },
+    {
+      "id": "slot7-ig-slide06",
+      "slot": 7,
+      "platform": "instagram",
+      "filename": "ig-slot7-slide06.png",
+      "desktop_subdir": "slot7",
+      "aspect_ratio": "1:1",
+      "prompt": "Plain closed notebook beside a small neat stack of printed pages on a wooden desk, pen resting between them, warm desk lamp, the boundary between research and invention, minimalist documentary still life, no visible text or writing"
+    },
+    {
+      "id": "slot7-hero-xfb",
+      "slot": 7,
+      "platform": "x-facebook",
+      "filename": "slot7-unreleased-hero.png",
+      "desktop_subdir": "slot7",
+      "also_copy_as": ["slot7-unreleased-x.png", "slot7-unreleased-fb.png"],
+      "aspect_ratio": "1:1",
+      "prompt": "Thin neat stack of printed white paper about one inch tall beside a modern open laptop on a dark wooden desk at night, single warm desk lamp, window showing city lights at midnight, quiet contemplative ending, cinematic documentary photography"
+    },
+    {
+      "id": "slot7-pinterest",
+      "slot": 7,
+      "platform": "pinterest",
+      "filename": "pinterest-slot7-unreleased.png",
+      "desktop_subdir": "pinterest",
+      "aspect_ratio": "3:4",
+      "prompt": "Vertical composition of open door to bright daylight with thin neat stack of printed white pages about one inch tall on the threshold, irreversible release metaphor, one-way door, clean modern interior, cinematic documentary photography"
+    }
+  ]
+}

@@ -1,0 +1,349 @@
+{
+  "ig_liveness": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "18605087647043008",
+      "outstand": "Vc5lN"
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "18106819403092628",
+      "outstand": "J2Qp3"
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "17898737886482834",
+      "outstand": "uFpgE"
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "18112133887943296",
+      "outstand": "DHYNo"
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "17939429925289199",
+      "outstand": "X8Oze"
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "17891262396605188",
+      "outstand": "VcHnN"
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "status": 200,
+      "cdn_imgs": 6,
+      "alive_guess": true,
+      "unavailable": false,
+      "media_id": "18361805317246156",
+      "outstand": "8gm5I"
+    }
+  ],
+  "fb_author_liveness": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097149271290334",
+      "status": 200,
+      "len": 322655,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097148227290334",
+      "status": 200,
+      "len": 322761,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097146733290334",
+      "status": 200,
+      "len": 322735,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097145863290334",
+      "status": 200,
+      "len": 323325,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097144261290334",
+      "status": 200,
+      "len": 322624,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097141645290334",
+      "status": 200,
+      "len": 322769,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "kind": "old",
+      "url": "https://www.facebook.com/1224164874114610_122097140487290334",
+      "status": 200,
+      "len": 322648,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": false
+    }
+  ],
+  "fb_scp_liveness": [
+    {
+      "id": "1172985912572281_122098986723409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098986723409612",
+      "status": 200,
+      "len": 304425,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098985175409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098985175409612",
+      "status": 200,
+      "len": 304419,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098984173409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098984173409612",
+      "status": 200,
+      "len": 304420,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098982523409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098982523409612",
+      "status": 200,
+      "len": 305124,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098981161409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098981161409612",
+      "status": 200,
+      "len": 304422,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098979223409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098979223409612",
+      "status": 200,
+      "len": 304441,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    },
+    {
+      "id": "1172985912572281_122098977759409612",
+      "kind": "old",
+      "url": "https://www.facebook.com/1172985912572281_122098977759409612",
+      "status": 200,
+      "len": 304406,
+      "has_post_id": true,
+      "loginwall": false,
+      "not_found": true
+    }
+  ],
+  "outstand_probes": [
+    {
+      "target": "fb_author_sample",
+      "ok": false,
+      "attempts": [
+        [
+          "DELETE",
+          "/posts/remote",
+          404,
+          "{\"success\":false,\"error\":\"Post not found\"}"
+        ],
+        [
+          "POST",
+          "/posts/remote",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/remote-posts",
+          404,
+          "Not found"
+        ],
+        [
+          "POST",
+          "/remote-posts",
+          404,
+          "Not found"
+        ],
+        [
+          "DELETE",
+          "/posts/delete-remote",
+          500,
+          "{\"success\":false,\"error\":\"Internal server error\"}"
+        ],
+        [
+          "POST",
+          "/posts/delete-remote",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/social-accounts/7BvrW/remote-posts/1224164874114610_122097149271290334",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "POST",
+          "/social-accounts/7BvrW/remote-posts/1224164874114610_122097149271290334",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/social-accounts/7BvrW/posts/1224164874114610_122097149271290334",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "POST",
+          "/social-accounts/7BvrW/posts/1224164874114610_122097149271290334",
+          404,
+          "404 Not Found"
+        ]
+      ]
+    },
+    {
+      "target": "ig_sample",
+      "ok": false,
+      "attempts": [
+        [
+          "DELETE",
+          "/posts/remote",
+          404,
+          "{\"success\":false,\"error\":\"Post not found\"}"
+        ],
+        [
+          "POST",
+          "/posts/remote",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/remote-posts",
+          404,
+          "Not found"
+        ],
+        [
+          "POST",
+          "/remote-posts",
+          404,
+          "Not found"
+        ],
+        [
+          "DELETE",
+          "/posts/delete-remote",
+          500,
+          "{\"success\":false,\"error\":\"Internal server error\"}"
+        ],
+        [
+          "POST",
+          "/posts/delete-remote",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/social-accounts/1vWPG/remote-posts/18605087647043008",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "POST",
+          "/social-accounts/1vWPG/remote-posts/18605087647043008",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "DELETE",
+          "/social-accounts/1vWPG/posts/18605087647043008",
+          404,
+          "404 Not Found"
+        ],
+        [
+          "POST",
+          "/social-accounts/1vWPG/posts/18605087647043008",
+          404,
+          "404 Not Found"
+        ]
+      ]
+    }
+  ],
+  "notes": [
+    "No META/FB page access token in .env. Outstand record deletes did not remove on-platform FB/IG posts. Need Meta Business Suite manual delete OR a page token with pages_manage_posts + instagram_manage_contents."
+  ],
+  "has_meta_token": false
+}

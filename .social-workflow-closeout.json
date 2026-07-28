@@ -1,0 +1,58 @@
+{
+  "closed_at": "2026-07-28T02:58:00Z",
+  "workflow": "social-media-redesign-and-shore-up",
+  "verdict": "PARTIAL — posting mostly complete; Meta cleanup incomplete; X empty pending rebuild",
+  "live_audit": {
+    "source": ".social-closeout-audit.json",
+    "instagram_elevated_keepers": "7/7 ALIVE (message-in-image redesign)",
+    "instagram_old_crude": "7/7 STILL ALIVE — manual delete still needed",
+    "x": "Overnight spam GONE (7/7 oembed 404). Feed empty per user. Do not re-post until overlay rebuild asked.",
+    "bluesky_author": "7 text-first posts live",
+    "bluesky_imprint_scp": "7/7 live WITH images (catalog voice)",
+    "facebook_author": "Elevated set recorded; public HTML unreliable — visual confirm. Old set may still be live.",
+    "facebook_scp": "Overnight catalog 7 posted; mid/essay-mirror set may still clutter — visual confirm in Suite",
+    "pinterest": "7 elevated pins claimed via Outstand; no public re-verify without token"
+  },
+  "manual_corrections_needed": [
+    {
+      "priority": 1,
+      "platform": "Instagram",
+      "action": "Delete 7 old shortcodes still embed-live",
+      "ids": ["DbRCSJoF1iy","DbRCDsjl4IG","DbRB38zl8LU","DbRBrbTl01E","DbRBb7IDdeh","DbRBLzSjUpX","DbRA7wTDZvY"],
+      "keep": ["DbSM*","DbSN*"]
+    },
+    {
+      "priority": 2,
+      "platform": "Facebook Author",
+      "action": "Confirm/delete 7 old posts in Business Suite if still visible",
+      "keep": "elevated 122097503…–122097507…"
+    },
+    {
+      "priority": 3,
+      "platform": "Facebook SCP",
+      "action": "If mid/essay-mirror posts still sit beside catalog set, delete mid set; keep overnight catalog 122099552…–122099554…"
+    },
+    {
+      "priority": 4,
+      "platform": "X",
+      "action": "Rebuild later with message-in-image overlays only (assets in public/social/platform-overlaid + manual-x-upload). Do not post text/link cards."
+    }
+  ],
+  "system_optimization_done": {
+    "c_free_before_approx_gb": 2.78,
+    "actions": [
+      "Removed Playwright profiles .pw-chrome-profile-biz / .pw-chrome-profile-x (~370 MB)",
+      "Removed 6 vscode-stable-user installer unpack dirs from %TEMP% (~1.0 GB)",
+      "Deleted %APPDATA%\\Cursor\\User\\globalStorage\\state.vscdb.backup (~3.3 GB) if successful"
+    ],
+    "still_heavy": {
+      "state_vscdb_mb": 5987,
+      "note": "Close Cursor later and delete/rebuild state.vscdb.backup if recreated; consider Cursor Support guidance before deleting live state.vscdb. AVG + many Cursor processes also load RAM."
+    }
+  },
+  "next_task_parked": {
+    "title": "Trilogy deep read — KC geographic data validation",
+    "examples": ["Quality Hill treated as place vs apartment building", "Book 2 Foundation HQ vs Hotel Phillips"],
+    "model": "Wait for user to switch to Opus 5 — DO NOT START"
+  }
+}

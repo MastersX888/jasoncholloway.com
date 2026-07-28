@@ -1,0 +1,285 @@
+{
+  "started_at": "2026-07-27T13:30:43.041761+00:00",
+  "mode": "force_after_signed_in",
+  "required_account": "Jason Carroll Holloway",
+  "profile": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-chrome-profile-biz",
+  "account": {
+    "logged_in_guess": true,
+    "has_correct_name": false,
+    "wrong_account_suspected": false,
+    "wrong_hits": [],
+    "name_signals": [],
+    "url": "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+    "ok_to_delete": true,
+    "forced": true
+  },
+  "ig": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "url": "https://www.instagram.com/p/DbRCSJoF1iy/",
+      "ok": false,
+      "error": "Delete not in menu \u2014 wrong IG account or no ownership"
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "url": "https://www.instagram.com/p/DbRCDsjl4IG/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "url": "https://www.instagram.com/p/DbRB38zl8LU/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "url": "https://www.instagram.com/p/DbRBrbTl01E/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "url": "https://www.instagram.com/p/DbRBb7IDdeh/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "url": "https://www.instagram.com/p/DbRBLzSjUpX/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "url": "https://www.instagram.com/p/DbRA7wTDZvY/",
+      "ok": false,
+      "error": "More options not found \u2014 confirm IG business account linked under Jason Carroll Holloway"
+    }
+  ],
+  "fb": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "url": "https://www.facebook.com/1224164874114610_122097149271290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "url": "https://www.facebook.com/1224164874114610_122097148227290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "url": "https://www.facebook.com/1224164874114610_122097146733290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "url": "https://www.facebook.com/1224164874114610_122097145863290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "url": "https://www.facebook.com/1224164874114610_122097144261290334",
+      "ok": false,
+      "error": "No delete action; menu=['InterestedMore of your posts will be like this.', 'Interested', 'More of your posts will be like this.', 'Not interestedLess of your posts will be like this.', 'Not interested', 'Less of your posts will be like this.', 'Save videoAdd this to your saved items.', 'Save video', 'Add this to your saved items.', 'Copy link', 'Turn on notifications for this post', 'Embed', 'Hide postSee fewer posts like this.', 'Hide post', 'See fewer posts like this.', 'Snooze Metro.Detroiter for 30 days', 'Temporarily stop seeing posts.', 'Hide all from Metro.Detroiter', 'Stop seeing posts from this Page.', 'Report reel', \"We won't let Metro.Detroiter know who reported this.\", \"Block Metro.Detroiter's profile\", \"You won't be able to see or contact each other.\"]",
+      "menu": [
+        "InterestedMore of your posts will be like this.",
+        "Interested",
+        "More of your posts will be like this.",
+        "Not interestedLess of your posts will be like this.",
+        "Not interested",
+        "Less of your posts will be like this.",
+        "Save videoAdd this to your saved items.",
+        "Save video",
+        "Add this to your saved items.",
+        "Copy link",
+        "Turn on notifications for this post",
+        "Embed",
+        "Hide postSee fewer posts like this.",
+        "Hide post",
+        "See fewer posts like this.",
+        "Snooze Metro.Detroiter for 30 days",
+        "Temporarily stop seeing posts.",
+        "Hide all from Metro.Detroiter",
+        "Stop seeing posts from this Page.",
+        "Report reel",
+        "We won't let Metro.Detroiter know who reported this.",
+        "Block Metro.Detroiter's profile",
+        "You won't be able to see or contact each other."
+      ]
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "url": "https://www.facebook.com/1224164874114610_122097141645290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "url": "https://www.facebook.com/1224164874114610_122097140487290334",
+      "ok": false,
+      "error": "No delete action; menu=[]",
+      "menu": []
+    }
+  ],
+  "ig_verify_keep": [
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNYbojjaz",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMawbjYH1",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "ig_verify_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "fb_verify_keep": [
+    {
+      "id": "1224164874114610_122097507585290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503355290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097504603290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506355290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503799290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506853290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097505695290334",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "fb_verify_old": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "errors": [],
+  "finished_at": "2026-07-27T13:40:37.620706+00:00"
+}

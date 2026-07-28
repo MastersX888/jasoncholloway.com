@@ -1,0 +1,286 @@
+{
+  "dry_run": false,
+  "started_at": "2026-07-27T07:36:05.500046+00:00",
+  "profile": "C:\\Users\\zh577\\.gemini\\antigravity\\scratch\\jasoncholloway\\.pw-chrome-profile",
+  "ig": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "url": "https://www.instagram.com/p/DbRCSJoF1iy/",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete button not found in IG menu"
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "url": "https://www.instagram.com/p/DbRCDsjl4IG/",
+      "ok": false,
+      "already_gone": false,
+      "error": "Could not open IG More options menu"
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "url": "https://www.instagram.com/p/DbRB38zl8LU/",
+      "ok": true,
+      "already_gone": true,
+      "error": null
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "url": "https://www.instagram.com/p/DbRBrbTl01E/",
+      "ok": true,
+      "already_gone": true,
+      "error": null
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "url": "https://www.instagram.com/p/DbRBb7IDdeh/",
+      "ok": true,
+      "already_gone": true,
+      "error": null
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "url": "https://www.instagram.com/p/DbRBLzSjUpX/",
+      "ok": true,
+      "already_gone": true,
+      "error": null
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "url": "https://www.instagram.com/p/DbRA7wTDZvY/",
+      "ok": true,
+      "already_gone": true,
+      "error": null
+    }
+  ],
+  "fb": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "url": "https://www.facebook.com/1224164874114610_122097149271290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "url": "https://www.facebook.com/1224164874114610_122097148227290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "url": "https://www.facebook.com/1224164874114610_122097146733290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "url": "https://www.facebook.com/1224164874114610_122097145863290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "url": "https://www.facebook.com/1224164874114610_122097144261290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "url": "https://www.facebook.com/1224164874114610_122097141645290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "url": "https://www.facebook.com/1224164874114610_122097140487290334",
+      "ok": false,
+      "already_gone": false,
+      "error": "Delete/Move to trash menu item not found"
+    }
+  ],
+  "ig_verify_keep": [
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMawbjYH1",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNYbojjaz",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    }
+  ],
+  "ig_verify_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "live": false,
+      "expect_live": false,
+      "ok": true
+    }
+  ],
+  "fb_verify_keep": [
+    {
+      "id": "1224164874114610_122097503355290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503799290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097504603290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097505695290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506355290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506853290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097507585290334",
+      "live": true,
+      "expect_live": true,
+      "ok": true
+    }
+  ],
+  "fb_verify_old": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "live": true,
+      "expect_live": false,
+      "ok": false
+    }
+  ],
+  "errors": [],
+  "ig_grid_links": 0,
+  "finished_at": "2026-07-27T07:48:21.683902+00:00"
+}

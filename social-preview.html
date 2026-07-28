@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masters X Social Media Preview &mdash; Seventh City Press</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0d0d0d;--card:#161616;--border:#2a2a2a;--text:#e0e0e0;--muted:#888;--accent:#c8ff00;--approve:#22c55e;--reject:#ef4444;--pending:#eab308}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;padding:0 0 80px}
+header{background:linear-gradient(135deg,#111 0%,#1a1a1a 100%);border-bottom:1px solid var(--border);padding:32px 40px;position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+header h1{font-size:24px;font-weight:600;letter-spacing:-.5px}
+header p{color:var(--muted);font-size:14px;margin-top:4px}
+.summary-bar{display:flex;gap:24px;margin-top:12px;font-size:13px}
+.summary-bar .stat{padding:4px 12px;border-radius:20px;background:#222}
+.summary-bar .stat.approved{color:var(--approve);border:1px solid var(--approve)}
+.summary-bar .stat.pending{color:var(--pending);border:1px solid var(--pending)}
+.summary-bar .stat.rejected{color:var(--reject);border:1px solid var(--reject)}
+main{max-width:1400px;margin:0 auto;padding:24px 40px}
+.slot{margin-bottom:48px;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--card)}
+.slot-header{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;border-bottom:1px solid var(--border);background:#1a1a1a}
+.slot-header h2{font-size:18px;font-weight:600}
+.slot-header .slot-num{color:var(--accent);font-weight:700;margin-right:8px}
+.slot-header .status-label{font-size:12px;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px}
+.approval-controls{display:flex;gap:8px;align-items:center}
+.approval-controls button{padding:8px 16px;border:none;border-radius:6px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-approve{background:var(--approve);color:#000}
+.btn-approve:hover{background:#16a34a}
+.btn-approve.active{box-shadow:0 0 0 2px var(--approve)}
+.btn-reject{background:var(--reject);color:#fff}
+.btn-reject:hover{background:#dc2626}
+.btn-reject.active{box-shadow:0 0 0 2px var(--reject)}
+.btn-pending{background:#333;color:var(--pending)}
+.slot-body{padding:24px}
+.platform-section{margin-bottom:32px}
+.platform-section:last-child{margin-bottom:0}
+.platform-label{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent);margin-bottom:12px;padding:4px 0;border-bottom:2px solid var(--accent)}
+.images-row{display:flex;gap:12px;overflow-x:auto;padding:8px 0 16px;scroll-snap-type:x mandatory}
+.images-row::-webkit-scrollbar{height:6px}
+.images-row::-webkit-scrollbar-track{background:#222;border-radius:3px}
+.images-row::-webkit-scrollbar-thumb{background:#555;border-radius:3px}
+.img-card{flex:0 0 auto;scroll-snap-align:start;position:relative}
+.img-card img{border-radius:8px;border:1px solid var(--border);display:block;object-fit:cover}
+.img-card .img-label{position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,.8);color:#fff;font-size:11px;padding:2px 8px;border-radius:4px}
+.carousel-img{width:240px;height:240px}
+.hero-img{width:360px;height:360px}
+.pinterest-img{width:200px;height:267px}
+.copy-block{background:#111;border:1px solid var(--border);border-radius:8px;padding:16px 20px;font-size:14px;white-space:pre-wrap;word-wrap:break-word;max-height:300px;overflow-y:auto;margin-top:8px;line-height:1.7}
+.copy-block::-webkit-scrollbar{width:4px}
+.copy-block::-webkit-scrollbar-thumb{background:#444;border-radius:2px}
+.copy-label{font-size:12px;color:var(--muted);margin-bottom:4px;font-weight:600}
+.platform-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.platform-grid{grid-template-columns:1fr}}
+.carousel-section{margin-bottom:16px}
+.carousel-labels{display:flex;gap:12px;margin-top:4px;flex-wrap:wrap}
+.carousel-labels span{font-size:11px;color:var(--muted);background:#1a1a1a;padding:2px 8px;border-radius:4px}
+.divider{border:none;border-top:1px solid var(--border);margin:24px 0}
+.live-badge{font-size:11px;background:#22c55e22;color:var(--approve);padding:2px 8px;border-radius:4px;margin-left:8px}
+.essay-link{color:var(--accent);text-decoration:none;font-size:13px}
+.essay-link:hover{text-decoration:underline}
+#export-btn{position:fixed;bottom:24px;right:24px;background:var(--accent);color:#000;border:none;padding:14px 28px;border-radius:8px;font-size:15px;font-weight:700;cursor:pointer;z-index:100;box-shadow:0 4px 20px rgba(200,255,0,.3)}
+#export-btn:hover{transform:scale(1.03)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Masters X &mdash; Social Media Preview (Revised)</h1>
+  <p>Jason Carroll Holloway &middot; Seventh City Press &middot; 7 Slots &times; 5 Platforms &middot; Panel-audited copy &amp; regenerated images</p>
+  <div class="summary-bar">
+    <span class="stat approved" id="count-approved">0 Approved</span>
+    <span class="stat pending" id="count-pending">7 Pending</span>
+    <span class="stat rejected" id="count-rejected">0 Rejected</span>
+  </div>
+</header>
+
+<main id="main"></main>
+
+<button id="export-btn" onclick="exportApprovals()">Export Approvals &darr;</button>
+
+<script>
+const SLOTS = [
+  {
+    num: 1,
+    title: "The Frequency That Was Already There",
+    essay: "01",
+    url: "/blog/the-frequency-that-was-already-there/",
+    fieldNote: "/field-notes/111-hz/",
+    live: true,
+    igSlides: 6,
+    igCaptions: [
+      "f = 111.2 Hz, a footer stamp on a manuscript page",
+      "Malta, 3600 BCE — Hypogeum, 80 visitors a day, resonance documented near 110 Hz",
+      "Britain and Ireland — Neolithic chambers, peaks in the 95 to 120 Hz band",
+      "Lascaux — Paintings cluster where the resonance is strongest",
+      "The caveat — One small-sample study is not a finding. The literature is real and thin.",
+      "The decimal is the fiction — 110 is theirs. 111.2 is mine. Full essay in bio."
+    ],
+    x_a: `Every page of the Distribution File in my trilogy carries the same footer: f = 111.2 Hz.
+
+The number is fiction. The stone under it isn't.
+
+Archaeoacousticians have documented a resonance near 110 Hz in Neolithic chambers from Malta to Scotland. The extra decimal is the fiction signing its own work.
+
+jasoncholloway.com/blog/the-frequency-that-was-already-there/`,
+    x_b: `Why 111.2 and not 110?
+
+Because 110 Hz belongs to the archaeoacousticians. They measured a resonance. They did not measure a fictional tremor, a protocol, or a chamber.
+
+One decimal past the real number is the fiction signing its own work.`,
+    bluesky: `Every page of the Distribution File carries the same footer: f = 111.2 Hz. If the trilogy has a heartbeat, that is it.
+
+Here is what I found during the research. Archaeoacoustics, a small and careful field, has documented a recurring resonance near 110 Hz in ancient stone chambers, including the Ħal-Saflieni Hypogeum in Malta, Neolithic sites across Britain and Ireland, and painted zones at Lascaux. That literature is real, and thinner than a thriller needs it to be.
+
+111.2 Hz is mine. The decimal is deliberate: close enough to honor the source, distinct enough that no one mistakes invention for measurement.
+
+Full essay: jasoncholloway.com/blog/the-frequency-that-was-already-there/
+Research: jasoncholloway.com/field-notes/111-hz/`,
+    ig: `110 Hz is measured. 111.2 Hz is mine.
+
+The Ħal-Saflieni Hypogeum is an underground temple complex in Malta, carved from limestone somewhere between 3600 and 2500 BCE. Eighty visitors a day are allowed inside. In the Oracle Chamber, researchers have documented a pronounced resonance around 110 to 111 Hz.
+
+Paul Devereux and colleagues found peak frequencies in the 95 to 120 Hz band at Neolithic chambers across Britain and Ireland. Reznikoff and Dauvois noticed that Palaeolithic paintings cluster in the most acoustically resonant zones of French caves.
+
+That is the documented part, caveats included. The neurological study often cited had a small sample, and one study is one study.
+
+The trilogy runs on 111.2 Hz instead. The extra decimal is the fiction signing its own work: close enough to honor the research, far enough that nobody mistakes my invention for their measurement.
+
+Full essay linked in bio. Research layer at jasoncholloway.com/field-notes/111-hz/`,
+    fb: `Every page of the Distribution File in my trilogy carries the same footer: f = 111.2 Hz.
+
+The number is fiction. The stone under it isn't.
+
+Archaeoacousticians have documented a resonance near 110 Hz in Neolithic chambers from Malta to Scotland. The extra decimal is the fiction signing its own work.
+
+jasoncholloway.com/blog/the-frequency-that-was-already-there/`
+  },
+  {
+    num: 2,
+    title: "Sound Into Form: What Hans Jenny Actually Proved",
+    essay: "03",
+    url: "/blog/sound-into-form-hans-jenny/",
+    fieldNote: "/field-notes/cymatics/",
+    live: false,
+    igSlides: 6,
+    igCaptions: [
+      "1787 — A plate, a bow, a spoonful of sand",
+      "Nodal lines — The figure is a map of where the plate is still",
+      "Jenny, 1967 — Oscillators replace bows; Kymatik published",
+      "800 to 865 cps — The pattern does not adjust. It transforms.",
+      "Turn the tone off — The pattern collapses. Order is maintained, not built.",
+      "Where the record ends — Sound makes form: measured. Form remakes the observer: invented."
+    ],
+    x_a: `The oldest special effect in my trilogy needs no computer.
+
+A metal plate. A violin bow. A spoonful of sand.
+
+Draw the bow and the sand jumps into a geometric figure. Chladni demonstrated it in 1787. You can do it on your kitchen table tonight.
+
+jasoncholloway.com/blog/sound-into-form-hans-jenny/`,
+    x_b: `1/ Hans Jenny found that shifting a tone from 800 to 865 cycles per second does not adjust the pattern in the medium. It transforms it into a categorically different figure.
+
+2/ That is why the trilogy's 111.2 Hz cannot be swapped for 111 or 112. In a world where sound makes form, decimals are not decoration.
+
+3/ What Jenny did not prove: anything about healing frequencies, water memory, or consciousness. Sound organizes matter. That the resulting geometry reorganizes the observer is my invention, and the novels say so.`,
+    bluesky: `Ernst Chladni, 1787: bow a sand-covered metal plate and the sand collects on the nodal lines, the places where the plate is still. The figure you see is a map of the silence.
+
+Hans Jenny turned that parlor demonstration into a research program in the 1960s, swapping crystal oscillators for violin bows and publishing Kymatik. Two findings carried into my trilogy: patterns are exquisitely sensitive to frequency, and they collapse the moment the tone stops. Order is maintained, not built.
+
+Where the record ends: there is no evidence that viewing a cymatics pattern does anything to consciousness. That claim is the novels', not the science.
+
+jasoncholloway.com/blog/sound-into-form-hans-jenny/`,
+    ig: `Sound has shapes. That part is not mystical. It is 1787.
+
+Ernst Chladni drew a violin bow along a sand-covered metal plate and showed that the sand migrates to the nodal lines, the regions where the plate is not moving. Change the frequency, change the figure. Anyone can reproduce it.
+
+Hans Jenny, a Swiss physician, spent the 1960s turning that demonstration into a discipline he named cymatics. He documented how a shift from 800 to 865 cycles per second transforms a pattern rather than nudging it, and how patterns collapse when the tone stops and return identically when it resumes.
+
+That is the real floor under everything strange in my trilogy. Here is the ceiling: nothing in the research says that looking at one of these patterns changes the person looking. The novels claim it does. That claim is mine, and I would rather name it than let it pass as physics.
+
+Essay linked in bio. Research at jasoncholloway.com/field-notes/cymatics/`,
+    fb: `The oldest special effect in my trilogy needs no computer.
+
+A metal plate. A violin bow. A spoonful of sand.
+
+Draw the bow and the sand jumps into a geometric figure. Chladni demonstrated it in 1787. You can do it on your kitchen table tonight.
+
+jasoncholloway.com/blog/sound-into-form-hans-jenny/`
+  },
+  {
+    num: 3,
+    title: "Why Kansas City? The Ground Itself Is Significant",
+    essay: "04",
+    url: "/blog/why-kansas-city/",
+    fieldNote: "/field-notes/kansas-city-locations/",
+    live: false,
+    igSlides: 7,
+    igCaptions: [
+      "Why Kansas City? — Four traditions, one riverbank",
+      "c. 100 BCE to 700 CE — Hopewell mounds with stone-vault chambers inside",
+      "Wah-kon-tah — The Osage name for the connecting mystery",
+      "August 3, 1831 — Sixty-three acres dedicated in Independence. Temple never built. Lot still mowed.",
+      "Bethany Falls limestone — Quarried out; 55M sq ft of excavated footprint below the city",
+      "The gap — No published acoustics study of the KC underground. Sited, not sourced.",
+      "Full essay in bio — The reader's map is in the Field Notes"
+    ],
+    x_a: `I set a conspiracy trilogy in Kansas City, and I expected it would read as hometown convenience.
+
+Then the research started. Around the second century, people on these river bluffs were building stone-vault tombs: rooms with doorways, sealed inside burial mounds.
+
+Chamber-building here predates Rome's fall.
+
+jasoncholloway.com/blog/why-kansas-city/`,
+    x_b: `In 1831 Joseph Smith declared Independence, Missouri the center place of Zion. On August 3, a sixty-three-acre parcel was dedicated for a temple.
+
+The temple was never built. The lot was never abandoned. It is mowed and maintained today, surrounded by three denominations, all with a claim to the same ground.
+
+There is no Temple Lot scene in my trilogy. Some places exert gravity without appearing.`,
+    bluesky: `Why Kansas City? The honest answer is that I started with convenience and ended with something stranger.
+
+Roughly thirty Hopewell-tradition sites are documented in the area, some containing stone-vault tombs: constructed chambers with doorways, built inside the earthworks. That is chamber-building on this ground with a two-thousand-year head start on me.
+
+Add the Osage concept of Wah-kon-tah, the sacred mystery that connects everything, practiced rather than notated. Add a sixty-three-acre parcel in Independence dedicated as the center place of Zion in 1831 and still maintained. Add Bethany Falls limestone, quarried out from under the city until the empty chambers became the largest underground business complex in the world.
+
+The honest gap: nobody has published an acoustics study of the Kansas City underground. My fiction is sited here, not sourced here.
+
+jasoncholloway.com/blog/why-kansas-city/`,
+    ig: `Four traditions looked at the same thirty miles of Missouri river bluff and decided, in vocabularies that never borrowed from each other, that this ground matters.
+
+The Hopewell built rooms inside their burial mounds here: stone-vault tombs with doorways, roughly thirty documented sites at the westernmost edge of the tradition.
+
+The Osage, whose historic corridor runs through western Missouri, carry the concept of Wah-kon-tah, the sacred mystery that connects everything. Practiced, not notated. My trilogy is about people building machinery to reach something one of this continent's older traditions simply did.
+
+In 1831 Independence was declared the center place of Zion, and a sixty-three-acre parcel was dedicated for a temple that was never built. The lot is still mowed.
+
+Underneath all of it: Bethany Falls limestone, quarried until the hollowed chambers became SubTropolis, where about seventeen hundred people go to work underground every day.
+
+And the gap I will not paper over: no one has published an acoustics study of the Kansas City underground. The novel is sited here. It is not sourced here.
+
+Essay in bio \u00b7 jasoncholloway.com/field-notes/kansas-city-locations/`,
+    fb: `I set a conspiracy trilogy in Kansas City, and I expected it would read as hometown convenience.
+
+Then the research started. Around the second century, people on these river bluffs were building stone-vault tombs: rooms with doorways, sealed inside burial mounds.
+
+Chamber-building here predates Rome's fall.
+
+jasoncholloway.com/blog/why-kansas-city/`
+  },
+  {
+    num: 4,
+    title: "The Grimoire That Was Actually a Study Aid",
+    essay: "02",
+    url: "/blog/the-grimoire-that-was-a-study-aid/",
+    fieldNote: "/field-notes/ars-notoria/",
+    live: false,
+    igSlides: 6,
+    igCaptions: [
+      "Condemned as cheating — Not devil-worship",
+      "The Ars Notoria — 13th century, Solomonic tradition, MS Sloane 1712",
+      "What it promises — The seven liberal arts, accelerated",
+      "The notae — Geometric figures meant to be gazed at, not read",
+      "How a banned book survives — It goes expensive: good vellum, careful scribes, centuries",
+      "What I invented — That it works. Full essay in bio."
+    ],
+    x_a: `The medieval Church condemned the Ars Notoria. Not for devil-worship, but for cheating.
+
+The manuscript promised the seven liberal arts through contemplation of geometric figures and scheduled prayer. Knowledge without the sanctioned labor of study.
+
+It is real. British Library, MS Sloane 1712.
+
+jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/`,
+    x_b: `Describe the Ars Notoria method operationally: extended contemplation of complex figures, recitation on a fixed schedule, repetition across months, a curriculum sequenced foundational to advanced.
+
+Strip the medieval vocabulary away and what remains looks a lot like elaborative encoding and spaced repetition. Whether that resemblance is meaningful or coincidental is a question nobody has formally tested.`,
+    bluesky: `I did not invent the manuscript at the center of my trilogy. The Ars Notoria is real, catalogued, and requestable at the British Library.
+
+What it promises is the strange part: rapid acquisition of the seven liberal arts through contemplation of geometric figures called notae, combined with specific prayers on a prescribed schedule. Not wealth. Not power over demons. Knowledge and memory, on an accelerated timetable. A thirteenth-century manual for learning faster.
+
+It was condemned by the Inquisition and by Albertus Magnus, on the grounds that it was an illicit shortcut.
+
+What I invented is narrow: that it works.
+
+jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/`,
+    ig: `A medieval grimoire condemned as cheating.
+
+The Ars Notoria belongs to the Solomonic tradition, with surviving manuscripts from the mid-thirteenth century, institutional copies including British Library MS Sloane 1712, and an English translation by Robert Turner in 1657. Claire Fanger and Juli\u00e9n V\u00e9ron\u00e8se have spent careers on it.
+
+Its promise: the seven liberal arts, meaning grammar, rhetoric, logic, arithmetic, geometry, music, and astronomy, acquired through structured contemplation of dense geometric figures paired with scheduled prayer.
+
+The condemnation was not about demons. It was about shortcuts: knowledge obtained without the sanctioned labor of study.
+
+And condemned books in the manuscript era did not vanish. They went expensive, copied on good vellum for centuries by patrons who privately decided the text was worth the risk.
+
+Everything above is on the record. What my trilogy adds is one claim: that the method works, and here is how. No historian claims that. No cognitive scientist claims that. It is the one experiment the lab has never run, and that gap is where the fiction lives.
+
+Essay in bio \u00b7 jasoncholloway.com/field-notes/ars-notoria/`,
+    fb: `The medieval Church condemned the Ars Notoria. Not for devil-worship, but for cheating.
+
+The manuscript promised the seven liberal arts through contemplation of geometric figures and scheduled prayer. Knowledge without the sanctioned labor of study.
+
+It is real. British Library, MS Sloane 1712.
+
+jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/`
+  },
+  {
+    num: 5,
+    title: "The Stone Remembers: A Fire in Westport",
+    essay: "07",
+    url: "/blog/the-stone-remembers/",
+    fieldNote: "/field-notes/kansas-city-locations/",
+    live: false,
+    igSlides: 6,
+    igCaptions: [
+      "2011 — Westport Presbyterian burns",
+      "What the fire took — Roof, sanctuary, woodwork, 107 years of interior",
+      "What stood — The 1904 limestone walls",
+      "They rebuilt inside them — The contents were erased; the fact was mineral",
+      "The correction — The cathedral I called limestone is red brick. The research pass caught me.",
+      "\"The stone remembers.\" — Written before the fire was found. Full essay in bio."
+    ],
+    x_a: `In 2011 a Kansas City church burned. The fire took the roof, the sanctuary, the woodwork, everything a hundred and seven years had accumulated inside.
+
+The 1904 limestone walls stood.
+
+"The stone remembers" was in my manuscript before I found the fire. The fire was already on the public record.
+
+jasoncholloway.com/blog/the-stone-remembers/`,
+    x_b: `An early draft described the Cathedral of the Immaculate Conception as limestone. Seemed safe, since this is a limestone city.
+
+It is red brick. 1882 to 1912, with the gold dome added in 1960. The research pass caught it.
+
+I am grateful it did. Getting the physical city right matters to me more than almost anything else in this project.`,
+    bluesky: `Two Kansas City buildings, one editorial lesson.
+
+First, a correction. An early draft described the Cathedral of the Immaculate Conception as limestone, because this is a limestone city and I did not check carefully enough. It is red brick, built 1882 to 1912, with a gold-leaf dome added in 1960. The research pass caught me. The corrected fact turned out richer than the assumption: a brick cathedral wearing a gold crown on the highest bluff above a floodplain is a more precise image of this city than another limestone facade.
+
+Second, a fire. Westport Presbyterian burned in 2011. Roof gone, interior gone, the 1904 limestone walls standing. The congregation rebuilt inside them.
+
+Father Moreau's line "the stone remembers" was written before I found that fire. The fire is documented. Putting the line in a priest's mouth is invention. The resonance is yours to keep.
+
+jasoncholloway.com/blog/the-stone-remembers/`,
+    ig: `The fire took everything except the walls.
+
+Westport Presbyterian Church was built in 1904, in the neighborhood that was once the last outfitting stop for wagon trains heading west. In 2011 it burned. Roof, sanctuary, woodwork, a century of accumulated interior, all gone. Photographs from the next morning show the 1904 limestone standing at full height around a burned-out shell, smoke-darkened and roofless.
+
+The congregation rebuilt inside the standing walls. The fire could erase the contents but not the fact of the church, because the fact was mineral.
+
+"The stone remembers" was in my manuscript before I found the fire. It had been sitting there, a metaphor waiting on a warrant. Too round, too quotable, the kind of line a novelist should distrust. Then a research pass turned up this fire four miles from my desk, and the warrant had been on the public record the whole time.
+
+Nothing was predicted. Church fires are not rare. What changed was the line's standing: a metaphor that earned its keep.
+
+Essay in bio \u00b7 jasoncholloway.com/field-notes/kansas-city-locations/`,
+    fb: `In 2011 a Kansas City church burned. The fire took the roof, the sanctuary, the woodwork, everything a hundred and seven years had accumulated inside.
+
+The 1904 limestone walls stood.
+
+"The stone remembers" was in my manuscript before I found the fire. The fire was already on the public record.
+
+jasoncholloway.com/blog/the-stone-remembers/`
+  },
+  {
+    num: 6,
+    title: "Three Factions, One Declassified Document",
+    essay: "06",
+    url: "/blog/three-factions-one-declassified-document/",
+    fieldNote: "/field-notes/",
+    live: false,
+    igSlides: 6,
+    igCaptions: [
+      "1984 — A translation, not an assessment",
+      "The asymmetry — One state published. The other classified its reading.",
+      "Suppress — Stop the work, discredit the workers",
+      "Verify — Publish the methods, replicate, let it die in daylight",
+      "Attend — Military interest follows any applicable capacity",
+      "The caveat — The three-way sort is my reading of the file, not a heading in it"
+    ],
+    x_a: `In 1984, American intelligence translated a Chinese government journal on paranormal research and filed the translation.
+
+Two governments, one subject, opposite policies. One published. The other classified the act of reading.
+
+That asymmetry is the politics of my entire trilogy.
+
+jasoncholloway.com/blog/three-factions-one-declassified-document/`,
+    x_b: `1/ The trilogy's three factions, the Keepers, the Custodians, and the Completion Sect, were not engineered for plot. I found the positions already in the record, already arguing.
+
+2/ The three stances: suppress the research, verify it in the open, or apply it. The translated material contains people arguing about all three.
+
+3/ My caveat, since it matters: the three-way sort is my reading of the translated material, not a heading inside it. The file is public. If someone reads it differently, I would want to know.`,
+    bluesky: `A translation is stranger than a report, and that is why this document ended up structuring my trilogy.
+
+Intelligence agencies produce assessments of paranormal claims, complete with findings and confidence levels and recommendations. Those read exactly as you would expect. What I found instead was raw open literature from one government, carried across a language barrier and filed by another in 1984.
+
+A summary gives you conclusions. A translation gives you people arguing, in their own voices, because nobody smoothed them out. Factions are made of people arguing.
+
+The three positions I take from it, suppress and verify and apply, are my reading rather than a heading in the file. The document is public and I would rather say that than defend a tidy structure.
+
+jasoncholloway.com/blog/three-factions-one-declassified-document/`,
+    ig: `One government published. The other classified the act of reading.
+
+In 1984 American intelligence took a Chinese government journal on paranormal research, translated it for internal circulation, and filed it. On one side: a state research establishment studying claims of extraordinary human capacities in the open, with a commission, conferences, funded experiments, and a journal you could subscribe to. On the other: an agency that reads the journal and stamps the translation.
+
+Two governments, one subject, opposite policies. That asymmetry is the political physics of my whole trilogy, and it came from the record rather than from me.
+
+Inside the translated material the debate sorts into three postures: suppress the work, verify it in daylight, or attend to what it might be used for. Those became the Custodians, the Keepers, and the Completion Sect.
+
+One caveat: the three-way sort is my reading, not a heading in the document. The file is public. Anyone who reads it differently has something worth hearing.
+
+Essay linked in bio.`,
+    fb: `In 1984, American intelligence translated a Chinese government journal on paranormal research and filed the translation.
+
+Two governments, one subject, opposite policies. One published. The other classified the act of reading.
+
+That asymmetry is the politics of my entire trilogy.
+
+jasoncholloway.com/blog/three-factions-one-declassified-document/`
+  },
+  {
+    num: 7,
+    title: "A Document That Cannot Be Un-Released",
+    essay: "08",
+    url: "/blog/a-document-that-cannot-be-unreleased/",
+    fieldNote: "/field-notes/subtropolis/",
+    live: false,
+    igSlides: 6,
+    igCaptions: [
+      "247 pages. Midnight. CC0.",
+      "Not a confrontation — A conspiracy trilogy that ends with a file format",
+      "Why leaking fails — It preserves scarcity and relocates the power",
+      "Make the work boring — Documented, reproducible, free",
+      "Public domain is a one-way door — The file cannot be un-released",
+      "Invented, and labeled — The file is fiction. CC0 and open science are not."
+    ],
+    x_a: `My conspiracy trilogy ends with a license.
+
+Not a chamber stormed, not a patriarch unmasked. A 247-page file goes onto the open internet at midnight under CC0, and an eight-hundred-year war loses its object.
+
+jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/`,
+    x_b: `1/ The intuitive opposite of classification is leaking. My trilogy argues that is wrong.
+
+2/ A leak preserves everything that gives a secret power: the scarcity, the drama, the sorting of people into those who know and those who don't. It just relocates the power to whoever leaked.
+
+3/ The actual opposite of classification is making the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from.`,
+    bluesky: `Endings resolve pressure. For two and a half books the pressure in my trilogy is scarcity: one protocol, three factions, each defined by its answer to who may know.
+
+A confrontation ending would have resolved a battle and left the scarcity untouched. Whoever wins the chamber becomes the next custodian and the cycle continues, one victor older.
+
+The only ending that discharges that pressure destroys the scarcity itself, and scarcity of information is destroyed by exactly one instrument: unrestricted copying. So the trilogy ends with a CC0 dedication. The midnight timestamp is drama. The license is the plot.
+
+The file is invented, down to every download figure in its front matter. The tradition it argues from, meaning reproducibility and public archives and methods detailed enough for strangers to replicate, is not.
+
+jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/`,
+    ig: `The trilogy ends with a license.
+
+Two hundred forty-seven pages go onto the open internet at midnight under CC0, the license that reserves nothing, not even attribution. An eight-hundred-year war over a secret simply loses its object.
+
+The argument inside the fiction: the intuitive opposite of classification is leaking, and that intuition is wrong. A leak preserves the scarcity that gives a secret its power and merely relocates that power to whoever leaked. The mystery survives its own exposure. Often it grows.
+
+The actual opposite of classification is to make the work boring. Documented to the point of tedium, reproducible by strangers, free to the point of worthlessness as property. Nothing left to guard, nobody left to guard it from.
+
+The file is fiction. The pages, the downloads, the replications, invented down to the digit. CC0 is real, and so is the tradition the ending argues from: open science, public archives, methods sections detailed enough that a stranger can check you.
+
+Essay linked in bio.`,
+    fb: `My conspiracy trilogy ends with a license.
+
+Not a chamber stormed, not a patriarch unmasked. A 247-page file goes onto the open internet at midnight under CC0, and an eight-hundred-year war loses its object.
+
+jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/`
+  }
+];
+
+const IMG_BASE = "public/social/imagen";
+const heroFiles = {
+  1: "slot1-frequency-hero.png",
+  2: "slot2-cymatics-hero.png",
+  3: "slot3-kansas-city-hero.png",
+  4: "slot4-ars-notoria-hero.png",
+  5: "slot5-stone-remembers-hero.png",
+  6: "slot6-three-factions-hero.png",
+  7: "slot7-unreleased-hero.png"
+};
+const pinFiles = {
+  1: "pinterest-slot1-frequency.png",
+  2: "pinterest-slot2-cymatics.png",
+  3: "pinterest-slot3-kansas-city.png",
+  4: "pinterest-slot4-ars-notoria.png",
+  5: "pinterest-slot5-stone-remembers.png",
+  6: "pinterest-slot6-three-factions.png",
+  7: "pinterest-slot7-unreleased.png"
+};
+
+const approvals = {};
+SLOTS.forEach(s => approvals[s.num] = "pending");
+
+function escapeHtml(t) {
+  return t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+}
+
+function renderSlot(s) {
+  const igImgs = Array.from({length: s.igSlides}, (_, i) => {
+    const n = String(i+1).padStart(2,"0");
+    return `<div class="img-card"><img class="carousel-img" src="${IMG_BASE}/slot${s.num}/ig-slot${s.num}-slide${n}.png" alt="Slide ${i+1}" loading="lazy"><div class="img-label">Slide ${i+1}</div></div>`;
+  }).join("");
+  
+  const heroImg = `<div class="img-card"><img class="hero-img" src="${IMG_BASE}/slot${s.num}/${heroFiles[s.num]}" alt="Hero" loading="lazy"><div class="img-label">Hero (X / FB / Bluesky)</div></div>`;
+  const pinImg = `<div class="img-card"><img class="pinterest-img" src="${IMG_BASE}/slot${s.num}/${pinFiles[s.num]}" alt="Pinterest" loading="lazy"><div class="img-label">Pinterest</div></div>`;
+
+  return `
+<div class="slot" id="slot-${s.num}" data-slot="${s.num}">
+  <div class="slot-header">
+    <div>
+      <h2><span class="slot-num">SLOT ${s.num}</span> ${escapeHtml(s.title)}${s.live ? '<span class="live-badge">LIVE</span>' : ''}</h2>
+      <a class="essay-link" href="https://jasoncholloway.com${s.url}" target="_blank">Essay ${s.essay} &rarr; jasoncholloway.com${s.url}</a>
+    </div>
+    <div class="approval-controls">
+      <button class="btn-approve" onclick="setApproval(${s.num},'approved')">Approve</button>
+      <button class="btn-reject" onclick="setApproval(${s.num},'rejected')">Reject</button>
+      <span class="status-label" id="status-${s.num}" style="color:var(--pending);border:1px solid var(--pending)">PENDING</span>
+    </div>
+  </div>
+  <div class="slot-body">
+    
+    <div class="platform-section">
+      <div class="platform-label">Instagram Carousel (${s.igSlides} slides)</div>
+      <div class="images-row">${igImgs}</div>
+      <div class="carousel-labels">${s.igCaptions.map((c,i) => `<span>${i+1}. ${escapeHtml(c)}</span>`).join("")}</div>
+      <div style="margin-top:12px">
+        <div class="copy-label">INSTAGRAM CAPTION</div>
+        <div class="copy-block">${escapeHtml(s.ig)}</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="platform-section">
+      <div class="platform-label">Hero Image (X / Facebook / Bluesky)</div>
+      <div class="images-row">${heroImg}${pinImg}</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="platform-section">
+      <div class="platform-label">Post Copy by Platform</div>
+      <div class="platform-grid">
+        <div>
+          <div class="copy-label">X (TWITTER) &mdash; POST A</div>
+          <div class="copy-block">${escapeHtml(s.x_a)}</div>
+          <div class="copy-label" style="margin-top:12px">X (TWITTER) &mdash; POST B</div>
+          <div class="copy-block">${escapeHtml(s.x_b)}</div>
+        </div>
+        <div>
+          <div class="copy-label">BLUESKY</div>
+          <div class="copy-block">${escapeHtml(s.bluesky)}</div>
+        </div>
+        <div>
+          <div class="copy-label">FACEBOOK</div>
+          <div class="copy-block">${escapeHtml(s.fb)}</div>
+        </div>
+        <div>
+          <div class="copy-label">PINTEREST</div>
+          <div class="copy-block">Pin image: ${pinFiles[s.num]}
+Blog link: jasoncholloway.com${s.url}
+Board: Masters X Trilogy</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>`;
+}
+
+function updateCounts() {
+  const vals = Object.values(approvals);
+  document.getElementById("count-approved").textContent = vals.filter(v=>v==="approved").length + " Approved";
+  document.getElementById("count-pending").textContent = vals.filter(v=>v==="pending").length + " Pending";
+  document.getElementById("count-rejected").textContent = vals.filter(v=>v==="rejected").length + " Rejected";
+}
+
+function setApproval(num, status) {
+  approvals[num] = status;
+  const label = document.getElementById("status-" + num);
+  const colors = {approved: "var(--approve)", rejected: "var(--reject)", pending: "var(--pending)"};
+  label.textContent = status.toUpperCase();
+  label.style.color = colors[status];
+  label.style.borderColor = colors[status];
+  const slot = document.getElementById("slot-" + num);
+  slot.style.borderColor = status === "approved" ? "var(--approve)" : status === "rejected" ? "var(--reject)" : "var(--border)";
+  updateCounts();
+  localStorage.setItem("mx-approvals", JSON.stringify(approvals));
+}
+
+function exportApprovals() {
+  const lines = SLOTS.map(s => `Slot ${s.num}: ${s.title} — ${approvals[s.num].toUpperCase()}`);
+  const text = "Masters X Social Media Approvals\n" + new Date().toISOString() + "\n\n" + lines.join("\n");
+  const blob = new Blob([text], {type: "text/plain"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "social-approvals.txt";
+  a.click();
+}
+
+function init() {
+  const saved = localStorage.getItem("mx-approvals");
+  if (saved) { try { Object.assign(approvals, JSON.parse(saved)); } catch {} }
+  document.getElementById("main").innerHTML = SLOTS.map(renderSlot).join("");
+  SLOTS.forEach(s => { if (approvals[s.num] !== "pending") setApproval(s.num, approvals[s.num]); });
+  updateCounts();
+}
+
+init();
+</script>
+</body>
+</html>

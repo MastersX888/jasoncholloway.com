@@ -1,0 +1,442 @@
+{
+  "started_at": "2026-07-27T22:10:20.883658+00:00",
+  "mode": "suite_content_native",
+  "required_account": "Jason Carroll Holloway",
+  "fb_attempts": [
+    {
+      "marker": "122097149271290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097148227290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097146733290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097145863290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097144261290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097141645290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    },
+    {
+      "marker": "122097140487290334",
+      "kind": "fb",
+      "ok": false,
+      "error": "no delete in menu: []",
+      "chose": null
+    }
+  ],
+  "ig_attempts": [
+    {
+      "marker": "DbRCSJoF1iy",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRCDsjl4IG",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRB38zl8LU",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBrbTl01E",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBb7IDdeh",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBLzSjUpX",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRA7wTDZvY",
+      "kind": "ig",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRCSJoF1iy",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRCDsjl4IG",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRB38zl8LU",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBrbTl01E",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBb7IDdeh",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRBLzSjUpX",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    },
+    {
+      "marker": "DbRA7wTDZvY",
+      "kind": "ig-search",
+      "ok": false,
+      "error": "row/menu not found for marker",
+      "chose": null
+    }
+  ],
+  "errors": [
+    "ig search DbRBLzSjUpX: Locator.fill: Timeout 2000ms exceeded.\nCall log:\n  - waiting for locator(\"input[placeholder*='Search'], input[type='search'], input[aria-label*='Search']\").first\n    - locator resolved to <input id=\"js_1e\" type=\"text\" aria-busy=\"false\" value=\"DbRBLzSjUpX\" aria-disabled=\"false\" aria-labelledby=\"js_1f\" data-auto-logging-id=\"f28b073c6\" placeholder=\"Search by ID or caption\" class=\"xjbqb8w x972fbf x10w94by x1qhh985 x14e42zd xdj266r x14z9mp xat24cr x1lziwak x1t137rt xexx8yu xyri2b x18d9i69 x1c1uobl xwd1esu x1gnnqk1 xbsr9hj x1urst0s x1glnyev x1ad04t7 x1ix68h3 x19gujb8 xni1clt x1tutvks xfrpkgu x1vvvo52 x1fvot60 xo1l8bm xxio538 x1rffpxw xh8yej3 x10emqs4\"/>\n"
+  ],
+  "login_ok": true,
+  "scan_fb": {
+    "storyIds": [
+      "122097503781290334",
+      "122097503337290334",
+      "122097506799290334",
+      "122097505647290334",
+      "122097149259290334",
+      "122097504543290334",
+      "122097507567290334",
+      "122097506331290334",
+      "122097148179290334",
+      "122097507585290334",
+      "122097506853290334",
+      "122097506355290334",
+      "122097505695290334",
+      "122097504603290334",
+      "122097503799290334",
+      "122097503355290334",
+      "122097149271290334",
+      "122097148227290334",
+      "122097146733290334",
+      "122097145863290334",
+      "122097144261290334",
+      "122097141645290334",
+      "122097140487290334"
+    ],
+    "shortcodes": [
+      "DbGllbnRTY3Jpc",
+      "DbfjOftY0d",
+      "DbuX10q9SZTrqA",
+      "DbEe73pxVR4S_e",
+      "DbGlja3MiKSkuY",
+      "DbGlja3MiKSkua",
+      "DbGlja3NfZnJhZ",
+      "Db21tZW50c19mc",
+      "Db250ZW50TGlua",
+      "Db21tZW50cy5yZ"
+    ],
+    "hrefs": [
+      "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/active_stories?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/ab_testing?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/feed_and_grid?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/tagged_content?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/all_clips?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/playlists?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/series?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/videos_you_can_crosspost?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/home?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/inbox?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/creator_marketplace?asset_id=1224164874114610&cm_entrypoint=biz_kit_nav_route_item",
+      "https://business.facebook.com/latest/leads_center?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/content_calendar?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/ad_center/ads_summary?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/insights?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/settings/profiles?asset_id=1224164874114610"
+    ],
+    "menus": [
+      "More"
+    ],
+    "title": "Meta Business Suite",
+    "textSample": "Content\nSchedule, publish and manage posts, reels and stories, and more.\nExport data\nOpen export options\n\u200b\nCreate reel\nCreate post\nCreate post\n\u200b\nContent\nPosts & reels\nStories\nA/B tests\nFeed & grid\nMentions & tags\nClips\nCollections\nPlaylists\nSeries\nCreative assets\nVideos you can crosspost\nCollapse\n\u200b\nPublished\nScheduled\nDrafts\nExpiring\nExpired\nAd Posts\nFilter\nFilter\n\u200b\nSearch by ID or caption\n\u200b\n\u200b\nLast 90 days\nColumns\n\u200b\nTitle\nDate published\nStatus\nReach\n\u200b\nViews\n\u200b\nViewers\n\u200b\nFollows\n\u200b\nInteractions\n\u200b\nL"
+  },
+  "ig_switch": {
+    "want": "instagram",
+    "ok": false
+  },
+  "scan_ig": {
+    "storyIds": [
+      "122097507585290334",
+      "122097507567290334",
+      "122097506853290334",
+      "122097506799290334",
+      "122097506355290334",
+      "122097506331290334",
+      "122097505695290334",
+      "122097505647290334",
+      "122097504603290334",
+      "122097504543290334",
+      "122097503799290334",
+      "122097503781290334",
+      "122097503355290334",
+      "122097503337290334",
+      "122097149271290334",
+      "122097149259290334",
+      "122097148227290334",
+      "122097148179290334",
+      "122097146733290334",
+      "122097145863290334",
+      "122097144261290334",
+      "122097141645290334",
+      "122097140487290334"
+    ],
+    "shortcodes": [
+      "DbGllbnRTY3Jpc",
+      "DbfjOftY0d",
+      "DbwZr3TMk8uduA",
+      "DbrhrmidRXwcHs",
+      "DbyKj7yGu_POtU",
+      "DbGlja3MiKSkuY",
+      "DbGlja3MiKSkua",
+      "DbGlja3NfZnJhZ",
+      "Db21tZW50c19mc",
+      "Db250ZW50TGlua",
+      "Db21tZW50cy5yZ"
+    ],
+    "hrefs": [
+      "https://business.facebook.com/latest/posts/published_posts?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/active_stories?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/ab_testing?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/feed_and_grid?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/tagged_content?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/all_clips?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/playlists?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/series?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts/videos_you_can_crosspost?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/home?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/inbox?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/posts?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/creator_marketplace?asset_id=1224164874114610&cm_entrypoint=biz_kit_nav_route_item",
+      "https://business.facebook.com/latest/leads_center?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/content_calendar?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/ad_center/ads_summary?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/insights?asset_id=1224164874114610",
+      "https://business.facebook.com/latest/settings/profiles?asset_id=1224164874114610"
+    ],
+    "menus": [
+      "More"
+    ],
+    "title": "Meta Business Suite",
+    "textSample": "Content\nSchedule, publish and manage posts, reels and stories, and more.\nExport data\nOpen export options\n\u200b\nCreate reel\nCreate post\nCreate post\n\u200b\nContent\nPosts & reels\nStories\nA/B tests\nFeed & grid\nMentions & tags\nClips\nCollections\nPlaylists\nSeries\nCreative assets\nVideos you can crosspost\nCollapse\n\u200b\nPublished\nScheduled\nDrafts\nExpiring\nExpired\nAd Posts\nFilter\nFilter\n\u200b\nSearch by ID or caption\n\u200b\n\u200b\nLast 90 days\nColumns\n\u200b\nTitle\nDate published\nStatus\nReach\n\u200b\nViews\n\u200b\nViewers\n\u200b\nFollows\n\u200b\nInteractions\n\u200b\nL"
+  },
+  "ig_verify_keep": [
+    {
+      "shortcode": "DbSMawbjYH1",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSNYbojjaz",
+      "live": true,
+      "ok": true
+    },
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "fb_verify_keep": [
+    {
+      "id": "1224164874114610_122097506355290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097505695290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503799290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097506853290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097504603290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097503355290334",
+      "live": true,
+      "ok": true
+    },
+    {
+      "id": "1224164874114610_122097507585290334",
+      "live": true,
+      "ok": true
+    }
+  ],
+  "ig_verify_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "live": true,
+      "ok": false
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "fb_verify_old": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "live": true,
+      "ok": false
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "live": true,
+      "ok": false
+    }
+  ],
+  "finished_at": "2026-07-27T22:16:29.078237+00:00"
+}

@@ -1,0 +1,382 @@
+{
+  "started_at": "2026-07-27T14:13:40.389032+00:00",
+  "mode": "precise_menuitem_delete",
+  "fb": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "ok": false,
+      "error": "Page.evaluate: Execution context was destroyed, most likely because of a navigation",
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097149271290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097149271290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097149271290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097149271290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097149271290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097149271290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097149271290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "ok": false,
+      "error": null,
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097148227290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097148227290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097148227290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097148227290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097148227290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097148227290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097148227290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://facebook.com/1224164874114610/posts/122097148227290334",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "ok": false,
+      "error": null,
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097146733290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097146733290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097146733290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097146733290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097146733290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097146733290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097146733290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://facebook.com/1224164874114610/posts/122097146733290334",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "ok": false,
+      "error": "Page.goto: Navigation to \"https://facebook.com/1224164874114610/posts/122097145863290334\" is interrupted by another navigation to \"https://www.facebook.com/\"\nCall log:\n  - navigating to \"https://facebook.com/1224164874114610/posts/122097145863290334\", waiting until \"domcontentloaded\"\n",
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097145863290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097145863290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097145863290334&id=1224164874114610"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097145863290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097145863290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "ok": false,
+      "error": null,
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097144261290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097144261290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097144261290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097144261290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097144261290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097144261290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097144261290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://facebook.com/1224164874114610/posts/122097144261290334",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "ok": false,
+      "error": null,
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097141645290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097141645290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097141645290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097141645290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097141645290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097141645290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097141645290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://facebook.com/1224164874114610/posts/122097141645290334",
+          "opened": null,
+          "items": []
+        }
+      ]
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "ok": false,
+      "error": null,
+      "urls_tried": [
+        "https://www.facebook.com/1224164874114610_122097140487290334",
+        "https://www.facebook.com/permalink.php?story_fbid=122097140487290334&id=1224164874114610",
+        "https://www.facebook.com/story.php?story_fbid=122097140487290334&id=1224164874114610",
+        "https://facebook.com/1224164874114610/posts/122097140487290334"
+      ],
+      "menus": [
+        {
+          "url": "https://www.facebook.com/1224164874114610_122097140487290334",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/permalink.php?story_fbid=122097140487290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://www.facebook.com/story.php?story_fbid=122097140487290334&id=1224164874114610",
+          "opened": null,
+          "items": []
+        },
+        {
+          "url": "https://facebook.com/1224164874114610/posts/122097140487290334",
+          "opened": null,
+          "items": []
+        }
+      ]
+    }
+  ],
+  "ig": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "ok": false,
+      "error": "Delete missing; menu=['Load more comments']"
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "ok": false,
+      "error": "More options missing"
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "ok": false,
+      "error": "More options missing"
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "ok": false,
+      "error": "More options missing"
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "ok": false,
+      "error": "More options missing"
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "ok": false,
+      "error": "More options missing"
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "ok": false,
+      "error": "More options missing"
+    }
+  ],
+  "page_switch": {
+    "clicked": null
+  },
+  "ig_verify_keep": [
+    {
+      "shortcode": "DbSMawbjYH1",
+      "live": true
+    },
+    {
+      "shortcode": "DbSMpa1jXg5",
+      "live": true
+    },
+    {
+      "shortcode": "DbSNLAfDYgS",
+      "live": true
+    },
+    {
+      "shortcode": "DbSMQbcjfSl",
+      "live": true
+    },
+    {
+      "shortcode": "DbSNYbojjaz",
+      "live": true
+    },
+    {
+      "shortcode": "DbSM0wGDWgQ",
+      "live": true
+    },
+    {
+      "shortcode": "DbSM_o4CMVJ",
+      "live": true
+    }
+  ],
+  "fb_verify_keep": [
+    {
+      "id": "1224164874114610_122097506355290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097507585290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097503799290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097504603290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097503355290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097505695290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097506853290334",
+      "live": true
+    }
+  ],
+  "ig_verify_old": [
+    {
+      "shortcode": "DbRCSJoF1iy",
+      "live": true
+    },
+    {
+      "shortcode": "DbRCDsjl4IG",
+      "live": true
+    },
+    {
+      "shortcode": "DbRB38zl8LU",
+      "live": true
+    },
+    {
+      "shortcode": "DbRBrbTl01E",
+      "live": true
+    },
+    {
+      "shortcode": "DbRBb7IDdeh",
+      "live": true
+    },
+    {
+      "shortcode": "DbRBLzSjUpX",
+      "live": true
+    },
+    {
+      "shortcode": "DbRA7wTDZvY",
+      "live": true
+    }
+  ],
+  "fb_verify_old": [
+    {
+      "id": "1224164874114610_122097149271290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097148227290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097146733290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097145863290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097144261290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097141645290334",
+      "live": true
+    },
+    {
+      "id": "1224164874114610_122097140487290334",
+      "live": true
+    }
+  ],
+  "finished_at": "2026-07-27T14:22:21.894177+00:00"
+}

@@ -498,7 +498,7 @@ chambers, the Specchi mirrors, the Iceland field station, the entire
 apparatus she had spent seven years building and defending and funding,
 was a cathedral when a closet would do.
 Emergency board meeting. December. The conference room on the
-second floor of the Washington Street building, the room where Nadia
+third floor of the Washington Street building, the room where Nadia
 had sat through two hundred and seven board meetings since the
 Foundation's incorporation and where she had developed the ability to
 feel the quality of a meeting the way some people feel weather,
@@ -876,9 +876,9 @@ frequency. The broccoli was a vegetable.
 She had been in continuous perception for two and a half years.
  It started during a Foundation cohort session, a planned,
 monitored, clinically supervised exposure to the 333.6 Hz harmonic in
-the basalt chamber. She was Cohort 4, the musician, the oboist whose
-ears had been trained to perceive pitch differences of less than one
-hertz. Andrew had flagged her as a candidate because her auditory
+the Iceland basalt chamber. She was Cohort 4, the musician, the oboist
+whose ears had been trained to perceive pitch differences of less than
+one hertz. Andrew had flagged her as a candidate because her auditory
 discrimination scores were in the 99.8th percentile. She entered the
 
 
@@ -2366,7 +2366,7 @@ remembered everything that pertained to the operational preferences of
 people she managed, which was everyone).
  “The chamber is ready,” she said. “Marcus ran the mirror
 calibration at six. All six surfaces are within 0.3% of the Specchi
-specification. The basalt chamber resonance is stable at 111.2. Andrew,
+specification. The Iceland basalt chamber is stable at 111.2. Andrew,
 the other Andrew, Tanaka, confirmed the satellite uplink from
 Reykjavik. The panel is arriving at seven AM. Sabrina’s pre-screening
 assessments are complete for all twenty-three candidates. The consent
@@ -2388,15 +2388,16 @@ for the preparation, the institutional scaffolding that would hold the
 demonstration upright the way rebar holds concrete, invisible, structural,
 the thing that bears the load without receiving the credit.
  Andrew drank his coffee. The hallway was quiet except for the
-hum. Somewhere below them, 160 feet below, in the SubTropolis
-limestone, in the converted Moreau church basement that had become
-the Foundation’s primary research chamber, the mirrors waited. Six
-parabolic surfaces, each ground to the Specchi specification by the
-Venetian workshop that Eva Černá had contracted, each surface
-carrying a reflective coating whose formula had been published and
-downloaded 14,000 times and that could now be fabricated in São Paulo
-for $340 per square meter but that the Foundation had sourced from
-Venice because some things deserved their original provenance.
+hum. Across town, 160 feet below the Northland bluff, in the
+SubTropolis limestone, in the converted Moreau church basement that
+had become the Foundation’s primary research chamber, the mirrors
+waited. Six parabolic surfaces, each ground to the Specchi
+specification by the Venetian workshop that Eva Černá had contracted,
+each surface carrying a reflective coating whose formula had been
+published and downloaded 14,000 times and that could now be fabricated
+in São Paulo for $340 per square meter but that the Foundation had
+sourced from Venice because some things deserved their original
+provenance.
  “Where’s Blake?” he asked.
  “Home. I told him to sleep. He won’t sleep. He’ll sit at the kitchen
 table and write in the Moleskine and drink coffee and look at his hands
@@ -3106,12 +3107,12 @@ of a bookmark: we were here, we objected, we reserve the right to do
 more.
 But the filing came after the phone call. And the phone call had come at
 1 AM.
- Nadia had been at the Foundation since midnight, the streets of the
-Troost corridor empty, the industrial district's daytime commerce
-replaced by the nocturnal hush of a neighborhood that worked hard and
-slept deeply. The Foundation building's windows glowed against the
-dark brick facades of the surrounding buildings, a single lit structure in a
-block of sleeping commerce.
+ Nadia had been at the Foundation since midnight, the streets of
+Quality Hill empty, the district's daytime commerce replaced by the
+nocturnal hush of a neighborhood that worked hard and slept deeply.
+The Foundation building's windows glowed against the dark brick
+facades of the surrounding buildings, a single lit structure in a block of
+sleeping commerce.
  She parked in her spot. The one closest to the side entrance, not
 marked with her name because she'd vetoed reserved parking as contrary
 to the Foundation's egalitarian principles, but recognized by every
@@ -3123,10 +3124,10 @@ HOLLOWAY
 member of the staff as hers through the accumulated fact of her
 presence. The car's engine ticked as it cooled. The June night air carried
 the humidity and the distant ozone-sweetness of the Missouri River and
-the industrial memory of the West Bottoms, where, 160 feet below
-ground, the Moreau chamber sat in its limestone silence, mirrors
-dormant, the seventy-two-hour resonance still decaying in the geological
-substrate.
+the industrial memory of the West Bottoms below the bluff. Seven miles
+northeast, across the river at SubTropolis, 160 feet down, the Moreau
+chamber sat in its limestone silence, mirrors dormant, the
+seventy-two-hour resonance still decaying in the geological substrate.
  Andrew was still there, running post-demonstration data analysis.
  "Where's Blake?" she asked.
  "SubTropolis. He went back to the chamber at 8 PM. Alone."
@@ -4001,9 +4002,10 @@ She drove to the Foundation.
  October morning. Kansas City traffic sparse at 5:40 AM, the
 occasional truck, the overnight shift workers, the other women who
 were awake before the sun because the world required them. She drove
-down Troost. Past the gas station. Past the church where they'd held the
-first community protocol session. Past the Quality Hill boundary into
-the institutional district.
+the long way. East to Troost. Past the gas station. Past the church
+where they'd held the first community protocol session. Then west on
+Twelfth, across Broadway, up the bluff to Washington Street and the
+institutional district.
  The Foundation parking lot was empty. Her spot, the one nearest
 the door, the one the board had assigned her because she arrived first
 and left last and the proximity was not a privilege but a diagnosis. She
@@ -4210,7 +4212,7 @@ He stopped.
 tell Nadia or Marcus or the twelve or the Foundation board. He simply,
 on a Tuesday morning in October, did not go to UMKC. Did not enter
 Room 204. Did not sit in the thirteenth chair. Did not teach.
- He sat on the Quality Hill balcony.
+ He sat on the Quality Hill porch.
  The porch was old, the original porch, the porch his grandfather
 built, the wood softened by eighty years of Kansas City weather, the
 railings worn smooth by the hands of three generations of Masters men

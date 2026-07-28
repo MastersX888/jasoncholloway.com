@@ -1,0 +1,162 @@
+[
+  {
+    "id": "b1-picture-cave-warren-osage",
+    "book": 1,
+    "ruling": "7B",
+    "note": "Washington County -> Warren County; one-clause Osage ancestral acknowledgment.",
+    "old": " \"Picture Cave,\" she said. \"Washington County, Missouri. Dated to\nat least a thousand years ago. Pre-Columbian. Pre-European.\nPre-Christian.\"",
+    "new": " \"Picture Cave,\" she said. \"Warren County, Missouri. Osage ancestral\nground, sacred to them still. Dated to at least a thousand years ago.\nPre-Columbian. Pre-European. Pre-Christian.\""
+  },
+  {
+    "id": "b1-genessee-address-and-storage-sign",
+    "book": 1,
+    "ruling": "6A",
+    "note": "2847 -> 1647 Genessee (16xx-17xx band); fictional storage company replaces MISSOURI COLD STORAGE CO., which reads as the real KC Cold Storage Co. at 500 E 3rd.",
+    "old": " 2847 Genessee Street looked abandoned. Graffiti on the loading\ndock. Windows covered with plywood. A faded sign: MISSOURI\nCOLD STORAGE CO. 1923.",
+    "new": " 1647 Genessee Street looked abandoned. Graffiti on the loading\ndock. Windows covered with plywood. A faded sign: RIVERWARDS\nCOLD STORAGE CO. 1923."
+  },
+  {
+    "id": "b1-bethany-falls-precote-hunt-midwest",
+    "book": 1,
+    "ruling": "5B",
+    "note": "Bethany Falls is the limestone formation, not a company. Reframed on Midwest Precote / Hunt Midwest public history; no misconduct attributed. Plot point (voids predate the mining) preserved.",
+    "old": " \"SubTropolis wasn't built. It was discovered. The Bethany Falls\nLimestone Company found existing cave systems in the 1940s. The\ncaves Moreau used were there decades before. Centuries before.\"",
+    "new": " \"SubTropolis wasn't built. It was mined. Midwest Precote started\nroom-and-pillar work in the Bethany Falls limestone in the 1940s, and\nHunt Midwest turned the emptied rooms into an underground business\ndistrict twenty years later. But the mining broke into voids nobody\ncut. The caves Moreau used were there decades before. Centuries\nbefore.\""
+  },
+  {
+    "id": "b1-analysis-chamber-address",
+    "book": 1,
+    "ruling": "6A",
+    "note": "Second 2847 Genessee instance renumbered to match.",
+    "old": "The Analysis Chamber lived in the basement of 2847 Genessee Street.",
+    "new": "The Analysis Chamber lived in the basement of 1647 Genessee Street."
+  },
+  {
+    "id": "b1-subtropolis-commercial-depth",
+    "book": 1,
+    "ruling": "3A",
+    "note": "Commercial level 55 ft -> a hundred and fifty feet. Shaft reworded to 'bottomed out at' so the 160 ft reads as total depth below surface rather than 150 + 160.",
+    "old": "condensation. The commercial mining level, SubTropolis proper,\nfifty-five feet below the surface, ended here. Everything below this point\nwas older, deeper, and no longer part of anyone's inventory. The shaft\ndropped a hundred and sixty feet into limestone that had been forming\nsince before anything human existed. The first ten feet were lit by\nAndrew's flashlight. Rust-streaked concrete, bolts driven into bedrock.\nThen the light ended. Below that threshold, darkness. Not the absence\nof light but the presence of stone, the geological weight of 270 million\nyears pressing inward from every direction.",
+    "new": "condensation. The commercial mining level, SubTropolis proper, a\nhundred and fifty feet below the surface, ended here. Everything below\nthis point was older, deeper, and no longer part of anyone's inventory.\nThe shaft bottomed out at a hundred and sixty feet, in limestone that\nhad been forming since before anything human existed. The first ten\nfeet were lit by Andrew's flashlight. Rust-streaked concrete, bolts\ndriven into bedrock. Then the light ended. Below that threshold,\ndarkness. Not the absence of light but the presence of stone, the\ngeological weight of 270 million years pressing inward from every\ndirection."
+  },
+  {
+    "id": "b2-quality-hill-window-pennsylvania",
+    "book": 2,
+    "ruling": "8A",
+    "note": "Troost Avenue is ~2 mi east and not visible from the Quality Hill apartment window; Pennsylvania is the district's residential spine.",
+    "old": "window, Kansas City's February light fell on the buildings of Troost\nAvenue with the indifferent clarity that her city produced in winter,\nsharp, honest light that showed surfaces as they were without the\nkindness of cloud-filtered diffusion.",
+    "new": "window, Kansas City's February light fell on the buildings of\nPennsylvania Avenue with the indifferent clarity that her city produced\nin winter, sharp, honest light that showed surfaces as they were without\nthe kindness of cloud-filtered diffusion."
+  },
+  {
+    "id": "qh-2-1622",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices. The cohort graduates from the fifty-two-week protocol, which runs at the Foundation; the photo hangs in Nadia's Foundation office beside the org chart and the NIH approval letter. An 'entrance' is a building, not a district, so bare 'Quality Hill' names the HQ and violates the locked rule. Building is on Washington Street (B2:3503-3505).",
+    "old": "outside the Quality Hill entrance on graduation day, twenty-three faces,",
+    "new": "outside the Washington Street entrance on graduation day, twenty-three faces,"
+  },
+  {
+    "id": "qh-2-1773",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices, and unambiguous: the sentence names the mailbox as the Foundation's, and she walks out to it from her office (the coat on the hook behind her office door). The place-stamp in the clipped triad must therefore be the HQ street. Bare 'Quality Hill' as an HQ stamp is exactly the construction the locked style forbids.",
+    "old": " She walked to the Foundation's mailbox. Quality Hill. February.",
+    "new": " She walked to the Foundation's mailbox. Washington Street. February."
+  },
+  {
+    "id": "qh-2-1819",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices. Same physical mailbox as l.1773, referenced back to forty-six lines later, so it must carry the same street. She is still at her desk (she has just sent the email and closed the laptop), which keeps the scene at the Foundation.",
+    "old": " The mailbox on Quality Hill held a letter that would not arrive in",
+    "new": " The mailbox on Washington Street held a letter that would not arrive in"
+  },
+  {
+    "id": "qh-2-3108",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices. Scene-setting triad for an after-hours HQ scene — the Foundation, the server room, the stairwell, her desk, the locked institutional drawer. The place-stamp is naming the building, which the locked rule reserves for Washington Street.",
+    "old": "11 PM. Quality Hill. The Foundation empty. The server room turning.",
+    "new": "11 PM. Washington Street. The Foundation empty. The server room turning."
+  },
+  {
+    "id": "qh-2-619",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices. The paragraph has just named the building as the Foundation, and B2:3503-3505 states the Foundation occupies the third floor of 'the renovated building on Washington Street that William's trust had purchased four years before his death.' The Hotel Phillips is a separate, real Kansas City hotel and cannot also be the trust-purchased Foundation building, so this is a direct contradiction of the HQ's established address. Use the locked HQ form.",
+    "old": " The Hotel Phillips Building office in November. Third cup of",
+    "new": " The Washington Street office in November. Third cup of"
+  },
+  {
+    "id": "qh-2-3091",
+    "book": 2,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Foundation offices. Same contradiction as B2:619, and here the phrase is one term of a four-part antithesis (Iceland/Kansas City, cottage/office, cave/desk) in which 'the woman at the desk' is Nadia at the Foundation. The HQ must carry its established Washington Street name. Note the phrase straddles a line break, so both lines are given; the substitution is one word longer than the original and needs reflow.",
+    "old": "the stone cottage and the Hotel Phillips\nBuilding office,",
+    "new": "the stone cottage and the Washington Street\noffice,"
+  },
+  {
+    "id": "b3-yuki-cohort-basalt-iceland",
+    "book": 3,
+    "ruling": "4A",
+    "note": "Basalt tagged to Iceland, consistent with her own recollection of 'the basalt caves' at B3:1047. Limestone stays with SubTropolis.",
+    "old": "monitored, clinically supervised exposure to the 333.6 Hz harmonic in\nthe basalt chamber. She was Cohort 4, the musician, the oboist whose\nears had been trained to perceive pitch differences of less than one\nhertz. Andrew had flagged her as a candidate because her auditory",
+    "new": "monitored, clinically supervised exposure to the 333.6 Hz harmonic in\nthe Iceland basalt chamber. She was Cohort 4, the musician, the oboist\nwhose ears had been trained to perceive pitch differences of less than\none hertz. Andrew had flagged her as a candidate because her auditory"
+  },
+  {
+    "id": "b3-basalt-resonance-iceland-tag",
+    "book": 3,
+    "ruling": "4A",
+    "note": "KC hallway briefing: the basalt chamber is the Iceland field station feeding the Reykjavik uplink named in the next sentence. The KC demonstration chamber stays limestone.",
+    "old": "specification. The basalt chamber resonance is stable at 111.2. Andrew,",
+    "new": "specification. The Iceland basalt chamber is stable at 111.2. Andrew,"
+  },
+  {
+    "id": "b3-mirrors-not-below-them",
+    "book": 3,
+    "ruling": "2A",
+    "note": "Andrew and Nadia are in the downtown Foundation hallway; the SubTropolis chamber cannot be below them.",
+    "old": "hum. Somewhere below them, 160 feet below, in the SubTropolis\nlimestone, in the converted Moreau church basement that had become\nthe Foundation’s primary research chamber, the mirrors waited. Six\nparabolic surfaces, each ground to the Specchi specification by the\nVenetian workshop that Eva Černá had contracted, each surface\ncarrying a reflective coating whose formula had been published and\ndownloaded 14,000 times and that could now be fabricated in São Paulo\nfor $340 per square meter but that the Foundation had sourced from\nVenice because some things deserved their original provenance.",
+    "new": "hum. Across town, 160 feet below the Northland bluff, in the\nSubTropolis limestone, in the converted Moreau church basement that\nhad become the Foundation’s primary research chamber, the mirrors\nwaited. Six parabolic surfaces, each ground to the Specchi\nspecification by the Venetian workshop that Eva Černá had contracted,\neach surface carrying a reflective coating whose formula had been\npublished and downloaded 14,000 times and that could now be fabricated\nin São Paulo for $340 per square meter but that the Foundation had\nsourced from Venice because some things deserved their original\nprovenance."
+  },
+  {
+    "id": "b3-foundation-not-on-troost",
+    "book": 3,
+    "ruling": "8A",
+    "note": "Foundation HQ is Washington Street / Quality Hill, not the Troost corridor. 'industrial' dropped since Quality Hill is not an industrial district.",
+    "old": " Nadia had been at the Foundation since midnight, the streets of the\nTroost corridor empty, the industrial district's daytime commerce\nreplaced by the nocturnal hush of a neighborhood that worked hard and\nslept deeply. The Foundation building's windows glowed against the\ndark brick facades of the surrounding buildings, a single lit structure in a\nblock of sleeping commerce.",
+    "new": " Nadia had been at the Foundation since midnight, the streets of\nQuality Hill empty, the district's daytime commerce replaced by the\nnocturnal hush of a neighborhood that worked hard and slept deeply.\nThe Foundation building's windows glowed against the dark brick\nfacades of the surrounding buildings, a single lit structure in a block of\nsleeping commerce."
+  },
+  {
+    "id": "b3-chamber-not-under-west-bottoms",
+    "book": 3,
+    "ruling": "2A",
+    "note": "West Bottoms kept as atmosphere below the Quality Hill bluff; the chamber moves to SubTropolis, 160 ft down, seven miles northeast across the river.",
+    "old": "presence. The car's engine ticked as it cooled. The June night air carried\nthe humidity and the distant ozone-sweetness of the Missouri River and\nthe industrial memory of the West Bottoms, where, 160 feet below\nground, the Moreau chamber sat in its limestone silence, mirrors\ndormant, the seventy-two-hour resonance still decaying in the geological\nsubstrate.",
+    "new": "presence. The car's engine ticked as it cooled. The June night air carried\nthe humidity and the distant ozone-sweetness of the Missouri River and\nthe industrial memory of the West Bottoms below the bluff. Seven miles\nnortheast, across the river at SubTropolis, 160 feet down, the Moreau\nchamber sat in its limestone silence, mirrors dormant, the\nseventy-two-hour resonance still decaying in the geological substrate."
+  },
+  {
+    "id": "b3-troost-to-quality-hill-drive",
+    "book": 3,
+    "ruling": "8A",
+    "note": "Troost does not bound Quality Hill. She detours east to the community church, then cuts west on Twelfth and crosses Broadway to reach Washington Street. 5:40 AM October and the Foundation parking lot destination are unchanged.",
+    "old": "were awake before the sun because the world required them. She drove\ndown Troost. Past the gas station. Past the church where they'd held the\nfirst community protocol session. Past the Quality Hill boundary into\nthe institutional district.",
+    "new": "were awake before the sun because the world required them. She drove\nthe long way. East to Troost. Past the gas station. Past the church\nwhere they'd held the first community protocol session. Then west on\nTwelfth, across Broadway, up the bluff to Washington Street and the\ninstitutional district."
+  },
+  {
+    "id": "qh-3-4213",
+    "book": 3,
+    "ruling": "RESIDENCE",
+    "note": "Residence; the 'Quality Hill' element itself is correct and stays. The recommended edit is the noun: the immediately following sentence calls the same surface a porch three times, and Chapter Twenty-Two goes on to call it a porch at l.4265 ('He fixed the porch railing'), l.4283, l.4298, l.4304, l.4319, l.4323 and l.4333, plus l.4486 ('a man sitting on a / porch at 9 PM'). 'Balcony' is a single outlier against nine in-chapter uses of 'porch' and it contradicts its own next line. Same length, no reflow.",
+    "old": " He sat on the Quality Hill balcony.",
+    "new": " He sat on the Quality Hill porch."
+  },
+  {
+    "id": "qh-3-501",
+    "book": 3,
+    "ruling": "FOUNDATION_OFFICES",
+    "note": "Floor correction. B2:3503-3508 establishes that Nadia's office is on the 'third floor of the renovated building on Washington Street' and that 'The Foundation occupied the entire third floor: offices, a small conference room, and the observation laboratory.' The room in question is that small conference room, and the line itself dates the usage to every board meeting since incorporation, so it cannot sit on a floor the Foundation does not occupy. Change 'second' to 'third'; the street name is already correct.",
+    "old": "second floor of the Washington Street building, the room where Nadia",
+    "new": "third floor of the Washington Street building, the room where Nadia"
+  }
+]

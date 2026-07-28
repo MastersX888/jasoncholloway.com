@@ -1,16 +1,15 @@
-# Book 3 Kindle — 9798256009809
-**Priority:** HIGH
+# Book 3 Kingdom — Kindle 9798256009809
+**Priority:** Medium
 **Upload ready:** NO
 
-## Present in this folder
-- `9798256009809.jpg`
+## Present
+- `9798256009809.epub` — 4.05 MB (KDP copy; no `.kpf` found)
+- Cover JPG present
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- kindle file
+## Still missing
+- `.kpf` / `.mobi` — not found
+- Rebuild from geo-fixed + apartment/balcony draft
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK3_DEMY_9798256010072.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
-
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- `C:\Users\zh577\Desktop\amazon_kdp_upload\Masters_X_The_Kingdom_B0H4L36X21.epub` (2026-07-03)

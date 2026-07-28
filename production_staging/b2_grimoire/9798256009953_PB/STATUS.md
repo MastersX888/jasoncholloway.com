@@ -1,17 +1,23 @@
-# Book 2 Paperback — 9798256009953
-**Priority:** HIGH
+# Book 2 Grimoire — Paperback 9798256009953
+**Priority:** High
 **Upload ready:** NO
 
-## Present in this folder
-- `COVER_MASTERS_X_BOOK2_PB.pdf`
+## Present
+- `interior.pdf` — 0.60 MB · **258 pp** · Demy 5.5×8.5 · `%PDF` OK
+- `cover_wrap.pdf` (= `COVER_MASTERS_X_BOOK2_PB.pdf`) — 1.14 MB
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- interior.pdf
-- CMYK wrap check spine
+## Still missing
+- CANON pages **260** (harvested **258**, −2)
+- Spine-width check vs 260 pp
+- Rebuild from geo-fixed draft (PRE_GEO_FIX)
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK2_DEMY_9798256009953.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
+## Verification
+| Check | Result |
+|---|---|
+| Trim | Demy ✓ |
+| Pages | 258 vs 260 → NEAR_LIVE (−2); not STALE_V6 (495) |
 
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- Interior: `C:\Users\zh577\Desktop\google_books_upload\9798256009953_interior.pdf` (2026-07-03)
+- Wrap: pre-staged in this folder

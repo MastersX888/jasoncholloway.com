@@ -1,16 +1,22 @@
-# Book 1 EPUB — 9798256008819
-**Priority:** HIGH
+# Book 1 Inheritance — EPUB 9798256008819
+**Priority:** Medium
 **Upload ready:** NO
 
-## Present in this folder
-- `9798256008819.jpg`
+## Present
+- `9798256008819.epub` — 5.87 MB · valid EPUB zip · `mimetype` first · `dc:identifier` = 9798256008819
+- Cover JPG already in folder / `_covers/ebook/`
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- 9798256008819.epub
+## Still missing
+- Rebuild from geo-fixed draft (EPUB is PRE_GEO_FIX / pre-apartment-balcony)
+- Optional: confirm Google Play vs KDP package parity
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK1_DEMY_9798256008048.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
+## Verification
+| Check | Result |
+|---|---|
+| Zip / mimetype | OK (`application/epub+zip`, first entry `mimetype`) |
+| Identifier | 9798256008819 ✓ |
 
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- `C:\Users\zh577\Desktop\google_books_upload\9798256008819.epub` (2026-07-03)
+- Duplicates: `SCP_Batch_Upload_Jul2026\01_google_play_books\content\`, `Downloads\EPUBS\MASTERS_X_BOOK1_EPUB_*.epub`

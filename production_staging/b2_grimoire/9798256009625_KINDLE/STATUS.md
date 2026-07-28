@@ -1,16 +1,15 @@
-# Book 2 Kindle — 9798256009625
-**Priority:** HIGH
+# Book 2 Grimoire — Kindle 9798256009625
+**Priority:** Medium
 **Upload ready:** NO
 
-## Present in this folder
-- `9798256009625.jpg`
+## Present
+- `9798256009625.epub` — 7.14 MB (KDP copy; no `.kpf` found)
+- Cover JPG present
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- kindle file
+## Still missing
+- `.kpf` / `.mobi` — not found
+- Rebuild from geo-fixed draft
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK2_DEMY_9798256009953.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
-
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- `C:\Users\zh577\Desktop\amazon_kdp_upload\Masters_X_The_Grimoire_B0H4KQ4YQJ.epub` (2026-07-03)

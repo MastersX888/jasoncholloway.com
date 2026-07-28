@@ -1,16 +1,20 @@
-# Book 1 Kindle — 9798256008819
-**Priority:** HIGH
+# Book 1 Inheritance — Kindle 9798256008819
+**Priority:** Medium
 **Upload ready:** NO
 
-## Present in this folder
-- `9798256008819.jpg`
+## Present
+- `9798256008819.epub` — 5.87 MB (KDP upload copy; no `.kpf` found on this PC)
+- Cover JPG in folder / `_covers/ebook/`
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- kindle file
+## Still missing
+- `.kpf` / `.mobi` — **not found** under Desktop, Downloads, Documents
+- Rebuild from geo-fixed draft before KDP re-upload
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK1_DEMY_9798256008048.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
+## Verification
+- EPUB valid; identifier 9798256008819
+- Used as KDP manuscript stand-in (historic workflow)
 
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- `C:\Users\zh577\Desktop\amazon_kdp_upload\Masters_X_The_Inheritance_of_Frequency_B0H4KYMSM1.epub` (2026-07-03)
+- Also: `Downloads\KindleInteriors\MASTERS_X_BOOK1_KINDLE_B0H4KYMSM1.epub` (2026-06-26, older)

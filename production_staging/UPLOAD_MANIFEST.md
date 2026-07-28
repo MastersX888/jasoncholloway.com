@@ -1,7 +1,8 @@
 # PRODUCTION STAGING — Masters X Upload Package
 **Branch:** `cursor/upload-staging-f9e1`  
 **Draft authority:** `production_staging/_sources/` (geo-fixed + apartment/balcony)  
-**Priority:** Omnibus HC / PB first
+**Priority:** Omnibus HC / PB first  
+**Harvest:** see `HARVEST_REPORT.md` (2026-07-28 Windows PORTER)
 
 Audiobook scripts are **out of scope** for this package.
 
@@ -12,13 +13,13 @@ Audiobook scripts are **out of scope** for this package.
 | Item | Status |
 |---|---|
 | **Latest manuscript text** | YES — in `_sources/` (geo fixes + apartment/balcony) |
-| **Print interiors (PDF)** | MISSING here — last built on Windows / Ingram. Must regenerate or copy from that machine. |
-| **EPUB / Kindle files** | MISSING (never committed; `.gitignore` blocks `*.epub`) |
-| **Covers co-located** | PARTIAL — see checklist |
-| **Omnibus jacket / PB wrap** | MISSING — never finished |
+| **Print interiors (PDF)** | HARVESTED on Windows into ISBN folders — **PRE_GEO**; page counts NEAR_LIVE or STALE_V6 |
+| **EPUB / Kindle files** | HARVESTED (EPUB); no `.kpf` found |
+| **Covers co-located** | MOSTLY — Omnibus jacket/wrap found; **Book 1 PB wrap still missing** |
+| **Omnibus jacket / PB wrap** | FOUND (Jul 2 FIXED / FINAL packages) |
 
-**You cannot finish Ingram/KDP uploads from this folder alone until interiors are rebuilt or recovered.**  
-This folder is the single place to drop those files: current draft + covers already wait in ISBN-named slots.
+**Do not treat harvested interiors as final.** Rebuild from `_sources/` before claiming geo-fixed upload readiness.  
+This folder is the single place those files now live next to the current draft.
 
 ---
 
@@ -26,10 +27,12 @@ This folder is the single place to drop those files: current draft + covers alre
 
 ```
 production_staging/
+  HARVEST_REPORT.md    ← Windows harvest results
   UPLOAD_MANIFEST.md   ← this file
   _sources/            ← CURRENT DRAFT
   _covers/             ← master cover library
-  _docs/               ← CANON, fix log, build prompt
+  _docs/               ← CANON, fix log, scout
+  _scripts_from_windows/
   omnibus/             ← PRIORITY
   b1_inheritance/
   b2_grimoire/
@@ -59,8 +62,8 @@ Each edition folder = `ISBN_FORMAT`. Each has `MANUSCRIPT_CURRENT.txt` (symlink)
 
 | Format | ISBN | Interior | Cover | Ready? |
 |---|---|---|---|---|
-| HC | 9798295884412 | drop `interior.pdf` | web front only; need `cover_jacket.pdf` | NO |
-| PB | 9798256072704 | drop `interior.pdf` | need `cover_wrap.pdf` (never existed) | NO |
+| HC | 9798295884412 | YES — 684 pp Royal (CANON 686) | YES — `cover_jacket.pdf` + caselam | **NO** (PRE_GEO / −2 pp) |
+| PB | 9798256072704 | YES — 732 pp Demy | YES — `cover_wrap.pdf` (CMYK fixed) | **STALE_V6** |
 
 Live page counts: HC **686** · PB **734** (not v6 732/907).
 
@@ -68,36 +71,36 @@ Live page counts: HC **686** · PB **734** (not v6 732/907).
 
 | Format | ISBN | Cover present | Interior | Ready? |
 |---|---|---|---|---|
-| HC | 9798295800801 | YES — CMYK dustjacket PDF | NO | NO |
-| PB | 9798256008048 | NO — wrap never existed | NO | NO |
-| EPUB/Kindle | 9798256008819 | YES — JPG | NO | NO |
+| HC | 9798295800801 | YES — CMYK dustjacket / `cover_jacket.pdf` | YES — 154 pp | **NO** (PRE_GEO / −2) |
+| PB | 9798256008048 | **NO** — wrap never found on this PC | YES — 176 pp | **NO** |
+| EPUB/Kindle | 9798256008819 | YES — JPG | YES — EPUB (no kpf) | **NO** (PRE_GEO) |
 
 ### Book 2
 
 | Format | ISBN | Cover present | Interior | Ready? |
 |---|---|---|---|---|
-| HC | 9798295812675 | YES — jacket PDF (RGB→CMYK) | NO | NO |
-| PB | 9798256009953 | YES — wrap PDF (check spine vs 260 pp) | NO | NO |
-| EPUB/Kindle | 9798256009625 | YES — JPG | NO | NO |
+| HC | 9798295812675 | YES — jacket / `cover_jacket.pdf` | YES — 216 pp | **NO** (PRE_GEO / −2) |
+| PB | 9798256009953 | YES — wrap / `cover_wrap.pdf` | YES — 258 pp | **NO** (PRE_GEO / −2) |
+| EPUB/Kindle | 9798256009625 | YES — JPG | YES — EPUB (no kpf) | **NO** (PRE_GEO) |
 
 ### Book 3
 
 | Format | ISBN | Cover present | Interior | Ready? |
 |---|---|---|---|---|
-| HC | 9798295812705 | YES — jacket PDF (RGB→CMYK) | NO | NO |
-| PB | 9798256010072 | YES — wrap PDF (check spine vs 200 pp) | NO | NO |
-| EPUB/Kindle | 9798256009809 | YES — JPG | NO | NO |
+| HC | 9798295812705 | YES — jacket / `cover_jacket.pdf` | YES — 168 pp | **NO** (PRE_GEO / −2) |
+| PB | 9798256010072 | YES — wrap / `cover_wrap.pdf` | YES — 198 pp | **NO** (PRE_GEO / −2) |
+| EPUB/Kindle | 9798256009809 | YES — JPG | YES — EPUB (no kpf) | **NO** (PRE_GEO) |
 
 ---
 
 ## Fastest path to first upload
 
-1. From Windows, copy any existing interiors/EPUBs into the matching ISBN folders as `interior.pdf` / `{isbn}.epub`.
-2. Rebuild from `_sources/OMNIBUS_CURRENT_DRAFT_GEO_FIXED.txt` if Windows files are pre-geo-fix.
-3. Finish Omnibus HC jacket + PB wrap at 686/734 pages.
+1. ~~From Windows, copy existing interiors/EPUBs into ISBN folders~~ **DONE 2026-07-28** — see `HARVEST_REPORT.md`.
+2. Rebuild from `_sources/OMNIBUS_CURRENT_DRAFT_GEO_FIXED.txt` (harvested files are pre-geo).
+3. Recheck Omnibus HC jacket + PB wrap spine at new page counts (assets exist).
 4. Create Book 1 PB wrap.
-5. CMYK-convert B2/B3 covers via `_sources/FOGRA39L_coated.icc`.
-6. Upload order: **Omnibus HC → Omnibus PB → individuals**.
+5. CMYK-convert B2/B3 covers via `_sources/FOGRA39L_coated.icc` if not already.
+6. Upload order after rebuild: **Omnibus HC → Omnibus PB → individuals**.
 
 Drop convention: `interior.pdf`, `cover_jacket.pdf`, `cover_wrap.pdf`, `{isbn}.epub`, `{isbn}.jpg`.
 

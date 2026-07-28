@@ -1,16 +1,17 @@
-# Book 2 EPUB — 9798256009625
-**Priority:** HIGH
+# Book 2 Grimoire — EPUB 9798256009625
+**Priority:** Medium
 **Upload ready:** NO
 
-## Present in this folder
-- `9798256009625.jpg`
+## Present
+- `9798256009625.epub` — 7.14 MB · valid EPUB · identifier 9798256009625
+- Cover JPG present
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still required before upload
-- 9798256009625.epub
+## Still missing
+- Rebuild from geo-fixed draft (PRE_GEO_FIX)
 
-## Manuscript
-Symlinked: `MANUSCRIPT_CURRENT.txt` → `_sources/MASTERS_X_BOOK2_DEMY_9798256009953.txt`
-This is the geo-fixed + apartment/balcony draft. Rebuild interiors from this text (or the DOCX after merge), not from pre-fix sources.
+## Verification
+- mimetype first; `dc:identifier` = 9798256009625 ✓
 
-See `/production_staging/UPLOAD_MANIFEST.md` for the campaign checklist.
+## Source path on Windows
+- `C:\Users\zh577\Desktop\google_books_upload\9798256009625.epub` (2026-07-03)

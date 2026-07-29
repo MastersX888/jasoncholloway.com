@@ -1,0 +1,71 @@
+/* Masters X EPUB — styles for generate_epubs_v1.py markup */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.55;
+  text-align: justify;
+  margin: 0 1em;
+  widows: 2;
+  orphans: 2;
+}
+p { margin: 0; text-indent: 1.25em; }
+p.first-para { text-indent: 0; }
+p.time-mark, p.episode-sub, p.coda {
+  text-indent: 0;
+  text-align: center;
+  font-style: italic;
+  margin: 1.2em 0;
+  color: #444;
+}
+
+.chapter-header {
+  text-align: center;
+  margin: 2.5em 0 1.8em;
+  page-break-before: always;
+}
+p.chapter-label {
+  text-indent: 0;
+  letter-spacing: 0.22em;
+  font-size: 0.85em;
+  color: #666;
+  margin-bottom: 0.45em;
+}
+p.chapter-subtitle {
+  text-indent: 0;
+  font-weight: bold;
+  font-size: 1.35em;
+  letter-spacing: 0.04em;
+  margin: 0.2em 0;
+}
+p.chapter-hz {
+  text-indent: 0;
+  font-style: italic;
+  color: #666;
+  font-size: 0.95em;
+  margin-top: 0.45em;
+}
+hr.ch-rule, hr.ch-rule-bottom {
+  border: none;
+  border-top: 0.5px solid #999;
+  width: 64px;
+  margin: 1em auto;
+}
+
+.scene-break {
+  text-align: center;
+  margin: 1.35em 0;
+  color: #777;
+  letter-spacing: 0.35em;
+  text-indent: 0;
+}
+.sb-rule { display: inline-block; width: 2em; }
+
+.back-matter { margin: 2em 0; page-break-before: always; }
+h2.back-title {
+  text-align: center;
+  font-size: 1.2em;
+  letter-spacing: 0.08em;
+  margin-bottom: 1em;
+}
+.also-by .book-entry { text-indent: 0; text-align: center; margin: 0.4em 0; }
+
+.title-page, .copyright-page, .epigraph-page { text-align: center; page-break-after: always; }

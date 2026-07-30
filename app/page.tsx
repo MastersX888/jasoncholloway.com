@@ -206,11 +206,23 @@ export default function Home() {
                       </div>
                       {omnibus && (
                         <div>
-                          <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--text-faint)", marginBottom: "0.6rem", textAlign: "center" }}>
-                            Omnibus Edition
+                          <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.6rem", textAlign: "center", fontWeight: 600 }}>
+                            Omnibus Edition · Complete Trilogy
                           </div>
                           <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center" }}>
-                            {coverThumb(omnibus.coverImageHC, "Masters X Omnibus hardcover", "614/921")}
+                            <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none" }}>
+                              <div style={{
+                                position: "relative",
+                                width: "120px",
+                                aspectRatio: "614/921",
+                                borderRadius: "var(--r-sm)",
+                                overflow: "hidden",
+                                boxShadow: "0 14px 35px rgba(0,0,0,0.55)",
+                                border: "1px solid var(--gold-dim, var(--border-faint))",
+                              }}>
+                                <Image src={omnibus.coverImageHC} alt="Masters X Omnibus hardcover case" fill style={{ objectFit: "cover" }} sizes="120px" priority />
+                              </div>
+                            </Link>
                           </div>
                         </div>
                       )}

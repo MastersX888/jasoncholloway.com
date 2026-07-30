@@ -1,0 +1,173 @@
+{
+  "version": "v2",
+  "generated": "2026-07-30",
+  "sources": {
+    "captions": "content/social/CAPTION_MANIFEST.json",
+    "assignment": "content/social/OUTSTAND_V2_ASSIGNMENT_REPORT.md",
+    "bluesky_captions": "content/social/BLUESKY_LIVE_CAPTIONS.json"
+  },
+  "slots": {
+    "1": {
+      "topic": "Frequency / 111 Hz",
+      "outstand": {
+        "instagram": "FEPVh",
+        "x_facebook": "Jh6i6",
+        "pinterest": "Irl0J",
+        "bluesky_author": "MZWMk",
+        "bluesky_imprint": "5cb5j"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot1/v2/ig-slot1-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot1-frequency-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot1-frequency-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot1-frequency-xfb-v2.jpg"
+      }
+    },
+    "2": {
+      "topic": "Cymatics",
+      "outstand": {
+        "instagram": "gIiz1",
+        "x_facebook": "4nymj",
+        "pinterest": "ySUIq",
+        "bluesky_author": "n9SnW",
+        "bluesky_imprint": "FEPFo"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot2/v2/ig-slot2-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot2-cymatics-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot2-cymatics-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot2-cymatics-xfb-v2.jpg"
+      }
+    },
+    "3": {
+      "topic": "Kansas City",
+      "outstand": {
+        "instagram": "Oxr7T",
+        "x_facebook": "7PmTO",
+        "pinterest": "cNGhW",
+        "bluesky_author": "ilji7",
+        "bluesky_imprint": "gIig7"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide06-v2.jpg",
+          "public/social/imagen-overlaid/slot3/v2/ig-slot3-slide07-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot3-kansas-city-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot3-kansas-city-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot3-kansas-city-xfb-v2.jpg"
+      }
+    },
+    "4": {
+      "topic": "Ars Notoria",
+      "outstand": {
+        "instagram": "ySUef",
+        "x_facebook": "ZA0Vm",
+        "pinterest": "Q2hIc",
+        "bluesky_author": "zqOzc",
+        "bluesky_imprint": "OxrOA"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot4/v2/ig-slot4-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot4-grimoire-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot4-ars-notoria-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot4-grimoire-xfb-v2.jpg"
+      }
+    },
+    "5": {
+      "topic": "Stone Remembers",
+      "outstand": {
+        "instagram": "TpuHk",
+        "x_facebook": "NTCsA",
+        "pinterest": "lQJgD",
+        "bluesky_author": "9jk9f",
+        "bluesky_imprint": "ySUye"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot5/v2/ig-slot5-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot5-stone-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot5-stone-remembers-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot5-stone-xfb-v2.jpg"
+      }
+    },
+    "6": {
+      "topic": "Three Factions",
+      "outstand": {
+        "instagram": "BK2vq",
+        "x_facebook": "8enPj",
+        "pinterest": "ei9tY",
+        "bluesky_author": "X4KX7",
+        "bluesky_imprint": "gIigP"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot6/v2/ig-slot6-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot6-factions-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot6-three-factions-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot6-factions-xfb-v2.jpg"
+      }
+    },
+    "7": {
+      "topic": "Cannot Be Un-Released",
+      "outstand": {
+        "instagram": "mvXEE",
+        "x_facebook": "HoaSC",
+        "pinterest": "CuzcX",
+        "bluesky_author": "23s28",
+        "bluesky_imprint": "TpuTD"
+      },
+      "images": {
+        "instagram": [
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide01-v2.jpg",
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide02-v2.jpg",
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide03-v2.jpg",
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide04-v2.jpg",
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide05-v2.jpg",
+          "public/social/imagen-overlaid/slot7/v2/ig-slot7-slide06-v2.jpg"
+        ],
+        "x_facebook": "public/social/platform-overlaid/slot7-unreleased-xfb-v2.jpg",
+        "pinterest": "public/social/platform-overlaid/pinterest-slot7-unreleased-v2.jpg",
+        "bluesky": "public/social/platform-overlaid/slot7-unreleased-xfb-v2.jpg"
+      }
+    }
+  }
+}

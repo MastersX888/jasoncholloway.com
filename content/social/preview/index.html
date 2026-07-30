@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Social Preview · Masters X v2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #08080F;
+      --bg-surface: #0E0E18;
+      --bg-raised: #13131E;
+      --bg-elevated: #191926;
+      --border: #272740;
+      --border-faint: #1C1C2C;
+      --gold: #D4AA52;
+      --gold-dim: #8E7235;
+      --cyan: #4CC9C9;
+      --text: #EDE9DA;
+      --text-muted: #B8B4C8;
+      --text-faint: #9E9BB2;
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Inter", system-ui, sans-serif;
+      --font-mono: "JetBrains Mono", monospace;
+      --r-sm: 4px;
+      --r-md: 8px;
+      --r-lg: 16px;
+      --max-w: 1280px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border-faint);
+      background: var(--bg-surface);
+      padding: 1.25rem 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .subtitle {
+      color: var(--text-faint);
+      font-size: 0.85rem;
+      margin-top: 0.35rem;
+    }
+
+    .slot-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      max-width: var(--max-w);
+      margin: 1.25rem auto 0;
+      padding: 0 1.5rem;
+    }
+
+    .slot-tab {
+      background: var(--bg-raised);
+      border: 1px solid var(--border-faint);
+      color: var(--text-muted);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--r-md);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+    }
+
+    .slot-tab:hover {
+      border-color: var(--gold-dim);
+      color: var(--text);
+    }
+
+    .slot-tab.active {
+      background: var(--bg-elevated);
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+
+    main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    .slot-panel { display: none; }
+    .slot-panel.active { display: block; }
+
+    .slot-header {
+      margin-bottom: 1.75rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border-faint);
+    }
+
+    .slot-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .outstand-ids {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .id-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: var(--r-sm);
+      background: var(--bg-raised);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+    }
+
+    .id-badge span {
+      color: var(--cyan);
+      margin-left: 0.35rem;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    .section-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.85rem;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      padding-bottom: 0.75rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .carousel-track::-webkit-scrollbar { height: 6px; }
+    .carousel-track::-webkit-scrollbar-track { background: var(--bg-raised); border-radius: 3px; }
+    .carousel-track::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 3px; }
+
+    .slide-card {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      width: min(280px, 72vw);
+    }
+
+    .slide-frame {
+      position: relative;
+      border-radius: var(--r-md);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-raised);
+      aspect-ratio: 1 / 1;
+    }
+
+    .slide-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    .slide-num {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      background: rgba(8, 8, 15, 0.82);
+      color: var(--gold);
+      padding: 0.2rem 0.45rem;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+    }
+
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .platform-card {
+      background: var(--bg-raised);
+      border: 1px solid var(--border-faint);
+      border-radius: var(--r-lg);
+      overflow: hidden;
+    }
+
+    .platform-card header {
+      padding: 0.65rem 0.85rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-faint);
+      border-bottom: 1px solid var(--border-faint);
+      background: var(--bg-surface);
+    }
+
+    .platform-card .frame {
+      padding: 0.75rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg);
+    }
+
+    .platform-card .frame.square img {
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+    }
+
+    .platform-card .frame.tall img {
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+    }
+
+    .caption-tabs {
+      display: flex;
+      gap: 0.35rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .caption-tab {
+      background: transparent;
+      border: 1px solid var(--border-faint);
+      color: var(--text-faint);
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.4rem 0.7rem;
+      border-radius: var(--r-sm);
+      cursor: pointer;
+    }
+
+    .caption-tab.active {
+      border-color: var(--gold-dim);
+      color: var(--gold);
+      background: var(--bg-raised);
+    }
+
+    .caption-panel {
+      display: none;
+      background: var(--bg-raised);
+      border: 1px solid var(--border-faint);
+      border-radius: var(--r-lg);
+      padding: 1.25rem 1.5rem;
+    }
+
+    .caption-panel.active { display: block; }
+
+    .caption-text {
+      white-space: pre-wrap;
+      font-size: 0.92rem;
+      line-height: 1.75;
+      color: var(--text-muted);
+      max-width: 72ch;
+    }
+
+    .caption-meta {
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-faint);
+      font-size: 0.78rem;
+      color: var(--text-faint);
+    }
+
+    .caption-meta a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .caption-meta a:hover { text-decoration: underline; }
+
+    .loading, .error {
+      text-align: center;
+      padding: 4rem 1.5rem;
+      color: var(--text-faint);
+    }
+
+    .error { color: #e88; }
+
+    .footer-note {
+      max-width: var(--max-w);
+      margin: 2rem auto 3rem;
+      padding: 0 1.5rem;
+      font-size: 0.78rem;
+      color: var(--text-faint);
+      border-top: 1px solid var(--border-faint);
+      padding-top: 1.25rem;
+    }
+
+    @media (max-width: 600px) {
+      .slot-tabs { padding: 0 1rem; }
+      main { padding: 1rem; }
+      .slide-card { width: min(240px, 78vw); }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="eyebrow">Seventh City Press · Phase 4 QC</div>
+      <h1>Social Preview</h1>
+      <p class="subtitle">v2 drafts · local files only · no Outstand login required</p>
+    </div>
+  </header>
+
+  <nav class="slot-tabs" id="slot-tabs" aria-label="Content slots"></nav>
+
+  <main id="main">
+    <div class="loading" id="loading">Loading preview data…</div>
+  </main>
+
+  <p class="footer-note">
+    Bluesky drafts are shown for caption review only — not assigned in Outstand v2 pass.
+    Regenerate <code style="font-family:var(--font-mono);font-size:0.85em">PREVIEW_MANIFEST.json</code> if image paths change.
+  </p>
+
+  <script>
+    const CAPTION_PLATFORMS = [
+      { key: "instagram", label: "Instagram" },
+      { key: "x", label: "X" },
+      { key: "facebook_author", label: "Facebook" },
+      { key: "bluesky", label: "Bluesky" }
+    ];
+
+    const OUTSTAND_LABELS = {
+      instagram: "IG",
+      x_facebook: "X + FB",
+      pinterest: "Pinterest"
+    };
+
+    function rootPath(relative) {
+      return "/" + relative.replace(/^\//, "");
+    }
+
+    async function loadData() {
+      const [preview, captions] = await Promise.all([
+        fetch("/content/social/PREVIEW_MANIFEST.json").then(r => {
+          if (!r.ok) throw new Error("PREVIEW_MANIFEST.json not found");
+          return r.json();
+        }),
+        fetch("/content/social/CAPTION_MANIFEST.json").then(r => {
+          if (!r.ok) throw new Error("CAPTION_MANIFEST.json not found");
+          return r.json();
+        })
+      ]);
+      return { preview, captions };
+    }
+
+    function renderSlotTabs(slots) {
+      const nav = document.getElementById("slot-tabs");
+      nav.innerHTML = "";
+      Object.keys(slots).forEach((num, i) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "slot-tab" + (i === 0 ? " active" : "");
+        btn.dataset.slot = num;
+        btn.textContent = "Slot " + num;
+        btn.setAttribute("aria-selected", i === 0 ? "true" : "false");
+        btn.addEventListener("click", () => selectSlot(num));
+        nav.appendChild(btn);
+      });
+    }
+
+    function selectSlot(num) {
+      document.querySelectorAll(".slot-tab").forEach(tab => {
+        const active = tab.dataset.slot === num;
+        tab.classList.toggle("active", active);
+        tab.setAttribute("aria-selected", active ? "true" : "false");
+      });
+      document.querySelectorAll(".slot-panel").forEach(panel => {
+        panel.classList.toggle("active", panel.dataset.slot === num);
+      });
+    }
+
+    function renderCarousel(slides) {
+      const track = document.createElement("div");
+      track.className = "carousel-track";
+      slides.forEach((path, i) => {
+        const card = document.createElement("div");
+        card.className = "slide-card";
+        card.innerHTML =
+          '<div class="slide-frame">' +
+            '<span class="slide-num">' + (i + 1) + " / " + slides.length + '</span>' +
+            '<img src="' + rootPath(path) + '" alt="Instagram slide ' + (i + 1) + '" loading="lazy">' +
+          '</div>';
+        track.appendChild(card);
+      });
+      return track;
+    }
+
+    function renderPlatformCard(label, imagePath, aspectClass) {
+      const card = document.createElement("article");
+      card.className = "platform-card";
+      card.innerHTML =
+        "<header>" + label + "</header>" +
+        '<div class="frame ' + aspectClass + '">' +
+          '<img src="' + rootPath(imagePath) + '" alt="' + label + '" loading="lazy">' +
+        "</div>";
+      return card;
+    }
+
+    function renderCaptions(slotCaptions) {
+      const wrap = document.createElement("div");
+
+      const tabs = document.createElement("div");
+      tabs.className = "caption-tabs";
+      tabs.setAttribute("role", "tablist");
+
+      const panels = document.createElement("div");
+
+      CAPTION_PLATFORMS.forEach((plat, i) => {
+        const tab = document.createElement("button");
+        tab.type = "button";
+        tab.className = "caption-tab" + (i === 0 ? " active" : "");
+        tab.textContent = plat.label;
+        tab.dataset.platform = plat.key;
+        tab.setAttribute("role", "tab");
+        tab.addEventListener("click", () => {
+          tabs.querySelectorAll(".caption-tab").forEach(t => t.classList.remove("active"));
+          panels.querySelectorAll(".caption-panel").forEach(p => p.classList.remove("active"));
+          tab.classList.add("active");
+          panels.querySelector('[data-platform="' + plat.key + '"]').classList.add("active");
+        });
+        tabs.appendChild(tab);
+
+        const panel = document.createElement("div");
+        panel.className = "caption-panel" + (i === 0 ? " active" : "");
+        panel.dataset.platform = plat.key;
+        panel.setAttribute("role", "tabpanel");
+
+        const text = slotCaptions[plat.key] || "(no caption)";
+        panel.innerHTML = '<div class="caption-text">' + escapeHtml(text) + "</div>";
+
+        if (slotCaptions.blog || slotCaptions.field_note) {
+          const meta = document.createElement("div");
+          meta.className = "caption-meta";
+          const links = [];
+          if (slotCaptions.blog) links.push('<a href="' + slotCaptions.blog + '" target="_blank" rel="noopener">Blog essay</a>');
+          if (slotCaptions.field_note) links.push('<a href="' + slotCaptions.field_note + '" target="_blank" rel="noopener">Field Note</a>');
+          meta.innerHTML = links.join(" · ");
+          panel.appendChild(meta);
+        }
+
+        panels.appendChild(panel);
+      });
+
+      wrap.appendChild(tabs);
+      wrap.appendChild(panels);
+      return wrap;
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderSlot(num, slot, slotCaptions) {
+      const panel = document.createElement("section");
+      panel.className = "slot-panel" + (num === "1" ? " active" : "");
+      panel.dataset.slot = num;
+
+      const header = document.createElement("div");
+      header.className = "slot-header";
+      header.innerHTML = '<h2 class="slot-title">Slot ' + num + " · " + escapeHtml(slot.topic) + "</h2>";
+
+      const ids = document.createElement("div");
+      ids.className = "outstand-ids";
+      Object.entries(slot.outstand).forEach(([platform, id]) => {
+        const badge = document.createElement("span");
+        badge.className = "id-badge";
+        badge.innerHTML = (OUTSTAND_LABELS[platform] || platform) + "<span>" + id + "</span>";
+        ids.appendChild(badge);
+      });
+      header.appendChild(ids);
+      panel.appendChild(header);
+
+      const igSection = document.createElement("div");
+      igSection.className = "section";
+      igSection.innerHTML = '<div class="section-label">Instagram carousel · ' + slot.images.instagram.length + " slides</div>";
+      igSection.appendChild(renderCarousel(slot.images.instagram));
+      panel.appendChild(igSection);
+
+      const platSection = document.createElement("div");
+      platSection.className = "section";
+      platSection.innerHTML = '<div class="section-label">X / Facebook & Pinterest</div>';
+      const grid = document.createElement("div");
+      grid.className = "platform-grid";
+      grid.appendChild(renderPlatformCard("X + Facebook (square)", slot.images.x_facebook, "square"));
+      grid.appendChild(renderPlatformCard("Pinterest (tall pin)", slot.images.pinterest, "tall"));
+      platSection.appendChild(grid);
+      panel.appendChild(platSection);
+
+      const capSection = document.createElement("div");
+      capSection.className = "section";
+      capSection.innerHTML = '<div class="section-label">Captions</div>';
+      capSection.appendChild(renderCaptions(slotCaptions));
+      panel.appendChild(capSection);
+
+      return panel;
+    }
+
+    async function init() {
+      const main = document.getElementById("main");
+      try {
+        const { preview, captions } = await loadData();
+        main.innerHTML = "";
+        renderSlotTabs(preview.slots);
+        Object.entries(preview.slots).forEach(([num, slot]) => {
+          const slotCaptions = captions.slots[num] || {};
+          main.appendChild(renderSlot(num, slot, slotCaptions));
+        });
+      } catch (err) {
+        main.innerHTML =
+          '<div class="error">' +
+            "<p><strong>Could not load preview.</strong></p>" +
+            "<p>" + escapeHtml(err.message) + "</p>" +
+            "<p style='margin-top:1rem;font-size:0.85rem'>Run from repo root:<br><code>python -m http.server 8080</code></p>" +
+          "</div>";
+      }
+    }
+
+    init();
+  </script>
+</body>
+</html>

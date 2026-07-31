@@ -15,6 +15,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function ChaptersSentPage() {
   const trilogy = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");
+  const omnibus = books.find((b) => b.slug === "omnibus");
   
   return (
     <div className="container" style={{ padding: "6rem 0", maxWidth: "800px" }}>
@@ -80,6 +81,17 @@ export default function ChaptersSentPage() {
               </div>
             </Link>
           ))}
+        </div>
+
+        <div className="resp-btn-row" style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", marginBottom: "3rem" }}>
+          <Link href="/books/masters-x/" className="btn btn-gold" style={{ flex: 1, justifyContent: "center", minWidth: "200px" }}>
+            View the Trilogy
+          </Link>
+          {omnibus && (
+            <Link href="/books/masters-x/omnibus/" className="btn btn-outline" style={{ flex: 1, justifyContent: "center", minWidth: "200px" }}>
+              Omnibus Edition · from ${omnibus.price_pb_is}
+            </Link>
+          )}
         </div>
         
         <div className="section-label-row">

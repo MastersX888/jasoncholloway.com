@@ -154,11 +154,41 @@
   /* Stack paired CTAs full-width: at 320px two side-by-side buttons
      cannot hold their labels even after wrapping. !important beats the
      inline `flex: 1` some of these rows set on each button. */
-  .card div:has(> .btn + .btn) { flex-wrap: wrap; }
-  .card div:has(> .btn + .btn) > .btn {
+  .card div:has(> .btn + .btn),
+  .resp-btn-row { flex-wrap: wrap; }
+  .card div:has(> .btn + .btn) > .btn,
+  .resp-btn-row > .btn {
     flex: 1 1 100% !important;
     justify-content: center;
   }
+}
+
+/* Hardcover case-laminate reveal (Masters X catalog) */
+.hc-case-reveal-toggle {
+  display: block;
+  width: 100%;
+  margin-top: 0.65rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--border-faint);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.hc-case-reveal-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.hc-case-reveal-hint {
+  margin: 0.65rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--text-faint);
+  text-align: center;
 }
 
 /* ─── HERO & TYPE RHYTHM ON SMALL SCREENS ────────────────────── */

@@ -5,6 +5,7 @@ import { BUY_LINKS, googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import HardcoverCaseReveal from "@/components/ui/HardcoverCaseReveal";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
@@ -144,12 +145,10 @@ export default function MastersXPage() {
                       />
                     </div>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
-                      <CoverArtifact
-                        src={book.coverImageHC}
-                        alt={`${book.subtitle} Hardcover`}
-                        format="hc"
-                        fit="contain"
+                      <HardcoverCaseReveal
+                        subtitle={book.subtitle}
+                        jacketSrc={book.coverImageHC}
+                        caseSrc={book.coverImageCase}
                         sizes="(max-width: 768px) 42vw, 180px"
                         priority={i === 0}
                       />

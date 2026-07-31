@@ -21,3 +21,6 @@ https://www.jasoncholloway.com/* https://jasoncholloway.com/:splat 301
 /blog/a-document-that-cannot-be-unreleased/     /field-notes/                       301
 /blog/                                          /field-notes/                       301
 /blog/*                                         /field-notes/                       301
+
+# Lead magnet alias — older outreach used "free-chapters" in the filename.
+/downloads/masters-x-free-chapters.epub         /downloads/masters-x-opening-chapters.epub  301

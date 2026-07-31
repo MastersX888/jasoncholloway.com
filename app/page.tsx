@@ -276,7 +276,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
+              <div className="resp-btn-row" style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
                 <Link href="/books/hawkes-monograph" className="btn btn-gold" style={{ flex: 1, justifyContent: "center" }}>
                   View Monograph
                 </Link>

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import HardcoverCaseReveal from "@/components/ui/HardcoverCaseReveal";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
@@ -226,12 +227,10 @@ export default function BookPage({ params }: Props) {
                     />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
-                    <CoverArtifact
-                      src={book.coverImageHC}
-                      alt={`${book.subtitle} Hardcover Cover`}
-                      format="hc"
-                      fit="contain"
+                    <HardcoverCaseReveal
+                      subtitle={book.subtitle}
+                      jacketSrc={book.coverImageHC}
+                      caseSrc={book.coverImageCase}
                       sizes="(max-width: 768px) 45vw, 180px"
                       priority
                     />

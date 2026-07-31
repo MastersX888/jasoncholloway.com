@@ -17,8 +17,10 @@ export interface Book {
   title: string;
   subtitle: string;
   coverImage: string;      // Default display cover (Paperback)
-  coverImageHC: string;    // Hardcover cover path
+  coverImageHC: string;    // Hardcover dust jacket (retail face)
   coverImagePB: string;    // Paperback cover path
+  /** Concealed case-laminate board art under the HC dust jacket. */
+  coverImageCase?: string;
   qrCodePB?: string;       // QR Code image path for Paperback direct buy
   isbn_hc?: string;
   isbn_pb?: string;
@@ -60,6 +62,7 @@ export const books: Book[] = [
     subtitle: "The Inheritance of Frequency",
     coverImage: "/covers/book1-paperback.png",
     coverImageHC: "/covers/book1-hardcover-v3.png",
+    coverImageCase: "/covers/book1-hc-case.png",
     coverImagePB: "/covers/book1-paperback.png",
     qrCodePB: "/media/qr1.png",
     isbn_hc: "9798295800801",
@@ -103,6 +106,7 @@ export const books: Book[] = [
     subtitle: "The Grimoire",
     coverImage: "/covers/book2-paperback.png",
     coverImageHC: "/covers/book2-hardcover-v3.png",
+    coverImageCase: "/covers/book2-hc-case.png",
     coverImagePB: "/covers/book2-paperback.png",
     qrCodePB: "/media/qr2.png",
     isbn_hc: "9798295812675",
@@ -146,6 +150,7 @@ export const books: Book[] = [
     subtitle: "The Kingdom",
     coverImage: "/covers/book3-paperback.png",
     coverImageHC: "/covers/book3-hardcover-v3.png",
+    coverImageCase: "/covers/book3-hc-case.png",
     coverImagePB: "/covers/book3-paperback.png",
     qrCodePB: "/media/qr3.png",
     isbn_hc: "9798295812705",
@@ -189,6 +194,7 @@ export const books: Book[] = [
     subtitle: "Omnibus Edition",
     coverImage: "/covers/omnibus-hardcover-v3.png",
     coverImageHC: "/covers/omnibus-hardcover-v3.png",
+    coverImageCase: "/covers/omnibus-hc-case.png",
     coverImagePB: "/covers/omnibus-hardcover-v3.png",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",

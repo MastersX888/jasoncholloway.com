@@ -2,6 +2,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS } from "@/lib/data/buyLinks";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import HardcoverCaseReveal from "@/components/ui/HardcoverCaseReveal";
 import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
@@ -119,11 +120,10 @@ export default function OmnibusPage() {
 
             <div className="resp-book-hero" style={{ display: "grid", gridTemplateColumns: "320px 1fr", gap: "3.5rem", alignItems: "start" }}>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <CoverArtifact
-                  src={omnibus.coverImageHC}
-                  alt="Masters X Omnibus Edition — Complete Trilogy Hardcover"
-                  format="omnibus"
-                  width="min(280px, 70vw)"
+                <HardcoverCaseReveal
+                  subtitle={omnibus.subtitle}
+                  jacketSrc={omnibus.coverImageHC}
+                  caseSrc={omnibus.coverImageCase}
                   sizes="(max-width: 768px) 70vw, 280px"
                   priority
                 />

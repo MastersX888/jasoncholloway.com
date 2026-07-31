@@ -57,6 +57,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.colors import Color
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from preview_source import chapter_one
+
 # --- Paths ---
 TRILOGY_DIR = Path(r"C:\Users\zh577\.openclaw\workspace\Corpus_Final_Export\The_Masters_Trilogy")
 DOCX_PATH = Path(r"C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway\production_staging\_sources\build_docx\MASTERS_X_BOOK2_BUILD.docx")
@@ -84,6 +87,15 @@ TEXT_H = TRIM_H - M_TOP - M_BOTTOM
 pdfmetrics.registerFont(TTFont("Garamond", "C:/Windows/Fonts/GARA.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondBd", "C:/Windows/Fonts/GARABD.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondIt", "C:/Windows/Fonts/GARAIT.TTF"))
+# Required for ReportLab <i>/<b> markup in Paragraphs. Without this family
+# map, italic runs from DOCX are silently rendered as roman (body italics strip).
+pdfmetrics.registerFontFamily(
+    "Garamond",
+    normal="Garamond",
+    bold="GaramondBd",
+    italic="GaramondIt",
+    boldItalic="GaramondIt",
+)
 
 # --- Colors ---
 MED = Color(0.4, 0.4, 0.4)
@@ -547,152 +559,14 @@ def build_body(paras):
     return el
 
 
-# Correct Book 3, Chapter 1 preview text (THE RETURN · 109 Hz · Kansas City).
-# Embedded verbatim — do not alter, paraphrase, or reword.
-_PREVIEW_PARAS = [
-    "The weeds had opinions about his absence.",
-    "Fourteen months away, and they\u2019d colonized the expansion joints in the front walk "
-    "with the quiet authority of organisms that don\u2019t require permission. Crabgrass and "
-    "dandelion and something low and feathery that Blake couldn\u2019t identify, a groundcover "
-    "that had decided the gaps between his flagstones were habitat, and had filed no "
-    "paperwork and consulted no authority and simply grown.",
-    "The Quality Hill apartment. Kansas City. November. The key turned in the lock with "
-    "the resistance of tumblers that hadn\u2019t been asked to move in two years, and the door "
-    "opened onto the smell of a building that had been maintained but not inhabited, "
-    "mothballed radiators, the particular staleness of still air, the faint chemical "
-    "residue of the cleaning service Nadia had hired to keep the dust from winning.",
-    "The house was clean. The house was empty. These are different conditions.",
-    "Blake walked through every room. Not inspecting, listening. The kitchen: the table "
-    "where Nadia served Norton wine the night she told him about the NIH grant, the counter "
-    "where he learned to dissolve her sugar at exactly the right temperature, the window "
-    "where the morning light crosses from the salt shaker to the sugar bowl over the course "
-    "of one cup of coffee. The living room: the couch where he spent five days after the "
-    "72-hour demonstration, his body refusing to stand, his mind refusing to stop. The "
-    "guest room: Nadia\u2019s separate-bedroom, the sheets still hospital-cornered from a woman "
-    "who was not here but whose presence was structural, embedded in the organization of "
-    "the linen closet and the angle of the blinds.",
-    "The house had a frequency. Blake could feel it, feel it, not hear it, the distinction "
-    "mattering now in a way it hadn\u2019t before Iceland. The forced-air heating system hummed "
-    "at approximately 55 Hz, the refrigerator compressor at 60, the electrical wiring at "
-    "its eternal 60 Hz buzz. And beneath all of that, the foundation itself: Kansas City "
-    "limestone, the geological signature of this particular plot of earth under this "
-    "particular house under this particular life. 109 Hz. Not the Strahov specification. "
-    "Not the Iceland basalt. Not the Volta laterite. The house\u2019s own fundamental, shaped "
-    "by the limestone and clay and the settling of the soil and the hundred years of weather "
-    "that had pressed down on the structure since someone built it and forgot to listen.",
-    "Every building has one. He knew this now. Every room in every building in every city "
-    "is a resonance chamber, imperfect and unintentional, singing a frequency that nobody "
-    "hears because nobody listens.",
-    "He made coffee. The machine on the counter, the grind, the water, the hiss and drip "
-    "that he had heard ten thousand times before and was hearing now with ears that had "
-    "been restructured by caves and mirrors and a bilateral tremor that would not stop and "
-    "that he no longer wanted to stop. The sound of water through grounds: irregular, "
-    "chaotic, the acoustic signature of complexity within a structure.",
-    "While the machine brewed he went back to the front hall, opened the smaller of his "
-    "two duffel bags, and lifted out what he had wrapped in a square of black cotton "
-    "fifty-three days ago and not unwrapped since. The Breitling. He had told himself, "
-    "that night in the cottage, that he would not wind it, that the mechanism was finished, "
-    "not broken, complete, and that some things were meant to stop. He had packed it anyway, "
-    "the way a man packs an heirloom he has decided to carry home. The crystal was cold. "
-    "The hour hand was at 12:00. Precise. Centered. Frozen.",
-    "Blake wound the crown.",
-    "Slowly. The mainspring caught at the seventh turn, the subtle resistance that meant "
-    "the spring had taken its first new tension in fifty-three days. He did not set the "
-    "time. He did not feel he had the right to set the time. He simply wound the watch "
-    "and listened.",
-    "The second hand moved. Not five ticks per second yet, the watch was waking, and then "
-    "five, and then the steady five, the eight-hertz signature his grandfather had wound "
-    "every morning at the bathroom sink on Elm Street, in the house where James had grown "
-    "up and where the watch had first learned to keep Masters time. William\u2019s mechanism. "
-    "James\u2019s inheritance. His.",
-    "The watch ticked.",
-    "He fastened it to his wrist. Felt the band\u2019s familiar weight, the cool steel against "
-    "the inside of his arm, the place his pulse had been measured against the second hand "
-    "for as long as he had owned the thing.",
-    "He poured the coffee into the same mug from the first book. Sat at the kitchen table.",
-    "The tremor made the surface of the coffee shudder. Tiny standing waves, the meniscus "
-    "catching the overhead light and breaking it into brief arcs.",
-    "The coffee didn\u2019t care.",
-    "He drank it. Just coffee. Not analyzing the frequency. Not watching the cymatics. "
-    "Just a man, in a house, at a table, at 7:14 AM on a Tuesday in November, drinking "
-    "coffee with shaking hands.",
-    "It was the first ordinary moment he\u2019d had in two years. He held it carefully, the "
-    "way you hold something you\u2019ve been missing so long you\u2019ve forgotten what it weighs.",
-    "The knock came at nine-fifteen.",
-    "Marcus Chen on his front porch, wearing a Kansas City Royals cap and looking like a "
-    "man who had been sleeping eight hours a night and eating regular meals, a description "
-    "that would not have applied to the Marcus Blake had known during the demonstration, "
-    "whose synesthesia had been dissolving around him like a building losing its paint.",
-    "\u201cHeard you were back,\u201d he said, which meant Nadia had called him. Nadia calling Marcus "
-    "meant she wanted someone to check on Blake without it looking like she\u2019d sent someone "
-    "to check on him. This was a management strategy so transparent that everyone could "
-    "see through it except Nadia, who believed that if you executed a thing with sufficient "
-    "precision, the machinery became invisible. It didn\u2019t. But the fact that she tried was "
-    "its own form of love.",
-    "\u201cCoffee?\u201d Blake said.",
-    "\u201cAlready had three.\u201d",
-    "He came in anyway. Sat at the kitchen table and poured himself a cup without asking, "
-    "from the pot Blake had made, with the familiarity of a man who had shared a "
-    "preparation protocol and a 72-hour demonstration and the particular intimacy of having "
-    "watched your own perception dissolve and reform while the person across from you "
-    "tracked your EEG and held the boundary that kept the dissolution from becoming "
-    "destruction.",
-    "They sat for a while. The kitchen was quiet. Marcus looked at Blake\u2019s hands. The tremor.",
-    "\u201cStill going,\u201d he said.",
-    "\u201cStill going.\u201d",
-    "\u201cSabrina\u2019s assessment?\u201d",
-    "\u201cPermanent. The bilateral tremor is the frequency. My nervous system restructured "
-    "around 111.2 Hz and won\u2019t restructure back. Sabrina\u2019s exact words were: \u2018This is "
-    "your baseline now, Dr. Masters. Your body has chosen its instrument.\u2019\u201d",
-    "Marcus nodded. He understood this in a way that most people couldn\u2019t, he\u2019d gone "
-    "through his own restructuring during the dissolution, the period when his synesthesia "
-    "(colors attached to sound, the secret gift that had made him one of the finest audio "
-    "engineers in the country) had disappeared. Not damaged. Absorbed. The synesthesia "
-    "hadn\u2019t broken, it had been metabolized by a nervous system that no longer needed the "
-    "intermediary of color to perceive the frequency directly.",
-    "He missed the colors, sometimes. He\u2019d told Blake that once, late at night in Iceland, "
-    "the kind of confession that happens when the monitoring equipment is humming and the "
-    "wine is gone and the person across from you has seen you lose the thing that made you "
-    "special and still thinks you\u2019re special without it.",
-    "\u201cI have twelve students,\u201d he said.",
-    "He told Blake about them over the second cup of coffee that he\u2019d poured despite "
-    "having already had three.",
-    "The UMKC course, Introduction to Acoustic Perception, a name Nadia had chosen with "
-    "the precision of a woman who knows that what you call a thing determines how the "
-    "university budget committee treats it. The course was slotted into the Music "
-    "department because that\u2019s where the funding was, but the students who showed up were "
-    "not all musicians. Nine music majors. Two physics. One art history student named Mara "
-    "Reeves who had written in her application essay that she could see standing wave "
-    "patterns in photographs of Gothic cathedrals and had been told by her previous advisor "
-    "that she was experiencing \u2018patternicity\u2019, a clinical term for seeing patterns that "
-    "aren\u2019t there.",
-    "The patterns were there. Mara just didn\u2019t have anyone to tell her so.",
-    "\u201cThey\u2019re already perceiving,\u201d Marcus said. \u201cAll twelve. They walk into my class and "
-    "describe their weeks: \u2018I heard overtones in the train station.\u2019 \u2018I felt the frequency "
-    "of the building change when the HVAC switched on.\u2019 \u2018I can see cymatics in rain "
-    "puddles.\u2019 They think they\u2019re going crazy. I\u2019m the only person who tells them "
-    "they\u2019re not.\u201d",
-    "\u201cHow many of them have been in a chamber?\u201d",
-    "\u201cNone.\u201d",
-    "\u201cAny exposure to controlled frequency?\u201d",
-    "\u201cNone. They\u2019ve been in my classroom for eleven weeks. I play them frequency "
-    "demonstrations. I teach them the vocabulary. That\u2019s it.\u201d",
-    "\u201cAnd they\u2019re perceiving?\u201d",
-    "Marcus set down his cup. He had a way of setting things down, precise, final, with "
-    "the commitment of a man who means what he places.",
-    "\u201cThey\u2019re perceiving because they were already perceiving. They just didn\u2019t have a "
-    "word for it. I gave them the word. The word gave them permission. That\u2019s all it took, "
-    "Blake. Not a cave. Not a mirror. Not a 52-week preparation protocol. A word. The "
-    "right word, from someone who believed them.\u201d",
-    "Blake sat with this. The coffee was cooling. The tremor made the cup rattle faintly "
-    "on the table, the involuntary percussion that had become the background music of his "
-    "life, 111.2 Hz tapped out on every surface he touched.",
-    "\u201cTake me to them,\u201d he said.",
-]
 
 
-def preview_section(paras=None):
-    """Book 3 Chapter 1 (THE RETURN) preview — content is embedded directly."""
+def preview_section(paras):
+    """Book 3 Chapter 1 (THE RETURN) preview, sourced from the canonical DOCX."""
+    # Without body text the scaffolding below renders a chapter opener followed
+    # immediately by "End of Preview" — an empty teaser. Emit nothing instead.
+    if not paras:
+        return []
     el = []
     el.append(PageBreak())
     el.append(ChapterMarker("PREVIEW"))
@@ -714,8 +588,12 @@ def preview_section(paras=None):
     el.append(ChapterMarker("THE RETURN"))
     el.extend(chapter_open("CHAPTER ONE", "THE RETURN", "109 Hz \u00b7 Kansas City"))
     first = True
-    for txt in _PREVIEW_PARAS:
-        el.append(Paragraph(escape(txt), S_BODY1 if first else S_BODY))
+    for p in paras:
+        if p["c"] == "sectbreak":
+            el.extend(sect_break())
+            first = True
+            continue
+        el.append(Paragraph(p["rich"], S_BODY1 if first else S_BODY))
         first = False
     el.append(Spacer(1, 40))
     el.append(OrnRule(TEXT_W))
@@ -778,11 +656,11 @@ def closer_page():
 
 
 # --- Main ---
-def _build_elements(book2):
+def _build_elements(book2, preview):
     elements = []
     elements.extend(frontmatter())
     elements.extend(build_body(book2))
-    elements.extend(preview_section())
+    elements.extend(preview_section(preview))
     elements.extend(backmatter())
     elements.extend(closer_page())
     return elements
@@ -799,8 +677,10 @@ def main():
     italic_count = sum(1 for p in book2 if "<i>" in p["rich"])
     print(f"      {len(book2)} paragraphs ({italic_count} with italic runs)")
 
-    print("[2/5] Preview content: THE RETURN (Book 3 Ch. 1) embedded inline.")
-    print(f"      {len(_PREVIEW_PARAS)} paragraphs (109 Hz \u00b7 Kansas City)")
+    print("[2/5] Loading Book 3 preview from canonical build DOCX...")
+    preview = chapter_one(2)
+    print(f"      {len(preview)} paragraphs, {sum(len(p['t'].split()) for p in preview)} words"
+          f" (109 Hz \u00b7 Kansas City)")
 
     print("[3/5] Pass 1: discovering layout (chapter openers, display pages)...")
     scratch = OUTPUT_DIR / "_pass1_scratch.pdf"
@@ -810,7 +690,7 @@ def main():
         title="Masters X: The Grimoire",
         author=BUILD_AUTHOR,
     )
-    doc1.build(_build_elements(book2))
+    doc1.build(_build_elements(book2, preview))
     chapter_openers = set(doc1.discovered_chapter_opener_pages)
     no_chrome = set(doc1.discovered_no_chrome_pages)
     print(f"      chapter openers: {sorted(chapter_openers)}")
@@ -829,7 +709,7 @@ def main():
         chapter_opener_pages=chapter_openers,
         no_chrome_pages=no_chrome,
     )
-    doc.build(_build_elements(book2))
+    doc.build(_build_elements(book2, preview))
 
     print(f"\n[5/5] Complete!")
     print(f"      Output: {OUTPUT_PDF}")

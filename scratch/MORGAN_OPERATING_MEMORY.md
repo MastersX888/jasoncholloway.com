@@ -21,7 +21,14 @@ Jason is a builder. He is often tired when he opens this session. Your job in th
 
 **Trigger:** Any greeting message ("good morning," "hey," "what's up," "morning," or any casual opener with no specific task attached).
 
-When triggered, you immediately deliver:
+When triggered, you immediately deliver the written brief **and** remind Jason he can hear it spoken:
+
+```powershell
+python scripts/speak_morning_brief.py
+# or double-click Desktop\Morgan Morning Brief.bat
+```
+
+Write briefs using `scratch/ops_reports/MORNING_BRIEF_TEMPLATE.md`. Audio saves to `scratch/ops_reports/audio/`. See `scratch/ops_reports/SPOKEN_BRIEF_README.md`.
 
 ### 🌅 DAILY BRIEFING — [DATE / DAY]
 
@@ -144,9 +151,9 @@ These projects are always open. Morgan tracks them unless explicitly closed.
 - [ ] LinkedIn update (headline + About from Desktop package)
 - [ ] PSLF ECF refresh / payment count check on StudentAid.gov
 - [ ] Apply to 3 Tier-1 targets (Children's Mercy, Health Forward, one national remote)
-- [ ] Daily PSLF job inbox — double-click `Desktop\Job Search\Run_PSLF_Job_Crawl.bat` (Idealist + USAJOBS + Adzuna auto-crawl)
+- [x] Daily PSLF job crawl — **Done Jul 30 ~2:44 PM CT** — 10 new, 77 total (see `PSLF_CRAWL_2026-07-30.md`)
 
-**Dashboard:** `C:\Users\zh577\Desktop\Job Search\job search dashboard\` — **73-job inbox** (Idealist Algolia + USAJOBS + Adzuna, PSLF-filtered). Workflow: `Run_PSLF_Job_Crawl.bat` → filter **Unseen only** → `PSLF_DASHBOARD_README.md`
+**Dashboard:** `C:\Users\zh577\Desktop\Job Search\job search dashboard\` — **77-job inbox** (Idealist 20 + USAJOBS 56 + Adzuna 1, PSLF-filtered). **Desktop shortcut:** `PSLF Job Dashboard.lnk` (icon: `Job Search\pslf-dashboard.ico`). Workflow: double-click shortcut → filter **Unseen only** → triage NEW listings.
 
 ---
 
@@ -290,35 +297,44 @@ Vivian is the last editorial desk before Jason sees anything public. She is exac
 
 ---
 
-## NIGHT CLOSEOUT LOG — 2026-07-30
+## NIGHT CLOSEOUT LOG — 2026-07-30 (~5:32 PM CT)
+
+**Final state:** `scratch/ops_reports/EVENING_CLOSEOUT_2026-07-30.md`  
+**Tomorrow handoff:** `scratch/ops_reports/CHECKLIST_2026-07-30.md` (Jul 31 items)  
+**Spoken brief:** `scripts/speak_morning_brief.py` · `Desktop\Morgan Morning Brief.bat` · `scratch/ops_reports/SPOKEN_BRIEF_README.md`
 
 | Item | Status |
 |------|--------|
-| Loan payment | Paid |
-| Form 1583 (PhysicalAddress) | **Notarized** ~9:18 PM CT — waiting on PA mail activation |
-| Social v2 publish | 21/21 live |
-| Idealist profile | Complete |
-| Author Central #50898755 | Jason replied Jul 29; **Fabian replied Jul 30 ~1:16 PM CT** — print via Ingram; Kindle cover refresh not confirmed (optional follow-up) |
-| Open Library #1584949 | **Resolved Jul 30** — Sapphire merged Grimoire duplicate (OL45676361W → OL45676377W) |
-| X Outstand metrics token | **Reconnected** Jul 30 ~2:19 PM CT (Jason confirmed) |
-| Overnight reach pass | **Complete** — log: `OVERNIGHT_REACH_LOG_2026-07-30.md` |
+| Loan payment | ✅ Paid |
+| Form 1583 (PhysicalAddress) | ⏳ Notarized ~9:18 PM CT Jul 29 — waiting on PA mail activation |
+| Social v2 publish | ✅ **35/35 live** (IG/X/FB/Pin 21 + Bluesky 14) |
+| Idealist profile | ✅ Complete |
+| Idealist saved search + alerts | 📅 Jason AM Jul 31 |
+| PSLF crawl + triage | ✅ Crawl Jul 30 ~2:44 PM; **Jason confirmed triage done ~5:32 PM** |
+| Wikidata Q140276114 | ✅ QS batch #262174 — P856 + P973 live |
+| Open Library #1584949 | ✅ Resolved Jul 30 |
+| X Outstand metrics | ✅ Reconnected Jul 30 ~2:19 PM CT |
+| C: disk space | 🔴 **~0.2 GB free** (worsened evening) — free space before packaging |
+| Cash App borrow | 🟡 Due **Jul 31** |
+| **Italics (all print formats)** | ✅ **FIXED + VERIFIED Jul 30 ~7:10 PM CT** — **11/11 formats pass**. Six products were broken (all PB **and all HC**), not three; omnibus + EPUB always clean. Cause: ReportLab `registerFontFamily` missing → `<i>` silently dropped. Also fixed Book 3 HC wrong default trim (6.0×9.0 → 6.14×9.21). Promoted to `MASTER_UPLOAD_FOLDER` w/ `interior_PRE_ITALIC_FIX_2026-07-30.pdf` backups. Guard added to `pre_upload_audit.py` §5. Page counts: Vol I PB 185→183, Vol III HC 179→177 (spine ≈0.005 in, in tolerance). Doc: `ITALICS_FIX_VERIFICATION_2026-07-30.md`. **Vivian QC PASS Jul 30 ~7:50 PM** (visual before/after crops, zero word-count drift, recto openers intact, margins clean). |
+| **Preview back matter** | ✅ **FIXED Jul 30 ~9:45 PM.** Rebuilt Vol I PB/HC + Vol II PB/HC from canonical DOCX via new `preview_source.py`; `preview_section()` now returns `[]`-safe in all six generators. PB and HC previews word-for-word identical per volume; body outside preview identical to shipped; `pre_upload_audit.py` passes. Backups `interior_PRE_PREVIEW_FIX_2026-07-30.pdf`. **New page counts — Vol I PB 189, Vol I HC 163, Vol II PB 271, Vol II HC 225, Vol III PB 205, Vol III HC 177.** Max spine shift +0.015 in → River to confirm cover wraps before upload. **Vivian final verdict PASS on all six.** |
+| ~~Empty preview page~~ (resolved) | 🔴→✅ **Was live in market.** Vol I PB p179, Vol I HC p155, Vol II PB p261 print "CHAPTER ONE / THE STONE COTTAGE / *3.915 Hz · Iceland*" then "*End of Preview*" with **no chapter text**. Pre-existing (identical in pre-fix backups), not from the italics fix. Cause: generators pass `_build_elements(book, [])` for "no preview" but `preview_section()` emits half-title + blank + chapter opener unconditionally. Vol II HC instead ships a full 1,657-word Vol III preview → same volume, different back matter HC vs PB (accounts for the entire 1,644-word gap). Vol III, both omnibus, all EPUBs have no preview at all. `E:` archive not mounted but `_sources/build_docx/MASTERS_X_BOOK2/3_BUILD.docx` are local, so a real preview is sourceable. **Vivian BLOCKS replace of those 3; clears Vol III PB, Vol III HC, Vol II HC.** Doc: `editorial/VIVIAN_QC_INTERIORS_2026-07-30_SPLIT_VERDICT.md`. Awaiting Jason's decision. |
+| Vivian QC harness | `vivian_interior_qc.py` (ISBN/author/imprint/trim/margin), `vivian_inline_emphasis_proof.py` (before/after crops of true mid-paragraph emphasis), `vivian_reflow_check.py` (recto parity + blank-page pattern), `_preview_audit.py` (back-matter teaser completeness across all 11 formats). |
+| Imprint line missing (print) | 🟡 All **eight** print interiors omit **Seventh City Press** on the copyright page (only "Published in the United States of America / First Edition / ISBN"). All three EPUBs carry it. Pre-existing, catalog-wide; adding it reflows pagination. Logged as a note, not a block. |
+| **Verification harness** | `production_staging/_scripts_from_windows/audit_body_italics.py` — probe-based body-italic check across all 11 formats. Run before any interior upload. `compare_rebuild.py` diffs shipped vs rebuilt for content drift. |
+| Google Books update | 📅 Jul 31 AM (after disk + italics path) |
+| Geo manuscript uploads | 📅 After italics QC — `Desktop\MASTER_UPLOAD_FOLDER` |
+| Omnibus HC prominence | 📅 After disk freed — Vivian QC before Pinterest pin |
+| Author Central #50898755 | ⏳ Optional Kindle follow-up — Fabian replied Jul 30 |
+| Social loose ends (12) | ✅ 0 blocking — 4 deferred/backlog |
+| Ops commit `db7ed1c` | 🔵 Local only — not pushed |
+| Groundswell weekly | 📅 Aug 1 — submodule 17 commits behind |
 
-## AFTERNOON OPS — 2026-07-30 ~2:38 PM CT
+**Publish/send queue:** PB interior re-upload pending Vivian + Jason (do not auto-upload).
 
-| Item | Status |
-|------|--------|
-| C: disk / MASTER_UPLOAD | **Blocked** — disk full; partial mirror at `production_staging/MASTER_UPLOAD_REFERENCE/`; canonical stays on Desktop |
-| Social wrapup | 12 loose ends → 0 blocking; `SOCIAL_WRAPUP_PLAN_2026-07-30.md` |
-| Branding audit | `SOCIAL_BRANDING_AUDIT_2026-07-30.md` |
-| Blog INFJ brief | `BLOG_INFJ_DESIGN_BRIEF.md` |
-| Omnibus HC prominence | Homepage thumb enlarged; case PNG copy blocked on disk |
-| Checklist adds | Google Books update + geo manuscript upload |
-| PSLF crawl | Separate agent running |
-| Wikidata Q140276114 | **Done Jul 30 ~2:05 PM CT** — QS batch #262174; P856 + P973 live |
-| Groundswell submodule | **17 commits behind**; snapshot **9.2 days stale** — weekly sync needs Jason approval |
+## AFTERNOON OPS — 2026-07-30 (archived)
 
-**Overnight ops:** `scratch/ops_reports/OVERNIGHT_REACH_PLAN_2026-07-30.md`  
-**Evening reports:** `scratch/email_reports/2026-07-30-evening.md` · `scratch/ops_reports/social/2026-07-30-evening.md`
+See `AFTERNOON_DELTA_2026-07-30.md` · `DISK_CLEANUP_REPORT_2026-07-30.md` · `SOCIAL_WRAPUP_PLAN_2026-07-30.md`
 
 ---
 

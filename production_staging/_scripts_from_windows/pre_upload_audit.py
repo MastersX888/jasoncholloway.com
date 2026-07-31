@@ -395,11 +395,51 @@ def main() -> int:
         doc.close()
     lines.append("")
 
+    # --- Section 5: Body-italic probes ---
+    # Span counts alone are not sufficient: display styles (Hz keys, subtitles,
+    # epigraphs) set an italic face directly, so a book can report italic spans
+    # while every narrative emphasis has collapsed to roman. This section
+    # verifies actual italic runs sampled from the BUILD DOCX.
+    lines.append("## 5. Body-italic probes (narrative emphasis)")
+    lines.append("")
+    body_italic_ok = True
+    try:
+        import audit_body_italics as bia
+
+        probe_cache = {book: bia.collect_probes(book) for book in bia.BOOK_DOCX}
+        lines.append("| ISBN | Format | Italic | Roman | Not found | Verdict |")
+        lines.append("|---|---|---:|---:|---:|---|")
+        for isbn, (label, books, kind) in bia.CATALOG.items():
+            path = bia.artifact_path(isbn, kind, bia.MASTER)
+            result = bia.Result(isbn=isbn, label=label, kind=kind)
+            if path is None or not path.exists():
+                lines.append(f"| {isbn} | {label} | — | — | — | **MISSING** |")
+                body_italic_ok = False
+                continue
+            probes = [p for book in books for p in probe_cache[book]]
+            if kind == "pdf":
+                bia.audit_pdf(path, probes, result)
+            else:
+                bia.audit_epub(path, probes, result)
+            verdict_text = "PASS" if result.passed else "**FAIL**"
+            if not result.passed:
+                body_italic_ok = False
+            lines.append(
+                f"| {isbn} | {label} | {result.italic_probes} | {result.roman_probes} | "
+                f"{result.not_found} | {verdict_text} |"
+            )
+            for bad in result.failures:
+                lines.append(f"|  | roman: {bad[:50]} | | | | |")
+    except Exception as exc:  # noqa: BLE001 - audit must report, not crash
+        body_italic_ok = False
+        lines.append(f"Body-italic probe check could not run: {exc}")
+    lines.append("")
+
     # Verdict
     lines.append("## Verdict")
     lines.append("")
-    if overall_editorial_ok and italic_ok and consistency_ok:
-        lines.append("**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, italics detected, formats consistent.")
+    if overall_editorial_ok and italic_ok and consistency_ok and body_italic_ok:
+        lines.append("**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, body italics verified, formats consistent.")
         verdict = 0
     else:
         lines.append("**UPLOAD AUDIT: FAIL / NEEDS REVIEW**")
@@ -407,6 +447,8 @@ def main() -> int:
             lines.append("- Editorial required/banned checks failed on one or more delivery formats.")
         if not italic_ok:
             lines.append("- Italic preservation below threshold or missing in a delivery format.")
+        if not body_italic_ok:
+            lines.append("- **Narrative emphasis collapsed to roman in a delivery format** (see section 5).")
         if not consistency_ok:
             lines.append("- Cross-format consistency gaps (see matrix).")
         verdict = 1

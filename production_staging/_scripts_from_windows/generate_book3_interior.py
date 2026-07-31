@@ -68,8 +68,10 @@ BOOK_ISBN = (
 )
 
 # ─── Trim ───
-TRIM_W = BUILD_WIDTH_PT if BUILD_WIDTH_PT else (6.0 * inch)
-TRIM_H = BUILD_HEIGHT_PT if BUILD_HEIGHT_PT else (9.0 * inch)
+# 6.14 x 9.21 matches the shipped HC edition and Books 1-2; the former 6x9
+# default silently produced an out-of-spec interior when run without overrides.
+TRIM_W = BUILD_WIDTH_PT if BUILD_WIDTH_PT else (6.14 * inch)
+TRIM_H = BUILD_HEIGHT_PT if BUILD_HEIGHT_PT else (9.21 * inch)
 M_GUTTER = 0.70 * inch
 M_OUTSIDE = 0.674 * inch
 M_TOP = 0.45 * inch
@@ -81,6 +83,15 @@ TEXT_H = TRIM_H - M_TOP - M_BOTTOM
 pdfmetrics.registerFont(TTFont("Garamond", "C:/Windows/Fonts/GARA.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondBd", "C:/Windows/Fonts/GARABD.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondIt", "C:/Windows/Fonts/GARAIT.TTF"))
+# Required for ReportLab <i>/<b> markup in Paragraphs. Without this family
+# map, italic runs from DOCX are silently rendered as roman (body italics strip).
+pdfmetrics.registerFontFamily(
+    "Garamond",
+    normal="Garamond",
+    bold="GaramondBd",
+    italic="GaramondIt",
+    boldItalic="GaramondIt",
+)
 
 # ─── Colors ───
 MED = Color(0.4, 0.4, 0.4)
@@ -584,6 +595,10 @@ def build_body(paras):
 
 
 def preview_section(paras):
+    # Vol III has no next volume, so this is unused — but an empty paras list
+    # would otherwise emit a chapter opener followed straight by "End of Preview".
+    if not paras:
+        return []
     el = []
     el.append(PageBreak())
     el.append(ChapterMarker("PREVIEW"))

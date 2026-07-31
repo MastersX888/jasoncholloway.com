@@ -57,6 +57,9 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.colors import Color
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from preview_source import chapter_one
+
 # --- Paths ---
 TRILOGY_DIR = Path(r"C:\Users\zh577\.openclaw\workspace\Corpus_Final_Export\The_Masters_Trilogy")
 DOCX_PATH = Path(r"C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway\production_staging\_sources\build_docx\MASTERS_X_BOOK1_BUILD.docx")
@@ -84,6 +87,15 @@ TEXT_H = TRIM_H - M_TOP - M_BOTTOM
 pdfmetrics.registerFont(TTFont("Garamond", "C:/Windows/Fonts/GARA.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondBd", "C:/Windows/Fonts/GARABD.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondIt", "C:/Windows/Fonts/GARAIT.TTF"))
+# Required for ReportLab <i>/<b> markup in Paragraphs. Without this family
+# map, italic runs from DOCX are silently rendered as roman (body italics strip).
+pdfmetrics.registerFontFamily(
+    "Garamond",
+    normal="Garamond",
+    bold="GaramondBd",
+    italic="GaramondIt",
+    boldItalic="GaramondIt",
+)
 
 # --- Colors ---
 MED = Color(0.4, 0.4, 0.4)
@@ -547,6 +559,10 @@ def build_body(paras):
 
 
 def preview_section(paras):
+    # Without body text the scaffolding below renders a chapter opener followed
+    # immediately by "End of Preview" — an empty teaser. Emit nothing instead.
+    if not paras:
+        return []
     el = []
     el.append(PageBreak())
     el.append(ChapterMarker("PREVIEW"))
@@ -658,25 +674,9 @@ def main():
     italic_count = sum(1 for p in book1 if "<i>" in p["rich"])
     print(f"      {len(book1)} paragraphs ({italic_count} with italic runs)")
 
-    print("[2/5] Loading Book 2 preview from corrected V2 markdown...")
-    b2_ch1_path = Path(r"E:\Masters_X_Trilogy_Archive\Old_Drafts_and_Backups") / "Book 2" / "CH01_THE_STONE_COTTAGE_V2.md"
-    try:
-        b2_text = b2_ch1_path.read_text(encoding="utf-8")
-    except FileNotFoundError:
-        b2_text = ""
-    preview = []
-    for line in b2_text.split("\n"):
-        s = line.strip()
-        if not s or s.startswith("#"):
-            continue
-        cls = classify(s.strip("*_"))
-        rich = escape(s)
-        rich = re.sub(r"\*([^*]+)\*", r"<i>\1</i>", rich)
-        rich = re.sub(r"_([^_]+)_", r"<i>\1</i>", rich)
-        preview.append({"i": 0, "t": s, "c": cls, "rich": rich})
-    print(f"      {len(preview)} paragraphs (from {b2_ch1_path.name})")
-
-
+    print("[2/5] Loading Book 2 preview from canonical build DOCX...")
+    preview = chapter_one(1)
+    print(f"      {len(preview)} paragraphs, {sum(len(p['t'].split()) for p in preview)} words")
 
 
     print("[3/5] Pass 1: discovering layout (chapter openers, display pages)...")
@@ -687,7 +687,7 @@ def main():
         title="Masters X: The Inheritance of Frequency",
         author=BUILD_AUTHOR,
     )
-    doc1.build(_build_elements(book1, []))  # preview disabled (live CANON has no preview)
+    doc1.build(_build_elements(book1, preview))
     chapter_openers = set(doc1.discovered_chapter_opener_pages)
     no_chrome = set(doc1.discovered_no_chrome_pages)
     print(f"      chapter openers: {sorted(chapter_openers)}")
@@ -706,7 +706,7 @@ def main():
         chapter_opener_pages=chapter_openers,
         no_chrome_pages=no_chrome,
     )
-    doc.build(_build_elements(book1, []))  # preview disabled (live CANON has no preview)
+    doc.build(_build_elements(book1, preview))
 
     print(f"\n[5/5] Complete!")
     print(f"      Output: {OUTPUT_PDF}")

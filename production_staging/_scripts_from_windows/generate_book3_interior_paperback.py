@@ -81,6 +81,15 @@ TEXT_H = TRIM_H - M_TOP - M_BOTTOM
 pdfmetrics.registerFont(TTFont("Garamond", "C:/Windows/Fonts/GARA.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondBd", "C:/Windows/Fonts/GARABD.TTF"))
 pdfmetrics.registerFont(TTFont("GaramondIt", "C:/Windows/Fonts/GARAIT.TTF"))
+# Required for ReportLab <i>/<b> markup in Paragraphs. Without this family
+# map, italic runs from DOCX are silently rendered as roman (body italics strip).
+pdfmetrics.registerFontFamily(
+    "Garamond",
+    normal="Garamond",
+    bold="GaramondBd",
+    italic="GaramondIt",
+    boldItalic="GaramondIt",
+)
 
 # ─── Colors ───
 MED = Color(0.4, 0.4, 0.4)
@@ -584,6 +593,10 @@ def build_body(paras):
 
 
 def preview_section(paras):
+    # Vol III has no next volume, so this is unused — but an empty paras list
+    # would otherwise emit a chapter opener followed straight by "End of Preview".
+    if not paras:
+        return []
     el = []
     el.append(PageBreak())
     el.append(ChapterMarker("PREVIEW"))

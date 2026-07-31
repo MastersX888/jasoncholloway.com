@@ -2,21 +2,18 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Books — Jason Carroll Holloway",
+export const metadata: Metadata = buildMetadata({
+  title: "Books by Jason Carroll Holloway | Seventh City Press",
+  titleAbsolute: true,
   description:
     "The complete catalog from Seventh City Press: the Masters X Trilogy (three novels of acoustic frequency, medieval manuscripts, and Kansas City conspiracy) and the John Hawkes critical monograph. Available in hardcover, paperback, and Kindle.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/",
-  },
-  openGraph: {
-    title: "Books by Jason Carroll Holloway — Seventh City Press",
-    description:
-      "Masters X Trilogy · Omnibus Edition · Hawkes Monograph. Available now from Seventh City Press.",
-    url: "https://jasoncholloway.com/books/",
-  },
-};
+  socialTitle: "Books by Jason Carroll Holloway — Seventh City Press",
+  socialDescription:
+    "Masters X Trilogy · Omnibus Edition · Hawkes Monograph. Available now from Seventh City Press.",
+  path: "/books/",
+});
 
 export default function BooksIndexPage() {
   const trilogy = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");
@@ -28,18 +25,33 @@ export default function BooksIndexPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              {
-                "@type": "ListItem",
-                position: 1,
-                name: "Books",
-                item: "https://jasoncholloway.com/books/",
-              },
-            ],
-          }),
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Books",
+                  item: "https://jasoncholloway.com/books/",
+                },
+              ],
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              name: "Books by Jason Carroll Holloway",
+              url: "https://jasoncholloway.com/books/",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, url: "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/" },
+                { "@type": "ListItem", position: 2, url: "https://jasoncholloway.com/books/masters-x/the-grimoire/" },
+                { "@type": "ListItem", position: 3, url: "https://jasoncholloway.com/books/masters-x/the-kingdom/" },
+                { "@type": "ListItem", position: 4, url: "https://jasoncholloway.com/books/masters-x/omnibus/" },
+                { "@type": "ListItem", position: 5, url: "https://jasoncholloway.com/books/hawkes-monograph/" },
+              ],
+            },
+          ]),
         }}
       />
 

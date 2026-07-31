@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Returns & Refunds",
   description:
     "Return and refund policy for print books sold by Seventh City Press through jasoncholloway.com — 30-day returns for damaged, defective, or incorrect orders.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/returns/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/returns/",
-  },
-};
+  path: "/returns/",
+});
 
 const returnPolicyJsonLd = {
   "@context": "https://schema.org",

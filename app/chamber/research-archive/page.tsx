@@ -1,14 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Research Archive — Virtual Masters Analysis Chamber",
   description:
     "The 247-page distribution file released by Andrew Chen. Seven years of acoustic consciousness research. 1.2 million downloads. Creative Commons.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/research-archive/",
-  },
-};
+  path: "/chamber/research-archive/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

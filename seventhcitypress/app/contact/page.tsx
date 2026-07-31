@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
-import SocialLinks from "@/components/layout/SocialLinks";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact & Press Inquiries",
   description:
     "Contact Seventh City Press for media inquiries, interview requests, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
-  alternates: {
-    canonical: "https://seventhcitypress.com/contact/",
-  },
-  openGraph: {
-    url: "https://seventhcitypress.com/contact/",
-  },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (
@@ -36,7 +31,7 @@ export default function ContactPage() {
           <div className="resp-main-sidebar">
             <div>
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Media & Press Inquiries</span>
+                <h2 className="label">Media &amp; Press Inquiries</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem", marginBottom: "2rem" }}>
                 <p>
@@ -63,7 +58,7 @@ export default function ContactPage() {
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Review Copies & Academic Requests</span>
+                <h2 className="label">Review Copies &amp; Academic Requests</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem" }}>
                 <p>
@@ -108,7 +103,16 @@ export default function ContactPage() {
               </div>
 
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <SocialLinks title="Connect" variant="full" />
+                <div className="label" style={{ marginBottom: "0.75rem" }}>Author Site</div>
+                <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, marginBottom: "0.75rem" }}>
+                  Full catalog, field notes, and the Analysis Chamber:
+                </p>
+                <a
+                  href="https://jasoncholloway.com/"
+                  style={{ fontSize: "0.85rem", color: "var(--gold)" }}
+                >
+                  jasoncholloway.com →
+                </a>
               </div>
             </div>
           </div>

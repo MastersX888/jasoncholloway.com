@@ -18,8 +18,11 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function Image({ params }: { params: { slug: string } }) {
-  const book = books.find((b) => b.slug === params.slug);
+// `params` is a Promise in this version of Next. Reading `.slug` off the Promise
+// silently yielded undefined, so every volume shipped a blank 3 KB share card.
+export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const book = books.find((b) => b.slug === slug);
   if (!book) return new ImageResponse(<div />);
 
   let coverDataUrl = '';

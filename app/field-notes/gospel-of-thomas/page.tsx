@@ -1,33 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It'",
   description:
     "The Gospel of Thomas is a real first-century text discovered at Nag Hammadi, Egypt in 1945. It contains 114 sayings attributed to Jesus, with no narrative, no miracles, no resurrection — only words. Saying 113 is the sentence Volume III of the Masters X Trilogy is built on.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/gospel-of-thomas/" },
-  openGraph: {
-    title: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It' | Field Notes",
-    description:
-      "Discovered at Nag Hammadi, Egypt, 1945. 114 sayings. No miracles, no resurrection. Saying 113: the kingdom is already here, spread upon the earth — and people don't see it. Volume III of Masters X is built on this sentence.",
-    url: "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: Coptic manuscript page from the Nag Hammadi library",
-      },
-    ],
+  socialTitle: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It' | Field Notes",
+  socialDescription:
+    "Discovered at Nag Hammadi, Egypt, 1945. 114 sayings. No miracles, no resurrection. Saying 113: the kingdom is already here, spread upon the earth — and people don't see it. Volume III of Masters X is built on this sentence.",
+  path: "/field-notes/gospel-of-thomas/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: Coptic manuscript page from the Nag Hammadi library",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It'",
-    description:
-      "Discovered at Nag Hammadi, 1945. 114 sayings. No miracles. Saying 113: the kingdom is already here — and people don't see it. Volume III of Masters X is built on this sentence.",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png", alt: "Illustration: Coptic manuscript page from the Nag Hammadi library" }],
-  },
-};
+});
 
 const faqs = [
   {

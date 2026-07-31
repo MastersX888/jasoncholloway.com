@@ -9,20 +9,24 @@ import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
+import { mastersXSeriesNode } from "@/lib/seo/bookSchema";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
   description:
-    "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. For readers of Foucault's Pendulum, The Da Vinci Code, and Cloud Cuckoo Land. By Jason Carroll Holloway. Published by Seventh City Press.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/masters-x/",
+    "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. By Jason Carroll Holloway, published by Seventh City Press.",
+  socialTitle: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+  socialDescription:
+    "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
+  path: "/books/masters-x/",
+  image: {
+    url: "https://jasoncholloway.com/books/masters-x/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Masters X Trilogy — three volume covers",
   },
-  openGraph: {
-    title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
-    description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
-    url: "https://jasoncholloway.com/books/masters-x/",
-  },
-};
+});
 
 export default function MastersXPage() {
   return (
@@ -49,24 +53,7 @@ export default function MastersXPage() {
                 }
               ]
             },
-            {
-              "@context": "https://schema.org",
-              "@type": "BookSeries",
-              "name": "Masters X Trilogy",
-              "author": { "@id": "https://jasoncholloway.com/#person" },
-              "publisher": { "@id": "https://jasoncholloway.com/#organization" },
-              "locationCreated": {
-                "@type": "Place",
-                "name": "Kansas City, Missouri"
-              },
-              "genre": ["Conspiracy Thriller", "Literary Fiction", "Historical Fiction", "Mystery"],
-              "description": "A Kansas City trilogy tracing the Voynich Manuscript, the Ars Notoria, and a 111 Hz archaeoacoustic frequency from SubTropolis to a sealed crypt beneath Prague's Strahov Monastery.",
-              "hasPart": books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map(b => ({
-                "@type": "Book",
-                "name": b.title + ": " + b.subtitle,
-                "url": `https://jasoncholloway.com/books/masters-x/${b.slug}/`
-              }))
-            }
+            mastersXSeriesNode
           ])
         }}
       />
@@ -190,7 +177,7 @@ export default function MastersXPage() {
       <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
         <div className="container" style={{ maxWidth: "800px" }}>
           <div style={{ background: "var(--bg-raised)", padding: "2rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)" }}>
-            <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "1.25rem", textAlign: "center" }}>Not ready to buy? Read the opening chapters free.</h4>
+            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "1.2rem", marginBottom: "1.25rem", textAlign: "center" }}>Not ready to buy? Read the opening chapters free.</h2>
             <NewsletterForm compact={true} />
           </div>
         </div>

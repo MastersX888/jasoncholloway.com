@@ -1,19 +1,15 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
-import SocialLinks from "@/components/layout/SocialLinks";
+import { personNode } from "@/lib/seo/entities";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
     "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/about/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/about/",
-  },
-};
+  path: "/about/",
+  ogType: "profile",
+});
 
 export default function AboutPage() {
   return (
@@ -24,39 +20,9 @@ export default function AboutPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfilePage",
+            "url": "https://jasoncholloway.com/about/",
             "dateCreated": "2026-06-05T00:00:00Z",
-            "mainEntity": {
-              "@type": "Person",
-              "@id": "https://jasoncholloway.com/#person",
-              "name": "Jason Carroll Holloway",
-              "alternateName": "Jason C. Holloway",
-              "url": "https://jasoncholloway.com/",
-              "jobTitle": "Author",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Kansas City",
-                "addressRegion": "MO",
-                "addressCountry": "US"
-              },
-              "alumniOf": {
-                "@type": "EducationalOrganization",
-                "name": "Mercy University"
-              },
-              "knowsAbout": [
-                "Voynich Manuscript",
-                "Ars Notoria",
-                "archaeoacoustics",
-                "SubTropolis",
-                "Strahov Monastery",
-                "medieval manuscripts",
-                "John Hawkes",
-                "acoustic frequency",
-                "conspiracy fiction"
-              ],
-              "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
-              "identifier": authorIsniIdentifier,
-              "sameAs": [...authorSameAs]
-            }
+            "mainEntity": personNode,
           })
         }}
       />
@@ -206,10 +172,6 @@ export default function AboutPage() {
                 <a href="mailto:jason@seventhcitypress.com" className="btn btn-gold" style={{ width: "100%", justifyContent: "center" }}>
                   Contact Jason Directly
                 </a>
-              </div>
-
-              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <SocialLinks title="Connect" variant="full" />
               </div>
             </div>
           </div>

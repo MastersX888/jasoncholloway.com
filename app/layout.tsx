@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { authorIsniIdentifier, authorSameAs, publisherSameAs, SOCIAL_X_HANDLE, xHandleForMetadata } from "@/lib/data/authorAuthority";
+import { authorSiteGraph } from "@/lib/seo/entities";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo/metadata";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import SocialMeLinks from "@/components/layout/SocialMeLinks";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -39,64 +39,35 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Jason Carroll Holloway: Author & Seventh City Press",
+    default: "Jason Carroll Holloway — Author & Seventh City Press",
     template: "%s | Jason Carroll Holloway",
   },
   description:
-    "Jason Carroll Holloway is the author of the Masters X Trilogy, a Kansas City conspiracy thriller tracing the Voynich Manuscript, the Ars Notoria, SubTropolis, and the 111 Hz archaeoacoustics phenomenon. Published by Seventh City Press.",
-  keywords: [
-    "Jason Carroll Holloway",
-    "Jason C. Holloway",
-    "Masters X Trilogy",
-    "Seventh City Press",
-    "Kansas City fiction",
-    "SubTropolis",
-    "Voynich Manuscript",
-    "Ars Notoria",
-    "111 Hz frequency",
-    "archaeoacoustics",
-    "The Inheritance of Frequency",
-    "The Grimoire",
-    "The Kingdom",
-    "conspiracy thriller",
-    "medieval manuscript thriller",
-  ],
+    "Jason Carroll Holloway is the author of the Masters X Trilogy — a Kansas City conspiracy thriller tracing the Voynich Manuscript, the Ars Notoria, SubTropolis, and the 111 Hz archaeoacoustics phenomenon. Published by Seventh City Press.",
   authors: [{ name: "Jason Carroll Holloway" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jasoncholloway.com",
-    siteName: "Jason Carroll Holloway",
-    title: "Jason Carroll Holloway: Masters X Trilogy | Kansas City Conspiracy Thriller",
+    url: `${SITE_URL}/`,
+    siteName: SITE_NAME,
+    title: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
     description:
-      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. In the Masters X Trilogy, the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: "Jason Carroll Holloway: Masters X Trilogy | Kansas City Conspiracy Thriller",
-      },
-    ],
+      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jason Carroll Holloway: Masters X Trilogy",
+    title: "Jason Carroll Holloway — Masters X Trilogy | Kansas City Conspiracy Thriller",
     description:
-      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy: Voynich Manuscript, Ars Notoria, 111 Hz.",
-    ...(xHandleForMetadata(SOCIAL_X_HANDLE)
-      ? { site: xHandleForMetadata(SOCIAL_X_HANDLE), creator: xHandleForMetadata(SOCIAL_X_HANDLE) }
-      : {}),
-    images: [
-      {
-        url: "https://jasoncholloway.com/opengraph-image",
-        alt: "Jason Carroll Holloway: Masters X Trilogy | Kansas City Conspiracy Thriller",
-      },
-    ],
+      "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
-  metadataBase: new URL("https://jasoncholloway.com"),
+  metadataBase: new URL(SITE_URL),
   verification: {
     yandex: "998186f9ff7ecbd7",
+    // DRAFT — needs Jason: paste the token from Search Console → Add property →
+    // HTML tag, or delete this line if the domain is already verified by DNS TXT.
+    // google: "",
   },
 };
 
@@ -109,76 +80,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorantGaramond.variable} ${ebGaramond.variable} ${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
-        <SocialMeLinks />
         <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
         <meta name="yandex-verification" content="998186f9ff7ecbd7" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebSite",
-                  "@id": "https://jasoncholloway.com/#website",
-                  "url": "https://jasoncholloway.com/",
-                  "name": "Jason Carroll Holloway",
-                  "publisher": {
-                    "@id": "https://jasoncholloway.com/#organization"
-                  }
-                },
-                {
-                  "@type": "Person",
-                  "@id": "https://jasoncholloway.com/#person",
-                  "name": "Jason Carroll Holloway",
-                  "alternateName": "Jason C. Holloway",
-                  "url": "https://jasoncholloway.com/",
-                  "jobTitle": "Author",
-                  "address": {
-                    "@type": "PostalAddress",
-                    "addressLocality": "Kansas City",
-                    "addressRegion": "MO",
-                    "addressCountry": "US"
-                  },
-                  "alumniOf": {
-                    "@type": "EducationalOrganization",
-                    "name": "University of Missouri–Kansas City"
-                  },
-                  "knowsAbout": [
-                    "Voynich Manuscript",
-                    "Ars Notoria",
-                    "archaeoacoustics",
-                    "SubTropolis",
-                    "Strahov Monastery",
-                    "medieval manuscripts",
-                    "John Hawkes",
-                    "acoustic frequency",
-                    "conspiracy fiction"
-                  ],
-                  "worksFor": { "@id": "https://jasoncholloway.com/#organization" },
-                  "identifier": authorIsniIdentifier,
-                  "sameAs": [...authorSameAs]
-                },
-                {
-                  "@type": "Organization",
-                  "@id": "https://jasoncholloway.com/#organization",
-                  "name": "Seventh City Press",
-                  "url": "https://seventhcitypress.com/",
-                  "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://jasoncholloway.com/og-image.png"
-                  },
-                  "founder": { "@id": "https://jasoncholloway.com/#person" },
-                  "contactPoint": {
-                    "@type": "ContactPoint",
-                    "contactType": "General",
-                    "email": "info@seventhcitypress.com"
-                  },
-                  "sameAs": publisherSameAs()
-                }
-              ]
-            })
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(authorSiteGraph) }}
         />
       </head>
       <body>

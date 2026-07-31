@@ -3,15 +3,15 @@ import Image from "next/image";
 import { books } from "@/lib/data/books";
 import LeadConversionTracker from "@/components/analytics/LeadConversionTracker";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Your Downloads Are Ready",
-  description: "Download your complimentary opening chapters of the Masters X Trilogy and the Distribution File.",
-  robots: {
-    index: false,
-    follow: false,
-  },
-};
+  description:
+    "Download your complimentary opening chapters of the Masters X Trilogy and the Distribution File.",
+  path: "/chapters-sent/",
+  noindex: true,
+});
 
 export default function ChaptersSentPage() {
   const trilogy = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");

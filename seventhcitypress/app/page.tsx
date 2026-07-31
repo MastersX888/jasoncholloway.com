@@ -1,111 +1,159 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Image from "next/image";
 import Link from "next/link";
-import SocialLinks from "@/components/layout/SocialLinks";
-import { authorIsniIdentifier, authorSameAs } from "../lib/authorAuthority";
+import { ORGANIZATION_ID, organizationNode, personNode } from "../lib/entities";
+import { buildMetadata } from "../lib/metadata";
 import styles from './press-page.module.css';
 
-export const metadata: Metadata = {
-  title: "Press & Media Kit — Masters X Trilogy",
+// DRAFT COPY — pending Vivian QC and Jason's approval.
+// The previous title ("Press & Media Kit — Masters X Trilogy") was an absolute
+// title that bypassed the layout's brand template, so the imprint's only homepage
+// never contained the imprint's own name — the one query it can realistically own.
+export const metadata: Metadata = buildMetadata({
+  title: "Seventh City Press — Independent Literary Imprint, Kansas City",
+  titleAbsolute: true,
   description:
-    "Press materials for the Masters X Trilogy by Jason Carroll Holloway. Includes press release, fact sheet, author bio, and synopses. Review copies available on request from Seventh City Press.",
-  openGraph: {
-    title: "Press — Masters X Trilogy | Seventh City Press",
+    "Seventh City Press is an independent literary imprint in Kansas City, publisher of the Masters X Trilogy by Jason Carroll Holloway. Press kit, fact sheet, author bios, and review copy requests.",
+  socialTitle: "Seventh City Press — Independent Literary Imprint",
+  socialDescription:
+    "A conspiracy of frequency, medieval manuscripts, and the city beneath the city. Three novels and a complete omnibus from Seventh City Press.",
+  path: "/",
+});
+
+const AUTHOR_REF = { "@id": personNode["@id"] };
+const PUBLISHER_REF = { "@id": ORGANIZATION_ID };
+
+/**
+ * Catalog facts, stated once. Print and the omnibus are IngramSpark only; Amazon
+ * carries the three Kindle editions and nothing else. Every `@id` matches the node
+ * the author site emits for the same edition so the two documents describe one set
+ * of works rather than two.
+ */
+const CATALOG = [
+  {
+    slug: "the-inheritance-of-frequency",
+    name: "Masters X: The Inheritance of Frequency",
     description:
-      "A conspiracy of frequency, medieval manuscripts, and the city beneath the city. Three novels and a complete omnibus from Seventh City Press.",
-    url: "https://seventhcitypress.com/",
-    siteName: "Seventh City Press",
-    type: "website",
+      "Seven notebooks. Thirty years of classified acoustic research. A sealed crypt beneath Prague.",
+    isbnPb: "9798256008048",
+    isbnHc: "9798295800801",
+    isbnEbook: "9798256008819",
+    asin: "B0H4KYMSM1",
+    pagesPb: 178,
+    pagesHc: 156,
+    position: 1,
   },
-  alternates: { canonical: "https://seventhcitypress.com/" },
-};
+  {
+    slug: "the-grimoire",
+    name: "Masters X: The Grimoire",
+    description:
+      "The Ars Notoria decoded. A preparation protocol for the frequency. Twenty-three candidates waiting.",
+    isbnPb: "9798256009953",
+    isbnHc: "9798295812675",
+    isbnEbook: "9798256009625",
+    asin: "B0H4KQ4YQJ",
+    pagesPb: 260,
+    pagesHc: 218,
+    position: 2,
+  },
+  {
+    slug: "the-kingdom",
+    name: "Masters X: The Kingdom",
+    description:
+      "The demonstration, the argument, and an open-source release that reaches 1.2 million downloads.",
+    isbnPb: "9798256010072",
+    isbnHc: "9798295812705",
+    isbnEbook: "9798256009809",
+    asin: "B0H4L36X21",
+    pagesPb: 200,
+    pagesHc: 170,
+    position: 3,
+  },
+] as const;
+
+const PB_PUBLISHED = "2026-06-01";
+const HC_PUBLISHED = "2026-05-14";
+const SERIES_ID = "https://jasoncholloway.com/books/masters-x/#series";
+
+const bookNodes = CATALOG.map((book) => {
+  const pageUrl = `https://jasoncholloway.com/books/masters-x/${book.slug}/`;
+  return {
+    "@type": "Book",
+    "@id": `${pageUrl}#work`,
+    name: book.name,
+    url: pageUrl,
+    description: book.description,
+    author: AUTHOR_REF,
+    publisher: PUBLISHER_REF,
+    inLanguage: "en",
+    datePublished: HC_PUBLISHED,
+    genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+    isPartOf: { "@id": SERIES_ID },
+    position: book.position,
+    workExample: [
+      {
+        "@type": "Book",
+        "@id": `${pageUrl}#paperback`,
+        name: `${book.name} (Paperback)`,
+        url: pageUrl,
+        isbn: book.isbnPb,
+        bookFormat: "https://schema.org/Paperback",
+        bookEdition: "First Edition",
+        inLanguage: "en",
+        datePublished: PB_PUBLISHED,
+        numberOfPages: book.pagesPb,
+        author: AUTHOR_REF,
+        publisher: PUBLISHER_REF,
+      },
+      {
+        "@type": "Book",
+        "@id": `${pageUrl}#hardcover`,
+        name: `${book.name} (Hardcover)`,
+        url: pageUrl,
+        isbn: book.isbnHc,
+        bookFormat: "https://schema.org/Hardcover",
+        bookEdition: "First Edition",
+        inLanguage: "en",
+        datePublished: HC_PUBLISHED,
+        numberOfPages: book.pagesHc,
+        author: AUTHOR_REF,
+        publisher: PUBLISHER_REF,
+      },
+      {
+        "@type": "Book",
+        "@id": `${pageUrl}#ebook`,
+        name: `${book.name} (Kindle / EPUB)`,
+        url: pageUrl,
+        isbn: book.isbnEbook,
+        bookFormat: "https://schema.org/EBook",
+        inLanguage: "en",
+        datePublished: PB_PUBLISHED,
+        author: AUTHOR_REF,
+        publisher: PUBLISHER_REF,
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "ASIN",
+          value: book.asin,
+        },
+      },
+    ],
+  };
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Person",
-      "@id": "https://jasoncholloway.com/#person",
-      name: "Jason Carroll Holloway",
-      url: "https://jasoncholloway.com",
-      jobTitle: "Author",
-      description:
-        "Writer and researcher at the intersection of acoustic science, medieval scholarship, and human consciousness.",
-      alumniOf: {
-        "@type": "CollegeOrUniversity",
-        name: "Mercy University",
-        sameAs: "https://www.mercy.edu",
-      },
-      identifier: authorIsniIdentifier,
-      sameAs: [...authorSameAs],
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://seventhcitypress.com/#organization",
-      name: "Seventh City Press",
-      url: "https://seventhcitypress.com/",
-      founder: { "@id": "https://jasoncholloway.com/#person" },
-      location: {
-        "@type": "Place",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Kansas City",
-          addressRegion: "MO",
-        },
-      },
-    },
-    {
-      "@type": "Book",
-      name: "The Inheritance of Frequency",
-      author: { "@id": "https://jasoncholloway.com/#person" },
-      publisher: { "@id": "https://seventhcitypress.com/#organization" },
-      isbn: "9798256008048",
-      datePublished: "2026-06-01",
-      numberOfPages: 178,
-      inLanguage: "en",
-      bookFormat: "Paperback",
-      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
-      description:
-        "Seven notebooks. Thirty years of classified acoustic research. A sealed crypt beneath Prague.",
-    },
-    {
-      "@type": "Book",
-      name: "The Grimoire",
-      author: { "@id": "https://jasoncholloway.com/#person" },
-      publisher: { "@id": "https://seventhcitypress.com/#organization" },
-      isbn: "9798256009953",
-      datePublished: "2026-06-01",
-      numberOfPages: 260,
-      inLanguage: "en",
-      bookFormat: "Paperback",
-      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
-      description:
-        "The Ars Notoria decoded. A preparation protocol for the frequency. Twenty-three candidates waiting.",
-    },
-    {
-      "@type": "Book",
-      name: "The Kingdom",
-      author: { "@id": "https://jasoncholloway.com/#person" },
-      publisher: { "@id": "https://seventhcitypress.com/#organization" },
-      isbn: "9798256010072",
-      datePublished: "2026-06-01",
-      numberOfPages: 200,
-      inLanguage: "en",
-      bookFormat: "Paperback",
-      genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
-      description:
-        "The demonstration, the argument, and an open-source release that reaches 1.2 million downloads.",
-    },
+    ...bookNodes,
     {
       "@type": "WebPage",
-      "@id": "https://seventhcitypress.com/",
+      "@id": "https://seventhcitypress.com/#webpage",
       url: "https://seventhcitypress.com/",
-      name: "Press — Masters X Trilogy | Seventh City Press",
+      name: "Seventh City Press — Independent Literary Imprint, Kansas City",
       description:
-        "Press materials, media kit, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
-      publisher: { "@id": "https://seventhcitypress.com/#organization" },
-      dateModified: new Date().toISOString().split("T")[0],
+        "Imprint profile, press materials, media kit, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
+      isPartOf: { "@id": "https://seventhcitypress.com/#website" },
+      about: { "@id": organizationNode["@id"] },
+      publisher: PUBLISHER_REF,
     },
   ],
 };
@@ -183,8 +231,12 @@ function CoverThumb({ label, src }: { label: string; src: string }) {
 export default function PressPage() {
   return (
     <>
-      <Script
-        id="press-jsonld"
+      {/*
+        Plain <script>. next/script defaults to `afterInteractive`, which injected
+        this graph client-side only — it was absent from the static export, so no
+        crawler ever saw the publisher's Book markup.
+      */}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
@@ -198,12 +250,16 @@ export default function PressPage() {
               <span className="label">Seventh City Press · Communications Desk</span>
             </div>
 
+            {/* DRAFT COPY — pending Vivian QC and Jason's approval. The H1 was
+                "Press & Media Kit", which left the imprint's own name off its only
+                homepage. The phrase now leads the sub-head and heads the download
+                section below, so nothing is lost. */}
             <h1 className="hero-title animate-fade-up delay-1" style={{ fontSize: "clamp(2.5rem, 6vw, 4.8rem)", lineHeight: 1.1 }}>
-              Press &amp; Media Kit
+              Seventh City Press
             </h1>
 
             <p className="hero-sub animate-fade-up delay-2" style={{ maxWidth: "55ch", marginBottom: "2.5rem" }}>
-              Press materials, review copy requests, and downloadable media kit for the Masters X Trilogy.
+              Press &amp; media kit for the Masters X Trilogy — an independent literary imprint in Kansas City. Press materials, review copy requests, and downloadable assets.
             </p>
 
             <a
@@ -244,7 +300,7 @@ export default function PressPage() {
       <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", paddingBottom: "2.5rem" }}>
         <div className="container">
           <div style={{ textAlign: "center", marginBottom: "1.75rem", paddingTop: "0.5rem" }}>
-            <span className="label">Cover Art — Masters X Trilogy</span>
+            <h2 className="label">Cover Art — Masters X Trilogy</h2>
           </div>
           <div style={{
             display: "grid",
@@ -260,7 +316,7 @@ export default function PressPage() {
           </div>
 
           <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
-            <span className="label">Omnibus Edition</span>
+            <h3 className="label">Omnibus Edition</h3>
           </div>
           <div style={{ display: "flex", justifyContent: "center", gap: "1.5rem", flexWrap: "wrap" }}>
             {omnibusCovers.map((cover) => (
@@ -420,7 +476,7 @@ export default function PressPage() {
             {/* ── Download kit ──────────────────────────────────────────────── */}
             <section className={styles['press-kit-section']} aria-label="Press kit downloads">
               <div className={styles['section-label-row']}>
-                <span className={styles['label']}>PRESS KIT</span>
+                <h2 className={styles['label']}>Press &amp; Media Kit</h2>
               </div>
               <p className={styles['press-kit-intro']}>
                 Download the complete kit or individual sheets. All files are print-ready PDF.
@@ -465,9 +521,6 @@ export default function PressPage() {
                 <Link href="/contact/" className="btn btn-outline" style={{ display: "inline-flex" }}>
                   Contact the Communications Desk
                 </Link>
-              </div>
-              <div style={{ maxWidth: "420px", margin: "2rem auto 0" }}>
-                <SocialLinks title="Connect" variant="full" />
               </div>
             </section>
 

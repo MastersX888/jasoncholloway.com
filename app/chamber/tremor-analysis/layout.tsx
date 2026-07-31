@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Tremor Convergence Analysis",
   description: "Tremor convergence analysis visualization interface. Masters Analysis Chamber tool.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/tremor-analysis/",
-  },
-};
+  path: "/chamber/tremor-analysis/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

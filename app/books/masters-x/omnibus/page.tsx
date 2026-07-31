@@ -2,115 +2,65 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS } from "@/lib/data/buyLinks";
 import CoverArtifact from "@/components/ui/CoverArtifact";
-import CaseCoverShowcase from "@/components/ui/CaseCoverShowcase";
 import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import {
+  buildBookGraph,
+  MASTERS_X_SERIES_ID,
+  MASTERS_X_VOLUME_SLUGS,
+} from "@/lib/seo/bookSchema";
+import { buildMetadata } from "@/lib/seo/metadata";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
 
-export const metadata: Metadata = {
+const OMNIBUS_PATH = "/books/masters-x/omnibus/";
+const OMNIBUS_URL = `https://jasoncholloway.com${OMNIBUS_PATH}`;
+
+export const metadata: Metadata = buildMetadata({
   title: "Masters X Omnibus Edition — Complete Trilogy",
   description:
-    "The complete Masters X Trilogy in a single collected volume. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press. Order direct via IngramSpark or by ISBN from any bookstore.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/masters-x/omnibus/",
+    "The complete Masters X Trilogy in a single collected volume. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press, direct via IngramSpark or by ISBN from any bookstore.",
+  socialDescription:
+    "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
+  path: OMNIBUS_PATH,
+  ogType: "book",
+  image: {
+    url: `https://jasoncholloway.com${omnibus?.coverImageHC ?? "/og-image.png"}`,
+    width: 2000,
+    height: 3000,
+    alt: "Masters X: Omnibus Edition — cover",
   },
-  openGraph: {
-    title: "Masters X Omnibus Edition — Complete Trilogy",
-    description:
-      "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
-    url: "https://jasoncholloway.com/books/masters-x/omnibus/",
-    images: omnibus
-      ? [
-          {
-            url: `https://jasoncholloway.com${omnibus.coverImageHC}`,
-            alt: `${omnibus.title}: ${omnibus.subtitle} — cover`,
-          },
-        ]
-      : undefined,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Masters X Omnibus Edition — Complete Trilogy",
-    description:
-      "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
-    images: omnibus ? [`https://jasoncholloway.com${omnibus.coverImageHC}`] : undefined,
-  },
-};
+});
 
 export default function OmnibusPage() {
   if (!omnibus) return null;
 
   const paragraphs = omnibus.description.split("\n\n");
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "@id": "https://jasoncholloway.com/books/masters-x/omnibus#work",
+  // The omnibus is print-only on IngramSpark. `buildBookGraph` emits no ebook or
+  // Amazon action because the data carries no ebook ISBN and no ASIN.
+  const jsonLd = buildBookGraph(omnibus, {
+    pageUrl: OMNIBUS_URL,
     name: `${omnibus.title}: ${omnibus.subtitle}`,
-    author: { "@id": "https://jasoncholloway.com/#person" },
-    publisher: { "@id": "https://jasoncholloway.com/#organization" },
-    inLanguage: "English",
-    workExample: [
-      ...(omnibus.isbn_hc
-        ? [
-            {
-              "@type": "Book",
-              "@id": "https://jasoncholloway.com/books/masters-x/omnibus#hardcover",
-              isbn: omnibus.isbn_hc,
-              bookFormat: "https://schema.org/Hardcover",
-              numberOfPages: omnibus.pageCountHC ?? omnibus.pageCount,
-              potentialAction: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")
-                ? {
-                    "@type": "BuyAction",
-                    target: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")!.url,
-                  }
-                : undefined,
-              offers: omnibus.price_hc_is ? {
-                "@type": "Offer",
-                price: omnibus.price_hc_msrp ?? omnibus.price_hc_is,
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-                url: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")?.url ?? "https://jasoncholloway.com/books/masters-x/omnibus/",
-              } : undefined,
-            },
-          ]
-        : []),
-      ...(omnibus.isbn_pb
-        ? [
-            {
-              "@type": "Book",
-              "@id": "https://jasoncholloway.com/books/masters-x/omnibus#paperback",
-              isbn: omnibus.isbn_pb,
-              bookFormat: "https://schema.org/Paperback",
-              numberOfPages: omnibus.pageCountPB ?? omnibus.pageCount,
-              potentialAction: omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)")
-                ? {
-                    "@type": "BuyAction",
-                    target: omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)")!.url,
-                  }
-                : undefined,
-              offers: omnibus.price_pb_is ? {
-                "@type": "Offer",
-                price: omnibus.price_pb_msrp ?? omnibus.price_pb_is,
-                priceCurrency: "USD",
-                availability: "https://schema.org/InStock",
-                url: omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)")?.url ?? "https://jasoncholloway.com/books/masters-x/omnibus/",
-              } : undefined,
-            },
-          ]
-        : []),
-    ],
-  };
+    description: omnibus.shortDesc,
+    genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+    image: `https://jasoncholloway.com${omnibus.coverImageHC}`,
+    extra: {
+      isPartOf: { "@id": MASTERS_X_SERIES_ID },
+      hasPart: MASTERS_X_VOLUME_SLUGS.map((slug) => ({
+        "@id": `https://jasoncholloway.com/books/masters-x/${slug}/#work`,
+      })),
+    },
+  });
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Books", item: "https://jasoncholloway.com/books" },
+      { "@type": "ListItem", position: 1, name: "Books", item: "https://jasoncholloway.com/books/" },
       { "@type": "ListItem", position: 2, name: "Masters X Trilogy", item: "https://jasoncholloway.com/books/masters-x/" },
       { "@type": "ListItem", position: 3, name: omnibus.subtitle, item: "https://jasoncholloway.com/books/masters-x/omnibus/" },
     ],
@@ -284,7 +234,7 @@ export default function OmnibusPage() {
           <div className="resp-main-sidebar" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "4rem" }}>
             <div>
               <div className="section-label-row" style={{ marginBottom: "2rem" }}>
-                <span className="label">About the Omnibus</span>
+                <h2 className="label">About the Omnibus</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2.5rem" }}>
                 {paragraphs.map((p, i) => (
@@ -295,7 +245,7 @@ export default function OmnibusPage() {
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "2rem" }}>
-                <span className="label">Print Editions</span>
+                <h2 className="label">Print Editions, ISBNs &amp; Where to Buy</h2>
               </div>
               <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem", marginBottom: "2.5rem" }}>
                 <div className="card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
@@ -357,7 +307,7 @@ export default function OmnibusPage() {
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Volumes Included</span>
+                <h2 className="label">Volumes Included</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {books
@@ -390,7 +340,8 @@ export default function OmnibusPage() {
               <div className="card">
                 <div className="label" style={{ marginBottom: "1rem" }}>
                   Publication Details
-                </div>                {[
+                </div>
+                {[
                   { k: "Publisher", v: "Seventh City Press" },
                   { k: "Hardcover ISBN", v: omnibus.isbn_hc ?? "" },
                   { k: "Paperback ISBN", v: omnibus.isbn_pb ?? "" },
@@ -431,19 +382,6 @@ export default function OmnibusPage() {
           </div>
         </div>
       </section>
-
-      {omnibus.coverImageCase && (
-        <>
-          <div className="container">
-            <WaveDivider />
-          </div>
-          <section className="section">
-            <div className="container">
-              <CaseCoverShowcase book={omnibus} variant="full" />
-            </div>
-          </section>
-        </>
-      )}
     </>
   );
 }

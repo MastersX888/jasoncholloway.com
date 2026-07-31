@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read",
   description:
     "The Voynich Manuscript is a real medieval codex at Yale's Beinecke Library — carbon-dated to the early 1400s, written in an undeciphered script, owned by Emperor Rudolf II of Bohemia. Here is the documented history.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/voynich-manuscript/" },
-  openGraph: {
-    title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read | Field Notes",
-    description:
-      "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court the Masters X Trilogy reconstructs. The real history.",
-    url: "https://jasoncholloway.com/field-notes/voynich-manuscript/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png", width: 1200, height: 630, alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript" }],
+  socialTitle: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read | Field Notes",
+  socialDescription:
+    "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court the Masters X Trilogy reconstructs. The real history.",
+  path: "/field-notes/voynich-manuscript/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read | Field Notes",
-    description:
-      "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia. The real history behind Masters X.",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png", alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript" }],
-  },
-};
+});
 
 const faqs = [
   {

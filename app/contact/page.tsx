@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
-import SocialLinks from "@/components/layout/SocialLinks";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact & Press",
   description:
     "Get in touch with Jason Carroll Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/contact/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/contact/",
-  },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (
@@ -111,16 +106,12 @@ export default function ContactPage() {
               </div>
 
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <div className="label" style={{ marginBottom: "0.75rem" }}>Mailing Address</div>
+                <div className="label-cyan" style={{ marginBottom: "0.75rem" }}>Mailing Address</div>
                 <p style={{ fontSize: "0.83rem", color: "var(--text-muted)", lineHeight: 1.6, margin: 0 }}>
                   Seventh City Press<br />
                   9169 W State St #4418<br />
                   Garden City, ID 83714
                 </p>
-              </div>
-
-              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
-                <SocialLinks title="Connect" variant="full" />
               </div>
             </div>
           </div>

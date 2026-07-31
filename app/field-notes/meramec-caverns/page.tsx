@@ -1,33 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Meramec Caverns and the Patterns in the Flowstone",
   description:
     "Meramec Caverns is a real commercial cave attraction in Stanton, Missouri, open since 1935. Jesse James reportedly used it as a hideout. Its flowstone formations are among the most dramatic in the Midwest. In the Masters X Trilogy, a young Blake Masters stands in those formations with his grandfather and learns to see the pattern.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/meramec-caverns/" },
-  openGraph: {
-    title: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",
-    description:
-      "The Stage Curtain formation. Jesse James. Route 66. Constant 58°F. And in the fiction: William Masters crouching to his grandson's eye level in the flowstone, tracing the pattern that appears in rivers, veins, trees, and lightning.",
-    url: "https://jasoncholloway.com/field-notes/meramec-caverns/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: flowstone formations in Meramec Caverns, Missouri",
-      },
-    ],
+  socialTitle: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",
+  socialDescription:
+    "The Stage Curtain formation. Jesse James. Route 66. Constant 58°F. And in the fiction: William Masters crouching to his grandson's eye level in the flowstone, tracing the pattern that appears in rivers, veins, trees, and lightning.",
+  path: "/field-notes/meramec-caverns/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: flowstone formations in Meramec Caverns, Missouri",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",
-    description:
-      "The Stage Curtain formation. Jesse James. Route 66. Constant 58°F. William Masters tracing the branching pattern that appears in rivers, veins, trees, and lightning.",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.png", alt: "Illustration: flowstone formations in Meramec Caverns, Missouri" }],
-  },
-};
+});
 
 const faqs = [
   {

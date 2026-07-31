@@ -1,33 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)",
   description:
     "Oscar-01 is a real preserved Minuteman II ICBM launch control facility at Whiteman Air Force Base in Johnson County, Missouri. During the Cold War, a two-person crew sat 60 feet underground, ready to turn the keys for up to ten nuclear missiles. That reality is the ground the Masters X Trilogy builds on.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/oscar-01/" },
-  openGraph: {
-    title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It) | Field Notes",
-    description:
-      "60 feet underground. Two officers. Two keys out of reach of each other. 150 Minuteman II missiles across the Missouri countryside. Oscar-01 is preserved. You can stand in the capsule where James Masters worked.",
-    url: "https://jasoncholloway.com/field-notes/oscar-01/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/oscar-01.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground",
-      },
-    ],
+  socialTitle: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It) | Field Notes",
+  socialDescription:
+    "60 feet underground. Two officers. Two keys out of reach of each other. 150 Minuteman II missiles across the Missouri countryside. Oscar-01 is preserved. You can stand in the capsule where James Masters worked.",
+  path: "/field-notes/oscar-01/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/oscar-01.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)",
-    description:
-      "60 feet underground. Two officers. Two keys out of reach. 150 Minuteman II missiles across Missouri. Oscar-01 is preserved — you can stand in the capsule where James Masters worked.",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/oscar-01.png", alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground" }],
-  },
-};
+});
 
 const faqs = [
   {

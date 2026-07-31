@@ -1,14 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Virtual Masters Analysis Chamber",
   description:
     "An interactive research tool replicating Andrew Chen's acoustic consciousness analysis system from the Masters X Trilogy. Five layers of frequency data, global cave mapping, harmonic derivations, and the 247-page research archive.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/",
-  },
-};
+  path: "/chamber/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

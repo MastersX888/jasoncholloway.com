@@ -2,14 +2,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { books } from "@/lib/data/books";
 import { fieldNotes } from "@/lib/data/fieldNotes";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Site Index",
   description: "Directory of the Jason Carroll Holloway official digital platform and Seventh City Press.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/sitemap/",
-  },
-};
+  path: "/sitemap/",
+});
 
 export default function SitemapPage() {
   const volumes = books.filter(b => b.series === "Masters X" && b.slug !== "omnibus");

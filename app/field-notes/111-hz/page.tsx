@@ -1,27 +1,24 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "111 Hz: The Frequency Ancient Builders Kept Choosing",
   description:
     "111 Hz is a standing-wave frequency documented by acoustic researchers in stone chambers from the Ħal-Saflieni Hypogeum in Malta to caves in Ghana. Here is the documented research — and the trilogy built on it.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/111-hz/" },
-  openGraph: {
-    title: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",
-    description:
-      "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. Acoustic researchers have documented a recurring resonant frequency across ancient stone structures. This is the honest explainer.",
-    url: "https://jasoncholloway.com/field-notes/111-hz/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/111-hz.png", width: 1200, height: 630, alt: "Illustration: waveform diagram etched like a medieval manuscript" }],
+  socialTitle: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",
+  socialDescription:
+    "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. Acoustic researchers have documented a recurring resonant frequency across ancient stone structures. This is the honest explainer.",
+  path: "/field-notes/111-hz/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/111-hz.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: waveform diagram etched like a medieval manuscript",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",
-    description:
-      "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. A recurring resonant frequency across ancient stone structures. The honest explainer.",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/111-hz.png", alt: "Illustration: waveform diagram etched like a medieval manuscript" }],
-  },
-};
+});
 
 const faqs = [
   {

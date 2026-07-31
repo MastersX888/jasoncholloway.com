@@ -210,13 +210,12 @@ export default function PressPage() {
               href="/press-kit/Masters_X_Press_Kit.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="animate-fade-up delay-3"
+              className="animate-fade-up delay-3 card-link"
               style={{
                 fontSize: "0.78rem",
                 color: "var(--text-faint)",
                 textDecoration: "underline",
                 marginTop: "0.5rem",
-                display: "inline-block",
                 marginBottom: "2rem",
               }}
             >

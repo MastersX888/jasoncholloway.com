@@ -86,7 +86,7 @@ export default function ContactPage() {
                 >
                   Download Press Kit (PDF)
                 </a>
-                <a href="https://seventhcitypress.com/" style={{ display: "block", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--text-faint)", textAlign: "center" }}>
+                <a href="https://seventhcitypress.com/" className="card-link" style={{ width: "100%", justifyContent: "center", marginTop: "0.75rem", fontSize: "0.78rem", color: "var(--text-faint)", textAlign: "center" }}>
                   Press &amp; media kit at Seventh City Press →
                 </a>
               </div>
@@ -97,15 +97,15 @@ export default function ContactPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "0.85rem", fontSize: "0.83rem", lineHeight: 1.5 }}>
                   <div>
                     <div style={{ color: "var(--text-faint)", fontSize: "0.72rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.15rem" }}>General inquiries</div>
-                    <a href="mailto:info@seventhcitypress.com" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)" }}>info@seventhcitypress.com</a>
+                    <a href="mailto:info@seventhcitypress.com" className="card-link" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)" }}>info@seventhcitypress.com</a>
                   </div>
                   <div>
                     <div style={{ color: "var(--text-faint)", fontSize: "0.72rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.15rem" }}>Jason directly</div>
-                    <a href="mailto:jason@seventhcitypress.com" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)" }}>jason@seventhcitypress.com</a>
+                    <a href="mailto:jason@seventhcitypress.com" className="card-link" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)" }}>jason@seventhcitypress.com</a>
                   </div>
                   <div>
                     <div style={{ color: "var(--text-faint)", fontSize: "0.72rem", textTransform: "uppercase", letterSpacing: "0.08em", marginBottom: "0.15rem" }}>Media &amp; review copies</div>
-                    <a href="https://seventhcitypress.com/" style={{ color: "var(--cyan)" }}>seventhcitypress.com →</a>
+                    <a href="https://seventhcitypress.com/" className="card-link" style={{ color: "var(--cyan)" }}>seventhcitypress.com →</a>
                   </div>
                 </div>
               </div>

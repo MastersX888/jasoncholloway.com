@@ -33,7 +33,7 @@ export default function ContactPage() {
 
       <section className="section" style={{ paddingTop: "3rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 340px", gap: "4rem", alignItems: "start" }}>
+          <div className="resp-main-sidebar">
             <div>
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
                 <span className="label">Media & Press Inquiries</span>
@@ -100,6 +100,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="mailto:press@seventhcitypress.com"
+                  className="card-link"
                   style={{ fontSize: "0.85rem", color: "var(--gold)", fontFamily: "var(--font-mono)" }}
                 >
                   press@seventhcitypress.com

@@ -72,14 +72,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
               Email Address
             </label>
             
-            <div 
-              style={{ 
-                display: "flex", 
-                flexDirection: compact ? "column" : "row", 
-                gap: "0.5rem", 
-                width: "100%" 
-              }}
-            >
+            <div className={`newsletter-row${compact ? " newsletter-row-compact" : ""}`}>
               <input
                 id="newsletter-email-input"
                 type="email"
@@ -98,7 +91,6 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
                   color: "var(--text)",
                   fontFamily: "var(--font-body)",
                   transition: "border-color 0.25s, box-shadow 0.25s",
-                  outline: "none",
                 }}
               />
               

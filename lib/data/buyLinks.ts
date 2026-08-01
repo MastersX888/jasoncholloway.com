@@ -31,9 +31,22 @@ export function bookshopIsbnUrl(isbn: string): string {
   return `https://bookshop.org/search?keywords=${isbn}&affiliate=${BUY_LINKS.BOOKSHOP_AFFILIATE_ID}`;
 }
 
-/** Google Play Books search by EPUB ISBN (resolves to product once live). */
+/** EPUB ISBNs live on Google Play Books Publisher Center (Jul 2026). */
+export const GOOGLE_PLAY_ISBNS = {
+  MX1: "9798256008819",
+  MX2: "9798256009625",
+  MX3: "9798256009809",
+  HAWKES: "9798295778926",
+} as const;
+
+/** Google Books catalog page — preview + Play Books purchase (ISBN-resolved). */
+export function googleBooksIsbnUrl(isbn: string): string {
+  return `https://books.google.com/books?vid=ISBN${isbn}`;
+}
+
+/** Google Play Books purchase entry (same ISBN resolver as Google Books catalog). */
 export function googlePlayIsbnUrl(isbn: string): string {
-  return `https://play.google.com/store/search?q=${isbn}&c=books`;
+  return googleBooksIsbnUrl(isbn);
 }
 
 /** Append affiliate param to an existing Bookshop URL. */

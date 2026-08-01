@@ -1,20 +1,24 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "SubTropolis: The Underground City Beneath Kansas City",
   description:
     "SubTropolis is a 55-million-square-foot limestone mine beneath Kansas City, Missouri — the world's largest underground business complex. Here's the documented history, and what a novelist found down there.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/subtropolis/" },
-  openGraph: {
-    title: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",
-    description:
-      "270-million-year-old Bethany Falls limestone, ~1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
-    url: "https://jasoncholloway.com/field-notes/subtropolis/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/subtropolis.png", width: 1200, height: 630, alt: "Illustration: limestone pillars in an underground corridor" }],
+  socialTitle: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",
+  socialDescription:
+    "270-million-year-old Bethany Falls limestone, ~1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
+  path: "/field-notes/subtropolis/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/subtropolis.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: limestone pillars in an underground corridor",
   },
-};
+});
 
 const faqs = [
   {

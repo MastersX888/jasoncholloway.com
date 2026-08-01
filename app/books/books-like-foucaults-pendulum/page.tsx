@@ -1,13 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Books Like Foucault's Pendulum: The Masters X Trilogy",
-  description: "Looking for books like Foucault's Pendulum? Jason C. Holloway's Masters X Trilogy is a sprawling conspiracy thriller that weaves real medieval manuscripts and acoustic science into a modern mystery.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/books-like-foucaults-pendulum/",
+  titleAbsolute: true,
+  description: "Looking for books like Foucault's Pendulum? Jason Carroll Holloway's Masters X Trilogy is a sprawling conspiracy thriller that weaves real medieval manuscripts and acoustic science into a modern mystery.",
+  path: "/books/books-like-foucaults-pendulum/",
+  image: {
+    url: "https://jasoncholloway.com/books/masters-x/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Masters X Trilogy by Jason Carroll Holloway — Seventh City Press",
   },
-};
+});
 
 export default function FoucaultsPendulumCompPage() {
   return (

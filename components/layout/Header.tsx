@@ -27,6 +27,15 @@ export default function Header() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [menuOpen]);
+
   return (
     <header className="header">
       <div className="container">
@@ -89,6 +98,7 @@ export default function Header() {
               href={item.href}
               className="mobile-nav-link"
               tabIndex={menuOpen ? 0 : -1}
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </a>
@@ -98,6 +108,7 @@ export default function Header() {
               href={item.href}
               className={`mobile-nav-link ${pathname.startsWith(item.href) ? "active" : ""}`}
               tabIndex={menuOpen ? 0 : -1}
+              onClick={() => setMenuOpen(false)}
             >
               {item.label}
             </Link>
@@ -107,6 +118,7 @@ export default function Header() {
           href="/chamber"
           className="mobile-nav-link mobile-nav-chamber"
           tabIndex={menuOpen ? 0 : -1}
+          onClick={() => setMenuOpen(false)}
         >
           <span className="nav-chamber-dot" />
           Analysis Chamber

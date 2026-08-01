@@ -14,14 +14,19 @@
   --header-text:  #F7F4EF;
   --text:         #1C1A17;
   --text-muted:   #4A4740;
-  --text-faint:   #7A766E;
-  --gold:         #8B7355;
+  /* --text-faint / --gold darkened to clear 4.5:1 on --bg, --bg-surface
+     and --bg-raised; the previous values sat between 3.5:1 and 4.1:1. */
+  --text-faint:   #66635C;
+  --gold:         #745F44;
   --gold-dim:     #6B5F4A;
   --gold-glow:    rgba(139, 115, 85, 0.06);
   --cyan:         #1F3A5F;
   --cyan-dim:     #16293F;
   --cyan-glow:    transparent;
-  --text-gold:    #8B7355;
+  --text-gold:    #745F44;
+  /* Focus ring: gold reads >=3:1 on the light page; the dark header and
+     footer opt into the cream ring below. */
+  --focus-ring:   var(--gold);
   --text-cyan:    #1F3A5F;
   --font-display: var(--font-eb-garamond), Georgia, serif;
   --font-body:    var(--font-eb-garamond), Georgia, serif;
@@ -345,13 +350,16 @@ ul, ol { list-style: none; }
   line-height: 1.7;
   max-width: 28ch;
 }
+/* <SocialLinks> reuses these classes outside the dark footer (press home,
+   contact), so the base colours target the light page and .footer
+   re-applies the cream treatment. */
 .footer-col-title {
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--header-text);
-  opacity: 0.65;
+  color: var(--text-faint);
+  opacity: 1;
   margin-bottom: 1rem;
 }
 .footer-links {
@@ -361,11 +369,33 @@ ul, ol { list-style: none; }
 }
 .footer-links a {
   font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 1;
+  transition: color 0.2s, opacity 0.2s;
+}
+.footer-links a:hover { color: var(--accent); }
+
+.footer .footer-col-title,
+.footer .footer-links a {
   color: var(--header-text);
   opacity: 0.65;
-  transition: opacity 0.2s;
 }
-.footer-links a:hover { opacity: 1; }
+.footer .footer-links a:hover { color: var(--header-text); opacity: 1; }
+
+.social-links a.social-link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.social-link-handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+.social-links a.social-link-row:hover .social-link-handle {
+  opacity: 1;
+}
 .footer-bottom {
   display: flex;
   align-items: center;
@@ -373,9 +403,14 @@ ul, ol { list-style: none; }
   padding-top: 2rem;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.78rem;
-  color: var(--header-text);
-  opacity: 0.65;
+  /* Colour alpha rather than element opacity: element opacity multiplies
+     down into nested spans and dropped them below 4.5:1. */
+  opacity: 1;
+  color: rgba(247, 244, 239, 0.72);
 }
+/* Dimmed text on the dark footer. --text-faint is tuned for the light
+   page and only reaches 3.8:1 here. */
+.footer-faint { color: rgba(247, 244, 239, 0.62); }
 @media (max-width: 900px) {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
@@ -509,6 +544,50 @@ main .footer-brand-desc a:hover {
   text-decoration-color: var(--accent-hover);
 }
 
+/* ─── MAIN + SIDEBAR LAYOUT ──────────────────────────────────── */
+/* minmax(0, 1fr) stops the content column being floored at its
+   min-content width. With a plain 1fr the track could not shrink below
+   ~190px, so 190 + 4rem gap + 340px sidebar forced the grid to ~594px
+   and blew the layout viewport out on every phone. */
+.resp-main-sidebar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 4rem;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .resp-main-sidebar {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+/* ─── KEYBOARD FOCUS ─────────────────────────────────────────── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+/* Cream ring against the dark header and footer. */
+.header a:focus-visible,
+.header button:focus-visible,
+.footer a:focus-visible,
+.footer button:focus-visible {
+  --focus-ring: var(--header-text);
+}
+
+/* ─── TYPE RHYTHM ON SMALL SCREENS ───────────────────────────── */
+/* .display-xl bottoms out at 3.2rem, so a long unbreakable word such as
+   "Communications" on the contact page overflowed a 320px screen. */
+@media (max-width: 600px) {
+  .display-xl { font-size: clamp(2.2rem, 10vw, 3rem); }
+}
+
 /* ─── TOUCH TARGETS ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .btn { min-height: 44px; }
@@ -518,6 +597,26 @@ main .footer-brand-desc a:hover {
     grid-template-columns: 1fr 1fr !important;
     gap: 1.25rem !important;
   }
+
+  /* Stacked link lists rendered at ~24px tall with a 7px gap. */
+  .footer-links { gap: 0.25rem; }
+  .footer-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .header-logo { justify-content: center; min-height: 44px; }
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+
+  /* 16px is the threshold below which iOS Safari zooms on focus; the
+     form sets 0.9rem inline, so this has to win over the style attr. */
+  input, textarea, select { font-size: 16px !important; }
+  input:not([type="checkbox"]):not([type="radio"]), select { min-height: 44px; }
 }
 
 /* ─── REDUCED MOTION ─────────────────────────────────────────── */

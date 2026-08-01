@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
+import { buildMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact & Press Inquiries",
   description:
     "Contact Seventh City Press for media inquiries, interview requests, and review copy requests for the Masters X Trilogy by Jason Carroll Holloway.",
-  alternates: {
-    canonical: "https://seventhcitypress.com/contact/",
-  },
-  openGraph: {
-    url: "https://seventhcitypress.com/contact/",
-  },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (
@@ -32,10 +28,10 @@ export default function ContactPage() {
 
       <section className="section" style={{ paddingTop: "3rem" }}>
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 340px", gap: "4rem", alignItems: "start" }}>
+          <div className="resp-main-sidebar">
             <div>
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Media & Press Inquiries</span>
+                <h2 className="label">Media &amp; Press Inquiries</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem", marginBottom: "2rem" }}>
                 <p>
@@ -62,7 +58,7 @@ export default function ContactPage() {
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Review Copies & Academic Requests</span>
+                <h2 className="label">Review Copies &amp; Academic Requests</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem" }}>
                 <p>
@@ -99,6 +95,7 @@ export default function ContactPage() {
                 </p>
                 <a
                   href="mailto:press@seventhcitypress.com"
+                  className="card-link"
                   style={{ fontSize: "0.85rem", color: "var(--gold)", fontFamily: "var(--font-mono)" }}
                 >
                   press@seventhcitypress.com

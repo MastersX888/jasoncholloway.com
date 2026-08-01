@@ -1,0 +1,1433 @@
+{
+  "metadata": {
+    "source": "/workspace/cartographer/artifacts/phase3_packs.json",
+    "audit": "Masters X geographic integrity \u2014 phase 3 worker spatial extraction",
+    "entities_processed": 26
+  },
+  "entities": [
+    {
+      "entity": "Quality Hill",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "The Quality Hill",
+        "Quality Hill apartment",
+        "Quality Hill kitchen",
+        "Quality Hill entrance",
+        "Quality Hill boundary"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 4468,
+          "claim": "Nadia sits at a kitchen table on Quality Hill (Kansas City residential neighborhood).",
+          "quote": "Nadia sat at the kitchen table on Quality Hill"
+        },
+        {
+          "book": 2,
+          "line": 1495,
+          "claim": "Nadia's personal apartment on Quality Hill is distinct from the Foundation's Washington Street address.",
+          "quote": "not the Foundation's Washington Street address but the apartment on Quality Hill"
+        },
+        {
+          "book": 2,
+          "line": 1622,
+          "claim": "Foundation cohort photographed outside the Quality Hill entrance.",
+          "quote": "outside the Quality Hill entrance on graduation day"
+        },
+        {
+          "book": 2,
+          "line": 1773,
+          "claim": "Foundation mailbox is located on Quality Hill.",
+          "quote": "She walked to the Foundation's mailbox. Quality Hill. February."
+        },
+        {
+          "book": 2,
+          "line": 3108,
+          "claim": "Foundation headquarters activity co-located with Quality Hill (server room, stairwell).",
+          "quote": "11 PM. Quality Hill. The Foundation empty. The server room turning."
+        },
+        {
+          "book": 3,
+          "line": 53,
+          "claim": "The Quality Hill apartment is explicitly in Kansas City.",
+          "quote": "The Quality Hill apartment. Kansas City. November."
+        },
+        {
+          "book": 3,
+          "line": 4005,
+          "claim": "Quality Hill boundary marks transition from residential to institutional district along Troost.",
+          "quote": "Past the Quality Hill boundary into the institutional district."
+        },
+        {
+          "book": 3,
+          "line": 4213,
+          "claim": "Quality Hill apartment has an original balcony/porch built by Blake's grandfather.",
+          "quote": "He sat on the Quality Hill balcony."
+        }
+      ],
+      "nearby_implied": [
+        "Washington Street",
+        "Troost Avenue",
+        "institutional district",
+        "Foundation parking lot",
+        "Foundation mailbox"
+      ],
+      "risk_notes": "Quality Hill simultaneously names a residential apartment (Blake/Nadia) and Foundation institutional facilities (entrance, mailbox, server room). Pack data also separates Foundation postal address on Washington Street from the Quality Hill apartment, yet later places the Foundation at Quality Hill with no explicit reconciliation with the Washington Street building or Hotel Phillips office. Audit risk: three KC office anchors (Quality Hill, Washington Street, Hotel Phillips) may be conflated or inconsistently mapped to real KCMO geography."
+    },
+    {
+      "entity": "Hotel Phillips",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Hotel Phillips Building",
+        "The Hotel Phillips Building",
+        "Hotel Phillips Building office"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 619,
+          "claim": "Nadia works from an office in the Hotel Phillips Building in Kansas City (November scene).",
+          "quote": "The Hotel Phillips Building office in November."
+        },
+        {
+          "book": 2,
+          "line": 3091,
+          "claim": "Hotel Phillips Building office paired with Iceland stone cottage as dual operational sites (KC desk vs. cave).",
+          "quote": "Iceland and Kansas City, the stone cottage and the Hotel Phillips Building office"
+        }
+      ],
+      "nearby_implied": [
+        "Kansas City downtown",
+        "Iceland stone cottage",
+        "Foundation office (possibly same building)"
+      ],
+      "risk_notes": "Real Kansas City landmark (Hotel Phillips, 106 W 12th St) is used as Foundation office space, but other packs place the Foundation on Washington Street and Quality Hill without stating whether these are the same building, adjacent sites, or sequential locations. High contradiction risk if mapped as a single fixed address."
+    },
+    {
+      "entity": "Washington Street",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Washington Street building",
+        "Washington Street address",
+        "Washington Street lot"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 1494,
+          "claim": "Foundation's official mailing address is on Washington Street (distinct from Quality Hill apartment).",
+          "quote": "not the Foundation's Washington Street address but the"
+        },
+        {
+          "book": 2,
+          "line": 3504,
+          "claim": "Masters Foundation occupies entire third floor of renovated Washington Street building (offices, conference room, observation lab).",
+          "quote": "third floor of the renovated building on Washington Street"
+        },
+        {
+          "book": 2,
+          "line": 3751,
+          "claim": "Foundation staff parking lot is on Washington Street.",
+          "quote": "walked to her car in the Washington Street lot"
+        },
+        {
+          "book": 3,
+          "line": 501,
+          "claim": "Board conference room on second floor of Washington Street building.",
+          "quote": "second floor of the Washington Street building"
+        }
+      ],
+      "nearby_implied": [
+        "Masters Foundation",
+        "Quality Hill apartment",
+        "observation laboratory",
+        "institutional district"
+      ],
+      "risk_notes": "Washington Street is the most structurally detailed Foundation HQ address (floors 2\u20133, parking lot). Conflicts with Hotel Phillips Building office and Quality Hill co-location claims unless the narrative treats them as one hybrid campus spanning multiple real blocks. Real KC Washington Street runs through Quality Hill/West Bottoms area, which partially anchors the fiction."
+    },
+    {
+      "entity": "Foundation",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "The Foundation",
+        "Masters Foundation",
+        "Masters Foundation for Acoustic Research",
+        "Foundation's Kansas City operation"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 4333,
+          "claim": "Foundation maintains a Kansas City operation within a 14-country network.",
+          "quote": "the Foundation's Kansas City operation"
+        },
+        {
+          "book": 2,
+          "line": 611,
+          "claim": "Foundation building described as quietest building in Kansas City at 5:12 AM.",
+          "quote": "the Foundation is the quietest building in Kansas City"
+        },
+        {
+          "book": 2,
+          "line": 1416,
+          "claim": "Foundation connected to Kansas City municipal water/limestone aquifer infrastructure.",
+          "quote": "pipes that connected the Foundation to the city that held it"
+        },
+        {
+          "book": 2,
+          "line": 1494,
+          "claim": "Foundation postal address on Washington Street.",
+          "quote": "the Foundation's Washington Street address"
+        },
+        {
+          "book": 2,
+          "line": 1622,
+          "claim": "Foundation entrance on Quality Hill.",
+          "quote": "outside the Quality Hill entrance"
+        },
+        {
+          "book": 2,
+          "line": 1773,
+          "claim": "Foundation mailbox on Quality Hill.",
+          "quote": "the Foundation's mailbox. Quality Hill"
+        },
+        {
+          "book": 2,
+          "line": 3108,
+          "claim": "Foundation HQ at Quality Hill includes server room and stairwell.",
+          "quote": "Quality Hill. The Foundation empty. The server room turning."
+        },
+        {
+          "book": 2,
+          "line": 3504,
+          "claim": "Foundation offices on third floor, Washington Street building.",
+          "quote": "The Foundation occupied the entire third floor"
+        },
+        {
+          "book": 3,
+          "line": 497,
+          "claim": "Foundation operates $4.2M facility including basalt chambers, Specchi mirrors, Iceland field station.",
+          "quote": "the Foundation's $4.2 million facility, the monitoring suites, the basalt chambers"
+        },
+        {
+          "book": 3,
+          "line": 2393,
+          "claim": "Primary research chamber is 160 feet below in SubTropolis limestone (converted Moreau church basement).",
+          "quote": "160 feet below, in the SubTropolis limestone, in the converted Moreau church basement that had become the Foundation's primary research chamber"
+        },
+        {
+          "book": 3,
+          "line": 4007,
+          "claim": "Foundation parking lot in institutional district beyond Quality Hill boundary, accessed via Troost.",
+          "quote": "The Foundation parking lot was empty"
+        }
+      ],
+      "nearby_implied": [
+        "Quality Hill",
+        "Washington Street",
+        "Hotel Phillips Building",
+        "SubTropolis",
+        "Moreau chamber",
+        "Troost corridor",
+        "Iceland field station",
+        "2847 Genessee Street"
+      ],
+      "risk_notes": "The Foundation is a fictional institution layered onto multiple real KC sites. Surface HQ is split across Washington Street, Quality Hill, and Hotel Phillips; deep research is 160 ft below in SubTropolis/West Bottoms. Early-book Analysis Chamber at Genessee Street may represent a prior operational base. Any single-pin map will fail unless the identity graph treats Foundation as a distributed campus."
+    },
+    {
+      "entity": "SubTropolis",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "SUBTROPOLIS",
+        "SubTropolis proper",
+        "SubTropolis corridor",
+        "SubTropolis vault",
+        "SubTropolis limestone"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 458,
+          "claim": "SubTropolis is a limestone mine converted to underground storage (1960s commercial level); Blake found older unauthorized tunnel section.",
+          "quote": "SubTropolis was a limestone mine converted to underground storage"
+        },
+        {
+          "book": 1,
+          "line": 1723,
+          "claim": "Underground river reported three miles from SubTropolis (1882 Wyandotte well article).",
+          "quote": "river three miles from SubTropolis"
+        },
+        {
+          "book": 1,
+          "line": 1725,
+          "claim": "SubTropolis was discovered not built; Bethany Falls Limestone Company found existing caves in 1940s.",
+          "quote": "SubTropolis wasn't built. It was discovered"
+        },
+        {
+          "book": 1,
+          "line": 2108,
+          "claim": "SubTropolis sits on top of the acoustic 'source' at Missouri confluence; oldest sites cluster nearest.",
+          "quote": "SubTropolis sits on top of the source"
+        },
+        {
+          "book": 1,
+          "line": 2243,
+          "claim": "Commercial mining level ends at 55 ft below surface; shaft drops 160 ft into older natural limestone cave.",
+          "quote": "fifty-five feet below the surface, ended here. Everything below this point was older, deeper"
+        },
+        {
+          "book": 1,
+          "line": 2274,
+          "claim": "Deep level is natural cave system carved by underground rivers, distinct from climate-controlled commercial SubTropolis.",
+          "quote": "This wasn't the commercial SubTropolis Blake had patrolled"
+        },
+        {
+          "book": 3,
+          "line": 2391,
+          "claim": "Foundation primary research chamber is 160 ft below in SubTropolis limestone (Moreau church basement).",
+          "quote": "160 feet below, in the SubTropolis limestone"
+        },
+        {
+          "book": 3,
+          "line": 2475,
+          "claim": "Candidate staging area is a furnished section of SubTropolis corridor.",
+          "quote": "a section of the SubTropolis corridor that Nadia had furnished"
+        },
+        {
+          "book": 3,
+          "line": 2771,
+          "claim": "Limestone resonance chamber located in SubTropolis under Kansas City.",
+          "quote": "in a limestone chamber in the SubTropolis under Kansas City"
+        }
+      ],
+      "nearby_implied": [
+        "West Bottoms",
+        "Moreau chamber",
+        "Wyandotte",
+        "Missouri River confluence",
+        "Meramec Caverns",
+        "Bethany Falls Limestone Company caves",
+        "Foundation"
+      ],
+      "risk_notes": "Real SubTropolis ( Hunt Midwest underground, ~270 ft depth, NE KC) is hybridized with fictional pre-mining cave networks, Moreau chambers, and a 160-ft depth figure. The 'three miles from Wyandotte' river claim and 'on top of the source' confluence geometry need verification against real SubTropolis location (not at confluence). Depth figures (55 ft vs 160 ft vs real ~1000 ft) are internally inconsistent with real-world geology."
+    },
+    {
+      "entity": "West Bottoms",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "the West Bottoms",
+        "industrial memory of the West Bottoms"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1496,
+          "claim": "Nadia leads Blake through West Bottoms at 9 AM en route to Genessee Street investigation.",
+          "quote": "Nadia led him through the West Bottoms at 9 AM"
+        },
+        {
+          "book": 1,
+          "line": 1657,
+          "claim": "Warehouse on Genessee Street closed at sunset; return walk passes through West Bottoms.",
+          "quote": "Walking back through the West Bottoms"
+        },
+        {
+          "book": 2,
+          "line": 5153,
+          "claim": "St. Francis Parish in West Bottoms built by Father Benjamin Moreau (27 years after 1843 mirror commission).",
+          "quote": "construction of St. Francis Parish in the West Bottoms"
+        },
+        {
+          "book": 3,
+          "line": 2926,
+          "claim": "West Bottoms bluffs overlie underground chambers.",
+          "quote": "the bluffs above the West Bottoms, the underground chambers beneath the bluffs"
+        },
+        {
+          "book": 3,
+          "line": 3126,
+          "claim": "Moreau chamber sits 160 ft below ground in West Bottoms industrial zone.",
+          "quote": "the industrial memory of the West Bottoms, where, 160 feet below ground, the Moreau chamber sat"
+        }
+      ],
+      "nearby_implied": [
+        "Genessee Street",
+        "Missouri River",
+        "SubTropolis",
+        "Moreau chamber",
+        "St. Francis Parish",
+        "Kansas City bluffs"
+      ],
+      "risk_notes": "Real West Bottoms (KC river-bottom industrial district) aligns with Genessee Street warehouse and bluff geography. Fictional Moreau church/chamber and 160-ft depth claim bind West Bottoms to SubTropolis stack; St. Francis Parish is fictional but named as West Bottoms anchor. Risk: conflating West Bottoms surface district with SubTropolis (which is not geographically in West Bottoms in real KC)."
+    },
+    {
+      "entity": "Moreau",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Father Moreau",
+        "Father Vincent Moreau",
+        "Father Benjamin Moreau",
+        "Moreau chamber",
+        "Moreau church basement",
+        "Moreau's journal"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1581,
+          "claim": "Father Moreau (French-Canadian priest at Sacred Heart Church) drowned in Missouri River, June 1924.",
+          "quote": "drowned in the Missouri River"
+        },
+        {
+          "book": 1,
+          "line": 1727,
+          "claim": "Caves Moreau used predated 1940s Bethany Falls Limestone commercial discovery by decades/centuries.",
+          "quote": "caves Moreau used were there decades before. Centuries before"
+        },
+        {
+          "book": 1,
+          "line": 1754,
+          "claim": "Moreau's last known address: 1112 Pennsylvania Avenue (Kansas City).",
+          "quote": "1112 Pennsylvania Avenue. Moreau's last known address"
+        },
+        {
+          "book": 1,
+          "line": 1813,
+          "claim": "Moreau's journal maps manuscript locations and cave access routes.",
+          "quote": "access routes through cave systems Moreau had mapped in detail"
+        },
+        {
+          "book": 2,
+          "line": 5152,
+          "claim": "Father Benjamin Moreau began St. Francis Parish construction in West Bottoms (~1870).",
+          "quote": "Father Benjamin Moreau began construction of St. Francis Parish in the West Bottoms"
+        },
+        {
+          "book": 3,
+          "line": 2392,
+          "claim": "Converted Moreau church basement in SubTropolis limestone is Foundation's primary research chamber.",
+          "quote": "converted Moreau church basement that had become the Foundation's primary research chamber"
+        },
+        {
+          "book": 3,
+          "line": 3127,
+          "claim": "Moreau chamber 160 ft below West Bottoms in limestone silence.",
+          "quote": "the Moreau chamber sat in its limestone silence"
+        },
+        {
+          "book": 3,
+          "line": 3137,
+          "claim": "Moreau church basement reachable via limestone tunnel descent.",
+          "quote": "descending to the Moreau church basement, finding Blake in the dark"
+        }
+      ],
+      "nearby_implied": [
+        "SubTropolis",
+        "West Bottoms",
+        "Missouri River",
+        "Sacred Heart Church",
+        "St. Francis Parish",
+        "Specchi mirrors",
+        "Bethany Falls caves"
+      ],
+      "risk_notes": "Two Moreau identities (Vincent drowned 1924; Benjamin built West Bottoms parish ~1870) may be generational or contradictory. Chamber location stacks church basement \u2192 SubTropolis \u2192 West Bottoms at 160 ft. Sacred Heart Church and St. Francis Parish are both invoked. High risk of timeline and site conflation in geographic audit."
+    },
+    {
+      "entity": "Bethany Falls",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "Bethany Falls Limestone",
+        "Bethany Falls limestone"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1725,
+          "claim": "Bethany Falls Limestone Company discovered existing cave systems in the 1940s beneath what became SubTropolis.",
+          "quote": "The Bethany Falls Limestone Company found existing cave systems in the 1940s"
+        }
+      ],
+      "nearby_implied": [
+        "SubTropolis",
+        "Bethany Falls Limestone Company",
+        "Kansas City cave network",
+        "Moreau caves"
+      ],
+      "risk_notes": "Bethany Falls is a real Kansas City limestone formation (Pennsylvanian bed). Only one pack hit; geological claim supports SubTropolis origin story. Low internal contradiction but depends on SubTropolis spatial claims being validated."
+    },
+    {
+      "entity": "Bethany Falls Limestone Company",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Bethany Falls Limestone Company"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1725,
+          "claim": "Company found pre-existing cave systems in 1940s during SubTropolis-area limestone mining.",
+          "quote": "The Bethany Falls Limestone Company found existing cave systems in the 1940s"
+        }
+      ],
+      "nearby_implied": [
+        "SubTropolis",
+        "Bethany Falls limestone",
+        "Moreau caves",
+        "Wyandotte"
+      ],
+      "risk_notes": "No dedicated pack key (empty array); sole claim sourced from SubTropolis/Foundation dialogue. Company name echoes real Bethany Falls limestone member but firm itself appears fictional. Risk: single-source exposition without corroborating address or map reference."
+    },
+    {
+      "entity": "Wyandotte",
+      "class": "AMBIGUOUS",
+      "identity_aliases": [
+        "Wyandotte cave article",
+        "well in Wyandotte"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1703,
+          "claim": "1882 Wyandotte cave newspaper article cross-referenced with USGS sealed entrance notation.",
+          "quote": "Wyandotte cave article and the sealed entrance notation on the USGS"
+        },
+        {
+          "book": 1,
+          "line": 1722,
+          "claim": "1882 reporter lowered into Wyandotte well discovered underground river three miles from SubTropolis.",
+          "quote": "reporter lowered into a well in Wyandotte discovered an underground river three miles from SubTropolis"
+        }
+      ],
+      "nearby_implied": [
+        "SubTropolis",
+        "underground river",
+        "Kansas City cave network",
+        "Missouri River"
+      ],
+      "risk_notes": "'Wyandotte' could mean Wyandotte County KS, Wyandotte Cave IN, or a KC locality. Three-mile distance to SubTropolis is a precise spatial claim that may not hold for any real Wyandotte\u2013SubTropolis pair. Flag for geospatial verification."
+    },
+    {
+      "entity": "Genessee",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Genessee Street",
+        "the operational base"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1456,
+          "claim": "Genessee Street is the Keepers' operational base with maps and William's research.",
+          "quote": "I'll take you to Genessee Street. The operational base"
+        },
+        {
+          "book": 1,
+          "line": 1490,
+          "claim": "Genessee Street smells of river water and old brick; October KC morning.",
+          "quote": "Genessee Street smelled like river water and old brick"
+        },
+        {
+          "book": 1,
+          "line": 1655,
+          "claim": "Warehouse on Genessee Street used as meeting/archive space.",
+          "quote": "for a few minutes in a warehouse on Genessee Street"
+        },
+        {
+          "book": 1,
+          "line": 2188,
+          "claim": "Genessee Street is quiet residential/industrial ambient during archive work.",
+          "quote": "Genessee Street was quiet"
+        },
+        {
+          "book": 1,
+          "line": 2510,
+          "claim": "Genessee Street warehouse holds recovered manuscripts.",
+          "quote": "They were in the Genessee Street warehouse"
+        }
+      ],
+      "nearby_implied": [
+        "2847 Genessee Street",
+        "West Bottoms",
+        "Missouri River",
+        "Analysis Chamber",
+        "Missouri Cold Storage Co."
+      ],
+      "risk_notes": "Real Genessee Street exists in Kansas City West Bottoms area (near river). Fictional warehouse/keeper base at 2847 aligns with industrial cold-storage facade. Spelling 'Genessee' (three e's) vs real 'Genesee' is a deliberate or erroneous variant\u2014audit should not auto-normalize."
+    },
+    {
+      "entity": "Westport",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "Westport bookshop",
+        "studio in Westport"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 369,
+          "claim": "Nadia's safe-house is a third-floor walkup studio in Westport.",
+          "quote": "A studio in Westport, third floor walkup"
+        },
+        {
+          "book": 2,
+          "line": 242,
+          "claim": "Used bookshop in Westport supplies texts mailed to Iceland.",
+          "quote": "a used bookshop in Westport and mailed to Iceland"
+        },
+        {
+          "book": 2,
+          "line": 1702,
+          "claim": "Nadia buys stationery at same Westport bookshop where she found Sefer Yetzirah for Blake.",
+          "quote": "bookshop in Westport, the same bookshop where she had found the Sefer Yetzirah"
+        }
+      ],
+      "nearby_implied": [
+        "Kansas City",
+        "UMKC area",
+        "Quality Hill"
+      ],
+      "risk_notes": "Real Kansas City Westport neighborhood. Uses are plausible (walkup, bookshop). No direct linkage to Foundation HQ sites; serves as Nadia personal/supply node. Low spatial contradiction risk."
+    },
+    {
+      "entity": "Troost",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "Troost Avenue",
+        "Troost corridor",
+        "buildings of Troost"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 4123,
+          "claim": "Foundation office window overlooks Troost Avenue buildings (February KC light).",
+          "quote": "Kansas City's February light fell on the buildings of Troost Avenue"
+        },
+        {
+          "book": 3,
+          "line": 3110,
+          "claim": "Foundation accessed at midnight via empty Troost corridor streets.",
+          "quote": "the streets of the Troost corridor empty"
+        },
+        {
+          "book": 3,
+          "line": 4004,
+          "claim": "Nadia drives down Troost past gas station and church to Quality Hill boundary and institutional district.",
+          "quote": "She drove down Troost. Past the gas station. Past the church"
+        }
+      ],
+      "nearby_implied": [
+        "Quality Hill boundary",
+        "institutional district",
+        "Foundation building",
+        "community protocol church"
+      ],
+      "risk_notes": "Real Troost Avenue is a major KC north-south corridor dividing east/west KC. Text places Foundation near Troost with Quality Hill boundary to the south/west\u2014roughly consistent with real geography if Foundation is near downtown/Quality Hill. Window view and driving route should be cross-checked against Washington Street/Hotel Phillips placements."
+    },
+    {
+      "entity": "City Market",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "paper shop in the City Market"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 1696,
+          "claim": "Nadia bought personal stationery at a paper shop in City Market three years prior.",
+          "quote": "stationery she had bought at a paper shop in the City Market three years ago"
+        }
+      ],
+      "nearby_implied": [
+        "River Market/City Market district",
+        "Quality Hill",
+        "downtown Kansas City"
+      ],
+      "risk_notes": "Real KC City Market (River Market). Single incidental reference; no structural role. Low audit priority unless tracing Nadia's personal geography against Foundation sites."
+    },
+    {
+      "entity": "Overland Park",
+      "class": "REAL_WORLD",
+      "identity_aliases": [],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 3535,
+          "claim": "Fellowship candidate Yuki Tanaka raised in Overland Park (KC suburb).",
+          "quote": "raised in Overland Park"
+        }
+      ],
+      "nearby_implied": [
+        "UMKC",
+        "Kansas City metro",
+        "Foundation fellowship program"
+      ],
+      "risk_notes": "Real Kansas suburb. Character backstory only; no scene locates action in Overland Park. Minimal geographic integrity risk."
+    },
+    {
+      "entity": "Picture Cave",
+      "class": "REAL_WORLD",
+      "identity_aliases": [],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1356,
+          "claim": "Picture Cave in Washington County, Missouri; pre-Columbian cave art with geometric patterns.",
+          "quote": "Picture Cave, Washington County, Missouri. Dated to at least a thousand years ago"
+        },
+        {
+          "book": 1,
+          "line": 2103,
+          "claim": "Picture Cave among oldest sites in Missouri/Mississippi river valleys on acoustic site map.",
+          "quote": "the Missouri and Mississippi river valleys. Picture Cave, Mud Glyph Cave"
+        }
+      ],
+      "nearby_implied": [
+        "Missouri River valley",
+        "Mississippi confluence region",
+        "SubTropolis source radius",
+        "Meramec Caverns"
+      ],
+      "risk_notes": "Real archaeological site (Washington County MO). Used as evidence node in fictional acoustic-site network radiating from SubTropolis/confluence. Geographic placement is accurate; fictional pattern-radiation geometry is not."
+    },
+    {
+      "entity": "Meramec Caverns",
+      "class": "REAL_WORLD",
+      "identity_aliases": [],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1069,
+          "claim": "Tourist attraction outside Sullivan, Missouri; William accessed undocumented side passage.",
+          "quote": "Meramec Caverns. Tourist attraction outside Sullivan, Missouri"
+        },
+        {
+          "book": 1,
+          "line": 1041,
+          "claim": "Flowstone patterns at Meramec match SubTropolis carvings and William's notebooks.",
+          "quote": "In the flowstone at Meramec Caverns that William had traced"
+        },
+        {
+          "book": 1,
+          "line": 4005,
+          "claim": "Meramec listed among seven pre-Columbian geometric sequence sites in William's map.",
+          "quote": "Oscar-01. SubTropolis. Meramec Caverns"
+        }
+      ],
+      "nearby_implied": [
+        "Sullivan MO",
+        "Ozarks",
+        "SubTropolis",
+        "Picture Cave",
+        "Missouri River system"
+      ],
+      "risk_notes": "Real show cave near Stanton/Sullivan MO (~200 mi from KC). Included in fictional seven-site network with SubTropolis and Oscar-01. Side passage claim is fiction; real cave is heavily developed. Distance from KC SubTropolis stack is large\u2014network geometry is narrative not geodesic."
+    },
+    {
+      "entity": "2847 Genessee Street",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Missouri Cold Storage Co.",
+        "warehouse on Genessee Street"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 1504,
+          "claim": "Abandoned-appearing cold storage facade (1923 sign) with concealed security; West Bottoms/river-adjacent.",
+          "quote": "2847 Genessee Street looked abandoned. Graffiti on the loading dock"
+        },
+        {
+          "book": 1,
+          "line": 2073,
+          "claim": "Analysis Chamber located in basement of 2847 Genessee Street.",
+          "quote": "The Analysis Chamber lived in the basement of 2847 Genessee Street"
+        }
+      ],
+      "nearby_implied": [
+        "Analysis Chamber",
+        "Genessee Street",
+        "West Bottoms",
+        "Missouri River",
+        "Keepers operational base"
+      ],
+      "risk_notes": "Specific street number on real Genessee St corridor (West Bottoms). Early-book keeper base vs later Foundation HQ migration (Washington/Quality Hill/SubTropolis) implies organizational relocation not explicitly narrated. Risk of treating 2847 as current Foundation address."
+    },
+    {
+      "entity": "Analysis Chamber",
+      "class": "FICTIONAL",
+      "identity_aliases": [
+        "the Chamber",
+        "Chamber's overnight analysis"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 2073,
+          "claim": "Basement facility at 2847 Genessee Street built by Andrew (server rack, six monitors, pattern-recognition software).",
+          "quote": "The Analysis Chamber lived in the basement of 2847 Genessee Street"
+        },
+        {
+          "book": 1,
+          "line": 4292,
+          "claim": "Chamber processes field photographs into proportional-relationship visualizations.",
+          "quote": "Andrew processed it through the Analysis Chamber six hours later"
+        }
+      ],
+      "nearby_implied": [
+        "2847 Genessee Street",
+        "Genessee Street warehouse",
+        "Andrew's software stack"
+      ],
+      "risk_notes": "Wholly fictional lab tied to Book 1 KC operational phase. No pack hits place Analysis Chamber at Washington Street or SubTropolis. If Foundation facility is assumed singular, this is a temporal/spatial orphan."
+    },
+    {
+      "entity": "Cognigenics",
+      "class": "FICTIONAL",
+      "identity_aliases": [
+        "Cognigenics Inc.",
+        "Cognigenics facility",
+        "Cognigenics program"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 6629,
+          "claim": "Clinical ethics officer Teresa Morales worked at Cognigenics facility in Frederick, Maryland.",
+          "quote": "Cognigenics facility in Frederick, Maryland"
+        },
+        {
+          "book": 2,
+          "line": 3111,
+          "claim": "Cognigenics internal documents stored in Nadia's desk at Foundation HQ (Quality Hill).",
+          "quote": "The Cognigenics documents were in the locked drawer"
+        },
+        {
+          "book": 3,
+          "line": 1627,
+          "claim": "Cognigenics proprietary mirror coating targets Specchi mirror specifications.",
+          "quote": "thin-film optical coating applied to the Specchi mirrors that Cognigenics claimed"
+        }
+      ],
+      "nearby_implied": [
+        "Frederick Maryland",
+        "Foundation (Kansas City)",
+        "Specchi mirrors",
+        "Maryland activation site"
+      ],
+      "risk_notes": "Fictional corporation; only fixed geographic anchor is Frederick MD (real city, no real Cognigenics). No KC street address. Spatial audit relevance is institutional opposition to Foundation, not mappable KC topology."
+    },
+    {
+      "entity": "Specchi",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Specchi family",
+        "Specchi mirrors",
+        "Specchi mirror formula",
+        "Specchi specification",
+        "Specchi workshop"
+      ],
+      "spatial_claims": [
+        {
+          "book": 2,
+          "line": 5134,
+          "claim": "Specchi family operated on Murano (Venice) c.1340\u20131720 as specialized mirror makers.",
+          "quote": "The Specchi family. Active on Murano from approximately 1340 to 1720"
+        },
+        {
+          "book": 2,
+          "line": 5147,
+          "claim": "Specchi mirrors hand-delivered to Prague, Paris, Barcelona, and 'western land' (1843 Jesuit commission).",
+          "quote": "Family members traveled to Prague, to Paris, to Barcelona"
+        },
+        {
+          "book": 2,
+          "line": 5156,
+          "claim": "Specchi mirrors are parabolic with quarter-inch curvature specs; installed at St. Francis Parish West Bottoms.",
+          "quote": "The Specchi mirrors were parabolic"
+        },
+        {
+          "book": 3,
+          "line": 1650,
+          "claim": "1585 Specchi workshop ledger records delivery to Premonstratensian monastery at Strahov with coating formula.",
+          "quote": "1585 delivery to the Premonstratensian monastery at Strahov"
+        },
+        {
+          "book": 3,
+          "line": 2394,
+          "claim": "Six parabolic Specchi-spec mirrors installed in Foundation SubTropolis/Moreau chamber.",
+          "quote": "Six parabolic surfaces, each ground to the Specchi specification"
+        }
+      ],
+      "nearby_implied": [
+        "Murano",
+        "Venice",
+        "Prague",
+        "Strahov",
+        "West Bottoms",
+        "Moreau chamber",
+        "SubTropolis",
+        "Foundation research chamber"
+      ],
+      "risk_notes": "Fictional Venetian guild embedded in real Murano/Strahov geography. Supply chain (Murano \u2192 1843 KC \u2192 modern SubTropolis chamber) spans centuries. Mirror specs link Prague archives to KC underground chamber\u2014identity graph must track Specchi as material thread, not a place."
+    },
+    {
+      "entity": "Broadway",
+      "class": "AMBIGUOUS",
+      "identity_aliases": [],
+      "spatial_claims": [],
+      "nearby_implied": [],
+      "risk_notes": "Pack key exists but contains zero hits. No spatial claims extractable from phase3_packs.json. May appear in unscanned text or may refer to Kansas City Broadway Blvd without indexer matches\u2014requires broader corpus search before mapping."
+    },
+    {
+      "entity": "Missouri River",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "Missouri River Runner",
+        "the river",
+        "Missouri confluence"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 864,
+          "claim": "Missouri River visible from Jefferson City Capitol bench (brown, wide, October light).",
+          "quote": "The Missouri River was visible from here, brown and wide"
+        },
+        {
+          "book": 1,
+          "line": 1490,
+          "claim": "Genessee Street ambient includes river water smell (proximity to Missouri River).",
+          "quote": "Genessee Street smelled like river water and old brick"
+        },
+        {
+          "book": 1,
+          "line": 1581,
+          "claim": "Father Moreau drowned in Missouri River (1924).",
+          "quote": "drowned in the Missouri River"
+        },
+        {
+          "book": 1,
+          "line": 2105,
+          "claim": "Acoustic site pattern radiates outward from Missouri confluence like ripples.",
+          "quote": "The pattern radiates outward from the Missouri confluence"
+        },
+        {
+          "book": 3,
+          "line": 3125,
+          "claim": "Missouri River ozone/humidity sensed from West Bottoms parking lot near Moreau chamber.",
+          "quote": "the distant ozone-sweetness of the Missouri River"
+        }
+      ],
+      "nearby_implied": [
+        "Genessee Street",
+        "West Bottoms",
+        "Kansas City bluffs",
+        "SubTropolis source",
+        "Jefferson City",
+        "Mississippi confluence"
+      ],
+      "risk_notes": "Real river; confluence-centered 'source' fiction anchors SubTropolis/Picture Cave/Meramec network. SubTropolis in real KC is not at the Missouri\u2013Kansas confluence (roughly 2\u20133 mi away), creating tension between geological fiction and real hydrology."
+    },
+    {
+      "entity": "Iceland",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "M\u00fdrdalsj\u00f6kull",
+        "stone cottage",
+        "Iceland chambers",
+        "Iceland caves",
+        "IS-871 V\u00edk \u00ed M\u00fdrdal"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 19,
+          "claim": "Blake's epigraph dateline: M\u00fdrdalsj\u00f6kull, Iceland.",
+          "quote": "Blake Masters, M\u00fdrdalsj\u00f6kull, Iceland"
+        },
+        {
+          "book": 2,
+          "line": 12,
+          "claim": "Stone cottage field station at 3.915 Hz; basalt-walled chambers.",
+          "quote": "3.915 Hz \u00b7 Iceland"
+        },
+        {
+          "book": 2,
+          "line": 1765,
+          "claim": "Blake's postal address: stone cottage, IS-871 V\u00edk \u00ed M\u00fdrdal.",
+          "quote": "IS-871 V\u00edk \u00ed M\u00fdrdal"
+        },
+        {
+          "book": 2,
+          "line": 1170,
+          "claim": "Andrew installed $12K monitoring rigs in Iceland chambers.",
+          "quote": "the twelve-thousand-dollar monitoring rigs Andrew had installed in the Iceland chambers"
+        },
+        {
+          "book": 2,
+          "line": 2277,
+          "claim": "Iceland caves mapped at Schumann-adjacent 109.1 Hz range.",
+          "quote": "range that Andrew had been mapping in the Iceland caves"
+        },
+        {
+          "book": 2,
+          "line": 3091,
+          "claim": "Iceland stone cottage paired with Kansas City Hotel Phillips office as dual sites.",
+          "quote": "the stone cottage and the Hotel Phillips Building office"
+        }
+      ],
+      "nearby_implied": [
+        "M\u00fdrdalsj\u00f6kull glacier",
+        "V\u00edk \u00ed M\u00fdrdal",
+        "Reykjav\u00edk",
+        "Kansas City (paired site)",
+        "basalt chambers",
+        "Foundation monitoring"
+      ],
+      "risk_notes": "Real Iceland locations (V\u00edk, M\u00fdrdalsj\u00f6kull) used for fictional basalt acoustic chambers. Cottage postal code and glacier wind patterns are narratively specific. Paired symmetrically with KC Foundation sites; no claim Iceland chambers connect physically to SubTropolis."
+    },
+    {
+      "entity": "Prague",
+      "class": "REAL_WORLD",
+      "identity_aliases": [
+        "Old Town",
+        "Mal\u00e1 Strana",
+        "Poho\u0159elec district",
+        "V\u00e1clav Havel Airport"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 2488,
+          "claim": "Nadia knows Prague archives, churches, and underground; can access Strahov.",
+          "quote": "I know the Strahov. I know the archives, the churches, the underground"
+        },
+        {
+          "book": 1,
+          "line": 2699,
+          "claim": "Prague is Nadia's territory (vs Kansas City as Blake's).",
+          "quote": "Prague is mine"
+        },
+        {
+          "book": 1,
+          "line": 2893,
+          "claim": "Chapter set in Prague at 111.2 Hz; arrival via V\u00e1clav Havel Airport.",
+          "quote": "111.2 Hz \u00b7 Prague"
+        },
+        {
+          "book": 1,
+          "line": 2914,
+          "claim": "Taxi from airport through Old Town/Mal\u00e1 Strana toward castle district.",
+          "quote": "Blake pressed his forehead against the window and watched Prague unfold"
+        },
+        {
+          "book": 1,
+          "line": 3129,
+          "claim": "Nadia raised by Keeper nuns at Prague orphanage.",
+          "quote": "The nuns at the orphanage in Prague were Keepers"
+        },
+        {
+          "book": 1,
+          "line": 3505,
+          "claim": "One of seven global acoustic sites including Missouri (SubTropolis).",
+          "quote": "Yes. And Prague. Venice. Alexandria. Beijing. Cusco"
+        }
+      ],
+      "nearby_implied": [
+        "Strahov Library",
+        "Strahov monastery",
+        "Charles University",
+        "Eva \u010cern\u00e1",
+        "castle district",
+        "river below medieval streets"
+      ],
+      "risk_notes": "Real Prague geography used accurately for Strahov, Mal\u00e1 Strana, airport. Keeper orphanage and Rudolf II chamber lore are fictional overlays. Prague functions as Nadia's native node in seven-site global network."
+    },
+    {
+      "entity": "Strahov",
+      "class": "HYBRID",
+      "identity_aliases": [
+        "Strahov Library",
+        "Strahov monastery",
+        "THE STRAHOV",
+        "Strahov crypt",
+        "Strahov chamber",
+        "Strahov notae",
+        "Strahov specification"
+      ],
+      "spatial_claims": [
+        {
+          "book": 1,
+          "line": 2457,
+          "claim": "Strahov Library (Prague): chamber beneath library hidden since 16th century; William found entrance 1965.",
+          "quote": "chamber beneath it, hidden since the sixteenth century"
+        },
+        {
+          "book": 1,
+          "line": 2488,
+          "claim": "Nadia knows Strahov archives and underground access routes.",
+          "quote": "I know the Strahov. I know the archives, the churches, the underground"
+        },
+        {
+          "book": 1,
+          "line": 2838,
+          "claim": "Chamber beneath Strahov holds Rudolf II's gathered collection; William sealed it after 1965 visit.",
+          "quote": "The chamber beneath Strahov contains what Rudolf II spent his life gathering"
+        },
+        {
+          "book": 1,
+          "line": 3250,
+          "claim": "Strahov Library closed; pre-dawn entry via Poho\u0159elec district with brass key.",
+          "quote": "The Strahov Library wasn't open for another four hours"
+        },
+        {
+          "book": 1,
+          "line": 3415,
+          "claim": "Strahov chamber remains sealed beneath terrace after partial opening.",
+          "quote": "The Strahov chamber beneath their feet, sealed and waiting"
+        },
+        {
+          "book": 2,
+          "line": 131,
+          "claim": "15th-c. Premonstratensian Strahov archive holds cross-tradition preparation reading list.",
+          "quote": "Premonstratensian archive in Prague"
+        },
+        {
+          "book": 2,
+          "line": 2014,
+          "claim": "Strahov monks preserved acoustic notation in lead-lined crypt below Theological Hall.",
+          "quote": "notation preserved in a lead-lined crypt"
+        },
+        {
+          "book": 2,
+          "line": 1093,
+          "claim": "Strahov crypt dark space below Theological Hall referenced as preparation chamber.",
+          "quote": "in the dark below the Theological Hall"
+        },
+        {
+          "book": 3,
+          "line": 1650,
+          "claim": "1585 Specchi mirror delivery receipt to Strahov monastery documents coating formula.",
+          "quote": "delivery to the Premonstratensian monastery at Strahov"
+        }
+      ],
+      "nearby_implied": [
+        "Prague",
+        "Poho\u0159elec",
+        "Theological Hall",
+        "Premonstratensian monastery",
+        "Specchi workshop (Venice)",
+        "SubTropolis notae (matched patterns)",
+        "Rudolf II collection"
+      ],
+      "risk_notes": "Real Strahov Monastery/Library in Prague with fictional lead-lined crypt, acoustic chamber, and Rudolf II hoard. Notae/cymatics specs exported to Ghana caves and SubTropolis carvings. Chamber depth/placement under library is invented; must not be merged with real Strahov vault tours."
+    }
+  ],
+  "identity_graph": {
+    "nodes": [
+      {
+        "id": "foundation-institution",
+        "real_world_anchor": "Masters Foundation (fictional 501c3)",
+        "type": "HYBRID"
+      },
+      {
+        "id": "foundation-washington-st",
+        "real_world_anchor": "Washington Street, Kansas City MO (near Quality Hill)",
+        "type": "HYBRID"
+      },
+      {
+        "id": "foundation-quality-hill",
+        "real_world_anchor": "Quality Hill neighborhood, Kansas City MO",
+        "type": "HYBRID"
+      },
+      {
+        "id": "hotel-phillips-building",
+        "real_world_anchor": "Hotel Phillips Building, 106 W 12th St, Kansas City MO",
+        "type": "HYBRID"
+      },
+      {
+        "id": "subtropolis-complex",
+        "real_world_anchor": "SubTropolis underground storage, Kansas City MO",
+        "type": "HYBRID"
+      },
+      {
+        "id": "moreau-chamber",
+        "real_world_anchor": "Fictional Moreau church basement chamber",
+        "type": "FICTIONAL"
+      },
+      {
+        "id": "genessee-2847",
+        "real_world_anchor": "2847 Genessee Street, West Bottoms, Kansas City MO",
+        "type": "HYBRID"
+      },
+      {
+        "id": "analysis-chamber",
+        "real_world_anchor": "Basement lab, 2847 Genessee Street",
+        "type": "FICTIONAL"
+      },
+      {
+        "id": "strahov-library",
+        "real_world_anchor": "Strahov Monastery Library, Prague, Czech Republic",
+        "type": "HYBRID"
+      },
+      {
+        "id": "strahov-crypt-chamber",
+        "real_world_anchor": "Fictional crypt/chamber beneath Strahov",
+        "type": "FICTIONAL"
+      },
+      {
+        "id": "iceland-stone-cottage",
+        "real_world_anchor": "V\u00edk \u00ed M\u00fdrdal area, Iceland",
+        "type": "HYBRID"
+      },
+      {
+        "id": "specchi-mirror-tradition",
+        "real_world_anchor": "Murano mirror-making (Venice) + fictional Specchi guild",
+        "type": "HYBRID"
+      },
+      {
+        "id": "bethany-falls-limestone-co",
+        "real_world_anchor": "Bethany Falls limestone member, Kansas City area",
+        "type": "HYBRID"
+      },
+      {
+        "id": "missouri-confluence-source",
+        "real_world_anchor": "Missouri\u2013Kansas Rivers confluence",
+        "type": "HYBRID"
+      },
+      {
+        "id": "quality-hill-apartment",
+        "real_world_anchor": "Quality Hill residential apartment (Blake/Nadia)",
+        "type": "HYBRID"
+      },
+      {
+        "id": "west-bottoms-district",
+        "real_world_anchor": "West Bottoms, Kansas City MO",
+        "type": "REAL_WORLD"
+      },
+      {
+        "id": "prague-city",
+        "real_world_anchor": "Prague, Czech Republic",
+        "type": "REAL_WORLD"
+      }
+    ],
+    "edges": [
+      {
+        "from": "the Foundation",
+        "to": "foundation-institution",
+        "via": "expression"
+      },
+      {
+        "from": "Masters Foundation",
+        "to": "foundation-institution",
+        "via": "alias"
+      },
+      {
+        "from": "foundation-institution",
+        "to": "foundation-washington-st",
+        "via": "official_address"
+      },
+      {
+        "from": "foundation-institution",
+        "to": "foundation-quality-hill",
+        "via": "co_located_HQ"
+      },
+      {
+        "from": "foundation-institution",
+        "to": "hotel-phillips-building",
+        "via": "office_site"
+      },
+      {
+        "from": "foundation-institution",
+        "to": "subtropolis-complex",
+        "via": "primary_research_chamber"
+      },
+      {
+        "from": "foundation-institution",
+        "to": "genessee-2847",
+        "via": "early_operational_base"
+      },
+      {
+        "from": "foundation-washington-st",
+        "to": "foundation-quality-hill",
+        "via": "distinct_from_apartment"
+      },
+      {
+        "from": "foundation-quality-hill",
+        "to": "quality-hill-apartment",
+        "via": "residential_subsite"
+      },
+      {
+        "from": "subtropolis-complex",
+        "to": "moreau-chamber",
+        "via": "160ft_below_converted_basement"
+      },
+      {
+        "from": "moreau-chamber",
+        "to": "west-bottoms-district",
+        "via": "160ft_below_industrial_memory"
+      },
+      {
+        "from": "Father Moreau",
+        "to": "moreau-chamber",
+        "via": "built_mapped_caves"
+      },
+      {
+        "from": "Father Benjamin Moreau",
+        "to": "west-bottoms-district",
+        "via": "St_Francis_Parish"
+      },
+      {
+        "from": "2847 Genessee Street",
+        "to": "genessee-2847",
+        "via": "address"
+      },
+      {
+        "from": "Analysis Chamber",
+        "to": "analysis-chamber",
+        "via": "expression"
+      },
+      {
+        "from": "analysis-chamber",
+        "to": "genessee-2847",
+        "via": "located_in_basement"
+      },
+      {
+        "from": "SubTropolis",
+        "to": "subtropolis-complex",
+        "via": "expression"
+      },
+      {
+        "from": "SubTropolis",
+        "to": "bethany-falls-limestone-co",
+        "via": "1940s_discovery"
+      },
+      {
+        "from": "Bethany Falls Limestone Company",
+        "to": "bethany-falls-limestone-co",
+        "via": "expression"
+      },
+      {
+        "from": "Bethany Falls",
+        "to": "bethany-falls-limestone-co",
+        "via": "geological_formation"
+      },
+      {
+        "from": "missouri-confluence-source",
+        "to": "subtropolis-complex",
+        "via": "narrative_sits_on_source"
+      },
+      {
+        "from": "Missouri River",
+        "to": "missouri-confluence-source",
+        "via": "confluence"
+      },
+      {
+        "from": "Genessee Street",
+        "to": "genessee-2847",
+        "via": "street_address"
+      },
+      {
+        "from": "West Bottoms",
+        "to": "west-bottoms-district",
+        "via": "expression"
+      },
+      {
+        "from": "Strahov",
+        "to": "strahov-library",
+        "via": "expression"
+      },
+      {
+        "from": "Strahov Library",
+        "to": "strahov-library",
+        "via": "alias"
+      },
+      {
+        "from": "strahov-library",
+        "to": "strahov-crypt-chamber",
+        "via": "chamber_beneath"
+      },
+      {
+        "from": "Prague",
+        "to": "prague-city",
+        "via": "expression"
+      },
+      {
+        "from": "strahov-library",
+        "to": "prague-city",
+        "via": "located_in"
+      },
+      {
+        "from": "Specchi mirrors",
+        "to": "specchi-mirror-tradition",
+        "via": "expression"
+      },
+      {
+        "from": "specchi-mirror-tradition",
+        "to": "moreau-chamber",
+        "via": "installed_1843_west_bottoms"
+      },
+      {
+        "from": "specchi-mirror-tradition",
+        "to": "strahov-crypt-chamber",
+        "via": "1585_delivery_receipt"
+      },
+      {
+        "from": "Iceland",
+        "to": "iceland-stone-cottage",
+        "via": "field_station"
+      },
+      {
+        "from": "iceland-stone-cottage",
+        "to": "hotel-phillips-building",
+        "via": "paired_operational_sites"
+      },
+      {
+        "from": "Quality Hill",
+        "to": "foundation-quality-hill",
+        "via": "neighborhood_anchor"
+      },
+      {
+        "from": "Washington Street",
+        "to": "foundation-washington-st",
+        "via": "street_anchor"
+      },
+      {
+        "from": "Hotel Phillips",
+        "to": "hotel-phillips-building",
+        "via": "building_anchor"
+      },
+      {
+        "from": "Wyandotte",
+        "to": "subtropolis-complex",
+        "via": "underground_river_3mi_claim"
+      },
+      {
+        "from": "Picture Cave",
+        "to": "missouri-confluence-source",
+        "via": "river_valley_site_network"
+      },
+      {
+        "from": "Meramec Caverns",
+        "to": "missouri-confluence-source",
+        "via": "seven_site_network"
+      },
+      {
+        "from": "Troost",
+        "to": "foundation-quality-hill",
+        "via": "approach_corridor"
+      },
+      {
+        "from": "the Foundation",
+        "to": "specchi-mirror-tradition",
+        "via": "chamber_mirrors_Specchi_spec"
+      },
+      {
+        "from": "Cognigenics",
+        "to": "specchi-mirror-tradition",
+        "via": "proprietary_coating_copy"
+      }
+    ]
+  }
+}

@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "The Real Kansas City of Masters X: A Reader's Map",
   description:
     "Every Kansas City location in the Masters X Trilogy is real: Miller Nichols Library at UMKC, Westport, Quality Hill, the Hotel Phillips Building, the West Bottoms, the KC Streetcar corridor. The events are fiction. The geography is exact.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/kansas-city-locations/" },
-  openGraph: {
-    title: "The Real Kansas City of Masters X: A Reader's Map | Field Notes",
-    description:
-      "The corner table at Miller Nichols Library. Quality Hill above the West Bottoms. The Hotel Phillips downtown. The KC Streetcar on Main Street. Every location is real. The events are the novel's invention.",
-    url: "https://jasoncholloway.com/field-notes/kansas-city-locations/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/kansas-city-locations.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: Kansas City skyline viewed from the West Bottoms bluffs",
-      },
-    ],
+  socialTitle: "The Real Kansas City of Masters X: A Reader's Map | Field Notes",
+  socialDescription:
+    "The corner table at Miller Nichols Library. Quality Hill above the West Bottoms. The Hotel Phillips downtown. The KC Streetcar on Main Street. Every location is real. The events are the novel's invention.",
+  path: "/field-notes/kansas-city-locations/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/kansas-city-locations.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: Kansas City skyline viewed from the West Bottoms bluffs",
   },
-};
+});
 
 const faqs = [
   {

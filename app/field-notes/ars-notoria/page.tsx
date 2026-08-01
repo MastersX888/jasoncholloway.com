@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge",
   description:
     "The Ars Notoria is a real thirteenth-century manuscript held in the British Library and the Bibliothèque nationale de France. It promises, through structured visual contemplation and prayer, the rapid acquisition of the seven liberal arts. Most scholars call it superstition. A minority call it cognitive technology.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/ars-notoria/" },
-  openGraph: {
-    title: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge | Field Notes",
-    description:
-      "A real thirteenth-century manuscript promising the rapid acquisition of knowledge through geometric figures called notae. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
-    url: "https://jasoncholloway.com/field-notes/ars-notoria/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria",
-      },
-    ],
+  socialTitle: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge | Field Notes",
+  socialDescription:
+    "A real thirteenth-century manuscript promising the rapid acquisition of knowledge through geometric figures called notae. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
+  path: "/field-notes/ars-notoria/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria",
   },
-};
+});
 
 const faqs = [
   {

@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import styles from './harmonic-derivations.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Harmonic Frequency Derivations | Masters X Trilogy — Seventh City Press",
+export const metadata: Metadata = buildMetadata({
+  title: "The Harmonic Frequency Derivations | Masters X Trilogy",
+  titleAbsolute: true,
   description: "The eight major harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: from the 111.2 Hz fundamental to 889.6 Hz, with coupling factors, quality factors, forty inversion frequencies, and cathedral cross-references.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/harmonic-derivations/" },
-};
+  path: "/chamber/harmonic-derivations/",
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -52,8 +54,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <Script
-        id="page-jsonld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />

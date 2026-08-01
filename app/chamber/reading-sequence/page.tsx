@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import styles from './reading-sequence.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The The Reading Sequence | Masters X Trilogy — Seventh City Press",
+export const metadata: Metadata = buildMetadata({
+  title: "The Reading Sequence — 15 Texts Behind Masters X",
+  titleAbsolute: true,
   description: "The annotated reading sequence from the Masters X Trilogy: fifteen texts curated by Eva Černá, from the Ars Notoria to the Sefer Yetzirah, each annotated for the acoustic-consciousness research the novels document.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/reading-sequence/" },
-};
+  path: "/chamber/reading-sequence/",
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -235,14 +237,13 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <Script
-        id="page-jsonld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className={styles['rs-wrap']}>
         <p className={styles['rs-eyebrow']}>Analysis Chamber · The Distribution File</p>
-  <h1 className={styles['rs-h1']}>The The Reading Sequence</h1>
+  <h1 className={styles['rs-h1']}>The Reading Sequence</h1>
   <p className={styles['rs-lede']}>The reading list is not devotional. Each text is assigned because it contains a specific technical element the candidate will later need: a proportion, a posture, a discipline of attention, a fragment of the coupling model.</p>
   <p className={styles['rs-intro']}>Within the Masters X Trilogy, the William Masters Foundation prescribes a fixed sequence of fifteen texts as the first phase of preparation — the reading sequence held in the Strahov and Charles University collections. <em>The Ars Notoria is read first, in ignorance, and last, in understanding.</em> Between those two readings lie twenty-one texts that make the difference. What follows is the annotated sequence as it appears in the distribution file Andrew Chen released to the public domain.</p>
 

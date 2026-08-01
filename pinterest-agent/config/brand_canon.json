@@ -1,0 +1,70 @@
+{
+  "entity": {
+    "imprint": "Seventh City Press LLC",
+    "author": "Jason Carroll Holloway",
+    "location": "Kansas City, Missouri",
+    "websites": {
+      "author": "https://jasoncholloway.com",
+      "imprint": "https://seventhcitypress.com",
+      "press_contact": "press@seventhcitypress.com"
+    },
+    "tagline": "Fiction built on real research. Criticism built on close reading.",
+    "brand_voice": "Authoritative, literary, grounded in documented history. Never hype. Never genre-pulp."
+  },
+  "pinterest": {
+    "business_id": "1110700464259220749",
+    "account_note": "0j0tfx8vg245k2857342ychwu8m2b8"
+  },
+  "primary_links": {
+    "homepage": "https://jasoncholloway.com",
+    "books": "https://jasoncholloway.com/books/",
+    "press": "https://jasoncholloway.com/press/",
+    "field_notes": "https://jasoncholloway.com/field-notes/",
+    "analysis_chamber": "https://jasoncholloway.com/chamber/",
+    "omnibus": "https://jasoncholloway.com/books/masters-x/omnibus/",
+    "imprint": "https://seventhcitypress.com",
+    "contact": "https://seventhcitypress.com/contact/",
+    "privacy": "https://seventhcitypress.com/privacy/"
+  },
+  "retailer_links": {
+    "amazon_author_page": "https://www.amazon.com/stores/Jason-Carroll-Holloway/author/B0H54HCQ1S",
+    "amazon_dp_pattern": "https://www.amazon.com/dp/{ASIN}",
+    "bookshop_affiliate_id": "126177"
+  },
+  "isbn_matrix": [
+    { "title": "The Inheritance of Frequency", "format": "Paperback", "isbn": "9798256008048", "volume": 1 },
+    { "title": "The Inheritance of Frequency", "format": "Hardcover", "isbn": "9798295800801", "volume": 1 },
+    { "title": "The Inheritance of Frequency", "format": "EPUB", "isbn": "9798256008819", "volume": 1 },
+    { "title": "The Inheritance of Frequency", "format": "Kindle", "asin": "B0H4KYMSM1", "volume": 1 },
+    { "title": "The Grimoire", "format": "Paperback", "isbn": "9798256009953", "volume": 2 },
+    { "title": "The Grimoire", "format": "Hardcover", "isbn": "9798295812675", "volume": 2 },
+    { "title": "The Grimoire", "format": "EPUB", "isbn": "9798256009625", "volume": 2 },
+    { "title": "The Grimoire", "format": "Kindle", "asin": "B0H4KQ4YQJ", "volume": 2 },
+    { "title": "The Kingdom", "format": "Paperback", "isbn": "9798256010072", "volume": 3 },
+    { "title": "The Kingdom", "format": "Hardcover", "isbn": "9798295812705", "volume": 3 },
+    { "title": "The Kingdom", "format": "EPUB", "isbn": "9798256009809", "volume": 3 },
+    { "title": "The Kingdom", "format": "Kindle", "asin": "B0H4L36X21", "volume": 3 },
+    { "title": "Complete Trilogy (Omnibus)", "format": "Paperback", "isbn": "9798256072704", "notes": "Awaiting approval as of 2026-06-24" },
+    { "title": "Complete Trilogy (Omnibus)", "format": "Hardcover", "isbn": "9798295884412" },
+    { "title": "Innocence, Desire and the Architecture of the Fall", "format": "Paperback", "isbn": "9798295778247" },
+    { "title": "Innocence, Desire and the Architecture of the Fall", "format": "Hardcover", "isbn": "9798349308444" },
+    { "title": "Innocence, Desire and the Architecture of the Fall", "format": "EPUB", "isbn": "9798295778926" }
+  ],
+  "content_pillars": [
+    { "id": "P1", "name": "The Trilogy", "topics": ["cover art", "buy links", "format comparison", "omnibus"] },
+    { "id": "P2", "name": "Facts Behind the Fiction", "topics": ["SubTropolis", "Strahov", "Voynich", "Ars Notoria", "111 Hz"] },
+    { "id": "P3", "name": "Kansas City", "topics": ["SubTropolis", "Westport", "West Bottoms", "Quality Hill"] },
+    { "id": "P4", "name": "Medieval Manuscripts & Esoteric History", "topics": ["Voynich MS 408", "Codex Gigas", "Strahov"] },
+    { "id": "P5", "name": "Acoustic Science & Frequency", "topics": ["111 Hz", "cymatics", "Schumann 7.83 Hz", "Chladni"] },
+    { "id": "P6", "name": "The Author & Imprint", "topics": ["Seventh City Press", "research methodology"] },
+    { "id": "P7", "name": "The Hawkes Monograph", "topics": ["John Hawkes", "structural analysis"] },
+    { "id": "P8", "name": "Reader Experience", "topics": ["reading guides", "Analysis Chamber", "Field Notes"] }
+  ],
+  "factual_anchors": {
+    "voynich_repository": "Yale Beinecke Rare Book & Manuscript Library, MS 408",
+    "schumann_hz": "7.83",
+    "chladni": "Ernst Chladni (1756–1827)",
+    "jenny": "Hans Jenny (1904–1972), cymatics",
+    "codex_gigas_repository": "National Library of Sweden, Stockholm"
+  }
+}

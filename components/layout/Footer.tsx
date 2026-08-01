@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,6 +17,9 @@ export default function Footer() {
             <div style={{ maxWidth: "380px" }}>
               <div className="footer-col-title" style={{ marginBottom: "0.5rem", color: "var(--text-muted)" }}>Newsletter Dispatch</div>
               <NewsletterForm compact={true} />
+            </div>
+            <div style={{ marginTop: "1.5rem" }}>
+              <SocialLinks />
             </div>
           </div>
 
@@ -36,6 +40,7 @@ export default function Footer() {
             <div className="footer-col-title">Research & Field Notes</div>
             <nav className="footer-links">
               <Link href="/field-notes">Field Notes Hub</Link>
+              <Link href="/field-notes/">The Facts Behind the Fiction</Link>
               <Link href="/field-notes/subtropolis">SubTropolis</Link>
               <Link href="/field-notes/111-hz">111 Hz</Link>
               <Link href="/field-notes/voynich-manuscript">Voynich Manuscript</Link>
@@ -52,6 +57,7 @@ export default function Footer() {
               <Link href="/about">About the Author</Link>
               <Link href="/contact">Contact</Link>
               <Link href="/returns">Returns &amp; Refunds</Link>
+              <a href="https://seventhcitypress.com/privacy/">Privacy Policy</a>
             </nav>
           </div>
         </div>

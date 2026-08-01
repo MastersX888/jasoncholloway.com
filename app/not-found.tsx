@@ -17,7 +17,7 @@ export default function NotFound() {
         This frequency is not in the archive
       </h1>
       <p style={{ color: "var(--text-muted)", marginBottom: "2rem", fontStyle: "italic", fontFamily: "var(--font-display)" }}>
-        The page you&apos;re looking for doesn&apos;t exist — or has been scattered across seven cities.
+        The page you&apos;re looking for doesn&apos;t exist, or has been scattered across seven cities.
       </p>
       <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", justifyContent: "center", maxWidth: "600px" }}>
         <Link href="/" className="btn btn-outline">Return Home</Link>

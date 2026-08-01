@@ -1,0 +1,66 @@
+{
+  "boards": [
+    {
+      "name": "Masters X Trilogy — Books & Editions",
+      "pillar": "P1",
+      "description": "The complete Masters X Trilogy by Jason Carroll Holloway. Three novels of acoustic frequency, medieval manuscripts, and Kansas City conspiracy. Available in hardcover, paperback, and Kindle from Seventh City Press.",
+      "target_pin_count": 15,
+      "pin_types": ["cover_art", "format_comparison", "buy_links", "omnibus_announcement", "reader_quotes"]
+    },
+    {
+      "name": "Facts Behind the Fiction — Real History in Masters X",
+      "pillar": "P2",
+      "description": "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented and verifiable. SubTropolis is real. The Strahov Monastery is real. The Voynich Manuscript sits in Yale's Beinecke Library.",
+      "target_pin_count": 25,
+      "pin_types": ["location_photo", "manuscript_detail", "acoustic_research", "historical_fact", "field_note_teaser"]
+    },
+    {
+      "name": "The Real Kansas City — Locations from Masters X",
+      "pillar": "P3",
+      "description": "SubTropolis, Westport, West Bottoms, Quality Hill, Hotel Phillips — every real Kansas City location in the Masters X Trilogy, explored and annotated.",
+      "target_pin_count": 15,
+      "pin_types": ["location_photo", "map_pin", "architectural_detail", "historical_kc"]
+    },
+    {
+      "name": "Medieval Manuscripts & Esoteric Archives",
+      "pillar": "P4",
+      "description": "Illuminated manuscripts, sealed crypts, monastic libraries, and the lost knowledge traditions that fuel the Masters X Trilogy. From the Voynich Manuscript to the Codex Gigas.",
+      "target_pin_count": 20,
+      "pin_types": ["manuscript_image", "library_interior", "historical_detail", "typography_inspiration"]
+    },
+    {
+      "name": "Acoustic Science & Cymatics — The Frequency Is Real",
+      "pillar": "P5",
+      "description": "111 Hz standing waves. Chladni patterns. The Schumann resonance. Real acoustic science and archaeoacoustic research behind the Masters X Trilogy.",
+      "target_pin_count": 15,
+      "pin_types": ["cymatic_pattern", "acoustic_diagram", "research_visualization", "frequency_data"]
+    },
+    {
+      "name": "Seventh City Press — Author & Imprint",
+      "pillar": "P6",
+      "description": "Behind the scenes at Seventh City Press. Author updates, publication milestones, and the craft behind fiction built on real research.",
+      "target_pin_count": 10,
+      "pin_types": ["author_photo", "press_release", "milestone_announcement", "workspace_shot"]
+    },
+    {
+      "name": "John Hawkes — Innocence, Desire, and the Architecture of the Fall",
+      "pillar": "P7",
+      "description": "A critical and quantitative analysis of the repeating symbolic architectures across John Hawkes's novel corpus. From Seventh City Press.",
+      "target_pin_count": 8,
+      "pin_types": ["cover_art", "analytical_visualization", "quote_card", "academic_aesthetic"]
+    },
+    {
+      "name": "Reading Masters X — Guides, Maps & Companion Content",
+      "pillar": "P8",
+      "description": "Character maps, reading order guides, timeline infographics, and companion materials for readers of the Masters X Trilogy.",
+      "target_pin_count": 12,
+      "pin_types": ["infographic", "character_map", "reading_guide", "timeline", "analysis_chamber_preview"]
+    }
+  ],
+  "legacy_board_map": {
+    "Voynich Manuscript & Codices": "Medieval Manuscripts & Esoteric Archives",
+    "Prague & Strahov Library": "Medieval Manuscripts & Esoteric Archives",
+    "Literary Conspiracy Thrillers": "Masters X Trilogy — Books & Editions",
+    "Frequency & Esoteric History": "Acoustic Science & Cymatics — The Frequency Is Real"
+  }
+}

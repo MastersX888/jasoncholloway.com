@@ -85,7 +85,6 @@ export default function ContactForm() {
     color: "var(--text)",
     fontFamily: "var(--font-body)",
     transition: "border-color 0.25s",
-    outline: "none",
   };
 
   return (

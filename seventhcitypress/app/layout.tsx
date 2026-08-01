@@ -3,6 +3,10 @@ import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/fon
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import PressKitDownloadTracker from "@/components/analytics/PressKitDownloadTracker";
+import { imprintSiteGraph } from "@/lib/entities";
+import { DEFAULT_OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/metadata";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -41,33 +45,30 @@ export const metadata: Metadata = {
   },
   description:
     "Seventh City Press is an independent literary imprint founded by Jason Carroll Holloway. Publisher of the Masters X Trilogy and the John Hawkes critical monograph. Kansas City, Missouri.",
-  keywords: [
-    "Seventh City Press",
-    "Jason Carroll Holloway",
-    "Masters X Trilogy",
-    "independent literary press",
-    "Kansas City publisher",
-    "literary fiction",
-    "conspiracy thriller",
-    "John Hawkes",
-  ],
   authors: [{ name: "Jason Carroll Holloway" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://seventhcitypress.com",
-    siteName: "Seventh City Press",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     title: "Seventh City Press — Independent Literary Imprint",
     description:
       "Publisher of the Masters X Trilogy by Jason Carroll Holloway. Literary fiction where acoustic science, medieval manuscripts, and Kansas City's hidden geography converge.",
-    images: [{ url: "/og-image.png" }],
+    images: [DEFAULT_OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Seventh City Press — Independent Literary Imprint",
+    description:
+      "Publisher of the Masters X Trilogy by Jason Carroll Holloway. Literary fiction where acoustic science, medieval manuscripts, and Kansas City's hidden geography converge.",
+    images: [DEFAULT_OG_IMAGE.url],
   },
-  metadataBase: new URL("https://seventhcitypress.com"),
+  metadataBase: new URL(SITE_URL),
   verification: {
     yandex: "35271039e1472ca8",
+    // DRAFT — needs Jason: paste the token from Search Console → Add property →
+    // HTML tag, or delete this line if the domain is already verified by DNS TXT.
+    // google: "",
   },
 };
 
@@ -83,51 +84,19 @@ export default function RootLayout({
       <head>
         <meta name="p:domain_verify" content="b66427ab00203a09c3f7713f946ee71a" />
         <meta name="yandex-verification" content="35271039e1472ca8" />
+        {/*
+          Plain <script>, not next/script: `afterInteractive` injects after
+          hydration and never appears in the static export, which is how this
+          site's Book and Person markup went missing from every crawl.
+        */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [
-                {
-                  "@type": "WebSite",
-                  "@id": "https://seventhcitypress.com/#website",
-                  url: "https://seventhcitypress.com/",
-                  name: "Seventh City Press",
-                  publisher: { "@id": "https://seventhcitypress.com/#organization" },
-                },
-                {
-                  "@type": "Organization",
-                  "@id": "https://seventhcitypress.com/#organization",
-                  name: "Seventh City Press",
-                  url: "https://seventhcitypress.com/",
-                  logo: {
-                    "@type": "ImageObject",
-                    url: "https://seventhcitypress.com/og-image.png",
-                  },
-                  founder: { "@id": "https://jasoncholloway.com/#person" },
-                  location: {
-                    "@type": "Place",
-                    address: {
-                      "@type": "PostalAddress",
-                      addressLocality: "Kansas City",
-                      addressRegion: "MO",
-                      addressCountry: "US",
-                    },
-                  },
-                  contactPoint: {
-                    "@type": "ContactPoint",
-                    contactType: "Press",
-                    email: "press@seventhcitypress.com",
-                  },
-                  sameAs: ["https://jasoncholloway.com/"],
-                },
-              ],
-            }),
-          }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(imprintSiteGraph) }}
         />
       </head>
       <body>
+        <GoogleAnalytics />
+        <PressKitDownloadTracker />
         <div className="bg-sacred-geometry" />
         <Header />
         <main>{children}</main>

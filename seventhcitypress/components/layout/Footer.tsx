@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -12,9 +14,12 @@ export default function Footer() {
               intellectual work — novels that think, and criticism that speaks.
               Kansas City, Missouri.
             </p>
-            <p style={{ fontSize: "0.82rem", color: "var(--text-faint)" }}>
+            <p className="footer-faint" style={{ fontSize: "0.82rem" }}>
               press@seventhcitypress.com
             </p>
+            <div style={{ marginTop: "1.25rem" }}>
+              <SocialLinks />
+            </div>
           </div>
 
           <div>
@@ -35,6 +40,7 @@ export default function Footer() {
             <nav className="footer-links">
               <a href="/">Press Home</a>
               <a href="/contact/">Contact</a>
+              <a href="/privacy/">Privacy Policy</a>
               <a href="/press-kit/Masters_X_Press_Kit.pdf" download>Download Press Kit</a>
               <a href="https://jasoncholloway.com/about/">About the Author</a>
               <a href="https://jasoncholloway.com/chamber/research-archive/">Research Archive</a>
@@ -44,7 +50,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <span>© {currentYear} Seventh City Press LLC · Jason Carroll Holloway · All rights reserved</span>
-          <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem", color: "var(--text-faint)" }}>
+          <span className="footer-faint" style={{ fontFamily: "var(--font-mono)", fontSize: "0.72rem" }}>
             f = 111.2 Hz
           </span>
         </div>

@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/chamber/tremor-analysis/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/contact/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
     { url: `${baseUrl}/returns/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
-    { url: `${baseUrl}/field-notes/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/field-notes/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/sitemap/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.5 },
   ];
 

@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague",
   description:
     "The Strahov Monastery Library in Prague is open to visitors and considered one of the most beautiful baroque library interiors in the world. The Premonstratensian order has occupied the site since 1143. The crypt beneath the Theological Hall is real. What the trilogy found there is fiction.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/strahov-monastery/" },
-  openGraph: {
-    title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague | Field Notes",
-    description:
-      "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings frescoed by Siard Nosecký. And beneath the Theological Hall, in the trilogy's fiction, a chamber the monks kept sealed since the thirteenth century.",
-    url: "https://jasoncholloway.com/field-notes/strahov-monastery/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall",
-      },
-    ],
+  socialTitle: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague | Field Notes",
+  socialDescription:
+    "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings frescoed by Siard Nosecký. And beneath the Theological Hall, in the trilogy's fiction, a chamber the monks kept sealed since the thirteenth century.",
+  path: "/field-notes/strahov-monastery/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall",
   },
-};
+});
 
 const faqs = [
   {

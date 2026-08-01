@@ -1,22 +1,23 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { themes, fieldNotes } from "@/lib/data/fieldNotes";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Field Notes — The Real History Beneath Masters X",
   description:
     "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented. SubTropolis, the Voynich Manuscript, the Ars Notoria, 111 Hz archaeoacoustics, the Strahov Monastery — read the real history that the fiction is built on.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/field-notes/",
+  socialTitle: "Field Notes — The Real History Beneath Masters X",
+  socialDescription:
+    "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented. SubTropolis, the Voynich Manuscript, the Ars Notoria, 111 Hz archaeoacoustics, the Strahov Monastery — read the real history.",
+  path: "/field-notes/",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/hub.png",
+    width: 1024,
+    height: 1024,
+    alt: "Field Notes — Real History Beneath Masters X, by Jason Carroll Holloway",
   },
-  openGraph: {
-    title: "Field Notes — The Real History Beneath Masters X",
-    description:
-      "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented. SubTropolis, the Voynich Manuscript, the Ars Notoria, 111 Hz archaeoacoustics, the Strahov Monastery — read the real history.",
-    url: "https://jasoncholloway.com/field-notes/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/hub.png", width: 1200, height: 630, alt: "Field Notes — Real History Beneath Masters X, by Jason Carroll Holloway" }],
-  },
-};
+});
 
 export default function FieldNotesHub() {
   const allNotes = fieldNotes;

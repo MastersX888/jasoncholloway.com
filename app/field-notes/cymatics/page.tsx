@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Cymatics: Sound You Can See",
   description:
     "Cymatics is the study of visible sound — the geometric patterns that sound waves create in physical matter at specific frequencies. Ernst Chladni first documented the phenomenon in the eighteenth century. Hans Jenny extended it in the twentieth. The patterns are real, reproducible, and geometrically striking.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/cymatics/" },
-  openGraph: {
-    title: "Cymatics: Sound You Can See | Field Notes",
-    description:
-      "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge from nowhere — hexagons, stars, mandalas. Ernst Chladni documented it in 1787. The physics hasn't changed.",
-    url: "https://jasoncholloway.com/field-notes/cymatics/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/cymatics.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate",
-      },
-    ],
+  socialTitle: "Cymatics: Sound You Can See | Field Notes",
+  socialDescription:
+    "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge from nowhere — hexagons, stars, mandalas. Ernst Chladni documented it in 1787. The physics hasn't changed.",
+  path: "/field-notes/cymatics/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/cymatics.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate",
   },
-};
+});
 
 const faqs = [
   {

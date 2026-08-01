@@ -7,6 +7,10 @@ export const AUTHOR_GOODREADS_URL =
 export const AUTHOR_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140275300";
 /** Wikidata item for the Masters X Trilogy itself (distinct from the author item). */
 export const SERIES_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140276114";
+/** Open Library author — merge #1584949 resolved 2026-07-30. */
+export const AUTHOR_OPEN_LIBRARY_ID = "OL16482975A";
+export const AUTHOR_OPEN_LIBRARY_URL =
+  "https://openlibrary.org/authors/OL16482975A/Jason_Carroll_Holloway";
 export const IMPRINT_URL = "https://seventhcitypress.com/";
 export const AUTHOR_AMAZON_STORE_URL =
   "https://www.amazon.com/stores/Jason-Holloway/author/B08P54N4XZ";
@@ -36,10 +40,15 @@ export const imprintSameAs = [
   IMPRINT_PINTEREST_URL,
 ] as const;
 
-/** schema.org Person.sameAs — canonical order for JSON-LD */
+/**
+ * schema.org Person.sameAs — canonical order for JSON-LD.
+ * Person only: URLs that identify Jason Carroll Holloway.
+ * Series Wikidata (Q140276114) belongs on BookSeries.sameAs in bookSchema.ts — not here.
+ */
 export const authorSameAs = [
   AUTHOR_WIKIDATA_URL,
   AUTHOR_ISNI_URL,
+  AUTHOR_OPEN_LIBRARY_URL,
   AUTHOR_GOODREADS_URL,
   AUTHOR_AMAZON_STORE_URL,
   AUTHOR_EVERAND_URL,

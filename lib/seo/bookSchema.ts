@@ -16,6 +16,7 @@ import {
   SERIES_WIKIDATA_URL,
 } from "@/lib/data/authorAuthority";
 import type { Book } from "@/lib/data/books";
+import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 
 export const SITE_ORIGIN = "https://jasoncholloway.com";
 
@@ -159,6 +160,25 @@ export function buildBookGraph(book: Book, options: BookGraphOptions) {
   }
 
   if (book.isbn_ebook) {
+    const ebookActions = [
+      readAction({
+        url: googlePlayIsbnUrl(book.isbn_ebook),
+        price: book.price_ebook,
+        platforms: APP_PLATFORMS,
+        sellerIsImprint: false,
+      }),
+    ];
+    if (book.asin_ebook) {
+      ebookActions.unshift(
+        readAction({
+          url: `https://www.amazon.com/dp/${book.asin_ebook}`,
+          price: book.price_ebook,
+          platforms: APP_PLATFORMS,
+          sellerIsImprint: false,
+        }),
+      );
+    }
+
     workExample.push({
       "@type": "Book",
       "@id": `${pageUrl}#ebook`,
@@ -181,14 +201,9 @@ export function buildBookGraph(book: Book, options: BookGraphOptions) {
               propertyID: "ASIN",
               value: book.asin_ebook,
             },
-            potentialAction: readAction({
-              url: `https://www.amazon.com/dp/${book.asin_ebook}`,
-              price: book.price_ebook,
-              platforms: APP_PLATFORMS,
-              sellerIsImprint: false,
-            }),
           }
         : {}),
+      potentialAction: ebookActions.length === 1 ? ebookActions[0] : ebookActions,
     });
   }
 

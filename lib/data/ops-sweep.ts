@@ -489,7 +489,7 @@ export const platforms: PlatformNode[] = [
   { id: 'amz',  name: 'Amazon KDP',             type: '3 Kindle ($6.99 ea)',      status: 'live',    note: 'Trilogy only; no omnibus on Amazon', role: 'publishing' },
   { id: 'is',   name: 'IngramSpark',            type: 'Print + EPUB + Direct',    status: 'live',    note: 'Primary print distribution',  role: 'publishing' },
   { id: 'bs',   name: 'Bookshop.org',           type: 'Affiliate 126177',         status: 'live',    note: 'Curated list active',         role: 'marketing' },
-  { id: 'gp',   name: 'Google Play Books',      type: '4 ebooks uploaded',        status: 'pending', note: 'Pending account review',      role: 'publishing' },
+  { id: 'gp',   name: 'Google Play Books',      type: '4 ebooks live',            status: 'live',    note: 'Trilogy + Hawkes · Google Books indexed', role: 'publishing' },
   { id: 'gmc',  name: 'Google Merchant Center',  type: '10 print SKUs',           status: 'live',    note: '10/10 approved — acct 5822707674', role: 'marketing' },
   { id: 'gsc',  name: 'Google Search Console',   type: 'Author domain active',    status: 'live',    role: 'authority' },
   { id: 'gsc2', name: 'GSC (Imprint)',           type: 'seventhcitypress.com',    status: 'open',    note: 'Verification tag wired — needs token + deploy', role: 'authority' },

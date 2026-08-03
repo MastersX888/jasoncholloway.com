@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge",
+export const metadata: Metadata = buildMetadata({
+  title: "The Ars Notoria: Medieval Notory Art & Cognitive Tech",
   description:
-    "The Ars Notoria is a real thirteenth-century manuscript held in the British Library and the Bibliothèque nationale de France. It promises, through structured visual contemplation and prayer, the rapid acquisition of the seven liberal arts. Most scholars call it superstition. A minority call it cognitive technology.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/ars-notoria/" },
-  openGraph: {
-    title: "The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge | Field Notes",
-    description:
-      "A real thirteenth-century manuscript promising the rapid acquisition of knowledge through geometric figures called notae. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
-    url: "https://jasoncholloway.com/field-notes/ars-notoria/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria",
-      },
-    ],
+    "A thirteenth-century Solomonic manuscript of memory and eloquence held in London and Paris — not magic, but a protocol. The operational manual beneath Masters X.",
+  socialTitle: "The Ars Notoria: Medieval Notory Art & Cognitive Tech | Field Notes",
+  socialDescription:
+    "A real thirteenth-century manuscript promising rapid acquisition of knowledge through geometric figures called notae. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
+  path: "/field-notes/ars-notoria/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria",
   },
-};
+});
 
 const faqs = [
   {
@@ -43,7 +40,7 @@ const faqs = [
 
 const related = [
   { href: "/field-notes/voynich-manuscript", label: "The Voynich Manuscript", theme: "The Manuscripts" },
-  { href: "/field-notes/codex-gigas", label: "The Codex Gigas", theme: "The Manuscripts" },
+  { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
   { href: "/field-notes/strahov-monastery", label: "The Strahov Library", theme: "The Sites" },
 ];
 
@@ -51,8 +48,8 @@ export default function ArsNotoriaNote() {
   return (
     <FieldNoteLayout
       slug="ars-notoria"
-      title="The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge"
-      titleTag="The Ars Notoria: The Medieval 'Notory Art' That Promised Instant Knowledge"
+      title="The Ars Notoria: The Medieval Notory Art"
+      titleTag="The Ars Notoria: Medieval Notory Art & Cognitive Tech"
       theme="The Manuscripts"
       lede="The Ars Notoria is a real thirteenth-century manuscript, present in institutional collections worldwide. It belongs to the Solomonic tradition of magical texts and promises, through structured visual contemplation and prayer, the rapid acquisition of knowledge, memory, and eloquence. Most scholars have treated it as superstition. A minority have treated it as cognitive technology."
       record={

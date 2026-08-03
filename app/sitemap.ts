@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { books } from "@/lib/data/books";
+import { fieldNotes } from "@/lib/data/fieldNotes";
 
 export const dynamic = "force-static";
 
@@ -26,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/chamber/tremor-analysis/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/contact/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.6 },
     { url: `${baseUrl}/returns/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.5 },
-    { url: `${baseUrl}/field-notes/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/field-notes/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/sitemap/`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.5 },
   ];
 
@@ -38,24 +39,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const fieldNoteSlugs = [
-    "subtropolis",
-    "111-hz",
-    "voynich-manuscript",
-    "ars-notoria",
-    "strahov-monastery",
-    "codex-gigas",
-    "kansas-city-locations",
-    "oscar-01",
-    "u2-test-pilots",
-    "cymatics",
-    "gospel-of-thomas",
-    "meramec-caverns",
-  ];
-  const fieldNoteRoutes: MetadataRoute.Sitemap = fieldNoteSlugs.map((slug) => ({
-    url: `${baseUrl}/field-notes/${slug}/`,
+  // Derived from fieldNotes.ts so hub ↔ sitemap stay in lockstep (12 essays).
+  const fieldNoteRoutes: MetadataRoute.Sitemap = fieldNotes.map((note) => ({
+    url: `${baseUrl}/field-notes/${note.slug}/`,
     lastModified: new Date(),
-    changeFrequency: "weekly",
+    changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 

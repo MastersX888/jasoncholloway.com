@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Devil's Bible: Why the Codex Gigas Was Made in Bohemia — and What Else Was",
+export const metadata: Metadata = buildMetadata({
+  title: "Codex Gigas: The Devil's Bible Made in Bohemia",
   description:
-    "The Codex Gigas — the Devil's Bible — is the largest surviving medieval manuscript in the world. Made in thirteenth-century Bohemia, owned by Emperor Rudolf II, seized by Sweden in 1648. The trilogy's prologue begins in Bohemia, 1267, forty years after its completion.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/codex-gigas/" },
-  openGraph: {
-    title: "The Devil's Bible: Why the Codex Gigas Was Made in Bohemia — and What Else Was | Field Notes",
-    description:
-      "92 cm tall, 75 kg, made by one monk over decades. Emperor Rudolf II owned it. The Swedish army took it in 1648. High-res scans are at codexgigas.se. The trilogy's prologue starts forty years after its completion.",
-    url: "https://jasoncholloway.com/field-notes/codex-gigas/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/codex-gigas.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: the full-page Devil illustration from the Codex Gigas",
-      },
-    ],
+    "The world's largest medieval manuscript — Bohemia, Rudolf II, Sweden 1648. Brother Aldric's story in Masters X begins forty years after its completion.",
+  socialTitle: "Codex Gigas: The Devil's Bible Made in Bohemia | Field Notes",
+  socialDescription:
+    "92 cm tall, 75 kg, made by one monk over decades. Rudolf II owned it. Sweden took it in 1648. High-res scans at codexgigas.se. The trilogy prologue starts forty years later.",
+  path: "/field-notes/codex-gigas/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/codex-gigas.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: the full-page Devil illustration from the Codex Gigas",
   },
-};
+});
 
 const faqs = [
   {
@@ -51,8 +48,8 @@ export default function CodexGigasNote() {
   return (
     <FieldNoteLayout
       slug="codex-gigas"
-      title="The Devil's Bible: Why the Codex Gigas Was Made in Bohemia — and What Else Was"
-      titleTag="The Devil's Bible: Why the Codex Gigas Was Made in Bohemia — and What Else Was"
+      title="Codex Gigas: The Devil's Bible Made in Bohemia"
+      titleTag="Codex Gigas: The Devil's Bible Made in Bohemia"
       theme="The Manuscripts"
       lede="The Codex Gigas — the Devil's Bible — is the largest surviving medieval manuscript in the world. It was made in early thirteenth-century Bohemia, reportedly by a single monk. Emperor Rudolf II owned it. The Swedish army took it from Prague in 1648. It now sits in the National Library of Sweden. The trilogy's prologue begins in Bohemia, 1267, forty years after its completion."
       record={

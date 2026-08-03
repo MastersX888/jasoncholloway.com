@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Cymatics: Sound You Can See",
+export const metadata: Metadata = buildMetadata({
+  title: "Cymatics: Sound You Can See — Chladni Patterns",
   description:
-    "Cymatics is the study of visible sound — the geometric patterns that sound waves create in physical matter at specific frequencies. Ernst Chladni first documented the phenomenon in the eighteenth century. Hans Jenny extended it in the twentieth. The patterns are real, reproducible, and geometrically striking.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/cymatics/" },
-  openGraph: {
-    title: "Cymatics: Sound You Can See | Field Notes",
-    description:
-      "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge from nowhere — hexagons, stars, mandalas. Ernst Chladni documented it in 1787. The physics hasn't changed.",
-    url: "https://jasoncholloway.com/field-notes/cymatics/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/cymatics.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate",
-      },
-    ],
+    "Visible sound patterns in sand and water — Chladni figures, Hans Jenny, and the five-sided wave the Masters X Trilogy places in red laterite clay.",
+  socialTitle: "Cymatics: Sound You Can See — Chladni Patterns | Field Notes",
+  socialDescription:
+    "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge — hexagons, stars, mandalas. Ernst Chladni documented it in 1787.",
+  path: "/field-notes/cymatics/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/cymatics.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate",
   },
-};
+});
 
 const faqs = [
   {
@@ -43,8 +40,8 @@ const faqs = [
 
 const related = [
   { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
-  { href: "/field-notes/subtropolis", label: "SubTropolis, Kansas City", theme: "Beneath Kansas City" },
-  { href: "/field-notes/gospel-of-thomas", label: "Gospel of Thomas", theme: "The Manuscripts" },
+  { href: "/field-notes/strahov-monastery", label: "The Strahov Library, Prague", theme: "The Sites" },
+  { href: "/field-notes/u2-test-pilots", label: "U-2 Test Pilots at 70,000 Feet", theme: "The Frequency" },
 ];
 
 export default function CymaticsNote() {
@@ -52,7 +49,7 @@ export default function CymaticsNote() {
     <FieldNoteLayout
       slug="cymatics"
       title="Cymatics: Sound You Can See"
-      titleTag="Cymatics: Sound You Can See"
+      titleTag="Cymatics: Sound You Can See — Chladni Patterns"
       theme="The Frequency"
       lede="Cymatics is the study of visible sound — the patterns that sound waves create in physical matter when vibrated at specific frequencies. Ernst Chladni, a German physicist, first documented the phenomenon in the eighteenth century using sand on metal plates. Hans Jenny extended the research in the twentieth century using liquids and fine powders. The patterns are real, reproducible, and geometrically striking. The pentagon pattern in the trilogy is the fictional detail; the physics is not."
       record={

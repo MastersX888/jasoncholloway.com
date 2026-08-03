@@ -1,0 +1,20 @@
+# core.autocrlf=true is set globally on the authoring workstation, and git's
+# content heuristic misclassifies the generated press-kit PDFs as text (they
+# contain no NUL bytes early in the file). Without these rules a Windows
+# checkout rewrites LF to CRLF inside the binary and corrupts the download.
+*.pdf   binary
+*.epub  binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.webp  binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary
+*.otf   binary
+*.mp3   binary
+*.mp4   binary
+*.wav   binary

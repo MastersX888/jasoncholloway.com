@@ -1,0 +1,226 @@
+[
+  {
+    "entity": "Town Square",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3070|B1:3569"
+  },
+  {
+    "entity": "The Prague",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3192|B2:6892"
+  },
+  {
+    "entity": "The Latin",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3341|B2:898"
+  },
+  {
+    "entity": "With Andrew",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3378|B1:3776"
+  },
+  {
+    "entity": "Third Way",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3700|B1:3790"
+  },
+  {
+    "entity": "Theological Hall",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3710|B2:1095"
+  },
+  {
+    "entity": "Nadia Masters",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:4612|B1:4615"
+  },
+  {
+    "entity": "Archaeological Method",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:93|B2:638"
+  },
+  {
+    "entity": "The Book",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:128|B2:1048"
+  },
+  {
+    "entity": "The Wisdom",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:270|B2:290"
+  },
+  {
+    "entity": "Protestant Bible",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:271|B2:378"
+  },
+  {
+    "entity": "No Dr",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "street;proper_noun_phrase",
+    "sample_lines": "B2:1699|B2:1699"
+  },
+  {
+    "entity": "The Iceland",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:1765|B3:4594"
+  },
+  {
+    "entity": "The Merkabah",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:2007|B2:4610"
+  },
+  {
+    "entity": "The Christians",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:2041|B2:4554"
+  },
+  {
+    "entity": "The Cognigenics",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:3111|B3:3141"
+  },
+  {
+    "entity": "The Monroe Institute",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:3338|B3:3142"
+  },
+  {
+    "entity": "47 PM Kansas City",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "address",
+    "sample_lines": "B2:3408|B3:1884"
+  },
+  {
+    "entity": "Monroe Institute",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:3589|B3:2916"
+  },
+  {
+    "entity": "Not How",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:3748|B2:3748"
+  },
+  {
+    "entity": "2004 Land Cruiser",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "address",
+    "sample_lines": "B2:4187|B2:6185"
+  },
+  {
+    "entity": "Ama Ata Asante",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:4224|B2:4465"
+  },
+  {
+    "entity": "The Ashanti",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:4553|B3:5058"
+  },
+  {
+    "entity": "00 PM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2;3",
+    "categories": "address",
+    "sample_lines": "B2:4675|B3:1116"
+  },
+  {
+    "entity": "Commerce Committee",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:4894|B2:4959"
+  },
+  {
+    "entity": "Reagan National",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5052|B2:6793"
+  },
+  {
+    "entity": "Sarah Chen",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5448|B2:6517"
+  },
+  {
+    "entity": "The Stanford",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5486|B2:6542"
+  }
+]

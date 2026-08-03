@@ -1,0 +1,169 @@
+[
+  {
+    "isbn": "9798256008048",
+    "label": "Vol I PB",
+    "kind": "pdf",
+    "italic": 0,
+    "roman": 12,
+    "not_found": 0,
+    "pages": 185,
+    "pass": false,
+    "roman_samples": [
+      "Always know your exits.",
+      "Don't go alone,",
+      "First flight. 1956. I saw things from up there. -W",
+      "Just call her,"
+    ],
+    "italic_samples": []
+  },
+  {
+    "isbn": "9798256009953",
+    "label": "Vol II PB",
+    "kind": "pdf",
+    "italic": 12,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 265,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. Seventh volume. Final entry:",
+      "The Moleskine. Eighth volume. First entry:"
+    ]
+  },
+  {
+    "isbn": "9798256010072",
+    "label": "Vol III PB",
+    "kind": "pdf",
+    "italic": 11,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 205,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. The tenth. First Kansas City entry:",
+      "you cannot go back."
+    ]
+  },
+  {
+    "isbn": "9798295800801",
+    "label": "Vol I HC",
+    "kind": "pdf",
+    "italic": 12,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 159,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "Always know your exits.",
+      "Don't go alone,"
+    ]
+  },
+  {
+    "isbn": "9798295812675",
+    "label": "Vol II HC",
+    "kind": "pdf",
+    "italic": 12,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 225,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. Seventh volume. Final entry:",
+      "The Moleskine. Eighth volume. First entry:"
+    ]
+  },
+  {
+    "isbn": "9798295812705",
+    "label": "Vol III HC",
+    "kind": "pdf",
+    "italic": 11,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 177,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. The tenth. First Kansas City entry:",
+      "you cannot go back."
+    ]
+  },
+  {
+    "isbn": "9798256072704",
+    "label": "Omnibus PB",
+    "kind": "pdf",
+    "italic": 35,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 732,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "Always know your exits.",
+      "Don't go alone,"
+    ]
+  },
+  {
+    "isbn": "9798295884412",
+    "label": "Omnibus HC",
+    "kind": "pdf",
+    "italic": 35,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 684,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "Always know your exits.",
+      "Don't go alone,"
+    ]
+  },
+  {
+    "isbn": "9798256008819",
+    "label": "Vol I EPUB",
+    "kind": "epub",
+    "italic": 12,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 0,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "Always know your exits.",
+      "Don't go alone,"
+    ]
+  },
+  {
+    "isbn": "9798256009625",
+    "label": "Vol II EPUB",
+    "kind": "epub",
+    "italic": 12,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 0,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. Seventh volume. Final entry:",
+      "The Moleskine. Eighth volume. First entry:"
+    ]
+  },
+  {
+    "isbn": "9798256009809",
+    "label": "Vol III EPUB",
+    "kind": "epub",
+    "italic": 11,
+    "roman": 0,
+    "not_found": 0,
+    "pages": 0,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
+      "The Moleskine. The tenth. First Kansas City entry:",
+      "you cannot go back."
+    ]
+  }
+]

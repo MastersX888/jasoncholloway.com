@@ -1,0 +1,16 @@
+{
+  "updated": "2026-07-30",
+  "source": "content/social/CAPTION_MANIFEST.json",
+  "v2_campaign": {
+    "status": "complete",
+    "footprint": "35/35 live"
+  },
+  "platform_status": {
+    "instagram_v2": "7/7 live",
+    "x": "7/7 v2 live",
+    "bluesky_author": "7/7 live",
+    "bluesky_imprint": "7/7 live",
+    "pinterest": "7/7 pins live"
+  },
+  "wrapup": "scratch/ops_reports/SOCIAL_WRAPUP_PLAN_2026-07-30.md"
+}

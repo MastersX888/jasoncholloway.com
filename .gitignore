@@ -41,6 +41,9 @@ scripts/email-mcp-secrets.local.txt
 *.tsbuildinfo
 next-env.d.ts
 
+# Ops dashboard — separate private repo; deploys via its own Worker, not Pages build
+/groundswell-monitor/
+
 # Large Exports
 Jason_Carroll_Holloway_Final_Export/
 website_unzipped/
@@ -50,3 +53,16 @@ business_cards/
 *.zip
 *_out.txt
 *.py
+
+# Web-deliverable public assets — these MUST be tracked or they 404 in production.
+# Cloudflare Pages builds from git, so anything untracked never reaches the deploy.
+# Scoped to the two sites' `public/` download directories only; print-production
+# binaries (production_staging/, _covers/, MASTER_UPLOAD_FOLDER) stay ignored.
+!public/press-kit/*.pdf
+!public/downloads/*.pdf
+!public/downloads/*.epub
+!seventhcitypress/public/press-kit/*.pdf
+
+# Not linked from any page and byte-identical to the tracked author-site copy;
+# needs an explicit publish decision before it ships.
+seventhcitypress/public/press-kit/PressKit_Agent_Prompt.pdf

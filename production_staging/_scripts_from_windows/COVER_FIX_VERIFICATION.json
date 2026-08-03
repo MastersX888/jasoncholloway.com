@@ -1,0 +1,67 @@
+{
+  "hc": {
+    "images_processed": 3,
+    "images_skipped": 1,
+    "before_tac": [
+      {
+        "name": "/FormXob.41c61c55f15e524f130e672d4985b23d",
+        "mean": 277.4409484863281,
+        "max": 320.0,
+        "pct_over_240": 93.1500070728261
+      },
+      {
+        "name": "/FormXob.61bdcf46be7d3230bf6caa9018438644",
+        "mean": 266.7953186035156,
+        "max": 318.431396484375,
+        "pct_over_240": 87.05664124451117
+      },
+      {
+        "name": "/FormXob.9a3646a699286bf106faa4af541ec20c",
+        "mean": 289.4012756347656,
+        "max": 320.0,
+        "pct_over_240": 94.99348315382929
+      }
+    ],
+    "after_tac": [
+      {
+        "name": "/FormXob.41c61c55f15e524f130e672d4985b23d",
+        "mean": 219.41177368164062,
+        "max": 225.49021911621094,
+        "pct_over_240": 0.0
+      },
+      {
+        "name": "/FormXob.61bdcf46be7d3230bf6caa9018438644",
+        "mean": 220.84474182128906,
+        "max": 225.49021911621094,
+        "pct_over_240": 0.0
+      },
+      {
+        "name": "/FormXob.9a3646a699286bf106faa4af541ec20c",
+        "mean": 222.71697998046875,
+        "max": 225.49021911621094,
+        "pct_over_240": 0.0
+      }
+    ]
+  },
+  "pb": {
+    "images_processed": 1,
+    "images_skipped": 1,
+    "before_tac": [
+      {
+        "name": "/FormXob.79679ceee6440f58a182c52df7f5c7ef",
+        "mean": 283.3175048828125,
+        "max": 317.2549133300781,
+        "pct_over_240": 90.98667872212177
+      }
+    ],
+    "after_tac": [
+      {
+        "name": "/FormXob.79679ceee6440f58a182c52df7f5c7ef",
+        "mean": 220.0680389404297,
+        "max": 225.49021911621094,
+        "pct_over_240": 0.0
+      }
+    ]
+  },
+  "status": "COMPLETE"
+}

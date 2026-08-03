@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It'",
+export const metadata: Metadata = buildMetadata({
+  title: "Gospel of Thomas Saying 113: Kingdom Spread on Earth",
   description:
-    "The Gospel of Thomas is a real first-century text discovered at Nag Hammadi, Egypt in 1945. It contains 114 sayings attributed to Jesus, with no narrative, no miracles, no resurrection — only words. Saying 113 is the sentence Volume III of the Masters X Trilogy is built on.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/gospel-of-thomas/" },
-  openGraph: {
-    title: "Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It' | Field Notes",
-    description:
-      "Discovered at Nag Hammadi, Egypt, 1945. 114 sayings. No miracles, no resurrection. Saying 113: the kingdom is already here, spread upon the earth — and people don't see it. Volume III of Masters X is built on this sentence.",
-    url: "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: Coptic manuscript page from the Nag Hammadi library",
-      },
-    ],
+    "Nag Hammadi, 1945. Saying 113 — the kingdom is spread upon the earth, and people do not see it. The sentence Volume III of Masters X is built on.",
+  socialTitle: "Gospel of Thomas Saying 113: Kingdom Spread on Earth | Field Notes",
+  socialDescription:
+    "Discovered at Nag Hammadi, Egypt, 1945. 114 sayings. No miracles, no resurrection. Saying 113: the kingdom is already here — and people don't see it. Volume III is built on this sentence.",
+  path: "/field-notes/gospel-of-thomas/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: Coptic manuscript page from the Nag Hammadi library",
   },
-};
+});
 
 const faqs = [
   {
@@ -44,15 +41,15 @@ const faqs = [
 const related = [
   { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
   { href: "/field-notes/ars-notoria", label: "The Ars Notoria", theme: "The Manuscripts" },
-  { href: "/field-notes/voynich-manuscript", label: "The Voynich Manuscript", theme: "The Manuscripts" },
+  { href: "/field-notes/cymatics", label: "Cymatics: Sound You Can See", theme: "The Frequency" },
 ];
 
 export default function GospelOfThomasNote() {
   return (
     <FieldNoteLayout
       slug="gospel-of-thomas"
-      title="Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It'"
-      titleTag="Saying 113: 'The Kingdom Is Spread Upon the Earth, and People Do Not See It'"
+      title="Saying 113: 'The Kingdom Is Spread Upon the Earth'"
+      titleTag="Gospel of Thomas Saying 113: Kingdom Spread on Earth"
       theme="The Manuscripts"
       lede="The Gospel of Thomas is a real first-century text discovered at Nag Hammadi, Egypt in 1945. It contains 114 sayings attributed to Jesus, with no narrative, no miracles, no resurrection — only words. Saying 113 reads: 'The kingdom of God is spread upon the earth, and people do not see it.' Volume III of the Masters X Trilogy is built on this sentence."
       record={

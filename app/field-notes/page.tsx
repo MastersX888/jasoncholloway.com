@@ -1,22 +1,24 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import NewsletterForm from "@/components/layout/NewsletterForm";
 import { themes, fieldNotes } from "@/lib/data/fieldNotes";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Field Notes — The Real History Beneath Masters X",
   description:
-    "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented. SubTropolis, the Voynich Manuscript, the Ars Notoria, 111 Hz archaeoacoustics, the Strahov Monastery — read the real history that the fiction is built on.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/field-notes/",
+    "Documented places, manuscripts, and phenomena beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Real history that opens onto fiction.",
+  socialTitle: "Field Notes — The Real History Beneath Masters X",
+  socialDescription:
+    "Documented places, manuscripts, and phenomena beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Real history that opens onto fiction.",
+  path: "/field-notes/",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/hub.png",
+    width: 1024,
+    height: 1024,
+    alt: "Field Notes — Real History Beneath Masters X, by Jason Carroll Holloway",
   },
-  openGraph: {
-    title: "Field Notes — The Real History Beneath Masters X",
-    description:
-      "Every place, manuscript, and phenomenon in the Masters X Trilogy is documented. SubTropolis, the Voynich Manuscript, the Ars Notoria, 111 Hz archaeoacoustics, the Strahov Monastery — read the real history.",
-    url: "https://jasoncholloway.com/field-notes/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/hub.png", width: 1200, height: 630, alt: "Field Notes — Real History Beneath Masters X, by Jason Carroll Holloway" }],
-  },
-};
+});
 
 export default function FieldNotesHub() {
   const allNotes = fieldNotes;
@@ -93,7 +95,20 @@ export default function FieldNotesHub() {
         </section>
       ))}
 
-      {/* CTA */}
+      {/* Soft CTA — free chapters */}
+      <section className="section" style={{ borderTop: "1px solid var(--border-faint)" }}>
+        <div className="container" style={{ maxWidth: "560px" }}>
+          <h2 className="display-md" style={{ marginBottom: "0.75rem", textAlign: "center" }}>
+            Opening chapters of Volume I are free.
+          </h2>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.75, marginBottom: "1.5rem", textAlign: "center" }}>
+            Same research thread, fictional form — delivered by email. If a Field Note stuck with you, start where the maps go quiet.
+          </p>
+          <NewsletterForm compact={true} />
+        </div>
+      </section>
+
+      {/* Series bridge */}
       <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
         <div className="container" style={{ maxWidth: "700px", textAlign: "center" }}>
           <h2 className="display-md" style={{ marginBottom: "1rem" }}>The fiction is built on all of this.</h2>

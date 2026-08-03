@@ -161,8 +161,8 @@ export default function FieldNoteLayout({
                 <cite>— {excerpt.attribution}</cite>
               </blockquote>
 
-              {/* CTA */}
-              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "2rem 0 3rem" }}>
+              {/* Soft series bridge + volume CTA */}
+              <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", margin: "2rem 0 1rem" }}>
                 <Link href={bookHref} className="btn btn-gold">
                   Read the Novel →
                 </Link>
@@ -170,11 +170,18 @@ export default function FieldNoteLayout({
                   View the Trilogy
                 </Link>
               </div>
+              <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.7, marginBottom: "2rem", maxWidth: "52ch" }}>
+                If this place stuck with you, the trilogy starts where the maps go quiet — same research thread, fictional form.
+              </p>
 
+              {/* One soft ask: free Volume I chapters via newsletter → /chapters-sent/ */}
               <div style={{ background: "var(--bg-raised)", padding: "1.5rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)", marginBottom: "3rem" }}>
-                <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", marginBottom: "1rem" }}>
-                  Get the opening chapters free.
+                <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.05rem", marginBottom: "0.5rem" }}>
+                  Opening chapters of Volume I are free.
                 </h4>
+                <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: 1.65, marginBottom: "1rem" }}>
+                  Same documented history, in novel form — delivered by email. No spam; unsubscribe anytime.
+                </p>
                 <NewsletterForm compact={true} />
               </div>
 

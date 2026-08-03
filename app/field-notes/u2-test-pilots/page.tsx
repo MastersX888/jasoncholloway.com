@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "What Test Pilots Saw from 70,000 Feet",
+export const metadata: Metadata = buildMetadata({
+  title: "U-2 Test Pilots: What They Saw from 70,000 Feet",
   description:
-    "The Lockheed U-2 reconnaissance aircraft flew at altitudes above 70,000 feet — the edge of the stratosphere, where the sky is black and the curvature of the earth is visible. What pilots reported seeing and experiencing has been documented in declassified program histories and published memoirs.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/u2-test-pilots/" },
-  openGraph: {
-    title: "What Test Pilots Saw from 70,000 Feet | Field Notes",
-    description:
-      "Above 99% of the atmosphere. Stars visible in daytime. The curvature of the earth at the horizon. The documented perceptual experience of U-2 pilots in the 1950s — and what William Masters claims he saw on a classified mission in 1956.",
-    url: "https://jasoncholloway.com/field-notes/u2-test-pilots/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/u2-test-pilots.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: view from 70,000 feet — deep black sky above, earth's curvature below",
-      },
-    ],
+    "Declassified U-2 histories and pilot accounts from the edge of the stratosphere — and what William Masters saw in 1956 that he spent a lifetime proving.",
+  socialTitle: "U-2 Test Pilots: What They Saw from 70,000 Feet | Field Notes",
+  socialDescription:
+    "Above 99% of the atmosphere. Stars visible in daytime. The curvature of the earth at the horizon. Documented U-2 pilot experience — and what William Masters claims he saw in 1956.",
+  path: "/field-notes/u2-test-pilots/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/u2-test-pilots.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: view from 70,000 feet — deep black sky above, earth's curvature below",
   },
-};
+});
 
 const faqs = [
   {
@@ -51,8 +48,8 @@ export default function U2TestPilotsNote() {
   return (
     <FieldNoteLayout
       slug="u2-test-pilots"
-      title="What Test Pilots Saw from 70,000 Feet"
-      titleTag="What Test Pilots Saw from 70,000 Feet"
+      title="U-2 Test Pilots: What They Saw from 70,000 Feet"
+      titleTag="U-2 Test Pilots: What They Saw from 70,000 Feet"
       theme="The Frequency"
       lede="The Lockheed U-2 reconnaissance aircraft flew at altitudes above 70,000 feet — the edge of the stratosphere, where the sky is black and the curvature of the earth is visible. The pilots who flew it operated under extraordinary physical and psychological conditions, with minimal life-support margin and no ejection capability at maximum altitude. What they reported seeing and experiencing has been documented in declassified program histories and published memoirs."
       record={

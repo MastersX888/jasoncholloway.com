@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)",
+export const metadata: Metadata = buildMetadata({
+  title: "Oscar-01: Missouri's Preserved Cold War Launch Room",
   description:
-    "Oscar-01 is a real preserved Minuteman II ICBM launch control facility at Whiteman Air Force Base in Johnson County, Missouri. During the Cold War, a two-person crew sat 60 feet underground, ready to turn the keys for up to ten nuclear missiles. That reality is the ground the Masters X Trilogy builds on.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/oscar-01/" },
-  openGraph: {
-    title: "Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It) | Field Notes",
-    description:
-      "60 feet underground. Two officers. Two keys out of reach of each other. 150 Minuteman II missiles across the Missouri countryside. Oscar-01 is preserved. You can stand in the capsule where James Masters worked.",
-    url: "https://jasoncholloway.com/field-notes/oscar-01/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/oscar-01.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground",
-      },
-    ],
+    "Preserved Minuteman II launch control at Whiteman AFB — 60 feet underground, two keys, ten missiles. The real ground James Masters stood on in Masters X.",
+  socialTitle: "Oscar-01: Missouri's Preserved Cold War Launch Room | Field Notes",
+  socialDescription:
+    "60 feet underground. Two officers. Two keys out of reach of each other. 150 Minuteman II missiles across Missouri. Oscar-01 is preserved — you can stand in the capsule.",
+  path: "/field-notes/oscar-01/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/oscar-01.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground",
   },
-};
+});
 
 const faqs = [
   {
@@ -43,7 +40,7 @@ const faqs = [
 
 const related = [
   { href: "/field-notes/subtropolis", label: "SubTropolis, Kansas City", theme: "Beneath Kansas City" },
-  { href: "/field-notes/u2-test-pilots", label: "What Test Pilots Saw from 70,000 Feet", theme: "The Frequency" },
+  { href: "/field-notes/u2-test-pilots", label: "U-2 Test Pilots at 70,000 Feet", theme: "The Frequency" },
   { href: "/field-notes/kansas-city-locations", label: "The Real Kansas City of Masters X", theme: "Beneath Kansas City" },
 ];
 
@@ -51,8 +48,8 @@ export default function Oscar01Note() {
   return (
     <FieldNoteLayout
       slug="oscar-01"
-      title="Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)"
-      titleTag="Oscar-01: Missouri's Cold War Launch Room (You Can Stand Inside It)"
+      title="Oscar-01: Missouri's Cold War Launch Room"
+      titleTag="Oscar-01: Missouri's Preserved Cold War Launch Room"
       theme="Beneath Kansas City"
       lede="Oscar-01 is a real preserved Minuteman II ICBM launch control facility at Whiteman Air Force Base in Johnson County, Missouri. It is open to the public as a historic site. During the Cold War, a two-person crew — a launch control officer and a deputy — sat 60 feet underground in a capsule, ready to turn the launch keys for up to ten Minuteman II missiles. That reality is the ground the trilogy builds on."
       record={

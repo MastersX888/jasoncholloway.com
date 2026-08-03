@@ -1,19 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read",
+export const metadata: Metadata = buildMetadata({
+  title: "Voynich Manuscript: Rudolf II & the Unreadable Book",
   description:
-    "The Voynich Manuscript is a real medieval codex at Yale's Beinecke Library — carbon-dated to the early 1400s, written in an undeciphered script, owned by Emperor Rudolf II of Bohemia. Here is the documented history.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/voynich-manuscript/" },
-  openGraph: {
-    title: "The Voynich Manuscript, Rudolf II, and the Book No One Can Read | Field Notes",
-    description:
-      "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court the Masters X Trilogy reconstructs. The real history.",
-    url: "https://jasoncholloway.com/field-notes/voynich-manuscript/",
-    images: [{ url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png", width: 1200, height: 630, alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript" }],
+    "Yale's Beinecke holds the Voynich Manuscript — early 1400s, undeciphered, once owned by Rudolf II. Documented history the Masters X Prague court reconstructs.",
+  socialTitle: "Voynich Manuscript: Rudolf II & the Unreadable Book | Field Notes",
+  socialDescription:
+    "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court Masters X reconstructs.",
+  path: "/field-notes/voynich-manuscript/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript",
   },
-};
+});
 
 const faqs = [
   {
@@ -45,7 +49,7 @@ export default function VoynichNote() {
     <FieldNoteLayout
       slug="voynich-manuscript"
       title="The Voynich Manuscript, Rudolf II, and the Book No One Can Read"
-      titleTag="The Voynich Manuscript, Rudolf II, and the Book No One Can Read"
+      titleTag="Voynich Manuscript: Rudolf II & the Unreadable Book"
       theme="The Manuscripts"
       lede="The Voynich Manuscript is a real medieval document, carbon-dated to the early fifteenth century, written entirely in an undeciphered script that has resisted 600 years of analysis. It sits in Yale University's Beinecke Rare Book & Manuscript Library as MS 408. No one knows what it says. One of its most famous owners was Emperor Rudolf II of Bohemia — the same emperor whose Prague court the Masters X Trilogy reconstructs."
       record={

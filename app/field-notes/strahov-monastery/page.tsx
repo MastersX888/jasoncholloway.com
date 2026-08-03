@@ -1,26 +1,23 @@
 import FieldNoteLayout from "@/components/field-notes/FieldNoteLayout";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague",
+export const metadata: Metadata = buildMetadata({
+  title: "Strahov Library, Prague: Chained Books & a Sealed Crypt",
   description:
-    "The Strahov Monastery Library in Prague is open to visitors and considered one of the most beautiful baroque library interiors in the world. The Premonstratensian order has occupied the site since 1143. The crypt beneath the Theological Hall is real. What the trilogy found there is fiction.",
-  alternates: { canonical: "https://jasoncholloway.com/field-notes/strahov-monastery/" },
-  openGraph: {
-    title: "The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague | Field Notes",
-    description:
-      "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings frescoed by Siard Nosecký. And beneath the Theological Hall, in the trilogy's fiction, a chamber the monks kept sealed since the thirteenth century.",
-    url: "https://jasoncholloway.com/field-notes/strahov-monastery/",
-    images: [
-      {
-        url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
-        width: 1200,
-        height: 630,
-        alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall",
-      },
-    ],
+    "Premonstratensian Theological Hall since 1143 — chained books, baroque frescoes, and a crypt beneath. Real Prague library; the trilogy's sealed chamber is fiction.",
+  socialTitle: "Strahov Library, Prague: Chained Books & a Sealed Crypt | Field Notes",
+  socialDescription:
+    "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings frescoed by Siard Nosecký. Beneath the Theological Hall, in the fiction, a chamber sealed since the thirteenth century.",
+  path: "/field-notes/strahov-monastery/",
+  ogType: "article",
+  image: {
+    url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
+    width: 1024,
+    height: 1024,
+    alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall",
   },
-};
+});
 
 const faqs = [
   {
@@ -43,7 +40,7 @@ const faqs = [
 
 const related = [
   { href: "/field-notes/voynich-manuscript", label: "The Voynich Manuscript", theme: "The Manuscripts" },
-  { href: "/field-notes/ars-notoria", label: "The Ars Notoria", theme: "The Manuscripts" },
+  { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
   { href: "/field-notes/codex-gigas", label: "The Codex Gigas", theme: "The Manuscripts" },
 ];
 
@@ -51,8 +48,8 @@ export default function StrahovMonasteryNote() {
   return (
     <FieldNoteLayout
       slug="strahov-monastery"
-      title="The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague"
-      titleTag="The Strahov Library: 23 Chained Books and the Most Beautiful Room in Prague"
+      title="The Strahov Library: Chained Books and a Sealed Crypt"
+      titleTag="Strahov Library, Prague: Chained Books & a Sealed Crypt"
       theme="The Sites"
       lede="The Strahov Monastery Library in Prague is real, open to visitors, and considered one of the most beautiful baroque library interiors in the world. The Premonstratensian order has occupied the site since 1143. The Theological Hall — its earlier and more dramatic chamber — contains thousands of volumes, ornate ceiling frescoes, and a reading culture that dates to the twelfth century. The crypt beneath it is real. What the trilogy found there is fiction."
       record={
@@ -84,7 +81,7 @@ export default function StrahovMonasteryNote() {
       fiction={
         <>
           <p className="fn-body">
-            In <em>The Grimoire</em>, Volume II of the Masters X Trilogy, Andrew Vance presents his discovery of the Strahov preparation protocol: a curriculum of twenty-three texts, read at twenty-three desks, in a specific sequence, before the monks descended to the acoustic chamber beneath the Theological Hall. The library, in Andrew's reading, is not a repository but a preparation chamber — a structured progression through specific knowledge states required before the chamber below could be safely entered.
+            In <em>The Grimoire</em>, Volume II of the Masters X Trilogy, Andrew Chen presents his discovery of the Strahov preparation protocol: a curriculum of twenty-three texts, read at twenty-three desks, in a specific sequence, before the monks descended to the acoustic chamber beneath the Theological Hall. The library, in Andrew's reading, is not a repository but a preparation chamber — a structured progression through specific knowledge states required before the chamber below could be safely entered. (The Analysis Chamber publishes an annotated <em>core fifteen</em> from that curriculum; the novels and the distribution-file archive keep the full twenty-three.)
           </p>
           <p className="fn-body">
             The twenty-three-desk inventory, the preparation function, the sealed crypt, and everything that happens in that crypt are the trilogy's fiction. The library, the monastery, the order, the frescoes, and the chained manuscripts are exactly as documented.

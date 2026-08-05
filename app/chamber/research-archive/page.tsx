@@ -1,14 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Research Archive — Virtual Masters Analysis Chamber",
   description:
     "The 247-page distribution file released by Andrew Chen. Seven years of acoustic consciousness research. 1.2 million downloads. Creative Commons.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/research-archive/",
-  },
-};
+  path: "/chamber/research-archive/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
@@ -38,7 +37,7 @@ const archiveSections = [
     summary: "The 52-week preparation curriculum documented by the William Masters Foundation following Blake's initial results. Includes the reading list of 23 texts (the Strahov/Charles University sequence), weekly facilitator instructions, candidate screening criteria (EEG baseline requirements, cardiac thresholds), and the adverse event protocol developed after the Maryland incident.",
     chapterRef: "Book II, Chapters 14–28; Book III, Chapters 1–8",
     keyContent: [
-      "23-text reading sequence (Ars Notoria, Sefer Yetzirah, Gospel of Mary, 20 additional texts)",
+      "23-text reading sequence (full Premonstratensian corpus; chamber annotates core 15)",
       "EEG baseline screening: candidate must demonstrate spontaneous beta coherence >40%",
       "Cardiac monitoring thresholds: session pull at <40 BPM",
       "6-hour session maximum (Nadia's condition)",
@@ -265,7 +264,7 @@ export default function ResearchArchivePage() {
               f = 111.2 Hz
             </div>
             <div style={{ marginTop: "1.5rem", display: "flex", justifyContent: "center", gap: "1.5rem", fontSize: "0.85rem", flexWrap: "wrap" }}>
-              <Link href="/chamber/reading-sequence" style={{ color: "var(--cyan)", textDecoration: "none" }}>The Reading Sequence →</Link>
+              <Link href="/chamber/reading-sequence" style={{ color: "var(--cyan)", textDecoration: "none" }}>Core Reading Sequence (15) →</Link>
               <Link href="/chamber/harmonic-derivations" style={{ color: "var(--cyan)", textDecoration: "none" }}>Harmonic Derivations →</Link>
             </div>
           </div>

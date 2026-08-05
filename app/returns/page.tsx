@@ -1,29 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Returns & Refunds",
   description:
-    "Return and refund policy for print books sold by Seventh City Press through jasoncholloway.com — 30-day returns for damaged, defective, or incorrect orders.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/returns/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/returns/",
-  },
-};
+    "Print books from Seventh City Press are fulfilled by IngramSpark print-on-demand. Orders are non-refundable and non-returnable except for defective products, which IngramSpark may reprint or refund at its discretion.",
+  path: "/returns/",
+});
 
 const returnPolicyJsonLd = {
   "@context": "https://schema.org",
   "@type": "MerchantReturnPolicy",
-  name: "Seventh City Press print book returns",
+  name: "Seventh City Press print book returns (IngramSpark Share & Sell)",
   applicableCountry: "US",
-  returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-  merchantReturnDays: 30,
-  returnMethod: "https://schema.org/ReturnByMail",
-  returnFees: "https://schema.org/ReturnShippingFees",
-  refundType: "https://schema.org/FullRefund",
+  returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
   merchantReturnLink: "https://jasoncholloway.com/returns/",
+  additionalProperty: {
+    "@type": "PropertyValue",
+    name: "Defective product handling",
+    value:
+      "Custom print-on-demand books containing defects may be reprinted or refunded at IngramSpark’s discretion under its Share & Sell Terms of Sale.",
+  },
 };
 
 export default function ReturnsPage() {
@@ -45,9 +43,18 @@ export default function ReturnsPage() {
               <span style={{ color: "var(--gold)", fontStyle: "italic" }}>Refunds</span>
             </h1>
             <p style={{ color: "var(--text-muted)", maxWidth: "36rem", lineHeight: 1.7, fontSize: "1.05rem" }}>
-              Print books listed on this site are published by Seventh City Press and fulfilled via print-on-demand
-              (IngramSpark). This policy applies to physical book orders placed through retailer links or direct
-              purchase paths associated with jasoncholloway.com.
+              Print books listed on this site are published by Seventh City Press and fulfilled by IngramSpark
+              print-on-demand (Share &amp; Sell). Checkout, manufacturing, shipping, and order remedies are governed by
+              IngramSpark&apos;s{" "}
+              <a
+                href="https://www.ingramspark.com/ecommerce-terms-of-sale"
+                style={{ color: "var(--gold)" }}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Share &amp; Sell Terms of Sale
+              </a>
+              .
             </p>
           </div>
         </div>
@@ -57,60 +64,75 @@ export default function ReturnsPage() {
         <div className="container" style={{ maxWidth: "720px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem" }}>
             <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Return window</h2>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>IngramSpark return policy</h2>
               <p>
-                You may request a return within <strong>30 days of delivery</strong> if your book arrives{" "}
-                <strong>damaged</strong>, <strong>defective</strong>, or if we shipped the <strong>wrong title or format</strong>.
+                Because all print products are custom-made,{" "}
+                <strong>all items are non-refundable and non-returnable</strong>. Products that contain defects may be
+                reprinted or refunded at IngramSpark&apos;s discretion and in accordance with applicable law.
+              </p>
+              <p style={{ marginTop: "1rem" }}>
+                IngramSpark does not support general refunds or buyer&apos;s-remorse returns. Orders cannot be edited or
+                cancelled after they are submitted.
               </p>
             </div>
 
             <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Condition</h2>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Damaged, defective, or wrong item</h2>
               <p>
-                Books must be returned in <strong>resalable condition</strong> (no writing, highlighting, or water damage
-                unless the item was defective when received). We cannot accept returns for buyer&apos;s remorse on opened
-                copies that are no longer resalable.
+                If your book arrives damaged, defective, or not as described, report the issue to IngramSpark. They
+                typically print and ship a replacement within a few business days after resolving the request.
               </p>
-            </div>
-
-            <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>How to start a return</h2>
-              <ol style={{ paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
+              <ol style={{ paddingLeft: "1.25rem", marginTop: "1rem", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
                 <li>
-                  Email{" "}
-                  <a href="mailto:info@seventhcitypress.com" style={{ color: "var(--gold)" }}>
-                    info@seventhcitypress.com
+                  Use IngramSpark&apos;s{" "}
+                  <a
+                    href="https://www.ingramspark.com/report-an-issue"
+                    style={{ color: "var(--gold)" }}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    Report an Issue
                   </a>{" "}
-                  with your name, order date, title purchased, and a brief description of the issue.
+                  form (also linked from your order confirmation email).
                 </li>
-                <li>Include photos of damage or packing errors if applicable.</li>
-                <li>We will reply with return authorization and mailing instructions within 2 business days.</li>
+                <li>Have ready the email address used at checkout and your order number.</li>
+                <li>Include a clear description of the problem and photos of damage or defects when applicable.</li>
               </ol>
-            </div>
-
-            <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Return shipping</h2>
-              <p>
-                <strong>Customer pays return shipping</strong> for returns that are not our error. If we sent the wrong
-                item or a clearly defective copy, we will provide a prepaid return label or reimburse reasonable return
-                postage.
+              <p style={{ marginTop: "1rem" }}>
+                For lost, undelivered, or damaged shipments, use the same report process referenced in your shipping
+                confirmation.
               </p>
             </div>
 
             <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Refunds</h2>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>How we can help</h2>
               <p>
-                Approved refunds are processed to your original payment method within <strong>5–10 business days</strong>{" "}
-                after we receive and inspect the returned book. Shipping charges on the original order are non-refundable
-                unless the return is due to our error.
+                Seventh City Press does not process IngramSpark checkout refunds or returns. If you need help locating
+                your order details or phrasing a defect claim, email{" "}
+                <a href="mailto:info@seventhcitypress.com" style={{ color: "var(--gold)" }}>
+                  info@seventhcitypress.com
+                </a>{" "}
+                with your name, order date, title, and a brief description of the issue. We will point you to the correct
+                IngramSpark channel.
               </p>
             </div>
 
             <div>
-              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Digital products</h2>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>UK and EU consumers</h2>
               <p>
-                eBooks and audiobooks sold through third-party retailers (Amazon, Apple Books, Google Play, Kobo, etc.)
-                follow each store&apos;s own return policy. Contact that retailer directly for digital order issues.
+                Where Ingram Content Group UK Ltd. fulfills your order, additional consumer rights may apply for faulty
+                or not-as-described goods (including a full refund if the item is faulty within 30 days of delivery).
+                Those rights are stated in IngramSpark&apos;s Terms of Sale and are handled through IngramSpark&apos;s
+                report process.
+              </p>
+            </div>
+
+            <div>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Other retailers</h2>
+              <p>
+                Books or digital editions purchased through third-party retailers (Amazon Kindle, Bookshop.org, Apple
+                Books, Google Play, Kobo, libraries, and similar) follow that retailer&apos;s own return or refund
+                policy. Contact the seller you paid directly.
               </p>
             </div>
 
@@ -123,7 +145,16 @@ export default function ReturnsPage() {
                 <a href="mailto:info@seventhcitypress.com" style={{ color: "var(--gold)" }}>info@seventhcitypress.com</a>
               </p>
               <p style={{ margin: "1rem 0 0", fontSize: "0.85rem" }}>
-                Questions about rights or review copies? See{" "}
+                Official policy source:{" "}
+                <a
+                  href="https://www.ingramspark.com/ecommerce-terms-of-sale"
+                  style={{ color: "var(--cyan)" }}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  IngramSpark Share &amp; Sell Terms of Sale
+                </a>
+                . Questions about rights or review copies? See{" "}
                 <Link href="/contact/" style={{ color: "var(--cyan)" }}>Contact &amp; Press</Link>.
               </p>
             </div>

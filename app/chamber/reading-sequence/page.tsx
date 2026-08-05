@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import styles from './reading-sequence.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The The Reading Sequence | Masters X Trilogy — Seventh City Press",
-  description: "The annotated reading sequence from the Masters X Trilogy: fifteen texts curated by Eva Černá, from the Ars Notoria to the Sefer Yetzirah, each annotated for the acoustic-consciousness research the novels document.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/reading-sequence/" },
-};
+export const metadata: Metadata = buildMetadata({
+  title: "The Reading Sequence — 15 Texts Behind Masters X",
+  titleAbsolute: true,
+  description:
+    "The annotated core reading sequence from the Masters X Trilogy: fifteen texts curated by Eva Černá. The full Premonstratensian research corpus in the novels is twenty-three texts; this chamber page annotates the core fifteen.",
+  path: "/chamber/reading-sequence/",
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -15,7 +18,7 @@ const jsonLd = {
     {
       "@type": "Article",
       "headline": "The Reading Sequence",
-      "description": "The annotated reading sequence from the Masters X distribution file \u2014 fifteen texts curated by Eva \u010cern\u00e1.",
+      "description": "Annotated core reading sequence from the Masters X distribution file \u2014 fifteen texts curated by Eva \u010cern\u00e1 (full Premonstratensian corpus in the novels: twenty-three).",
       "author": {
         "@type": "Person",
         "name": "Jason Carroll Holloway",
@@ -235,18 +238,19 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <Script
-        id="page-jsonld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main className={styles['rs-wrap']}>
         <p className={styles['rs-eyebrow']}>Analysis Chamber · The Distribution File</p>
-  <h1 className={styles['rs-h1']}>The The Reading Sequence</h1>
+  <h1 className={styles['rs-h1']}>The Reading Sequence</h1>
   <p className={styles['rs-lede']}>The reading list is not devotional. Each text is assigned because it contains a specific technical element the candidate will later need: a proportion, a posture, a discipline of attention, a fragment of the coupling model.</p>
-  <p className={styles['rs-intro']}>Within the Masters X Trilogy, the William Masters Foundation prescribes a fixed sequence of fifteen texts as the first phase of preparation — the reading sequence held in the Strahov and Charles University collections. <em>The Ars Notoria is read first, in ignorance, and last, in understanding.</em> Between those two readings lie twenty-one texts that make the difference. What follows is the annotated sequence as it appears in the distribution file Andrew Chen released to the public domain.</p>
+  <p className={styles['rs-intro']}>
+    This page annotates the <strong>core reading sequence of fifteen texts</strong> — the extract prepared for public study from the distribution file Andrew Chen released. In the novels, the Strahov field note, and the full Premonstratensian curriculum held at Strahov and Charles University, the research corpus is <strong>twenty-three texts</strong>. The chamber list below is that core fifteen, not a rewrite of the full corpus. The Ars Notoria is the core operational text in this annotated sequence (item 04). For the distribution-file overview of the full curriculum, see the <Link href="/chamber/research-archive/">Research Archive</Link>; for the twenty-three-desk fiction framing, see the <Link href="/field-notes/strahov-monastery/">Strahov Monastery</Link> field note and <em>The Grimoire</em> / <em>The Kingdom</em>.
+  </p>
 
-  <div className={styles['rs-divider']}><span>The Sequence</span></div>
+  <div className={styles['rs-divider']}><span>Core Sequence · 15</span></div>
 
   <ol className={styles['rs-list']}>
     <li className={styles['rs-item']}>
@@ -372,7 +376,7 @@ export default function Page() {
   </ol>
 
   <div className={styles['rs-foot']}>
-    <p>This reading sequence appears in <strong>Part I: Preparation Protocols</strong> of the 247-page distribution file — the complete acoustic-consciousness research document released within the events of <em>The Kingdom</em>. <Link href="/chamber/research-archive/">Read about the full distribution file →</Link></p>
+    <p>This annotated <strong>core fifteen</strong> appears in <strong>Part I: Preparation Protocols</strong> of the 247-page distribution file. The novels and archive retain the full <strong>twenty-three-text</strong> corpus. <Link href="/chamber/research-archive/">Read about the full distribution file →</Link></p>
     <p style={{ marginTop: "10px" }}>The harmonic frequency data derived from these texts is documented separately: <Link href="/chamber/harmonic-derivations/">The Harmonic Frequency Derivations →</Link></p>
     <p className={styles['rs-mark']}>f = 111.2 Hz · Seventh City Press · Kansas City, Missouri</p>
   </div>

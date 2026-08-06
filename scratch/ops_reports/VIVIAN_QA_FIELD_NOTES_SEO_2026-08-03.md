@@ -1,4 +1,4 @@
-# Vivian QC — Field Notes SEO (2026-08-03)
+﻿# Vivian QC — Field Notes SEO (2026-08-03)
 
 **Asset:** Field Notes SEO morning-shift public diffs (hub + 12 essays + layout CTA + sitemap/RSS derivation)  
 **Protocol:** `scratch/EDITORIAL_QC_PROTOCOL.md`  
@@ -6,7 +6,7 @@
 **Source packet:** `FIELD_NOTES_SEO_MORNING_REPORT_2026-08-03.md` · overnight brief  
 **Checked:** 2026-08-03 ~08:55 CT  
 **Desk:** Vivian (Editorial Quality & Pre-Publication Control)  
-**Deploy / commit:** **NO** — working tree only; Jason Phase 4 still required
+**Deploy / commit:** **DEPLOYED** — Jason approved; prod `720424a`; staging push `aee3383` ~2026-08-03 16:48 CT
 
 ---
 
@@ -16,7 +16,7 @@ Safe for Jason's Phase 4 checklist under **Approve to publish / deploy Field Not
 
 **Ready for checklist:** yes  
 **Visual pass:** N/A (copy/meta/structure; no new carousel/image assets)  
-**Auto-deploy:** DENY until Jason explicitly approves
+**Auto-deploy:** Jason approved — **DEPLOYED** (prod `720424a`)
 
 ---
 
@@ -123,9 +123,25 @@ Agent executes deploy/commit only after explicit Jason approval
 - **Visual pass:** N/A (meta/CTA/structure)
 - **Fixes applied in QC:** fieldNotes.ts title sync ars-notoria + oscar-01
 - **Ready for checklist:** yes
-- **Deploy:** DENY until Jason
+- **Deploy:** **DEPLOYED** — prod `720424a` · staging `aee3383` · ~2026-08-03 16:48 CT
 
 ---
 
 *VIVIAN — Editorial Quality & Pre-Publication Control, Seventh City Press LLC*  
 *"Nothing goes out the door with the wrong ISBN on it."*
+
+---
+
+## DEPLOYED
+
+**Status:** **DEPLOYED** (live smoke 200s)  
+**Marked:** 2026-08-03 16:48 CT  
+**Production (Cloudflare Pages / origin main):** `720424a` (`720424aee67b42802b7cc583af32ba4e16e1432f`) — committer 2026-08-03 13:11:46 -0500 — already on `origin/main` before this ship closeout  
+**Staging branch push (this session):** `cursor/upload-staging-f9e1` `aee3383`..`aee33830c817ba0311c869740521dab0638decdd` pushed 83bedb3..aee3383 at ~2026-08-03 16:48 CT — **no force**  
+**Deploy path:** Cloudflare Pages project `jasoncholloway` (`wrangler.toml` `pages_build_output_dir = out`) — production tracks **main**; staging branch push does not replace prod  
+**Live smoke (2026-08-03 ~16:48 CT):**
+- 200 https://jasoncholloway.com/field-notes/
+- 200 https://jasoncholloway.com/field-notes/subtropolis/
+- 200 https://jasoncholloway.com/sitemap.xml (13 field-notes hits)
+- 200 https://jasoncholloway.com/field-notes/rss.xml
+- Live titles match SEO meta (hub + SubTropolis); soft CTA / chapters-sent / masters-x present

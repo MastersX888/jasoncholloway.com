@@ -1,10 +1,10 @@
-# Field Notes SEO — Morning Shift Report (2026-08-03)
+﻿# Field Notes SEO — Morning Shift Report (2026-08-03)
 
 **Desk:** Content ops (morning execution of overnight brief)  
 **Parent approval:** `GUERRILLA_ORGANIC_GROUNDSWELL_Q3.md` — **PARTIAL APPROVE** (Field Notes SEO only)  
 **Source brief:** `scratch/ops_reports/FIELD_NOTES_SEO_OVERNIGHT_BRIEF_2026-08-03.md`  
 **Stamp:** 2026-08-03 ~08:25 CT  
-**Deploy:** **NO** — drafts in working tree only. No commit. No push.  
+**Deploy:** **DEPLOYED** — prod `720424a` on `origin/main`; staging `aee3383` pushed `cursor/upload-staging-f9e1` ~2026-08-03 16:48 CT
 **Catalog locks:** Amazon Kindle Vol I–III only · print/omnibus Ingram · no omnibus Amazon — **respected** (zero Amazon/omnibus links on Field Notes surfaces).
 
 ---
@@ -145,3 +145,19 @@ H1s kept human-curiosity phrasing where useful; `titleTag` / `buildMetadata.titl
 ---
 
 *Morning shift · 2026-08-03 ~08:25 CT · $0 · no social · no NetGalley · no deploy · no commit.*
+
+---
+
+## DEPLOYED
+
+**Status:** **DEPLOYED** (live smoke 200s)  
+**Marked:** 2026-08-03 16:48 CT  
+**Production (Cloudflare Pages / origin main):** `720424a` (`720424aee67b42802b7cc583af32ba4e16e1432f`) — committer 2026-08-03 13:11:46 -0500 — already on `origin/main` before this ship closeout  
+**Staging branch push (this session):** `cursor/upload-staging-f9e1` `aee3383`..`aee33830c817ba0311c869740521dab0638decdd` pushed 83bedb3..aee3383 at ~2026-08-03 16:48 CT — **no force**  
+**Deploy path:** Cloudflare Pages project `jasoncholloway` (`wrangler.toml` `pages_build_output_dir = out`) — production tracks **main**; staging branch push does not replace prod  
+**Live smoke (2026-08-03 ~16:48 CT):**
+- 200 https://jasoncholloway.com/field-notes/
+- 200 https://jasoncholloway.com/field-notes/subtropolis/
+- 200 https://jasoncholloway.com/sitemap.xml (13 field-notes hits)
+- 200 https://jasoncholloway.com/field-notes/rss.xml
+- Live titles match SEO meta (hub + SubTropolis); soft CTA / chapters-sent / masters-x present

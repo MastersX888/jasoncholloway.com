@@ -1,5 +1,14 @@
 # Audiobook Project — Handoff Status
 
+## Geo-update regen — August 4, 2026
+
+**Master PDF:** `C:\Users\zh577\Desktop\MASTER_UPLOAD_FOLDER\9798295884412_HC\9798295884412_HC_interior.pdf`  
+**Scripts:** regenerated 77/77 (30 files changed vs July 11 set).  
+**Backup of prior scripts:** `output/_backup_pre_geo_2026-08-04/`  
+**Status log:** `output/AUDIOBOOK_STATUS.md`
+
+---
+
 ## Fable Pass 1 — RETURN INTEGRATED (July 11, 2026)
 
 **Source:** `C:\Users\zh577\Downloads\masters-x-omnibus-audiobook-fable-RETURN.zip`  

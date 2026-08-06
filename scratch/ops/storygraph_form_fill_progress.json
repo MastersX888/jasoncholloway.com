@@ -1,0 +1,31 @@
+{
+  "started_at": "2026-08-02T16:00:00-05:00",
+  "updated_at": "2026-08-02T17:19:00-05:00",
+  "completed_at": "2026-08-02T17:15:00-05:00",
+  "csv_import": "complete",
+  "csv_imported_at": "2026-08-02T17:19:00-05:00",
+  "csv_path": "scratch/ops/goodreads_library_export_2026-08-02.csv",
+  "editions_total": 14,
+  "results": [
+    {"isbn": "9798256008819", "title": "Masters X: The Inheritance of Frequency", "format": "digital", "status": "exists", "url": null, "note": "Isbn has already been taken"},
+    {"isbn": "9798256008048", "title": "Masters X: The Inheritance of Frequency", "format": "paperback", "status": "added", "url": "https://app.thestorygraph.com/books/713110ba-71b5-49dc-a1fd-73565a88cf92", "note": "tick 10"},
+    {"isbn": "9798295800801", "title": "Masters X: The Inheritance of Frequency", "format": "hardcover", "status": "added", "url": "https://app.thestorygraph.com/books/8efdab53-d950-406e-b858-802b23ffc658", "note": "parent session"},
+    {"isbn": "9798256009625", "title": "Masters X: The Grimoire", "format": "digital", "status": "added", "url": "https://app.thestorygraph.com/books/636daf5f-7e23-4690-9d17-c8af2740509e", "note": "parent session"},
+    {"isbn": "9798256009953", "title": "Masters X: The Grimoire", "format": "paperback", "status": "added", "url": "https://app.thestorygraph.com/books/b67a2c5d-6cfe-4a0c-a3dc-dac02cdc02de", "note": "parent session"},
+    {"isbn": "9798295812675", "title": "Masters X: The Grimoire", "format": "hardcover", "status": "added", "url": "https://app.thestorygraph.com/books/375d37e0-5a6b-48eb-848e-3e9284137ebc", "note": "parent session"},
+    {"isbn": "9798256009809", "title": "Masters X: The Kingdom", "format": "digital", "status": "added", "url": "https://app.thestorygraph.com/books/3acac754-e8bf-4bc4-8986-e4fb1fe3c89e", "note": "parent session"},
+    {"isbn": "9798256010072", "title": "Masters X: The Kingdom", "format": "paperback", "status": "added", "url": "https://app.thestorygraph.com/books/f483f4f6-a683-4c42-a839-b7f39038fde1", "note": "tick 13 parent session"},
+    {"isbn": "9798295812705", "title": "Masters X: The Kingdom", "format": "hardcover", "status": "added", "url": "https://app.thestorygraph.com/books/4b2e78d6-8091-410b-a94b-98ac23b95c0d", "note": "tick 13 parent session"},
+    {"isbn": "9798256072704", "title": "Masters X: The Complete Trilogy", "format": "paperback", "status": "exists", "url": null, "note": "Isbn has already been taken"},
+    {"isbn": "9798295884412", "title": "Masters X: The Complete Trilogy", "format": "hardcover", "status": "added", "url": "https://app.thestorygraph.com/books/02ecee51-dff0-4305-ad8e-5a216a5e7ea1", "note": "tick 13 parent session"},
+    {"isbn": "9798295778926", "title": "Innocence, Desire, and the Architecture of the Fall", "format": "digital", "status": "added", "url": "https://app.thestorygraph.com/books/2a59e3aa-b398-433a-b4de-103ab6d51328", "note": "tick 13 parent session"},
+    {"isbn": "9798295778247", "title": "Innocence, Desire, and the Architecture of the Fall", "format": "paperback", "status": "added", "url": "https://app.thestorygraph.com/books/cce44cd0-7e09-4da8-ac02-739446932c67", "note": "tick 13 parent session"},
+    {"isbn": "9798349308444", "title": "Innocence, Desire, and the Architecture of the Fall", "format": "hardcover", "status": "added", "url": "https://app.thestorygraph.com/books/40572029-5ba8-487f-a905-cd081a552807", "note": "tick 13 parent session"}
+  ],
+  "summary": {
+    "exists": 2,
+    "added": 12,
+    "pending": 0,
+    "failed": 0
+  }
+}

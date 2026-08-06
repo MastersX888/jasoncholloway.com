@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 import Link from "next/link";
 import styles from './harmonic-derivations.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: "The Harmonic Frequency Derivations | Masters X Trilogy — Seventh City Press",
+export const metadata: Metadata = buildMetadata({
+  title: "The Harmonic Frequency Derivations | Masters X Trilogy",
+  titleAbsolute: true,
   description: "The eight major harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: from the 111.2 Hz fundamental to 889.6 Hz, with coupling factors, quality factors, forty inversion frequencies, and cathedral cross-references.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/harmonic-derivations/" },
-};
+  path: "/chamber/harmonic-derivations/",
+  ogType: "article",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -52,8 +54,7 @@ const jsonLd = {
 export default function Page() {
   return (
     <>
-      <Script
-        id="page-jsonld"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
@@ -455,7 +456,7 @@ export default function Page() {
   </div>
 
   <div className={styles['hd-foot']}>
-    <p>These derivations appear in <strong>Part III: Harmonic Frequency Derivations</strong> of the 247-page distribution file released within the events of <em>The Kingdom</em>. The preparation that precedes them is documented in <Link href="/chamber/reading-sequence/">The Twenty-Three Text Reading Sequence →</Link></p>
+    <p>These derivations appear in <strong>Part III: Harmonic Frequency Derivations</strong> of the 247-page distribution file released within the events of <em>The Kingdom</em>. The preparation that precedes them is documented in <Link href="/chamber/reading-sequence/">The Reading Sequence →</Link></p>
     <p style={{ marginTop: "10px" }}><Link href="/chamber/research-archive/">Read about the full distribution file →</Link></p>
     <p className={styles['hd-mark']}>f = 111.2 Hz · Seventh City Press · Kansas City, Missouri</p>
   </div>

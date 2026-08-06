@@ -5,22 +5,16 @@ import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import WaveDivider from "@/components/ui/WaveDivider";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy of Frequency & Medieval Manuscripts",
-  },
+export const metadata: Metadata = buildMetadata({
+  title: "Jason Carroll Holloway — Masters X Trilogy | Seventh City Press",
+  titleAbsolute: true,
   description:
     "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/",
-    title: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
-    description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
-  },
-};
+  socialTitle: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
+  path: "/",
+});
 
 const pullQuotes = [
   {
@@ -282,7 +276,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
+              <div className="resp-btn-row" style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
                 <Link href="/books/hawkes-monograph" className="btn btn-gold" style={{ flex: 1, justifyContent: "center" }}>
                   View Monograph
                 </Link>

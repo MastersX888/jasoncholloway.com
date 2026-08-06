@@ -33,7 +33,7 @@ UPLOAD = TRILOGY
 OUT_DIR = Path(r"C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway\production_staging\_epub_build")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 CSS_PATH = OUT_DIR / "epub_book.css"
-COVER_DIR = Path(r"C:\Users\zh577\Desktop\Covers")
+COVER_DIR = Path(r"C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway\production_staging\_covers\ebook")
 
 
 VOLUMES = [
@@ -48,7 +48,7 @@ VOLUMES = [
         "isbn": "979-8-2560-0881-9",
         "asin": "B0H4KYMSM1",
         "isbn_bare": "9798256008819",
-        "cover": COVER_DIR / "EBOOK_COVER_BOOK1.jpg",
+        "cover": COVER_DIR / "9798256008819.jpg",
         "output": OUT_DIR / "9798256008819.epub",
         "epigraph_quote": (
             "\u201cThere\u2019s no chaos in nature, Blake.<br/>"
@@ -67,7 +67,7 @@ VOLUMES = [
         "isbn": "979-8-2560-0962-5",
         "asin": "B0H4KQ4YQJ",
         "isbn_bare": "9798256009625",
-        "cover": COVER_DIR / "EBOOK_COVER_BOOK2.jpg",
+        "cover": COVER_DIR / "9798256009625.jpg",
         "output": OUT_DIR / "9798256009625.epub",
         "epigraph_quote": (
             "\u201cThe preparation is not about the frequency.<br/>"
@@ -86,7 +86,7 @@ VOLUMES = [
         "isbn": "979-8-2560-0980-9",
         "asin": "B0H4L36X21",
         "isbn_bare": "9798256009809",
-        "cover": COVER_DIR / "EBOOK_COVER_BOOK3.jpg",
+        "cover": COVER_DIR / "9798256009809.jpg",
         "output": OUT_DIR / "9798256009809.epub",
         "epigraph_quote": (
             "\u201cSome signals you pick up by accident.<br/>"

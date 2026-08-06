@@ -123,6 +123,74 @@
   }
 }
 
+/* ─── NEWSLETTER ROW ─────────────────────────────────────────── */
+/* Was an inline flex row; the submit button has a nowrap label and no
+   flex-shrink guard, so at 320-414px it shrank to ~50px and clipped
+   "Receive Chapters" down to a few characters. */
+.newsletter-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  width: 100%;
+}
+.newsletter-row-compact { flex-direction: column; }
+.newsletter-row > .btn { flex-shrink: 0; }
+.newsletter-row > .newsletter-input { min-width: 0; }
+@media (max-width: 560px) {
+  .newsletter-row { flex-direction: column; }
+  .newsletter-row > .btn { width: 100%; justify-content: center; }
+}
+
+/* ─── CARD MIN-CONTENT / LAYOUT VIEWPORT ─────────────────────── */
+/* .card carries 2.5rem padding and its inline-styled button rows are
+   nowrap flex containers, so on the homepage a card's min-content width
+   reached ~344px. That is wider than a 320px device can hold, so the
+   layout viewport was pushed out to 364px and the whole page rendered
+   zoomed out. Let the rows wrap and tighten padding on small screens. */
+@media (max-width: 600px) {
+  .card { padding: 1.25rem; }
+  .resp-2col > *,
+  .resp-main-sidebar > * { min-width: 0; }
+  /* Stack paired CTAs full-width: at 320px two side-by-side buttons
+     cannot hold their labels even after wrapping. !important beats the
+     inline `flex: 1` some of these rows set on each button. */
+  .card div:has(> .btn + .btn),
+  .resp-btn-row { flex-wrap: wrap; }
+  .card div:has(> .btn + .btn) > .btn,
+  .resp-btn-row > .btn {
+    flex: 1 1 100% !important;
+    justify-content: center;
+  }
+}
+
+/* Hardcover case-laminate reveal (Masters X catalog) */
+.hc-case-reveal-toggle {
+  display: block;
+  width: 100%;
+  margin-top: 0.65rem;
+  min-height: 44px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--border-faint);
+  border-radius: var(--r-sm);
+  cursor: pointer;
+}
+.hc-case-reveal-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.hc-case-reveal-hint {
+  margin: 0.65rem 0 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--text-faint);
+  text-align: center;
+}
+
 /* ─── HERO & TYPE RHYTHM ON SMALL SCREENS ────────────────────── */
 @media (max-width: 600px) {
   .hero { min-height: auto; padding: 6.5rem 0 3.5rem; }
@@ -135,11 +203,53 @@
   .display-xl { font-size: clamp(2.2rem, 10vw, 3rem) !important; }
 }
 
+/* ─── KEYBOARD FOCUS ─────────────────────────────────────────── */
+/* No focus style was defined anywhere in the stylesheet, and the form
+   fields set outline:none inline, so keyboard users had no indicator.
+   Gold clears 3:1 against every surface on the dark page and against
+   the light criticism register, where --gold resolves to #6B2C2C. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 /* ─── TOUCH TARGETS ──────────────────────────────────────────── */
 @media (max-width: 768px) {
   .btn {
     min-height: 44px;
   }
+
+  /* Stacked link lists rendered ~24px tall with a 7px gap between rows. */
+  .footer-links { gap: 0.25rem; }
+  .footer-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  .header-logo { justify-content: center; min-height: 44px; }
+
+  /* Link-styled CTAs: buy links, field-note jumps, catalog links. */
+  .nota-link,
+  .link,
+  .card-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* 16px is the threshold below which iOS Safari zooms the page on
+     focus; the forms set 0.9rem inline, so this must beat the style
+     attribute. Contact inputs also measured 43px tall. */
+  input, textarea, select { font-size: 16px !important; }
+  input:not([type="checkbox"]):not([type="radio"]), select { min-height: 44px; }
 }
 
 /* ─── REDUCED MOTION ─────────────────────────────────────────── */

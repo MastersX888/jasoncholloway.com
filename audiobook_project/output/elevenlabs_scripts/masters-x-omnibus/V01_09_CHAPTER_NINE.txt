@@ -3,7 +3,7 @@ Chapter Nine. The Preparation.
 One hundred nine hertz. Kansas City.
 
 
-The Analysis Chamber lived in the basement of 2847 Genessee Street.
+The Analysis Chamber lived in the basement of 1647 Genessee Street.
 
 Andrew had built it over three weeks. A server rack, six monitors, pattern-recognition software he'd written himself, and the custom algorithm derived from William's Notebook Three specifications. The room smelled like solder and ozone and the particular scent of electronics running hot.
 

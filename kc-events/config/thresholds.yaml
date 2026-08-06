@@ -1,0 +1,27 @@
+# Operational thresholds — CONFIGURABLE
+
+extraction_confidence_min: 0.6   # below → review_queue, never calendar
+
+follow_rubric:
+  recommend_follow_min: 9   # of 15
+  hold_min: 6               # 6–8 hold for manual review
+  # below hold_min → reject
+
+prune:
+  zero_signal_days: 90      # quarterly unfollow review window
+
+ingest:
+  stories_enabled: false    # v1: skip ephemeral stories
+  primary_platforms:
+    - bluesky
+    - web_calendar
+  secondary_platforms:
+    - instagram
+    - x
+    - facebook
+
+kill_switch_env: KC_EVENTS_PAUSED
+
+calendar:
+  sync_tiers: [1, 2]
+  dedicated_calendar_name: "SCP — KC Events"

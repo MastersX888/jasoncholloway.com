@@ -1,24 +1,19 @@
 # Book 1 Inheritance — Hardcover 9798295800801
+**Portal status (Jason verbal ~2026-08-03 afternoon CT):** **LIVE / APPROVED** — see `scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md`. Local harvest notes below are historical staging inventory, not portal evidence.
 **Priority:** High (after Omnibus)
-**Upload ready:** NO
+**Upload ready:** NO — spine recheck required before Ingram
 
 ## Present
-- `interior.pdf` — 0.38 MB · **154 pp** · Royal 6.14×9.21 · `%PDF` OK
-- `cover_jacket.pdf` (= `DUSTJACKET_BOOK1_FLATTENED.pdf`) — 2.85 MB CMYK dustjacket
-- `cover_front_web.png` (if present) / web assets in `_covers`
+- `interior.pdf` — post-geo rebuild · Royal 6.14×9.21 · ~159 pp (NEAR_LIVE vs CANON 156)
+- `cover_jacket.pdf` — **geometry era** (`JACKET_MX1_9798295800801_v1.pdf`) · matches site `book1-hardcover-v3.png`
+- `cover_caselam.pdf` — geometry era (`CASE_MX1_9798295800801_v1.pdf`)
+- `cover_jacket_preview.jpg` · `cover_front_web.png`
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still missing
-- Exact CANON page match (**156**; harvested **154**, −2)
-- Rebuild from geo-fixed Book 1 draft before re-upload (PRE_GEO_FIX)
+## Still missing / blockers
+- Spine width: jacket built for ~156 pp; interior ~159 — confirm Δ before upload
+- PB wrap (geometry) still missing for sibling ISBN
 
-## Verification
-| Check | Result |
-|---|---|
-| Trim | Royal ✓ |
-| Pages | 154 vs 156 → NEAR_LIVE (−2); not STALE_V6 (257) |
-| Jacket | Present (pre-staged + standardized name) |
-
-## Source path on Windows
-- Interior: `C:\Users\zh577\Desktop\google_books_upload\9798295800801_interior.pdf` (2026-07-03)
-- Jacket: already in staging as `DUSTJACKET_BOOK1_FLATTENED.pdf`
+## Cover source
+`E:\Masters_X_Trilogy_Archive\disk_cleanup_2026-07-10\jasoncholloway\trilogy_package\` (2026-07-07)  
+Staged 2026-07-28. Wrong cymatic/atrium jackets quarantined.

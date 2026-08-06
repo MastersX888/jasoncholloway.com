@@ -1,8 +1,19 @@
 /*
   Link: </.well-known/api-catalog>; rel="api-catalog", </.well-known/mcp/server-card.json>; rel="service-desc", </.well-known/agent-skills/index.json>; rel="describedby", </auth.md>; rel="service-doc"
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 /downloads/*.epub
   Content-Type: application/epub+zip
 
+/opengraph-image
+  Content-Type: image/png
+
 /*/opengraph-image
   Content-Type: image/png
+
+# The field-note share images are JPEG data stored under a .png extension, so the
+# extension-derived content type is wrong. Social scrapers that trust the header
+# over sniffing reject the image otherwise. Renaming the files is the real fix;
+# this keeps the cards working until that happens.
+/og/field-notes/*
+  Content-Type: image/jpeg

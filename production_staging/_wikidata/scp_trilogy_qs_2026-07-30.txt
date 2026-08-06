@@ -1,0 +1,2 @@
+Q140276114	P856	"https://jasoncholloway.com/books/masters-x/"
+Q140276114	P973	"https://seventhcitypress.com/"

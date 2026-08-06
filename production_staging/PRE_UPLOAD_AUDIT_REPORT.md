@@ -136,8 +136,24 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 | B3_HC | 179 | 6.14×9.21 | Y |
 | B3_PB | 205 | 5.50×8.50 | Y |
 
+## 5. Body-italic probes (narrative emphasis)
+
+| ISBN | Format | Italic | Roman | Not found | Verdict |
+|---|---|---:|---:|---:|---|
+| 9798256008048 | Vol I PB | 12 | 0 | 0 | PASS |
+| 9798256009953 | Vol II PB | 12 | 0 | 0 | PASS |
+| 9798256010072 | Vol III PB | 11 | 0 | 0 | PASS |
+| 9798295800801 | Vol I HC | 12 | 0 | 0 | PASS |
+| 9798295812675 | Vol II HC | 12 | 0 | 0 | PASS |
+| 9798295812705 | Vol III HC | 11 | 0 | 0 | PASS |
+| 9798256072704 | Omnibus PB | 35 | 0 | 0 | PASS |
+| 9798295884412 | Omnibus HC | 35 | 0 | 0 | PASS |
+| 9798256008819 | Vol I EPUB | 12 | 0 | 0 | PASS |
+| 9798256009625 | Vol II EPUB | 12 | 0 | 0 | PASS |
+| 9798256009809 | Vol III EPUB | 11 | 0 | 0 | PASS |
+
 ## Verdict
 
-**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, italics detected, formats consistent.
+**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, body italics verified, formats consistent.
 
 *Seventh City Press · PRE-UPLOAD AUDIT · f = 111.2 Hz*

@@ -1,21 +1,19 @@
 # Book 3 Kingdom — Hardcover 9798295812705
+**Portal status (Jason verbal ~2026-08-03 afternoon CT):** **LIVE / APPROVED** — see `scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md`. Local harvest notes below are historical staging inventory, not portal evidence.
 **Priority:** High
-**Upload ready:** NO
+**Upload ready:** NO — spine recheck required before Ingram
 
 ## Present
-- `interior.pdf` — 0.44 MB · **168 pp** · Royal 6.14×9.21 · `%PDF` OK
-- `cover_jacket.pdf` (= `DUSTJACKET_BOOK3.pdf`) — 9.68 MB
+- `interior.pdf` — post-geo rebuild · Royal 6.14×9.21 · ~179 pp (NEAR_LIVE vs CANON 170)
+- `cover_jacket.pdf` — **geometry era** (`JACKET_MX3_9798295812705_v1.pdf`) · matches site `book3-hardcover-v3.png`
+- `cover_caselam.pdf` — geometry era (`CASE_MX3_9798295812705_v1.pdf`)
+- `cover_jacket_preview.jpg` · `cover_front_web.png`
 - `MANUSCRIPT_CURRENT.txt`
 
-## Still missing
-- CANON pages **170** (harvested **168**, −2)
-- Rebuild from geo-fixed + apartment/balcony draft (PRE_GEO_FIX — critical for Book 3 dwelling language)
+## Still missing / blockers
+- Spine width: jacket may target older page count — confirm Δ before upload
+- PB wrap (geometry) still missing for sibling ISBN
 
-## Verification
-| Check | Result |
-|---|---|
-| Trim | Royal ✓ |
-| Pages | 168 vs 170 → NEAR_LIVE (−2); not STALE_V6 (285) |
-
-## Source path on Windows
-- Interior: `C:\Users\zh577\Desktop\google_books_upload\9798295812705_interior.pdf` (2026-07-03)
+## Cover source
+`E:\Masters_X_Trilogy_Archive\disk_cleanup_2026-07-10\jasoncholloway\trilogy_package\` (2026-07-07)  
+Staged 2026-07-28. Wrong cymatic/atrium jackets quarantined.

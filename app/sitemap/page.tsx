@@ -2,14 +2,13 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { books } from "@/lib/data/books";
 import { fieldNotes } from "@/lib/data/fieldNotes";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Site Index",
   description: "Directory of the Jason Carroll Holloway official digital platform and Seventh City Press.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/sitemap/",
-  },
-};
+  path: "/sitemap/",
+});
 
 export default function SitemapPage() {
   const volumes = books.filter(b => b.series === "Masters X" && b.slug !== "omnibus");
@@ -40,6 +39,7 @@ export default function SitemapPage() {
                 <li><Link href="/about" className="hover-gold">About the Author</Link></li>
                 <li><a href="https://seventhcitypress.com/" className="hover-gold">Seventh City Press</a></li>
                 <li><Link href="/contact" className="hover-gold">Contact & Rights</Link></li>
+                <li><Link href="/returns" className="hover-gold">Returns &amp; Refunds</Link></li>
               </ul>
             </div>
 
@@ -77,8 +77,12 @@ export default function SitemapPage() {
                 <li><Link href="/chamber" className="hover-gold" style={{ fontWeight: 600 }}>Analysis Chamber</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/folio-visualizer" className="hover-gold">Folio Visualizer</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/harmonic-stack" className="hover-gold">Harmonic Stack</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/harmonic-derivations" className="hover-gold">Harmonic Derivations</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/global-map" className="hover-gold">Global Map</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/schumann-baseline" className="hover-gold">Schumann Monitor</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/tremor-analysis" className="hover-gold">Tremor Analysis</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/reading-sequence" className="hover-gold">Reading Sequence</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/research-archive" className="hover-gold">Research Archive</Link></li>
               </ul>
             </div>
 

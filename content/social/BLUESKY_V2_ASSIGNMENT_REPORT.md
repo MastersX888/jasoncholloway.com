@@ -1,5 +1,5 @@
 # Bluesky v2 Assignment Report
-**Executed:** 2026-07-30 07:59 UTC
+**Executed:** 2026-08-01 01:44 UTC
 **Jason approval:** proceed with Bluesky v2 (2026-07-30 ~2:46 AM CT)
 
 ## Summary
@@ -34,17 +34,17 @@ Live v1 Bluesky captions (`BLUESKY_LIVE_CAPTIONS.json`) — manifest `bluesky` f
 
 | Post ID | Slot | Account | Status | Live URLs |
 |---------|-----:|---------|--------|-----------|
-| `MZWMk` | 1 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxq65aej2y |
-| `n9SnW` | 2 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxqhpbdj2y |
-| `ilji7` | 3 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxqrwb6d2e |
-| `zqOzc` | 4 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxr3pbwg23 |
-| `9jk9f` | 5 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxrgh3lx2v |
-| `X4KX7` | 6 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxrptb732e |
-| `23s28` | 7 | author | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:7edaxfuf3jrzxecuf7zgcsch/post/3mrtxrzsak32g |
-| `5cb5j` | 1 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxsahcp62e |
-| `FEPFo` | 2 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxshkzxy2p |
-| `gIig7` | 3 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxsomak52g |
-| `OxrOA` | 4 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxsvri472o |
-| `ySUye` | 5 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxt3ngv22n |
-| `gIigP` | 6 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxtcmtho2w |
-| `TpuTD` | 7 | imprint | OK (live) | bluesky:bluesky: https://bsky.app/profile/did:plc:3sihllsqld5rvvlt47v33swz/post/3mrtxtjqdda2p |
+| `—` | 1 | author | FAIL | — |
+| `—` | 2 | author | FAIL | — |
+| `—` | 3 | author | FAIL | — |
+| `—` | 4 | author | FAIL | — |
+| `—` | 5 | author | FAIL | — |
+| `—` | 6 | author | FAIL | — |
+| `—` | 7 | author | FAIL | — |
+| `—` | 1 | imprint | FAIL | — |
+| `—` | 2 | imprint | FAIL | — |
+| `—` | 3 | imprint | FAIL | — |
+| `—` | 4 | imprint | FAIL | — |
+| `—` | 5 | imprint | FAIL | — |
+| `—` | 6 | imprint | FAIL | — |
+| `—` | 7 | imprint | FAIL | — |

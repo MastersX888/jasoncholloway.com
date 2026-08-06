@@ -45,3 +45,13 @@ Outputs to `public/press-kit/` and copies to `Downloads/`.
 ## Deployed
 
 PDFs copied to `out/press-kit/` and deployed to jasoncholloway.com/press-kit/
+
+---
+
+## 2026-08-01 Vivian follow-up regen
+
+- Stripped unverified “Wholesale discount 55%, returns accepted” (PUB-11 still open).
+- Omnibus prices in release/synopses aligned to Fact Sheet / `books.ts`: **$44.99 HC / $32.99 PB**.
+- Blake framing → graduate student / SubTropolis guard (site canon).
+- Outputs in `public/press-kit/` — **not deployed** until Jason Phase 4.
+- Report: `scratch/ops_reports/VIVIAN_QC_PRESS_AND_S6_FOLLOWUP_2026-08-01.md`

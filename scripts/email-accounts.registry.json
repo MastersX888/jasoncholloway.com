@@ -1,30 +1,86 @@
 {
-  "version": 1,
-  "description": "Single source of truth for email. Only 'logins' need Thunderbird + MCP setup. 'aliases' deliver to a login inbox. 'website_only' are forwards/contacts — no client setup.",
+  "version": 3,
+  "description": "Unified monitoring: 3 MCP logins cover all mail. Consolidate SCP aliases onto jason@ in Google Admin.",
+  "monitoring": {
+    "cadence": "daily",
+    "focus": "Seventh City Press — publishing, Ingram, KDP, Author Central, imprint setup, Web3Forms, press inquiries",
+    "daily_sweep_accounts": ["gmail-personal", "scp-jason", "proton-personal"],
+    "skill": "~/.cursor/skills/email-daily-sweep/SKILL.md",
+    "report_dir": "scratch/email_reports",
+    "master_plan": "scratch/SCP_AUTOMATION_MASTER_PLAN.md"
+  },
+  "ops_agents": {
+    "email": {
+      "cadence": "daily",
+      "skill": "~/.cursor/skills/email-daily-sweep/SKILL.md",
+      "report_dir": "scratch/email_reports"
+    },
+    "social": {
+      "cadence": "daily",
+      "skill": "~/.cursor/skills/social-daily-sweep/SKILL.md",
+      "script": "scripts/social_daily_sweep.py",
+      "report_dir": "scratch/ops_reports/social",
+      "status": "active_outstand_bridge",
+      "primary_hub": "outstand",
+      "platforms": {
+        "facebook": {
+          "source": "outstand",
+          "accounts": ["IwQhX", "7BvrW"],
+          "meta_logged_in": true
+        },
+        "instagram": {
+          "source": "outstand",
+          "account": "1vWPG",
+          "linked_to_meta": true
+        },
+        "x": {
+          "source": "outstand_bridge",
+          "account": "jaHn2",
+          "handle": "jasonhollowaykc",
+          "metrics_note": "reconnect in Outstand if token_expired"
+        },
+        "bluesky": {
+          "source": "outstand",
+          "accounts": ["J15V3", "4RSwi"]
+        },
+        "pinterest": {
+          "source": "outstand",
+          "account": "pxPfM"
+        }
+      },
+      "optional_direct_api": {
+        "meta_graph": "pending_page_id_and_long_lived_token",
+        "x_direct": "not_used_use_outstand_bridge"
+      }
+    },
+    "groundswell": {
+      "cadence": "weekly",
+      "skill": "~/.cursor/skills/groundswell-weekly-agent/SKILL.md",
+      "report_dir": "scratch/ops_reports/groundswell/weekly",
+      "repo": "groundswell-monitor/"
+    },
+    "evening_checklist": {
+      "cadence": "daily",
+      "report_dir": "scratch/ops_reports",
+      "status": "planned"
+    }
+  },
   "logins": [
     {
       "id": "gmail-personal",
       "email": "zh5779485@gmail.com",
       "display_name": "Gmail Personal",
       "provider": "google",
-      "auth": "oauth-preferred",
-      "imap_host": "imap.gmail.com",
-      "imap_port": 993,
-      "smtp_host": "smtp.gmail.com",
-      "smtp_port": 465,
-      "notes": "Personal Gmail. Use Google OAuth in Thunderbird."
+      "auth": "app-password",
+      "covers": "Personal mail, jasoncholloway.com Web3Forms, infra alerts"
     },
     {
       "id": "scp-jason",
       "email": "jason@seventhcitypress.com",
-      "display_name": "Seventh City Press",
+      "display_name": "SCP Primary",
       "provider": "google-workspace",
-      "auth": "oauth-preferred",
-      "imap_host": "imap.gmail.com",
-      "imap_port": 993,
-      "smtp_host": "smtp.gmail.com",
-      "smtp_port": 465,
-      "notes": "Primary Workspace login. Aliases below deliver here if Scenario A."
+      "auth": "app-password",
+      "covers": "All Seventh City Press mail + aliases once consolidated in Admin"
     },
     {
       "id": "proton-personal",
@@ -32,34 +88,21 @@
       "display_name": "Proton Personal",
       "provider": "proton-bridge",
       "auth": "proton-bridge",
-      "imap_host": "127.0.0.1",
-      "imap_port": 1143,
-      "smtp_host": "127.0.0.1",
-      "smtp_port": 1025,
       "requires": ["Proton Mail Bridge running"],
-      "notes": "Use Bridge credentials from the Bridge app, not your Proton login."
+      "covers": "KDP, Author Central, Amazon vendor threads"
     }
   ],
-  "aliases": [
-    {
-      "email": "info@seventhcitypress.com",
-      "delivers_to": "scp-jason",
-      "setup": "No separate Thunderbird account. Configure 'Send mail as' in Gmail for jason@."
-    },
-    {
-      "email": "social@seventhcitypress.com",
-      "delivers_to": "scp-jason",
-      "setup": "Alias on jason@ unless separate Workspace user."
-    },
-    {
-      "email": "media@seventhcitypress.com",
-      "delivers_to": "scp-jason",
-      "setup": "Alias on jason@ unless separate Workspace user."
-    }
+  "aliases_on_scp_jason": [
+    "press@seventhcitypress.com",
+    "info@seventhcitypress.com",
+    "social@seventhcitypress.com",
+    "media@seventhcitypress.com",
+    "sales@seventhcitypress.com",
+    "jasoncholloway@seventhcitypress.com"
   ],
-  "website_only": [
-    { "email": "press@seventhcitypress.com", "note": "Site contact / press kits" },
-    { "email": "jason@jasoncholloway.com", "note": "Author site press" },
-    { "email": "dispatch@jasoncholloway.com", "note": "Chapters-sent page" }
-  ]
+  "forwards_to_gmail": [
+    "jason@jasoncholloway.com via Web3Forms",
+    "dispatch@jasoncholloway.com — not routed yet"
+  ],
+  "admin_todo": "Google Admin: add aliases to jason@, delete extra licensed users (press, sales, jasoncholloway as separate logins)"
 }

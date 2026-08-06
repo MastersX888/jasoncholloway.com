@@ -1,0 +1,8 @@
+Thank you for the follow-up, Bovlb. I've added external identifiers and source references to all four John Hawkes novel items:
+
+* [Death, Sleep & the Traveler (Q140317284)](https://www.wikidata.org/wiki/Q140317284) — ISBN-13 9780811205221, OCLC 857315, LCCN 73089481, Open Library OL18330907M, plus publisher and Internet Archive references
+* [The Beetle Leg (Q140317283)](https://www.wikidata.org/wiki/Q140317283)
+* [Travesty (Q140317285)](https://www.wikidata.org/wiki/Q140317285)
+* [The Passion Artist (Q140317286)](https://www.wikidata.org/wiki/Q140317286)
+
+References are now attached to the author, publication date, publisher, title, and identifier statements on each item. Please let me know if anything else is needed.

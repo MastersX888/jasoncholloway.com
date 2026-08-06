@@ -1,0 +1,42 @@
+---
+description: Seventh City Press business automation context — email, social, Groundswell dashboard, Jason's approval workflow
+alwaysApply: true
+---
+
+# SCP Business Operations Context
+
+Jason is wrapping the Masters X trilogy imprint (Seventh City Press LLC): books published, promotional campaigns ready, imprint automated.
+
+## Jason's goal
+
+Evening-only involvement: review an approval checklist, send approved items, move on to audiobook/screenplay, new writing, and 501(c)(3) career in Kansas City.
+
+## Three parallel agents
+
+1. **Email (daily)** — MCP accounts gmail-personal, scp-jason, proton-personal. Skill: `~/.cursor/skills/email-daily-sweep/SKILL.md`. Reports: `scratch/email_reports/`.
+2. **Social (daily)** — unified analytics: Facebook Business, Instagram, X, Bluesky, Pinterest, Outstand. Skill: `~/.cursor/skills/social-daily-sweep/SKILL.md`. Reports: `scratch/ops_reports/social/`.
+3. **Groundswell (weekly + data refresh)** — `groundswell-monitor/` dashboard, pipelines, weekly deliverables. Skill: `~/.cursor/skills/groundswell-weekly-agent/SKILL.md`.
+
+Master plan: `scratch/SCP_AUTOMATION_MASTER_PLAN.md`
+
+## Priority order for Jason
+
+1. Money / overdue / legal / notarization
+2. Publishing blockers (Ingram, KDP, Author Central, covers, mail forwarding)
+3. Business inquiries (press, readers, Web3Forms chapter requests)
+4. Social engagement needing human voice
+5. Admin/setup noise — auto-clean when safe
+
+## Catalog facts agents must know
+
+- **Amazon:** Kindle Vol I–III only (ASINs B0H4KYMSM1, B0H4KQ4YQJ, B0H4L36X21). No omnibus on Amazon.
+- **Print/omnibus:** IngramSpark only.
+- **Email registry:** `scripts/email-accounts.registry.json`
+
+## Executive QC gate (Vivian)
+
+**Vivian** — Editorial Quality & Pre-Publication Control. Final QC on any asset marked publish/send/public-facing before it reaches Jason's Phase 4 evening checklist. Distinct from **Eleanor** (literary consulting / manuscript development). Protocol: `scratch/EDITORIAL_QC_PROTOCOL.md`. Morgan routes; Vivian clears; Jason approves.
+
+## Never auto without approval
+
+Money, legal, press/reader replies, social posts, vendor commitments. No publish without Vivian pass + Jason approval.

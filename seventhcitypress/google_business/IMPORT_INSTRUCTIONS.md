@@ -1,6 +1,8 @@
 # Seventh City Press — Google Business Profile Import Package
 
-**Prepared:** July 12, 2026
+**Prepared:** July 12, 2026  
+**Steps refreshed:** August 1, 2026 — see also `scratch/ops_reports/packets/GBP_IMPORT_PACKET_2026-08-01.md`  
+**Status:** Package ready · **Claim 5 IN PROGRESS** (~03:58 CT 2026-08-03) — import/verify in flight (Jason / parent browser)
 
 ---
 

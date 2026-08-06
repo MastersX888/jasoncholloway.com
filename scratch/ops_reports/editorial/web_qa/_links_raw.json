@@ -1,0 +1,913 @@
+{
+ "generated": "2026-07-31T08:20:00.346Z",
+ "jch_sitemap": [
+  {
+   "url": "https://jasoncholloway.com/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/about/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/about/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/omnibus/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/omnibus/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/hawkes-monograph/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/hawkes-monograph/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/books-like-foucaults-pendulum/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/books-like-foucaults-pendulum/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/folio-visualizer/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/folio-visualizer/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/global-map/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/global-map/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/harmonic-stack/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/harmonic-stack/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/harmonic-derivations/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/harmonic-derivations/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/reading-sequence/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/reading-sequence/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/research-archive/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/research-archive/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/schumann-baseline/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/schumann-baseline/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/tremor-analysis/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/tremor-analysis/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/contact/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/contact/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/returns/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/returns/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/sitemap/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/sitemap/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/subtropolis/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/subtropolis/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/111-hz/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/111-hz/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/voynich-manuscript/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/voynich-manuscript/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/ars-notoria/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/ars-notoria/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/strahov-monastery/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/strahov-monastery/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/codex-gigas/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/codex-gigas/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/kansas-city-locations/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/kansas-city-locations/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/oscar-01/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/oscar-01/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/u2-test-pilots/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/u2-test-pilots/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/cymatics/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/cymatics/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/meramec-caverns/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/meramec-caverns/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-frequency-that-was-already-there/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-frequency-that-was-already-there/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/sound-into-form-hans-jenny/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/sound-into-form-hans-jenny/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/why-kansas-city/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/why-kansas-city/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/three-factions-one-declassified-document/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/three-factions-one-declassified-document/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-stone-remembers/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-stone-remembers/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/",
+   "ct": "text/html; charset=utf-8"
+  }
+ ],
+ "jch_internal": [
+  {
+   "url": "https://jasoncholloway.com/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/about/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/about/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/omnibus/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/omnibus/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/hawkes-monograph/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/hawkes-monograph/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/books-like-foucaults-pendulum/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/books-like-foucaults-pendulum/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/folio-visualizer/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/folio-visualizer/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/global-map/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/global-map/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/harmonic-stack/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/harmonic-stack/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/harmonic-derivations/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/harmonic-derivations/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/reading-sequence/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/reading-sequence/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/research-archive/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/research-archive/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/schumann-baseline/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/schumann-baseline/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/tremor-analysis/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/tremor-analysis/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/contact/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/contact/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/returns/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/returns/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/sitemap/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/sitemap/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/subtropolis/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/subtropolis/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/111-hz/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/111-hz/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/voynich-manuscript/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/voynich-manuscript/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/ars-notoria/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/ars-notoria/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/strahov-monastery/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/strahov-monastery/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/codex-gigas/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/codex-gigas/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/kansas-city-locations/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/kansas-city-locations/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/oscar-01/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/oscar-01/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/u2-test-pilots/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/u2-test-pilots/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/cymatics/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/cymatics/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/gospel-of-thomas/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/field-notes/meramec-caverns/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/field-notes/meramec-caverns/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-frequency-that-was-already-there/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-frequency-that-was-already-there/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-grimoire-that-was-a-study-aid/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/sound-into-form-hans-jenny/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/sound-into-form-hans-jenny/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/why-kansas-city/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/why-kansas-city/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/three-factions-one-declassified-document/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/three-factions-one-declassified-document/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/the-stone-remembers/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/the-stone-remembers/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/blog/a-document-that-cannot-be-unreleased/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/01e4147cff8141ee-s.p.10ked.7w885.g.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/01e4147cff8141ee-s.p.10ked.7w885.g.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/4ee71d90e0f663bd-s.p.0_4wfesx-21w2.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/4ee71d90e0f663bd-s.p.0_4wfesx-21w2.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/8bd76523131fa0fc-s.p.0jox806dnq5~c.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/8bd76523131fa0fc-s.p.0jox806dnq5~c.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/media/e4505858a30c79c2-s.p.093j32h9etvau.woff2",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/media/e4505858a30c79c2-s.p.093j32h9etvau.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/chunks/02412~hl1l-3j.css",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/chunks/02412~hl1l-3j.css",
+   "ct": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/chunks/112dsg-~c_p~v.js",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/chunks/112dsg-~c_p~v.js",
+   "ct": "application/javascript"
+  },
+  {
+   "url": "https://jasoncholloway.com/favicon.ico?favicon.0x3dzn~oxb6tn.ico",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/favicon.ico?favicon.0x3dzn~oxb6tn.ico",
+   "ct": "image/vnd.microsoft.icon"
+  },
+  {
+   "url": "https://jasoncholloway.com/media/JasonCHolloway-v2.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/media/JasonCHolloway-v2.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/cdn-cgi/l/email-protection#7c161d0f13123c0f190a191208141f1508050c0e190f0f521f1311",
+   "status": 404,
+   "finalUrl": "https://jasoncholloway.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book1-paperback.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book1-paperback.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book1-hardcover-v3.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book1-hardcover-v3.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/omnibus-hardcover-v3.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/omnibus-hardcover-v3.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/books/masters-x",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/books/masters-x/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/chunks/0vnjqm1ojlghz.css",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/chunks/0vnjqm1ojlghz.css",
+   "ct": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/_next/static/chunks/0kj.f2akvg85z.css",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/_next/static/chunks/0kj.f2akvg85z.css",
+   "ct": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/press-kit/Masters_X_Press_Kit.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Press_Kit.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://jasoncholloway.com/cdn-cgi/l/email-protection#046d6a626b44776172616a706c676d707d74766177772a676b69",
+   "status": 404,
+   "finalUrl": "https://jasoncholloway.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://jasoncholloway.com/cdn-cgi/l/email-protection#2a404b5945446a594f5c4f445e4249435e535a584f595904494547",
+   "status": 404,
+   "finalUrl": "https://jasoncholloway.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://jasoncholloway.com/cdn-cgi/l/email-protection#2c45424a436c5f495a494258444f4558555c5e495f5f024f4341",
+   "status": 404,
+   "finalUrl": "https://jasoncholloway.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://jasoncholloway.com/cdn-cgi/l/email-protection#a2cbccc4cde2d1c7d4c7ccd6cac1cbd6dbd2d0c7d1d18cc1cdcf",
+   "status": 404,
+   "finalUrl": "https://jasoncholloway.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book2-paperback.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book2-paperback.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book2-hardcover-v3.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book2-hardcover-v3.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book3-paperback.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book3-paperback.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/covers/book3-hardcover-v3.png",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/covers/book3-hardcover-v3.png",
+   "ct": "image/png"
+  },
+  {
+   "url": "https://jasoncholloway.com/chamber/folio-visualizer",
+   "status": 200,
+   "finalUrl": "https://jasoncholloway.com/chamber/folio-visualizer/",
+   "ct": "text/html; charset=utf-8"
+  }
+ ],
+ "jch_external": [
+  "https://www.googletagmanager.com/gtag/js?id=G-79RDL3BDEH",
+  "https://www.instagram.com/jasonhollowaykc/",
+  "https://www.facebook.com/profile.php?id=61588710027163",
+  "https://x.com/jasonhollowaykc",
+  "https://www.pinterest.com/seventhcitypress/",
+  "https://seventhcitypress.com/",
+  "https://seventhcitypress.com/privacy/",
+  "https://www.amazon.com/dp/B0H4KYMSM1",
+  "https://play.google.com/store/search?q=9798256008819&amp;c=books",
+  "https://shop.ingramspark.com/b/084?params=oYEloaPR0fGBR12tYLxinWD2T2BHRoAzXT3DiCBYyA2",
+  "https://bookshop.org/search?keywords=9798256008048&amp;affiliate=126177",
+  "https://shop.ingramspark.com/b/084?params=v62PtydEkfxow8AfXuvbd9dtoSpnyxAAHmRQxMUuZFb",
+  "https://www.amazon.com/dp/B0H4KQ4YQJ",
+  "https://play.google.com/store/search?q=9798256009625&amp;c=books",
+  "https://shop.ingramspark.com/b/084?params=tQ1ogc5ZoVGesfjTi07TDRzxnZu6iGrMQZwwoLpr8H0",
+  "https://bookshop.org/search?keywords=9798256009953&amp;affiliate=126177",
+  "https://shop.ingramspark.com/b/084?params=jbxhmyTXaZYP9tOaUe5x3PaTlo0m50dkqx0QIcP0kQO",
+  "https://www.amazon.com/dp/B0H4L36X21",
+  "https://play.google.com/store/search?q=9798256009809&amp;c=books",
+  "https://shop.ingramspark.com/b/084?params=xkYCcaKlPEx7bhKAnxXKal6Yo1SWaPR9bZLFI0lrzsK",
+  "https://bookshop.org/search?keywords=9798256010072&amp;affiliate=126177",
+  "https://shop.ingramspark.com/b/084?params=9U4mGdswEJmFH7KEFg6ksvEDygOX4FAcr2zBs7eH72i",
+  "https://shop.ingramspark.com/b/084?params=QCSm4Cs8X0r8XkWm865RXOqXWvU4FbMlEf4GhiViHuy",
+  "https://shop.ingramspark.com/b/084?params=5euticmifKEyNYtkmPSmmxiTwypmN5nErByeUkomLfk",
+  "https://bookshop.org/lists/masters-x-trilogy-seventh-city-press?affiliate=126177",
+  "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
+  "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
+  "https://play.google.com/store/search?q=9798295778926&amp;c=books",
+  "https://www.youtube.com/watch?v=b1YDufouqbY",
+  "https://www.huntmidwest.com/subtropolis/",
+  "https://en.wikipedia.org/wiki/SubTropolis",
+  "https://www.atlasobscura.com/places/subtropolis",
+  "https://doi.org/10.1121/1.414642",
+  "https://beinecke.library.yale.edu/collections/highlights/voynich-manuscript",
+  "https://en.wikipedia.org/wiki/Voynich_manuscript",
+  "https://www.sciencedirect.com/science/article/pii/S1040618213007982",
+  "https://www.strahovskyklaster.cz",
+  "https://www.codexgigas.se",
+  "https://www.kb.se/codex-gigas",
+  "https://www.atomicheritage.org",
+  "https://www.merameccaverns.com"
+ ],
+ "scp_sitemap": [
+  {
+   "url": "https://seventhcitypress.com/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/contact/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/contact/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/privacy/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/privacy/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Masters_X_Press_Kit.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Press_Kit.pdf",
+   "ct": "text/html; charset=utf-8"
+  }
+ ],
+ "scp_internal": [
+  {
+   "url": "https://seventhcitypress.com/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/contact/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/contact/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/privacy/",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/privacy/",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Masters_X_Press_Kit.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Press_Kit.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/01e4147cff8141ee-s.p.10ked.7w885.g.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/01e4147cff8141ee-s.p.10ked.7w885.g.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/051742360c26797e-s.p.0f97p8c3305p~.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/4ee71d90e0f663bd-s.p.0_4wfesx-21w2.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/4ee71d90e0f663bd-s.p.0_4wfesx-21w2.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/8bd76523131fa0fc-s.p.0jox806dnq5~c.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/8bd76523131fa0fc-s.p.0jox806dnq5~c.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/media/e4505858a30c79c2-s.p.093j32h9etvau.woff2",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/media/e4505858a30c79c2-s.p.093j32h9etvau.woff2",
+   "ct": "font/woff2"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/chunks/06ex5z8pf3j.-.css",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/chunks/06ex5z8pf3j.-.css",
+   "ct": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/chunks/06iin6_e6q6sp.css",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/chunks/06iin6_e6q6sp.css",
+   "ct": "text/css; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/_next/static/chunks/179gyooc6qqt5.js",
+   "status": 200,
+   "finalUrl": "https://seventhcitypress.com/_next/static/chunks/179gyooc6qqt5.js",
+   "ct": "application/javascript"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Masters_X_Press_Release.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Press_Release.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Masters_X_Fact_Sheet.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Fact_Sheet.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Holloway_Author_Bios.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Holloway_Author_Bios.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/press-kit/Masters_X_Synopses.pdf",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/press-kit/Masters_X_Synopses.pdf",
+   "ct": "text/html; charset=utf-8"
+  },
+  {
+   "url": "https://seventhcitypress.com/cdn-cgi/l/email-protection",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://seventhcitypress.com/cdn-cgi/l/email-protection#671715021414271402110209130f040e131e17150214144904080a",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  },
+  {
+   "url": "https://seventhcitypress.com/cdn-cgi/l/email-protection#a4d4d6c1d7d7e4d7c1d2c1cad0ccc7cdd0ddd4d6c1d7d78ac7cbc9",
+   "status": 404,
+   "finalUrl": "https://seventhcitypress.com/cdn-cgi/l/email-protection",
+   "ct": "text/html"
+  }
+ ],
+ "scp_external": [
+  "https://www.instagram.com/jasonhollowaykc/",
+  "https://www.facebook.com/profile.php?id=61588710027163",
+  "https://x.com/jasonhollowaykc",
+  "https://www.pinterest.com/seventhcitypress/",
+  "https://jasoncholloway.com/books/",
+  "https://jasoncholloway.com/about/",
+  "https://jasoncholloway.com/chamber/research-archive/",
+  "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
+  "https://jasoncholloway.com/books/masters-x/the-grimoire/",
+  "https://jasoncholloway.com/books/masters-x/the-kingdom/",
+  "https://jasoncholloway.com/books/masters-x/omnibus/",
+  "https://jasoncholloway.com/",
+  "https://jasoncholloway.com/books/masters-x/",
+  "https://jasoncholloway.com/books/hawkes-monograph/",
+  "https://jasoncholloway.com/contact/"
+ ],
+ "retail": [
+  {
+   "url": "https://www.amazon.com/dp/B0H4KYMSM1",
+   "status": 200,
+   "finalUrl": "https://www.amazon.com/dp/B0H4KYMSM1",
+   "ct": "text/html;charset=UTF-8"
+  },
+  {
+   "url": "https://www.amazon.com/dp/B0H4KQ4YQJ",
+   "status": 200,
+   "finalUrl": "https://www.amazon.com/dp/B0H4KQ4YQJ",
+   "ct": "text/html;charset=UTF-8"
+  },
+  {
+   "url": "https://www.amazon.com/dp/B0H4L36X21",
+   "status": 200,
+   "finalUrl": "https://www.amazon.com/dp/B0H4L36X21",
+   "ct": "text/html;charset=UTF-8"
+  }
+ ]
+}

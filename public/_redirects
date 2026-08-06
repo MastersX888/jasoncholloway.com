@@ -4,3 +4,23 @@ https://www.jasoncholloway.com/* https://jasoncholloway.com/:splat 301
 
 /press-kit/    https://seventhcitypress.com/    301
 /press-kit/*    https://seventhcitypress.com/press-kit/:splat    301
+
+# Retired /blog/ tree — the source was removed from the repo while eight URLs stayed
+# live from an older build. All eight are in the live sitemap and seven are linked
+# from published Bluesky and X posts, so they are redirected rather than dropped.
+# Cloudflare Pages matches these in order and only for paths with no built asset,
+# so they become inert on their own if /blog/ ever returns.
+/blog/the-frequency-that-was-already-there/    /field-notes/111-hz/                 301
+/blog/the-grimoire-that-was-a-study-aid/       /field-notes/ars-notoria/            301
+/blog/sound-into-form-hans-jenny/              /field-notes/cymatics/               301
+/blog/why-kansas-city/                         /field-notes/kansas-city-locations/  301
+/blog/the-stone-remembers/                     /field-notes/kansas-city-locations/  301
+# No field note covers these two yet. Hub redirect keeps the inbound links alive
+# until the essays are ported across; revisit once they exist.
+/blog/three-factions-one-declassified-document/ /field-notes/                       301
+/blog/a-document-that-cannot-be-unreleased/     /field-notes/                       301
+/blog/                                          /field-notes/                       301
+/blog/*                                         /field-notes/                       301
+
+# Lead magnet alias — older outreach used "free-chapters" in the filename.
+/downloads/masters-x-free-chapters.epub         /downloads/masters-x-opening-chapters.epub  301

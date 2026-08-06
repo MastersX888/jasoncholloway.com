@@ -1,0 +1,10 @@
+﻿{
+    "pid":  15756,
+    "started_at_ct":  "2026-08-02 22:10:28 -05:00",
+    "next_tick_eta_ct":  "2026-08-02 23:10:28 -05:00",
+    "interval_seconds":  3600,
+    "tick_pattern":  "AGENT_LOOP_TICK_hourly_status",
+    "prompt":  "Write scratch/ops_reports/hourly/STATUS_\u003clocal CT hour\u003e.md per HOURLY_STATUS_PROTOCOL.md — brief: what finished, what\u0027s blocked, exact Jason asks if any. Do not invent progress.",
+    "shell_id":  "649289",
+    "started_at_utc":  "2026-08-03T03:10:28.2949660Z"
+}

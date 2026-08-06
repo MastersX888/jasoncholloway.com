@@ -5,17 +5,27 @@ import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import { books } from "@/lib/data/books";
+import { buildBookGraph } from "@/lib/seo/bookSchema";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+const monograph = books.find((b) => b.slug === "hawkes-monograph");
+const MONOGRAPH_PATH = "/books/hawkes-monograph/";
+const MONOGRAPH_URL = `https://jasoncholloway.com${MONOGRAPH_PATH}`;
+
+export const metadata: Metadata = buildMetadata({
   title: "Innocence, Desire, and the Architecture of the Fall",
-  description: "The Grape and Its Counter-Symbols in the Fiction of John Hawkes. By Jason Carroll Holloway. Published by Seventh City Press.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/hawkes-monograph/",
+  description:
+    "The Grape and Its Counter-Symbols in the Fiction of John Hawkes — a critical study of motif architecture across Hawkes's seventeen novels. By Jason Carroll Holloway, published by Seventh City Press.",
+  path: MONOGRAPH_PATH,
+  ogType: "book",
+  image: {
+    url: "https://jasoncholloway.com/books/hawkes-monograph/opengraph-image",
+    width: 1200,
+    height: 630,
+    alt: "Innocence, Desire, and the Architecture of the Fall — paperback cover",
   },
-  openGraph: {
-    url: "https://jasoncholloway.com/books/hawkes-monograph/",
-  },
-};
+});
 
 export default function HawkesMonographPage() {
   const editions: {
@@ -80,44 +90,24 @@ export default function HawkesMonographPage() {
     );
   const viewValue = viewItems[0]?.price;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "@id": "https://jasoncholloway.com/books/hawkes-monograph/#work",
-    "name": "Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes",
-    "author": { "@id": "https://jasoncholloway.com/#person" },
-    "publisher": { "@id": "https://jasoncholloway.com/#organization" },
-    "inLanguage": "English",
-    "numberOfPages": 84,
-    "workExample": editions.flatMap((ed) =>
-      ed.isbn ? [{
-        "@type": "Book",
-        "@id": `https://jasoncholloway.com/books/hawkes-monograph/#${ed.format.toLowerCase()}`,
-        "isbn": ed.isbn,
-        "bookFormat": ed.format === "Paperback"
-          ? "https://schema.org/Paperback"
-          : ed.format === "Hardcover"
-            ? "https://schema.org/Hardcover"
-            : "https://schema.org/EBook",
-        "numberOfPages": 84,
-        "potentialAction": ed.buyUrl ? {
-          "@type": "BuyAction",
-          "target": ed.buyUrl
-        } : undefined,
-        "offers": {
-          "@type": "Offer",
-          "price": ed.format === "Paperback"
-            ? "14.99"
-            : ed.format === "Hardcover"
-              ? "29.99"
-              : "9.99",
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": ed.buyUrl ?? "https://jasoncholloway.com/books/hawkes-monograph/"
-        }
-      }] : []
-    )
-  };
+  const jsonLd = monograph
+    ? buildBookGraph(monograph, {
+        pageUrl: MONOGRAPH_URL,
+        name: monographTitle,
+        description: monograph.shortDesc,
+        genre: ["Literary Criticism"],
+        image: `https://jasoncholloway.com/covers/hawkes-paperback-web.png`,
+        extra: {
+          about: {
+            "@type": "Person",
+            name: "John Hawkes",
+            // Q2627935 is the novelist (1925–1998). Q1701580, named in the audit
+            // draft, is a different person entirely.
+            sameAs: "https://www.wikidata.org/wiki/Q2627935",
+          },
+        },
+      })
+    : null;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -143,7 +133,9 @@ export default function HawkesMonographPage() {
       <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([...(jsonLd ? [jsonLd] : []), breadcrumbJsonLd]),
+        }}
       />
       <section className="page-header" style={{ paddingBottom: "3rem" }}>
         <div className="container">
@@ -277,7 +269,7 @@ export default function HawkesMonographPage() {
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: "4rem" }}>
             <div>
-              <div className="section-label-row"><span className="label">About the Monograph</span></div>
+              <div className="section-label-row"><h2 className="label">About the Monograph</h2></div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "0.95rem" }}>
                 <p>
                   John Hawkes is among the most challenging and least understood novelists of the twentieth century.

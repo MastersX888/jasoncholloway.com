@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-08-02",
+  "updated_ct": "2026-08-02T23:20:00-05:00",
+  "source": "scratch/ops_reports/VIVIAN_QA_QUEUE_2026-08-02.md",
+  "rule": "Do not invent PASS. Dual agent_auto_ok + vivian_needed → primary_gate = vivian_needed.",
+  "total_items": 45,
+  "bands": {
+    "P0": 11,
+    "P1_site": 11,
+    "P1_scp": 3,
+    "P2": 11,
+    "P3": 9
+  },
+  "primary_gate": {
+    "vivian_needed": 29,
+    "agent_auto_ok_only": 2,
+    "pending": 13,
+    "n/a": 1,
+    "PASS": 0,
+    "PASS_WITH_NOTES": 0,
+    "BLOCK": 0
+  },
+  "flag_counts": {
+    "has_agent_auto_ok": 30,
+    "has_vivian_needed": 29,
+    "jason_C_implemented": 1
+  },
+  "by_band_primary": {
+    "P0": { "vivian_needed": 9, "agent_auto_ok_only": 1, "pending": 1 },
+    "P1_site": { "vivian_needed": 10, "pending": 1 },
+    "P1_scp": { "pending": 3 },
+    "P2": { "vivian_needed": 10, "agent_auto_ok_only": 1 },
+    "P3": { "pending": 8, "n/a": 1 }
+  },
+  "agent_auto_ok_only_ids": ["Q-11", "Q-36"],
+  "pending_ids": ["Q-09", "Q-21", "Q-23", "Q-24", "Q-25", "Q-37", "Q-38", "Q-39", "Q-40", "Q-41", "Q-42", "Q-43", "Q-44"],
+  "vivian_first_order": ["Q-01", "Q-02", "Q-03", "Q-04", "Q-11", "Q-08", "Q-09", "Q-10", "Q-12", "Q-06", "Q-07"],
+  "blockers_visible": [
+    { "id": "reading_15_vs_23", "state": "resolved_jason_C", "note": "chamber core 15 / corpus 23 — Vivian §1 spot only; no PASS" },
+    { "id": "ingram_pb_hc", "state": "closed", "note": "PUB-09/PUB-10 LIVE ~2026-08-03 CT Jason — see INGRAM_ALL_TITLES_LIVE_2026-08-03.md" },
+    { "id": "ingram_trade_terms", "state": "jason", "note": "PUB-11 screenshots still open" },
+    { "id": "deploy", "state": "hold", "note": "Phase 4 after Vivian PASS" },
+    { "id": "live_press_cdn", "state": "pending", "note": "Q-09 lags repo until deploy" }
+  ],
+  "pass_invented": false
+}

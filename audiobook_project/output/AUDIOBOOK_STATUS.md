@@ -1,71 +1,53 @@
 # AUDIOBOOK_STATUS.md — Masters X Omnibus · ElevenLabs Script Pass
-**Session:** July 11, 2026 · Fable
-**Source authority:** `INTERIOR_MASTERS_X_OMNIBUS_HC_6x9_v8.pdf` (686 pp HC; 684 extractable)
-**Deliverable:** `masters-x-omnibus-audiobook-fable-RETURN.zip`
+**Session:** August 4, 2026 · Morgan (geo-update regen)
+**Source authority (MASTER):** `C:\Users\zh577\Desktop\MASTER_UPLOAD_FOLDER\9798295884412_HC\9798295884412_HC_interior.pdf` (684 pp; Jul 28 2026)
+**Prior authority:** `INTERIOR_MASTERS_X_OMNIBUS_HC_6x9_v8.pdf` (scripts backed up under `output/_backup_pre_geo_2026-08-04/`)
 
 ---
 
-## What was done
+## What changed this pass
 
-Scripts were built **directly from the PDF authority** using layout geometry (pdfplumber), not from the flat text extract. The ReportLab interior is metrically consistent, which allowed deterministic reconstruction:
+Last-minute **geo-updates** in the HC master interior required a full script regen so ElevenLabs matches print.
 
-- **Paragraphs** detected by first-line indent (+20 pt) — no guesswork merging.
-- **Scene breaks** detected by vertical gap > 40 pt (normal pitch 18 pt), plus a page-top whitespace heuristic for breaks falling at page tops.
-- **Running headers** (`MASTERS X` / `HOLLOWAY`, 8 pt, y≈41) and **folios** (9 pt, y≈608) removed by position + size, not text matching — immune to headers bleeding mid-paragraph.
-- **Heading blocks** (10 pt label / 14 pt title / 8.5 pt italic frequency key) parsed structurally; titles that wrap (Vol. III Prologue) merged correctly.
-- Mid-epilogue section headers (`SIX MONTHS LATER`, `THREE WEEKS LATER`) recognized as fresh-page 10 pt caps and narrated as their own beats.
-- `omnibus_v8_fulltext.txt` was used as the **reconciliation control**, not the source (see audit below).
-
-Pipeline is reproducible: `pipeline/omnibus_audiobook/build_scripts.py` (single script, PDF in → all 77 scripts + manifest out).
-
-## Deliverables
-
-| Item | Status |
+| Item | Result |
 |------|--------|
-| `elevenlabs_scripts/masters-x-omnibus/` — 77 unit scripts | ✅ (V01: 23 · V02: 26 · V03: 28) |
-| `00_EPIGRAPHS_ONLY.txt` (optional standalone open) | ✅ |
-| `99_ABOUT_THE_AUTHOR_OPTIONAL.txt` (optional back matter) | ✅ (not counted in 77) |
-| `elevenlabs_scripts_v3_tagged/` — sparse `[pause]` variant | ✅ (scene breaks + epigraph beats only, ≪3% of characters) |
-| `chapter_manifest.csv` — 77 rows | ✅ |
-| `pronunciation_dictionary.csv` — 52 entries | ✅ (guide terms + Czech/Icelandic/French/Catalan/Latin terms discovered in pass) |
-| `TEST_PASTE_V01_01.txt` — ~800 words + narrator note | ✅ |
-| `ELEVENLABS_SCRIPT_SPEC.md` | ✅ Confirmed; §9 addendum documents settled conventions |
-| Splits (`_PART_B`) | Not needed — longest unit is V02_08 at 4,307 words (limit 10,000) |
+| Chapter map | Vol I unchanged; Vol II/III start pages shifted ~−2 from V02 Ch.8 onward (V03 prologue **465**) |
+| Volume ends | Vol II → p.462 · Vol III prose → p.681 (About the Author pp.683–684, not narrated) |
+| Scripts rebuilt | **77/77** plain + v3-tagged |
+| Total words | **135,666** |
+| vs prior scripts | **30 changed** · **47 identical** · **28** of the changed files hit geo keywords |
+| Pipeline flags | **0** |
+| Raw `Hz` / bare `111.2` / page artifacts | **0** |
+| Longest unit | V02_08 still ~4,307 words (under 10k) |
 
-## Quality gates
+Largest word-count deltas vs pre-geo backup: `V01_07` (+24) · `V03_20` (+11) · `V01_05` (+7) · `V03_17` (+7).
 
-| Gate | Result |
+## Deliverables (live)
+
+| Path | Status |
 |------|--------|
-| 77 narration units (23/26/28) | ✅ |
-| Zero `===== PAGE` / `MASTERS X` / `HOLLOWAY` in scripts | ✅ grep = 0 |
-| Zero standalone page-number lines | ✅ grep = 0 |
-| Zero raw `N Hz` remaining (all spoken) | ✅ grep = 0 |
-| `111.2 Hz` keystone spoken form | ✅ `one eleven point two hertz` — includes ~70 bare `111.2` prose occurrences |
-| Frequency keys spoken at chapter opens | ✅ all 71 keyed chapters (Vol. II keys read per-chapter from source, not batch-assumed) |
-| Curly quotes normalized | ✅ 0 remaining |
-| Word count | ✅ see reconciliation |
-| Manifest rows = script files | ✅ 77 = 77 |
-| Website / encyclopedia files touched | ✅ none |
+| `output/elevenlabs_scripts/masters-x-omnibus/` | ✅ refreshed |
+| `output/elevenlabs_scripts_v3_tagged/masters-x-omnibus/` | ✅ refreshed |
+| `output/chapter_manifest.csv` | ✅ refreshed |
+| `output/pronunciation_dictionary.csv` | unchanged (still valid) |
+| `output/TEST_PASTE_V01_01.txt` | prior (re-copy from V01_01 if desired) |
+| `pipeline/omnibus_audiobook/build_scripts.py` | ✅ page map updated for master PDF |
 
-## Word-count reconciliation
+## Rebuild command
 
-The handoff's ~139,261 figure counts the **raw extraction** — including `===== PAGE` markers (684 × 3 tokens), running headers, folios, title/copyright pages, and About the Author. Actual source **prose** (pp. 9–682, headers and folios stripped): **134,729 words**. Script total: **135,612 words** (**+0.66%**) — the surplus is spoken chapter headers, volume title lines, and Hz expansions (`109 Hz` = 2 words → `one hundred nine hertz` = 4). A per-unit reconciliation ran all 77 units against their source page ranges: **all within tolerance; no dropped or duplicated passages.**
+```powershell
+python audiobook_project\pipeline\omnibus_audiobook\build_scripts.py `
+  "C:\Users\zh577\Desktop\MASTER_UPLOAD_FOLDER\9798295884412_HC\9798295884412_HC_interior.pdf" `
+  "audiobook_project\output"
+```
 
-## Conventions settled (details in spec §9 addendum)
+## ElevenLabs next
 
-Decimal-Hz pair style generalized; bare `111.2` expanded; `Dr.` → Doctor everywhere; `Mr./Mrs./Ms.` and clock times left as printed (TTS-safe); degrees expanded; `Rudolf II` → the Second; `G4S` → G four S; volume titles read at each volume's first unit; epigraphs and About the Author delivered as optional standalone files; `— ·` key placeholders silent.
+1. Re-import / replace chapter `.txt` files in the Studio project (do not keep pre-geo versions).
+2. Pronunciation dictionary can stay.
+3. Re-run `TEST_PASTE_V01_01.txt` (or paste fresh from updated `V01_01`) before full generate.
+4. Prefer Multilingual v2 for the full ~15h run.
 
-## Open flags for the author
+## Canon note
 
-1. **Volume-title reading** (deferred decision) — resolved toward *read aloud*; delete the first line of V01_00 / V02_01 / V03_00 to reverse.
-2. **Epigraphs placement** — delivered standalone (`00_EPIGRAPHS_ONLY.txt`); paste ahead of V01_00 in the ElevenLabs project if you want them inside the book proper.
-3. **Publisher credit at open** (deferred) — not added; one sentence can be prepended to `00_EPIGRAPHS_ONLY.txt` if desired.
-4. ~~**`556.0 Hz` / `112.0 Hz`**~~ — trailing `.0` dropped per author (July 11, 2026): `five fifty-six hertz`, `one twelve hertz`.
-5. **Scene breaks at exact page tops** — detected via top-whitespace heuristic; if any beat sounds missing in a long chapter during proofing, flag the passage and it can be hand-checked against the PDF.
-6. **Canon untouched** — Missouri wine dialogue, Andrew Chen, seven notebooks, Moleskine ten-volume arithmetic: no prose edits anywhere; TTS normalization only.
-
-## Suggested ElevenLabs workflow
-
-1. Import `pronunciation_dictionary.csv` into the project first.
-2. Run `TEST_PASTE_V01_01.txt` on Multilingual v2 with the PVC; check the key line and Icelandic terms.
-3. Load plain scripts in filename order. Switch to the `_v3_tagged` variants only if testing Eleven v3 (audio tags are ignored — silently — by v2).
+TTS normalization only (Hz spoken forms, Dr.→Doctor, etc.). No intentional prose rewrites beyond what is in the master PDF.

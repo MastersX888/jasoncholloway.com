@@ -61,6 +61,30 @@ One recommended primary task for the session, with a reason why.
 
 ---
 
+## WEEK OF 2026-08-03 FOCUS
+
+**Arc:** Consolidation → **QA (auto COMPLETE)** → **Visualization v1 LIVE** · plan **ACCEPTED** 2026-08-02 ~22:35 CT  
+**Canonical business plan:** `scratch/ops_reports/SCP_BUSINESS_PLAN_REFINED.md` (**ACCEPTED**)  
+**Package:** `WEEK_KICKOFF_PLAN_2026-08-03.md` · `CONSOLIDATION_KICKOFF_2026-08-02.md` · **QA:** `QA_PHASE_KICKOFF_2026-08-02.md` · `VIVIAN_QA_QUEUE_2026-08-02.md` (45 items) · **15vs23:** `READING_SEQUENCE_15_VS_23_DECISION_2026-08-02.md` · **Viz:** `VISUALIZATION_PHASE_KICKOFF_2026-08-02.md` · **BI packs:** `scratch/ops_reports/bi/` · canvas `scp-bi-v1.canvas.tsx` · presence `PRESENCE_AUDIT_MAP_2026-08-02.md` · routing `MODEL_ASSIGNMENT_MATRIX_2026-08-02.md` · hourly `HOURLY_STATUS_PROTOCOL.md` · Groundswell `groundswell-monitor/`
+
+| Priority | Focus | Jason vs agent |
+|----------|-------|----------------|
+| **P0 Consolidation** | Ingram PB×3 + HC×3 **LIVE/APPROVED** ~2026-08-03 CT (Jason); PUB-11 wholesale verify still open; C: disk sustain; OPS-01 commit | Jason portal verify optional · agent trackers updated |
+| **P0 Free claims** | GR + Books Partner + GSC = week bar **3/3 CLOSED**; GBP Claim 5 **bonus COMPLETE**; Apple ASC SIDELINED | Packets closed except Apple resume later |
+| **Done — do not reopen** | GR→StoryGraph catalog import/form-fill **COMPLETE**; series librarian ticket **optional** | Parent Browser MCP only if revisiting |
+| **QA auto** | SAFE batch largely complete; Vivian human QC still open; **no PASS invented** | Vivian → Phase 4 |
+| **Done — reading sequence** | Jason **C** (2026-08-02 ~23:12 CT): chamber **core 15** / corpus **full 23**; CANON locked; Vivian §1 spot only | Vivian (no PASS yet) |
+| **Done — Viz v1** | Offline BI canvas + JSON packs (presence / funnel / SKU / QA); sales empty honest | Refresh JSON when sources change |
+| **Viz next** | Groundswell snapshot refresh mid-week; wire live metrics only after Jason CSVs/secrets | Agent + Nina |
+| **HOLD** | NetGalley ~$575 · Edelweiss · trade “55%/returns” until PUB-11 screenshots | Jason budget / proof |
+
+**Catalog lock:** Amazon Kindle Vol I–III only · print/omnibus IngramSpark.  
+**Browser MCP:** Parent-chat-only (subagents cannot retain tabs).  
+**Machine note (2026-08-02 eve):** Phone Link unlinked; C: ~7 GB free — still prefer ≥15 GB via OneDrive On-Demand / Cursor DB trim.  
+**QA auto (2026-08-02):** Kindle ASINs OK · no Amazon omnibus DP · shopping feed seventeen OK · fixed unused `content/catalog.ts` landmine · chamber/FN/sitemap SAFE fixes · **Jason C** reading-sequence: chamber core **15** / corpus **23** locked in CANON.
+
+---
+
 ## ACTIVE PROJECT REGISTRY
 
 These projects are always open. Morgan tracks them unless explicitly closed.
@@ -130,13 +154,14 @@ These projects are always open. Morgan tracks them unless explicitly closed.
 **Goal:** Morgan is always indexing. No profile unclaimed, no channel unexplored.
 
 **Ongoing Tasks (perpetual):**
-- Claim and optimize author profiles: Goodreads, BookBub, Library Thing, Smashwords Author Page, Open Library, Babelio, StoryGraph, Scribd Author Page
-- Wikipedia / Wikidata monitoring and expansion (Q140275300 — author; Q140276114 — trilogy)
-- Google Knowledge Panel claim and verification
+- Claim and optimize author profiles: Goodreads (shelves polish), BookBub verify, LibraryThing, Open Library (works polish), Babelio, StoryGraph (**catalog COMPLETE 2026-08-02**; series ticket optional), Scribd/Everand
+- Wikipedia / Wikidata monitoring and expansion (Q140275300 — author; Q140276114 — trilogy) — WP article deferred
+- Google Knowledge Panel — business Search KP live via GBP Claim 5 (~04:09 CT); Wikipedia article still none
+- Free claims this week: GR + Books Partner + GSC = week bar 3/3 CLOSED; GBP Claim 5 bonus COMPLETE; Apple ASC SIDELINED (see presence map)
 - Pinterest boards (Operation Pinboard — ongoing)
-- Amazon Author Central — all formats linked
-- IngramSpark catalog verification
-- NetGalley setup (for ARC distribution)
+- Amazon Author Central — Kindle Vol I–III; no omnibus
+- IngramSpark catalog — Masters X print **LIVE/APPROVED** ~2026-08-03 CT (Jason); PUB-11 55%/returnable still unverified
+- NetGalley — packet ready, **budget HOLD**
 - Press release distribution channels
 - Podcast pitch list (author interview targets)
 
@@ -314,23 +339,24 @@ Vivian is the last editorial desk before Jason sees anything public. She is exac
 | Wikidata Q140276114 | ✅ QS batch #262174 — P856 + P973 live |
 | Open Library #1584949 | ✅ Resolved Jul 30 |
 | X Outstand metrics | ✅ Reconnected Jul 30 ~2:19 PM CT |
-| C: disk space | 🔴 **~0.2 GB free** (worsened evening) — free space before packaging |
+| C: disk space | 🔴 **~33 MB free** — **blocker**; free before upload session |
 | Cash App borrow | 🟡 Due **Jul 31** |
 | **Italics (all print formats)** | ✅ **FIXED + VERIFIED Jul 30 ~7:10 PM CT** — **11/11 formats pass**. Six products were broken (all PB **and all HC**), not three; omnibus + EPUB always clean. Cause: ReportLab `registerFontFamily` missing → `<i>` silently dropped. Also fixed Book 3 HC wrong default trim (6.0×9.0 → 6.14×9.21). Promoted to `MASTER_UPLOAD_FOLDER` w/ `interior_PRE_ITALIC_FIX_2026-07-30.pdf` backups. Guard added to `pre_upload_audit.py` §5. Page counts: Vol I PB 185→183, Vol III HC 179→177 (spine ≈0.005 in, in tolerance). Doc: `ITALICS_FIX_VERIFICATION_2026-07-30.md`. **Vivian QC PASS Jul 30 ~7:50 PM** (visual before/after crops, zero word-count drift, recto openers intact, margins clean). |
-| **Preview back matter** | ✅ **FIXED Jul 30 ~9:45 PM.** Rebuilt Vol I PB/HC + Vol II PB/HC from canonical DOCX via new `preview_source.py`; `preview_section()` now returns `[]`-safe in all six generators. PB and HC previews word-for-word identical per volume; body outside preview identical to shipped; `pre_upload_audit.py` passes. Backups `interior_PRE_PREVIEW_FIX_2026-07-30.pdf`. **New page counts — Vol I PB 189, Vol I HC 163, Vol II PB 271, Vol II HC 225, Vol III PB 205, Vol III HC 177.** Max spine shift +0.015 in → River to confirm cover wraps before upload. **Vivian final verdict PASS on all six.** |
+| **Preview back matter** | ✅ **FIXED Jul 30 ~9:45 PM.** Rebuilt Vol I PB/HC + Vol II PB/HC from canonical DOCX via new `preview_source.py`; `preview_section()` now returns `[]`-safe in all six generators. **New page counts — Vol I PB 189, Vol I HC 163, Vol II PB 271, Vol II HC 225, Vol III PB 205, Vol III HC 177.** **Vivian final verdict PASS on all six.** |
+| **Cover templates (Jul 30)** | ✅ **PROCESSED Jul 31 ~12:30 AM.** PB spines remapped (Vol I 0.460″, Vol II 0.640″); HC spines unchanged. Six cover files in `MASTER_UPLOAD_FOLDER`. Doc: `COVER_TEMPLATE_REQUESTS_2026-07-30.md`. |
 | ~~Empty preview page~~ (resolved) | 🔴→✅ **Was live in market.** Vol I PB p179, Vol I HC p155, Vol II PB p261 print "CHAPTER ONE / THE STONE COTTAGE / *3.915 Hz · Iceland*" then "*End of Preview*" with **no chapter text**. Pre-existing (identical in pre-fix backups), not from the italics fix. Cause: generators pass `_build_elements(book, [])` for "no preview" but `preview_section()` emits half-title + blank + chapter opener unconditionally. Vol II HC instead ships a full 1,657-word Vol III preview → same volume, different back matter HC vs PB (accounts for the entire 1,644-word gap). Vol III, both omnibus, all EPUBs have no preview at all. `E:` archive not mounted but `_sources/build_docx/MASTERS_X_BOOK2/3_BUILD.docx` are local, so a real preview is sourceable. **Vivian BLOCKS replace of those 3; clears Vol III PB, Vol III HC, Vol II HC.** Doc: `editorial/VIVIAN_QC_INTERIORS_2026-07-30_SPLIT_VERDICT.md`. Awaiting Jason's decision. |
 | Vivian QC harness | `vivian_interior_qc.py` (ISBN/author/imprint/trim/margin), `vivian_inline_emphasis_proof.py` (before/after crops of true mid-paragraph emphasis), `vivian_reflow_check.py` (recto parity + blank-page pattern), `_preview_audit.py` (back-matter teaser completeness across all 11 formats). |
 | Imprint line missing (print) | 🟡 All **eight** print interiors omit **Seventh City Press** on the copyright page (only "Published in the United States of America / First Edition / ISBN"). All three EPUBs carry it. Pre-existing, catalog-wide; adding it reflows pagination. Logged as a note, not a block. |
 | **Verification harness** | `production_staging/_scripts_from_windows/audit_body_italics.py` — probe-based body-italic check across all 11 formats. Run before any interior upload. `compare_rebuild.py` diffs shipped vs rebuilt for content drift. |
 | Google Books update | 📅 Jul 31 AM (after disk + italics path) |
-| Geo manuscript uploads | 📅 After italics QC — `Desktop\MASTER_UPLOAD_FOLDER` |
+| Geo manuscript uploads | 📅 Ready — `Desktop\MASTER_UPLOAD_FOLDER` has interiors + covers |
 | Omnibus HC prominence | 📅 After disk freed — Vivian QC before Pinterest pin |
 | Author Central #50898755 | ⏳ Optional Kindle follow-up — Fabian replied Jul 30 |
 | Social loose ends (12) | ✅ 0 blocking — 4 deferred/backlog |
 | Ops commit `db7ed1c` | 🔵 Local only — not pushed |
 | Groundswell weekly | 📅 Aug 1 — submodule 17 commits behind |
 
-**Publish/send queue:** PB interior re-upload pending Vivian + Jason (do not auto-upload).
+**Publish/send queue:** 6 interiors Vivian PASS + 4 covers rebuilt — **Ingram print LIVE/APPROVED** ~2026-08-03 CT (Jason). Do not auto-upload further revisions without Jason.
 
 ## AFTERNOON OPS — 2026-07-30 (archived)
 
@@ -342,6 +368,6 @@ See `AFTERNOON_DELTA_2026-07-30.md` · `DISK_CLEANUP_REPORT_2026-07-30.md` · `S
 *"The office that never closes."*
 
 ---
-*Document Version: 1.0 | Created for Cursor Agent Permanent Memory*
+*Document Version: 1.1 | Created for Cursor Agent Permanent Memory*
 *Update this document whenever the project registry, team, or ISBN matrix changes.*
-*Last loaded into session: 2026-07-29*
+*Last loaded into session: 2026-08-02 · Week-of-2026-08-03 focus added*

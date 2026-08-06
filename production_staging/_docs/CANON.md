@@ -25,7 +25,7 @@ This file documents the locked narrative, biographical, and bibliographical fact
 ## 2 · BIBLIOGRAPHIC CANON
 
 ### A. The Masters X Trilogy
-*   **Omnibus Retail Prices (IngramSpark direct):** Hardcover **$29.99** · Paperback **$19.99**
+*   **Omnibus Retail Prices (IngramSpark direct):** Hardcover **$44.99** · Paperback **$32.99**
     *   *Omnibus Hardcover:* 686 pages *(printed interior, July 2026)*
     *   *Omnibus Paperback:* 734 pages *(printed interior, July 2026)*
 *   **Individual Page Counts (Ingram catalog, July 2026):**
@@ -74,6 +74,9 @@ This file documents the locked narrative, biographical, and bibliographical fact
 *   **Andrew Chen** — canonical proper name for the Distribution File compiler (not "Blackwood")
 *   **Marcus Chen** — unrelated character; shared surname with Andrew Chen is intentional
 *   **The Masters Foundation for Acoustic Research** — incorporated name (*Vol. II*); later styled **the William Masters Foundation** on the Distribution File title page (in-universe renaming/honorific evolution)
+*   **Reading sequence counts (locked 2026-08-02, Jason choice C):**
+    *   **Full research corpus:** **twenty-three** texts — novels, Strahov Premonstratensian curriculum / desks, research-archive Part I, marketing blurbs that mean the complete list.
+    *   **Chamber annotated core:** **fifteen** texts — `/chamber/reading-sequence/` only (public annotated extract). Do not collapse 23→15 on novel/archive/Strahov copy; do not expand the chamber list to 23 without a new Jason decision and a sourced title list for the missing eight.
 
 ---
 

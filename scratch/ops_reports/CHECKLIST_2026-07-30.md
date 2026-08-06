@@ -9,9 +9,9 @@
 
 | # | Item | Est. |
 |---|------|------|
-| 1 | **Ingram replace — 6 interiors** (italics + preview both fixed; **Vivian PASS on all six**). Update page counts: Vol I PB **189**, Vol I HC **163**, Vol II PB **271**, Vol II HC 225, Vol III PB 205, Vol III HC 177. **Cover templates requested Jul 30 ~11 PM** → zh5779485@gmail.com (CSS5343306–309); **await email → remap 4 covers** before upload. | 30–45 min |
+| 1 | **✅ JASON APPROVED — Ingram upload folder cleaned (Jul 31).** `Desktop\MASTER_UPLOAD_FOLDER` standardized to `{ISBN}_{format}_{type}.pdf`; 24 stale files deleted, 38 renamed. Open `COVER_PREVIEW.html` then pull per folder. Update page counts on upload: Vol I PB **189**, Vol I HC **163**, Vol II PB **271**, Vol II HC 225, Vol III PB 205, Vol III HC 177. Log: `MASTER_UPLOAD_CLEANUP_2026-07-31.md`. | Ready to upload |
 | 2 | **Cash App borrow** — due Jul 31 | 2 min |
-| 3 | **Free C: disk space** (~2 GB free after temp clear — still tight) | 15–30 min |
+| 3 | **Free C: disk space** — 🔴 **~33 MB free** (critical). Free space before any further promotions or packaging. | 15–30 min |
 | 4 | **Idealist saved search + email alerts** | 5 min |
 | 5 | **Google Books partner update** | 10 min |
 
@@ -40,9 +40,13 @@ Vivian caught two defects that were **already live in market**, neither caused b
 
 **Verified:** every word outside the preview is identical to the shipped file in all four rebuilds; PB and HC previews are now word-for-word identical within each volume; chapter openers still recto; `pre_upload_audit.py` passes editorial + italics + cross-format consistency. Backups saved as `interior_PRE_PREVIEW_FIX_2026-07-30.pdf`.
 
-**⚠ Page counts changed — update Ingram, and have River confirm the cover wraps fit:** Vol I PB 185→**189**, Vol I HC 159→**163**, Vol II PB 265→**271**, Vol II HC 225 (unchanged), Vol III PB 205 (unchanged), Vol III HC 179→**177**. Largest spine shift +0.015 in.
+**⚠ Page counts changed — update Ingram metadata field on upload:** Vol I PB 185→**189**, Vol I HC 159→**163**, Vol II PB 265→**271**, Vol II HC 225 (unchanged), Vol III PB 205 (unchanged), Vol III HC 179→**177**.
 
-**Vivian final verdict: PASS on all six** — `editorial/VIVIAN_QC_INTERIORS_2026-07-30_SPLIT_VERDICT.md`.
+**Paperback covers repaired and independently cleared (Jul 31 02:34 CT):** Vol I PB is 11.686 × 8.750″ with a 0.436″ spine; Vol II PB is 11.864 × 8.750″ with a 0.614″ spine. Fresh Vivian rendering against the actual Jul 30 guides found centered/contained spine copy, no clipping, no panel crop or distortion, compliant safe areas/bleed/barcode areas, and exact page-box geometry. Vol I HC + Vol III HC jackets/cases remain unchanged and retained PASS.
+
+**Vivian interior verdict: PASS on all six interiors** — `editorial/VIVIAN_QC_INTERIORS_2026-07-30_SPLIT_VERDICT.md`.
+
+**Vivian cover gate CLEARED — PASS 6/6 (Jul 31 02:34 CT).** Final record: `editorial/VIVIAN_QC_COVERS_2026-07-31.md`. **Jason approved visually Jul 31; upload folder cleaned and renamed — no Ingram upload yet.**
 
 ---
 

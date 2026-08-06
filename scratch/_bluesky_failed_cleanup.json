@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rBQe1",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "dgemc",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "a1FNK",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "v84Oa",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "MZWp3",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "n9SB7",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  },
+  {
+    "id": "ilj4A",
+    "action": "delete",
+    "status": 200,
+    "failed": 2
+  }
+]

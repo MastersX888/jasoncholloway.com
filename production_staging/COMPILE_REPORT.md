@@ -61,15 +61,18 @@ Italics: preserved for single-run edits; multi-run paragraph rewrites fall back 
 
 ---
 
-## Phase D — Covers / spine
+## Phase D — Covers / spine (updated 2026-07-28 evening)
+
+Wrong cymatic / chamber covers **quarantined** (`Desktop\_WRONG_COVERS_QUARANTINE_2026-07-28`).
 
 | Cover | Action |
 |---|---|
-| HC jacket + caselam | **REUSED** — new interior = 684 pp (same as jacket target) |
-| PB wrap | **REUSED** — new interior = 732 pp (same as wrap target) |
+| Books 1–3 HC jacket + caselam | **RESTAGED** from E:`…\trilogy_package\` geometry era (site match) |
+| Omnibus HC jacket / caselam | **REMOVED** — geometry print PDF not found (web PNG only) |
+| Omnibus PB wrap | **REMOVED** — same |
+| Books 1–3 PB wraps | **MISSING** — geometry wraps not on E: |
 
-Spine Δ vs CANON (686/734): **0.0045″** on 50# White — no template regen this pass.  
-Ingram templates in Downloads not required.
+Books HC interiors: B1 **159** / B2 **225** / B3 **179** — recheck spine vs jackets before Ingram.
 
 ---
 

@@ -72,11 +72,7 @@ Yuki nodded. "The third observation in my application essay."
 
 "You flagged that."
 
-"It is why you are here."
-
-[pause]
-
-Nadia increased the amplitude in calibrated steps. At each step, she recorded Yuki's monitored responses and asked: "What do you notice?"
+"It is why you are here." Nadia increased the amplitude in calibrated steps. At each step, she recorded Yuki's monitored responses and asked: "What do you notice?"
 
 At 50 dB: "A humming. Below the tone. Like the room is vibrating."
 

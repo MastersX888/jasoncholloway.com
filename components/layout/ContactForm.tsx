@@ -30,7 +30,7 @@ export default function ContactForm() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
-          subject: "New Contact Form Submission — JasonCHolloway.com",
+          subject: "New Contact Form Submission: JasonCHolloway.com",
           from_name: "JasonCHolloway.com Website",
         }),
       });
@@ -107,7 +107,6 @@ export default function ContactForm() {
               color: "var(--text)",
               fontFamily: "var(--font-body)",
               transition: "border-color 0.25s",
-              outline: "none",
             }}
           />
         </div>
@@ -132,7 +131,6 @@ export default function ContactForm() {
               color: "var(--text)",
               fontFamily: "var(--font-body)",
               transition: "border-color 0.25s",
-              outline: "none",
             }}
           />
         </div>
@@ -157,7 +155,6 @@ export default function ContactForm() {
               color: "var(--text)",
               fontFamily: "var(--font-body)",
               transition: "border-color 0.25s",
-              outline: "none",
               resize: "vertical",
             }}
           />

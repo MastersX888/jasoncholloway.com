@@ -1,0 +1,749 @@
+{
+ "generated": "2026-07-31T15:41:05.381Z",
+ "results": [
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "layout viewport not blown out",
+   "pass": true,
+   "detail": "before: inner=594 scrollW=594 gridW=288 | after: inner=320 scrollW=320 gridW=288"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "grid collapsed to single column",
+   "pass": true,
+   "detail": "288px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "hamburger inside visual viewport",
+   "pass": true,
+   "detail": "before x=534..578 (inner 594) -> after x=260..304 (inner 320)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "contact input >=16px font & >=44px tall",
+   "pass": true,
+   "detail": "222w 47h 16px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "hamburger opens AND closes on real tap",
+   "pass": true,
+   "detail": "open in 1501ms left=0 links=4 allInView=true minLinkH=72; close left=320 overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "360x844",
+   "test": "layout viewport not blown out",
+   "pass": true,
+   "detail": "before: inner=594 scrollW=594 gridW=328 | after: inner=360 scrollW=360 gridW=328"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "360x844",
+   "test": "grid collapsed to single column",
+   "pass": true,
+   "detail": "328px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "360x844",
+   "test": "hamburger inside visual viewport",
+   "pass": true,
+   "detail": "before x=534..578 (inner 594) -> after x=300..344 (inner 360)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "360x844",
+   "test": "contact input >=16px font & >=44px tall",
+   "pass": true,
+   "detail": "262w 47h 16px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "360x844",
+   "test": "hamburger opens AND closes on real tap",
+   "pass": true,
+   "detail": "open in 1363ms left=0 links=4 allInView=true minLinkH=72; close left=360 overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "layout viewport not blown out",
+   "pass": true,
+   "detail": "before: inner=594 scrollW=594 gridW=358 | after: inner=390 scrollW=390 gridW=358"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "grid collapsed to single column",
+   "pass": true,
+   "detail": "358px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "hamburger inside visual viewport",
+   "pass": true,
+   "detail": "before x=534..578 (inner 594) -> after x=330..374 (inner 390)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "contact input >=16px font & >=44px tall",
+   "pass": true,
+   "detail": "292w 47h 16px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "hamburger opens AND closes on real tap",
+   "pass": true,
+   "detail": "open in 1389ms left=0 links=4 allInView=true minLinkH=72; close left=390 overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "393x844",
+   "test": "layout viewport not blown out",
+   "pass": true,
+   "detail": "before: inner=594 scrollW=594 gridW=361 | after: inner=393 scrollW=393 gridW=361"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "393x844",
+   "test": "grid collapsed to single column",
+   "pass": true,
+   "detail": "361px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "393x844",
+   "test": "hamburger inside visual viewport",
+   "pass": true,
+   "detail": "before x=534..578 (inner 594) -> after x=333..377 (inner 393)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "393x844",
+   "test": "contact input >=16px font & >=44px tall",
+   "pass": true,
+   "detail": "295w 47h 16px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "393x844",
+   "test": "hamburger opens AND closes on real tap",
+   "pass": true,
+   "detail": "open in 1396ms left=0 links=4 allInView=true minLinkH=72; close left=393 overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "layout viewport not blown out",
+   "pass": true,
+   "detail": "before: inner=595 scrollW=595 gridW=381 | after: inner=414 scrollW=414 gridW=381"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "grid collapsed to single column",
+   "pass": true,
+   "detail": "380.906px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "hamburger inside visual viewport",
+   "pass": true,
+   "detail": "before x=534..578 (inner 595) -> after x=353..397 (inner 414)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "contact input >=16px font & >=44px tall",
+   "pass": true,
+   "detail": "315w 47h 16px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "hamburger opens AND closes on real tap",
+   "pass": true,
+   "detail": "open in 1328ms left=0 links=4 allInView=true minLinkH=72; close left=414 overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "scp",
+   "page": "/privacy/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": false,
+   "detail": "[{\"el\":\"a\",\"sw\":107,\"cw\":75,\"text\":\"View Monograph\"}]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "320x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=320 inner=320 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "320x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=320 innerWidth=320"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "320x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "414x844",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=414 inner=414 overflowers=[]"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "414x844",
+   "test": "layout viewport == device width",
+   "pass": true,
+   "detail": "device=414 innerWidth=414"
+  },
+  {
+   "site": "jch",
+   "page": "/books/masters-x/",
+   "vp": "414x844",
+   "test": "no clipped control/label text",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "390x844",
+   "test": "visible focus ring on first 20 tab stops",
+   "pass": true,
+   "detail": "all stops had a ring"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "390x844",
+   "test": "form fields show a focus ring",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "390x844",
+   "test": "no standalone control under 44px tall",
+   "pass": true,
+   "detail": "all >=44px"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "390x844",
+   "test": "WCAG AA text contrast (alpha-composited)",
+   "pass": false,
+   "detail": "[{\"el\":\"div.footer-col-title\",\"text\":\"Connect\",\"ratio\":2.7,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(102, 99, 92)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span\",\"text\":\"Instagram\",\"ratio\":3.42,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span.social-link-handle\",\"text\":\"@jasonhollowaykc\",\"ratio\":2.74,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span\",\"text\":\"Facebook\",\"ratio\":3.42,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span.social-link-handle\",\"text\":\"facebook.com/jasonhollowaykc\",\"ratio\":2.74,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span\",\"text\":\"X\",\"ratio\":3.42,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span.social-link-handle\",\"text\":\"@jasonhollowaykc\",\"ratio\":2.74,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"},{\"el\":\"span\",\"text\":\"Pinterest\",\"ratio\":3.42,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(247,244,239)\"}]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "visible focus ring on first 20 tab stops",
+   "pass": true,
+   "detail": "all stops had a ring"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "form fields show a focus ring",
+   "pass": true,
+   "detail": "[{\"sel\":\"input#contact-name\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":47},{\"sel\":\"input#contact-email\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":47},{\"sel\":\"textarea#contact-message\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":131}]"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "no standalone control under 44px tall",
+   "pass": true,
+   "detail": "all >=44px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "WCAG AA text contrast (alpha-composited)",
+   "pass": false,
+   "detail": "[{\"el\":\"div.footer-col-title\",\"text\":\"Connect\",\"ratio\":2.59,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(102, 99, 92)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span\",\"text\":\"Instagram\",\"ratio\":3.29,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span.social-link-handle\",\"text\":\"@jasonhollowaykc\",\"ratio\":2.66,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span\",\"text\":\"Facebook\",\"ratio\":3.29,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span.social-link-handle\",\"text\":\"facebook.com/jasonhollowaykc\",\"ratio\":2.66,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span\",\"text\":\"X\",\"ratio\":3.29,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span.social-link-handle\",\"text\":\"@jasonhollowaykc\",\"ratio\":2.66,\"req\":4.5,\"fs\":11.5,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"},{\"el\":\"span\",\"text\":\"Pinterest\",\"ratio\":3.29,\"req\":4.5,\"fs\":13.6,\"color\":\"rgb(74, 71, 64)\",\"bg\":\"rgb(239,235,227)\"}]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "390x844",
+   "test": "visible focus ring on first 20 tab stops",
+   "pass": true,
+   "detail": "all stops had a ring"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "390x844",
+   "test": "form fields show a focus ring",
+   "pass": true,
+   "detail": "[{\"sel\":\"input#newsletter-email-input\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":46},{\"sel\":\"input#newsletter-email-input\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":46}]"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "390x844",
+   "test": "no standalone control under 44px tall",
+   "pass": true,
+   "detail": "all >=44px"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "390x844",
+   "test": "WCAG AA text contrast (alpha-composited)",
+   "pass": true,
+   "detail": "no failures"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "visible focus ring on first 20 tab stops",
+   "pass": true,
+   "detail": "all stops had a ring"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "form fields show a focus ring",
+   "pass": true,
+   "detail": "[{\"sel\":\"input#contact-name\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":46},{\"sel\":\"input#contact-email\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":46},{\"sel\":\"textarea#contact-message\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":126},{\"sel\":\"input#newsletter-email-input\",\"outline\":\"solid 2px\",\"ring\":true,\"font\":\"16px\",\"h\":46}]"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "no standalone control under 44px tall",
+   "pass": true,
+   "detail": "all >=44px"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "390x844",
+   "test": "WCAG AA text contrast (alpha-composited)",
+   "pass": true,
+   "detail": "no failures"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=1440"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop nav mode unchanged",
+   "pass": true,
+   "detail": "nav=true toggle=false"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "two-column sidebar layout preserved",
+   "pass": true,
+   "detail": "before \"796px 340px\" (1200px) -> after \"796px 340px\" (1200px)"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop footer link height unchanged (mobile-only rule)",
+   "pass": null,
+   "detail": "49px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop input font unchanged",
+   "pass": true,
+   "detail": "14.4px"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=1440"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "desktop nav mode unchanged",
+   "pass": true,
+   "detail": "nav=true toggle=false"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "desktop footer link height unchanged (mobile-only rule)",
+   "pass": null,
+   "detail": "49px"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=1440"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "desktop nav mode unchanged",
+   "pass": true,
+   "detail": "nav=true toggle=false"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "vp": "1440x900",
+   "test": "desktop footer link height unchanged (mobile-only rule)",
+   "pass": null,
+   "detail": "48px"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "no horizontal overflow",
+   "pass": true,
+   "detail": "scrollW=1440"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop nav mode unchanged",
+   "pass": true,
+   "detail": "nav=true toggle=false"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "two-column sidebar layout preserved",
+   "pass": true,
+   "detail": "before \"780px 340px\" (1184px) -> after \"780px 340px\" (1184px)"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop footer link height unchanged (mobile-only rule)",
+   "pass": null,
+   "detail": "48px"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "vp": "1440x900",
+   "test": "desktop input font unchanged",
+   "pass": true,
+   "detail": "14.4px"
+  }
+ ]
+}

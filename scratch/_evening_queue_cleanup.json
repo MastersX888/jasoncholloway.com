@@ -1,0 +1,117 @@
+{
+  "delete_results": [
+    {
+      "id": "23sPb",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "23sWN",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "4nQv3",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "4nQvK",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "5cbXz",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "9jkuH",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "CCA6F",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "IrnfS",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "LaprJ",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "MZWyq",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "X4K1w",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "X4Kbh",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "X4Kbk",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "a1FlA",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "gIiNw",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "iljCw",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "iljph",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "kwHqi",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "kwR9H",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "oV1eh",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "oVTwp",
+      "action": "delete",
+      "status": 200
+    },
+    {
+      "id": "zqOwe",
+      "action": "delete",
+      "status": 200
+    }
+  ],
+  "deleted_ok": 22,
+  "remaining_unassigned": 0,
+  "remaining_ids": []
+}

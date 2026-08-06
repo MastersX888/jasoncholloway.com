@@ -1,0 +1,918 @@
+{
+ "generated": "2026-07-31T08:31:39.937Z",
+ "tests": [
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "hamburger tap target",
+   "pass": true,
+   "detail": "44x44 at x=330,y=10"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "drawer hidden before open",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 390, 0)",
+    "display": "flex",
+    "ariaHidden": "true",
+    "left": 390,
+    "visible": false
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "drawer opens on tap",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "ariaExpanded": "true",
+    "ariaHidden": "false"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "drawer top vs header bottom",
+   "pass": true,
+   "detail": "drawerTop=64 headerBottom=64 headerH=64"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "all drawer links >=44px tall & in viewport",
+   "pass": true,
+   "detail": [
+    {
+     "label": "Masters X",
+     "href": "/books/masters-x/",
+     "w": 358,
+     "h": 70,
+     "top": 89,
+     "bottom": 159,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Field Notes",
+     "href": "/field-notes/",
+     "w": 358,
+     "h": 70,
+     "top": 163,
+     "bottom": 233,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Monograph",
+     "href": "/books/hawkes-monograph/",
+     "w": 358,
+     "h": 70,
+     "top": 237,
+     "bottom": 307,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Press",
+     "href": "https://seventhcitypress.com/",
+     "w": 358,
+     "h": 70,
+     "top": 311,
+     "bottom": 381,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "About",
+     "href": "/about/",
+     "w": 358,
+     "h": 70,
+     "top": 385,
+     "bottom": 456,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Contact",
+     "href": "/contact/",
+     "w": 358,
+     "h": 70,
+     "top": 460,
+     "bottom": 530,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Analysis Chamber",
+     "href": "/chamber/",
+     "w": 358,
+     "h": 69,
+     "top": 542,
+     "bottom": 611,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    }
+   ]
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "body scroll locked while open",
+   "pass": true,
+   "detail": "hidden"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "drawer closes on second tap",
+   "pass": true,
+   "detail": {
+    "left": 390,
+    "inner": 390,
+    "bodyOverflow": "",
+    "ariaExpanded": "false"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "body scroll restored on close",
+   "pass": true,
+   "detail": "overflow=''"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "drawer closes after tapping current-page link",
+   "pass": null,
+   "detail": "no self-referencing link in drawer"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "hamburger tap target",
+   "pass": true,
+   "detail": "44x44 at x=330,y=10"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "drawer hidden before open",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 390, 0)",
+    "display": "flex",
+    "ariaHidden": "true",
+    "left": 390,
+    "visible": false
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "drawer opens on tap",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "ariaExpanded": "true",
+    "ariaHidden": "false"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "drawer top vs header bottom",
+   "pass": true,
+   "detail": "drawerTop=64 headerBottom=64 headerH=64"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "all drawer links >=44px tall & in viewport",
+   "pass": true,
+   "detail": [
+    {
+     "label": "Masters X",
+     "href": "/books/masters-x/",
+     "w": 358,
+     "h": 70,
+     "top": 89,
+     "bottom": 159,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Field Notes",
+     "href": "/field-notes/",
+     "w": 358,
+     "h": 70,
+     "top": 163,
+     "bottom": 233,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Monograph",
+     "href": "/books/hawkes-monograph/",
+     "w": 358,
+     "h": 70,
+     "top": 237,
+     "bottom": 307,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Press",
+     "href": "https://seventhcitypress.com/",
+     "w": 358,
+     "h": 70,
+     "top": 311,
+     "bottom": 381,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "About",
+     "href": "/about/",
+     "w": 358,
+     "h": 70,
+     "top": 385,
+     "bottom": 456,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Contact",
+     "href": "/contact/",
+     "w": 358,
+     "h": 70,
+     "top": 460,
+     "bottom": 530,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Analysis Chamber",
+     "href": "/chamber/",
+     "w": 358,
+     "h": 69,
+     "top": 542,
+     "bottom": 611,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    }
+   ]
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "body scroll locked while open",
+   "pass": true,
+   "detail": "hidden"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "drawer closes on second tap",
+   "pass": true,
+   "detail": {
+    "left": 390,
+    "inner": 390,
+    "bodyOverflow": "",
+    "ariaExpanded": "false"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "body scroll restored on close",
+   "pass": true,
+   "detail": "overflow=''"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "drawer closes after tapping current-page link",
+   "pass": false,
+   "detail": {
+    "selfLink": "/contact/",
+    "left": 0,
+    "inner": 390,
+    "bodyOverflow": "hidden"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "inputs >=16px font (prevents iOS focus zoom)",
+   "pass": false,
+   "detail": "input#contact-name=14.4px, input#contact-email=14.4px, textarea#contact-message=14.4px, input#newsletter-email-input=14.4px"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "input heights >=44px",
+   "pass": false,
+   "detail": "input#contact-name=43px, input#contact-email=43px, textarea#contact-message=111px, input#newsletter-email-input=43px"
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "form fields show visible focus indicator",
+   "pass": false,
+   "detail": [
+    {
+     "sel": "input#contact-name",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    },
+    {
+     "sel": "input#contact-email",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    },
+    {
+     "sel": "textarea#contact-message",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    },
+    {
+     "sel": "input#newsletter-email-input",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    }
+   ]
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "empty submit shows validation error (no network call)",
+   "pass": true,
+   "detail": "Please fill out all fields."
+  },
+  {
+   "site": "jch",
+   "page": "/contact/",
+   "test": "newsletter/chapter form HTML5 validation",
+   "pass": true,
+   "detail": {
+    "action": "https://api.web3forms.com/submit",
+    "method": "POST",
+    "rejectsBadEmail": true,
+    "acceptsGoodEmail": true,
+    "hasHoneypot": true,
+    "redirect": "https://jasoncholloway.com/chapters-sent/"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "inputs >=16px font (prevents iOS focus zoom)",
+   "pass": false,
+   "detail": "input#newsletter-email-input=14.4px, input#newsletter-email-input=14.4px"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "input heights >=44px",
+   "pass": false,
+   "detail": "input#newsletter-email-input=44px, input#newsletter-email-input=43px"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "form fields show visible focus indicator",
+   "pass": false,
+   "detail": [
+    {
+     "sel": "input#newsletter-email-input",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    },
+    {
+     "sel": "input#newsletter-email-input",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(237, 233, 218)",
+     "boxShadow": "none",
+     "borderColor": "rgb(39, 39, 64)",
+     "hasRing": false
+    }
+   ]
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "newsletter/chapter form HTML5 validation",
+   "pass": true,
+   "detail": {
+    "action": "https://api.web3forms.com/submit",
+    "method": "POST",
+    "rejectsBadEmail": true,
+    "acceptsGoodEmail": true,
+    "hasHoneypot": true,
+    "redirect": "https://jasoncholloway.com/chapters-sent/"
+   }
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "WCAG AA text contrast",
+   "pass": false,
+   "detail": [
+    {
+     "el": "p",
+     "text": "Those aren't diagrams, they're technical spec",
+     "ratio": 1.79,
+     "required": 4.5,
+     "fontSize": 17.6,
+     "color": "rgb(237, 233, 218)",
+     "bg": "rgb(212,170,82)"
+    }
+   ]
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "keyboard focus ring on first 12 tab stops",
+   "pass": false,
+   "detail": [
+    {
+     "el": "input.newsletter-input",
+     "label": "",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "boxShadow": false,
+     "ring": false
+    }
+   ]
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "hamburger tap target",
+   "pass": true,
+   "detail": "44x44 at x=330,y=10"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "drawer hidden before open",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 390, 0)",
+    "display": "flex",
+    "ariaHidden": "true",
+    "left": 390,
+    "visible": false
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "drawer opens on tap",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "ariaExpanded": "true",
+    "ariaHidden": "false"
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "drawer top vs header bottom",
+   "pass": true,
+   "detail": "drawerTop=64 headerBottom=64 headerH=64"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "all drawer links >=44px tall & in viewport",
+   "pass": true,
+   "detail": [
+    {
+     "label": "Press",
+     "href": "/",
+     "w": 358,
+     "h": 72,
+     "top": 89,
+     "bottom": 161,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Catalog",
+     "href": "https://jasoncholloway.com/books/",
+     "w": 358,
+     "h": 72,
+     "top": 165,
+     "bottom": 238,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Author",
+     "href": "https://jasoncholloway.com/about/",
+     "w": 358,
+     "h": 72,
+     "top": 242,
+     "bottom": 314,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    },
+    {
+     "label": "Contact",
+     "href": "/contact/",
+     "w": 358,
+     "h": 72,
+     "top": 318,
+     "bottom": 390,
+     "fontSize": 22.4,
+     "tabIndex": 0,
+     "inViewport": true,
+     "clipped": false
+    }
+   ]
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "body scroll locked while open",
+   "pass": true,
+   "detail": "hidden"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "drawer closes on second tap",
+   "pass": true,
+   "detail": {
+    "left": 390,
+    "inner": 390,
+    "bodyOverflow": "",
+    "ariaExpanded": "false"
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "body scroll restored on close",
+   "pass": true,
+   "detail": "overflow=''"
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "drawer closes after tapping current-page link",
+   "pass": true,
+   "detail": {
+    "selfLink": "/",
+    "left": 390,
+    "inner": 390,
+    "bodyOverflow": ""
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "hamburger tap target",
+   "pass": true,
+   "detail": "44x44 at x=534,y=10"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "drawer hidden before open",
+   "pass": true,
+   "detail": {
+    "transform": "matrix(1, 0, 0, 1, 594, 0)",
+    "display": "flex",
+    "ariaHidden": "true",
+    "left": 594,
+    "visible": false
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "mobileNavTest",
+   "pass": false,
+   "detail": "TimeoutError: elementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 × waiting for element to be visible, enabled and stable\n      - element is visible, enabled and"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "inputs >=16px font (prevents iOS focus zoom)",
+   "pass": false,
+   "detail": "input#contact-name=14.4px, input#contact-email=14.4px, textarea#contact-message=14.4px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "input heights >=44px",
+   "pass": true,
+   "detail": "input#contact-name=45px, input#contact-email=45px, textarea#contact-message=121px"
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "form fields show visible focus indicator",
+   "pass": false,
+   "detail": [
+    {
+     "sel": "input#contact-name",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(28, 26, 23)",
+     "boxShadow": "none",
+     "borderColor": "rgb(175, 168, 148)",
+     "hasRing": false
+    },
+    {
+     "sel": "input#contact-email",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(28, 26, 23)",
+     "boxShadow": "none",
+     "borderColor": "rgb(175, 168, 148)",
+     "hasRing": false
+    },
+    {
+     "sel": "textarea#contact-message",
+     "outlineStyle": "none",
+     "outlineWidth": "3px",
+     "outlineColor": "rgb(28, 26, 23)",
+     "boxShadow": "none",
+     "borderColor": "rgb(175, 168, 148)",
+     "hasRing": false
+    }
+   ]
+  },
+  {
+   "site": "scp",
+   "page": "/contact/",
+   "test": "empty submit shows validation error (no network call)",
+   "pass": true,
+   "detail": "Please fill out all fields."
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "inputs >=16px font (prevents iOS focus zoom)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "input heights >=44px",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "form fields show visible focus indicator",
+   "pass": true,
+   "detail": []
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "WCAG AA text contrast",
+   "pass": false,
+   "detail": [
+    {
+     "el": "span",
+     "text": "Instagram",
+     "ratio": 1,
+     "required": 4.5,
+     "fontSize": 13.6,
+     "color": "rgb(247, 244, 239)",
+     "bg": "rgb(247,244,239)"
+    },
+    {
+     "el": "span.social-link-handle",
+     "text": "@jasonhollowaykc",
+     "ratio": 1,
+     "required": 4.5,
+     "fontSize": 11.52,
+     "color": "rgb(247, 244, 239)",
+     "bg": "rgb(247,244,239)"
+    },
+    {
+     "el": "a",
+     "text": "jasoncholloway.com",
+     "ratio": 1,
+     "required": 4.5,
+     "fontSize": 13.6,
+     "color": "rgb(247, 244, 239)",
+     "bg": "rgb(247,244,239)"
+    },
+    {
+     "el": "span.press-page-module__HsCzcG__vol-label",
+     "text": "Vol. I",
+     "ratio": 3.51,
+     "required": 4.5,
+     "fontSize": 11.2,
+     "color": "rgb(139, 115, 85)",
+     "bg": "rgb(232,227,217)"
+    },
+    {
+     "el": "span.label",
+     "text": "Cover Art — Masters X Trilogy",
+     "ratio": 3.77,
+     "required": 4.5,
+     "fontSize": 14.4,
+     "color": "rgb(139, 115, 85)",
+     "bg": "rgb(239,235,227)"
+    },
+    {
+     "el": "h2.press-page-module__HsCzcG__press-section",
+     "text": "The Books",
+     "ratio": 3.77,
+     "required": 4.5,
+     "fontSize": 12,
+     "color": "rgb(139, 115, 85)",
+     "bg": "rgb(239,235,227)"
+    },
+    {
+     "el": "span",
+     "text": "Vol. I — Paperback",
+     "ratio": 3.8,
+     "required": 4.5,
+     "fontSize": 10.88,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(239,235,227)"
+    },
+    {
+     "el": "p.press-page-module__HsCzcG__press-comps",
+     "text": "For readers of Umberto Eco’s Foucault’s Pendu",
+     "ratio": 3.8,
+     "required": 4.5,
+     "fontSize": 16,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(239,235,227)"
+    },
+    {
+     "el": "span.press-page-module__HsCzcG__kf-meta",
+     "text": "2pp · PDF",
+     "ratio": 3.8,
+     "required": 4.5,
+     "fontSize": 11.2,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(239,235,227)"
+    },
+    {
+     "el": "p",
+     "text": "press@seventhcitypress.com",
+     "ratio": 3.84,
+     "required": 4.5,
+     "fontSize": 13.12,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(28,26,23)"
+    },
+    {
+     "el": "span",
+     "text": "f = 111.2 Hz",
+     "ratio": 3.84,
+     "required": 4.5,
+     "fontSize": 11.52,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(28,26,23)"
+    },
+    {
+     "el": "span.label",
+     "text": "Seventh City Press · Communications Desk",
+     "ratio": 4.09,
+     "required": 4.5,
+     "fontSize": 14.4,
+     "color": "rgb(139, 115, 85)",
+     "bg": "rgb(247,244,239)"
+    },
+    {
+     "el": "span.press-page-module__HsCzcG__label",
+     "text": "PRESS KIT",
+     "ratio": 4.09,
+     "required": 4.5,
+     "fontSize": 11.2,
+     "color": "rgb(139, 115, 85)",
+     "bg": "rgb(247,244,239)"
+    },
+    {
+     "el": "a.animate-fade-up.delay-3",
+     "text": "Download Press Kit (PDF)",
+     "ratio": 4.12,
+     "required": 4.5,
+     "fontSize": 12.48,
+     "color": "rgb(122, 118, 110)",
+     "bg": "rgb(247,244,239)"
+    }
+   ]
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "keyboard focus ring on first 12 tab stops",
+   "pass": true,
+   "detail": "all 12 stops had a visible ring"
+  },
+  {
+   "site": "jch",
+   "page": "/",
+   "test": "desktop 1440 no h-overflow + correct nav mode",
+   "pass": true,
+   "detail": {
+    "overflow": false,
+    "scrollWidth": 1440,
+    "navVisible": true,
+    "toggleVisible": false,
+    "navLinks": [
+     "Masters X",
+     "Field Notes",
+     "Monograph",
+     "Press",
+     "About",
+     "Contact",
+     "Analysis Chamber"
+    ]
+   }
+  },
+  {
+   "site": "scp",
+   "page": "/",
+   "test": "desktop 1440 no h-overflow + correct nav mode",
+   "pass": true,
+   "detail": {
+    "overflow": false,
+    "scrollWidth": 1440,
+    "navVisible": true,
+    "toggleVisible": false,
+    "navLinks": [
+     "Press",
+     "Catalog",
+     "Author",
+     "Contact"
+    ]
+   }
+  }
+ ]
+}

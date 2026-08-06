@@ -4,12 +4,15 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import HardcoverCaseReveal from "@/components/ui/HardcoverCaseReveal";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import { buildBookGraph, MASTERS_X_SERIES_ID } from "@/lib/seo/bookSchema";
+import { buildMetadata } from "@/lib/seo/metadata";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -38,34 +41,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const title = volumeTitles[slug] ?? book.subtitle;
   const description = volumeDescs[slug] ?? book.excerpt;
-  const coverUrl = `https://jasoncholloway.com${book.coverImagePB}`;
-  const coverAlt = `${book.title}: ${book.subtitle} — cover`;
 
-  return {
+  return buildMetadata({
     title,
     description,
-    keywords: slug === "the-inheritance-of-frequency"
-      ? [...book.keywords, "conspiracy thriller", "books like the da vinci code", "voynich manuscript fiction", "consciousness thriller", "medieval manuscript thriller", "SubTropolis"]
-      : slug === "the-grimoire"
-      ? [...book.keywords, "Chartres cathedral acoustics", "medieval grimoire fiction", "Ars Notoria explained", "Iceland novel"]
-      : [...book.keywords, "books about frequency", "sound healing fiction", "Kansas City novel", "Gospel of Thomas"],
-    openGraph: {
-      type: "book",
-      title,
-      description,
-      url: `https://jasoncholloway.com/books/masters-x/${slug}/`,
-      images: [{ url: coverUrl, alt: coverAlt }],
+    path: `/books/masters-x/${slug}/`,
+    ogType: "book",
+    // The generated route composites the cover into a 1200×630 landscape card.
+    // The raw cover file is only 434×673, which social platforms letterbox badly.
+    image: {
+      url: `https://jasoncholloway.com/books/masters-x/${slug}/opengraph-image`,
+      width: 1200,
+      height: 630,
+      alt: `${book.title}: ${book.subtitle} — cover`,
     },
-    twitter: {
-      card: "summary_large_image",
-      title,
-      description,
-      images: [coverUrl],
-    },
-    alternates: {
-      canonical: `https://jasoncholloway.com/books/masters-x/${slug}/`,
-    },
-  };
+  });
 }
 export default function BookPage({ params }: Props) {
   const { slug } = use(params);
@@ -77,70 +67,17 @@ export default function BookPage({ params }: Props) {
 
   const paragraphs = book.description.split("\n\n").filter(Boolean);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Book",
-    "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#work`,
-    "name": `${book.title}: ${book.subtitle}`,
-    "author": { "@id": "https://jasoncholloway.com/#person" },
-    "publisher": { "@id": "https://jasoncholloway.com/#organization" },
-    "inLanguage": "English",
-    "workExample": [
-      ...(book.isbn_pb ? [{
-        "@type": "Book",
-        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#paperback`,
-        "isbn": book.isbn_pb,
-        "bookFormat": "https://schema.org/Paperback",
-        "numberOfPages": book.pageCountPB ?? book.pageCount,
-        "potentialAction": book.buyLinks.find(l => l.label === "IngramSpark (PB)") ? {
-          "@type": "BuyAction",
-          "target": book.buyLinks.find(l => l.label === "IngramSpark (PB)")!.url
-        } : undefined,
-        "offers": book.price_pb_is ? {
-          "@type": "Offer",
-          "price": book.price_pb_msrp ?? book.price_pb_is,
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": book.buyLinks.find(l => l.label === "IngramSpark (PB)")?.url ?? `https://jasoncholloway.com/books/masters-x/${book.slug}/`
-        } : undefined
-      }] : []),
-      ...(book.isbn_hc ? [{
-        "@type": "Book",
-        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#hardcover`,
-        "isbn": book.isbn_hc,
-        "bookFormat": "https://schema.org/Hardcover",
-        "numberOfPages": book.pageCountHC ?? book.pageCount,
-        "potentialAction": book.buyLinks.find(l => l.label === "IngramSpark (HC)") ? {
-          "@type": "BuyAction",
-          "target": book.buyLinks.find(l => l.label === "IngramSpark (HC)")!.url
-        } : undefined,
-        "offers": book.price_hc_is ? {
-          "@type": "Offer",
-          "price": book.price_hc_msrp ?? book.price_hc_is,
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": book.buyLinks.find(l => l.label === "IngramSpark (HC)")?.url ?? `https://jasoncholloway.com/books/masters-x/${book.slug}/`
-        } : undefined
-      }] : []),
-      ...(book.isbn_ebook ? [{
-        "@type": "Book",
-        "@id": `https://jasoncholloway.com/books/masters-x/${book.slug}#ebook`,
-        "isbn": book.isbn_ebook,
-        "bookFormat": "https://schema.org/EBook",
-        "potentialAction": book.asin_ebook ? {
-          "@type": "BuyAction",
-          "target": `https://www.amazon.com/dp/${book.asin_ebook}`
-        } : undefined,
-        "offers": book.price_ebook ? {
-          "@type": "Offer",
-          "price": book.price_ebook,
-          "priceCurrency": "USD",
-          "availability": "https://schema.org/InStock",
-          "url": book.asin_ebook ? `https://www.amazon.com/dp/${book.asin_ebook}` : `https://jasoncholloway.com/books/masters-x/${book.slug}/`
-        } : undefined
-      }] : [])
-    ]
-  };
+  const pageUrl = `https://jasoncholloway.com/books/masters-x/${book.slug}/`;
+
+  const jsonLd = buildBookGraph(book, {
+    pageUrl,
+    name: `${book.title}: ${book.subtitle}`,
+    description: book.shortDesc,
+    genre: ["Conspiracy Fiction", "Literary Fiction", "Thriller"],
+    image: `https://jasoncholloway.com${book.coverImagePB}`,
+    seriesId: MASTERS_X_SERIES_ID,
+    position: book.volume,
+  });
 
   // Per-volume FAQ data
   const faqData: Record<string, Array<{q: string; a: string}>> = {
@@ -204,7 +141,7 @@ export default function BookPage({ params }: Props) {
         "@type": "ListItem",
         "position": 2,
         "name": "Masters X Trilogy",
-        "item": "https://jasoncholloway.com/books/masters-x"
+        "item": "https://jasoncholloway.com/books/masters-x/"
       },
       {
         "@type": "ListItem",
@@ -290,12 +227,10 @@ export default function BookPage({ params }: Props) {
                     />
                   </div>
                   <div style={{ flex: 1 }}>
-                    <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
-                    <CoverArtifact
-                      src={book.coverImageHC}
-                      alt={`${book.subtitle} Hardcover Cover`}
-                      format="hc"
-                      fit="contain"
+                    <HardcoverCaseReveal
+                      subtitle={book.subtitle}
+                      jacketSrc={book.coverImageHC}
+                      caseSrc={book.coverImageCase}
                       sizes="(max-width: 768px) 45vw, 180px"
                       priority
                     />
@@ -370,7 +305,7 @@ export default function BookPage({ params }: Props) {
           <div className="resp-main-sidebar" style={{ display: "grid", gridTemplateColumns: "1fr 320px", gap: "4.5rem" }}>
             <div>
               <div className="section-label-row" style={{ marginBottom: "2rem" }}>
-                <span className="label">About the Book</span>
+                <h2 className="label">Synopsis</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", marginBottom: "2rem" }}>
                 {paragraphs.map((p, i) => (
@@ -387,13 +322,13 @@ export default function BookPage({ params }: Props) {
               )}
               
               <div style={{ marginBottom: "3rem", background: "var(--bg-raised)", padding: "1.5rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border-faint)" }}>
-                <h4 style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", marginBottom: "1rem" }}>Not ready to buy? Read the opening chapters free.</h4>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", marginBottom: "1rem" }}>Not ready to buy? Read the opening chapters free.</h3>
                 <NewsletterForm compact={true} />
               </div>
 
               {/* Show All Editions Side-by-Side */}
               <div className="section-label-row" style={{ marginBottom: "2rem" }}>
-                <span className="label">Print & Digital Editions</span>
+                <h2 className="label">Editions, ISBNs &amp; Where to Buy</h2>
               </div>
               
               <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2rem" }}>
@@ -602,7 +537,7 @@ export default function BookPage({ params }: Props) {
         <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
           <div className="container" style={{ maxWidth: "800px" }}>
             <div className="section-label-row">
-              <span className="label">Frequently Asked Questions</span>
+              <h2 className="label">Frequently Asked Questions</h2>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               {volumeFaqs.map((faq, i) => (

@@ -1,9 +1,9 @@
-# Field Notes SEO — Overnight Ops Brief (2026-08-03)
+﻿# Field Notes SEO — Overnight Ops Brief (2026-08-03)
 
 **Desk:** Morgan (Business Manager) → Content ops / Nina  
 **Parent approval:** `GUERRILLA_ORGANIC_GROUNDSWELL_Q3.md` — **PARTIAL APPROVE** (Field Notes lane only)  
 **Stamp:** 2026-08-03 ~04:17 CT  
-**Status:** **EXECUTED (morning)** — 2026-08-03 ~08:25 CT · **Vivian PASS WITH NOTES** ~08:55 CT  
+**Status:** **DEPLOYED** — prod `720424a` on main · staging `aee3383` pushed ~2026-08-03 16:48 CT · live 200s
 **Execution report:** `scratch/ops_reports/FIELD_NOTES_SEO_MORNING_REPORT_2026-08-03.md`  
 **Vivian QC:** `scratch/ops_reports/VIVIAN_QA_FIELD_NOTES_SEO_2026-08-03.md` — cleared for Jason Phase 4 deploy approval (no auto-deploy)  
 **Jason rationale (paraphrased):** SEO refinement / invisible backend work the team can do while he sleeps — **not** a greenlight for the rest of the guerrilla plan. Morning shift ran same scope after Jason woke.
@@ -195,3 +195,19 @@ Mark **EXECUTED (morning)** — draft / audit done. **Do not deploy** without Vi
 ---
 
 *Morgan — 2026-08-03 ~04:17 CT · executed morning ~08:25 CT · partial greenlight only · $0 · no social · no NetGalley · no deploy without Vivian.*
+
+---
+
+## DEPLOYED
+
+**Status:** **DEPLOYED** (live smoke 200s)  
+**Marked:** 2026-08-03 16:48 CT  
+**Production (Cloudflare Pages / origin main):** `720424a` (`720424aee67b42802b7cc583af32ba4e16e1432f`) — committer 2026-08-03 13:11:46 -0500 — already on `origin/main` before this ship closeout  
+**Staging branch push (this session):** `cursor/upload-staging-f9e1` `aee3383`..`aee33830c817ba0311c869740521dab0638decdd` pushed 83bedb3..aee3383 at ~2026-08-03 16:48 CT — **no force**  
+**Deploy path:** Cloudflare Pages project `jasoncholloway` (`wrangler.toml` `pages_build_output_dir = out`) — production tracks **main**; staging branch push does not replace prod  
+**Live smoke (2026-08-03 ~16:48 CT):**
+- 200 https://jasoncholloway.com/field-notes/
+- 200 https://jasoncholloway.com/field-notes/subtropolis/
+- 200 https://jasoncholloway.com/sitemap.xml (13 field-notes hits)
+- 200 https://jasoncholloway.com/field-notes/rss.xml
+- Live titles match SEO meta (hub + SubTropolis); soft CTA / chapters-sent / masters-x present

@@ -1,8 +1,10 @@
 # Build static export in a temp dir (avoids EBUSY when workspace roots on /out).
 $ErrorActionPreference = "Stop"
-$src = "C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway"
+$src = if ($env:JCH_BUILD_SRC) { $env:JCH_BUILD_SRC } else { "C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway" }
+$mainRepo = "C:\Users\zh577\.gemini\antigravity\scratch\jasoncholloway"
+$nodeModulesSrc = if (Test-Path (Join-Path $src "node_modules")) { Join-Path $src "node_modules" } else { Join-Path $mainRepo "node_modules" }
 $tmp = Join-Path $env:TEMP "jch-site-build"
-$liveOut = Join-Path $src "out"
+$liveOut = if ($src -eq $mainRepo) { Join-Path $src "out" } else { Join-Path $mainRepo "out" }
 
 if (Test-Path $tmp) { Remove-Item $tmp -Recurse -Force }
 New-Item -ItemType Directory -Path $tmp | Out-Null
@@ -24,7 +26,7 @@ foreach ($item in $copy) {
   }
 }
 if (-not (Test-Path (Join-Path $tmp 'node_modules'))) {
-  New-Item -ItemType Junction -Path (Join-Path $tmp 'node_modules') -Target (Join-Path $src 'node_modules') | Out-Null
+  New-Item -ItemType Junction -Path (Join-Path $tmp 'node_modules') -Target $nodeModulesSrc | Out-Null
 }
 
 Push-Location $tmp

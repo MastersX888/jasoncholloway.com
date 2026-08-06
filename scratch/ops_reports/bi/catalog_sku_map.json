@@ -1,0 +1,120 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-08-03",
+  "updated_ct": "2026-08-03T16:40:00-05:00",
+  "sources": [
+    "lib/data/books.ts",
+    "lib/data/buyLinks.ts",
+    "scratch/ops_reports/SCP_BUSINESS_PLAN_REFINED.md §2",
+    "scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md"
+  ],
+  "catalog_lock": {
+    "amazon": "Kindle Vol I–III only",
+    "amazon_asins": ["B0H4KYMSM1", "B0H4KQ4YQJ", "B0H4L36X21"],
+    "print_omnibus": "IngramSpark only",
+    "amazon_omnibus": "n/a",
+    "hawkes_novels": 17
+  },
+  "price_note": "Site Buy Direct uses flat IS tier; Ingram usList may differ — Vivian before Phase 4 deploy. No sales units invent",
+  "skus": [
+    {
+      "id": "mx1",
+      "title": "The Inheritance of Frequency",
+      "series": "Masters X",
+      "volume": 1,
+      "kindle_asin": "B0H4KYMSM1",
+      "amazon_channel": "kindle_live",
+      "isbn_pb": "9798256008048",
+      "isbn_hc": "9798295800801",
+      "isbn_epub": "9798256008819",
+      "price_kindle": "6.99",
+      "price_pb_is": "16.99",
+      "price_hc_is": "29.99",
+      "ingram_pb_status": "live",
+      "ingram_hc_status": "live",
+      "google_play": "live"
+    },
+    {
+      "id": "mx2",
+      "title": "The Grimoire",
+      "series": "Masters X",
+      "volume": 2,
+      "kindle_asin": "B0H4KQ4YQJ",
+      "amazon_channel": "kindle_live",
+      "isbn_pb": "9798256009953",
+      "isbn_hc": "9798295812675",
+      "isbn_epub": "9798256009625",
+      "price_kindle": "6.99",
+      "price_pb_is": "16.99",
+      "price_hc_is": "29.99",
+      "ingram_pb_status": "live",
+      "ingram_hc_status": "live",
+      "google_play": "live"
+    },
+    {
+      "id": "mx3",
+      "title": "The Kingdom",
+      "series": "Masters X",
+      "volume": 3,
+      "kindle_asin": "B0H4L36X21",
+      "amazon_channel": "kindle_live",
+      "isbn_pb": "9798256010072",
+      "isbn_hc": "9798295812705",
+      "isbn_epub": "9798256009809",
+      "price_kindle": "6.99",
+      "price_pb_is": "16.99",
+      "price_hc_is": "29.99",
+      "ingram_pb_status": "live",
+      "ingram_hc_status": "live",
+      "google_play": "live"
+    },
+    {
+      "id": "omnibus",
+      "title": "Masters X Omnibus",
+      "series": "Masters X",
+      "volume": 4,
+      "kindle_asin": null,
+      "amazon_channel": "n/a",
+      "isbn_pb": "9798256072704",
+      "isbn_hc": "9798295884412",
+      "isbn_epub": null,
+      "price_kindle": null,
+      "price_pb_is": "32.99",
+      "price_hc_is": "44.99",
+      "ingram_pb_status": "live",
+      "ingram_hc_status": "live",
+      "google_play": "n/a"
+    },
+    {
+      "id": "hawkes",
+      "title": "Innocence, Desire… (Hawkes monograph)",
+      "series": "John Hawkes Critical Study",
+      "volume": null,
+      "kindle_asin": null,
+      "amazon_channel": "n/a",
+      "isbn_pb": "9798295778247",
+      "isbn_hc": "9798349308444",
+      "isbn_epub": "9798295778926",
+      "price_kindle": null,
+      "price_ebook_play": "9.99",
+      "price_pb_is": "12.99",
+      "price_hc_is": "24.99",
+      "ingram_pb_status": "live",
+      "ingram_hc_status": "live",
+      "google_play": "live",
+      "note": "seventeen novels corpus; no Amazon ASIN"
+    }
+  ],
+  "channel_matrix": {
+    "amazon_kindle_sku_count": 3,
+    "ingram_print_sku_count": 10,
+    "ingram_epub_sku_count": 4,
+    "omnibus_on_amazon": false,
+    "shopping_feed": "public/feeds/google-shopping.csv (repo aligned Buy Direct flat tier 2026-08-02)"
+  },
+  "sales": {
+    "kdp_csv": "awaiting_upload",
+    "ingram_csv": "ready_for_export",
+    "units_invented": false
+  }
+}

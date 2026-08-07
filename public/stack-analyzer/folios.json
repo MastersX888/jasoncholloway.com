@@ -1,0 +1,2973 @@
+[
+  {
+    "id": "v1-004",
+    "folio": "V1-004",
+    "title": "Herbal Page 1",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-004",
+    "path": "/folios/voynich/Vol 1/voynich-004.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f1r"
+  },
+  {
+    "id": "v1-005",
+    "folio": "V1-005",
+    "title": "Herbal Page 2",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-005",
+    "path": "/folios/voynich/Vol 1/voynich-005.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f1v"
+  },
+  {
+    "id": "v1-006",
+    "folio": "V1-006",
+    "title": "Herbal Page 3",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-006",
+    "path": "/folios/voynich/Vol 1/voynich-006.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f2r"
+  },
+  {
+    "id": "v1-007",
+    "folio": "V1-007",
+    "title": "Herbal Page 4",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-007",
+    "path": "/folios/voynich/Vol 1/voynich-007.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f2v"
+  },
+  {
+    "id": "v1-008",
+    "folio": "V1-008",
+    "title": "Herbal Page 5",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-008",
+    "path": "/folios/voynich/Vol 1/voynich-008.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f3r"
+  },
+  {
+    "id": "v1-009",
+    "folio": "V1-009",
+    "beineckeRef": "f2v",
+    "title": "Herbal Page \u2014 Forked Root",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-009",
+    "path": "/folios/voynich/Vol 1/voynich-009.jpg",
+    "description": "Herbal section, folio 2 verso (Beinecke MS 408).",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": ""
+  },
+  {
+    "id": "v1-010",
+    "folio": "V1-010",
+    "title": "Herbal Page 7",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-010",
+    "path": "/folios/voynich/Vol 1/voynich-010.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f4r"
+  },
+  {
+    "id": "v1-011",
+    "folio": "V1-011",
+    "title": "Herbal Page 8",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-011",
+    "path": "/folios/voynich/Vol 1/voynich-011.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f4v"
+  },
+  {
+    "id": "v1-012",
+    "folio": "V1-012",
+    "title": "Herbal Page 9",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-012",
+    "path": "/folios/voynich/Vol 1/voynich-012.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f5r"
+  },
+  {
+    "id": "v1-013",
+    "folio": "V1-013",
+    "title": "Herbal Page 10",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-013",
+    "path": "/folios/voynich/Vol 1/voynich-013.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f5v"
+  },
+  {
+    "id": "v1-014",
+    "folio": "V1-014",
+    "title": "Herbal Page 11",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-014",
+    "path": "/folios/voynich/Vol 1/voynich-014.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f6r"
+  },
+  {
+    "id": "v1-015",
+    "folio": "V1-015",
+    "title": "Herbal Page 12",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-015",
+    "path": "/folios/voynich/Vol 1/voynich-015.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f6v"
+  },
+  {
+    "id": "v1-016",
+    "folio": "V1-016",
+    "title": "Herbal Page 13",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-016",
+    "path": "/folios/voynich/Vol 1/voynich-016.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f7r"
+  },
+  {
+    "id": "v1-017",
+    "folio": "V1-017",
+    "title": "Herbal Page 14",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-017",
+    "path": "/folios/voynich/Vol 1/voynich-017.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f7v"
+  },
+  {
+    "id": "v1-018",
+    "folio": "V1-018",
+    "title": "Herbal Page 15",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-018",
+    "path": "/folios/voynich/Vol 1/voynich-018.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f8r"
+  },
+  {
+    "id": "v1-019",
+    "folio": "V1-019",
+    "title": "Herbal Page 16",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-019",
+    "path": "/folios/voynich/Vol 1/voynich-019.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f8v"
+  },
+  {
+    "id": "v1-020",
+    "folio": "V1-020",
+    "title": "Herbal Page 17",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-020",
+    "path": "/folios/voynich/Vol 1/voynich-020.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f9r"
+  },
+  {
+    "id": "v1-021",
+    "folio": "V1-021",
+    "title": "Herbal Page 18",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-021",
+    "path": "/folios/voynich/Vol 1/voynich-021.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f9v"
+  },
+  {
+    "id": "v1-022",
+    "folio": "V1-022",
+    "title": "Herbal Page 19",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-022",
+    "path": "/folios/voynich/Vol 1/voynich-022.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f10r"
+  },
+  {
+    "id": "v1-023",
+    "folio": "V1-023",
+    "title": "Herbal Page 20",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-023",
+    "path": "/folios/voynich/Vol 1/voynich-023.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f10v"
+  },
+  {
+    "id": "v1-024",
+    "folio": "V1-024",
+    "title": "Herbal Page 21",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-024",
+    "path": "/folios/voynich/Vol 1/voynich-024.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f11r"
+  },
+  {
+    "id": "v1-025",
+    "folio": "V1-025",
+    "title": "Herbal Page 22",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-025",
+    "path": "/folios/voynich/Vol 1/voynich-025.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f11v"
+  },
+  {
+    "id": "v1-026",
+    "folio": "V1-026",
+    "title": "Herbal Page 23",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-026",
+    "path": "/folios/voynich/Vol 1/voynich-026.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f13r"
+  },
+  {
+    "id": "v1-027",
+    "folio": "V1-027",
+    "title": "Herbal Page 24",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-027",
+    "path": "/folios/voynich/Vol 1/voynich-027.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f13v"
+  },
+  {
+    "id": "v1-028",
+    "folio": "V1-028",
+    "title": "Herbal Page 25",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-028",
+    "path": "/folios/voynich/Vol 1/voynich-028.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f14r"
+  },
+  {
+    "id": "v1-029",
+    "folio": "V1-029",
+    "title": "Herbal Page 26",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-029",
+    "path": "/folios/voynich/Vol 1/voynich-029.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f14v"
+  },
+  {
+    "id": "v1-030",
+    "folio": "V1-030",
+    "title": "Herbal Page 27",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-030",
+    "path": "/folios/voynich/Vol 1/voynich-030.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f15r"
+  },
+  {
+    "id": "v1-031",
+    "folio": "V1-031",
+    "title": "Herbal Page 28",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-031",
+    "path": "/folios/voynich/Vol 1/voynich-031.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f15v"
+  },
+  {
+    "id": "v1-032",
+    "folio": "V1-032",
+    "title": "Herbal Page 29",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-032",
+    "path": "/folios/voynich/Vol 1/voynich-032.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f16r"
+  },
+  {
+    "id": "v1-033",
+    "folio": "V1-033",
+    "title": "Herbal Page 30",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-033",
+    "path": "/folios/voynich/Vol 1/voynich-033.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f16v"
+  },
+  {
+    "id": "v1-034",
+    "folio": "V1-034",
+    "title": "Herbal Page 31",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-034",
+    "path": "/folios/voynich/Vol 1/voynich-034.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f17r"
+  },
+  {
+    "id": "v1-035",
+    "folio": "V1-035",
+    "title": "Herbal Page 32",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-035",
+    "path": "/folios/voynich/Vol 1/voynich-035.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f17v"
+  },
+  {
+    "id": "v1-036",
+    "folio": "V1-036",
+    "title": "Herbal Page 33",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-036",
+    "path": "/folios/voynich/Vol 1/voynich-036.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f18r"
+  },
+  {
+    "id": "v1-037",
+    "folio": "V1-037",
+    "title": "Herbal Page 34",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-037",
+    "path": "/folios/voynich/Vol 1/voynich-037.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f18v"
+  },
+  {
+    "id": "v1-038",
+    "folio": "V1-038",
+    "title": "Herbal Page 35",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-038",
+    "path": "/folios/voynich/Vol 1/voynich-038.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f19r"
+  },
+  {
+    "id": "v1-039",
+    "folio": "V1-039",
+    "title": "Herbal Page 36",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-039",
+    "path": "/folios/voynich/Vol 1/voynich-039.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f19v"
+  },
+  {
+    "id": "v1-040",
+    "folio": "V1-040",
+    "title": "Herbal Page 37",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-040",
+    "path": "/folios/voynich/Vol 1/voynich-040.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f20r"
+  },
+  {
+    "id": "v1-041",
+    "folio": "V1-041",
+    "title": "Herbal Page 38",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-041",
+    "path": "/folios/voynich/Vol 1/voynich-041.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f20v"
+  },
+  {
+    "id": "v1-042",
+    "folio": "V1-042",
+    "title": "Herbal Page 39",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-042",
+    "path": "/folios/voynich/Vol 1/voynich-042.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f21r"
+  },
+  {
+    "id": "v1-043",
+    "folio": "V1-043",
+    "title": "Herbal Page 40",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-043",
+    "path": "/folios/voynich/Vol 1/voynich-043.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f21v"
+  },
+  {
+    "id": "v1-044",
+    "folio": "V1-044",
+    "title": "Herbal Page 41",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-044",
+    "path": "/folios/voynich/Vol 1/voynich-044.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f22r"
+  },
+  {
+    "id": "v1-045",
+    "folio": "V1-045",
+    "title": "Herbal Page 42",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-045",
+    "path": "/folios/voynich/Vol 1/voynich-045.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f22v"
+  },
+  {
+    "id": "v1-046",
+    "folio": "V1-046",
+    "title": "Herbal Page 43",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-046",
+    "path": "/folios/voynich/Vol 1/voynich-046.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f23r"
+  },
+  {
+    "id": "v1-047",
+    "folio": "V1-047",
+    "title": "Herbal Page 44",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-047",
+    "path": "/folios/voynich/Vol 1/voynich-047.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f23v"
+  },
+  {
+    "id": "v1-048",
+    "folio": "V1-048",
+    "title": "Herbal Page 45",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-048",
+    "path": "/folios/voynich/Vol 1/voynich-048.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f24r"
+  },
+  {
+    "id": "v1-049",
+    "folio": "V1-049",
+    "title": "Herbal Page 46",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-049",
+    "path": "/folios/voynich/Vol 1/voynich-049.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f24v"
+  },
+  {
+    "id": "v1-050",
+    "folio": "V1-050",
+    "title": "Herbal Page 47",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-050",
+    "path": "/folios/voynich/Vol 1/voynich-050.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f25r"
+  },
+  {
+    "id": "v1-051",
+    "folio": "V1-051",
+    "title": "Herbal Page 48",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-051",
+    "path": "/folios/voynich/Vol 1/voynich-051.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f25v"
+  },
+  {
+    "id": "v1-052",
+    "folio": "V1-052",
+    "title": "Herbal Page 49",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-052",
+    "path": "/folios/voynich/Vol 1/voynich-052.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f26r"
+  },
+  {
+    "id": "v1-053",
+    "folio": "V1-053",
+    "title": "Herbal Page 50",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 1,
+    "filename": "voynich-053",
+    "path": "/folios/voynich/Vol 1/voynich-053.jpg",
+    "description": "Herbal section page from Volume 1.",
+    "features": [
+      "Plant illustration"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f26v"
+  },
+  {
+    "id": "v2-000",
+    "folio": "V2-000",
+    "title": "Astronomical Page 1",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-000",
+    "path": "/folios/voynich/Vol 2/voynich2-000.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f27r"
+  },
+  {
+    "id": "v2-001",
+    "folio": "V2-001",
+    "title": "Astronomical Page 2",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-001",
+    "path": "/folios/voynich/Vol 2/voynich2-001.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f27v"
+  },
+  {
+    "id": "v2-002",
+    "folio": "V2-002",
+    "title": "Astronomical Page 3",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-002",
+    "path": "/folios/voynich/Vol 2/voynich2-002.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f28r"
+  },
+  {
+    "id": "v2-003",
+    "folio": "V2-003",
+    "title": "Astronomical Page 4",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-003",
+    "path": "/folios/voynich/Vol 2/voynich2-003.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f28v"
+  },
+  {
+    "id": "v2-004",
+    "folio": "V2-004",
+    "title": "Astronomical Page 5",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-004",
+    "path": "/folios/voynich/Vol 2/voynich2-004.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f29r"
+  },
+  {
+    "id": "v2-005",
+    "folio": "V2-005",
+    "title": "Astronomical Page 6",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-005",
+    "path": "/folios/voynich/Vol 2/voynich2-005.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f29v"
+  },
+  {
+    "id": "v2-006",
+    "folio": "V2-006",
+    "title": "Astronomical Page 7",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-006",
+    "path": "/folios/voynich/Vol 2/voynich2-006.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f30r"
+  },
+  {
+    "id": "v2-007",
+    "folio": "V2-007",
+    "title": "Astronomical Page 8",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-007",
+    "path": "/folios/voynich/Vol 2/voynich2-007.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f30v"
+  },
+  {
+    "id": "v2-008",
+    "folio": "V2-008",
+    "title": "Astronomical Page 9",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-008",
+    "path": "/folios/voynich/Vol 2/voynich2-008.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f31r"
+  },
+  {
+    "id": "v2-009",
+    "folio": "V2-009",
+    "title": "Astronomical Page 10",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-009",
+    "path": "/folios/voynich/Vol 2/voynich2-009.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f31v"
+  },
+  {
+    "id": "v2-010",
+    "folio": "V2-010",
+    "title": "Astronomical Page 11",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-010",
+    "path": "/folios/voynich/Vol 2/voynich2-010.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f32r"
+  },
+  {
+    "id": "v2-011",
+    "folio": "V2-011",
+    "title": "Astronomical Page 12",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-011",
+    "path": "/folios/voynich/Vol 2/voynich2-011.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f32v"
+  },
+  {
+    "id": "v2-012",
+    "folio": "V2-012",
+    "title": "Astronomical Page 13",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-012",
+    "path": "/folios/voynich/Vol 2/voynich2-012.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f33r"
+  },
+  {
+    "id": "v2-013",
+    "folio": "V2-013",
+    "title": "Astronomical Page 14",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-013",
+    "path": "/folios/voynich/Vol 2/voynich2-013.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f33v"
+  },
+  {
+    "id": "v2-014",
+    "folio": "V2-014",
+    "title": "Astronomical Page 15",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-014",
+    "path": "/folios/voynich/Vol 2/voynich2-014.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f34r"
+  },
+  {
+    "id": "v2-015",
+    "folio": "V2-015",
+    "title": "Astronomical Page 16",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-015",
+    "path": "/folios/voynich/Vol 2/voynich2-015.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f34v"
+  },
+  {
+    "id": "v2-016",
+    "folio": "V2-016",
+    "title": "Astronomical Page 17",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-016",
+    "path": "/folios/voynich/Vol 2/voynich2-016.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f35r"
+  },
+  {
+    "id": "v2-017",
+    "folio": "V2-017",
+    "title": "Astronomical Page 18",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-017",
+    "path": "/folios/voynich/Vol 2/voynich2-017.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f35v"
+  },
+  {
+    "id": "v2-018",
+    "folio": "V2-018",
+    "title": "Astronomical Page 19",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-018",
+    "path": "/folios/voynich/Vol 2/voynich2-018.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f36r"
+  },
+  {
+    "id": "v2-019",
+    "folio": "V2-019",
+    "title": "Astronomical Page 20",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-019",
+    "path": "/folios/voynich/Vol 2/voynich2-019.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f36v"
+  },
+  {
+    "id": "v2-020",
+    "folio": "V2-020",
+    "title": "Astronomical Page 21",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-020",
+    "path": "/folios/voynich/Vol 2/voynich2-020.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f37r"
+  },
+  {
+    "id": "v2-021",
+    "folio": "V2-021",
+    "title": "Astronomical Page 22",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-021",
+    "path": "/folios/voynich/Vol 2/voynich2-021.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f37v"
+  },
+  {
+    "id": "v2-022",
+    "folio": "V2-022",
+    "title": "Astronomical Page 23",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-022",
+    "path": "/folios/voynich/Vol 2/voynich2-022.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f38r"
+  },
+  {
+    "id": "v2-023",
+    "folio": "V2-023",
+    "title": "Astronomical Page 24",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-023",
+    "path": "/folios/voynich/Vol 2/voynich2-023.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f38v"
+  },
+  {
+    "id": "v2-024",
+    "folio": "V2-024",
+    "title": "Astronomical Page 25",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-024",
+    "path": "/folios/voynich/Vol 2/voynich2-024.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f39r"
+  },
+  {
+    "id": "v2-025",
+    "folio": "V2-025",
+    "title": "Astronomical Page 26",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-025",
+    "path": "/folios/voynich/Vol 2/voynich2-025.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f39v"
+  },
+  {
+    "id": "v2-026",
+    "folio": "V2-026",
+    "title": "Astronomical Page 27",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-026",
+    "path": "/folios/voynich/Vol 2/voynich2-026.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f40r"
+  },
+  {
+    "id": "v2-027",
+    "folio": "V2-027",
+    "title": "Astronomical Page 28",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-027",
+    "path": "/folios/voynich/Vol 2/voynich2-027.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f40v"
+  },
+  {
+    "id": "v2-028",
+    "folio": "V2-028",
+    "title": "Astronomical Page 29",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-028",
+    "path": "/folios/voynich/Vol 2/voynich2-028.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f41r"
+  },
+  {
+    "id": "v2-029",
+    "folio": "V2-029",
+    "title": "Astronomical Page 30",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-029",
+    "path": "/folios/voynich/Vol 2/voynich2-029.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f41v"
+  },
+  {
+    "id": "v2-030",
+    "folio": "V2-030",
+    "title": "Astronomical Page 31",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-030",
+    "path": "/folios/voynich/Vol 2/voynich2-030.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f42r"
+  },
+  {
+    "id": "v2-031",
+    "folio": "V2-031",
+    "title": "Astronomical Page 32",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-031",
+    "path": "/folios/voynich/Vol 2/voynich2-031.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f42v"
+  },
+  {
+    "id": "v2-032",
+    "folio": "V2-032",
+    "title": "Astronomical Page 33",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-032",
+    "path": "/folios/voynich/Vol 2/voynich2-032.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f43r"
+  },
+  {
+    "id": "v2-033",
+    "folio": "V2-033",
+    "title": "Astronomical Page 34",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-033",
+    "path": "/folios/voynich/Vol 2/voynich2-033.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f43v"
+  },
+  {
+    "id": "v2-034",
+    "folio": "V2-034",
+    "title": "Astronomical Page 35",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-034",
+    "path": "/folios/voynich/Vol 2/voynich2-034.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f44r"
+  },
+  {
+    "id": "v2-035",
+    "folio": "V2-035",
+    "title": "Astronomical Page 36",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-035",
+    "path": "/folios/voynich/Vol 2/voynich2-035.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f44v"
+  },
+  {
+    "id": "v2-036",
+    "folio": "V2-036",
+    "title": "Astronomical Page 37",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-036",
+    "path": "/folios/voynich/Vol 2/voynich2-036.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f45r"
+  },
+  {
+    "id": "v2-037",
+    "folio": "V2-037",
+    "title": "Astronomical Page 38",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-037",
+    "path": "/folios/voynich/Vol 2/voynich2-037.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f45v"
+  },
+  {
+    "id": "v2-038",
+    "folio": "V2-038",
+    "title": "Astronomical Page 39",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-038",
+    "path": "/folios/voynich/Vol 2/voynich2-038.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f46r"
+  },
+  {
+    "id": "v2-039",
+    "folio": "V2-039",
+    "title": "Astronomical Page 40",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-039",
+    "path": "/folios/voynich/Vol 2/voynich2-039.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f46v"
+  },
+  {
+    "id": "v2-040",
+    "folio": "V2-040",
+    "title": "Astronomical Page 41",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-040",
+    "path": "/folios/voynich/Vol 2/voynich2-040.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f47r"
+  },
+  {
+    "id": "v2-041",
+    "folio": "V2-041",
+    "title": "Astronomical Page 42",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-041",
+    "path": "/folios/voynich/Vol 2/voynich2-041.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f47v"
+  },
+  {
+    "id": "v2-042",
+    "folio": "V2-042",
+    "title": "Astronomical Page 43",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-042",
+    "path": "/folios/voynich/Vol 2/voynich2-042.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f48r"
+  },
+  {
+    "id": "v2-043",
+    "folio": "V2-043",
+    "title": "Astronomical Page 44",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-043",
+    "path": "/folios/voynich/Vol 2/voynich2-043.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f48v"
+  },
+  {
+    "id": "v2-044",
+    "folio": "V2-044",
+    "title": "Astronomical Page 45",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-044",
+    "path": "/folios/voynich/Vol 2/voynich2-044.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f49r"
+  },
+  {
+    "id": "v2-045",
+    "folio": "V2-045",
+    "title": "Astronomical Page 46",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-045",
+    "path": "/folios/voynich/Vol 2/voynich2-045.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f49v"
+  },
+  {
+    "id": "v2-046",
+    "folio": "V2-046",
+    "title": "Astronomical Page 47",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-046",
+    "path": "/folios/voynich/Vol 2/voynich2-046.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f50r"
+  },
+  {
+    "id": "v2-047",
+    "folio": "V2-047",
+    "title": "Astronomical Page 48",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-047",
+    "path": "/folios/voynich/Vol 2/voynich2-047.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f50v"
+  },
+  {
+    "id": "v2-048",
+    "folio": "V2-048",
+    "title": "Astronomical Page 49",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-048",
+    "path": "/folios/voynich/Vol 2/voynich2-048.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f51r"
+  },
+  {
+    "id": "v2-049",
+    "folio": "V2-049",
+    "title": "Astronomical Page 50",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-049",
+    "path": "/folios/voynich/Vol 2/voynich2-049.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f51v"
+  },
+  {
+    "id": "v2-050",
+    "folio": "V2-050",
+    "title": "Astronomical Page 51",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-050",
+    "path": "/folios/voynich/Vol 2/voynich2-050.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f52r"
+  },
+  {
+    "id": "v2-051",
+    "folio": "V2-051",
+    "title": "Astronomical Page 52",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 2,
+    "filename": "voynich2-051",
+    "path": "/folios/voynich/Vol 2/voynich2-051.jpg",
+    "description": "Astronomical section page from Volume 2.",
+    "features": [
+      "Circular diagram"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f52v"
+  },
+  {
+    "id": "v3-000",
+    "folio": "V3-000",
+    "title": "Biological Page 1",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-000",
+    "path": "/folios/voynich/Vol 3/vol3-000.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f53v"
+  },
+  {
+    "id": "v3-001",
+    "folio": "V3-001",
+    "title": "Biological Page 2",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-001",
+    "path": "/folios/voynich/Vol 3/vol3-001.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f54r"
+  },
+  {
+    "id": "v3-002",
+    "folio": "V3-002",
+    "title": "Biological Page 3",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-002",
+    "path": "/folios/voynich/Vol 3/vol3-002.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f54v"
+  },
+  {
+    "id": "v3-003",
+    "folio": "V3-003",
+    "title": "Biological Page 4",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-003",
+    "path": "/folios/voynich/Vol 3/vol3-003.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f55r"
+  },
+  {
+    "id": "v3-004",
+    "folio": "V3-004",
+    "title": "Biological Page 5",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-004",
+    "path": "/folios/voynich/Vol 3/vol3-004.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f55v"
+  },
+  {
+    "id": "v3-005",
+    "folio": "V3-005",
+    "title": "Biological Page 6",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-005",
+    "path": "/folios/voynich/Vol 3/vol3-005.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f56r"
+  },
+  {
+    "id": "v3-006",
+    "folio": "V3-006",
+    "title": "Biological Page 7",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-006",
+    "path": "/folios/voynich/Vol 3/vol3-006.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f56v"
+  },
+  {
+    "id": "v3-007",
+    "folio": "V3-007",
+    "title": "Biological Page 8",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-007",
+    "path": "/folios/voynich/Vol 3/vol3-007.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f57r"
+  },
+  {
+    "id": "v3-008",
+    "folio": "V3-008",
+    "title": "Biological Page 9",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-008",
+    "path": "/folios/voynich/Vol 3/vol3-008.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f57v"
+  },
+  {
+    "id": "v3-009",
+    "folio": "V3-009",
+    "title": "Biological Page 10",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-009",
+    "path": "/folios/voynich/Vol 3/vol3-009.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f58r"
+  },
+  {
+    "id": "v3-010",
+    "folio": "V3-010",
+    "title": "Biological Page 11",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-010",
+    "path": "/folios/voynich/Vol 3/vol3-010.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f58v"
+  },
+  {
+    "id": "v3-011",
+    "folio": "V3-011",
+    "title": "Biological Page 12",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-011",
+    "path": "/folios/voynich/Vol 3/vol3-011.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f65r"
+  },
+  {
+    "id": "v3-012",
+    "folio": "V3-012",
+    "title": "Biological Page 13",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-012",
+    "path": "/folios/voynich/Vol 3/vol3-012.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f65v"
+  },
+  {
+    "id": "v3-013",
+    "folio": "V3-013",
+    "title": "Biological Page 14",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-013",
+    "path": "/folios/voynich/Vol 3/vol3-013.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f66r"
+  },
+  {
+    "id": "v3-014",
+    "folio": "V3-014",
+    "title": "Biological Page 15",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-014",
+    "path": "/folios/voynich/Vol 3/vol3-014.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f66v"
+  },
+  {
+    "id": "v3-015",
+    "folio": "V3-015",
+    "title": "Biological Page 16",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-015",
+    "path": "/folios/voynich/Vol 3/vol3-015.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f67r"
+  },
+  {
+    "id": "v3-016",
+    "folio": "V3-016",
+    "title": "Biological Page 17",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-016",
+    "path": "/folios/voynich/Vol 3/vol3-016.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f67v"
+  },
+  {
+    "id": "v3-017",
+    "folio": "V3-017",
+    "title": "Biological Page 18",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-017",
+    "path": "/folios/voynich/Vol 3/vol3-017.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f68r"
+  },
+  {
+    "id": "v3-018",
+    "folio": "V3-018",
+    "title": "Biological Page 19",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-018",
+    "path": "/folios/voynich/Vol 3/vol3-018.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f68v"
+  },
+  {
+    "id": "v3-019",
+    "folio": "V3-019",
+    "title": "Biological Page 20",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-019",
+    "path": "/folios/voynich/Vol 3/vol3-019.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f69r"
+  },
+  {
+    "id": "v3-020",
+    "folio": "V3-020",
+    "title": "Biological Page 21",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-020",
+    "path": "/folios/voynich/Vol 3/vol3-020.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f69v-70r"
+  },
+  {
+    "id": "v3-021",
+    "folio": "V3-021",
+    "title": "Biological Page 22",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-021",
+    "path": "/folios/voynich/Vol 3/vol3-021.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f70v (part)"
+  },
+  {
+    "id": "v3-022",
+    "folio": "V3-022",
+    "title": "Biological Page 23",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-022",
+    "path": "/folios/voynich/Vol 3/vol3-022.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f70v (part)"
+  },
+  {
+    "id": "v3-023",
+    "folio": "V3-023",
+    "title": "Biological Page 24",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-023",
+    "path": "/folios/voynich/Vol 3/vol3-023.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f71r"
+  },
+  {
+    "id": "v3-024",
+    "folio": "V3-024",
+    "title": "Biological Page 25",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-024",
+    "path": "/folios/voynich/Vol 3/vol3-024.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f71v-72r"
+  },
+  {
+    "id": "v3-025",
+    "folio": "V3-025",
+    "title": "Biological Page 26",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-025",
+    "path": "/folios/voynich/Vol 3/vol3-025.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f72v (part)"
+  },
+  {
+    "id": "v3-026",
+    "folio": "V3-026",
+    "title": "Biological Page 27",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-026",
+    "path": "/folios/voynich/Vol 3/vol3-026.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f72v (part)"
+  },
+  {
+    "id": "v3-027",
+    "folio": "V3-027",
+    "title": "Biological Page 28",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-027",
+    "path": "/folios/voynich/Vol 3/vol3-027.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f73r"
+  },
+  {
+    "id": "v3-028",
+    "folio": "V3-028",
+    "title": "Biological Page 29",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-028",
+    "path": "/folios/voynich/Vol 3/vol3-028.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f73v"
+  },
+  {
+    "id": "v3-029",
+    "folio": "V3-029",
+    "title": "Biological Page 30",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-029",
+    "path": "/folios/voynich/Vol 3/vol3-029.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f75r"
+  },
+  {
+    "id": "v3-030",
+    "folio": "V3-030",
+    "title": "Biological Page 31",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-030",
+    "path": "/folios/voynich/Vol 3/vol3-030.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f75v"
+  },
+  {
+    "id": "v3-031",
+    "folio": "V3-031",
+    "title": "Biological Page 32",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-031",
+    "path": "/folios/voynich/Vol 3/vol3-031.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f76r"
+  },
+  {
+    "id": "v3-032",
+    "folio": "V3-032",
+    "title": "Biological Page 33",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-032",
+    "path": "/folios/voynich/Vol 3/vol3-032.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f76v"
+  },
+  {
+    "id": "v3-033",
+    "folio": "V3-033",
+    "title": "Biological Page 34",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-033",
+    "path": "/folios/voynich/Vol 3/vol3-033.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f77r"
+  },
+  {
+    "id": "v3-034",
+    "folio": "V3-034",
+    "title": "Biological Page 35",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-034",
+    "path": "/folios/voynich/Vol 3/vol3-034.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f77v"
+  },
+  {
+    "id": "v3-035",
+    "folio": "V3-035",
+    "title": "Biological Page 36",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-035",
+    "path": "/folios/voynich/Vol 3/vol3-035.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f78r"
+  },
+  {
+    "id": "v3-036",
+    "folio": "V3-036",
+    "title": "Biological Page 37",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-036",
+    "path": "/folios/voynich/Vol 3/vol3-036.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f78v"
+  },
+  {
+    "id": "v3-037",
+    "folio": "V3-037",
+    "title": "Biological Page 38",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-037",
+    "path": "/folios/voynich/Vol 3/vol3-037.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f79r"
+  },
+  {
+    "id": "v3-038",
+    "folio": "V3-038",
+    "title": "Biological Page 39",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-038",
+    "path": "/folios/voynich/Vol 3/vol3-038.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f79v"
+  },
+  {
+    "id": "v3-039",
+    "folio": "V3-039",
+    "title": "Biological Page 40",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-039",
+    "path": "/folios/voynich/Vol 3/vol3-039.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f80r"
+  },
+  {
+    "id": "v3-040",
+    "folio": "V3-040",
+    "title": "Biological Page 41",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-040",
+    "path": "/folios/voynich/Vol 3/vol3-040.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f80v"
+  },
+  {
+    "id": "v3-041",
+    "folio": "V3-041",
+    "title": "Biological Page 42",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-041",
+    "path": "/folios/voynich/Vol 3/vol3-041.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f81r"
+  },
+  {
+    "id": "v3-042",
+    "folio": "V3-042",
+    "title": "Biological Page 43",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-042",
+    "path": "/folios/voynich/Vol 3/vol3-042.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f81v"
+  },
+  {
+    "id": "v3-043",
+    "folio": "V3-043",
+    "title": "Biological Page 44",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-043",
+    "path": "/folios/voynich/Vol 3/vol3-043.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f82r"
+  },
+  {
+    "id": "v3-044",
+    "folio": "V3-044",
+    "title": "Biological Page 45",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-044",
+    "path": "/folios/voynich/Vol 3/vol3-044.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f82v"
+  },
+  {
+    "id": "v3-045",
+    "folio": "V3-045",
+    "title": "Biological Page 46",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-045",
+    "path": "/folios/voynich/Vol 3/vol3-045.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f83r"
+  },
+  {
+    "id": "v3-046",
+    "folio": "V3-046",
+    "title": "Biological Page 47",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-046",
+    "path": "/folios/voynich/Vol 3/vol3-046.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f83v"
+  },
+  {
+    "id": "v3-047",
+    "folio": "V3-047",
+    "title": "Biological Page 48",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-047",
+    "path": "/folios/voynich/Vol 3/vol3-047.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f84r"
+  },
+  {
+    "id": "v3-048",
+    "folio": "V3-048",
+    "title": "Biological Page 49",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-048",
+    "path": "/folios/voynich/Vol 3/vol3-048.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f84v"
+  },
+  {
+    "id": "v3-049",
+    "folio": "V3-049",
+    "title": "Biological Page 50",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-049",
+    "path": "/folios/voynich/Vol 3/vol3-049.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f85r (part)"
+  },
+  {
+    "id": "v3-050",
+    "folio": "V3-050",
+    "title": "Biological Page 51",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-050",
+    "path": "/folios/voynich/Vol 3/vol3-050.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f85r (part)"
+  },
+  {
+    "id": "v3-051",
+    "folio": "V3-051",
+    "title": "Biological Page 52",
+    "category": "biological",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-051",
+    "path": "/folios/voynich/Vol 3/vol3-051.jpg",
+    "description": "Biological section page from Volume 3.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f86v (part)"
+  },
+  {
+    "id": "v3-052",
+    "folio": "V3-052",
+    "beineckeRef": "f68r3",
+    "title": "Pleiades Rosette Foldout",
+    "category": "astronomical",
+    "collection": "voynich",
+    "volume": 3,
+    "filename": "vol3-052",
+    "path": "/folios/voynich/Vol 3/vol3-052.jpg",
+    "description": "Astronomical foldout, folio 68 recto panel 3 (Beinecke MS 408). Nine rosette diagrams in a 3\u00d73 grid.",
+    "features": [
+      "Figures",
+      "Tubes"
+    ],
+    "storyNotes": ""
+  },
+  {
+    "id": "v4-f85v-86r",
+    "folio": "f.85v-86r",
+    "title": "Great Rosette Foldout",
+    "category": "cosmological",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f85v-86r",
+    "path": "/folios/voynich/Vol 4/f85v-86r.jpg",
+    "description": "Six-panel foldout featuring circular diagrams with blue radiating patterns.",
+    "features": [
+      "Six panels",
+      "Blue rosettes",
+      "Radiating patterns"
+    ],
+    "storyNotes": "CRITICAL CONNECTION: The radiating geometric patterns mirror the Notae symbols in Ars Notoria manuscripts.",
+    "beineckeRef": "f85v-86r"
+  },
+  {
+    "id": "v4-f87r",
+    "folio": "f.87r",
+    "title": "Forked Root Plant",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f87r",
+    "path": "/folios/voynich/Vol 4/f87r.jpg",
+    "description": "Single large plant with green rounded leaves and distinctive forked root system.",
+    "features": [
+      "Forked roots",
+      "Blue flowers"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f87r"
+  },
+  {
+    "id": "v4-f87v",
+    "folio": "f.87v",
+    "title": "Paired Plants",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f87v",
+    "path": "/folios/voynich/Vol 4/f87v.jpg",
+    "description": "Two plants side by side with contrasting leaf types.",
+    "features": [
+      "Paired plants"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f87v"
+  },
+  {
+    "id": "v4-f88r",
+    "folio": "f.88r",
+    "title": "Pharmaceutical Vessels",
+    "category": "pharmaceutical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f88r",
+    "path": "/folios/voynich/Vol 4/f88r.jpg",
+    "description": "Three tiered vessels along left margin. Rows of hanging dried specimens.",
+    "features": [
+      "Tiered vessels",
+      "Hanging specimens"
+    ],
+    "storyNotes": "CRITICAL: These vessels match alchemical apparatus.",
+    "beineckeRef": "f88r"
+  },
+  {
+    "id": "v4-f88v-89r",
+    "folio": "f.88v-89r",
+    "title": "Extended Pharmaceutical Foldout",
+    "category": "pharmaceutical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f88v-89r",
+    "path": "/folios/voynich/Vol 4/f88v-89r.jpg",
+    "description": "Four-panel foldout showing extensive pharmaceutical preparations.",
+    "features": [
+      "Four panels",
+      "Multiple vessels"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f88v-89r"
+  },
+  {
+    "id": "v4-f90v-part",
+    "folio": "f.90v",
+    "title": "Walking Root Plant",
+    "category": "botanical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f90v-part",
+    "path": "/folios/voynich/Vol 4/f90v-part.jpg",
+    "description": "Plant with blue cross-shaped flowers and animal-like walking root system.",
+    "features": [
+      "Walking root",
+      "Animal-like roots"
+    ],
+    "storyNotes": "IMPORTANT: Connects to mandrake legends.",
+    "beineckeRef": "f90v (part)"
+  },
+  {
+    "id": "v4-f99r",
+    "folio": "f.99r",
+    "title": "Marine Specimen Recipe",
+    "category": "pharmaceutical",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f99r",
+    "path": "/folios/voynich/Vol 4/f99r.jpg",
+    "description": "Complex recipe page with vessels, roots, and marine creatures.",
+    "features": [
+      "Marine specimens"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f99r"
+  },
+  {
+    "id": "v4-f103r",
+    "folio": "f.103r",
+    "title": "Recipe Text - Star Markers",
+    "category": "text",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f103r",
+    "path": "/folios/voynich/Vol 4/f103r.jpg",
+    "description": "Dense text page with red star paragraph markers.",
+    "features": [
+      "Red star markers"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "f103r"
+  },
+  {
+    "id": "v4-f116v",
+    "folio": "f.116v",
+    "title": "Sparse Final Page",
+    "category": "text",
+    "collection": "voynich",
+    "volume": 4,
+    "filename": "f116v",
+    "path": "/folios/voynich/Vol 4/f116v.jpg",
+    "description": "Mostly blank final page with small figure drawing.",
+    "features": [
+      "Sparse text",
+      "Incomplete"
+    ],
+    "storyNotes": "MYSTERIOUS: Intentionally withheld knowledge.",
+    "beineckeRef": "f116v"
+  },
+  {
+    "id": "v5-spine",
+    "folio": "Spine",
+    "title": "Book Spine",
+    "category": "physical",
+    "collection": "voynich",
+    "volume": 5,
+    "filename": "spine",
+    "path": "/folios/voynich/Vol 5/spine.jpg",
+    "description": "Vellum binding spine with age patina.",
+    "features": [
+      "Vellum binding"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "Spine"
+  },
+  {
+    "id": "v5-back-cover",
+    "folio": "Back Cover",
+    "title": "Back Cover",
+    "category": "physical",
+    "collection": "voynich",
+    "volume": 5,
+    "filename": "back-cover",
+    "path": "/folios/voynich/Vol 5/back-cover.jpg",
+    "description": "Full back cover showing limp vellum binding.",
+    "features": [
+      "Limp vellum"
+    ],
+    "storyNotes": "",
+    "beineckeRef": "Back cover"
+  },
+  {
+    "id": "an-01",
+    "folio": "AN-01",
+    "title": "Ornamental Notae with Swords",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_1",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_1.png",
+    "description": "Decorative page with organic scrollwork patterns. Upper section shows seven sword-like elements. Red ink throughout.",
+    "features": [
+      "Sword elements",
+      "Scrollwork",
+      "Vine patterns",
+      "Red ink"
+    ],
+    "storyNotes": "The seven swords may represent the seven liberal arts."
+  },
+  {
+    "id": "an-02",
+    "folio": "AN-02",
+    "title": "Columnar Notae with Star Burst",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_2",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_2.png",
+    "description": "Vertical columnar structure with braided pillar. Six-pointed star burst in upper right. Circular diagrams at bottom.",
+    "features": [
+      "Braided pillar",
+      "Star burst",
+      "Circular diagrams"
+    ],
+    "storyNotes": "Star burst may represent divine illumination."
+  },
+  {
+    "id": "an-03",
+    "folio": "AN-03",
+    "title": "Geometric Notae Compendium",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_3",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_3.png",
+    "description": "Multiple geometric figure types in a grid. Central tree-like structure growing from roots.",
+    "features": [
+      "Concentric circles",
+      "Square in circle",
+      "Heart shapes",
+      "Tree structure"
+    ],
+    "storyNotes": "CRITICAL REFERENCE: Compendium of notae figure types. Compare to Voynich f.85v-86r rosettes."
+  },
+  {
+    "id": "an-04",
+    "folio": "AN-04",
+    "title": "Pillars and Feather Notae",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_4",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_4.png",
+    "description": "Multiple vertical columnar structures. Large feather-like central element. Face-like circular diagrams.",
+    "features": [
+      "Ornate pillars",
+      "Feather element",
+      "Face-like circles"
+    ],
+    "storyNotes": "Pillar forms may represent temple imagery connected to Solomon."
+  },
+  {
+    "id": "an-05",
+    "folio": "AN-05",
+    "title": "Hexagonal Trefoil Network",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_5",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_5.png",
+    "description": "Six trefoil forms in hexagonal pattern. Eye-shaped diagram below.",
+    "features": [
+      "Hexagonal arrangement",
+      "Trefoil forms",
+      "Eye-shaped diagram"
+    ],
+    "storyNotes": "Trefoil suggests Trinity symbolism. Eye may represent divine sight."
+  },
+  {
+    "id": "an-06",
+    "folio": "AN-06",
+    "title": "Three Pillars of Philosophy",
+    "category": "notae",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_6",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_6.png",
+    "description": "Three vertical elements: arrow pillar with quatrefoil, circle chain, and compass figure.",
+    "features": [
+      "Arrow pillar",
+      "Circle chain",
+      "Compass figure"
+    ],
+    "storyNotes": "SIGNIFICANT: Three pillars may represent trivium or branches of philosophical knowledge."
+  },
+  {
+    "id": "an-07",
+    "folio": "AN-07",
+    "title": "Page Layout Diagram",
+    "category": "diagrams",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_7",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_7.png",
+    "description": "Structural layout with four semicircular fan patterns in corners. Rectangular text boxes.",
+    "features": [
+      "Fan patterns",
+      "Text boxes",
+      "Layout structure"
+    ],
+    "storyNotes": "Template for organizing knowledge/prayers."
+  },
+  {
+    "id": "an-08",
+    "folio": "AN-08",
+    "title": "Twin Sphere Cosmological Figure",
+    "category": "diagrams",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_8",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_8.png",
+    "description": "Two circular diagrams connected by flowing channels. Infinity-like flow pattern.",
+    "features": [
+      "Twin spheres",
+      "Flowing channels",
+      "Infinity pattern"
+    ],
+    "storyNotes": "COSMOLOGICAL: May represent circulation between celestial and terrestrial realms. Compare to Voynich biological tubes."
+  },
+  {
+    "id": "an-09",
+    "folio": "AN-09",
+    "title": "Circle Mesh Network",
+    "category": "diagrams",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_9",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_9.png",
+    "description": "Large mesh of interconnected circles. Vertical spine on right edge.",
+    "features": [
+      "Circle mesh",
+      "Network pattern",
+      "Systematic structure"
+    ],
+    "storyNotes": "IMPORTANT: Network represents interconnected nature of knowledge in Ars Notoria."
+  },
+  {
+    "id": "an-10",
+    "folio": "AN-10",
+    "title": "Flowing Knowledge Tree",
+    "category": "diagrams",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_10",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_10.png",
+    "description": "Interconnected circles of varying sizes connected by flowing lines. Organic appearance.",
+    "features": [
+      "Flowing connections",
+      "Organic structure",
+      "Dense text"
+    ],
+    "storyNotes": "KEY DIAGRAM: Map of how knowledge areas flow into each other. Parallels Voynich biological imagery."
+  },
+  {
+    "id": "an-11",
+    "folio": "AN-11",
+    "title": "Triple Venn Intersection",
+    "category": "diagrams",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_11",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_11.png",
+    "description": "Three overlapping circles in Venn diagram style. Central intersection represents unified knowledge.",
+    "features": [
+      "Three circles",
+      "Venn structure",
+      "Central intersection"
+    ],
+    "storyNotes": "THEOLOGICAL: Triple intersection represents Trinity and unified divine knowledge."
+  },
+  {
+    "id": "an-12",
+    "folio": "AN-12",
+    "title": "Celestial Sphere with Text",
+    "category": "orations",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_12",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_12.png",
+    "description": "Text-heavy page with circular diagram at bottom showing celestial pattern.",
+    "features": [
+      "Celestial circles",
+      "Dense prayer text"
+    ],
+    "storyNotes": "Circular arrangement may represent planetary spheres."
+  },
+  {
+    "id": "an-13",
+    "folio": "AN-13",
+    "title": "Trinitarian Circle Oration",
+    "category": "orations",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_13",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_13.png",
+    "description": "Three connected circles in triangular arrangement filled with prayer text.",
+    "features": [
+      "Three circles",
+      "Triangle arrangement",
+      "Trinity symbolism"
+    ],
+    "storyNotes": "PRAYER FORMAT: Standard Trinitarian invocation pattern. Blake needs this for effective invocation."
+  },
+  {
+    "id": "an-14",
+    "folio": "AN-14",
+    "title": "Diamond Text Container",
+    "category": "orations",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_14",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_14.png",
+    "description": "Large diamond shape filled with Latin text. Dense marginal annotations.",
+    "features": [
+      "Diamond shape",
+      "Central text block"
+    ],
+    "storyNotes": "Diamond may represent four elements or cardinal directions."
+  },
+  {
+    "id": "an-15",
+    "folio": "AN-15",
+    "title": "Concentric Prayer Wheel",
+    "category": "orations",
+    "collection": "arsnotoria",
+    "volume": 0,
+    "filename": "Ars_Notoria_Screenshot_15",
+    "path": "/folios/arsnotoria/Ars_Notoria_Screenshot_15.png",
+    "description": "Four concentric circles with spiral Latin text. Classic wheel diagram.",
+    "features": [
+      "Concentric circles",
+      "Spiral text",
+      "Wheel format"
+    ],
+    "storyNotes": "MEDITATION AID: Spiral text read while tracing circles creates meditative practice."
+  }
+]

@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Jason Carroll Holloway — Masters X Trilogy | Seventh City Press",
   titleAbsolute: true,
   description:
-    "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    "Kansas City literary thriller: a fired guard inherits classified research linking SubTropolis, the Voynich Manuscript, and a 111 Hz frequency.",
   socialTitle: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
   path: "/",
 });

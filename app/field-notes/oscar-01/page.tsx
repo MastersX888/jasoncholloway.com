@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Oscar-01: Missouri's Preserved Cold War Launch Room",
+  title: "Oscar-01 Cold War Launch Room",
   description:
-    "Preserved Minuteman II launch control at Whiteman AFB — 60 feet underground, two keys, ten missiles. The real ground James Masters stood on in Masters X.",
-  socialTitle: "Oscar-01: Missouri's Preserved Cold War Launch Room | Field Notes",
+    "Oscar-01: Missouri preserved Cold War launch control room and its place in the Masters X research trail.",
+  socialTitle: "Oscar-01 Cold War Launch Room",
   socialDescription:
     "60 feet underground. Two officers. Two keys out of reach of each other. 150 Minuteman II missiles across Missouri. Oscar-01 is preserved — you can stand in the capsule.",
   path: "/field-notes/oscar-01/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/oscar-01.png",
+    url: "https://jasoncholloway.com/og/field-notes/oscar-01.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: a Minuteman II launch control capsule interior, 60 feet underground",

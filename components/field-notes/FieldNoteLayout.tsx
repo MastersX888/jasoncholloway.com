@@ -59,7 +59,7 @@ export default function FieldNoteLayout({
     "author": { "@id": `${baseUrl}/#person` },
     "publisher": { "@id": `${baseUrl}/#organization` },
     "mainEntityOfPage": { "@type": "WebPage", "@id": url },
-    "image": `${baseUrl}/og/field-notes/${slug}.png`,
+    "image": `${baseUrl}/og/field-notes/${slug}.jpg`,
   };
 
   const faqJsonLd = faqs.length > 0 ? {

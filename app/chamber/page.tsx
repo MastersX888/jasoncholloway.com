@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Virtual Masters Analysis Chamber",
   description:
-    "An interactive research tool replicating Andrew Chen's acoustic consciousness analysis system from the Masters X Trilogy. Six layers of frequency data, global cave mapping, harmonic derivations, and the 247-page research archive.",
+    "Interactive acoustic research tools from Masters X — harmonic stack, cave map, Schumann baseline, and the open research archive.",
   path: "/chamber/",
 });
 

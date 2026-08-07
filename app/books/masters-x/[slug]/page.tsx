@@ -28,15 +28,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!book) return {};
 
   const volumeTitles: Record<string, string> = {
-    "the-inheritance-of-frequency": "The Inheritance of Frequency — Masters X Book 1",
-    "the-grimoire": "The Grimoire — Masters X Book 2",
-    "the-kingdom": "The Kingdom — Masters X Book 3",
+    "the-inheritance-of-frequency": "Inheritance of Frequency · Masters X I",
+    "the-grimoire": "The Grimoire · Masters X Vol II",
+    "the-kingdom": "The Kingdom · Masters X Vol III",
   };
 
   const volumeDescs: Record<string, string> = {
-    "the-inheritance-of-frequency": "A fired Kansas City security guard inherits classified acoustic research linking SubTropolis carvings, the Voynich Manuscript, and a Prague crypt sealed since 1267. For readers of Foucault's Pendulum and The Da Vinci Code.",
-    "the-grimoire": "Blake Masters maps a medieval preparation protocol from an Iceland cottage as Andrew's algorithm decodes the acoustic architecture of Chartres Cathedral. The Ars Notoria is not magic — it's cognitive technology.",
-    "the-kingdom": "The demonstration: 111.2 Hz, a Kansas City limestone chamber, and 1.2 million open-source downloads. Who gets access to their own fundamental frequency? Masters X Book 3.",
+    "the-inheritance-of-frequency": "Literary thriller: a Kansas City guard inherits acoustic research linking SubTropolis, the Voynich Manuscript, and a Prague crypt sealed since 1267.",
+    "the-grimoire": "Masters X Vol II — Blake maps a medieval protocol while an algorithm decodes Chartres. The Ars Notoria as cognitive technology, not magic.",
+    "the-kingdom": "Masters X Vol III — 111.2 Hz in a Kansas City chamber, and 1.2 million open-source downloads. Who gets access to their own frequency?",
   };
 
   const title = volumeTitles[slug] ?? book.subtitle;

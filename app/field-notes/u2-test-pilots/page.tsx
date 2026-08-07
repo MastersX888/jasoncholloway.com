@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "U-2 Test Pilots: What They Saw from 70,000 Feet",
+  title: "U-2 Pilots at 70,000 Feet",
   description:
-    "Declassified U-2 histories and pilot accounts from the edge of the stratosphere — and what William Masters saw in 1956 that he spent a lifetime proving.",
-  socialTitle: "U-2 Test Pilots: What They Saw from 70,000 Feet | Field Notes",
+    "Declassified U-2 pilot accounts of high-altitude phenomena — source texture for Masters X Volume I.",
+  socialTitle: "U-2 Pilots at 70,000 Feet",
   socialDescription:
     "Above 99% of the atmosphere. Stars visible in daytime. The curvature of the earth at the horizon. Documented U-2 pilot experience — and what William Masters claims he saw in 1956.",
   path: "/field-notes/u2-test-pilots/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/u2-test-pilots.png",
+    url: "https://jasoncholloway.com/og/field-notes/u2-test-pilots.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: view from 70,000 feet — deep black sky above, earth's curvature below",

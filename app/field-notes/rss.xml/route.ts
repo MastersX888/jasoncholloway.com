@@ -12,7 +12,7 @@ export async function GET() {
     id: siteUrl,
     link: siteUrl,
     language: "en",
-    image: `${siteUrl}/og/field-notes/hub.png`,
+    image: `${siteUrl}/og/field-notes/hub.jpg`,
     favicon: `${siteUrl}/favicon.ico`,
     copyright: `All rights reserved ${new Date().getFullYear()}, Jason Carroll Holloway`,
     updated: new Date(),
@@ -40,7 +40,7 @@ export async function GET() {
         },
       ],
       date: new Date("2026-06-12"),
-      image: `${siteUrl}/og/field-notes/${note.slug}.png`,
+      image: `${siteUrl}/og/field-notes/${note.slug}.jpg`,
     });
   });
 

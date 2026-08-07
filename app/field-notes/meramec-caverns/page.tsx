@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Meramec Caverns and the Patterns in the Flowstone",
+  title: "Meramec Caverns in Masters X",
   description:
-    "Meramec Caverns, Stanton MO — Stage Curtain flowstone, Jesse James lore, Route 66. Where William Masters taught young Blake to see the pattern in everything.",
-  socialTitle: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",
+    "Meramec Caverns flowstone patterns — the Missouri cave that teaches Blake to see structure in Masters X.",
+  socialTitle: "Meramec Caverns in Masters X",
   socialDescription:
     "The Stage Curtain formation. Jesse James. Route 66. Constant 58°F. And in the fiction: William Masters crouching to his grandson's eye level in the flowstone, tracing the pattern.",
   path: "/field-notes/meramec-caverns/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.png",
+    url: "https://jasoncholloway.com/og/field-notes/meramec-caverns.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: flowstone formations in Meramec Caverns, Missouri",

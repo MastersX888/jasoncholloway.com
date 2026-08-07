@@ -4,16 +4,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "SubTropolis: The Underground City Beneath Kansas City",
+  title: "SubTropolis Under Kansas City",
   description:
-    "55 million sq ft of Bethany Falls limestone beneath Kansas City — world's largest underground business complex, and where Blake Masters found what wasn't on any map.",
-  socialTitle: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",
+    "The Bethany Falls limestone mine beneath Kansas City — where Blake Masters worked security in Masters X Volume I.",
+  socialTitle: "SubTropolis Under Kansas City",
   socialDescription:
     "270-million-year-old Bethany Falls limestone, ~1,700 daily workers, National Archives film vaults, and a tunnel that wasn't on any map. The real SubTropolis — and the fiction it inspired.",
   path: "/field-notes/subtropolis/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/subtropolis.png",
+    url: "https://jasoncholloway.com/og/field-notes/subtropolis.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: limestone pillars in an underground corridor",
@@ -55,7 +55,7 @@ const videoJsonLd = {
   name: "The Hidden Metropolis Beneath Kansas City",
   description:
     "Great Big Story documentary on SubTropolis — the world's largest underground business complex, 150 feet beneath Kansas City, Missouri.",
-  thumbnailUrl: "https://jasoncholloway.com/og/field-notes/subtropolis.png",
+  thumbnailUrl: "https://jasoncholloway.com/og/field-notes/subtropolis.jpg",
   uploadDate: "2015-11-04",
   duration: "PT1M37S",
   embedUrl: GBS_EMBED_URL,

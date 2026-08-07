@@ -14,10 +14,10 @@ import { mastersXSeriesNode } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+  title: "Masters X Trilogy | KC Literary Thriller",
   description:
-    "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. By Jason Carroll Holloway, published by Seventh City Press.",
-  socialTitle: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+    "Three literary thrillers: a Kansas City guard inherits acoustic research pointing to a Prague crypt sealed since 1267. By Jason Carroll Holloway.",
+  socialTitle: "Masters X Trilogy | KC Literary Thriller",
   socialDescription:
     "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
   path: "/books/masters-x/",

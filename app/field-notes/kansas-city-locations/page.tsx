@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "The Real Kansas City of Masters X: A Reader's Map",
+  title: "Kansas City Map for Masters X",
   description:
-    "Miller Nichols Library, Westport, Quality Hill, West Bottoms, Hotel Phillips — every Kansas City location in Masters X mapped. Real geography; fictional events.",
-  socialTitle: "The Real Kansas City of Masters X: A Reader's Map | Field Notes",
+    "Every real Kansas City location in Masters X — Miller Nichols, Westport, Quality Hill, West Bottoms, mapped.",
+  socialTitle: "Kansas City Map for Masters X",
   socialDescription:
     "The corner table at Miller Nichols Library. Quality Hill above the West Bottoms. The Hotel Phillips downtown. The KC Streetcar on Main Street. Every location is real. The events are fiction.",
   path: "/field-notes/kansas-city-locations/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/kansas-city-locations.png",
+    url: "https://jasoncholloway.com/og/field-notes/kansas-city-locations.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: Kansas City skyline viewed from the West Bottoms bluffs",

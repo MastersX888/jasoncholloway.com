@@ -5,15 +5,15 @@ import { themes, fieldNotes } from "@/lib/data/fieldNotes";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Field Notes — The Real History Beneath Masters X",
+  title: "Field Notes Beneath Masters X",
   description:
-    "Documented places, manuscripts, and phenomena beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Real history that opens onto fiction.",
-  socialTitle: "Field Notes — The Real History Beneath Masters X",
+    "Real places and manuscripts beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Documented history that opens onto fiction.",
+  socialTitle: "Field Notes Beneath Masters X",
   socialDescription:
-    "Documented places, manuscripts, and phenomena beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Real history that opens onto fiction.",
+    "Real places and manuscripts beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov.",
   path: "/field-notes/",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/hub.png",
+    url: "https://jasoncholloway.com/og/field-notes/hub.jpg",
     width: 1024,
     height: 1024,
     alt: "Field Notes — Real History Beneath Masters X, by Jason Carroll Holloway",

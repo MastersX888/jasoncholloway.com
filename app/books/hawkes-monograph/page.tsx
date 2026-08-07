@@ -14,9 +14,9 @@ const MONOGRAPH_PATH = "/books/hawkes-monograph/";
 const MONOGRAPH_URL = `https://jasoncholloway.com${MONOGRAPH_PATH}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Innocence, Desire, and the Architecture of the Fall",
+  title: "Architecture of the Fall | Hawkes Study",
   description:
-    "The Grape and Its Counter-Symbols in the Fiction of John Hawkes — a critical study of motif architecture across Hawkes's seventeen novels. By Jason Carroll Holloway, published by Seventh City Press.",
+    "Critical study of motif architecture across John Hawkes's novels — The Grape and Its Counter-Symbols. By Jason Carroll Holloway, Seventh City Press.",
   path: MONOGRAPH_PATH,
   ogType: "book",
   image: {

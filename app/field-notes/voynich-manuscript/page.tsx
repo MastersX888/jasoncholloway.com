@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Voynich Manuscript: Rudolf II & the Unreadable Book",
+  title: "Voynich Manuscript & Rudolf II",
   description:
-    "Yale's Beinecke holds the Voynich Manuscript — early 1400s, undeciphered, once owned by Rudolf II. Documented history the Masters X Prague court reconstructs.",
-  socialTitle: "Voynich Manuscript: Rudolf II & the Unreadable Book | Field Notes",
+    "The undeciphered Voynich Manuscript, Rudolf II Prague court, and its role in the Masters X trilogy.",
+  socialTitle: "Voynich Manuscript & Rudolf II",
   socialDescription:
     "Carbon-dated to the early 1400s, undeciphered for 600 years, owned by Emperor Rudolf II of Bohemia — the same emperor whose Prague court Masters X reconstructs.",
   path: "/field-notes/voynich-manuscript/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.png",
+    url: "https://jasoncholloway.com/og/field-notes/voynich-manuscript.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: botanical and rosette motifs in the style of a medieval manuscript",

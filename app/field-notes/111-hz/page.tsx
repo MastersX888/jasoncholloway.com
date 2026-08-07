@@ -4,16 +4,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "111 Hz: The Frequency Ancient Builders Kept Choosing",
+  title: "111 Hz Ancient Chamber Frequency",
   description:
-    "111 Hz standing waves in stone chambers from Malta to Ghana — documented archaeoacoustics, and the carrier frequency of the Masters X Trilogy.",
-  socialTitle: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",
+    "111 Hz standing waves in stone chambers from Malta to Ghana — archaeoacoustics behind the Masters X carrier frequency.",
+  socialTitle: "111 Hz Ancient Chamber Frequency",
   socialDescription:
     "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. Acoustic researchers have documented a recurring resonant frequency across ancient stone structures. This is the honest explainer.",
   path: "/field-notes/111-hz/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/111-hz.png",
+    url: "https://jasoncholloway.com/og/field-notes/111-hz.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: waveform diagram etched like a medieval manuscript",

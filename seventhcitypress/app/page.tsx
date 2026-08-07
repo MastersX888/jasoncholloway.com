@@ -10,13 +10,13 @@ import styles from './press-page.module.css';
 // title that bypassed the layout's brand template, so the imprint's only homepage
 // never contained the imprint's own name — the one query it can realistically own.
 export const metadata: Metadata = buildMetadata({
-  title: "Seventh City Press — Independent Literary Imprint, Kansas City",
+  title: "Seventh City Press — Literary Imprint, Kansas City",
   titleAbsolute: true,
   description:
-    "Seventh City Press is an independent literary imprint in Kansas City, publisher of the Masters X Trilogy by Jason Carroll Holloway. Press kit, fact sheet, author bios, and review copy requests.",
-  socialTitle: "Seventh City Press — Independent Literary Imprint",
+    "Independent Kansas City imprint publishing the Masters X Trilogy by Jason Carroll Holloway. Press kit, fact sheet, bios, and review copies.",
+  socialTitle: "Seventh City Press — Literary Imprint, Kansas City",
   socialDescription:
-    "A conspiracy of frequency, medieval manuscripts, and the city beneath the city. Three novels and a complete omnibus from Seventh City Press.",
+    "Masters X Trilogy press kit, fact sheet, author bios, and review copy requests from Seventh City Press.",
   path: "/",
 });
 

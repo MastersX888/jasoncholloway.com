@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Gospel of Thomas Saying 113: Kingdom Spread on Earth",
+  title: "Gospel of Thomas Saying 113",
   description:
-    "Nag Hammadi, 1945. Saying 113 — the kingdom is spread upon the earth, and people do not see it. The sentence Volume III of Masters X is built on.",
-  socialTitle: "Gospel of Thomas Saying 113: Kingdom Spread on Earth | Field Notes",
+    "Gospel of Thomas saying 113 — the kingdom spread upon the earth — and Masters X Volume III.",
+  socialTitle: "Gospel of Thomas Saying 113",
   socialDescription:
     "Discovered at Nag Hammadi, Egypt, 1945. 114 sayings. No miracles, no resurrection. Saying 113: the kingdom is already here — and people don't see it. Volume III is built on this sentence.",
   path: "/field-notes/gospel-of-thomas/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.png",
+    url: "https://jasoncholloway.com/og/field-notes/gospel-of-thomas.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: Coptic manuscript page from the Nag Hammadi library",

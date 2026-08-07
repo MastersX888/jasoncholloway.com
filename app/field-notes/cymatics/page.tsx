@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Cymatics: Sound You Can See — Chladni Patterns",
+  title: "Cymatics: Sound You Can See",
   description:
-    "Visible sound patterns in sand and water — Chladni figures, Hans Jenny, and the five-sided wave the Masters X Trilogy places in red laterite clay.",
-  socialTitle: "Cymatics: Sound You Can See — Chladni Patterns | Field Notes",
+    "Chladni patterns and visible sound — the cymatics science behind Masters X frequency scenes.",
+  socialTitle: "Cymatics: Sound You Can See",
   socialDescription:
     "Sand on a metal plate. A violin bow at the edge. Resonant frequency. Geometric patterns emerge — hexagons, stars, mandalas. Ernst Chladni documented it in 1787.",
   path: "/field-notes/cymatics/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/cymatics.png",
+    url: "https://jasoncholloway.com/og/field-notes/cymatics.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: cymatics patterns — geometric figures in sand on a vibrating plate",

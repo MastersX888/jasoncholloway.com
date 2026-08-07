@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Codex Gigas: The Devil's Bible Made in Bohemia",
+  title: "Codex Gigas: The Devil's Bible",
   description:
-    "The world's largest medieval manuscript — Bohemia, Rudolf II, Sweden 1648. Brother Aldric's story in Masters X begins forty years after its completion.",
-  socialTitle: "Codex Gigas: The Devil's Bible Made in Bohemia | Field Notes",
+    "The Codex Gigas — medieval Bohemia's Devil's Bible — and how it enters the Masters X manuscript braid.",
+  socialTitle: "Codex Gigas: The Devil's Bible",
   socialDescription:
     "92 cm tall, 75 kg, made by one monk over decades. Rudolf II owned it. Sweden took it in 1648. High-res scans at codexgigas.se. The trilogy prologue starts forty years later.",
   path: "/field-notes/codex-gigas/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/codex-gigas.png",
+    url: "https://jasoncholloway.com/og/field-notes/codex-gigas.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: the full-page Devil illustration from the Codex Gigas",

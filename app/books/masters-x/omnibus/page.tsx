@@ -21,17 +21,17 @@ const OMNIBUS_PATH = "/books/masters-x/omnibus/";
 const OMNIBUS_URL = `https://jasoncholloway.com${OMNIBUS_PATH}`;
 
 export const metadata: Metadata = buildMetadata({
-  title: "Masters X Omnibus Edition — Complete Trilogy",
+  title: "Masters X Omnibus | Complete Trilogy",
   description:
-    "The complete Masters X Trilogy in a single collected volume. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press, direct via IngramSpark or by ISBN from any bookstore.",
+    "All three Masters X novels in one volume — hardcover and paperback from Seventh City Press, via IngramSpark or any bookstore by ISBN.",
   socialDescription:
-    "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
+    "All three Masters X novels collected in one volume. Hardcover and paperback from Seventh City Press.",
   path: OMNIBUS_PATH,
   ogType: "book",
   image: {
-    url: `https://jasoncholloway.com${omnibus?.coverImageHC ?? "/og-image.png"}`,
-    width: 2000,
-    height: 3000,
+    url: "https://jasoncholloway.com/books/masters-x/omnibus/opengraph-image",
+    width: 1200,
+    height: 630,
     alt: "Masters X: Omnibus Edition — cover",
   },
 });

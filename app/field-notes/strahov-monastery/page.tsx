@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Strahov Library, Prague: Chained Books & a Sealed Crypt",
+  title: "Strahov Library & Sealed Crypt",
   description:
-    "Premonstratensian Theological Hall since 1143 — chained books, baroque frescoes, and a crypt beneath. Real Prague library; the trilogy's sealed chamber is fiction.",
-  socialTitle: "Strahov Library, Prague: Chained Books & a Sealed Crypt | Field Notes",
+    "Strahov Library in Prague: chained books, the Theological Hall, and the sealed crypt of Masters X.",
+  socialTitle: "Strahov Library & Sealed Crypt",
   socialDescription:
     "Founded 1143. 200,000 volumes. Baroque barrel-vaulted ceilings frescoed by Siard Nosecký. Beneath the Theological Hall, in the fiction, a chamber sealed since the thirteenth century.",
   path: "/field-notes/strahov-monastery/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.png",
+    url: "https://jasoncholloway.com/og/field-notes/strahov-monastery.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: the baroque barrel-vaulted interior of the Strahov Theological Hall",

@@ -27,7 +27,7 @@ export const blogPosts: BlogPost[] = [
     dek: "111.2 Hz runs under every page of the Distribution File. The archaeoacoustics behind it is real. The decimal is fiction.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/111-hz.png",
+    ogImage: "/og/field-notes/111-hz.jpg",
     fieldNotes: ["/field-notes/111-hz/", "/field-notes/cymatics/"],
     metaTitle: "The Frequency That Was Already There: 111.2 Hz Explained",
     metaDescription:
@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
     dek: "The Ars Notoria is a real medieval manual for accelerated learning. In Masters X, the only invention is that it works.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/ars-notoria.png",
+    ogImage: "/og/field-notes/ars-notoria.jpg",
     fieldNotes: ["/field-notes/ars-notoria/", "/field-notes/cymatics/"],
     metaTitle: "The Grimoire That Was Actually a Study Aid: Ars Notoria",
     metaDescription:
@@ -53,7 +53,7 @@ export const blogPosts: BlogPost[] = [
     dek: "Chladni figures, Jenny's cymatics triad, and the exact sentence where the record ends and the Masters X fiction begins.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/cymatics.png",
+    ogImage: "/og/field-notes/cymatics.jpg",
     fieldNotes: ["/field-notes/cymatics/", "/field-notes/ars-notoria/"],
     metaTitle: "Sound Into Form: What Hans Jenny Actually Proved",
     metaDescription:
@@ -66,7 +66,7 @@ export const blogPosts: BlogPost[] = [
     dek: "Four independent traditions across two millennia identified the KC/Independence corridor as significant ground.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/kansas-city-locations.png",
+    ogImage: "/og/field-notes/kansas-city-locations.jpg",
     fieldNotes: ["/field-notes/kansas-city-locations/", "/field-notes/subtropolis/"],
     metaTitle: "Why Kansas City? The Ground Itself Is Significant",
     metaDescription:
@@ -79,7 +79,7 @@ export const blogPosts: BlogPost[] = [
     dek: "A 1984 declassified translation, and the three positions inside it that became the Masters X factions.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/hub.png",
+    ogImage: "/og/field-notes/hub.jpg",
     fieldNotes: [],
     metaTitle: "Three Factions, One Declassified Document",
     metaDescription:
@@ -92,7 +92,7 @@ export const blogPosts: BlogPost[] = [
     dek: "In 2011 a Kansas City church burned to its 1904 limestone walls, and the walls stood.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/kansas-city-locations.png",
+    ogImage: "/og/field-notes/kansas-city-locations.jpg",
     fieldNotes: ["/field-notes/kansas-city-locations/"],
     metaTitle: "The Stone Remembers: A Fire in Westport",
     metaDescription:
@@ -105,7 +105,7 @@ export const blogPosts: BlogPost[] = [
     dek: "Masters X ends with a file: 247 pages, CC0, midnight. On the ethics of giving knowledge away.",
     status: "published",
     datePublished: "2026-07-23",
-    ogImage: "/og/field-notes/hub.png",
+    ogImage: "/og/field-notes/hub.jpg",
     fieldNotes: [],
     metaTitle: "A Document That Cannot Be Un-Released",
     metaDescription:

@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "The Ars Notoria: Medieval Notory Art & Cognitive Tech",
+  title: "Ars Notoria: Medieval Cognitive Tech",
   description:
-    "A thirteenth-century Solomonic manuscript of memory and eloquence held in London and Paris — not magic, but a protocol. The operational manual beneath Masters X.",
-  socialTitle: "The Ars Notoria: Medieval Notory Art & Cognitive Tech | Field Notes",
+    "The Ars Notoria as medieval notory art and cognitive technology — source material beneath Masters X.",
+  socialTitle: "Ars Notoria: Medieval Cognitive Tech",
   socialDescription:
     "A real thirteenth-century manuscript promising rapid acquisition of knowledge through geometric figures called notae. The Inquisition condemned it. Cognitive scientists find it surprisingly familiar.",
   path: "/field-notes/ars-notoria/",
   ogType: "article",
   image: {
-    url: "https://jasoncholloway.com/og/field-notes/ars-notoria.png",
+    url: "https://jasoncholloway.com/og/field-notes/ars-notoria.jpg",
     width: 1024,
     height: 1024,
     alt: "Illustration: a medieval geometric nota diagram from the Ars Notoria",

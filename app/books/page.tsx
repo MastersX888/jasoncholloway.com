@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Books by Jason Carroll Holloway | Seventh City Press",
   titleAbsolute: true,
   description:
-    "The complete catalog from Seventh City Press: the Masters X Trilogy (three novels of acoustic frequency, medieval manuscripts, and Kansas City conspiracy) and the John Hawkes critical monograph. Available in hardcover, paperback, and Kindle.",
+    "Masters X Trilogy and Hawkes monograph from Seventh City Press — hardcover, paperback, Kindle, and Google Play. Literary thrillers rooted in Kansas City.",
   socialTitle: "Books by Jason Carroll Holloway — Seventh City Press",
   socialDescription:
     "Masters X Trilogy · Omnibus Edition · Hawkes Monograph. Available now from Seventh City Press.",

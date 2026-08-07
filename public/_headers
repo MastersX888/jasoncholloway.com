@@ -11,9 +11,3 @@
 /*/opengraph-image
   Content-Type: image/png
 
-# The field-note share images are JPEG data stored under a .png extension, so the
-# extension-derived content type is wrong. Social scrapers that trust the header
-# over sniffing reject the image otherwise. Renaming the files is the real fix;
-# this keeps the cards working until that happens.
-/og/field-notes/*
-  Content-Type: image/jpeg

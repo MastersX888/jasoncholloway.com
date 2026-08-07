@@ -1,5 +1,9 @@
+import Link from "next/link";
+
 interface PassageExcerptProps {
   title?: string;
+  /** When set, the title links to the full scene page. */
+  titleHref?: string;
   paragraphs: string[];
   attribution?: string;
   className?: string;
@@ -8,26 +12,35 @@ interface PassageExcerptProps {
 /** Multi-paragraph verbatim fiction block (Field Notes excerpt styling). */
 export default function PassageExcerpt({
   title,
+  titleHref,
   paragraphs,
   attribution,
   className = "",
 }: PassageExcerptProps) {
+  const titleEl = title && (
+    <figcaption
+      style={{
+        fontSize: "0.72rem",
+        letterSpacing: "0.1em",
+        textTransform: "uppercase",
+        color: "var(--gold)",
+        marginBottom: "0.75rem",
+        fontWeight: 600,
+      }}
+    >
+      {titleHref ? (
+        <Link href={titleHref} className="hover-gold" style={{ color: "inherit", textDecoration: "none" }}>
+          {title}
+        </Link>
+      ) : (
+        title
+      )}
+    </figcaption>
+  );
+
   return (
     <figure className={className}>
-      {title && (
-        <figcaption
-          style={{
-            fontSize: "0.72rem",
-            letterSpacing: "0.1em",
-            textTransform: "uppercase",
-            color: "var(--gold)",
-            marginBottom: "0.75rem",
-            fontWeight: 600,
-          }}
-        >
-          {title}
-        </figcaption>
-      )}
+      {titleEl}
       <blockquote className="fn-excerpt" style={{ margin: title ? "0 0 0.5rem" : undefined }}>
         {paragraphs.map((para, i) => (
           <p key={i} style={{ marginBottom: i < paragraphs.length - 1 ? "0.75rem" : 0 }}>

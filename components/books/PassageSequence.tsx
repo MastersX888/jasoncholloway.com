@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { PassageBeat } from "@/lib/data/passages";
+import { MOMENTS_BASE } from "@/lib/data/moments";
 
 interface PassageSequenceProps {
   beats: PassageBeat[];
@@ -15,8 +16,11 @@ export default function PassageSequence({ beats, label = "From the Novel" }: Pas
       style={{ borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}
     >
       <div className="container">
-        <div className="section-label-row" style={{ marginBottom: "2.5rem" }}>
+        <div className="section-label-row" style={{ marginBottom: "2.5rem", display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "1rem" }}>
           <h2 className="label">{label}</h2>
+          <Link href={MOMENTS_BASE} className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+            All scenes →
+          </Link>
         </div>
         <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", maxWidth: "820px" }}>
           {beats.map((beat, i) => (

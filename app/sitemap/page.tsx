@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { books } from "@/lib/data/books";
 import { fieldNotes } from "@/lib/data/fieldNotes";
+import { momentPath, novelMoments } from "@/lib/data/moments";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
@@ -53,6 +54,10 @@ export default function SitemapPage() {
                   <li key={v.slug} style={{ paddingLeft: "1rem" }}><Link href={`/books/masters-x/${v.slug}`} className="hover-gold">Volume {v.volume}: {v.subtitle}</Link></li>
                 ))}
                 <li style={{ paddingLeft: "1rem" }}><Link href="/books/masters-x/omnibus" className="hover-gold">Omnibus Edition</Link></li>
+                <li style={{ marginTop: "0.5rem" }}><Link href="/books/masters-x/moments" className="hover-gold" style={{ fontWeight: 600 }}>From the Novel — Scenes</Link></li>
+                {novelMoments.map((m) => (
+                  <li key={m.slug} style={{ paddingLeft: "1rem" }}><Link href={momentPath(m.slug)} className="hover-gold">{m.title}</Link></li>
+                ))}
                 {monograph && (
                   <li style={{ marginTop: "0.5rem" }}><Link href={`/books/${monograph.slug}`} className="hover-gold" style={{ fontWeight: 600 }}>{monograph.title}</Link></li>
                 )}

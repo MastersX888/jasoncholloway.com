@@ -15,6 +15,7 @@ import { buildBookGraph, MASTERS_X_SERIES_ID } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
 import PassageExcerpt from "@/components/books/PassageExcerpt";
 import { volumePassages } from "@/lib/data/passages";
+import { momentPath, MOMENTS_BASE } from "@/lib/data/moments";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -326,13 +327,17 @@ export default function BookPage({ params }: Props) {
 
               {novelScenes.length > 0 && (
                 <div style={{ marginBottom: "3rem" }}>
-                  <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                  <div className="section-label-row" style={{ marginBottom: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "baseline", flexWrap: "wrap", gap: "1rem" }}>
                     <h2 className="label">From the Novel</h2>
+                    <Link href={MOMENTS_BASE} className="nota-link" style={{ fontSize: "0.78rem", color: "var(--gold)" }}>
+                      All scenes →
+                    </Link>
                   </div>
                   {novelScenes.map((scene) => (
                     <PassageExcerpt
-                      key={scene.title}
+                      key={scene.slug ?? scene.title}
                       title={scene.title}
+                      titleHref={scene.slug ? momentPath(scene.slug) : undefined}
                       paragraphs={scene.paragraphs}
                       attribution={scene.attribution}
                     />

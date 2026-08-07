@@ -106,6 +106,29 @@ export default function MastersXPage() {
         </div>
       </section>
 
+      <div className="container">
+        <WaveDivider />
+      </div>
+
+      {/* From the Novel — scene index */}
+      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)" }}>
+        <div className="container" style={{ maxWidth: "820px" }}>
+          <div className="section-label-row" style={{ marginBottom: "1.25rem" }}>
+            <span className="label">From the Novel</span>
+          </div>
+          <h2 className="display-md" style={{ marginBottom: "1rem" }}>
+            Ten scenes in reading order
+          </h2>
+          <p style={{ color: "var(--text-muted)", lineHeight: 1.85, marginBottom: "1.5rem", maxWidth: "62ch" }}>
+            Verbatim passages from the trilogy — safety deposit boxes, SubTropolis tunnels, the Ars Notoria,
+            Saying 113, and the chamber beneath Kansas City. Story context only; no spoilers beyond each scene.
+          </p>
+          <Link href="/books/masters-x/moments" className="btn btn-outline btn-sm">
+            Browse all scenes →
+          </Link>
+        </div>
+      </section>
+
       {/* Books */}
       <section className="section">
         <div className="container">

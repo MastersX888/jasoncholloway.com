@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { books } from "@/lib/data/books";
 import { fieldNotes } from "@/lib/data/fieldNotes";
+import { momentPath, novelMoments } from "@/lib/data/moments";
 
 export const dynamic = "force-static";
 
@@ -14,6 +15,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/books/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.95 },
     { url: `${baseUrl}/books/masters-x/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/books/masters-x/omnibus/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/books/masters-x/moments/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.82 },
     { url: `${baseUrl}/books/hawkes-monograph/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.9 },
     { url: `${baseUrl}/books/books-like-foucaults-pendulum/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/chamber/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -47,5 +49,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...bookRoutes, ...fieldNoteRoutes];
+  const momentRoutes: MetadataRoute.Sitemap = novelMoments.map((moment) => ({
+    url: `${baseUrl}${momentPath(moment.slug)}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...bookRoutes, ...momentRoutes, ...fieldNoteRoutes];
 }

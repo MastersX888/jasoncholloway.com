@@ -7,9 +7,6 @@ export const AUTHOR_GOODREADS_URL =
 /** Public reader profile — add to authorSameAs after Jason confirms profile live. */
 export const AUTHOR_STORYGRAPH_URL =
   "https://app.thestorygraph.com/profile/jason_carroll_holloway";
-/** StoryGraph reader profile — add to authorSameAs after Jason confirms public. */
-export const AUTHOR_STORYGRAPH_URL =
-  "https://app.thestorygraph.com/profile/jason_carroll_holloway";
 export const AUTHOR_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140275300";
 /** Wikidata item for the Masters X Trilogy itself (distinct from the author item). */
 export const SERIES_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140276114";

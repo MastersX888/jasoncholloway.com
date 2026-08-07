@@ -196,11 +196,11 @@ const trilogyCovers = [
 
 const omnibusCovers = [
   { label: "Omnibus — Dust Jacket", src: "/covers/omnibus-hardcover-v3.png" },
-  { label: "Omnibus — Case Cover", src: "/covers/omnibus-hc-case.png" },
+  { label: "Omnibus — Case Cover", src: "/covers/omnibus-hc-case-front.png" },
 ];
 
 function CoverThumb({ label, src, featured = false }: { label: string; src: string; featured?: boolean }) {
-  const width = featured ? 160 : 120;
+  const width = 120;
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.65rem" }}>
       <div style={{
@@ -215,7 +215,7 @@ function CoverThumb({ label, src, featured = false }: { label: string; src: stri
         border: featured ? "1px solid var(--gold-dim, var(--border-faint))" : "1px solid var(--border-faint)",
         background: "var(--bg-raised)",
       }}>
-        <Image src={src} alt={label} fill style={{ objectFit: "contain" }} sizes={`${width}px`} priority={featured} />
+        <Image src={src} alt={label} fill style={{ objectFit: "cover" }} sizes={`${width}px`} priority={featured} />
       </div>
       <span style={{
         fontSize: "0.68rem",
@@ -323,13 +323,13 @@ export default function PressPage() {
           <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
             <h3 className="label">Omnibus Edition</h3>
           </div>
-          <div style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", alignItems: "flex-end" }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", alignItems: "center" }}>
             {omnibusCovers.map((cover) => (
               <CoverThumb
                 key={cover.label}
                 label={cover.label}
                 src={cover.src}
-                featured={cover.src.includes("hc-case")}
+                featured={cover.src.includes("omnibus")}
               />
             ))}
           </div>

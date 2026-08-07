@@ -37,7 +37,7 @@ export default function CaseCoverShowcase({
             alt={`${book.subtitle} — Case Cover (boards)`}
             width={80}
             height={120}
-            style={{ objectFit: "cover", borderRadius: "4px" }}
+            style={{ objectFit: "cover", borderRadius: "4px", objectPosition: "center" }}
           />
         </div>
       </div>
@@ -76,9 +76,8 @@ export default function CaseCoverShowcase({
             <Image
               src={book.coverImageHC}
               alt={`${book.subtitle} — Dust Jacket`}
-              width={280}
-              height={420}
-              style={{ objectFit: "contain", width: "100%", height: "auto" }}
+              fill
+              style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 70vw, 280px"
               priority
             />
@@ -99,9 +98,8 @@ export default function CaseCoverShowcase({
             <Image
               src={book.coverImageCase}
               alt={`${book.subtitle} — Case Cover (boards beneath dust jacket)`}
-              width={280}
-              height={420}
-              style={{ objectFit: "contain", width: "100%", height: "auto" }}
+              fill
+              style={{ objectFit: "cover" }}
               sizes="(max-width: 768px) 70vw, 280px"
               priority
             />

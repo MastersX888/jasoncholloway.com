@@ -200,7 +200,7 @@ export const books: Book[] = [
     subtitle: "Omnibus Edition",
     coverImage: "/covers/omnibus-hardcover-v3.png",
     coverImageHC: "/covers/omnibus-hardcover-v3.png",
-    coverImageCase: "/covers/omnibus-hc-case.png",
+    coverImageCase: "/covers/omnibus-hc-case-front.png",
     coverImagePB: "/covers/omnibus-hardcover-v3.png",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",

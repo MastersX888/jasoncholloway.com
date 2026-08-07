@@ -1917,6 +1917,18 @@ main[data-register="fiction"] .page-header + .wave-divider {
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: min(100%, 280px);
+  aspect-ratio: 2 / 3;
+  margin-inline: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-cover-showcase-image img {
+  object-fit: cover !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .case-cover-showcase-caption {

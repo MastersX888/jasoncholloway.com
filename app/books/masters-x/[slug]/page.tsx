@@ -13,6 +13,8 @@ import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
 import { buildBookGraph, MASTERS_X_SERIES_ID } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
+import PassageExcerpt from "@/components/books/PassageExcerpt";
+import { volumePassages } from "@/lib/data/passages";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -126,6 +128,7 @@ export default function BookPage({ params }: Props) {
   };
 
   const volumeRealElements = realElementsData[slug] ?? [];
+  const novelScenes = volumePassages[slug] ?? [];
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -318,6 +321,22 @@ export default function BookPage({ params }: Props) {
               {book.slug === "the-inheritance-of-frequency" && (
                 <div style={{ marginBottom: "3rem", padding: "1rem", borderLeft: "2px solid var(--gold)", background: "var(--bg-raised)", color: "var(--text-muted)", fontSize: "0.95rem", fontStyle: "italic" }}>
                   For readers of Dan Brown's symbology thrillers, Umberto Eco's manuscript mysteries, and Blake Crouch's consciousness fiction.
+                </div>
+              )}
+
+              {novelScenes.length > 0 && (
+                <div style={{ marginBottom: "3rem" }}>
+                  <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                    <h2 className="label">From the Novel</h2>
+                  </div>
+                  {novelScenes.map((scene) => (
+                    <PassageExcerpt
+                      key={scene.title}
+                      title={scene.title}
+                      paragraphs={scene.paragraphs}
+                      attribution={scene.attribution}
+                    />
+                  ))}
                 </div>
               )}
               

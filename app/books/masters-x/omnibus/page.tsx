@@ -13,6 +13,8 @@ import {
   MASTERS_X_VOLUME_SLUGS,
 } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
+import PassageExcerpt from "@/components/books/PassageExcerpt";
+import { omnibusFaqs, omnibusVolumePassages } from "@/lib/data/passages";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
@@ -67,6 +69,16 @@ export default function OmnibusPage() {
     ],
   };
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: omnibusFaqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+
   const omnibusDisplayName = `${omnibus.title}: ${omnibus.subtitle}`;
   const pbLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)");
   const hcLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)");
@@ -105,7 +117,7 @@ export default function OmnibusPage() {
       <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd, faqJsonLd]) }}
       />
       <section className="page-header" style={{ paddingBottom: "4rem" }}>
         <div className="container">
@@ -307,6 +319,18 @@ export default function OmnibusPage() {
               </div>
 
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                <h2 className="label">From the Trilogy</h2>
+              </div>
+              {omnibusVolumePassages.map((beat) => (
+                <div key={beat.context} style={{ marginBottom: "2rem" }}>
+                  <p style={{ fontSize: "0.82rem", color: "var(--text-faint)", marginBottom: "0.6rem" }}>
+                    {beat.context}
+                  </p>
+                  <PassageExcerpt paragraphs={beat.paragraphs} attribution={beat.attribution} />
+                </div>
+              ))}
+
+              <div className="section-label-row" style={{ marginBottom: "1.5rem", marginTop: "2.5rem" }}>
                 <h2 className="label">Volumes Included</h2>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
@@ -379,6 +403,28 @@ export default function OmnibusPage() {
                 ← Back to Trilogy Hub
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container">
+        <WaveDivider />
+      </div>
+
+      <section className="section" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)" }}>
+        <div className="container" style={{ maxWidth: "800px" }}>
+          <div className="section-label-row">
+            <h2 className="label">Frequently Asked Questions</h2>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            {omnibusFaqs.map((faq, i) => (
+              <div key={i} style={{ borderBottom: "1px solid var(--border-faint)", paddingBottom: "1.5rem" }}>
+                <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.1rem", fontWeight: 500, marginBottom: "0.5rem", color: "var(--text)" }}>
+                  {faq.q}
+                </h3>
+                <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: 1.75 }}>{faq.a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

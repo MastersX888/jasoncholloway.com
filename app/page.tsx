@@ -5,6 +5,8 @@ import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import WaveDivider from "@/components/ui/WaveDivider";
 import CaseCoverShowcase from "@/components/ui/CaseCoverShowcase";
+import PassageSequence from "@/components/books/PassageSequence";
+import { homepagePassageSequence } from "@/lib/data/passages";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -16,24 +18,6 @@ export const metadata: Metadata = buildMetadata({
   socialTitle: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
   path: "/",
 });
-
-const pullQuotes = [
-  {
-    text: "Those aren't diagrams, they're technical specifications.",
-    speaker: "Andrew Chen",
-    ref: "Book I",
-  },
-  {
-    text: "The preparation is not about the frequency. The preparation is about the organism that will receive it.",
-    speaker: "Nadia Volkov",
-    ref: "Book II",
-  },
-  {
-    text: "The gate is not arbitrary. The gate is the body. The body requires time. This is not theology. This is physics. This is love.",
-    speaker: "Blake Masters",
-    ref: "Book III",
-  },
-];
 
 export default function Home() {
   return (
@@ -336,19 +320,7 @@ export default function Home() {
         <WaveDivider />
       </div>
 
-      {/* ─── PULL QUOTES ─── */}
-      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
-        <div className="container">
-          <div className="grid-3" style={{ gap: "2rem" }}>
-            {pullQuotes.map((q, i) => (
-              <div key={i} className="ms-pull" style={{ margin: 0 }}>
-                <p>{q.text}</p>
-                <cite>{q.speaker} · {q.ref}</cite>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <PassageSequence beats={homepagePassageSequence} />
 
       <div className="container">
         <WaveDivider />

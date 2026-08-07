@@ -195,14 +195,15 @@ export default function MastersXPage() {
                 <span className="label">Collected Edition</span>
               </div>
               <div className="omnibus-flagship-card">
-                <Link href="/books/masters-x/omnibus" className="omnibus-flagship-slipcase" aria-label={`${omnibus.subtitle} — collected edition`} style={{ textDecoration: "none", color: "inherit" }}>
-                  <CoverArtifact
-                    src={omnibus.coverImageHC}
-                    alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
-                    format="omnibus"
+                <div className="omnibus-flagship-slipcase">
+                  <HardcoverCaseReveal
+                    subtitle={omnibus.subtitle}
+                    jacketSrc={omnibus.coverImageHC}
+                    caseSrc={omnibus.coverImageCase}
                     sizes="160px"
+                    priority
                   />
-                </Link>
+                </div>
                 <div className="omnibus-flagship-body">
                   <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
                     <span className="label">Flagship Edition</span>

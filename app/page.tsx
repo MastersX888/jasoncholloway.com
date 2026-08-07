@@ -4,6 +4,7 @@ import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import WaveDivider from "@/components/ui/WaveDivider";
+import CaseCoverShowcase from "@/components/ui/CaseCoverShowcase";
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -203,19 +204,43 @@ export default function Home() {
                           <div style={{ fontSize: "0.65rem", letterSpacing: "0.1em", textTransform: "uppercase", color: "var(--gold)", marginBottom: "0.6rem", textAlign: "center", fontWeight: 600 }}>
                             Omnibus Edition · Complete Trilogy
                           </div>
-                          <div style={{ display: "flex", gap: "0.75rem", justifyContent: "center" }}>
-                            <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none" }}>
+                          <div style={{ display: "flex", gap: "1.25rem", justifyContent: "center", alignItems: "flex-end", flexWrap: "wrap" }}>
+                            <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", textAlign: "center" }}>
                               <div style={{
                                 position: "relative",
-                                width: "120px",
+                                width: "100px",
                                 aspectRatio: "614/921",
                                 borderRadius: "var(--r-sm)",
                                 overflow: "hidden",
-                                boxShadow: "0 14px 35px rgba(0,0,0,0.55)",
-                                border: "1px solid var(--gold-dim, var(--border-faint))",
+                                boxShadow: "0 12px 28px rgba(0,0,0,0.5)",
+                                border: "1px solid var(--border-faint)",
+                                margin: "0 auto 0.45rem",
                               }}>
-                                <Image src={omnibus.coverImageHC} alt="Masters X Omnibus hardcover case" fill style={{ objectFit: "cover" }} sizes="120px" priority />
+                                <Image src={omnibus.coverImageHC} alt="Masters X Omnibus dust jacket" fill style={{ objectFit: "cover" }} sizes="100px" />
                               </div>
+                              <span style={{ fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--text-faint)" }}>Dust Jacket</span>
+                            </Link>
+                            <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", textAlign: "center" }}>
+                              <div style={{
+                                position: "relative",
+                                width: "148px",
+                                aspectRatio: "614/921",
+                                borderRadius: "var(--r-sm)",
+                                overflow: "hidden",
+                                boxShadow: "0 16px 40px rgba(196,163,90,0.22), 0 14px 35px rgba(0,0,0,0.55)",
+                                border: "1px solid var(--gold-dim, var(--border-faint))",
+                                margin: "0 auto 0.45rem",
+                              }}>
+                                <Image
+                                  src={omnibus.coverImageCase || omnibus.coverImageHC}
+                                  alt="Masters X Omnibus hardcover case laminate"
+                                  fill
+                                  style={{ objectFit: "cover" }}
+                                  sizes="148px"
+                                  priority
+                                />
+                              </div>
+                              <span style={{ fontSize: "0.62rem", letterSpacing: "0.08em", textTransform: "uppercase", color: "var(--gold)" }}>Case Cover</span>
                             </Link>
                           </div>
                         </div>
@@ -289,6 +314,23 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── OMNIBUS CASE COVER SHOWCASE ─── */}
+      {(() => {
+        const omnibus = books.find((b) => b.slug === "omnibus");
+        if (!omnibus?.coverImageCase) return null;
+        return (
+          <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg)" }}>
+            <div className="container">
+              <CaseCoverShowcase
+                book={omnibus}
+                href="/books/masters-x/omnibus"
+                ctaLabel="Explore the Omnibus Hardcover"
+              />
+            </div>
+          </section>
+        );
+      })()}
 
       <div className="container">
         <WaveDivider />

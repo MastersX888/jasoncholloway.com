@@ -179,6 +179,38 @@ export const novelMoments: NovelMoment[] = [
     fieldNoteHref: "/field-notes/kansas-city-locations/",
     readingOrder: 10,
   },
+  {
+    slug: "three-fragments",
+    volumeSlug: "the-inheritance-of-frequency",
+    volume: 1,
+    title: "Three fragments of one system",
+    context: "Nadia maps the Ars Notoria, Voynich Manuscript, and Codex Gigas as pieces of the same puzzle.",
+    paragraphs: [
+      "Everyone obsesses over the text because they can't read it. But the images are what matter. They're a visual language encoding information that doesn't require text. The botanical illustrations, the astronomical diagrams. They're not random. They're what to see. The visual interface.",
+      "Three fragments of one complete system. The Ars Notoria tells you how. The Voynich shows you what. The Codex Gigas explains why. Separated by Brother Aldric in 1267. Hidden in different libraries, studied by thousands of scholars who never realized they were looking at pieces of the same puzzle.",
+    ],
+    attribution: "Nadia Volkov · Book I",
+    description:
+      "Nadia Volkov reads the Voynich Manuscript, Ars Notoria, and Codex Gigas as three fragments of one system — a scene from The Inheritance of Frequency.",
+    fieldNoteHref: "/field-notes/voynich-manuscript/",
+    readingOrder: 11,
+  },
+  {
+    slug: "strahov-reading-stations",
+    volumeSlug: "the-grimoire",
+    volume: 2,
+    title: "Twenty-three reading stations",
+    context: "Andrew realizes the Strahov theological hall was a preparation chamber, not a library.",
+    paragraphs: [
+      "Twenty-three reading stations in the Strahov theological hall. Twenty-three desks. Twenty-three chains. One book per chain.",
+      "The library wasn't a library. It was a preparation chamber for the eyes the way the crypt was a preparation chamber for the ears. The monks didn't go to the library to study. They went to the library to prepare.",
+    ],
+    attribution: "Andrew Chen · Book II",
+    description:
+      "Twenty-three chained desks in the Strahov theological hall — Andrew Chen reads the library as a preparation chamber. From The Grimoire.",
+    fieldNoteHref: "/field-notes/strahov-monastery/",
+    readingOrder: 12,
+  },
 ];
 
 export function getMomentBySlug(slug: string): NovelMoment | undefined {
@@ -205,4 +237,10 @@ export const MOMENTS_BASE = "/books/masters-x/moments/";
 
 export function momentPath(slug: string): string {
   return `${MOMENTS_BASE}${slug}/`;
+}
+
+/** Moments linked to a Field Note essay (reverse of fieldNoteHref). */
+export function getMomentsForFieldNote(fieldNoteSlug: string): NovelMoment[] {
+  const href = `/field-notes/${fieldNoteSlug}/`;
+  return novelMoments.filter((m) => m.fieldNoteHref === href);
 }

@@ -117,10 +117,10 @@ export default function MastersXPage() {
             <span className="label">From the Novel</span>
           </div>
           <h2 className="display-md" style={{ marginBottom: "1rem" }}>
-            Ten scenes in reading order
+            Twelve scenes in reading order
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: 1.85, marginBottom: "1.5rem", maxWidth: "62ch" }}>
-            Verbatim passages from the trilogy — safety deposit boxes, SubTropolis tunnels, the Ars Notoria,
+            Verbatim passages from the trilogy — safety deposit boxes, SubTropolis tunnels, the Voynich Manuscript,
             Saying 113, and the chamber beneath Kansas City. Story context only; no spoilers beyond each scene.
           </p>
           <Link href="/books/masters-x/moments" className="btn btn-outline btn-sm">

@@ -1,6 +1,6 @@
 # Jason Carroll Holloway · jasoncholloway.com
 # llms.txt — AI Model Summary File
-# Version: 1.1 · July 2026
+# Version: 1.2 · August 2026
 
 ## Who
 
@@ -69,6 +69,29 @@ Full documented articles at https://jasoncholloway.com/field-notes/:
 - /field-notes/cymatics
 - /field-notes/gospel-of-thomas
 - /field-notes/meramec-caverns
+
+## From the Novel (Curated Fiction Excerpts)
+
+Twelve indexable scene pages — verbatim prose + story context only:
+- Hub: https://jasoncholloway.com/books/masters-x/moments/
+- /books/masters-x/moments/safety-deposit-box
+- /books/masters-x/moments/unmapped-tunnel
+- /books/masters-x/moments/technical-specifications
+- /books/masters-x/moments/nadia-at-the-door
+- /books/masters-x/moments/tuning-manual
+- /books/masters-x/moments/notae-as-engineering
+- /books/masters-x/moments/saying-113
+- /books/masters-x/moments/frequency-geological
+- /books/masters-x/moments/tenth-moleskine
+- /books/masters-x/moments/twenty-three-candidates
+- /books/masters-x/moments/three-fragments
+- /books/masters-x/moments/strahov-reading-stations
+
+## Comparison / Readalike Pages
+
+- https://jasoncholloway.com/books/books-like-foucaults-pendulum/
+- https://jasoncholloway.com/books/books-like-the-historian/
+- https://jasoncholloway.com/books/literary-conspiracy-fiction/
 
 ## Key URLs
 

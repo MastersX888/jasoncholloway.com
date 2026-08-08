@@ -301,6 +301,66 @@ export default function PressPage() {
         </div>
       </section>
 
+      {/* From the Novel — flagship excerpts (author site) */}
+      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", paddingTop: "2.5rem", paddingBottom: "2.5rem" }}>
+        <div className="container" style={{ maxWidth: "720px", margin: "0 auto" }}>
+          <h2 className="label" style={{ marginBottom: "1rem", textAlign: "center" }}>From the Novel</h2>
+          <p style={{ textAlign: "center", color: "var(--text-muted)", lineHeight: 1.75, marginBottom: "2rem", fontSize: "0.95rem" }}>
+            Verbatim scenes from the Masters X Trilogy — curated at the author site.
+          </p>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+            {[
+              {
+                quote: "Those aren't diagrams, they're technical specifications.",
+                attr: "Andrew Chen · Volume I",
+                href: "https://jasoncholloway.com/books/masters-x/moments/technical-specifications/",
+              },
+              {
+                quote: "The Ars Notoria tells you how. The Voynich shows you what. The Codex Gigas explains why.",
+                attr: "Nadia Volkov · Volume I",
+                href: "https://jasoncholloway.com/books/masters-x/moments/three-fragments/",
+              },
+              {
+                quote: "The gate is not arbitrary. The gate is the body. This is not theology. This is physics. This is love.",
+                attr: "Blake Masters · Volume III",
+                href: "https://jasoncholloway.com/books/masters-x/moments/tenth-moleskine/",
+              },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "block",
+                  padding: "1.25rem 1.5rem",
+                  background: "var(--bg-raised)",
+                  border: "1px solid var(--border-faint)",
+                  borderRadius: "var(--r-md)",
+                  textDecoration: "none",
+                  color: "inherit",
+                }}
+              >
+                <blockquote style={{ fontFamily: "var(--font-display)", fontStyle: "italic", fontSize: "1.05rem", lineHeight: 1.6, margin: "0 0 0.5rem", color: "var(--text)" }}>
+                  {item.quote}
+                </blockquote>
+                <cite style={{ fontSize: "0.78rem", color: "var(--text-faint)", fontStyle: "normal" }}>— {item.attr}</cite>
+              </a>
+            ))}
+          </div>
+          <p style={{ textAlign: "center", marginTop: "1.5rem" }}>
+            <a
+              href="https://jasoncholloway.com/books/masters-x/moments/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontSize: "0.85rem", color: "var(--gold, #c4a35a)", textDecoration: "underline" }}
+            >
+              All twelve scenes at jasoncholloway.com →
+            </a>
+          </p>
+        </div>
+      </section>
+
       {/* Cover Gallery */}
       <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)", paddingBottom: "2.5rem" }}>
         <div className="container">

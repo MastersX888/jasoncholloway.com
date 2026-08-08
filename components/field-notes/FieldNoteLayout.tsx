@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import { getFieldNoteVolumes } from "@/lib/data/fieldNotes";
+import { getMomentsForFieldNote, momentPath } from "@/lib/data/moments";
 
 export interface FaqItem {
   q: string;
@@ -48,6 +49,7 @@ export default function FieldNoteLayout({
 }: FieldNoteProps) {
   const baseUrl = "https://jasoncholloway.com";
   const url = `${baseUrl}/field-notes/${slug}/`;
+  const relatedMoments = getMomentsForFieldNote(slug);
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -224,6 +226,24 @@ export default function FieldNoteLayout({
 
             {/* Sidebar */}
             <aside style={{ position: "sticky", top: "80px" }}>
+              {relatedMoments.length > 0 && (
+                <div className="fn-related" style={{ marginBottom: "1.5rem" }}>
+                  <div className="fn-related-title">From the Novel</div>
+                  <div className="fn-related-links">
+                    {relatedMoments.map((moment) => (
+                      <Link key={moment.slug} href={momentPath(moment.slug)}>
+                        <span style={{ opacity: 0.5 }}>→</span> {moment.title}
+                      </Link>
+                    ))}
+                  </div>
+                  <Link
+                    href="/books/masters-x/moments"
+                    style={{ display: "block", marginTop: "1rem", fontSize: "0.78rem", color: "var(--text-faint)", textDecoration: "none" }}
+                  >
+                    All scenes →
+                  </Link>
+                </div>
+              )}
               {/* Related notes */}
               {relatedNotes.length > 0 && (
                 <div className="fn-related" style={{ marginBottom: "1.5rem" }}>

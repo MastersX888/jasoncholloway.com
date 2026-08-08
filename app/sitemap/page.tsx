@@ -61,6 +61,10 @@ export default function SitemapPage() {
                 {monograph && (
                   <li style={{ marginTop: "0.5rem" }}><Link href={`/books/${monograph.slug}`} className="hover-gold" style={{ fontWeight: 600 }}>{monograph.title}</Link></li>
                 )}
+                <li style={{ marginTop: "0.75rem" }}><span className="label" style={{ fontSize: "0.72rem" }}>Readalikes</span></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/books/books-like-foucaults-pendulum" className="hover-gold">Like Foucault&apos;s Pendulum</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/books/books-like-the-historian" className="hover-gold">Like The Historian</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/books/literary-conspiracy-fiction" className="hover-gold">Literary Conspiracy Fiction</Link></li>
               </ul>
             </div>
 

@@ -8,9 +8,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = buildMetadata({
   title: "From the Novel · Masters X Scenes",
   description:
-    "Verbatim scenes from the Masters X trilogy — safety deposit boxes, SubTropolis tunnels, the Ars Notoria, Saying 113, and the chamber beneath Kansas City. Read in order.",
+    "Verbatim scenes from the Masters X trilogy — safety deposit boxes, SubTropolis tunnels, the Voynich Manuscript, Saying 113, and the chamber beneath Kansas City. Read in order.",
   socialDescription:
-    "Ten indexable scenes from the Masters X trilogy: verbatim prose and story context, volume by volume.",
+    "Twelve indexable scenes from the Masters X trilogy: verbatim prose and story context, volume by volume.",
   path: "/books/masters-x/moments/",
 });
 
@@ -56,7 +56,7 @@ export default function MomentsHubPage() {
               From the Novel
             </h1>
             <p style={{ color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1.05rem", maxWidth: "62ch" }}>
-              Ten scenes from the trilogy in reading order — verbatim manuscript prose with story context only.
+              Twelve scenes from the trilogy in reading order — verbatim manuscript prose with story context only.
               Each page is a single moment from the books, indexed for search and linked to the volume it belongs to.
             </p>
           </div>

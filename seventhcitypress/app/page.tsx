@@ -355,7 +355,7 @@ export default function PressPage() {
               rel="noopener noreferrer"
               style={{ fontSize: "0.85rem", color: "var(--gold, #c4a35a)", textDecoration: "underline" }}
             >
-              All twelve scenes at jasoncholloway.com →
+              All seventeen scenes at jasoncholloway.com →
             </a>
           </p>
         </div>

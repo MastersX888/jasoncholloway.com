@@ -4,7 +4,7 @@ Status: **approved by author** — Jason Carroll Holloway, 2026-08-07 (Phases 1�
 
 Phase 1 passages live in `lib/data/passages.ts`. Phase 2–3 indexable scene pages live in `lib/data/moments.ts`.
 
-Production: live on jasoncholloway.com (deploy `a97cf71a`, commit `4a075a2`). Imprint mirror live on seventhcitypress.com (deploy `0174089f`).
+Production: live on jasoncholloway.com (Phase 3 deploy `a97cf71a`; **Phase 4 deploy `a8ae136b` 2026-08-08**, uncommitted). Imprint mirror live on seventhcitypress.com (Phase 4 deploy `4d5db95c`).
 
 ## Phase 1 (in `passages.ts`)
 
@@ -46,9 +46,23 @@ Production: live on jasoncholloway.com (deploy `a97cf71a`, commit `4a075a2`). Im
 | Comp pages (Historian + Literary Conspiracy + Foucault excerpts) | ☑ |
 | SCP imprint (three flagship quotes → author moments) | ☑ |
 
-**Literary showcase rollout complete** — 12 moment pages, 3 comp landings, cross-links, llms.txt, sitemap.
+**Literary showcase rollout complete** — 17 moment pages (chronological order), 3 comp landings, cross-links, llms.txt, sitemap.
 
-## Harvest backlog (23 candidates)
+## Phase 4 (2026-08-07) — expand Book II–III + Breitling SEO
+
+| Item | Status |
+|------|--------|
+| the-forgetting | ☐ pending |
+| breitling-stopped | ☐ pending |
+| breitling-wound-again | ☐ pending |
+| pentecost-condition | ☐ pending |
+| breitling-eight-hertz | ☐ pending |
+| Chronological reorder (17 scenes) | ☐ pending |
+| Breitling motif (series hub, llms.txt, keywords) | ☐ pending |
+| GSC indexing + sitemap resubmit | ☐ pending |
+| Groundswell moment vs volume GSC panel | ☐ pending |
+
+## Harvest backlog (optional expansion to 18+)
 
 Full JSON: `scratch\editorial\QUOTE_HARVEST_v1.json`
 

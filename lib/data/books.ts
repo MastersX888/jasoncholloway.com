@@ -90,7 +90,7 @@ export const books: Book[] = [
       "A graduate student's inheritance unlocks seven notebooks of classified acoustic research — and the medieval tradition that encoded it.",
     excerpt:
       "The cross-references. Between cave carvings and classified aerospace research. Blake, your grandfather was reverse-engineering antenna designs from petroglyphs. Those aren't diagrams, they're technical specifications.",
-    keywords: ["acoustic frequency", "Ars Notoria", "grimoire", "Kansas City", "literary thriller", "medieval manuscripts", "Prague", "Strahov Library", "SubTropolis"],
+    keywords: ["acoustic frequency", "Ars Notoria", "Breitling Navitimer", "grimoire", "Kansas City", "literary thriller", "medieval manuscripts", "Prague", "Strahov Library", "SubTropolis"],
     buyLinks: [
       { label: "Kindle Edition (Amazon)", url: `https://www.amazon.com/dp/${BUY_LINKS.MX1_KINDLE_ASIN}`, format: "Ebook" },
       { label: "Google Play Books (EPUB)", url: googlePlayIsbnUrl("9798256008819"), format: "Ebook" },

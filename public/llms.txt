@@ -72,20 +72,29 @@ Full documented articles at https://jasoncholloway.com/field-notes/:
 
 ## From the Novel (Curated Fiction Excerpts)
 
-Twelve indexable scene pages — verbatim prose + story context only:
+Seventeen indexable scene pages — verbatim prose + story context, in chronological order:
 - Hub: https://jasoncholloway.com/books/masters-x/moments/
 - /books/masters-x/moments/safety-deposit-box
 - /books/masters-x/moments/unmapped-tunnel
 - /books/masters-x/moments/technical-specifications
 - /books/masters-x/moments/nadia-at-the-door
+- /books/masters-x/moments/three-fragments
 - /books/masters-x/moments/tuning-manual
 - /books/masters-x/moments/notae-as-engineering
+- /books/masters-x/moments/strahov-reading-stations
 - /books/masters-x/moments/saying-113
+- /books/masters-x/moments/the-forgetting
+- /books/masters-x/moments/breitling-stopped
+- /books/masters-x/moments/breitling-wound-again
 - /books/masters-x/moments/frequency-geological
 - /books/masters-x/moments/tenth-moleskine
 - /books/masters-x/moments/twenty-three-candidates
-- /books/masters-x/moments/three-fragments
-- /books/masters-x/moments/strahov-reading-stations
+- /books/masters-x/moments/pentecost-condition
+- /books/masters-x/moments/breitling-eight-hertz
+
+## Motifs (fiction)
+
+- **Breitling Navitimer (1967):** William Masters's pilot watch, inherited by Blake — ticks at eight hertz, stops at 12:00 after the Iceland coherence event, wound again in Quality Hill. Central timekeeping motif across all three volumes.
 
 ## Comparison / Readalike Pages
 

@@ -3,7 +3,7 @@ import PassageExcerpt from "@/components/books/PassageExcerpt";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import type { NovelMoment } from "@/lib/data/moments";
-import { getAdjacentMoments, momentPath, novelMoments } from "@/lib/data/moments";
+import { getAdjacentMoments, momentPath, MOMENT_COUNT } from "@/lib/data/moments";
 import { books } from "@/lib/data/books";
 
 interface MomentLayoutProps {
@@ -82,7 +82,7 @@ export default function MomentLayout({ moment }: MomentLayoutProps) {
               )}
             </div>
             <p className="label" style={{ marginBottom: "0.75rem" }}>
-              Volume {moment.volume} · Scene {moment.readingOrder} of {novelMoments.length}
+              Volume {moment.volume} · Scene {moment.readingOrder} of {MOMENT_COUNT}
             </p>
             <h1 className="display-md" style={{ marginBottom: "1rem" }}>
               {moment.title}

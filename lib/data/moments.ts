@@ -13,10 +13,11 @@ export interface NovelMoment {
   /** Meta description (~155 chars) */
   description: string;
   fieldNoteHref?: string;
-  /** Trilogy reading order */
+  /** Trilogy chronological reading order (1 = first scene in story) */
   readingOrder: number;
 }
 
+/** Stored in chronological order — prev/next and hub scroll follow story sequence. */
 export const novelMoments: NovelMoment[] = [
   {
     slug: "safety-deposit-box",
@@ -82,6 +83,22 @@ export const novelMoments: NovelMoment[] = [
     readingOrder: 4,
   },
   {
+    slug: "three-fragments",
+    volumeSlug: "the-inheritance-of-frequency",
+    volume: 1,
+    title: "Three fragments of one system",
+    context: "Nadia maps the Ars Notoria, Voynich Manuscript, and Codex Gigas as pieces of the same puzzle.",
+    paragraphs: [
+      "Everyone obsesses over the text because they can't read it. But the images are what matter. They're a visual language encoding information that doesn't require text. The botanical illustrations, the astronomical diagrams. They're not random. They're what to see. The visual interface.",
+      "Three fragments of one complete system. The Ars Notoria tells you how. The Voynich shows you what. The Codex Gigas explains why. Separated by Brother Aldric in 1267. Hidden in different libraries, studied by thousands of scholars who never realized they were looking at pieces of the same puzzle.",
+    ],
+    attribution: "Nadia Volkov · Book I",
+    description:
+      "Nadia Volkov reads the Voynich Manuscript, Ars Notoria, and Codex Gigas as three fragments of one system — a scene from The Inheritance of Frequency.",
+    fieldNoteHref: "/field-notes/voynich-manuscript/",
+    readingOrder: 5,
+  },
+  {
     slug: "tuning-manual",
     volumeSlug: "the-grimoire",
     volume: 2,
@@ -94,7 +111,7 @@ export const novelMoments: NovelMoment[] = [
     description:
       "The Ars Notoria notae specify body orientations for each harmonic — the human body mapped as an acoustic instrument. Scene from The Grimoire.",
     fieldNoteHref: "/field-notes/ars-notoria/",
-    readingOrder: 5,
+    readingOrder: 6,
   },
   {
     slug: "notae-as-engineering",
@@ -111,7 +128,23 @@ export const novelMoments: NovelMoment[] = [
     description:
       "Blake Masters reads the Ars Notoria as engineering — wavefront diagrams, standing waves, and body positions. Verbatim excerpt from The Grimoire.",
     fieldNoteHref: "/field-notes/ars-notoria/",
-    readingOrder: 6,
+    readingOrder: 7,
+  },
+  {
+    slug: "strahov-reading-stations",
+    volumeSlug: "the-grimoire",
+    volume: 2,
+    title: "Twenty-three reading stations",
+    context: "Andrew realizes the Strahov theological hall was a preparation chamber, not a library.",
+    paragraphs: [
+      "Twenty-three reading stations in the Strahov theological hall. Twenty-three desks. Twenty-three chains. One book per chain.",
+      "The library wasn't a library. It was a preparation chamber for the eyes the way the crypt was a preparation chamber for the ears. The monks didn't go to the library to study. They went to the library to prepare.",
+    ],
+    attribution: "Andrew Chen · Book II",
+    description:
+      "Twenty-three chained desks in the Strahov theological hall — Andrew Chen reads the library as a preparation chamber. From The Grimoire.",
+    fieldNoteHref: "/field-notes/strahov-monastery/",
+    readingOrder: 8,
   },
   {
     slug: "saying-113",
@@ -128,7 +161,55 @@ export const novelMoments: NovelMoment[] = [
     description:
       "Andrew reaches Saying 113 of the Gospel of Thomas and his hands stop trembling. A scene from The Grimoire, Volume II of Masters X.",
     fieldNoteHref: "/field-notes/gospel-of-thomas/",
-    readingOrder: 7,
+    readingOrder: 9,
+  },
+  {
+    slug: "the-forgetting",
+    volumeSlug: "the-grimoire",
+    volume: 2,
+    title: "The forgetting",
+    context: "Iceland. Blake opens the Moleskine after a session he cannot remember.",
+    paragraphs: [
+      "It began with the Moleskine.",
+      "Blake opened the eighth notebook the morning after the session, the session he had entered at 3 PM and exited at, according to Andrew's monitoring log, 9:47 PM. Six hours and forty-seven minutes. The standard session was three hours.",
+      "Three pages. Approximately 1,400 words. Written in his hand, in his notebook, during a session he could not remember. Three hours were missing.",
+    ],
+    attribution: "Masters X: The Grimoire",
+    description:
+      "Three hours missing from a seven-hour Iceland session — Blake Masters finds pages in his own handwriting he cannot read. From The Grimoire, Volume II.",
+    readingOrder: 10,
+  },
+  {
+    slug: "breitling-stopped",
+    volumeSlug: "the-grimoire",
+    volume: 2,
+    title: "The Breitling stopped",
+    context: "Iceland. After the coherence event, William's watch stops at twelve o'clock.",
+    paragraphs: [
+      "The Breitling stopped.",
+      "Not wound down, the mainspring had thirty-two hours of power reserve and Blake had wound it that morning. Stopped. The second hand ceased its movement. The minute hand ceased. The hour hand, at 12:00, precise, centered, frozen.",
+      "The silence of the Breitling was louder than its ticking had ever been, the way the silence after a concert is louder than the concert, the way the silence after a bell is the bell's truest note.",
+    ],
+    attribution: "Blake Masters · Book II",
+    description:
+      "Blake Masters's Breitling Navitimer stops at twelve o'clock — not wound down, stopped. A pivotal scene from The Grimoire, Volume II of Masters X.",
+    readingOrder: 11,
+  },
+  {
+    slug: "breitling-wound-again",
+    volumeSlug: "the-kingdom",
+    volume: 3,
+    title: "The Breitling wound again",
+    context: "Quality Hill. Blake unwraps his grandfather's 1967 Breitling for the first time in fifty-three days.",
+    paragraphs: [
+      "The Breitling. He had told himself, that night in the cottage, that he would not wind it, that the mechanism was finished, not broken, complete, and that some things were meant to stop.",
+      "Blake wound the crown. Slowly. The mainspring caught at the seventh turn. The second hand moved. Not five ticks per second yet, the watch was waking, and then five, and then the steady five, the eight-hertz signature his grandfather had wound every morning at the bathroom sink.",
+      "William's mechanism. James's inheritance. His. The watch ticked.",
+    ],
+    attribution: "Masters X: The Kingdom",
+    description:
+      "Blake Masters winds his grandfather's 1967 Breitling Navitimer after fifty-three days — eight hertz on the Kansas City counter. Opening of The Kingdom.",
+    readingOrder: 12,
   },
   {
     slug: "frequency-geological",
@@ -144,7 +225,7 @@ export const novelMoments: NovelMoment[] = [
     description:
       "111 Hz as a geological constant — standing waves in stone chambers from Lascaux to Strahov. Verbatim passage from The Kingdom.",
     fieldNoteHref: "/field-notes/111-hz/",
-    readingOrder: 8,
+    readingOrder: 13,
   },
   {
     slug: "tenth-moleskine",
@@ -160,7 +241,7 @@ export const novelMoments: NovelMoment[] = [
     attribution: "Blake Masters · Book III",
     description:
       "Blake Masters on preparation, gatekeeping, and the body as the gate — written in the tenth Moleskine. From The Kingdom.",
-    readingOrder: 9,
+    readingOrder: 14,
   },
   {
     slug: "twenty-three-candidates",
@@ -177,59 +258,61 @@ export const novelMoments: NovelMoment[] = [
     description:
       "Twenty-three candidates, seventy-two hours, a chamber beneath Kansas City — the opening movement of The Kingdom's final act.",
     fieldNoteHref: "/field-notes/kansas-city-locations/",
-    readingOrder: 10,
+    readingOrder: 15,
   },
   {
-    slug: "three-fragments",
-    volumeSlug: "the-inheritance-of-frequency",
-    volume: 1,
-    title: "Three fragments of one system",
-    context: "Nadia maps the Ars Notoria, Voynich Manuscript, and Codex Gigas as pieces of the same puzzle.",
+    slug: "pentecost-condition",
+    volumeSlug: "the-kingdom",
+    volume: 3,
+    title: "Pentecost was a condition",
+    context: "Andrew leaves the Iceland monitoring station for the last time.",
     paragraphs: [
-      "Everyone obsesses over the text because they can't read it. But the images are what matter. They're a visual language encoding information that doesn't require text. The botanical illustrations, the astronomical diagrams. They're not random. They're what to see. The visual interface.",
-      "Three fragments of one complete system. The Ars Notoria tells you how. The Voynich shows you what. The Codex Gigas explains why. Separated by Brother Aldric in 1267. Hidden in different libraries, studied by thousands of scholars who never realized they were looking at pieces of the same puzzle.",
+      "He did not look back. Andrew Chen had never been a man who looked back. He was a man who looked at data, and the data was clear: the distribution was complete. The fire had fallen. The Pentecost was not a moment. It was a condition.",
     ],
-    attribution: "Nadia Volkov · Book I",
+    attribution: "Andrew Chen · Book III",
     description:
-      "Nadia Volkov reads the Voynich Manuscript, Ars Notoria, and Codex Gigas as three fragments of one system — a scene from The Inheritance of Frequency.",
-    fieldNoteHref: "/field-notes/voynich-manuscript/",
-    readingOrder: 11,
+      "Andrew Chen closes the Iceland station — the distribution complete, Pentecost not a moment but a condition. From The Kingdom, Volume III.",
+    readingOrder: 16,
   },
   {
-    slug: "strahov-reading-stations",
-    volumeSlug: "the-grimoire",
-    volume: 2,
-    title: "Twenty-three reading stations",
-    context: "Andrew realizes the Strahov theological hall was a preparation chamber, not a library.",
+    slug: "breitling-eight-hertz",
+    volumeSlug: "the-kingdom",
+    volume: 3,
+    title: "The Breitling at eight hertz",
+    context: "Iceland. Blake writes the first line of the manuscript.",
     paragraphs: [
-      "Twenty-three reading stations in the Strahov theological hall. Twenty-three desks. Twenty-three chains. One book per chain.",
-      "The library wasn't a library. It was a preparation chamber for the eyes the way the crypt was a preparation chamber for the ears. The monks didn't go to the library to study. They went to the library to prepare.",
+      "The cottage was warm. The wind was high. The Breitling on the desk ticked at 8 Hz and would tick for another twenty-seven hours and then would not.",
+      "Blake wrote the first line of the manuscript.",
     ],
-    attribution: "Andrew Chen · Book II",
+    attribution: "Masters X: The Kingdom",
     description:
-      "Twenty-three chained desks in the Strahov theological hall — Andrew Chen reads the library as a preparation chamber. From The Grimoire.",
-    fieldNoteHref: "/field-notes/strahov-monastery/",
-    readingOrder: 12,
+      "The Breitling Navitimer ticks at eight hertz on Blake Masters's desk — twenty-seven hours before the mechanism stops. Final scene of The Kingdom.",
+    readingOrder: 17,
   },
 ];
+
+export function getMomentsInReadingOrder(): NovelMoment[] {
+  return [...novelMoments].sort((a, b) => a.readingOrder - b.readingOrder);
+}
 
 export function getMomentBySlug(slug: string): NovelMoment | undefined {
   return novelMoments.find((m) => m.slug === slug);
 }
 
 export function getMomentsByVolume(volumeSlug: string): NovelMoment[] {
-  return novelMoments.filter((m) => m.volumeSlug === volumeSlug);
+  return getMomentsInReadingOrder().filter((m) => m.volumeSlug === volumeSlug);
 }
 
 export function getAdjacentMoments(slug: string): {
   prev?: NovelMoment;
   next?: NovelMoment;
 } {
-  const idx = novelMoments.findIndex((m) => m.slug === slug);
+  const ordered = getMomentsInReadingOrder();
+  const idx = ordered.findIndex((m) => m.slug === slug);
   if (idx < 0) return {};
   return {
-    prev: idx > 0 ? novelMoments[idx - 1] : undefined,
-    next: idx < novelMoments.length - 1 ? novelMoments[idx + 1] : undefined,
+    prev: idx > 0 ? ordered[idx - 1] : undefined,
+    next: idx < ordered.length - 1 ? ordered[idx + 1] : undefined,
   };
 }
 
@@ -242,5 +325,7 @@ export function momentPath(slug: string): string {
 /** Moments linked to a Field Note essay (reverse of fieldNoteHref). */
 export function getMomentsForFieldNote(fieldNoteSlug: string): NovelMoment[] {
   const href = `/field-notes/${fieldNoteSlug}/`;
-  return novelMoments.filter((m) => m.fieldNoteHref === href);
+  return getMomentsInReadingOrder().filter((m) => m.fieldNoteHref === href);
 }
+
+export const MOMENT_COUNT = novelMoments.length;

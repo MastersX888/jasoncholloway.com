@@ -71,7 +71,8 @@ export default function MastersXPage() {
             <p style={{ maxWidth: "62ch", color: "var(--text-muted)", fontSize: "1.1rem", lineHeight: 1.85, marginBottom: "1.25rem" }}>
               A safety deposit box, paid in advance for fifty-seven years, arrives the day Blake Masters
               is ready to receive it. Inside: seven notebooks, thirty years of classified research, and a
-              cross-reference to a crypt that has been sealed since 1267. Three novels about what you do
+              cross-reference to a crypt that has been sealed since 1267 — and a 1967 Breitling Navitimer
+              his grandfather wound every morning at the sink. Three novels about what you do
               when you open something that was waiting specifically for you.
             </p>
             <p style={{ maxWidth: "60ch", color: "var(--text-faint)", fontSize: "0.9rem", fontStyle: "italic", marginBottom: "0.5rem" }}>
@@ -117,11 +118,11 @@ export default function MastersXPage() {
             <span className="label">From the Novel</span>
           </div>
           <h2 className="display-md" style={{ marginBottom: "1rem" }}>
-            Twelve scenes in reading order
+            Seventeen scenes in chronological order
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: 1.85, marginBottom: "1.5rem", maxWidth: "62ch" }}>
-            Verbatim passages from the trilogy — safety deposit boxes, SubTropolis tunnels, the Voynich Manuscript,
-            Saying 113, and the chamber beneath Kansas City. Story context only; no spoilers beyond each scene.
+            Verbatim passages from the trilogy — from the safety deposit box to the Breitling Navitimer on Blake&apos;s desk.
+            Story order only; no mood labels, no spoilers beyond each scene.
           </p>
           <Link href="/books/masters-x/moments" className="btn btn-outline btn-sm">
             Browse all scenes →

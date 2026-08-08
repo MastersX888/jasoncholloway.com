@@ -1,10 +1,10 @@
-# Jason Quote Proofread — Phase 1 + Phase 2 Passages
+# Jason Quote Proofread — Phase 1 + Phase 2 + Phase 3 Passages
 
-Status: **approved by author** — Jason Carroll Holloway, 2026-08-07.
+Status: **approved by author** — Jason Carroll Holloway, 2026-08-07 (Phases 1–2); Phase 3 approved same session.
 
-Phase 1 passages live in `lib/data/passages.ts`. Phase 2 indexable scene pages live in `lib/data/moments.ts`.
+Phase 1 passages live in `lib/data/passages.ts`. Phase 2–3 indexable scene pages live in `lib/data/moments.ts`.
 
-Production: live on jasoncholloway.com (deploy `0e91e6f9`, commit `ef7be2c`).
+Production: live on jasoncholloway.com (deploy `a97cf71a`, commit `4a075a2`). Imprint mirror live on seventhcitypress.com (deploy `0174089f`).
 
 ## Phase 1 (in `passages.ts`)
 
@@ -37,17 +37,19 @@ Production: live on jasoncholloway.com (deploy `0e91e6f9`, commit `ef7be2c`).
 | tenth-moleskine | The tenth Moleskine | ☑ |
 | twenty-three-candidates | Twenty-three candidates | ☑ |
 
-## Phase 3 additions (2026-08-07)
+## Phase 3 additions
 
-| Slug | Title | Status |
-|------|-------|--------|
-| three-fragments | Three fragments of one system | ☐ pending |
-| strahov-reading-stations | Twenty-three reading stations | ☐ pending |
-| Comp pages | Historian + Literary Conspiracy + Foucault excerpts | ☐ pending |
-| SCP imprint | Three flagship quotes → author moments | ☐ pending |
+| Item | Status |
+|------|--------|
+| three-fragments | ☑ |
+| strahov-reading-stations | ☑ |
+| Comp pages (Historian + Literary Conspiracy + Foucault excerpts) | ☑ |
+| SCP imprint (three flagship quotes → author moments) | ☑ |
+
+**Literary showcase rollout complete** — 12 moment pages, 3 comp landings, cross-links, llms.txt, sitemap.
 
 ## Harvest backlog (23 candidates)
 
 Full JSON: `scratch\editorial\QUOTE_HARVEST_v1.json`
 
-Run `python scratch/ops/harvest_quotes.py` to refresh after corpus edits.
+Run `python scratch/ops/harvest_quotes.py` to refresh after corpus edits. Optional Phase 4: expand to 15–18 moments from harvest when ready.

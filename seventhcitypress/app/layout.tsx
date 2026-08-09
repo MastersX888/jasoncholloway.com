@@ -68,6 +68,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://seventhcitypress.com"),
   verification: {
     yandex: "35271039e1472ca8",
+    ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION }
+      : {}),
   },
 };
 

@@ -1,0 +1,35 @@
+name: Deploy Imprint Site
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main, 'cursor/**']
+    paths:
+      - 'seventhcitypress/**'
+      - '.github/workflows/deploy-imprint.yml'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: seventhcitypress
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: seventhcitypress/package-lock.json
+
+      - name: Install and build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to Cloudflare Pages
+        run: npx wrangler@4 pages deploy out --project-name=seventhcitypress --branch=main
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

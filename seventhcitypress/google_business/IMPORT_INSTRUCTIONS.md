@@ -49,7 +49,7 @@ Google's **Logo** column needs a **public URL**, not a local path. After import:
 2. **Add profile photo** → upload `assets/scp-logo-profile-720.png`
 3. Or upload to `seventhcitypress.com` and paste URL in a later bulk update
 
-**Recommended:** upload `scp-logo-profile-720.png` manually (720×720, square, heptagram on black).
+**Now hosted:** `https://seventhcitypress.com/brand/scp-logo-profile-720.png` (included in `GOOGLE_BUSINESS_IMPORT.csv` Logo column).
 
 ---
 

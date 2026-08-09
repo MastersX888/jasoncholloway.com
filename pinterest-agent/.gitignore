@@ -1,0 +1,9 @@
+.env
+.pinterest_token.json
+output/
+logs/
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/

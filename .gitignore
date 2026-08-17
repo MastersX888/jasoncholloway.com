@@ -41,6 +41,10 @@ scripts/email-mcp-secrets.local.txt
 *.tsbuildinfo
 next-env.d.ts
 
+# Ops dashboard — separate private repo; deploys via its own Worker, not Pages.
+# A git submodule here breaks Cloudflare Pages clones (no GitHub credentials).
+/groundswell-monitor/
+
 # Large Exports
 Jason_Carroll_Holloway_Final_Export/
 website_unzipped/

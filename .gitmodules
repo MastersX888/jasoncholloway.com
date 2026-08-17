@@ -1,4 +1,0 @@
-[submodule "groundswell-monitor"]
-	path = groundswell-monitor
-	url = https://github.com/MastersX888/groundswell-monitor.git
-	ignore = dirty

@@ -45,8 +45,9 @@ same title, the same format, and the same price.
 |---|-------|------|
 | C1 | The homepage shows the three hardcovers together on a shelf | ☐ |
 | C2 | Each of the three has its own buy button with its own price | ☐ |
-| C3 | The set total ($89.97) is stated, and it is stated that this is three separate orders | ☐ |
-| C4 | The omnibus is shown as the cheaper way to get all three novels | ☐ |
+| C3 | The set total ($89.97) is stated, and it is stated that three books means three Ingram orders and three shipping charges | ☐ |
+| C4 | The omnibus is described as one book, one order, one shipping charge | ☐ |
+| C5 | A single-order path for all three exists and works: the Bookshop.org one-cart link, from both the homepage and the buy panel | ☐ |
 
 ## D · Reader who came to explore, not buy
 
@@ -78,14 +79,10 @@ same title, the same format, and the same price.
 
 ## Known open items
 
-- **Omnibus price of record.** `CANON.md` §2A lists the omnibus direct price as
-  HC $29.99 / PB $19.99. `lib/data/books.ts` — what the live site and every buy
-  button use — has HC $44.99 / PB $32.99. The site is internally consistent, but one
-  of the two documents is wrong and only the author can say which. Until that is
-  settled, check B8 against Ingram, not against CANON.
-- **No bundled set SKU.** Buying all three hardcovers is three orders and three
-  shipping charges. A true set would need either an Ingram bundle SKU or the Stripe
-  path in `CHECKOUT_ROADMAP.md`.
+- **No cart on Ingram.** Share & Sell is one title per link with no cart, so buying
+  the three hardcovers is three orders and three shipping charges. The site now says
+  so and offers the Bookshop.org one-cart link instead; a real single-order set on
+  jasoncholloway.com needs its own store — see `CHECKOUT_ROADMAP.md`.
 - **No shelf photograph.** The shelf on the homepage is rendered from cover art;
   see `ASSET_GAP_REPORT.md`.
 - **No wallet checkout on print.** Ingram's checkout takes cards only; see

@@ -215,6 +215,13 @@
   color: var(--text-faint);
   line-height: 1.6;
 }
+.buy-first-set-link {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold-dim);
+}
+.buy-first-set-link:hover {
+  color: var(--text);
+}
 
 .buy-first-foot {
   display: flex;

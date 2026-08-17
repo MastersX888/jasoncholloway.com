@@ -25,7 +25,8 @@ This file documents the locked narrative, biographical, and bibliographical fact
 ## 2 · BIBLIOGRAPHIC CANON
 
 ### A. The Masters X Trilogy
-*   **Omnibus Retail Prices (IngramSpark direct):** Hardcover **$29.99** · Paperback **$19.99**
+*   **Omnibus Retail Prices (IngramSpark direct / Share & Sell):** Hardcover **$44.99** · Paperback **$32.99**
+    *(Author-confirmed 17-AUG-2026: the live site prices are correct. List/MSRP: HC $49.99 · PB $36.99.)*
     *   *Omnibus Hardcover:* 686 pages *(printed interior, July 2026)*
     *   *Omnibus Paperback:* 734 pages *(printed interior, July 2026)*
 *   **Individual Page Counts (Ingram catalog, July 2026):**
@@ -49,7 +50,8 @@ This file documents the locked narrative, biographical, and bibliographical fact
 ### B. The Hawkes Monograph
 *   **Title:** *Innocence, Desire, and the Architecture of the Fall: The Grape and Its Counter-Symbols in the Fiction of John Hawkes*
 *   **Page Count:** 84 pages print (PB/HC) · 90 pages EPUB *(Ingram catalog, July 2026)*
-*   **US List Prices:** PB $14.98 · HC $24.99 · EPUB $9.99
+*   **US Prices:** PB $12.99 direct / $14.99 list · HC $24.99 direct / $29.99 list · EPUB $9.99
+    *(Aligned 17-AUG-2026 to `lib/data/books.ts`, which the live site renders. The former "PB $14.98" line conflated list and direct pricing.)*
 *   **Paperback ISBN:** 9798295778247
 *   **Hardcover ISBN:** 9798349308444
 *   **Ebook ISBN:** 9798295778926
@@ -91,4 +93,5 @@ These decisions are pending or in-progress and must be verified before launch:
 8.  **TODO(jason) Cognigenics.txt:** Restore missing research file or supply replacement source for Completion Sect entry.
 9.  **TODO(jason) Moreau 1924:** Confirm which period newspaper article(s) were used (`JUNE_1924_DROWNING_TEMPLATE.md`).
 10. **TODO(jason) Holloway family-history:** Clear biographical details for William Masters / aerospace parallel before encyclopedia print.
-11. **TODO(jason) Omnibus price of record:** §2A above lists the omnibus IngramSpark direct price as HC $29.99 / PB $19.99. `lib/data/books.ts` — the source every buy button and price on the live site reads from — has HC $44.99 / PB $32.99, matching the current IngramSpark Share & Sell links. Confirm which is correct in Ingram and update the other. See `PURCHASE_PATH_QA.md`.
+11. ~~**Omnibus price of record**~~ — **RESOLVED 17-AUG-2026.** The live prices are correct: omnibus HC $44.99 / PB $32.99 direct. §2A updated to match `lib/data/books.ts`.
+12. **TODO(jason) Single-order set:** IngramSpark Share & Sell has no cart — three hardcovers is three orders and three shipping charges. Decide between the Bookshop.org one-cart route (live today) and an own-store route with wallet checkout. See `CHECKOUT_ROADMAP.md` §"One order, one shipping charge".

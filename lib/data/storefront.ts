@@ -224,7 +224,7 @@ export const omnibusProduct: StoreProduct = {
   offers: [printOffer(omnibus, "Hardcover"), printOffer(omnibus, "Paperback")].filter(
     (offer): offer is StoreOffer => offer !== null
   ),
-  valueNote: `The three hardcovers bought separately come to $${omnibusComparison.hardcover.volumes} — the omnibus hardcover is $${omnibusComparison.hardcover.saving} less for the same three novels.`,
+  valueNote: `One book, one order, one shipping charge. The three hardcovers bought separately come to $${omnibusComparison.hardcover.volumes} plus three shipping charges — the omnibus hardcover is $${omnibusComparison.hardcover.saving} less for the same three novels.`,
   secondaryLinks: bookshopSecondary(omnibus),
 };
 
@@ -261,10 +261,16 @@ export const hardcoverSetProduct: StoreProduct = {
   bundleTotal: money(
     setOffers.reduce((sum, offer) => sum + parseFloat(offer.price ?? "0"), 0)
   ),
+  // IngramSpark Share & Sell links are one title per order with no cart, so
+  // three hardcovers means three orders and three shipping charges. Readers who
+  // want one shipment need either the omnibus or a retailer with a real cart.
   bundleNote:
-    "Each hardcover is a separate order at checkout — Seventh City Press has no bundled set SKU yet. The omnibus hardcover collects all three novels in one volume for less.",
+    "plus three separate shipping charges — IngramSpark bills each title as its own order. For all three in one shipment, use the one-cart link below, or take the omnibus hardcover: one book, one order, one shipping charge.",
   secondaryLinks: [
-    { label: "Bookshop.org — the full Masters X list", url: BUY_LINKS.BOOKSHOP_LIST_URL },
+    {
+      label: "All three in one cart at Bookshop.org — one order, one shipping charge",
+      url: BUY_LINKS.BOOKSHOP_LIST_URL,
+    },
   ],
 };
 

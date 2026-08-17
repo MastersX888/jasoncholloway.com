@@ -223,7 +223,7 @@ function ProductPanel({
 
       {product.bundleTotal && (
         <p className="buybox-bundle-note">
-          <strong>Set total: ${product.bundleTotal}</strong> — {product.bundleNote}
+          <strong>Set total: ${product.bundleTotal}</strong> {product.bundleNote}
         </p>
       )}
 

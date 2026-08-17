@@ -1,91 +1,158 @@
-# Checkout Roadmap — one-click / Google Pay on jasoncholloway.com
+# Checkout Roadmap — one order, one shipping charge, and wallet payment
 
-Written 17-AUG-2026 in response to the author's request: *"if it's possible to link
-Google Pay to the site so that people can buy the books from Ingram with one-click
-Google Pay opposed to having to enter all of their information."*
+Written 17-AUG-2026, revised the same day after the author's follow-up:
 
-Short answer: **not with the current fulfillment setup.** The reason is not the
-website — it is who owns the checkout. This document records what was verified,
-what a reader experiences today, and the two real paths to wallet checkout.
+> *"The only way I'm going to be able to truly profit from my book is if I sell it
+> through my website… To have to pay three separate shipping charges. What's the point
+> of the bundle? … The idea is to save them clicks, AND save them shipping cost if
+> possible by having everything on ONE order."*
+
+That is the right objection. The three-hardcover "set" as sold through IngramSpark is
+not a set — it is three transactions wearing one heading, and the site now says so
+instead of implying otherwise.
 
 ---
 
-## 1 · What was verified
+## 1 · Why Ingram cannot do it, confirmed
 
-| Channel | Who takes the payment | Payment methods | Wallet / one-click |
-|---------|----------------------|-----------------|--------------------|
-| Print (HC/PB) — all Masters X and Hawkes editions | IngramSpark Share & Sell (Lightning Source LLC) | Credit card only: AMEX, Mastercard, Visa | **No.** Ingram's Share & Sell terms of sale list card payment only |
-| Kindle (Books I–III) | Amazon | Whatever is on the reader's Amazon account | **Yes** — existing Amazon account, no card re-entry |
-| Ebook via Google Play (Hawkes) | Google | Google account payment methods, including Google Pay | **Yes** |
-| Bookshop.org (ISBN orders) | Bookshop.org | Card and wallet options at their checkout | Their checkout, not ours |
+IngramSpark's Share & Sell links have **no cart at any level**. Their own publisher FAQ:
+*"Can I sell more than one book through a link? No. You can only sell one book per
+link."* One link is one title, one format, one order. Three hardcovers is three
+checkouts, three shipping charges, and three $3.50 print-fulfillment fees. There is no
+setting, no bundle SKU, and no workaround inside Share & Sell.
 
-Sources: IngramSpark Share & Sell Terms of Sale and order FAQ
-(`ingramspark.com/ecommerce-terms-of-sale`, `ingramspark.com/ecommerce-faq`);
-Google Pay API "Publish your integration" and request-object reference
-(`developers.google.com/pay/api/web`).
+Related dead ends checked:
 
-Google Pay on the web requires three things this site does not have: a Google Pay
-& Wallet Console **merchant ID** issued after domain review, a **supported payment
-gateway** (or a PCI DSS compliant environment), and a checkout **we control** so a
-payment token can be exchanged for a charge. Every print buy button on this site
-hands off to Ingram's hosted checkout, so there is no page of ours in which a
-Google Pay sheet could appear.
+- **Aer.io**, Ingram's old white-label storefront that did have a cart, was shut down.
+- **IndiePubs / Ingram Express Checkout** (June 2026) does put a real Ingram-fulfilled
+  cart and buy buttons on a publisher's own website — but it is offered *exclusively to
+  Ingram Publisher Services distribution clients*, not IngramSpark self-publishers. It
+  costs one email to ask an Ingram rep whether Seventh City Press can be admitted. If
+  the answer is yes, it is the best outcome available: a cart, Ingram fulfillment, no
+  inventory, no new printer.
+- **A physical boxed set SKU** is not possible in print-on-demand. Ingram prints single
+  bound books; it does not shrink-wrap or slipcase multi-book sets.
 
-## 2 · What is shipped instead
+Within Ingram, the omnibus **is** the single-order set: one book, one order, one
+shipping charge, all three novels. That is now stated in those words on the homepage
+and in the buy panel, because it is the actual argument for it — not two saved clicks.
 
-The buy box (`components/store/BuyBoxModal.tsx`) now states the payment reality
-per channel, so nobody gets as far as checkout before discovering it:
+## 2 · Wallet payment (Google Pay), same root cause
 
-- Print: *"Card checkout (Visa · Mastercard · Amex) — no account to create"*
-- Kindle: *"Checkout with your existing Amazon account"*
-- Google Play: *"Checkout with your Google account · Google Pay"*
+Google Pay on the web needs a Wallet Console merchant ID, a payment gateway, and a
+checkout page that belongs to us. Ingram's hosted checkout takes AMEX, Mastercard, and
+Visa only. So both of the asks — one order and one-tap payment — come down to the same
+decision: **whose checkout is it.** Every option below is really an answer to that.
 
-For the reader who wants the fewest taps today — the case that prompted this, two
-readers at a party who already shop on Amazon — the Kindle rows are one tap from
-a completed purchase on an existing Amazon account, and they sit in the same list
-as the print editions.
+## 3 · What the money looks like
 
-Copy lives in `PAYMENT_NOTES` in `lib/data/storefront.ts`.
+Ingram print cost, US, small trim, B&W crème, from their 2026 rate card
+(hardcover $5.31 per cover + $0.0132 per page; paperback $1.33 + ~$0.0140):
 
-## 3 · Path A — Stripe (or equivalent) checkout, Seventh City Press fulfills
+| Edition | Pages | Print cost |
+|---------|-------|-----------|
+| Omnibus hardcover | 686 | ~$14.37 |
+| Omnibus paperback | 734 | ~$11.61 |
+| Book I hardcover | 156 | ~$7.37 |
+| Book II hardcover | 218 | ~$8.19 |
+| Book III hardcover | 170 | ~$7.55 |
+| **Three hardcovers** | 544 | **~$23.11** |
 
-Wallet checkout becomes possible the moment Seventh City Press takes the payment
-itself:
+What each route pays on a three-hardcover sale, and what the reader pays to ship it:
 
-1. Open a Stripe account for Seventh City Press LLC. Stripe Checkout and Payment
-   Links surface Google Pay and Apple Pay automatically for eligible devices, with
-   no PCI work and no backend — a Payment Link is a URL, which this static site can
-   link exactly like the Ingram URLs it links today.
-2. Create one Payment Link per edition (five titles × HC/PB), priced to cover print
-   cost + shipping + fees.
-3. Fulfillment has to be decided, and it is the real cost of this path: orders
-   arrive in Stripe, and someone must place the matching print order (IngramSpark
-   print-on-demand order, or ship from a held stock) and email tracking. There is no
-   automatic hand-off from a Stripe payment to an Ingram print job without an
-   integration built against Ingram's ordering API.
-4. Site change is small: add the link URL per offer in `lib/data/storefront.ts` and
-   render a second button in the offer row. Everything else — analytics, the buy
-   box, the homepage band — already reads from that data.
+| Route | Author earns on 3 HC | Reader's shipping | Orders | Wallet checkout | Author's work |
+|-------|---------------------|-------------------|--------|-----------------|---------------|
+| **Ingram Share & Sell** (today) | ~$56 (3 × price − print − $3.50) | 3 charges | 3 | No | None |
+| **Ingram, omnibus instead** | ~$27 | 1 charge | 1 | No | None |
+| **Bookshop.org one cart** | publisher comp + 10% affiliate (≈$11–16/book at typical discounts) | 1 charge, $3.99 + $1.25 per extra book (their Mar-2025 rates) | 1 | Their checkout | None |
+| **Own store, POD fulfilled** (Shopify + Lulu Direct) | set price − print − shipping − ~3% | 1 charge | 1 | Yes | Setup + pricing upkeep |
+| **Own store, own stock** (author copies, signed) | highest — see below | 1 charge, or free and built into price | 1 | Yes | Packing and posting |
 
-Trade-off: fewest taps for the reader, most operational work for the author, and
-Seventh City Press becomes the merchant of record for tax and refunds.
+Two things stand out. First, Share & Sell actually pays *more* on three separate
+hardcovers than on the omnibus ($56 versus $27) — the reader is the one being taxed,
+three times over, which is exactly the backhandedness objected to. Second, no route
+both maximizes profit and requires no work; the honest choice is between money and
+labor.
 
-## 4 · Path B — Keep Ingram, reduce the typing
+## 4 · The options, in the order worth doing them
 
-If fulfillment stays with Ingram, the improvement available is fewer fields rather
-than a wallet:
+### A · Live today, zero work: point set-buyers at the Bookshop.org cart
 
-- Ingram's checkout supports the browser's own autofill. Nothing to build.
-- Deep-link straight to the edition. Already done: every button goes to a
-  single-title Share & Sell page, not a catalog search.
-- `?buy=1` on any site URL opens the buy box directly, so print inserts, QR codes,
-  and ad traffic land on the format list instead of the homepage.
-- Ask IngramSpark support whether wallet payment is on their roadmap for Share &
-  Sell. This is their checkout; if they add Google Pay, this site gets it for free.
+Already shipped in this branch. The three-hardcover block and the buy panel now link
+the existing Seventh City Press list on Bookshop.org, where a reader adds all three to
+one cart and pays one shipping charge ($3.99 for the first book plus $1.25 each
+additional, their published Media Mail rate). Compensation is the Ingram publisher
+payment plus the 10% affiliate commission on affiliate ID `126177`, which is already
+in `lib/data/buyLinks.ts`.
+
+It is not "buying from the author," and it pays less per book than Share & Sell. It is
+here because it is the only single-order path that exists right now, and a reader who
+wants all three books should not be handed three checkouts.
+
+### B · One email: ask Ingram about IndiePubs / Express Checkout
+
+Zero cost, possibly decisive. If Seventh City Press can be admitted to Ingram Express
+Checkout, the site gets a real cart with Ingram fulfillment and no inventory, and the
+whole problem closes without a second printer or a second set of files.
+
+### C · The real answer: an own store with a real cart
+
+This is what "sell it from my website" means in practice — the author is the merchant,
+the cart holds all three books, one shipping charge, and Google Pay / Apple Pay work
+because the checkout is ours.
+
+Two ways to fulfill it:
+
+**C1 · Print-on-demand, automated (Shopify + Lulu Direct, or BookVault).** No
+inventory, no packing. Lulu Direct supports bundle products — up to ten books sold as a
+single product listing — so "Masters X: The Complete Hardcover Set" becomes one item in
+the cart with one shipping charge, printed and shipped automatically when it sells,
+under Seventh City Press branding, with the customer's email staying with the author.
+Costs: a Shopify plan (~$39/month; live carrier rates need a higher tier, or set
+weight-based rates manually), Lulu's print cost plus shipping per order, ~2.9% + 30¢ in
+payment fees, and uploading the interiors and covers to a second printer. Ingram stays
+in place for bookstores, libraries, and ISBN orderability — this only replaces the
+website's direct sales.
+
+**C2 · Author copies, hand-shipped (the signed set).** Order copies from IngramSpark at
+print cost, with the publisher-direct volume discount (2% at 100 units, 5% at 300),
+sell them through the same kind of store, sign them, and post them. On a signed
+three-hardcover set at, say, $99 with shipping built in: roughly $99 − ~$23 print −
+~$8 Media Mail − ~$3 fees ≈ **$65 a set**, against ~$56 through three Ingram orders
+that cost the reader triple postage — and the signature is worth real money, which
+Amazon can never offer. The cost is cash tied up in stock, and the author standing in
+line at the post office.
+
+The sensible shape is C1 for the standard editions and C2 for a signed, limited set:
+automation for volume, hand-signed for margin and for the readers who want the author's
+name in the book.
 
 ## 5 · Recommendation
 
-Ship Path B now (done), and treat Path A as a business decision rather than a web
-task: it is worth doing when print volume justifies the author or a helper
-processing orders, and it should be tested on the omnibus hardcover alone before
-being extended to all ten print SKUs.
+1. **Now (done):** the site stops pretending three orders is a set, names the omnibus as
+   the true one-order edition, and gives set-buyers the Bookshop one-cart link.
+2. **This week, no cost:** email the Ingram rep about IndiePubs / Express Checkout
+   eligibility. If yes, stop here — it solves cart and fulfillment together.
+3. **If Ingram says no:** stand up a Shopify store with Lulu Direct, launch with exactly
+   two products — the omnibus hardcover and the three-hardcover bundle — and put Google
+   Pay and Apple Pay on the checkout. Ten SKUs can follow once the first two prove out.
+4. **Alongside it:** a signed set at a premium price, fulfilled by hand, as the highest
+   margin per sale and the one offer that is impossible to buy anywhere else.
+
+Once a cart exists, the website side is small: add the store URLs per edition in
+`lib/data/storefront.ts` and the buy panel, homepage band, analytics, and QA checklist
+pick them up unchanged.
+
+## 6 · Sources
+
+- IngramSpark Share & Sell publisher FAQ and Terms of Sale (one book per link; card
+  payment only; $3.50 US print fulfillment fee; 90-day compensation).
+- IngramSpark 2026 rate card (print cost per cover and per page; publisher-direct
+  volume discounts).
+- Ingram Content Group press release, 15-JUN-2026: IndiePubs upgrade with in-house
+  Ingram Express Checkout, exclusive to IPS distribution clients.
+- Bookshop.org support centre shipping rates (March 2025) and affiliate commission
+  terms.
+- Lulu Direct documentation: Shopify integration and bundle projects (up to 10 books
+  per bundle).
+- Google Pay Web API: production access requirements (merchant ID, gateway, PCI).

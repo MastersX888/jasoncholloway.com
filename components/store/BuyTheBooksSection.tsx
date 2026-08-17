@@ -12,6 +12,7 @@ import {
   omnibusComparison,
   omnibusProduct,
 } from "@/lib/data/storefront";
+import { BUY_LINKS } from "@/lib/data/buyLinks";
 
 export default function BuyTheBooksSection() {
   const [hardcover, paperback] = omnibusProduct.offers;
@@ -90,10 +91,11 @@ export default function BuyTheBooksSection() {
               </div>
 
               <p className="buy-first-savings">
-                The hardcover omnibus is ${omnibusComparison.hardcover.omnibus} against $
+                One book, one order, one shipping charge. The hardcover omnibus is $
+                {omnibusComparison.hardcover.omnibus} against $
                 {omnibusComparison.hardcover.volumes} for the three hardcovers bought
                 separately — ${omnibusComparison.hardcover.saving} less for the same three
-                novels.
+                novels, and a third of the postage.
               </p>
               <p className="buy-first-fulfillment">{hardcover.fulfillment}</p>
             </div>
@@ -124,8 +126,18 @@ export default function BuyTheBooksSection() {
             </ul>
 
             <p className="buy-first-set-note">
-              Set total ${hardcoverSetProduct.bundleTotal}, ordered as three separate
-              purchases. Paperbacks and Kindle editions are in the full list below.
+              Set total ${hardcoverSetProduct.bundleTotal} — but IngramSpark bills each
+              title as its own order, so three books means three shipping charges. For all
+              three in a single shipment,{" "}
+              <a
+                href={BUY_LINKS.BOOKSHOP_LIST_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="buy-first-set-link"
+              >
+                order the trilogy in one cart at Bookshop.org
+              </a>
+              .
             </p>
           </article>
         </div>

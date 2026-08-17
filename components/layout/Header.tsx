@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useStore } from "@/components/store/StoreProvider";
 
 const navItems = [
   { href: "/books/masters-x", label: "Masters X" },
@@ -15,6 +16,7 @@ const navItems = [
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const { open: openStore } = useStore();
 
   useEffect(() => {
     setMenuOpen(false);
@@ -60,7 +62,23 @@ export default function Header() {
               <span className="nav-chamber-dot" />
               Analysis Chamber
             </Link>
+            <button
+              type="button"
+              className="btn btn-gold btn-sm nav-buy"
+              style={{ marginLeft: "0.75rem" }}
+              onClick={() => openStore("header")}
+            >
+              Buy the Books
+            </button>
           </nav>
+
+          <button
+            type="button"
+            className="btn btn-gold header-buy-mobile"
+            onClick={() => openStore("header_compact")}
+          >
+            Buy
+          </button>
 
           <button
             type="button"
@@ -111,6 +129,17 @@ export default function Header() {
           <span className="nav-chamber-dot" />
           Analysis Chamber
         </Link>
+        <button
+          type="button"
+          className="btn btn-gold mobile-nav-buy"
+          tabIndex={menuOpen ? 0 : -1}
+          onClick={() => {
+            setMenuOpen(false);
+            openStore("mobile_nav");
+          }}
+        >
+          Buy the Books
+        </button>
       </nav>
     </header>
   );

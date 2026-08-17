@@ -4,6 +4,8 @@ import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import WaveDivider from "@/components/ui/WaveDivider";
+import BuyTheBooksSection from "@/components/store/BuyTheBooksSection";
+import StartTourButton from "@/components/tour/StartTourButton";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -55,6 +57,8 @@ export default function Home() {
           })
         }}
       />
+      <BuyTheBooksSection />
+
       <section className="hero">
         <div className="hero-bg" data-version="groundswell-v4" />
         <WaveformHero />
@@ -83,6 +87,9 @@ export default function Home() {
               <Link href="/books/masters-x" className="btn btn-outline">
                 Explore the Catalog
               </Link>
+              <StartTourButton source="hero" className="btn btn-outline">
+                Take me down the rabbit hole
+              </StartTourButton>
               <Link href="/chamber" className="btn btn-ghost" style={{ color: "var(--cyan)" }}>
                 <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--cyan)", display: "inline-block", marginRight: "0.4rem" }} />
                 Analysis Chamber

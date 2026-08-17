@@ -81,3 +81,24 @@ export function trackAdsPurchaseConversion(value?: number) {
 export function trackGenerateLead() {
   gtagEvent("generate_lead");
 }
+
+/** Buy box opened. `source` distinguishes first visit from a deliberate click. */
+export function trackBuyBoxOpen(source: string) {
+  gtagEvent("buy_box_open", { source });
+}
+
+export function trackBuyBoxDismiss(source: string) {
+  gtagEvent("buy_box_dismiss", { source });
+}
+
+export function trackTourStart(source: string) {
+  gtagEvent("guided_tour_start", { source });
+}
+
+export function trackTourStep(stepNumber: number, stepId: string) {
+  gtagEvent("guided_tour_step", { step_number: stepNumber, step_id: stepId });
+}
+
+export function trackTourComplete(stepsViewed: number) {
+  gtagEvent("guided_tour_complete", { steps_viewed: stepsViewed });
+}

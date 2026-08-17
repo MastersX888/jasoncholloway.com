@@ -95,6 +95,10 @@ Zero cost, possibly decisive. If Seventh City Press can be admitted to Ingram Ex
 Checkout, the site gets a real cart with Ingram fulfillment and no inventory, and the
 whole problem closes without a second printer or a second set of files.
 
+The letter is written and ready to send: `INGRAM_EXPRESS_CHECKOUT_EMAIL.md`.
+To: `ingramsparksupport@ingramcontent.com` (or the account manager in the dashboard,
+if one is assigned). Fill in the IngramSpark login email, then send.
+
 ### C · The real answer: an own store with a real cart
 
 This is what "sell it from my website" means in practice — the author is the merchant,

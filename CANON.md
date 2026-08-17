@@ -94,4 +94,4 @@ These decisions are pending or in-progress and must be verified before launch:
 9.  **TODO(jason) Moreau 1924:** Confirm which period newspaper article(s) were used (`JUNE_1924_DROWNING_TEMPLATE.md`).
 10. **TODO(jason) Holloway family-history:** Clear biographical details for William Masters / aerospace parallel before encyclopedia print.
 11. ~~**Omnibus price of record**~~ — **RESOLVED 17-AUG-2026.** The live prices are correct: omnibus HC $44.99 / PB $32.99 direct. §2A updated to match `lib/data/books.ts`.
-12. **TODO(jason) Single-order set:** IngramSpark Share & Sell has no cart — three hardcovers is three orders and three shipping charges. Decide between the Bookshop.org one-cart route (live today) and an own-store route with wallet checkout. See `CHECKOUT_ROADMAP.md` §"One order, one shipping charge".
+12. **TODO(jason) Single-order set:** IngramSpark Share & Sell has no cart — three hardcovers is three orders and three shipping charges. Send the letter in `INGRAM_EXPRESS_CHECKOUT_EMAIL.md` this week. If Ingram says no, decide between the Bookshop.org one-cart route (live today) and an own-store route with wallet checkout. See `CHECKOUT_ROADMAP.md`.

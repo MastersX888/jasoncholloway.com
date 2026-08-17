@@ -91,3 +91,4 @@ These decisions are pending or in-progress and must be verified before launch:
 8.  **TODO(jason) Cognigenics.txt:** Restore missing research file or supply replacement source for Completion Sect entry.
 9.  **TODO(jason) Moreau 1924:** Confirm which period newspaper article(s) were used (`JUNE_1924_DROWNING_TEMPLATE.md`).
 10. **TODO(jason) Holloway family-history:** Clear biographical details for William Masters / aerospace parallel before encyclopedia print.
+11. **TODO(jason) Omnibus price of record:** §2A above lists the omnibus IngramSpark direct price as HC $29.99 / PB $19.99. `lib/data/books.ts` — the source every buy button and price on the live site reads from — has HC $44.99 / PB $32.99, matching the current IngramSpark Share & Sell links. Confirm which is correct in Ingram and update the other. See `PURCHASE_PATH_QA.md`.

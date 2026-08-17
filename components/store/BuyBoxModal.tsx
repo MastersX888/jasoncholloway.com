@@ -227,6 +227,8 @@ function ProductPanel({
         </p>
       )}
 
+      {product.valueNote && <p className="buybox-bundle-note">{product.valueNote}</p>}
+
       <p className="buybox-payments">
         {channels.map((channel) => PAYMENT_NOTES[channel]).join(" · ")}
       </p>

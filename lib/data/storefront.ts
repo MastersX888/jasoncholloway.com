@@ -69,6 +69,8 @@ export interface StoreProduct {
   /** Sum of the offer prices for multi-order products (the hardcover set). */
   bundleTotal?: string;
   bundleNote?: string;
+  /** Why this edition is the one to buy, shown under the offer rows. */
+  valueNote?: string;
   secondaryLinks: StoreSecondaryLink[];
 }
 
@@ -180,6 +182,27 @@ if (volumes.length !== 3) throw new Error("storefront: expected three Masters X 
 
 const ROMAN = ["I", "II", "III"];
 
+function volumeTotal(format: "Hardcover" | "Paperback"): number {
+  return volumes.reduce((sum, book) => {
+    const price = format === "Hardcover" ? book.price_hc_is : book.price_pb_is;
+    return sum + parseFloat(price ?? "0");
+  }, 0);
+}
+
+/** What the three volumes cost bought separately, versus the omnibus. */
+export const omnibusComparison = {
+  hardcover: {
+    omnibus: omnibus.price_hc_is ?? "",
+    volumes: money(volumeTotal("Hardcover")),
+    saving: money(volumeTotal("Hardcover") - parseFloat(omnibus.price_hc_is ?? "0")),
+  },
+  paperback: {
+    omnibus: omnibus.price_pb_is ?? "",
+    volumes: money(volumeTotal("Paperback")),
+    saving: money(volumeTotal("Paperback") - parseFloat(omnibus.price_pb_is ?? "0")),
+  },
+};
+
 export const omnibusProduct: StoreProduct = {
   id: "omnibus",
   kind: "omnibus",
@@ -201,6 +224,7 @@ export const omnibusProduct: StoreProduct = {
   offers: [printOffer(omnibus, "Hardcover"), printOffer(omnibus, "Paperback")].filter(
     (offer): offer is StoreOffer => offer !== null
   ),
+  valueNote: `The three hardcovers bought separately come to $${omnibusComparison.hardcover.volumes} — the omnibus hardcover is $${omnibusComparison.hardcover.saving} less for the same three novels.`,
   secondaryLinks: bookshopSecondary(omnibus),
 };
 
@@ -309,27 +333,6 @@ export const storeProducts: StoreProduct[] = [
 export function findOffer(product: StoreProduct, format: string): StoreOffer | undefined {
   return product.offers.find((offer) => offer.format === format);
 }
-
-function volumeTotal(format: "Hardcover" | "Paperback"): number {
-  return volumes.reduce((sum, book) => {
-    const price = format === "Hardcover" ? book.price_hc_is : book.price_pb_is;
-    return sum + parseFloat(price ?? "0");
-  }, 0);
-}
-
-/** What the three volumes cost bought separately, versus the omnibus. */
-export const omnibusComparison = {
-  hardcover: {
-    omnibus: omnibus.price_hc_is ?? "",
-    volumes: money(volumeTotal("Hardcover")),
-    saving: money(volumeTotal("Hardcover") - parseFloat(omnibus.price_hc_is ?? "0")),
-  },
-  paperback: {
-    omnibus: omnibus.price_pb_is ?? "",
-    volumes: money(volumeTotal("Paperback")),
-    saving: money(volumeTotal("Paperback") - parseFloat(omnibus.price_pb_is ?? "0")),
-  },
-};
 
 /** Cheapest way to start reading, quoted in the buy box footer. */
 export const kindleEntryPrice = volumeProducts[0]?.offers.find(

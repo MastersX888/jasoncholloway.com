@@ -30,6 +30,7 @@ Audit scope: `scratch/asset_scan.mjs` (TSX/CSS/JSON media refs) + `lib/folios.js
 | Press kit PDF currency | May predate omnibus/pricing | Regenerate off-repo; verify `/press` + `/contact` links |
 | IngramSpark v3 HC cover propagation | Site has v3 art; Bookshop pulls Ingram catalog | Re-upload per ISBN in IngramSpark dashboard |
 | Omnibus dedicated PB cover | HC art reused on hub/homepage PB slots | Commission or label honestly when art exists |
+| Trilogy shelf photograph (three hardcovers, spines out) | No photo of the three physical books together exists. The homepage shelf is rendered from the HC cover art in `components/store/TrilogyShelf.tsx` | Photograph the three hardcovers on a shelf, save as `public/media/trilogy-shelf.jpg`, then pass `photo={{ src, alt }}` to `TrilogyShelf` in `components/store/BuyTheBooksSection.tsx` — no other code changes needed |
 | `ASSET_MANIFEST.md` (handoff package) | Reference manifest in `website_elevation_handoff/package/` | Optional sync; Yale folio license note |
 
 ## Yale / folio authority

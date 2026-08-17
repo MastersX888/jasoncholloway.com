@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { books } from "@/lib/data/books";
 import CoverArtifact from "@/components/ui/CoverArtifact";
+import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import OpenStoreButton from "@/components/store/OpenStoreButton";
+import { findOffer, omnibusComparison, omnibusProduct } from "@/lib/data/storefront";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,6 +25,8 @@ export default function BooksIndexPage() {
   const trilogy = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");
   const omnibus = books.find((b) => b.slug === "omnibus");
   const hawkes = books.find((b) => b.slug === "hawkes-monograph");
+  const omnibusHardcover = findOffer(omnibusProduct, "Hardcover");
+  const omnibusPaperback = findOffer(omnibusProduct, "Paperback");
 
   return (
     <>
@@ -99,6 +104,62 @@ export default function BooksIndexPage() {
             For readers of Eco, Kostova, and Doerr.
           </p>
 
+          {omnibus && (
+            <div className="omnibus-flagship-card" style={{ marginTop: 0, marginBottom: "2.5rem" }}>
+              <Link
+                href="/books/masters-x/omnibus"
+                className="omnibus-flagship-slipcase"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <CoverArtifact
+                  src={omnibus.coverImageHC}
+                  alt="Masters X Omnibus — Complete Trilogy Hardcover"
+                  format="omnibus"
+                  sizes="140px"
+                  priority
+                />
+              </Link>
+              <div className="omnibus-flagship-body">
+                <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
+                  <span className="label">Start here · Collected Edition</span>
+                  <div className="omnibus-flagship-title">Masters X: The Complete Trilogy</div>
+                </Link>
+                <p className="omnibus-flagship-desc">
+                  All three novels in a single volume — the flagship edition from Seventh
+                  City Press.
+                </p>
+                <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
+                  {omnibusHardcover && (
+                    <BuyDirectButton
+                      label="Hardcover · Buy Direct"
+                      url={omnibusHardcover.url}
+                      ecommPrice={omnibusHardcover.price ?? ""}
+                      msrpPrice={omnibusHardcover.listPrice}
+                      itemId={omnibusHardcover.itemId}
+                      itemName={omnibusHardcover.itemName}
+                      itemVariant={omnibusHardcover.itemVariant}
+                    />
+                  )}
+                  {omnibusPaperback && (
+                    <BuyDirectButton
+                      label="Paperback · Buy Direct"
+                      url={omnibusPaperback.url}
+                      ecommPrice={omnibusPaperback.price ?? ""}
+                      msrpPrice={omnibusPaperback.listPrice}
+                      itemId={omnibusPaperback.itemId}
+                      itemName={omnibusPaperback.itemName}
+                      itemVariant={omnibusPaperback.itemVariant}
+                    />
+                  )}
+                </div>
+                <p className="omnibus-savings-note">
+                  ${omnibusComparison.hardcover.saving} less than the three hardcovers
+                  bought separately.
+                </p>
+              </div>
+            </div>
+          )}
+
           <div className="resp-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "2rem" }}>
             {trilogy.map((book) => (
               <Link
@@ -154,35 +215,12 @@ export default function BooksIndexPage() {
             ))}
           </div>
 
-          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "2rem" }}>
             <Link href="/books/masters-x" className="btn btn-gold">
               View the Trilogy
             </Link>
+            <OpenStoreButton source="books_index">See all editions &amp; prices</OpenStoreButton>
           </div>
-
-          {omnibus && (
-            <Link href="/books/masters-x/omnibus" className="omnibus-flagship-card">
-              <div className="omnibus-flagship-slipcase">
-                <CoverArtifact
-                  src={omnibus.coverImageHC}
-                  alt="Masters X Omnibus — Complete Trilogy Hardcover"
-                  format="omnibus"
-                  sizes="140px"
-                />
-              </div>
-              <div className="omnibus-flagship-body">
-                <span className="label">Collected Edition</span>
-                <div className="omnibus-flagship-title">Masters X: The Complete Trilogy</div>
-                <p className="omnibus-flagship-desc">
-                  All three novels in a single volume — hardcover and paperback.
-                  The flagship collected edition from Seventh City Press.
-                </p>
-                <span className="omnibus-flagship-price">
-                  ${omnibus.price_hc_is} HC / ${omnibus.price_pb_is} PB · Buy Direct (save up to $17.98)
-                </span>
-              </div>
-            </Link>
-          )}
         </div>
       </section>
 

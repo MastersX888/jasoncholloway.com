@@ -9,6 +9,8 @@ import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
+import OpenStoreButton from "@/components/store/OpenStoreButton";
+import { omnibusComparison } from "@/lib/data/storefront";
 
 export const metadata: Metadata = {
   title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
@@ -92,6 +94,77 @@ export default function MastersXPage() {
           </div>
         </div>
       </section>
+
+      {/* Omnibus flagship — the edition most readers should buy, so it leads */}
+      {(() => {
+        const omnibus = books.find(b => b.slug === "omnibus");
+        if (!omnibus) return null;
+        const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
+        const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
+        return (
+          <section className="section omnibus-flagship-hub" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
+            <div className="container">
+              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                <span className="label">Buy the Complete Trilogy</span>
+              </div>
+              <div className="omnibus-flagship-card">
+                <Link href="/books/masters-x/omnibus" className="omnibus-flagship-slipcase" style={{ textDecoration: "none", color: "inherit" }}>
+                  <CoverArtifact
+                    src={omnibus.coverImageHC}
+                    alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
+                    format="omnibus"
+                    sizes="160px"
+                    priority
+                  />
+                </Link>
+                <div className="omnibus-flagship-body">
+                  <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
+                    <span className="label">Flagship Edition</span>
+                    <div className="omnibus-flagship-title">{omnibus.subtitle}</div>
+                  </Link>
+                  <p className="omnibus-flagship-desc">
+                    {omnibus.shortDesc ?? omnibus.description.split("\n\n")[0]}
+                  </p>
+                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
+                    {hcLink && (
+                      <BuyDirectButton
+                        label={hcLink.label}
+                        url={hcLink.url}
+                        ecommPrice={omnibus.price_hc_is ?? ""}
+                        msrpPrice={omnibus.price_hc_msrp}
+                        itemId={omnibus.isbn_hc}
+                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Hardcover)`}
+                        itemVariant="Hardcover"
+                      />
+                    )}
+                    {pbLink && (
+                      <BuyDirectButton
+                        label={pbLink.label}
+                        url={pbLink.url}
+                        ecommPrice={omnibus.price_pb_is ?? ""}
+                        msrpPrice={omnibus.price_pb_msrp}
+                        itemId={omnibus.isbn_pb}
+                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Paperback)`}
+                        itemVariant="Paperback"
+                      />
+                    )}
+                  </div>
+                  <p className="omnibus-savings-note">
+                    All three novels in one volume: <strong>${omnibusComparison.hardcover.omnibus} HC</strong> /{" "}
+                    <strong>${omnibusComparison.paperback.omnibus} PB</strong> — ${omnibusComparison.hardcover.saving} less
+                    than the three hardcovers bought separately.
+                  </p>
+                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.75rem" }}>
+                    <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ color: "var(--gold)" }}>
+                      View full catalog on Bookshop.org →
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })()}
 
       <div className="container">
         <WaveDivider />
@@ -196,77 +269,18 @@ export default function MastersXPage() {
         </div>
       </section>
 
-      {/* Omnibus flagship */}
-      {(() => {
-        const omnibus = books.find(b => b.slug === "omnibus");
-        if (!omnibus) return null;
-        const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
-        const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
-        return (
-          <section className="section omnibus-flagship-hub" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
-            <div className="container">
-              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Collected Edition</span>
-              </div>
-              <div className="omnibus-flagship-card">
-                <Link href="/books/masters-x/omnibus" className="omnibus-flagship-slipcase" style={{ textDecoration: "none", color: "inherit" }}>
-                  <CoverArtifact
-                    src={omnibus.coverImageHC}
-                    alt={`${omnibus.subtitle} — Complete Trilogy Hardcover`}
-                    format="omnibus"
-                    sizes="160px"
-                  />
-                </Link>
-                <div className="omnibus-flagship-body">
-                  <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
-                    <span className="label">Flagship Edition</span>
-                    <div className="omnibus-flagship-title">{omnibus.subtitle}</div>
-                  </Link>
-                  <p className="omnibus-flagship-desc">
-                    {omnibus.shortDesc ?? omnibus.description.split("\n\n")[0]}
-                  </p>
-                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
-                    {pbLink && (
-                      <BuyDirectButton
-                        label={pbLink.label}
-                        url={pbLink.url}
-                        ecommPrice={omnibus.price_pb_is ?? ""}
-                        msrpPrice={omnibus.price_pb_msrp}
-                        itemId={omnibus.isbn_pb}
-                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Paperback)`}
-                        itemVariant="Paperback"
-                      />
-                    )}
-                    {hcLink && (
-                      <BuyDirectButton
-                        label={hcLink.label}
-                        url={hcLink.url}
-                        ecommPrice={omnibus.price_hc_is ?? ""}
-                        msrpPrice={omnibus.price_hc_msrp}
-                        itemId={omnibus.isbn_hc}
-                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Hardcover)`}
-                        itemVariant="Hardcover"
-                      />
-                    )}
-                  </div>
-                  {omnibus.price_pb_msrp && omnibus.price_pb_is && (
-                    <p className="omnibus-savings-note">
-                      All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
-                      <strong>${omnibus.price_hc_is} HC</strong> — save up to $17.98 vs.
-                      buying volumes individually.
-                    </p>
-                  )}
-                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.75rem" }}>
-                    <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ color: "var(--gold)" }}>
-                      View full catalog on Bookshop.org →
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })()}
+      {/* Closing purchase reminder — the full buy list is one click away */}
+      <section className="section" style={{ borderTop: "1px solid var(--border-faint)", textAlign: "center" }}>
+        <div className="container">
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", maxWidth: "52ch", margin: "0 auto 1.5rem" }}>
+            Every edition of the trilogy — hardcover, paperback, and Kindle — with prices
+            in one list.
+          </p>
+          <OpenStoreButton source="masters_x_footer" className="btn btn-gold">
+            See all editions &amp; prices
+          </OpenStoreButton>
+        </div>
+      </section>
     </>
   );
 }

@@ -3,8 +3,11 @@ import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
+import "./store.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import StoreProvider from "@/components/store/StoreProvider";
+import TourProvider from "@/components/tour/TourProvider";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -162,9 +165,13 @@ export default function RootLayout({
         <GoogleAnalytics />
         <WebMCPProvider />
         <div className="bg-sacred-geometry" />
-        <Header />
-        <main data-register="fiction">{children}</main>
-        <Footer />
+        <TourProvider>
+          <StoreProvider>
+            <Header />
+            <main data-register="fiction">{children}</main>
+            <Footer />
+          </StoreProvider>
+        </TourProvider>
       </body>
     </html>
   );

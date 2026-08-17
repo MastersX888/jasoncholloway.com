@@ -1,5 +1,5 @@
-import Image from "next/image";
 import type { CSSProperties } from "react";
+import CoverImage from "@/components/ui/CoverImage";
 
 export type CoverFormat = "pb" | "hc" | "ebook" | "omnibus";
 
@@ -41,11 +41,11 @@ export default function CoverArtifact({
       <div className="cover-artifact-inner">
         <div className="cover-artifact-spine" aria-hidden="true" />
         <div className="cover-artifact-face" style={{ aspectRatio: ASPECT[format] }}>
-          <Image
+          <CoverImage
             src={src}
             alt={alt}
             fill
-            style={{ objectFit: fit }}
+            fit={fit}
             sizes={sizes}
             priority={priority}
           />

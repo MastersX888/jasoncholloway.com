@@ -2,7 +2,7 @@
 // hardcover set, and a route to every other edition. A reader who arrived to
 // buy a book should not have to scroll or navigate to find a price.
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/ui/CoverImage";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import TrilogyShelf from "@/components/store/TrilogyShelf";
 import OpenStoreButton from "@/components/store/OpenStoreButton";
@@ -40,12 +40,11 @@ export default function BuyTheBooksSection() {
               className="buy-first-cover"
               aria-label="Omnibus edition details"
             >
-              <Image
+              <CoverImage
                 src={cover.src}
                 alt={cover.alt}
                 fill
-                sizes="(max-width: 768px) 45vw, 220px"
-                style={{ objectFit: "cover" }}
+                sizes="(max-width: 620px) 200px, 220px"
                 priority
               />
             </Link>

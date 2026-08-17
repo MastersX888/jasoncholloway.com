@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/ui/CoverImage";
 import { books } from "@/lib/data/books";
 import WaveformHero from "@/components/chamber/WaveformHero";
 import NewsletterForm from "@/components/layout/NewsletterForm";
@@ -190,7 +190,7 @@ export default function Home() {
                       border: "1px solid var(--border-faint)",
                       flexShrink: 0,
                     }}>
-                      <Image src={src} alt={alt} fill style={{ objectFit: "cover" }} sizes="72px" />
+                      <CoverImage src={src} alt={alt} fill sizes="72px" />
                     </div>
                   );
                   return (
@@ -266,11 +266,11 @@ export default function Home() {
                     border: "1px solid var(--border-faint)",
                     background: "#000",
                   }}>
-                    <Image
+                    <CoverImage
                       src="/covers/hawkes-paperback-web.png"
                       alt="Cover of Innocence, Desire, and the Architecture of the Fall, a study of John Hawkes by Jason Carroll Holloway"
                       fill
-                      style={{ objectFit: "contain" }}
+                      fit="contain"
                       sizes="80px"
                     />
                   </div>

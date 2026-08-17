@@ -3,8 +3,8 @@
 // The buy box: a familiar online-store panel for readers who came to buy a
 // book rather than explore the site. Editions are listed in the order a buyer
 // expects — omnibus hardcover first — with the price and one button per row.
-import Image from "next/image";
 import Link from "next/link";
+import CoverImage from "@/components/ui/CoverImage";
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import {
   PAYMENT_NOTES,
@@ -191,12 +191,11 @@ function ProductPanel({
                 className="buybox-cover-frame"
                 style={{ aspectRatio: COVER_ASPECT[cover.shape] ?? "2 / 3" }}
               >
-                <Image
+                <CoverImage
                   src={cover.src}
                   alt={cover.alt}
                   fill
-                  sizes="120px"
-                  style={{ objectFit: "cover" }}
+                  sizes="(max-width: 780px) 36vw, 148px"
                 />
               </div>
               {cover.caption && <figcaption>{cover.caption}</figcaption>}

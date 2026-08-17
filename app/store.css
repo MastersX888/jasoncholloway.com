@@ -348,12 +348,21 @@
   justify-content: center;
   padding: 1.25rem;
   background: rgba(4, 4, 9, 0.82);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
   animation: buybox-fade 0.2s var(--ease-out);
   overflow-y: auto;
 }
+/* Keep the dim/blur off the dialog tree so retina covers stay at device pixels. */
+.buybox-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+}
 .buybox {
+  position: relative;
+  z-index: 1;
   width: 100%;
   max-width: 880px;
   max-height: min(92vh, 900px);
@@ -469,10 +478,10 @@
   gap: 0.4rem;
 }
 .buybox-cover {
-  width: 108px;
+  width: 148px;
 }
 .buybox-covers.multi .buybox-cover {
-  width: 62px;
+  width: 88px;
 }
 .buybox-cover-frame {
   position: relative;

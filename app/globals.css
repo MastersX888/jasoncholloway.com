@@ -1369,6 +1369,25 @@ ul, ol { list-style: none; }
   gap: 0.15rem; padding-block: 0.75rem; }
 
 /* ─── COVER ARTIFACT (materiality) ───────────────────────────── */
+.cover-image {
+  display: block;
+  image-rendering: auto;
+  transform: translateZ(0);
+}
+.cover-image--fill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  filter: url(#cover-sharpen) contrast(1.05);
+}
+.cover-sharpen-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .cover-artifact {
   position: relative;
   width: 100%;

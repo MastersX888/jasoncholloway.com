@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import CoverImage from "@/components/ui/CoverImage";
 import { books } from "@/lib/data/books";
 import LeadConversionTracker from "@/components/analytics/LeadConversionTracker";
 import type { Metadata } from "next";
@@ -76,7 +76,7 @@ export default function ChaptersSentPage() {
                 boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
                 border: "1px solid var(--border-faint)"
               }}>
-                <Image src={b.coverImagePB} alt={b.subtitle} fill style={{ objectFit: "cover" }} sizes="120px" />
+                <CoverImage src={b.coverImagePB} alt={b.subtitle} fill sizes="120px" />
               </div>
             </Link>
           ))}

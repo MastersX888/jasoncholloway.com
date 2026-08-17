@@ -162,6 +162,17 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <svg aria-hidden="true" width="0" height="0" className="cover-sharpen-defs">
+          <defs>
+            <filter id="cover-sharpen" colorInterpolationFilters="sRGB">
+              <feConvolveMatrix
+                order="3"
+                kernelMatrix="0 -0.45 0 -0.45 2.8 -0.45 0 -0.45 0"
+                preserveAlpha="true"
+              />
+            </filter>
+          </defs>
+        </svg>
         <GoogleAnalytics />
         <WebMCPProvider />
         <div className="bg-sacred-geometry" />

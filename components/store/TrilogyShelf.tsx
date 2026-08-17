@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CoverImage from "@/components/ui/CoverImage";
 import type { StoreCover } from "@/lib/data/storefront";
 
 interface TrilogyShelfProps {
@@ -16,12 +16,11 @@ export default function TrilogyShelf({ covers, photo, priority }: TrilogyShelfPr
   if (photo) {
     return (
       <div className="shelf shelf-photo">
-        <Image
+        <CoverImage
           src={photo.src}
           alt={photo.alt}
           fill
           sizes="(max-width: 768px) 90vw, 420px"
-          style={{ objectFit: "cover" }}
           priority={priority}
         />
       </div>
@@ -35,12 +34,11 @@ export default function TrilogyShelf({ covers, photo, priority }: TrilogyShelfPr
           <div key={cover.src} className="shelf-book">
             <span className="shelf-book-spine" aria-hidden="true" />
             <div className="shelf-book-face" style={{ aspectRatio: "614 / 921" }}>
-              <Image
+              <CoverImage
                 src={cover.src}
                 alt={cover.alt}
                 fill
-                sizes="120px"
-                style={{ objectFit: "cover" }}
+                sizes="(max-width: 620px) 30vw, 104px"
                 priority={priority}
               />
             </div>

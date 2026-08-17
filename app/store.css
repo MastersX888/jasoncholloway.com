@@ -133,6 +133,15 @@
   gap: 0.1rem;
   line-height: 1.25;
 }
+/* Secondary purchase actions still have to read as buttons, not labels. */
+.buy-first-cta-alt {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: rgba(212, 170, 82, 0.08);
+}
+.buy-first-cta-alt:hover {
+  background: var(--gold-glow);
+}
 .buy-first-cta-list {
   font-family: var(--font-mono);
   font-size: 0.6rem;
@@ -194,6 +203,12 @@
 }
 .buy-first-set-btn {
   white-space: nowrap;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: rgba(212, 170, 82, 0.08);
+}
+.buy-first-set-btn:hover {
+  background: var(--gold-glow);
 }
 .buy-first-set-note {
   font-size: 0.8rem;
@@ -239,6 +254,16 @@
   .buy-first-cta {
     width: 100%;
     align-items: center;
+  }
+  /* Volume titles need the full row width before the button gets its own line. */
+  .buy-first-set-offers li {
+    grid-template-columns: auto 1fr;
+    row-gap: 0.5rem;
+  }
+  .buy-first-set-btn {
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -667,6 +692,10 @@
   }
   .buybox-covers {
     justify-content: center;
+  }
+  .buybox-head .label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
 }
 

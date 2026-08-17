@@ -79,10 +79,13 @@ export default function BuyTheBooksSection() {
                   itemName={paperback.itemName}
                   itemVariant={paperback.itemVariant}
                   price={paperback.price}
-                  className="btn btn-outline btn-lg buy-first-cta"
+                  className="btn btn-lg buy-first-cta buy-first-cta-alt"
                   aria-label={`Buy the omnibus paperback for $${paperback.price} direct from Seventh City Press`}
                 >
-                  Paperback — ${paperback.price}
+                  Buy the paperback — ${paperback.price}
+                  {paperback.listPrice && (
+                    <span className="buy-first-cta-list">list ${paperback.listPrice}</span>
+                  )}
                 </TrackedBuyLink>
               </div>
 
@@ -111,10 +114,10 @@ export default function BuyTheBooksSection() {
                     itemName={offer.itemName}
                     itemVariant={offer.itemVariant}
                     price={offer.price}
-                    className="btn btn-outline btn-sm buy-first-set-btn"
+                    className="btn btn-sm buy-first-set-btn"
                     aria-label={`Buy ${offer.itemName} for $${offer.price} direct from Seventh City Press`}
                   >
-                    Hardcover ${offer.price}
+                    Buy hardcover ${offer.price}
                   </TrackedBuyLink>
                 </li>
               ))}

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
+import { authorIsniIdentifier, authorSameAs, imprintSameAs } from "@/lib/data/authorAuthority";
 import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "./responsive.css";
@@ -154,7 +154,8 @@ export default function RootLayout({
                     "@type": "ContactPoint",
                     "contactType": "General",
                     "email": "info@seventhcitypress.com"
-                  }
+                  },
+                  "sameAs": [...imprintSameAs]
                 }
               ]
             })

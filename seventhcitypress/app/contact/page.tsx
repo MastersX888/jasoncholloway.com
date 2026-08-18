@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
+import SocialLinks from "@/components/layout/SocialLinks";
 
 export const metadata: Metadata = {
   title: "Contact & Press Inquiries",
@@ -76,6 +77,10 @@ export default function ContactPage() {
 
             {/* Sidebar */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
+                <SocialLinks title="Follow" />
+              </div>
+
               <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
                 <div className="label" style={{ marginBottom: "0.75rem" }}>Press Kit</div>
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.6, marginBottom: "1.25rem" }}>

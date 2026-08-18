@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
+import SocialLinks from "@/components/layout/SocialLinks";
 
 export const metadata: Metadata = {
   title: "About",
@@ -174,6 +175,10 @@ export default function AboutPage() {
                   sizes="(max-width: 768px) 100vw, 33vw"
                   priority
                 />
+              </div>
+
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)" }}>
+                <SocialLinks title="Follow" />
               </div>
 
               {/* Credentials card */}

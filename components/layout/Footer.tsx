@@ -1,5 +1,6 @@
 import Link from "next/link";
 import NewsletterForm from "./NewsletterForm";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -54,6 +55,8 @@ export default function Footer() {
               <Link href="/returns">Returns &amp; Refunds</Link>
             </nav>
           </div>
+
+          <SocialLinks />
         </div>
 
         <div className="footer-bottom">

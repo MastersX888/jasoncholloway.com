@@ -3,6 +3,7 @@ import { Cormorant_Garamond, EB_Garamond, Inter, JetBrains_Mono } from "next/fon
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { imprintSameAs } from "@/lib/authorAuthority";
 
 const cormorantGaramond = Cormorant_Garamond({
   subsets: ["latin"],
@@ -120,7 +121,7 @@ export default function RootLayout({
                     contactType: "Press",
                     email: "press@seventhcitypress.com",
                   },
-                  sameAs: ["https://jasoncholloway.com/"],
+                  sameAs: [...imprintSameAs],
                 },
               ],
             }),

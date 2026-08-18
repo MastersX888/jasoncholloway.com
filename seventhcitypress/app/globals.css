@@ -319,7 +319,7 @@ ul, ol { list-style: none; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -366,6 +366,21 @@ ul, ol { list-style: none; }
   transition: opacity 0.2s;
 }
 .footer-links a:hover { opacity: 1; }
+.social-links a.social-link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.social-link-handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--header-text);
+  opacity: 0.7;
+  letter-spacing: 0.02em;
+}
+.social-links a.social-link-row:hover .social-link-handle {
+  opacity: 1;
+}
 .footer-bottom {
   display: flex;
   align-items: center;

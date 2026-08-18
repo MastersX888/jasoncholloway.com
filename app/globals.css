@@ -412,7 +412,7 @@ ul, ol { list-style: none; }
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   gap: 3rem;
   margin-bottom: 3rem;
 }
@@ -454,6 +454,20 @@ ul, ol { list-style: none; }
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--gold); }
+.social-links a.social-link-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.social-link-handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-faint);
+  letter-spacing: 0.02em;
+}
+.social-links a.social-link-row:hover .social-link-handle {
+  color: var(--gold-dim);
+}
 .footer-bottom {
   display: flex;
   align-items: center;

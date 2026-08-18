@@ -4,6 +4,8 @@ export const AUTHOR_ISNI = "0000 0005 3044 7935";
 export const AUTHOR_ISNI_URL = "https://isni.org/isni/0000000530447935";
 export const AUTHOR_GOODREADS_URL =
   "https://www.goodreads.com/author/show/20924993.Jason_Carroll_Holloway";
+export const AUTHOR_STORYGRAPH_URL =
+  "https://app.thestorygraph.com/profile/jason_carroll_holloway";
 export const AUTHOR_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140275300";
 /** Wikidata item for the Masters X Trilogy itself (distinct from the author item). */
 export const SERIES_WIKIDATA_URL = "https://www.wikidata.org/wiki/Q140276114";
@@ -26,6 +28,7 @@ export const AUTHOR_FACEBOOK_URL =
   "https://www.facebook.com/profile.php?id=61588710027163";
 export const AUTHOR_X_URL = "https://x.com/jasonhollowaykc";
 export const IMPRINT_PINTEREST_URL = "https://www.pinterest.com/seventhcitypress/";
+export const IMPRINT_BLUESKY_URL = "https://bsky.app/profile/seventhcitypress.bsky.social";
 
 /** Canonical schema.org @id for the publisher — identical on both domains. */
 export const ORGANIZATION_ID = "https://seventhcitypress.com/#organization";
@@ -38,6 +41,7 @@ export const imprintSameAs = [
   AUTHOR_INSTAGRAM_URL,
   AUTHOR_X_URL,
   IMPRINT_PINTEREST_URL,
+  IMPRINT_BLUESKY_URL,
 ] as const;
 
 /**
@@ -50,6 +54,7 @@ export const authorSameAs = [
   AUTHOR_ISNI_URL,
   AUTHOR_OPEN_LIBRARY_URL,
   AUTHOR_GOODREADS_URL,
+  AUTHOR_STORYGRAPH_URL,
   AUTHOR_AMAZON_STORE_URL,
   AUTHOR_EVERAND_URL,
   IMPRINT_URL,
@@ -57,6 +62,7 @@ export const authorSameAs = [
   AUTHOR_FACEBOOK_URL,
   AUTHOR_X_URL,
   IMPRINT_PINTEREST_URL,
+  IMPRINT_BLUESKY_URL,
 ] as const;
 
 export const authorIsniIdentifier = {

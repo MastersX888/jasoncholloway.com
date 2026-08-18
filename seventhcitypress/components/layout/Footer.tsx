@@ -1,3 +1,5 @@
+import SocialLinks from "./SocialLinks";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -40,6 +42,8 @@ export default function Footer() {
               <a href="https://jasoncholloway.com/chamber/research-archive/">Research Archive</a>
             </nav>
           </div>
+
+          <SocialLinks />
         </div>
 
         <div className="footer-bottom">

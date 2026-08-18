@@ -22,11 +22,13 @@ export default function TrackedBuyLink({
   onClick,
   ...props
 }: TrackedBuyLinkProps) {
+  const stripeCheckout = href.startsWith("/api/checkout");
+
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={stripeCheckout ? undefined : "_blank"}
+      rel={stripeCheckout ? undefined : "noopener noreferrer"}
       onClick={(event) => {
         const item = buildBookItem({
           itemId,

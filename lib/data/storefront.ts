@@ -4,6 +4,7 @@
 // this module reshapes that data, it never introduces new commerce facts.
 import { books, type Book } from "./books";
 import { BUY_LINKS, bookshopIsbnUrl, googlePlayIsbnUrl } from "./buyLinks";
+import { stripeCheckoutEnabled, stripeCheckoutPath } from "./stripeCatalog";
 
 export type CoverShape = "pb" | "hc" | "ebook" | "omnibus";
 
@@ -35,7 +36,9 @@ export interface StoreOffer {
  * Seventh City Press to run its own checkout (see docs/CHECKOUT_ROADMAP.md).
  */
 export const PAYMENT_NOTES: Record<OfferChannel, string> = {
-  direct: "Card checkout (Visa · Mastercard · Amex) — no account to create",
+  direct: stripeCheckoutEnabled
+    ? "Card · Google Pay · Apple Pay — secure checkout on Seventh City Press"
+    : "Card checkout (Visa · Mastercard · Amex) — no account to create",
   kindle: "Checkout with your existing Amazon account",
   "google-play": "Checkout with your Google account · Google Pay",
   bookshop: "Card or wallet checkout at Bookshop.org",
@@ -78,6 +81,10 @@ const DIRECT_LABEL = "Direct from Seventh City Press";
 // IngramSpark Share & Sell fulfillment window, per their order FAQ.
 const DIRECT_FULFILLMENT = "Printed to order · ships in 2–3 business days";
 
+function directCheckoutUrl(offerKey: string, ingramUrl: string): string {
+  return stripeCheckoutEnabled ? stripeCheckoutPath(offerKey) : ingramUrl;
+}
+
 function ingramUrl(book: Book, format: "Hardcover" | "Paperback"): string | undefined {
   return book.buyLinks.find(
     (link) => link.url.includes("shop.ingramspark.com") && link.format === format
@@ -92,15 +99,16 @@ function printOffer(book: Book, format: "Hardcover" | "Paperback"): StoreOffer |
   const url = ingramUrl(book, format);
   const itemId = format === "Hardcover" ? book.isbn_hc : book.isbn_pb;
   if (!url || !itemId) return null;
+  const offerKey = `${book.slug}-${format.toLowerCase()}`;
 
   return {
-    key: `${book.slug}-${format.toLowerCase()}`,
+    key: offerKey,
     format,
     label: format,
     itemId,
     itemName: `${bookName(book)} (${format})`,
     itemVariant: format,
-    url,
+    url: directCheckoutUrl(offerKey, url),
     price: format === "Hardcover" ? book.price_hc_is : book.price_pb_is,
     listPrice: format === "Hardcover" ? book.price_hc_msrp : book.price_pb_msrp,
     channel: "direct",
@@ -267,6 +275,14 @@ export const hardcoverSetProduct: StoreProduct = {
   bundleNote:
     "plus three separate shipping charges — IngramSpark bills each title as its own order. For all three in one shipment, use the one-cart link below, or take the omnibus hardcover: one book, one order, one shipping charge.",
   secondaryLinks: [
+    ...(stripeCheckoutEnabled
+      ? [
+          {
+            label: "All three hardcovers — one cart, one shipping charge (Stripe)",
+            url: stripeCheckoutPath("hardcover-set"),
+          },
+        ]
+      : []),
     {
       label: "All three in one cart at Bookshop.org — one order, one shipping charge",
       url: BUY_LINKS.BOOKSHOP_LIST_URL,

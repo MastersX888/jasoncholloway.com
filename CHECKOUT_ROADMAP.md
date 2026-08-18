@@ -137,9 +137,9 @@ name in the book.
    the true one-order edition, and gives set-buyers the Bookshop one-cart link.
 2. **This week, no cost:** email the Ingram rep about IndiePubs / Express Checkout
    eligibility. If yes, stop here — it solves cart and fulfillment together.
-3. **If Ingram says no:** stand up a Shopify store with Lulu Direct, launch with exactly
-   two products — the omnibus hardcover and the three-hardcover bundle — and put Google
-   Pay and Apple Pay on the checkout. Ten SKUs can follow once the first two prove out.
+3. **If Ingram says no:** stand up Stripe Checkout on jasoncholloway.com (see
+   `STRIPE_SETUP.md`) — Google Pay / Apple Pay via your existing Stripe account, with
+   optional Shopify + Lulu Direct later for automated POD fulfillment.
 4. **Alongside it:** a signed set at a premium price, fulfilled by hand, as the highest
    margin per sale and the one offer that is impossible to buy anywhere else.
 

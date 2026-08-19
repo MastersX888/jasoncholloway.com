@@ -16,6 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/books/masters-x/omnibus/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/books/hawkes-monograph/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.9 },
     { url: `${baseUrl}/books/books-like-foucaults-pendulum/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${baseUrl}/books/books-like-the-historian/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
+    { url: `${baseUrl}/books/manuscripts-that-shouldnt-exist/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/chamber/`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/chamber/folio-visualizer/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },
     { url: `${baseUrl}/chamber/global-map/`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.7 },

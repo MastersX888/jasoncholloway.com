@@ -250,7 +250,7 @@ export default function ResearchArchivePage() {
             <span className="label" style={{ display: "block", marginBottom: "1rem", color: "var(--gold)" }}>Access the Research</span>
             <h2 style={{ fontFamily: "var(--font-display)", fontSize: "2.2rem", marginBottom: "1rem", color: "var(--text)" }}>Download the Distribution File</h2>
             <p style={{ color: "var(--text-muted)", marginBottom: "2rem", maxWidth: "600px", margin: "0 auto 2rem", lineHeight: 1.6 }}>
-              Get the complete 247-page in-universe research document. Plus, receive the first three chapters of each novel alongside the file.
+              Get the complete 247-page in-universe research document. Plus, receive the Prologue and first five chapters of Volume I alongside the file.
             </p>
             <form action="https://api.web3forms.com/submit" method="POST" style={{ display: "flex", gap: "1rem", maxWidth: "450px", margin: "0 auto", flexDirection: "column" }}>
               <input type="hidden" name="access_key" value="29ea1914-9c58-4abf-b4e1-4e71e9a27186" />

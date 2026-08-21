@@ -54,3 +54,10 @@ business_cards/
 *.zip
 *_out.txt
 *.py
+
+# Web-deliverable public assets — these MUST be tracked or they 404 in production.
+# Cloudflare Pages builds from git, so anything untracked never reaches the deploy.
+!public/press-kit/*.pdf
+!public/downloads/*.pdf
+!public/downloads/*.epub
+!seventhcitypress/public/press-kit/*.pdf

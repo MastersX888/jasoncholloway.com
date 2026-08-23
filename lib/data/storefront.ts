@@ -68,6 +68,9 @@ export interface StoreProduct {
   spec?: string;
   detailHref: string;
   covers: StoreCover[];
+  /** The design hidden under the dust jacket, stamped on the case boards. */
+  caseCover?: { src?: string; alt?: string };
+  caseCoverNote?: string;
   offers: StoreOffer[];
   /** Sum of the offer prices for multi-order products (the hardcover set). */
   bundleTotal?: string;
@@ -229,6 +232,12 @@ export const omnibusProduct: StoreProduct = {
       shape: "omnibus",
     },
   ],
+  caseCover: omnibus.caseCoverImage
+    ? { src: omnibus.caseCoverImage, alt: omnibus.caseCoverAlt }
+    : omnibus.caseCoverAlt
+      ? { alt: omnibus.caseCoverAlt }
+      : undefined,
+  caseCoverNote: omnibus.caseCoverNote,
   offers: [printOffer(omnibus, "Hardcover"), printOffer(omnibus, "Paperback")].filter(
     (offer): offer is StoreOffer => offer !== null
   ),

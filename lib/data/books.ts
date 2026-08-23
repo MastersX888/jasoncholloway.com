@@ -20,6 +20,15 @@ export interface Book {
   coverImageHC: string;    // Hardcover cover path
   coverImagePB: string;    // Paperback cover path
   qrCodePB?: string;       // QR Code image path for Paperback direct buy
+  // Every "Jacketed Case Laminate" hardcover carries a second design stamped
+  // directly on the boards, hidden underneath the printed dust jacket
+  // (coverImageHC above is the jacket, not the case). caseCoverImage is the
+  // photo of that case; it is intentionally left unset until the photo is
+  // supplied — see ASSET_GAP_REPORT.md — so the site never links a 404
+  // instead of quietly falling back to a "coming soon" state.
+  caseCoverImage?: string;
+  caseCoverAlt?: string;
+  caseCoverNote?: string;  // One-line description shown once the case is revealed
   isbn_hc?: string;
   isbn_pb?: string;
   isbn_ebook?: string;
@@ -169,6 +178,11 @@ export const books: Book[] = [
     coverImage: "/covers/omnibus-hardcover-v3.png",
     coverImageHC: "/covers/omnibus-hardcover-v3.png",
     coverImagePB: "/covers/omnibus-hardcover-v3.png",
+    // caseCoverImage: "/media/omnibus-case-cover.jpg", // NEEDS AUTHOR — see ASSET_GAP_REPORT.md
+    caseCoverAlt:
+      "Masters X Omnibus hardcover case — a gold radial resonance diagram stamped on the boards, hidden beneath the dust jacket",
+    caseCoverNote:
+      "Underneath the jacket, the boards carry their own design: a gold radial diagram tracing the 111.2 Hz resonance through the human body.",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_ebook: null, // No ebook version

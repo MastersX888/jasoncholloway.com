@@ -87,6 +87,13 @@
   border: 1px solid var(--border);
   box-shadow: 6px 12px 34px rgba(0, 0, 0, 0.55);
 }
+.buy-first-case-reveal {
+  width: 100%;
+}
+.buy-first-case-reveal .case-reveal-frame {
+  border: 1px solid var(--border);
+  box-shadow: 6px 12px 34px rgba(0, 0, 0, 0.55);
+}
 .buy-first-primary-body {
   display: flex;
   flex-direction: column;
@@ -254,7 +261,8 @@
     padding: 1.5rem;
     gap: 1.5rem;
   }
-  .buy-first-cover {
+  .buy-first-cover,
+  .buy-first-case-reveal {
     max-width: 200px;
     margin: 0 auto;
   }

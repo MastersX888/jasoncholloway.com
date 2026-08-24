@@ -2,6 +2,7 @@ import Link from "next/link";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS } from "@/lib/data/buyLinks";
 import CaseCoverReveal from "@/components/store/CaseCoverReveal";
+import { omnibusSavingsLine } from "@/lib/data/trilogyCheckout";
 import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
@@ -272,11 +273,7 @@ export default function OmnibusPage() {
                   </p>
                 )}
                 {omnibus.price_pb_msrp && omnibus.price_pb_is && (
-                  <p className="omnibus-savings-note">
-                    All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
-                    <strong>${omnibus.price_hc_is} HC</strong> — save up to $17.98 vs.
-                    buying volumes individually.
-                  </p>
+                  <p className="omnibus-savings-note">{omnibusSavingsLine()}</p>
                 )}
               </div>
             </div>

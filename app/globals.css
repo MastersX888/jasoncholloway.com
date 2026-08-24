@@ -1906,6 +1906,10 @@ main[data-register="fiction"] .page-header + .wave-divider {
   margin-left: auto;
   margin-right: auto;
 }
+.omnibus-flagship-hub--primary .omnibus-flagship-card {
+  border-color: color-mix(in srgb, var(--gold) 35%, var(--border));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 12%, transparent);
+}
 @media (max-width: 640px) {
   .omnibus-flagship-hub .omnibus-flagship-card {
     grid-template-columns: 1fr;

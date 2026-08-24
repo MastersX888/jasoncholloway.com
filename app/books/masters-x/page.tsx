@@ -2,10 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS, googlePlayIsbnUrl } from "@/lib/data/buyLinks";
+import { omnibusSavingsLine } from "@/lib/data/trilogyCheckout";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
@@ -102,10 +104,10 @@ export default function MastersXPage() {
         const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
         const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
         return (
-          <section className="section omnibus-flagship-hub" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
+          <section className="section omnibus-flagship-hub omnibus-flagship-hub--primary" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
             <div className="container">
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Buy the Complete Trilogy</span>
+                <span className="label">Best way to buy the trilogy</span>
               </div>
               <div className="omnibus-flagship-card">
                 <Link href="/books/masters-x/omnibus" className="omnibus-flagship-slipcase" style={{ textDecoration: "none", color: "inherit" }}>
@@ -128,7 +130,7 @@ export default function MastersXPage() {
                   <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
                     {hcLink && (
                       <BuyDirectButton
-                        label={hcLink.label}
+                        label="Complete Trilogy · Hardcover"
                         url={hcLink.url}
                         ecommPrice={omnibus.price_hc_is ?? ""}
                         msrpPrice={omnibus.price_hc_msrp}
@@ -139,7 +141,7 @@ export default function MastersXPage() {
                     )}
                     {pbLink && (
                       <BuyDirectButton
-                        label={pbLink.label}
+                        label="Complete Trilogy · Paperback"
                         url={pbLink.url}
                         ecommPrice={omnibus.price_pb_is ?? ""}
                         msrpPrice={omnibus.price_pb_msrp}
@@ -149,11 +151,7 @@ export default function MastersXPage() {
                       />
                     )}
                   </div>
-                  <p className="omnibus-savings-note">
-                    All three novels in one volume: <strong>${omnibusComparison.hardcover.omnibus} HC</strong> /{" "}
-                    <strong>${omnibusComparison.paperback.omnibus} PB</strong> — ${omnibusComparison.hardcover.saving} less
-                    than the three hardcovers bought separately.
-                  </p>
+                  <p className="omnibus-savings-note">{omnibusSavingsLine()}</p>
                   <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.75rem" }}>
                     <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ color: "var(--gold)" }}>
                       View full catalog on Bookshop.org →
@@ -296,9 +294,11 @@ function BookBody({ book }: { book: typeof books[0] }) {
         {book.description.split("\n\n")[0]}
       </div>
       
+      <OmnibusVolumeNudge />
+
       {/* Editions Specifications list */}
       <div className="card" style={{ background: "var(--bg-raised)", borderColor: "var(--border)", padding: "1.25rem", marginBottom: "1.5rem" }}>
-        <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 600 }}>Available Formats & Specifications</div>
+        <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 600 }}>Volume {book.volume} — formats &amp; specifications</div>
         
         {book.asin_ebook && (
           <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", marginBottom: "1rem", fontSize: "1rem", padding: "0.8rem" }}>

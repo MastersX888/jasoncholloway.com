@@ -11,6 +11,7 @@ import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -320,6 +321,8 @@ export default function BookPage({ params }: Props) {
                 <div className="ms-pull" style={{ margin: "1rem 0" }}>
                   <p>{book.excerpt}</p>
                 </div>
+
+                <OmnibusVolumeNudge />
                 
                 {book.asin_ebook && (
                   <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>

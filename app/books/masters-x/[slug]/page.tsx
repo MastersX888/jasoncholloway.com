@@ -14,6 +14,7 @@ import { buildBookItem } from "@/lib/analytics/gtag";
 import { buildBookGraph, MASTERS_X_SERIES_ID } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
 import PassageExcerpt from "@/components/books/PassageExcerpt";
+import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
 import { volumePassages } from "@/lib/data/passages";
 import { momentPath, MOMENTS_BASE } from "@/lib/data/moments";
 type Props = { params: Promise<{ slug: string }> };
@@ -252,6 +253,8 @@ export default function BookPage({ params }: Props) {
                 <div className="ms-pull" style={{ margin: "1rem 0" }}>
                   <p>{book.excerpt}</p>
                 </div>
+
+                <OmnibusVolumeNudge />
                 
                 {book.asin_ebook && (
                   <div style={{ marginTop: "2rem", display: "flex", flexDirection: "column", gap: "1rem" }}>

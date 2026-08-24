@@ -30,5 +30,16 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "author_patches", "scp_verification_return", "website_elevation_handoff", "seventhcitypress", "debt_consolidation_handoff/peg-board"]
+  "exclude": [
+    "node_modules",
+    "author_patches",
+    "scp_verification_return",
+    "website_elevation_handoff",
+    "seventhcitypress",
+    "debt_consolidation_handoff/peg-board",
+    "groundswell-monitor",
+    "kc-events",
+    "kimi-analyst",
+    "the-bridge-worker"
+  ]
 }

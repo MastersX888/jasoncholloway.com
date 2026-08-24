@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
-import { BUY_LINKS, googlePlayIsbnUrl } from "@/lib/data/buyLinks";
+import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import CoverArtifact from "@/components/ui/CoverArtifact";
 import HardcoverCaseReveal from "@/components/ui/HardcoverCaseReveal";
-import BuyDirectButton from "@/components/ui/BuyDirectButton";
+import OmnibusFlagshipHub from "@/components/books/OmnibusFlagshipHub";
+import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
@@ -111,6 +112,8 @@ export default function MastersXPage() {
         <WaveDivider />
       </div>
 
+      <OmnibusFlagshipHub primary />
+
       {/* From the Novel — scene index */}
       <section className="section" style={{ borderTop: "1px solid var(--border-faint)", background: "var(--bg-surface)" }}>
         <div className="container" style={{ maxWidth: "820px" }}>
@@ -206,78 +209,6 @@ export default function MastersXPage() {
         </div>
       </section>
 
-      {/* Omnibus flagship */}
-      {(() => {
-        const omnibus = books.find(b => b.slug === "omnibus");
-        if (!omnibus) return null;
-        const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
-        const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
-        return (
-          <section className="section omnibus-flagship-hub" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
-            <div className="container">
-              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
-                <span className="label">Collected Edition</span>
-              </div>
-              <div className="omnibus-flagship-card">
-                <div className="omnibus-flagship-slipcase">
-                  <HardcoverCaseReveal
-                    subtitle={omnibus.subtitle}
-                    jacketSrc={omnibus.coverImageHC}
-                    caseSrc={omnibus.coverImageCase}
-                    sizes="160px"
-                    priority
-                  />
-                </div>
-                <div className="omnibus-flagship-body">
-                  <Link href="/books/masters-x/omnibus" style={{ textDecoration: "none", color: "inherit" }}>
-                    <span className="label">Flagship Edition</span>
-                    <div className="omnibus-flagship-title">{omnibus.subtitle}</div>
-                  </Link>
-                  <p className="omnibus-flagship-desc">
-                    {omnibus.shortDesc ?? omnibus.description.split("\n\n")[0]}
-                  </p>
-                  <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
-                    {pbLink && (
-                      <BuyDirectButton
-                        label={pbLink.label}
-                        url={pbLink.url}
-                        ecommPrice={omnibus.price_pb_is ?? ""}
-                        msrpPrice={omnibus.price_pb_msrp}
-                        itemId={omnibus.isbn_pb}
-                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Paperback)`}
-                        itemVariant="Paperback"
-                      />
-                    )}
-                    {hcLink && (
-                      <BuyDirectButton
-                        label={hcLink.label}
-                        url={hcLink.url}
-                        ecommPrice={omnibus.price_hc_is ?? ""}
-                        msrpPrice={omnibus.price_hc_msrp}
-                        itemId={omnibus.isbn_hc}
-                        itemName={`${omnibus.title}: ${omnibus.subtitle} (Hardcover)`}
-                        itemVariant="Hardcover"
-                      />
-                    )}
-                  </div>
-                  {omnibus.price_pb_msrp && omnibus.price_pb_is && (
-                    <p className="omnibus-savings-note">
-                      All three volumes direct: <strong>${omnibus.price_pb_is} PB</strong> /{" "}
-                      <strong>${omnibus.price_hc_is} HC</strong> — save up to $17.98 vs.
-                      buying volumes individually.
-                    </p>
-                  )}
-                  <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginTop: "0.75rem" }}>
-                    <a href={BUY_LINKS.BOOKSHOP_LIST_URL} target="_blank" rel="noopener noreferrer" className="nota-link" style={{ color: "var(--gold)" }}>
-                      View full catalog on Bookshop.org →
-                    </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        );
-      })()}
     </>
   );
 }
@@ -293,9 +224,11 @@ function BookBody({ book }: { book: typeof books[0] }) {
         {book.description.split("\n\n")[0]}
       </div>
       
+      <OmnibusVolumeNudge />
+
       {/* Editions Specifications list */}
       <div className="card" style={{ background: "var(--bg-raised)", borderColor: "var(--border)", padding: "1.25rem", marginBottom: "1.5rem" }}>
-        <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 600 }}>Available Formats & Specifications</div>
+        <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.1em", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 600 }}>Volume {book.volume} — formats &amp; specifications</div>
         
         {book.asin_ebook && (
           <a href={`https://www.amazon.com/dp/${book.asin_ebook}`} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ width: "100%", justifyContent: "center", marginBottom: "1rem", fontSize: "1rem", padding: "0.8rem" }}>

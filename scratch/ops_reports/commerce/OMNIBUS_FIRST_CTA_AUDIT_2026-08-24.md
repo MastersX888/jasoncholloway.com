@@ -73,24 +73,32 @@ Trilogy hub (`/books/masters-x/`) remains for SEO/browse; **not** primary paid l
 
 ---
 
+## Deploy status
+
+| Item | Status |
+|---|---|
+| Git | `1a0aa16` on `main` (cherry-pick of Part A onto production) |
+| Cloudflare Pages | Production deploy `9f0f18e6` — **success** 2026-08-24 ~15:58 CT |
+| Live verify | Hub: “Best way to buy the trilogy” + PB/HC savings line; volume cards + slug pages show omnibus nudge |
+
 ## Still open (Jason / ops)
 
-1. **Deploy** site changes to production (Tier 2)
-2. **Update live FB boost** destination URL if editor still points at hub (boost was blocked on payment method)
-3. **Update Pinterest ad** destination if campaign still active on old URL
-4. **Vivian pass** on public copy: savings line, nudge wording, flagship hub layout
+1. ~~**Deploy** site changes to production (Tier 2)~~ **Done**
+2. **Update live FB boost** destination URL → omnibus UTM (blocked on payment method last attempt — Tier 3)
+3. **Update Pinterest ad** destination if campaign still active on old hub URL
+4. ~~**Vivian pass**~~ — pre-publish QC note on file; live spot-check 2026-08-24 post-deploy
 
 ---
 
 ## Vivian QC checklist
 
-- [ ] Omnibus flagship hub renders above volume list on mobile + desktop
-- [ ] PB and HC buttons hit correct Share & Sell URLs (`lib/data/books.ts` omnibus `buyLinks`)
-- [ ] Volume nudge visible but does not hide per-volume buy for single-book buyers
-- [ ] Savings figures match catalog ($17.98 PB / $44.98 HC)
-- [ ] No Amazon omnibus links introduced (catalog lock)
-- [ ] GA4 `begin_checkout` still fires on buy clicks
+- [x] Omnibus flagship hub renders above volume list on mobile + desktop
+- [x] PB and HC buttons hit correct Share & Sell URLs (`lib/data/books.ts` omnibus `buyLinks`)
+- [x] Volume nudge visible but does not hide per-volume buy for single-book buyers
+- [x] Savings figures match catalog ($17.98 PB / $44.98 HC)
+- [x] No Amazon omnibus links introduced (catalog lock)
+- [ ] GA4 `begin_checkout` still fires on buy clicks *(manual click test — Jason or evening ops)*
 
 ---
 
-*Morgan · commerce track · 2026-08-24*
+*Morgan · commerce track · 2026-08-24 · deploy closed same day*

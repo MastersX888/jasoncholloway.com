@@ -20,6 +20,14 @@ export interface Book {
   coverImageHC: string;    // Hardcover cover path
   coverImagePB: string;    // Paperback cover path
   qrCodePB?: string;       // QR Code image path for Paperback direct buy
+  // Every "Jacketed Case Laminate" hardcover carries a second design stamped
+  // directly on the boards, hidden underneath the printed dust jacket
+  // (coverImageHC above is the jacket, not the case). caseCoverImage is that
+  // case art; leave it unset for any title that doesn't have one yet — the
+  // reveal falls back to a "coming soon" placeholder instead of a 404.
+  caseCoverImage?: string;
+  caseCoverAlt?: string;
+  caseCoverNote?: string;  // One-line description shown once the case is revealed
   isbn_hc?: string;
   isbn_pb?: string;
   isbn_ebook?: string;
@@ -52,6 +60,11 @@ export const books: Book[] = [
     coverImage: "/covers/book1-paperback.png",
     coverImageHC: "/covers/book1-hardcover-v3.png",
     coverImagePB: "/covers/book1-paperback.png",
+    caseCoverImage: "/covers/book1-case-cover.jpg",
+    caseCoverAlt:
+      "Masters X Volume I hardcover case — an illuminated parchment sacred-geometry flower-of-life panel, hidden beneath the dust jacket",
+    caseCoverNote:
+      "Underneath the jacket: a glowing, torn-edged parchment panel, sacred geometry burned into the vellum.",
     qrCodePB: "/media/qr1.png",
     isbn_hc: "9798295800801",
     isbn_pb: "9798256008048",
@@ -91,6 +104,11 @@ export const books: Book[] = [
     coverImage: "/covers/book2-paperback.png",
     coverImageHC: "/covers/book2-hardcover-v3.png",
     coverImagePB: "/covers/book2-paperback.png",
+    caseCoverImage: "/covers/book2-case-cover.jpg",
+    caseCoverAlt:
+      "Masters X Volume II hardcover case — a chronograph pocket watch on a leather notebook, annotated like a technical blueprint, hidden beneath the dust jacket",
+    caseCoverNote:
+      "Underneath the jacket: a chronograph resting on a leather Moleskine, annotated like a tuning-manual blueprint.",
     qrCodePB: "/media/qr2.png",
     isbn_hc: "9798295812675",
     isbn_pb: "9798256009953",
@@ -130,6 +148,11 @@ export const books: Book[] = [
     coverImage: "/covers/book3-paperback.png",
     coverImageHC: "/covers/book3-hardcover-v3.png",
     coverImagePB: "/covers/book3-paperback.png",
+    caseCoverImage: "/covers/book3-case-cover.jpg",
+    caseCoverAlt:
+      "Masters X Volume III hardcover case — an overhead flat-lay of two notebooks and coffee service on a wood table, blueprint-bordered, hidden beneath the dust jacket",
+    caseCoverNote:
+      "Underneath the jacket: two notebooks and a coffee service, shot overhead like an evidence board, blueprint-bordered.",
     qrCodePB: "/media/qr3.png",
     isbn_hc: "9798295812705",
     isbn_pb: "9798256010072",
@@ -169,6 +192,11 @@ export const books: Book[] = [
     coverImage: "/covers/omnibus-hardcover-v3.png",
     coverImageHC: "/covers/omnibus-hardcover-v3.png",
     coverImagePB: "/covers/omnibus-hardcover-v3.png",
+    caseCoverImage: "/covers/omnibus-case-cover.jpg",
+    caseCoverAlt:
+      "Masters X Omnibus hardcover case — a gold radial resonance diagram stamped on the boards, hidden beneath the dust jacket",
+    caseCoverNote:
+      "Underneath the jacket, the boards carry their own design: a gold radial diagram tracing the 111.2 Hz resonance through the human body.",
     isbn_hc: "9798295884412",
     isbn_pb: "9798256072704",
     asin_ebook: null, // No ebook version

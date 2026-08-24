@@ -2,9 +2,9 @@
 // hardcover set, and a route to every other edition. A reader who arrived to
 // buy a book should not have to scroll or navigate to find a price.
 import Link from "next/link";
-import CoverImage from "@/components/ui/CoverImage";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import TrilogyShelf from "@/components/store/TrilogyShelf";
+import CaseCoverReveal from "@/components/store/CaseCoverReveal";
 import OpenStoreButton from "@/components/store/OpenStoreButton";
 import {
   hardcoverSetProduct,
@@ -35,19 +35,17 @@ export default function BuyTheBooksSection() {
 
         <div className="buy-first-grid">
           <article className="buy-first-primary">
-            <Link
-              href={omnibusProduct.detailHref}
-              className="buy-first-cover"
-              aria-label="Omnibus edition details"
-            >
-              <CoverImage
-                src={cover.src}
-                alt={cover.alt}
-                fill
-                sizes="(max-width: 620px) 200px, 220px"
-                priority
-              />
-            </Link>
+            <CaseCoverReveal
+              className="buy-first-case-reveal"
+              jacket={{ src: cover.src, alt: cover.alt }}
+              caseCover={omnibusProduct.caseCover}
+              caseNote={omnibusProduct.caseCoverNote}
+              format="omnibus"
+              sizes="(max-width: 620px) 200px, 220px"
+              priority
+              detailHref={omnibusProduct.detailHref}
+              detailLabel="Omnibus edition details"
+            />
 
             <div className="buy-first-primary-body">
               <span className="buy-first-badge">{omnibusProduct.badge} · start here</span>

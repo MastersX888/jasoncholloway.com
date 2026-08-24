@@ -1445,6 +1445,144 @@ ul, ol { list-style: none; }
   border-radius: var(--r-lg);
 }
 
+/* ─── CASE COVER REVEAL (dust jacket ⇄ the hidden case) ──────── */
+.case-reveal {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+.case-reveal-inner {
+  position: relative;
+  width: 100%;
+}
+.case-reveal-spine {
+  position: absolute;
+  left: -4px;
+  top: 5%;
+  bottom: 5%;
+  width: 5px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.12) 100%);
+  border-radius: 2px 0 0 2px;
+  z-index: 2;
+  pointer-events: none;
+}
+.case-reveal-frame {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--bg-raised);
+  box-shadow:
+    3px 0 10px rgba(0, 0, 0, 0.22),
+    6px 10px 28px rgba(0, 0, 0, 0.38),
+    inset -1px 0 0 rgba(255, 255, 255, 0.05);
+}
+.case-reveal-link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.case-reveal-face {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: opacity 0.5s var(--ease-out);
+}
+.case-reveal-face.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.case-reveal-tag {
+  position: absolute;
+  left: 0.6rem;
+  bottom: 0.6rem;
+  z-index: 3;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: rgba(8, 8, 15, 0.72);
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  padding: 0.3em 0.7em;
+  pointer-events: none;
+}
+.case-reveal-pending {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  text-align: center;
+  padding: 1.25rem;
+  background:
+    repeating-linear-gradient(135deg, rgba(212, 170, 82, 0.07) 0 10px, transparent 10px 20px),
+    var(--bg-raised);
+}
+.case-reveal-pending-mark {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--gold-dim);
+  position: relative;
+}
+.case-reveal-pending-mark::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--gold-dim);
+  border-radius: 50%;
+}
+.case-reveal-pending p {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  line-height: 1.5;
+}
+.case-reveal-ground {
+  position: absolute;
+  bottom: -10px;
+  left: 8%;
+  right: 8%;
+  height: 14px;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.32) 0%, transparent 72%);
+  z-index: 0;
+  pointer-events: none;
+}
+.case-reveal-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: transparent;
+  border: 1px solid var(--gold-dim);
+  border-radius: 999px;
+  padding: 0.5em 1.1em;
+  cursor: pointer;
+  transition: background 0.2s var(--ease-out), color 0.2s var(--ease-out);
+  white-space: nowrap;
+}
+.case-reveal-toggle:hover,
+.case-reveal-toggle:focus-visible {
+  background: var(--gold-glow);
+  color: var(--text);
+}
+.case-reveal-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  text-align: center;
+  max-width: 40ch;
+}
+
 /* ─── CRITICISM REGISTER (monograph) ─────────────────────────── */
 [data-register="criticism"] {
   --bg:           #F4EFE4;

@@ -14,14 +14,14 @@ const omnibus = books.find((b) => b.slug === "omnibus");
 export const metadata: Metadata = {
   title: "Masters X Omnibus Edition — Complete Trilogy",
   description:
-    "The complete Masters X Trilogy in a single collected volume. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press. Order direct via IngramSpark or by ISBN from any bookstore.",
+    "The complete Masters X Trilogy — a conspiracy thriller that becomes a meditation on listening. Dan Brown meets Eckhart Tolle. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press. Order direct via IngramSpark or by ISBN from any bookstore.",
   alternates: {
     canonical: "https://jasoncholloway.com/books/masters-x/omnibus/",
   },
   openGraph: {
     title: "Masters X Omnibus Edition — Complete Trilogy",
     description:
-      "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
+      "It starts as a conspiracy thriller — a safety-deposit box, carvings beneath Kansas City. It ends as a meditation on listening. All three Masters X novels, collected in one volume.",
     url: "https://jasoncholloway.com/books/masters-x/omnibus/",
     images: omnibus
       ? [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Masters X Omnibus Edition — Complete Trilogy",
     description:
-      "All three Masters X novels collected in one volume. Hardcover and paperback editions from Seventh City Press.",
+      "It starts as a conspiracy thriller — a safety-deposit box, carvings beneath Kansas City. It ends as a meditation on listening. All three Masters X novels, collected in one volume.",
     images: omnibus ? [`https://jasoncholloway.com${omnibus.coverImageHC}`] : undefined,
   },
 };

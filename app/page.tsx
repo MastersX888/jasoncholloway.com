@@ -10,17 +10,17 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy of Frequency & Medieval Manuscripts",
+    absolute: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy That Becomes a Meditation on Listening",
   },
   description:
-    "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research — a conspiracy that resolves not as a weapon, but as a frequency you were built to hear. Dan Brown meets Eckhart Tolle: the Masters X Trilogy.",
   alternates: {
     canonical: "https://jasoncholloway.com/",
   },
   openGraph: {
     url: "https://jasoncholloway.com/",
-    title: "Jason Carroll Holloway | Masters X Trilogy — Available Now",
-    description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research. The Masters X Trilogy — where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge.",
+    title: "Masters X Trilogy — A Conspiracy That Becomes a Meditation on Listening",
+    description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research — a conspiracy that resolves not as a weapon, but as a frequency you were built to hear. Dan Brown meets Eckhart Tolle: the Masters X Trilogy.",
   },
 };
 

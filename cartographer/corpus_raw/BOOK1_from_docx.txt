@@ -173,7 +173,7 @@ Blake was thirteen. He'd come outside with his geometry homework and a glass of 
 "You're making that look harder than it is," James had said without looking up.
 "It's proofs. They want me to prove a triangle is a triangle."
 "That's not what they want. They want you to show your reasoning. Proofs aren't about the answer. They're about the path."
-James had set down the iron. He smelled the way he always smelled on Thursday evenings, solder flux, coffee, the cedar soap he used because Margaret said the regular soap gave him a rash. The specific combination of a specific man on a specific evening, unreproducible, the kind of detail that disappeared from the world when the person did and could never be recovered from photographs or letters or the careful language of obituaries.
+James had set down the iron. He smelled the way he always smelled on Thursday evenings, solder flux, coffee, the cedar soap he used because Lorraine said the regular soap gave him a rash. The specific combination of a specific man on a specific evening, unreproducible, the kind of detail that disappeared from the world when the person did and could never be recovered from photographs or letters or the careful language of obituaries.
 "Here." James had taken the pencil. Not to solve it, to draw a radio schematic beside the triangle. "You know what a circuit is?"
 "Electricity going in a loop."
 "Electricity following a path. The path is the proof. You don't prove the triangle exists. You prove why it has to exist. The angles don't just add up to 180 degrees. They can't not." He'd tapped the schematic. "Same with a circuit. Current doesn't choose to flow. The path makes it inevitable."
@@ -194,12 +194,12 @@ Blake picked up.
 "Mr. Blake Masters?" A woman's voice, professional. "Patricia Thornton, attorney with Pemberton and Associates in Jefferson City."
 Jefferson City. His father's hometown.
 "This concerns your grandfather's estate. There's been a development."
-"My grandfather died in 2010. His estate was settled years ago."
+"My grandfather died in 2003. His estate was settled years ago."
 "First National Bank recently underwent renovations. They discovered a safety deposit box not in their main system. Established in 1968. Rental paid through 2025. Fifty-seven years in advance."
 Blake's hand tightened on the phone.
 "The box lists only one authorized heir. Not your father. Not your mother. You."
 1968. The year William stopped flying test planes and moved his family to Missouri and never explained why. He'd paid for a box fifty-seven years in advance, timed to arrive at just this moment.
-Before Blake was delivered. Before his father was born. William had set this in motion, aimed at a future grandson he would never meet.
+Before Blake was delivered. Before his father was born. William had set this in motion, aimed at a grandson who did not yet exist.
 Which meant William had known. About the patterns. About everything that would happen to James, and everything that would happen to Blake.
 "Mr. Masters? Are you still there?"
 "Tomorrow," Blake said. "I'll be there tomorrow."
@@ -803,20 +803,20 @@ CHAPTER EIGHT
 THE KEY
 109 Hz · Kansas City
 Blake's mother answered the door in an apron dusted with flour.
-Margaret Masters, sixty-three. Her face did the thing it always did. Joy at seeing her son compressed by the worry that accompanied every unexpected visit. Blake hadn't called ahead. He should have called ahead.
+Lorraine Masters, sixty-three. Her face did the thing it always did. Joy at seeing her son compressed by the worry that accompanied every unexpected visit. Blake hadn't called ahead. He should have called ahead.
 "Blake." Her eyes cataloged the bruise on his forehead, the butterfly bandages. "What happened?"
 "I fell in the library. I'm fine."
 "You're not fine. You're wearing the watch."
 Blake looked at his wrist. The Breitling. He'd been wearing it since Jefferson City without thinking about it.
-"Come in," Margaret said. "Ethan's here."
+"Come in," Lorraine said. "Ethan's here."
 The house smelled like bread and lavender. His mother's house always smelled like bread and lavender. The same olfactory signature Blake had carried in his memory since childhood, the smell that meant safety.
 Ethan was in the kitchen. Blake's nephew, thirty-one, practical, the kind of person who fixed things with his hands while Blake fixed them with his mind. Ethan had his father's build and his grandmother's steadiness.
 "Hey." Ethan looked up from the Sports section. Took in Blake's face. "Rough week?"
 "You could say that."
-Margaret set tea on the table. Not coffee. Tea. Blake noticed the choice. His mother had always served tea when she wanted a real conversation.
+Lorraine set tea on the table. Not coffee. Tea. Blake noticed the choice. His mother had always served tea when she wanted a real conversation.
 "Mom," Blake said. "I need to ask you about Dad."
-Margaret's hands went still on the teapot. Ethan set down the newspaper.
-"What about him?" Margaret's voice was careful.
+Lorraine's hands went still on the teapot. Ethan set down the newspaper.
+"What about him?" Lorraine's voice was careful.
 "The accident. The things he was asking about before he died. Oscar-01."
 The kitchen went quiet. Outside, a cardinal landed on the feeder. Red against October gray. Blake tracked the bird's angular trajectory automatically.
 Through the kitchen window he could see the backyard. Smaller than he remembered, but the beehives were still there. Three white boxes at the edge of the property line, weathered by fifteen years of Missouri seasons.
@@ -828,15 +828,15 @@ James pointed at the cells. Tilted slightly upward. "Thirteen-degree angle. Same
 "They're talking with math?"
 "They're talking with geometry. Pattern as language." James knelt down. Lifted the veil so they were face to face. "If you see patterns that scare you. Don't try to figure it out alone. Working alone is how people get lost. Remember that."
 Blake surfaced from the memory. The bees were gone. The hives empty now, paint peeling. James was gone. The mathematics remained.
-"Your father was a good man," Margaret said. "But he couldn't leave things alone."
+"Your father was a good man," Lorraine said. "But he couldn't leave things alone."
 "Neither can I."
-Margaret studied him. Then she stood, walked to the back bedroom, and returned with a wooden box Blake had never seen. Carved walnut, simple, the kind of work his father had done in the garage on weekends.
+Lorraine studied him. Then she stood, walked to the back bedroom, and returned with a wooden box Blake had never seen. Carved walnut, simple, the kind of work his father had done in the garage on weekends.
 "James left this. In his desk at work. They sent it home with his things."
 Inside: a key. Different from William's. Smaller, modern, a Post Office box key. And a note in James's handwriting:
 Don't go alone.
 Three words. The advice of a man who'd gone alone and paid for it.
 "He knew the accident was coming," Blake said.
-"He knew something was wrong." Margaret's eyes were wet. "He called me the night before. Said if anything happened, to hide this. Give it to you when you were ready."
+"He knew something was wrong." Lorraine's eyes were wet. "He called me the night before. Said if anything happened, to hide this. Give it to you when you were ready."
 "When I was ready."
 "He said you'd know when."
 Blake looked at the key. At his mother. At Ethan, who was watching with an expression that mixed confusion and the beginning of fear.
@@ -848,7 +848,7 @@ Blake looked at the key. At his mother. At Ethan, who was watching with an expre
 The words sat between them. Blake heard what his nephew meant, not anger, not even fear. Exhaustion. The exhaustion of the family member who stayed behind and answered the phone calls and identified the bodies and held their grandmother together.
 "So am I," Blake said. "That's why I'm doing this differently."
 Ethan studied him for a long moment. Then, softer: "Be careful. Please."
-Margaret put her hand over Blake's. Her grip was stronger than it looked, sixty-three years of holding things together.
+Lorraine put her hand over Blake's. Her grip was stronger than it looked, sixty-three years of holding things together.
 "Your father loved you," she said. "William loved you. Whatever they were trying to protect you from, they were trying to protect you."
 "I know, Mom."
 "Then don't do what they did." Her eyes were fierce. "Don't disappear into it. Don't become so obsessed that you forget to call your mother. Don't -" Her voice broke. "Don't die on a straight road in perfect weather."
@@ -1025,7 +1025,7 @@ He looked at Nadia. At their hands, still close from the vault. His face opened,
 ✦  ⊕  ✦
 They emerged into dawn. October sky pink and gold, the air sharp after hours of underground stillness.
 Andrew pulled the grate back. Nadia held the manuscript bag against her chest. Blake stood in the early light, William's photograph in one pocket, Dryden's brass key in the other, the Breitling counting time on his wrist.
-Three keys now. William's Oscar-01 key. James's key from Margaret's box. And the Strahov Library key, waiting since 1965.
+Three keys now. William's Oscar-01 key. James's key from Lorraine's box. And the Strahov Library key, waiting since 1965.
 "Prague," Andrew said.
 Blake looked at Nadia. She was standing in the dawn light with manuscripts pressed against her chest and her ring finger bare. In the early light, she looked different. Not less committed. Less divided.
 "Prague," Blake confirmed. "But first we analyze what we found. We back up everything. Make it impossible to suppress. Then Prague."
@@ -1238,7 +1238,7 @@ She glanced back. "How?"
 "More yourself."
 Something moved through her expression. She turned and kept climbing.
 Miroslav opened the door before they knocked. Eighty-seven years old, thin and precise. His apartment was a library with a kitchen attached. He greeted Nadia in Czech, embraced her, then turned to Blake.
-"You have William's face," he said in accented English. "But your mother's coloring. Margaret, yes?"
+"You have William's face," he said in accented English. "But your mother's coloring. Lorraine, yes?"
 "You knew her?"
 "I knew OF her. William described her in his letters. The woman who kept him human when the patterns tried to take him somewhere else." Miroslav's eyes moved to Nadia, then back to Blake. "History echoes."
 Tea. Small pastries. And wine. A Moravian Riesling, pale gold, from a vineyard outside Mikulov that Miroslav said the Jesuits had planted in 1617.
@@ -1250,7 +1250,7 @@ Blake opened his perception. The narrow aperture. He looked at the manuscript un
 "What happened when William saw it?" Nadia asked quietly.
 "He wanted to go further. Into the chamber beneath Strahov." Miroslav looked at Blake. "I gave him the key. He went to the entrance. And he couldn't do it."
 "Why not?"
-"Because he was alone." Miroslav's gaze moved to Nadia. "He didn't have anyone to come back to. Margaret was in Kansas City. James was a child."
+"Because he was alone." Miroslav's gaze moved to Nadia. "He didn't have anyone to come back to. Lorraine was in Kansas City. James was a child."
 "When?" Blake asked.
 "Tomorrow. Dawn. The library is empty before the staff arrives. Two hours in the chamber." Miroslav walked them to the door.
 At the threshold: "Your grandfather asked me to tell you one thing. He said: 'The chamber shows you everything. The gift lets you see it. But only love lets you survive it.'" The old man's eyes were luminous. "William understood that too late."
@@ -1268,7 +1268,7 @@ They walked back to the hotel holding hands. Through the Old Town Square. Past t
 At the hotel, they stopped outside their rooms. Adjacent doors.
 "Tomorrow," Blake said.
 "Tomorrow."
-Nadia paused. "Blake, your grandfather was wrong about one thing. He said he didn't have anyone to come back to. But he did. He had Margaret. He just couldn't see past the patterns to find her." She held his gaze. "Don't lose me in the patterns. Please."
+Nadia paused. "Blake, your grandfather was wrong about one thing. He said he didn't have anyone to come back to. But he did. He had Lorraine. He just couldn't see past the patterns to find her." She held his gaze. "Don't lose me in the patterns. Please."
 "I won't."
 She went into her room. Blake stood in the hallway, Prague humming through the walls, the Strahov key in his pocket, Nadia's frequency still warm in his hand.
 Blake opened his door. Lay down in the dark. Reached her frequency.
@@ -1507,9 +1507,9 @@ A hand in the third row. Dr. Klaus Bergmann, Berlin. "Are you suggesting a commo
 "I'm demonstrating one." Blake clicked to the cave photographs. "Pre-Columbian site in Missouri. Same geometric sequences. Predating the European manuscripts by centuries."
 Nadia stepped forward beside Blake. "The transmission path is documented in Rudolf II's court records." She cited the sources, gave the call numbers. The historical evidence supporting what Blake had shown them.
 Two ways of reading. Together. In front of sixty witnesses.
-Professor Sarah Chen from Cambridge stood. "The proportional system. May I see it again?" She studied the geometric relationships. "We documented every measurement. But we never connected it to the seven-fold structure because -"
+Professor Sarah Ashworth from Cambridge stood. "The proportional system. May I see it again?" She studied the geometric relationships. "We documented every measurement. But we never connected it to the seven-fold structure because -"
 "Because you were looking at each manuscript in isolation," Nadia said. "The pattern only emerges in synthesis."
-Chen looked between them. "If this holds up, this rewrites five hundred years of scholarship."
+Ashworth looked between them. "If this holds up, this rewrites five hundred years of scholarship."
 "It will hold up," Nadia said. "The sources are verifiable."
 The presentation ran ninety minutes. Scholars swarmed the podium afterward, business cards, invitations to present at Cambridge, Heidelberg, the Sorbonne.
 And in the back, half-hidden behind a pillar, Father Crane watched.
@@ -1670,23 +1670,23 @@ They drank it slowly.
 CHAPTER TWENTY
 THE SEVEN SITES
 109 Hz · Kansas City
-Margaret knew.
+Lorraine knew.
 Blake brought the evidence to her house. James's manuscript, the Strahov photographs, the timeline. He parked behind Ethan's truck, which hadn't moved in three days.
-Margaret's house was the same as always. The red-brick ranch on Fifty-Third Street. Live oaks James had planted as saplings, now thirty feet tall. A basketball hoop over the garage, backboard cracked. Every house becomes a biography of the family that lives in it, and Margaret's was a biography of loss.
+Lorraine's house was the same as always. The red-brick ranch on Fifty-Third Street. Live oaks James had planted as saplings, now thirty feet tall. A basketball hoop over the garage, backboard cracked. Every house becomes a biography of the family that lives in it, and Lorraine's was a biography of loss.
 Inside: James's engineering awards still hung in the hallway. His father's handwriting on a framed patent. Evidence of a brilliant mind applied to ordinary problems because the extraordinary ones had been too dangerous to pursue.
-Blake rehearsed his careful progression. Margaret set tea on the table and let him talk for about three minutes. Then she held up her hand.
+Blake rehearsed his careful progression. Lorraine set tea on the table and let him talk for about three minutes. Then she held up her hand.
 "I know, Blake."
 "You know what?"
 "That your father did not die in an accident. That William was hiding something. That whatever they were investigating got James killed." Fourteen years of practice held her voice steady. "I've known since the week after the funeral."
 "You never said anything."
 "Silence runs in this family the way your patterns do. Passed down. The women just carry it differently."
 She told him. The official-looking people who came after the funeral. James's files, taken. The clear implication about Blake's safety.
-"They said accidents happen. And they made sure I understood what kind." Margaret's eyes were dry. "You were twelve. Your father was dead. And the people who killed him made it clear that silence was the price of your survival. So I paid it."
-He tried to explain the patterns. Margaret listened. When he finished, she shook her head, not in denial. In recognition.
+"They said accidents happen. And they made sure I understood what kind." Lorraine's eyes were dry. "You were twelve. Your father was dead. And the people who killed him made it clear that silence was the price of your survival. So I paid it."
+He tried to explain the patterns. Lorraine listened. When he finished, she shook her head, not in denial. In recognition.
 "You sound exactly like your father. The last year. I could see it was real to him. The most real thing in his life." She paused. "More real than us."
 "It's not like that for me."
 "It's always like that. The thing you can see that nobody else can. It becomes the most important thing." She looked at James's empty chair. "Your father loved us. And he loved the truth. And in the end, the truth was louder."
-"He gave me something," Margaret said. A small lockbox from a cabinet Blake had never seen her open. A USB drive. A photograph of William at Oscar-01, 1963. And a letter.
+"He gave me something," Lorraine said. A small lockbox from a cabinet Blake had never seen her open. A USB drive. A photograph of William at Oscar-01, 1963. And a letter.
 Blake...
 If you're reading this, I'm dead. Your grandfather embedded his knowledge in seven locations across Missouri. Oscar-01 is the key.
 But proof isn't enough. Your grandfather had proof and chose silence. I'm choosing exposure. Both paths lead to death.
@@ -1703,7 +1703,7 @@ Oscar-01. SubTropolis. Meramec Caverns. The AT&T bunker at Polo. Atchison underg
 "The knowledge can't be suppressed by destroying one location. Or three. Or five. Grandpa spent forty years building insurance. For us."
 "Your father spent five months trying to reach Oscar-01 before they killed him. He never got inside."
 "He didn't have the key." Blake pulled the brass key from his pocket. "I do."
-Margaret stared at the key. "Promise me you won't go alone."
+Lorraine stared at the key. "Promise me you won't go alone."
 "I have a team. Dad didn't. Grandpa didn't. But I do."
 "And this woman. Nadia. You love her."
 "Yes."
@@ -1729,7 +1729,7 @@ The night before everything began, Blake and Nadia walked.
 Not for operational reasons. Just walked. Andrew's Gladstone neighborhood at eleven PM. Quiet streets, porch lights, the ordinary Kansas City grid that held no ancient geometric secrets. Just a neighborhood. Just autumn.
 The houses were postwar ranches. Identical roof pitches, identical setbacks. The uniformity would have bored him before the awakening. Now it felt like a gift. These houses weren't trying to tell him anything. A porch light was just a porch light. A mailbox was just a mailbox.
 Blake could have cried with gratitude for the ordinariness.
-They'd spent the day planning. Andrew building digital distribution. Blake organizing the seven-site documentation. Nadia translating the Strahov Latin. The work was ready. Professor Chen had agreed to lead independent verification. Miroslav confirmed the Prague end.
+They'd spent the day planning. Andrew building digital distribution. Blake organizing the seven-site documentation. Nadia translating the Strahov Latin. The work was ready. Professor Ashworth had agreed to lead independent verification. Miroslav confirmed the Prague end.
 Tomorrow, they would begin. Tonight, they walked.
 "I've been thinking about the sentence," Nadia said. "The one your father didn't finish."
 "Which sentence?"
@@ -1810,14 +1810,14 @@ He'd known this intellectually since the library fall. But the sphere had made i
 ✦  ⊕  ✦
 Nadia was waiting on the dock.
 She sat with her feet hanging over the edge, coffee in both hands, the silver ring catching morning light. She'd driven down from Kansas City at 4 AM, the thermos beside her still warm, the second cup already poured and set on the dock planks next to a small paper bag from the bakery near Gladstone. Practical. Prepared. The control tower, maintaining operations while the pilot flew into unknown territory alone. The dock was old cedar, the planks silvered by weather, the nails rusting in a pattern that Blake's perception wanted to read as corrosion data, oxidation rates, moisture content, the chemistry of Ozark air working its slow transformation on iron. He let the data go. Sat down. Let the wood be wood.
-Ethan was with Margaret, who was with the Foundation's Kansas City operation, which was with the larger network that now stretched across fourteen countries and showed no signs of stopping.
+Ethan was with Lorraine, who was with the Foundation's Kansas City operation, which was with the larger network that now stretched across fourteen countries and showed no signs of stopping.
 "You found it," she said. Not a question. She could read it in his face, as his eyes weren't quite focused on the physical world, as they were still processing input from ninety feet below, the aperture struggling to close after what it had received. She'd learned to read the aperture in his expressions as a weather observer reads cloud formations, the visible evidence of invisible forces. The wider the aperture, the more distant his gaze. The deeper the acuity, the longer it took him to come back.
 "It's older than the caves. Older than anything." Blake sat down beside her. Water dripped from his wetsuit onto boards that three generations of Masters had sat on, watching sunsets, watching water, watching the surface patterns that hid the real structures underneath. "There's a sphere, Nadia. Carved with notae I can't read. My sight opened wider than it's ever been and it STILL wasn't wide enough."
 "That's what scares me."
 "I know."
 She handed him the bakery bag. A scone. She'd remembered that he ate scones after dives, a habit from the certification courses he'd taken the previous spring. The small domestic knowledge that accumulates between two people, not romantic, not dramatic, just the quiet record of attention paid over time. He bit into it. Butter and flour and blueberries. The taste was ordinary in the best possible way, no geometric substrate, no encoded proportional system, no hidden frequency. Just a scone from a bakery in Kansas City, baked by someone who didn't know about ancient rooms or stone spheres or the way consciousness could be modified by looking at the right shapes in the right order. Blake chewed and let the ordinariness anchor him.
 The lake sent small waves against the dock pilings. Somewhere across the water, a loon called, the sound drifting across glassy surface the way structural information drifted across Blake's vision, arriving from distances the physical world couldn't account for. The Ozark hillsides were on fire with October, sugar maples turning a red so deep it looked like the trees were bleeding color into the air, white oaks going bronze, the understory dogwoods already bare, their branches describing the same branching fractals Blake had seen in the room carvings and in the dry washes over the Mojave and in the neural pathways that his enhanced perception traveled when it pushed past ordinary consciousness into the territory no map could reach.
-"Seven graduates," Nadia said. She was doing the thing she did now, grounding him with facts when his acuity threatened to carry him away. "Twelve new candidates in training. Chen's Cambridge verification paper publishes in March. The Portuguese archives opened three weeks ago. Father Crane's teaching module is running in six countries."
+"Seven graduates," Nadia said. She was doing the thing she did now, grounding him with facts when his acuity threatened to carry him away. "Twelve new candidates in training. Ashworth's Cambridge verification paper publishes in March. The Portuguese archives opened three weeks ago. Father Crane's teaching module is running in six countries."
 "And you?"
 "I'm here." She looked at him. The green eyes that had watched him across a library three years ago, that had searched his face for something she hadn't been able to name. She'd found it. And the finding had cost her everything the convent had given her and replaced it with something that fit differently, not worse, not better, but hers. "Still working the gap. Still translating. Still standing at the edge of the territory, mapping what I can't walk."
 "I need to go to Europe," he said.

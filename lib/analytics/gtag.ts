@@ -1,3 +1,5 @@
+import { trackMetaInitiateCheckout } from "./metaPixel";
+
 export const GA_MEASUREMENT_ID = "G-79RDL3BDEH";
 
 /** Google Ads conversion tag (Campaign #2 / MX1 Play $25 test) */
@@ -67,6 +69,12 @@ export function trackBeginCheckout(items: GaItem[], value?: number) {
   });
   // Proxy Ads conversion: Play Store purchases aren't taggable; fire on buy CTA.
   trackAdsPurchaseConversion(value);
+  // Proxy Meta conversion: same reasoning — Amazon/IngramSpark checkout is
+  // off-site, so the buy-link click is the closest real signal Meta can see.
+  trackMetaInitiateCheckout(
+    value,
+    items.map((i) => i.item_id)
+  );
 }
 
 /** Google Ads primary Purchase conversion (label from Ads conversion setup). */

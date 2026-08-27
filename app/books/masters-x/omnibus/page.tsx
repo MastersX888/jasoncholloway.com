@@ -7,14 +7,25 @@ import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import {
+  MASTERS_X_ABOUT,
+  MASTERS_X_AUDIENCE,
+  MASTERS_X_KEYWORDS,
+} from "@/lib/seo/mastersXEntities";
 import type { Metadata } from "next";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
 
+// CANON requires a format qualifier on every omnibus page count, and CANON TODO(jason) #1
+// leaves the counts open to revision — so read both from books.ts rather than restating them.
+const omnibusPagesHC = omnibus?.pageCountHC ?? omnibus?.pageCount;
+const omnibusPagesPB = omnibus?.pageCountPB ?? omnibus?.pageCount;
+
 export const metadata: Metadata = {
-  title: "Masters X Omnibus Edition — Complete Trilogy",
-  description:
-    "The complete Masters X Trilogy — a conspiracy thriller that becomes a meditation on listening. Dan Brown meets Eckhart Tolle. Hardcover (686 pages) and paperback (734 pages) from Seventh City Press. Order direct via IngramSpark or by ISBN from any bookstore.",
+  title: {
+    absolute: `Masters X: The Complete Trilogy (Omnibus) — ${omnibusPagesHC}-Page Hardcover | Jason Carroll Holloway`,
+  },
+  description: `All three Masters X novels in one volume — ${omnibusPagesHC} pages hardcover / ${omnibusPagesPB} paperback. The Inheritance of Frequency, The Grimoire, The Kingdom. One book, one order.`,
   alternates: {
     canonical: "https://jasoncholloway.com/books/masters-x/omnibus/",
   },
@@ -54,6 +65,9 @@ export default function OmnibusPage() {
     author: { "@id": "https://jasoncholloway.com/#person" },
     publisher: { "@id": "https://jasoncholloway.com/#organization" },
     inLanguage: "English",
+    keywords: MASTERS_X_KEYWORDS,
+    about: MASTERS_X_ABOUT,
+    audience: MASTERS_X_AUDIENCE,
     workExample: [
       ...(omnibus.isbn_hc
         ? [

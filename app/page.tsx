@@ -8,19 +8,24 @@ import BuyTheBooksSection from "@/components/store/BuyTheBooksSection";
 import StartTourButton from "@/components/tour/StartTourButton";
 import type { Metadata } from "next";
 
+// Kept under ~158 characters so Google renders the "inside you" turn instead of cutting it.
+const HOME_DESCRIPTION =
+  "The Masters X trilogy: three generations, seven hidden sites, one frequency. Literary conspiracy fiction that ends where Dan Brown never could — inside you.";
+
 export const metadata: Metadata = {
   title: {
-    absolute: "Jason Carroll Holloway | Masters X Trilogy — A Kansas City Conspiracy That Becomes a Meditation on Listening",
+    absolute: "Jason Carroll Holloway — Masters X: A Conspiracy Thriller That Becomes a Meditation on Listening",
   },
-  description:
-    "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research — a conspiracy that resolves not as a weapon, but as a frequency you were built to hear. Dan Brown meets Eckhart Tolle: the Masters X Trilogy.",
+  description: HOME_DESCRIPTION,
   alternates: {
     canonical: "https://jasoncholloway.com/",
   },
   openGraph: {
     url: "https://jasoncholloway.com/",
     title: "Masters X Trilogy — A Conspiracy That Becomes a Meditation on Listening",
-    description: "Beneath Kansas City's SubTropolis, a fired security guard inherits 30 years of classified research — a conspiracy that resolves not as a weapon, but as a frequency you were built to hear. Dan Brown meets Eckhart Tolle: the Masters X Trilogy.",
+    description: HOME_DESCRIPTION,
+    // No `images` here on purpose: an explicit openGraph.images in the same route
+    // segment suppresses the generated 1200×630 card in app/opengraph-image.tsx.
   },
 };
 

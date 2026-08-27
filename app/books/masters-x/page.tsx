@@ -13,6 +13,11 @@ import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import OpenStoreButton from "@/components/store/OpenStoreButton";
 import { omnibusComparison } from "@/lib/data/storefront";
+import {
+  MASTERS_X_ABOUT,
+  MASTERS_X_AUDIENCE,
+  MASTERS_X_KEYWORDS,
+} from "@/lib/seo/mastersXEntities";
 
 export const metadata: Metadata = {
   title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
@@ -64,6 +69,9 @@ export default function MastersXPage() {
                 "name": "Kansas City, Missouri"
               },
               "genre": ["Conspiracy Thriller", "Literary Fiction", "Historical Fiction", "Mystery"],
+              "keywords": MASTERS_X_KEYWORDS,
+              "about": MASTERS_X_ABOUT,
+              "audience": MASTERS_X_AUDIENCE,
               "description": "A Kansas City trilogy tracing the Voynich Manuscript, the Ars Notoria, and a 111 Hz archaeoacoustic frequency from SubTropolis to a sealed crypt beneath Prague's Strahov Monastery.",
               "hasPart": books.filter(b => b.series === "Masters X" && b.slug !== "omnibus").map(b => ({
                 "@type": "Book",

@@ -11,6 +11,11 @@ import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import {
+  MASTERS_X_ABOUT,
+  MASTERS_X_AUDIENCE,
+  MASTERS_X_KEYWORDS,
+} from "@/lib/seo/mastersXEntities";
 import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
 type Props = { params: Promise<{ slug: string }> };
 
@@ -26,25 +31,36 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const book = books.find((b) => b.slug === slug);
   if (!book) return {};
 
+  // These carry the brand suffix themselves, so they ship absolute rather than through
+  // the root layout's `%s | Jason Carroll Holloway` template.
   const volumeTitles: Record<string, string> = {
-    "the-inheritance-of-frequency": "The Inheritance of Frequency — Masters X Book 1",
-    "the-grimoire": "The Grimoire — Masters X Book 2",
-    "the-kingdom": "The Kingdom — Masters X Book 3",
+    "the-inheritance-of-frequency": "The Inheritance of Frequency (Masters X Book I) | Jason Carroll Holloway",
+    "the-grimoire": "The Grimoire (Masters X Book II) | Jason Carroll Holloway",
+    "the-kingdom": "The Kingdom (Masters X Book III) | Jason Carroll Holloway",
   };
 
+  // Share cards already render the brand via og:site_name, so they use the unsuffixed form.
+  const volumeSocialTitles: Record<string, string> = {
+    "the-inheritance-of-frequency": "The Inheritance of Frequency — Masters X Book I",
+    "the-grimoire": "The Grimoire — Masters X Book II",
+    "the-kingdom": "The Kingdom — Masters X Book III",
+  };
+
+  // All kept under ~158 characters so the closing clause survives SERP truncation.
   const volumeDescs: Record<string, string> = {
-    "the-inheritance-of-frequency": "A fired Kansas City security guard inherits classified acoustic research linking SubTropolis carvings, the Voynich Manuscript, and a Prague crypt sealed since 1267. For readers of Foucault's Pendulum and The Da Vinci Code.",
-    "the-grimoire": "Blake Masters maps a medieval preparation protocol from an Iceland cottage as Andrew's algorithm decodes the acoustic architecture of Chartres Cathedral. The Ars Notoria is not magic — it's cognitive technology.",
-    "the-kingdom": "The demonstration: 111.2 Hz, a Kansas City limestone chamber, and 1.2 million open-source downloads. Who gets access to their own fundamental frequency? Masters X Book 3.",
+    "the-inheritance-of-frequency": "A safety-deposit box paid 57 years forward. A father whose accident wasn't. Carvings in the bedrock beneath Kansas City's SubTropolis. Masters X, Book I.",
+    "the-grimoire": "A 15th-century reading list from Strahov monastery. Twenty-three texts, Ars Notoria to Sefer Yetzirah. The science of the frequency — and its cost.",
+    "the-kingdom": "The opposition arrives as forms: a patent, three journal papers, an FDA letter. The answer is simpler: two people, breathing. The trilogy's quiet conclusion.",
   };
 
   const title = volumeTitles[slug] ?? book.subtitle;
+  const socialTitle = volumeSocialTitles[slug] ?? title;
   const description = volumeDescs[slug] ?? book.excerpt;
   const coverUrl = `https://jasoncholloway.com${book.coverImagePB}`;
   const coverAlt = `${book.title}: ${book.subtitle} — cover`;
 
   return {
-    title,
+    title: volumeTitles[slug] ? { absolute: title } : title,
     description,
     keywords: slug === "the-inheritance-of-frequency"
       ? [...book.keywords, "conspiracy thriller", "books like the da vinci code", "voynich manuscript fiction", "consciousness thriller", "medieval manuscript thriller", "SubTropolis"]
@@ -53,14 +69,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : [...book.keywords, "books about frequency", "sound healing fiction", "Kansas City novel", "Gospel of Thomas"],
     openGraph: {
       type: "book",
-      title,
+      title: socialTitle,
       description,
       url: `https://jasoncholloway.com/books/masters-x/${slug}/`,
       images: [{ url: coverUrl, alt: coverAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: socialTitle,
       description,
       images: [coverUrl],
     },
@@ -87,6 +103,9 @@ export default function BookPage({ params }: Props) {
     "author": { "@id": "https://jasoncholloway.com/#person" },
     "publisher": { "@id": "https://jasoncholloway.com/#organization" },
     "inLanguage": "English",
+    "keywords": MASTERS_X_KEYWORDS,
+    "about": MASTERS_X_ABOUT,
+    "audience": MASTERS_X_AUDIENCE,
     "workExample": [
       ...(book.isbn_pb ? [{
         "@type": "Book",

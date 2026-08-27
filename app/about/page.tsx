@@ -7,6 +7,13 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
+  keywords: [
+    "acoustic science",
+    "medieval scholarship",
+    "human consciousness",
+    "archaeoacoustics",
+    "contemplative fiction",
+  ],
   alternates: {
     canonical: "https://jasoncholloway.com/about/",
   },

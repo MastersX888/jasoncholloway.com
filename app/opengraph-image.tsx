@@ -31,7 +31,7 @@ export default async function Image() {
           Jason Carroll Holloway
         </div>
         <div style={{ fontSize: '48px', color: '#a0a0a0', marginBottom: '3rem', fontStyle: 'italic', textAlign: 'center' }}>
-          Masters X Trilogy — A Kansas City Conspiracy
+          Masters X Trilogy — A Conspiracy That Becomes a Meditation on Listening
         </div>
         <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
           <div style={{ color: '#06b6d4', fontSize: '28px', border: '1px solid #06b6d4', padding: '1rem 2rem', borderRadius: '4px' }}>

@@ -5,12 +5,21 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Codex Gigas: The Devil's Bible Made in Bohemia",
   description:
-    "The world's largest medieval manuscript — Bohemia, Rudolf II, Sweden 1648. Brother Aldric's story in Masters X begins forty years after its completion.",
+    "The world's largest medieval manuscript — 310 surviving leaves, and a missing quire nobody can account for. Bohemia, Rudolf II, and Sweden 1648.",
   socialTitle: "Codex Gigas: The Devil's Bible Made in Bohemia | Field Notes",
   socialDescription:
     "92 cm tall, 75 kg, made by one monk over decades. Rudolf II owned it. Sweden took it in 1648. High-res scans at codexgigas.se. The trilogy prologue starts forty years later.",
   path: "/field-notes/codex-gigas/",
   ogType: "article",
+  keywords: [
+    "Codex Gigas",
+    "Devil's Bible",
+    "Codex Gigas missing pages",
+    "Hermann the Recluse",
+    "Podlažice monastery",
+    "Rudolf II manuscripts",
+    "largest medieval manuscript",
+  ],
   image: {
     url: "https://jasoncholloway.com/og/field-notes/codex-gigas.png",
     width: 1024,
@@ -31,6 +40,10 @@ const faqs = [
   {
     q: "Who owned the Codex Gigas?",
     a: "The documented owners include the Benedictine monastery of Podlažice (where it was made), the Cistercian monastery of Sedlec, the Benedictine monastery of Broumov, and Emperor Rudolf II of Bohemia. After Rudolf, it went to his brother Emperor Matthias, then to the Benedictine abbey at Broumov, before being taken by the Swedish army in 1648.",
+  },
+  {
+    q: "How many pages are missing from the Codex Gigas?",
+    a: "310 parchment leaves survive, and the quire structure shows a full gathering was removed before the manuscript left Bohemia. The exact count is not settled: published figures range from eight to twelve leaves, and the volume's re-trimming and later foliation make precise reckoning difficult. The most commonly cited theory is that the missing gathering held the Rule of St. Benedict. Who removed it, when, and why are unknown, and the leaves have never been recovered.",
   },
   {
     q: "Is the Codex Gigas connected to the Voynich Manuscript?",
@@ -62,6 +75,9 @@ export default function CodexGigasNote() {
           </p>
           <p className="fn-body">
             Emperor Rudolf II of Bohemia acquired the Codex Gigas for his legendary collection at Prague Castle. The Swedish army, during the Thirty Years War, seized it from Prague as war booty in 1648 and brought it to Stockholm. It has been in the collections of the National Library of Sweden (<em>Kungliga biblioteket</em>) ever since, where it was displayed publicly for the first time in 2007. It is now accessible in full-resolution digital form at <a href="https://www.codexgigas.se" target="_blank" rel="noopener noreferrer">codexgigas.se</a>.
+          </p>
+          <p className="fn-body">
+            One thing about the manuscript is genuinely unresolved: part of it is gone. The National Library of Sweden counts 310 surviving parchment leaves, and the quire structure — the physical gatherings the volume is built from — shows that one complete gathering was cut out before the Codex left Bohemia. How many leaves that gathering held is not agreed on. Published figures range from eight to twelve, and the manuscript&apos;s re-trimming and its seventeenth-century foliation make a precise reckoning difficult. The most frequently cited scholarly guess about the contents is the Rule of St. Benedict, the founding regulations of the order, possibly removed to keep a monastery&apos;s internal governance out of view. Who removed the leaves, when, and why are all unknown. They have never surfaced.
           </p>
           <p className="fn-body">
             Sources: <a href="https://www.kb.se/codex-gigas" target="_blank" rel="noopener noreferrer">National Library of Sweden</a>; Wikipedia: Codex Gigas.

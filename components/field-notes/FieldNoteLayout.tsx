@@ -30,6 +30,8 @@ export interface FieldNoteProps {
   faqs: FaqItem[];
   relatedNotes: RelatedNote[];
   datePublished?: string;    // ISO date, e.g. "2026-06-12"
+  /** Absolute URL. Defaults to the per-slug card; set it when a note has no bespoke card yet. */
+  ogImage?: string;
 }
 
 export default function FieldNoteLayout({
@@ -45,6 +47,7 @@ export default function FieldNoteLayout({
   faqs,
   relatedNotes,
   datePublished = "2026-06-12",
+  ogImage,
 }: FieldNoteProps) {
   const baseUrl = "https://jasoncholloway.com";
   const url = `${baseUrl}/field-notes/${slug}/`;
@@ -59,7 +62,7 @@ export default function FieldNoteLayout({
     "author": { "@id": `${baseUrl}/#person` },
     "publisher": { "@id": `${baseUrl}/#organization` },
     "mainEntityOfPage": { "@type": "WebPage", "@id": url },
-    "image": `${baseUrl}/og/field-notes/${slug}.png`,
+    "image": ogImage ?? `${baseUrl}/og/field-notes/${slug}.png`,
   };
 
   const faqJsonLd = faqs.length > 0 ? {

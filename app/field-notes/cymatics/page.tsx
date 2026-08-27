@@ -39,6 +39,7 @@ const faqs = [
 ];
 
 const related = [
+  { href: "/field-notes/archaeoacoustics", label: "Archaeoacoustics: The Discipline", theme: "The Frequency" },
   { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
   { href: "/field-notes/strahov-monastery", label: "The Strahov Library, Prague", theme: "The Sites" },
   { href: "/field-notes/u2-test-pilots", label: "U-2 Test Pilots at 70,000 Feet", theme: "The Frequency" },

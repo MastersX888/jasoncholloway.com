@@ -12,6 +12,15 @@ export const metadata: Metadata = buildMetadata({
     "The Ħal-Saflieni Hypogeum, Lascaux, Chartres, the Volta Region caves of Ghana. Acoustic researchers have documented a recurring resonant frequency across ancient stone structures. This is the honest explainer.",
   path: "/field-notes/111-hz/",
   ogType: "article",
+  keywords: [
+    "111 Hz",
+    "111.2 Hz",
+    "111 Hz frequency",
+    "ancient temple resonance",
+    "Ħal-Saflieni Hypogeum",
+    "standing wave stone chamber",
+    "Schumann resonance fiction",
+  ],
   image: {
     url: "https://jasoncholloway.com/og/field-notes/111-hz.png",
     width: 1024,
@@ -34,12 +43,13 @@ const faqs = [
     a: "The Ħal-Saflieni Hypogeum is an underground Neolithic temple in Malta, carved from limestone approximately 3600–2500 BCE. It is a UNESCO World Heritage Site. The Oracle Chamber within the Hypogeum is the location most associated with the 111 Hz resonance research. Access is tightly controlled — only 80 visitors per day are permitted.",
   },
   {
-    q: "What is archaeoacoustics?",
-    a: "Archaeoacoustics is the study of the acoustic properties of ancient sites — caves, megalithic structures, temples. Researchers in the field record and analyze the resonant frequencies, reverberation times, and sound behavior of prehistoric and historic built environments to understand whether acoustic properties were designed or incidental.",
+    q: "Is 111 Hz the same as the 111.2 Hz in the novels?",
+    a: "No. The published measurements cluster in a band — roughly 110 to 112 Hz at the most-cited sites, and 95 to 120 Hz across the wider literature. There is no single canonical figure in the research. 111.2 Hz is the trilogy's precise value: the frequency the novels treat as the carrier, and the one the Analysis Chamber instruments are tuned to. The band is documented; the decimal is fiction.",
   },
 ];
 
 const related = [
+  { href: "/field-notes/archaeoacoustics", label: "Archaeoacoustics: The Discipline", theme: "The Frequency" },
   { href: "/field-notes/subtropolis", label: "SubTropolis, Kansas City", theme: "Beneath Kansas City" },
   { href: "/field-notes/strahov-monastery", label: "The Strahov Library, Prague", theme: "The Sites" },
   { href: "/field-notes/cymatics", label: "Cymatics: Sound Made Visible", theme: "The Frequency" },
@@ -60,7 +70,11 @@ export default function HzNote() {
             The most frequently cited source for the 111 Hz claim is research conducted at the Ħal-Saflieni Hypogeum in Malta — a Neolithic limestone temple complex dating to approximately 3600–2500 BCE, now a UNESCO World Heritage Site. In the Oracle Chamber of the Hypogeum, researchers have documented a pronounced resonant frequency around 110–111 Hz. The chamber&apos;s geometry — a roughly oval space with a curved limestone ceiling — produces strong standing waves at this frequency; male voices chanting in this range create a particularly intense reverberant effect.
           </p>
           <p className="fn-body">
-            Dr. Paul Devereux, a researcher in archaeoacoustics, and colleagues systematically measured resonant frequencies at multiple megalithic sites across Britain and Ireland. Their work, summarized in the journal{" "}
+            Dr. Paul Devereux, a researcher in{" "}
+            <Link href="/field-notes/archaeoacoustics" style={{ color: "var(--gold)" }}>
+              archaeoacoustics
+            </Link>
+            , and colleagues systematically measured resonant frequencies at multiple megalithic sites across Britain and Ireland. Their work, summarized in the journal{" "}
             <a href="https://doi.org/10.1121/1.414642" target="_blank" rel="noopener noreferrer">
               <em>Journal of the Acoustical Society of America</em>
             </a>{" "}
@@ -105,7 +119,7 @@ export default function HzNote() {
         paragraphs: [
           '"The frequency is geological. Every stone chamber on earth with appropriate mineral composition and dimensions produces a standing wave in the range of 110 to 112 hertz. This is not a discovery, it is a measurement. The frequency has been present in every stone structure since the Paleolithic. The caves at Lascaux produce it. The Hypogeum of Ħal-Saflieni produces it. The crypt at Strahov Monastery produces it. The laterite caves of the Volta Region in Ghana produce it. The earth has been broadcasting this frequency continuously since its formation."',
         ],
-        attribution: "Masters X: The Kingdom",
+        attribution: "Masters X: The Grimoire",
       }}
       bookHref="/books/masters-x/the-inheritance-of-frequency"
       faqs={faqs}

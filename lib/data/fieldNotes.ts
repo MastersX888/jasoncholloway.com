@@ -77,6 +77,17 @@ export const themes: { id: string; label: string; notes: FieldNote[] }[] = [
         ],
       },
       {
+        href: "/field-notes/archaeoacoustics",
+        slug: "archaeoacoustics",
+        label: "Science",
+        title: "Archaeoacoustics: How Ancient Sound Is Measured",
+        desc: "The discipline behind the trilogy's premise: how researchers measure the acoustics of caves, tombs, and temples — and why intentionality is still the open question.",
+        volumes: [
+          { slug: "the-grimoire", title: "The Grimoire", label: "Volume II" },
+          { slug: "the-kingdom", title: "The Kingdom", label: "Volume III" },
+        ],
+      },
+      {
         href: "/field-notes/cymatics",
         slug: "cymatics",
         label: "Physics",

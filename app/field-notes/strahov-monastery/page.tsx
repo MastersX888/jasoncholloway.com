@@ -39,6 +39,7 @@ const faqs = [
 ];
 
 const related = [
+  { href: "/field-notes/archaeoacoustics", label: "Archaeoacoustics: The Discipline", theme: "The Frequency" },
   { href: "/field-notes/voynich-manuscript", label: "The Voynich Manuscript", theme: "The Manuscripts" },
   { href: "/field-notes/111-hz", label: "111 Hz: The Frequency", theme: "The Frequency" },
   { href: "/field-notes/codex-gigas", label: "The Codex Gigas", theme: "The Manuscripts" },

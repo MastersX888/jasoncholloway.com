@@ -25,11 +25,10 @@ export const metadata: Metadata = buildMetadata({
     "Paul Devereux",
   ],
   image: {
-    // No bespoke card for this note yet — it borrows the Field Notes hub card.
-    url: "https://jasoncholloway.com/og/field-notes/hub.png",
+    url: "https://jasoncholloway.com/og/field-notes/archaeoacoustics.png",
     width: 1024,
     height: 1024,
-    alt: "Illustration: a stone chamber cross-section overlaid with a resonance curve",
+    alt: "Illustration: cutaway of a corbelled stone chamber with gold standing-wave arcs inside it, drawn on aged vellum",
   },
 });
 
@@ -70,7 +69,6 @@ export default function ArchaeoacousticsNote() {
       title="Archaeoacoustics: Measuring How Old Rooms Listen"
       titleTag="Archaeoacoustics: What It Measures"
       theme="The Frequency"
-      ogImage="https://jasoncholloway.com/og/field-notes/hub.png"
       lede="Archaeoacoustics is the study of how ancient built spaces behave as acoustic instruments — how caves, chambered tombs, temples, and stone circles resonate, reverberate, and shape a human voice. The measurements are real, reproducible, and published. What they mean is one of the most honestly unresolved questions in archaeology, and one of the most dishonestly answered questions on the internet."
       record={
         <>

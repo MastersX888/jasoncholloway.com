@@ -13,8 +13,10 @@ const HOME_DESCRIPTION =
   "The Masters X trilogy: three generations, seven hidden sites, one frequency. Literary conspiracy fiction that ends where Dan Brown never could — inside you.";
 
 export const metadata: Metadata = {
+  // Hook-forward and inside the ~60-char SERP window: the author name is already carried by
+  // the domain, the h1, and the Person schema, but "meditation on listening" is only here.
   title: {
-    absolute: "Jason Carroll Holloway — Masters X: A Conspiracy Thriller That Becomes a Meditation on Listening",
+    absolute: "Masters X: A Conspiracy That Becomes a Meditation on Listening",
   },
   description: HOME_DESCRIPTION,
   alternates: {

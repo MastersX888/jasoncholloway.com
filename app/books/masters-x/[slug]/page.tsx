@@ -31,16 +31,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const book = books.find((b) => b.slug === slug);
   if (!book) return {};
 
-  // These carry the brand suffix themselves, so they ship absolute rather than through
-  // the root layout's `%s | Jason Carroll Holloway` template.
+  // Absolute so the root layout's `%s | Jason Carroll Holloway` template doesn't push the
+  // volume number past the ~60-char SERP window; the domain already carries the brand.
   const volumeTitles: Record<string, string> = {
-    "the-inheritance-of-frequency": "The Inheritance of Frequency (Masters X Book I) | Jason Carroll Holloway",
-    "the-grimoire": "The Grimoire (Masters X Book II) | Jason Carroll Holloway",
-    "the-kingdom": "The Kingdom (Masters X Book III) | Jason Carroll Holloway",
-  };
-
-  // Share cards already render the brand via og:site_name, so they use the unsuffixed form.
-  const volumeSocialTitles: Record<string, string> = {
     "the-inheritance-of-frequency": "The Inheritance of Frequency — Masters X Book I",
     "the-grimoire": "The Grimoire — Masters X Book II",
     "the-kingdom": "The Kingdom — Masters X Book III",
@@ -54,7 +47,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 
   const title = volumeTitles[slug] ?? book.subtitle;
-  const socialTitle = volumeSocialTitles[slug] ?? title;
   const description = volumeDescs[slug] ?? book.excerpt;
   const coverUrl = `https://jasoncholloway.com${book.coverImagePB}`;
   const coverAlt = `${book.title}: ${book.subtitle} — cover`;
@@ -69,14 +61,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : [...book.keywords, "books about frequency", "sound healing fiction", "Kansas City novel", "Gospel of Thomas"],
     openGraph: {
       type: "book",
-      title: socialTitle,
+      title,
       description,
       url: `https://jasoncholloway.com/books/masters-x/${slug}/`,
       images: [{ url: coverUrl, alt: coverAlt }],
     },
     twitter: {
       card: "summary_large_image",
-      title: socialTitle,
+      title,
       description,
       images: [coverUrl],
     },

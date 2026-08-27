@@ -19,15 +19,19 @@ import {
   MASTERS_X_KEYWORDS,
 } from "@/lib/seo/mastersXEntities";
 
+// The comp titles that used to live in this description now have their own
+// /books/books-like-* landing pages, so naming them here only split the signal.
 export const metadata: Metadata = {
-  title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+  title: {
+    absolute: "Masters X Trilogy — A Literary Conspiracy That Turns Inward",
+  },
   description:
-    "Three novels following a fired Kansas City security guard who inherits classified acoustic research pointing to a sealed Prague crypt. For readers of Foucault's Pendulum, The Da Vinci Code, and Cloud Cuckoo Land. By Jason Carroll Holloway. Published by Seventh City Press.",
+    "A fired Kansas City security guard inherits classified acoustic research pointing to a sealed Prague crypt. Three novels that end somewhere quieter.",
   alternates: {
     canonical: "https://jasoncholloway.com/books/masters-x/",
   },
   openGraph: {
-    title: "Masters X Trilogy — Kansas City Conspiracy Thriller",
+    title: "Masters X Trilogy — A Literary Conspiracy That Turns Inward",
     description: "Three novels where the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency converge beneath Kansas City and Prague.",
     url: "https://jasoncholloway.com/books/masters-x/",
   },

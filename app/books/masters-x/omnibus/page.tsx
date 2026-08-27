@@ -23,7 +23,7 @@ const omnibusPagesPB = omnibus?.pageCountPB ?? omnibus?.pageCount;
 
 export const metadata: Metadata = {
   title: {
-    absolute: `Masters X: The Complete Trilogy (Omnibus) — ${omnibusPagesHC}-Page Hardcover | Jason Carroll Holloway`,
+    absolute: `Masters X: The Complete Trilogy — ${omnibusPagesHC}-Page Hardcover`,
   },
   description: `All three Masters X novels in one volume — ${omnibusPagesHC} pages hardcover / ${omnibusPagesPB} paperback. The Inheritance of Frequency, The Grimoire, The Kingdom. One book, one order.`,
   alternates: {

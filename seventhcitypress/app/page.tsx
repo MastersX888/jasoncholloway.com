@@ -186,11 +186,11 @@ const kitFiles = [
 ];
 
 const trilogyCovers = [
-  { label: "Vol. I — Paperback", src: "/covers/book1-paperback.png" },
+  { label: "Vol. I — Paperback", src: "/covers/book1-paperback-web.jpg" },
   { label: "Vol. I — Hardcover", src: "/covers/book1-hardcover-v3.png" },
-  { label: "Vol. II — Paperback", src: "/covers/book2-paperback.png" },
+  { label: "Vol. II — Paperback", src: "/covers/book2-paperback-web.jpg" },
   { label: "Vol. II — Hardcover", src: "/covers/book2-hardcover-v3.png" },
-  { label: "Vol. III — Paperback", src: "/covers/book3-paperback.png" },
+  { label: "Vol. III — Paperback", src: "/covers/book3-paperback-web.jpg" },
   { label: "Vol. III — Hardcover", src: "/covers/book3-hardcover-v3.png" },
 ];
 

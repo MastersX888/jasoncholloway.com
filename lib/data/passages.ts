@@ -39,7 +39,7 @@ export const homepagePassageSequence: PassageBeat[] = [
     paragraphs: [
       "The box lists only one authorized heir. Not your father. Not your mother. You.",
       "1968. The year William stopped flying test planes and moved his family to Missouri and never explained why. He'd paid for a box fifty-seven years in advance, timed to arrive at just this moment.",
-      "Before Blake was delivered. Before his father was born. William had set this in motion, aimed at a future grandson he would never meet.",
+      "Before Blake was delivered. Before his father was born. William had set this in motion, aimed at a grandson who did not yet exist.",
     ],
     attribution: "Masters X: The Inheritance of Frequency",
     href: momentPath("safety-deposit-box"),

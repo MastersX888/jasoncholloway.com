@@ -4,8 +4,16 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const OUT = "/workspace/cartographer/artifacts";
+// Resolve from this file's location so the pipeline runs outside the original
+// /workspace cloud environment; CARTOGRAPHER_ROOT still overrides if needed.
+// Matches the resolution already used by phase1_normalize.mjs and
+// phase2_concordance.mjs. No behavioural change in the original layout.
+const ROOT =
+  process.env.CARTOGRAPHER_ROOT ||
+  path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const OUT = path.join(ROOT, "artifacts");
 
 // Minimal CSV parse without dependency
 function parseCsv(text) {

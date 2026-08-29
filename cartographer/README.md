@@ -1,5 +1,11 @@
 # CARTOGRAPHER — Masters X Geographic Integrity Audit
 
+> **Before running any phase script, read [`REGEN_2026-08-29.md`](./REGEN_2026-08-29.md).**
+> `corpus_raw/omnibus_v8_fulltext.txt` is the **pre-geo-fix** omnibus. The geo fixes
+> were applied by phase8 directly to `corpus/`, never back into that raw file, so
+> re-running `phase1_normalize.mjs` against the default input **reverts 39 geo
+> fixes**. Use `production_staging/_sources/OMNIBUS_CURRENT_DRAFT_GEO_FIXED.txt`.
+
 ## Deliverables (Section 7)
 
 | Artifact | Path |

@@ -21,7 +21,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1318|B1:3657|B3:2853"
+    "sample_lines": "B1:1318|B1:3661|B3:2852"
   },
   {
     "entity": "Then Nadia",
@@ -29,7 +29,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1378|B1:2056|B1:2379"
+    "sample_lines": "B1:1378|B1:2059|B1:2383"
   },
   {
     "entity": "Father Moreau",
@@ -37,7 +37,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1578|B1:1589|B1:1843"
+    "sample_lines": "B1:1578|B1:1589|B1:1846"
   },
   {
     "entity": "In Prague",
@@ -45,7 +45,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1865|B1:2698|B1:2767"
+    "sample_lines": "B1:1868|B1:2702|B1:2771"
   },
   {
     "entity": "Then Prague",
@@ -53,7 +53,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2487|B1:2695|B1:2727"
+    "sample_lines": "B1:2491|B1:2699|B1:2731"
   },
   {
     "entity": "Codex Gigas",
@@ -61,7 +61,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2560|B1:2594|B3:1346"
+    "sample_lines": "B1:2564|B1:2598|B3:1346"
   },
   {
     "entity": "Then Blake",
@@ -69,7 +69,7 @@
     "occurrence_count": 3,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3315|B1:3373|B2:7167"
+    "sample_lines": "B1:3319|B1:3377|B2:7167"
   },
   {
     "entity": "The Third Way",
@@ -77,7 +77,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3491|B1:3684|B1:4047"
+    "sample_lines": "B1:3495|B1:3688|B1:4051"
   },
   {
     "entity": "Site Echo",
@@ -85,7 +85,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4223|B1:4238|B3:4323"
+    "sample_lines": "B1:4227|B1:4242|B3:4322"
   },
   {
     "entity": "Nadia Katar",
@@ -93,7 +93,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4589|B1:4610|B3:3883"
+    "sample_lines": "B1:4593|B1:4614|B3:3881"
   },
   {
     "entity": "The Don Quixote",
@@ -117,7 +117,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:1190|B2:6388|B3:3896"
+    "sample_lines": "B2:1190|B2:6388|B3:3894"
   },
   {
     "entity": "Senator Holt",
@@ -126,6 +126,14 @@
     "books": "2",
     "categories": "proper_noun_phrase",
     "sample_lines": "B2:1658|B2:6598|B2:6599"
+  },
+  {
+    "entity": "The Iceland",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:1765|B3:2367|B3:4593"
   },
   {
     "entity": "The Testament",
@@ -141,7 +149,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:2040|B2:4554|B3:5058"
+    "sample_lines": "B2:2040|B2:4554|B3:5057"
   },
   {
     "entity": "Sagrada Fam",
@@ -181,7 +189,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5251|B2:5347|B3:1722"
+    "sample_lines": "B2:5251|B2:5347|B3:1720"
   },
   {
     "entity": "Father Emmanuel Crane Jr",
@@ -189,7 +197,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5339|B3:1887|B3:1981"
+    "sample_lines": "B2:5339|B3:1885|B3:1979"
   },
   {
     "entity": "The All",
@@ -213,14 +221,6 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:6405|B2:7208|B3:4612"
-  },
-  {
-    "entity": "55 Hz",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 3,
-    "books": "3",
-    "categories": "address",
-    "sample_lines": "B3:79|B3:3677|B3:4107"
+    "sample_lines": "B2:6405|B2:7208|B3:4611"
   }
 ]

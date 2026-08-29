@@ -5,7 +5,7 @@
     "occurrence_count": 37,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:199|B1:535|B1:748|B1:966|B1:1231|B1:1489|B1:1698|B1:1915|B1:2072|B1:2227|B1:2508|B1:2734|B1:3838|B1:3936|B1:4061|B2:2476|B2:2498|B2:2508|B2:3481|B2:3798"
+    "sample_lines": "B1:199|B1:535|B1:748|B1:966|B1:1231|B1:1489|B1:1698|B1:1918|B1:2075|B1:2230|B1:2512|B1:2738|B1:3842|B1:3940|B1:4065|B2:2476|B2:2498|B2:2508|B2:3481|B2:3798"
   },
   {
     "entity": "The Breitling",
@@ -13,7 +13,7 @@
     "occurrence_count": 30,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:524|B1:952|B1:1929|B1:3737|B1:3855|B1:3887|B2:433|B2:1985|B2:2142|B2:2681|B2:4738|B2:4855|B2:5747|B2:5880|B2:5916|B2:6114|B2:6152|B2:6431|B2:6485|B2:6566"
+    "sample_lines": "B1:524|B1:952|B1:1932|B1:3741|B1:3859|B1:3891|B2:433|B2:1985|B2:2142|B2:2681|B2:4738|B2:4855|B2:5747|B2:5880|B2:5916|B2:6114|B2:6152|B2:6431|B2:6485|B2:6566"
   },
   {
     "entity": "Blake Masters",
@@ -21,7 +21,7 @@
     "occurrence_count": 25,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:19|B1:200|B1:468|B2:1490|B2:1660|B2:3815|B2:4727|B2:4857|B2:5602|B2:6081|B2:7183|B2:7326|B2:7434|B3:38|B3:92|B3:286|B3:1418|B3:1841|B3:2033|B3:3778"
+    "sample_lines": "B1:19|B1:200|B1:468|B2:1490|B2:1660|B2:3815|B2:4727|B2:4857|B2:5602|B2:6081|B2:7183|B2:7326|B2:7434|B3:38|B3:92|B3:286|B3:1418|B3:1839|B3:2031|B3:3776"
   },
   {
     "entity": "Nadia Volkov",
@@ -29,7 +29,7 @@
     "occurrence_count": 22,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:567|B2:195|B2:211|B2:617|B2:1185|B2:1465|B2:1493|B2:4873|B2:4874|B2:6081|B2:6189|B2:6392|B3:444|B3:1449|B3:2162|B3:3340|B3:3406|B3:3424|B3:3424|B3:4043"
+    "sample_lines": "B1:567|B2:195|B2:211|B2:617|B2:1185|B2:1465|B2:1493|B2:4873|B2:4874|B2:6081|B2:6189|B2:6392|B3:444|B3:1449|B3:2160|B3:3340|B3:3406|B3:3424|B3:3424|B3:4042"
   },
   {
     "entity": "Volta Region",
@@ -37,7 +37,7 @@
     "occurrence_count": 15,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:641|B2:661|B2:699|B2:1848|B2:4198|B2:4210|B2:4414|B2:4433|B2:4485|B2:6186|B2:6694|B2:6993|B2:7182|B2:7450|B3:3550"
+    "sample_lines": "B2:641|B2:661|B2:699|B2:1848|B2:4198|B2:4210|B2:4414|B2:4433|B2:4485|B2:6186|B2:6694|B2:6993|B2:7182|B2:7450|B3:3548"
   },
   {
     "entity": "108 Hz",
@@ -45,7 +45,7 @@
     "occurrence_count": 15,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2234|B2:2245|B2:2253|B2:2353|B3:377|B3:386|B3:389|B3:394|B3:1184|B3:1193|B3:1242|B3:1811|B3:2103|B3:3442|B3:4411"
+    "sample_lines": "B2:2234|B2:2245|B2:2253|B2:2353|B3:377|B3:386|B3:389|B3:394|B3:1184|B3:1193|B3:1242|B3:1809|B3:2101|B3:3440|B3:4410"
   },
   {
     "entity": "The Strahov",
@@ -53,7 +53,7 @@
     "occurrence_count": 13,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2499|B1:2862|B1:3415|B1:3916|B2:131|B2:165|B2:707|B2:2014|B2:3362|B2:4552|B2:5110|B3:562|B3:1969"
+    "sample_lines": "B1:2503|B1:2866|B1:3419|B1:3920|B2:131|B2:165|B2:707|B2:2014|B2:3362|B2:4552|B2:5110|B3:562|B3:1967"
   },
   {
     "entity": "Andrew Chen",
@@ -61,7 +61,7 @@
     "occurrence_count": 12,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1520|B2:5471|B2:5474|B2:5603|B2:5641|B2:6974|B2:7084|B3:554|B3:626|B3:3064|B3:4662|B3:4680"
+    "sample_lines": "B1:1520|B2:5471|B2:5474|B2:5603|B2:5641|B2:6974|B2:7084|B3:554|B3:626|B3:3064|B3:4661|B3:4679"
   },
   {
     "entity": "The Moleskine",
@@ -69,7 +69,7 @@
     "occurrence_count": 11,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:210|B2:289|B2:4233|B2:5744|B2:5896|B2:6431|B2:7262|B2:7266|B3:432|B3:3813|B3:4175"
+    "sample_lines": "B2:210|B2:289|B2:4233|B2:5744|B2:5896|B2:6431|B2:7262|B2:7266|B3:432|B3:3811|B3:4174"
   },
   {
     "entity": "83 Hz",
@@ -77,7 +77,7 @@
     "occurrence_count": 11,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2308|B2:5454|B2:5533|B3:631|B3:2111|B3:3049|B3:4509|B3:4582|B3:4639|B3:4655|B3:4674"
+    "sample_lines": "B2:2308|B2:5454|B2:5533|B3:631|B3:2109|B3:3049|B3:4508|B3:4581|B3:4638|B3:4654|B3:4673"
   },
   {
     "entity": "Jefferson City",
@@ -85,7 +85,7 @@
     "occurrence_count": 10,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1930"
+    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1933"
   },
   {
     "entity": "Ama Ata",
@@ -101,7 +101,7 @@
     "occurrence_count": 9,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:379|B1:731|B1:993|B1:1507|B1:2739|B1:2881|B1:3536|B2:4074|B2:7382"
+    "sample_lines": "B1:379|B1:731|B1:993|B1:1507|B1:2743|B1:2885|B1:3540|B2:4074|B2:7382"
   },
   {
     "entity": "915 Hz",
@@ -109,7 +109,7 @@
     "occurrence_count": 9,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:12|B2:236|B2:610|B2:3183|B2:5417|B2:5648|B2:6423|B3:625|B3:4457"
+    "sample_lines": "B2:12|B2:236|B2:610|B2:3183|B2:5417|B2:5648|B2:6423|B3:625|B3:4456"
   },
   {
     "entity": "Yuki Tanaka",
@@ -125,7 +125,7 @@
     "occurrence_count": 8,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:251|B3:850|B3:1175|B3:1767|B3:2347|B3:3471|B3:4035|B3:4232"
+    "sample_lines": "B3:251|B3:850|B3:1175|B3:1765|B3:2345|B3:3469|B3:4034|B3:4231"
   },
   {
     "entity": "And Blake",
@@ -133,7 +133,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:310|B1:1654|B1:1897|B1:2852|B1:3239|B1:4180|B2:5611"
+    "sample_lines": "B1:310|B1:1654|B1:1900|B1:2856|B1:3243|B1:4184|B2:5611"
   },
   {
     "entity": "The Ars Notoria",
@@ -141,7 +141,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1338|B1:2574|B2:842|B2:862|B2:1043|B2:2011|B2:2040"
+    "sample_lines": "B1:1338|B1:2578|B2:842|B2:862|B2:1043|B2:2011|B2:2040"
   },
   {
     "entity": "Father Crane",
@@ -149,7 +149,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1823|B1:2462|B1:3628|B1:4388|B2:3511|B2:5373|B2:5383"
+    "sample_lines": "B1:1826|B1:2466|B1:3632|B1:4392|B2:3511|B2:5373|B2:5383"
   },
   {
     "entity": "The Church",
@@ -157,7 +157,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1842|B1:1851|B2:877|B2:986|B2:990|B3:4808|B3:4810"
+    "sample_lines": "B1:1845|B1:1854|B2:877|B2:986|B2:990|B3:4807|B3:4809"
   },
   {
     "entity": "The Watchers",
@@ -165,7 +165,7 @@
     "occurrence_count": 7,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3464|B1:3472|B1:3480|B1:3514|B1:3860|B1:3871|B1:3873"
+    "sample_lines": "B1:3468|B1:3476|B1:3484|B1:3518|B1:3864|B1:3875|B1:3877"
   },
   {
     "entity": "60 Hz",
@@ -173,7 +173,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:4476|B1:4588|B2:1001|B3:80|B3:4233|B3:4793|B3:4857"
+    "sample_lines": "B1:4480|B1:4592|B2:1001|B3:80|B3:4232|B3:4792|B3:4856"
   },
   {
     "entity": "Sabrina Volkov",
@@ -181,7 +181,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:21|B2:1420|B2:1794|B2:3056|B3:2205|B3:2574|B3:2838"
+    "sample_lines": "B2:21|B2:1420|B2:1794|B2:3056|B3:2203|B3:2573|B3:2837"
   },
   {
     "entity": "Sefer Yetzirah",
@@ -205,7 +205,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:1953|B2:1967|B3:2861|B3:3178|B3:3208|B3:3209|B3:3235"
+    "sample_lines": "B2:1953|B2:1967|B3:2860|B3:3178|B3:3208|B3:3209|B3:3235"
   },
   {
     "entity": "The Gothic",
@@ -221,6 +221,6 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:6818|B3:934|B3:1016|B3:1247|B3:3017|B3:4229|B3:4253"
+    "sample_lines": "B2:6818|B3:934|B3:1016|B3:1247|B3:3017|B3:4228|B3:4252"
   }
 ]

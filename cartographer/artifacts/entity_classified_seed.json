@@ -5,7 +5,7 @@
     "occurrence_count": 243,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:844|B1:2653|B1:4333|B1:4412|B1:4499|B1:4500|B1:4524|B1:4527|B1:4542|B1:4571|B1:4605|B2:196|B2:312|B2:543|B2:611|B2:636|B2:698|B2:717|B2:739|B2:788"
+    "sample_lines": "B1:844|B1:2657|B1:4337|B1:4416|B1:4503|B1:4504|B1:4528|B1:4531|B1:4546|B1:4575|B1:4609|B2:196|B2:312|B2:543|B2:611|B2:636|B2:698|B2:717|B2:739|B2:788"
   },
   {
     "entity": "Kansas City",
@@ -13,12 +13,12 @@
     "occurrence_count": 128,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:199|B1:535|B1:748|B1:888|B1:966|B1:1001|B1:1231|B1:1310|B1:1489|B1:1491|B1:1626|B1:1698|B1:1721|B1:1915|B1:2072|B1:2227|B1:2232|B1:2462|B1:2508|B1:2698"
+    "sample_lines": "B1:199|B1:535|B1:748|B1:888|B1:966|B1:1001|B1:1231|B1:1310|B1:1489|B1:1491|B1:1626|B1:1698|B1:1721|B1:1918|B1:2075|B1:2230|B1:2235|B1:2466|B1:2512|B1:2702"
   },
   {
     "entity": "Iceland",
     "class": "REAL_WORLD",
-    "occurrence_count": 109,
+    "occurrence_count": 111,
     "books": "1;2;3",
     "categories": "gazetteer",
     "sample_lines": "B1:19|B2:12|B2:40|B2:45|B2:156|B2:236|B2:242|B2:610|B2:765|B2:783|B2:815|B2:904|B2:1083|B2:1163|B2:1170|B2:1210|B2:1325|B2:1556|B2:1765|B2:1820"
@@ -29,7 +29,7 @@
     "occurrence_count": 103,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:76|B1:181|B1:1865|B1:2443|B1:2444|B1:2482|B1:2486|B1:2487|B1:2488|B1:2499|B1:2681|B1:2685|B1:2688|B1:2695|B1:2698|B1:2699|B1:2713|B1:2719|B1:2723|B1:2727"
+    "sample_lines": "B1:76|B1:181|B1:1868|B1:2447|B1:2448|B1:2486|B1:2490|B1:2491|B1:2492|B1:2503|B1:2685|B1:2689|B1:2692|B1:2699|B1:2702|B1:2703|B1:2717|B1:2723|B1:2727|B1:2731"
   },
   {
     "entity": "Strahov",
@@ -37,15 +37,15 @@
     "occurrence_count": 91,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:2149|B1:2457|B1:2476|B1:2488|B1:2499|B1:2688|B1:2720|B1:2737|B1:2838|B1:2862|B1:2952|B1:3035|B1:3080|B1:3225|B1:3246|B1:3250|B1:3415|B1:3431|B1:3696|B1:3709"
+    "sample_lines": "B1:2152|B1:2461|B1:2480|B1:2492|B1:2503|B1:2692|B1:2724|B1:2741|B1:2842|B1:2866|B1:2956|B1:3039|B1:3084|B1:3229|B1:3250|B1:3254|B1:3419|B1:3435|B1:3700|B1:3713"
   },
   {
-    "entity": "Quality Hill",
+    "entity": "SubTropolis",
     "class": "HYBRID",
-    "occurrence_count": 43,
+    "occurrence_count": 41,
     "books": "1;2;3",
-    "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B1:4468|B1:4468|B2:1495|B2:1495|B2:1622|B2:1622|B2:1773|B2:1773|B2:1819|B2:1819|B2:3108|B2:3108|B3:53|B3:1429|B3:2147|B3:2147|B3:2265|B3:2334|B3:2334|B3:4005"
+    "categories": "gazetteer",
+    "sample_lines": "B1:263|B1:373|B1:456|B1:458|B1:501|B1:585|B1:694|B1:796|B1:949|B1:1040|B1:1266|B1:1298|B1:1462|B1:1723|B1:1725|B1:1880|B1:2110|B1:2111|B1:2205|B1:2229"
   },
   {
     "entity": "Cognigenics",
@@ -56,20 +56,12 @@
     "sample_lines": "B2:544|B2:1271|B2:1358|B2:1436|B2:2038|B2:2065|B2:2089|B2:2755|B2:2758|B2:2781|B2:2782|B2:2814|B2:2949|B2:3010|B2:3067|B2:3111|B2:3117|B2:4937|B2:4946|B2:4947"
   },
   {
-    "entity": "SubTropolis",
-    "class": "HYBRID",
-    "occurrence_count": 39,
-    "books": "1;2;3",
-    "categories": "gazetteer",
-    "sample_lines": "B1:263|B1:373|B1:456|B1:458|B1:501|B1:585|B1:694|B1:796|B1:949|B1:1040|B1:1266|B1:1298|B1:1462|B1:1723|B1:1725|B1:1877|B1:2107|B1:2108|B1:2202|B1:2226"
-  },
-  {
     "entity": "109 Hz",
     "class": "AMBIGUOUS",
     "occurrence_count": 37,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:199|B1:535|B1:748|B1:966|B1:1231|B1:1489|B1:1698|B1:1915|B1:2072|B1:2227|B1:2508|B1:2734|B1:3838|B1:3936|B1:4061|B2:2476|B2:2498|B2:2508|B2:3481|B2:3798"
+    "sample_lines": "B1:199|B1:535|B1:748|B1:966|B1:1231|B1:1489|B1:1698|B1:1918|B1:2075|B1:2230|B1:2512|B1:2738|B1:3842|B1:3940|B1:4065|B2:2476|B2:2498|B2:2508|B2:3481|B2:3798"
   },
   {
     "entity": "Moreau",
@@ -77,7 +69,15 @@
     "occurrence_count": 35,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:987|B1:1312|B1:1313|B1:1578|B1:1589|B1:1727|B1:1752|B1:1754|B1:1794|B1:1803|B1:1813|B1:1814|B1:1843|B1:1844|B1:1876|B1:2180|B1:2190|B1:2345|B1:2349|B1:2545"
+    "sample_lines": "B1:987|B1:1312|B1:1313|B1:1578|B1:1589|B1:1729|B1:1755|B1:1757|B1:1797|B1:1806|B1:1816|B1:1817|B1:1846|B1:1847|B1:1879|B1:2183|B1:2193|B1:2349|B1:2353|B1:2549"
+  },
+  {
+    "entity": "Quality Hill",
+    "class": "HYBRID",
+    "occurrence_count": 35,
+    "books": "1;2;3",
+    "categories": "gazetteer;proper_noun_phrase",
+    "sample_lines": "B1:4472|B1:4472|B2:1495|B2:1495|B3:53|B3:1429|B3:2145|B3:2145|B3:2263|B3:2332|B3:2332|B3:3110|B3:3110|B3:4077|B3:4077|B3:4089|B3:4212|B3:4212|B3:4483|B3:4483"
   },
   {
     "entity": "Aldric",
@@ -85,7 +85,7 @@
     "occurrence_count": 34,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:13|B1:26|B1:33|B1:38|B1:44|B1:46|B1:55|B1:59|B1:63|B1:67|B1:74|B1:89|B1:95|B1:111|B1:130|B1:134|B1:147|B1:155|B1:181|B1:2603"
+    "sample_lines": "B1:13|B1:26|B1:33|B1:38|B1:44|B1:46|B1:55|B1:59|B1:63|B1:67|B1:74|B1:89|B1:95|B1:111|B1:130|B1:134|B1:147|B1:155|B1:181|B1:2607"
   },
   {
     "entity": "Volta",
@@ -96,12 +96,20 @@
     "sample_lines": "B2:641|B2:661|B2:671|B2:699|B2:730|B2:1848|B2:4162|B2:4198|B2:4210|B2:4241|B2:4254|B2:4414|B2:4433|B2:4485|B2:4563|B2:6186|B2:6361|B2:6405|B2:6458|B2:6694"
   },
   {
+    "entity": "Washington Street",
+    "class": "HYBRID",
+    "occurrence_count": 31,
+    "books": "2;3",
+    "categories": "gazetteer;street;proper_noun_phrase",
+    "sample_lines": "B2:619|B2:1494|B2:1494|B2:1494|B2:1622|B2:1622|B2:1622|B2:1773|B2:1773|B2:1773|B2:1819|B2:1819|B2:1819|B2:3091|B2:3091|B2:3091|B2:3108|B2:3108|B2:3108|B2:3504"
+  },
+  {
     "entity": "The Breitling",
     "class": "AMBIGUOUS",
     "occurrence_count": 30,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:524|B1:952|B1:1929|B1:3737|B1:3855|B1:3887|B2:433|B2:1985|B2:2142|B2:2681|B2:4738|B2:4855|B2:5747|B2:5880|B2:5916|B2:6114|B2:6152|B2:6431|B2:6485|B2:6566"
+    "sample_lines": "B1:524|B1:952|B1:1932|B1:3741|B1:3859|B1:3891|B2:433|B2:1985|B2:2142|B2:2681|B2:4738|B2:4855|B2:5747|B2:5880|B2:5916|B2:6114|B2:6152|B2:6431|B2:6485|B2:6566"
   },
   {
     "entity": "Ghana",
@@ -117,7 +125,7 @@
     "occurrence_count": 25,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:19|B1:200|B1:468|B2:1490|B2:1660|B2:3815|B2:4727|B2:4857|B2:5602|B2:6081|B2:7183|B2:7326|B2:7434|B3:38|B3:92|B3:286|B3:1418|B3:1841|B3:2033|B3:3778"
+    "sample_lines": "B1:19|B1:200|B1:468|B2:1490|B2:1660|B2:3815|B2:4727|B2:4857|B2:5602|B2:6081|B2:7183|B2:7326|B2:7434|B3:38|B3:92|B3:286|B3:1418|B3:1839|B3:2031|B3:3776"
   },
   {
     "entity": "Ars Notoria",
@@ -125,7 +133,7 @@
     "occurrence_count": 24,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1329|B1:1663|B1:2342|B1:2556|B1:2559|B1:3333|B2:119|B2:266|B2:438|B2:473|B2:874|B2:991|B2:1681|B2:1866|B2:1889|B2:1893|B2:2170|B2:2245|B2:2330|B2:3316"
+    "sample_lines": "B1:1329|B1:1663|B1:2346|B1:2560|B1:2563|B1:3337|B2:119|B2:266|B2:438|B2:473|B2:874|B2:991|B2:1681|B2:1866|B2:1889|B2:1893|B2:2170|B2:2245|B2:2330|B2:3316"
   },
   {
     "entity": "Nadia Volkov",
@@ -133,7 +141,7 @@
     "occurrence_count": 22,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:567|B2:195|B2:211|B2:617|B2:1185|B2:1465|B2:1493|B2:4873|B2:4874|B2:6081|B2:6189|B2:6392|B3:444|B3:1449|B3:2162|B3:3340|B3:3406|B3:3424|B3:3424|B3:4043"
+    "sample_lines": "B1:567|B2:195|B2:211|B2:617|B2:1185|B2:1465|B2:1493|B2:4873|B2:4874|B2:6081|B2:6189|B2:6392|B3:444|B3:1449|B3:2160|B3:3340|B3:3406|B3:3424|B3:3424|B3:4042"
   },
   {
     "entity": "Genessee Street",
@@ -141,7 +149,7 @@
     "occurrence_count": 18,
     "books": "1",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B1:1456|B1:1456|B1:1490|B1:1490|B1:1504|B1:1504|B1:1655|B1:1655|B1:2059|B1:2059|B1:2073|B1:2073|B1:2188|B1:2188|B1:2254|B1:2254|B1:2510|B1:2510"
+    "sample_lines": "B1:1456|B1:1456|B1:1490|B1:1490|B1:1504|B1:1504|B1:1655|B1:1655|B1:2062|B1:2062|B1:2076|B1:2076|B1:2191|B1:2191|B1:2258|B1:2258|B1:2514|B1:2514"
   },
   {
     "entity": "Volta Region",
@@ -149,7 +157,7 @@
     "occurrence_count": 15,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:641|B2:661|B2:699|B2:1848|B2:4198|B2:4210|B2:4414|B2:4433|B2:4485|B2:6186|B2:6694|B2:6993|B2:7182|B2:7450|B3:3550"
+    "sample_lines": "B2:641|B2:661|B2:699|B2:1848|B2:4198|B2:4210|B2:4414|B2:4433|B2:4485|B2:6186|B2:6694|B2:6993|B2:7182|B2:7450|B3:3548"
   },
   {
     "entity": "108 Hz",
@@ -157,7 +165,7 @@
     "occurrence_count": 15,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2234|B2:2245|B2:2253|B2:2353|B3:377|B3:386|B3:389|B3:394|B3:1184|B3:1193|B3:1242|B3:1811|B3:2103|B3:3442|B3:4411"
+    "sample_lines": "B2:2234|B2:2245|B2:2253|B2:2353|B3:377|B3:386|B3:389|B3:394|B3:1184|B3:1193|B3:1242|B3:1809|B3:2101|B3:3440|B3:4410"
   },
   {
     "entity": "UMKC",
@@ -165,7 +173,7 @@
     "occurrence_count": 14,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:537|B1:1193|B2:3402|B2:3534|B3:199|B3:249|B3:566|B3:1230|B3:1761|B3:1843|B3:3899|B3:4211|B3:4477|B3:4602"
+    "sample_lines": "B1:537|B1:1193|B2:3402|B2:3534|B3:199|B3:249|B3:566|B3:1230|B3:1759|B3:1841|B3:3897|B3:4210|B3:4476|B3:4601"
   },
   {
     "entity": "Specchi",
@@ -173,7 +181,7 @@
     "occurrence_count": 14,
     "books": "2;3",
     "categories": "gazetteer",
-    "sample_lines": "B2:5134|B2:5147|B2:5156|B2:5181|B2:5230|B3:497|B3:1627|B3:1643|B3:1650|B3:1660|B3:1739|B3:2368|B3:2394|B3:2988"
+    "sample_lines": "B2:5134|B2:5147|B2:5156|B2:5181|B2:5230|B3:497|B3:1625|B3:1641|B3:1648|B3:1658|B3:1737|B3:2366|B3:2392|B3:2988"
   },
   {
     "entity": "Oscar-01",
@@ -181,7 +189,7 @@
     "occurrence_count": 13,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:372|B1:512|B1:602|B1:804|B1:1951|B1:2475|B1:2861|B1:3754|B1:3756|B1:3990|B1:3993|B1:4005|B1:4025"
+    "sample_lines": "B1:372|B1:512|B1:602|B1:804|B1:1954|B1:2479|B1:2865|B1:3758|B1:3760|B1:3994|B1:3997|B1:4009|B1:4029"
   },
   {
     "entity": "The Strahov",
@@ -189,7 +197,7 @@
     "occurrence_count": 13,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2499|B1:2862|B1:3415|B1:3916|B2:131|B2:165|B2:707|B2:2014|B2:3362|B2:4552|B2:5110|B3:562|B3:1969"
+    "sample_lines": "B1:2503|B1:2866|B1:3419|B1:3920|B2:131|B2:165|B2:707|B2:2014|B2:3362|B2:4552|B2:5110|B3:562|B3:1967"
   },
   {
     "entity": "Andrew Chen",
@@ -197,15 +205,7 @@
     "occurrence_count": 12,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1520|B2:5471|B2:5474|B2:5603|B2:5641|B2:6974|B2:7084|B3:554|B3:626|B3:3064|B3:4662|B3:4680"
-  },
-  {
-    "entity": "Washington Street",
-    "class": "HYBRID",
-    "occurrence_count": 12,
-    "books": "2;3",
-    "categories": "gazetteer;street;proper_noun_phrase",
-    "sample_lines": "B2:1494|B2:1494|B2:1494|B2:3504|B2:3504|B2:3504|B2:3751|B2:3751|B2:3751|B3:501|B3:501|B3:501"
+    "sample_lines": "B1:1520|B2:5471|B2:5474|B2:5603|B2:5641|B2:6974|B2:7084|B3:554|B3:626|B3:3064|B3:4661|B3:4679"
   },
   {
     "entity": "The Moleskine",
@@ -213,7 +213,7 @@
     "occurrence_count": 11,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:210|B2:289|B2:4233|B2:5744|B2:5896|B2:6431|B2:7262|B2:7266|B3:432|B3:3813|B3:4175"
+    "sample_lines": "B2:210|B2:289|B2:4233|B2:5744|B2:5896|B2:6431|B2:7262|B2:7266|B3:432|B3:3811|B3:4174"
   },
   {
     "entity": "83 Hz",
@@ -221,7 +221,7 @@
     "occurrence_count": 11,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2308|B2:5454|B2:5533|B3:631|B3:2111|B3:3049|B3:4509|B3:4582|B3:4639|B3:4655|B3:4674"
+    "sample_lines": "B2:2308|B2:5454|B2:5533|B3:631|B3:2109|B3:3049|B3:4508|B3:4581|B3:4638|B3:4654|B3:4673"
   },
   {
     "entity": "Jefferson",
@@ -229,7 +229,7 @@
     "occurrence_count": 10,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1930"
+    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1933"
   },
   {
     "entity": "Jefferson City",
@@ -237,7 +237,7 @@
     "occurrence_count": 10,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1930"
+    "sample_lines": "B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1933"
   },
   {
     "entity": "Ama Ata",
@@ -253,7 +253,7 @@
     "occurrence_count": 9,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:379|B1:731|B1:993|B1:1507|B1:2739|B1:2881|B1:3536|B2:4074|B2:7382"
+    "sample_lines": "B1:379|B1:731|B1:993|B1:1507|B1:2743|B1:2885|B1:3540|B2:4074|B2:7382"
   },
   {
     "entity": "Genessee",
@@ -261,7 +261,7 @@
     "occurrence_count": 9,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:1456|B1:1490|B1:1504|B1:1655|B1:2059|B1:2073|B1:2188|B1:2254|B1:2510"
+    "sample_lines": "B1:1456|B1:1490|B1:1504|B1:1655|B1:2062|B1:2076|B1:2191|B1:2258|B1:2514"
   },
   {
     "entity": "Venice",
@@ -269,7 +269,7 @@
     "occurrence_count": 9,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:3505|B2:32|B2:5089|B2:5128|B2:5206|B2:5230|B2:6004|B3:1656|B3:2399"
+    "sample_lines": "B1:3509|B2:32|B2:5089|B2:5128|B2:5206|B2:5230|B2:6004|B3:1654|B3:2397"
   },
   {
     "entity": "915 Hz",
@@ -277,7 +277,7 @@
     "occurrence_count": 9,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:12|B2:236|B2:610|B2:3183|B2:5417|B2:5648|B2:6423|B3:625|B3:4457"
+    "sample_lines": "B2:12|B2:236|B2:610|B2:3183|B2:5417|B2:5648|B2:6423|B3:625|B3:4456"
   },
   {
     "entity": "Brother Aldric",
@@ -285,7 +285,7 @@
     "occurrence_count": 8,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:13|B1:26|B1:2603|B1:3581|B1:4259|B3:4348|B3:5368|B3:5393"
+    "sample_lines": "B1:13|B1:26|B1:2607|B1:3585|B1:4263|B3:4347|B3:5367|B3:5392"
   },
   {
     "entity": "Meramec Caverns",
@@ -293,7 +293,7 @@
     "occurrence_count": 8,
     "books": "1",
     "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B1:892|B1:892|B1:1041|B1:1041|B1:1069|B1:1069|B1:4005|B1:4005"
+    "sample_lines": "B1:892|B1:892|B1:1041|B1:1041|B1:1069|B1:1069|B1:4009|B1:4009"
   },
   {
     "entity": "West Bottoms",
@@ -301,7 +301,7 @@
     "occurrence_count": 8,
     "books": "1;2;3",
     "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B1:1496|B1:1496|B2:5153|B2:5153|B3:2926|B3:2926|B3:3126|B3:3126"
+    "sample_lines": "B1:1496|B1:1496|B2:5153|B2:5153|B3:2925|B3:2925|B3:3126|B3:3126"
   },
   {
     "entity": "Yuki Tanaka",
@@ -317,7 +317,7 @@
     "occurrence_count": 8,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:251|B3:850|B3:1175|B3:1767|B3:2347|B3:3471|B3:4035|B3:4232"
+    "sample_lines": "B3:251|B3:850|B3:1175|B3:1765|B3:2345|B3:3469|B3:4034|B3:4231"
   },
   {
     "entity": "Mýrdalsjökull",
@@ -325,7 +325,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:19|B2:43|B2:822|B3:11|B3:38|B3:5255|B3:5418"
+    "sample_lines": "B1:19|B2:43|B2:822|B3:11|B3:38|B3:5254|B3:5417"
   },
   {
     "entity": "And Blake",
@@ -333,7 +333,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:310|B1:1654|B1:1897|B1:2852|B1:3239|B1:4180|B2:5611"
+    "sample_lines": "B1:310|B1:1654|B1:1900|B1:2856|B1:3243|B1:4184|B2:5611"
   },
   {
     "entity": "Missouri River",
@@ -349,7 +349,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1338|B1:2574|B2:842|B2:862|B2:1043|B2:2011|B2:2040"
+    "sample_lines": "B1:1338|B1:2578|B2:842|B2:862|B2:1043|B2:2011|B2:2040"
   },
   {
     "entity": "Completion Sect",
@@ -357,7 +357,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1429|B1:2463|B1:3487|B1:3639|B2:2083|B2:4067|B3:2905"
+    "sample_lines": "B1:1429|B1:2467|B1:3491|B1:3643|B2:2083|B2:4067|B3:2904"
   },
   {
     "entity": "Father Crane",
@@ -365,7 +365,7 @@
     "occurrence_count": 7,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1823|B1:2462|B1:3628|B1:4388|B2:3511|B2:5373|B2:5383"
+    "sample_lines": "B1:1826|B1:2466|B1:3632|B1:4392|B2:3511|B2:5373|B2:5383"
   },
   {
     "entity": "The Church",
@@ -373,7 +373,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1842|B1:1851|B2:877|B2:986|B2:990|B3:4808|B3:4810"
+    "sample_lines": "B1:1845|B1:1854|B2:877|B2:986|B2:990|B3:4807|B3:4809"
   },
   {
     "entity": "The Watchers",
@@ -381,7 +381,7 @@
     "occurrence_count": 7,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3464|B1:3472|B1:3480|B1:3514|B1:3860|B1:3871|B1:3873"
+    "sample_lines": "B1:3468|B1:3476|B1:3484|B1:3518|B1:3864|B1:3875|B1:3877"
   },
   {
     "entity": "60 Hz",
@@ -389,7 +389,7 @@
     "occurrence_count": 7,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:4476|B1:4588|B2:1001|B3:80|B3:4233|B3:4793|B3:4857"
+    "sample_lines": "B1:4480|B1:4592|B2:1001|B3:80|B3:4232|B3:4792|B3:4856"
   },
   {
     "entity": "Sabrina Volkov",
@@ -397,7 +397,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:21|B2:1420|B2:1794|B2:3056|B3:2205|B3:2574|B3:2838"
+    "sample_lines": "B2:21|B2:1420|B2:1794|B2:3056|B3:2203|B3:2573|B3:2837"
   },
   {
     "entity": "Sefer Yetzirah",
@@ -421,7 +421,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:1953|B2:1967|B3:2861|B3:3178|B3:3208|B3:3209|B3:3235"
+    "sample_lines": "B2:1953|B2:1967|B3:2860|B3:3178|B3:3208|B3:3209|B3:3235"
   },
   {
     "entity": "The Gothic",
@@ -437,7 +437,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:6818|B3:934|B3:1016|B3:1247|B3:3017|B3:4229|B3:4253"
+    "sample_lines": "B2:6818|B3:934|B3:1016|B3:1247|B3:3017|B3:4228|B3:4252"
   },
   {
     "entity": "Reykjavik",
@@ -445,7 +445,7 @@
     "occurrence_count": 7,
     "books": "2;3",
     "categories": "gazetteer",
-    "sample_lines": "B2:6973|B2:6973|B3:2363|B3:2371|B3:3011|B3:3020|B3:4617"
+    "sample_lines": "B2:6973|B2:6973|B3:2361|B3:2369|B3:3011|B3:3020|B3:4616"
   },
   {
     "entity": "Mara Reeves",
@@ -453,7 +453,7 @@
     "occurrence_count": 7,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:205|B3:309|B3:371|B3:1135|B3:2436|B3:3416|B3:4354"
+    "sample_lines": "B3:205|B3:309|B3:371|B3:1135|B3:2435|B3:3416|B3:4353"
   },
   {
     "entity": "And Nadia",
@@ -461,7 +461,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:741|B1:955|B1:2721|B2:3128|B3:2585|B3:4173"
+    "sample_lines": "B1:741|B1:955|B1:2725|B2:3128|B3:2584|B3:4172"
   },
   {
     "entity": "The Keepers",
@@ -469,7 +469,7 @@
     "occurrence_count": 6,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1309|B1:1317|B1:3122|B1:3178|B1:3724|B2:2037"
+    "sample_lines": "B1:1309|B1:1317|B1:3126|B1:3182|B1:3728|B2:2037"
   },
   {
     "entity": "Central",
@@ -477,7 +477,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:2555|B2:847|B2:1504|B2:3155|B2:3200|B3:1642"
+    "sample_lines": "B1:2559|B2:847|B2:1504|B2:3155|B2:3200|B3:1640"
   },
   {
     "entity": "Helena Vance",
@@ -485,7 +485,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3656|B2:1991|B2:2940|B2:5250|B2:6656|B3:1727"
+    "sample_lines": "B1:3660|B2:1991|B2:2940|B2:5250|B2:6656|B3:1725"
   },
   {
     "entity": "Charles University",
@@ -509,7 +509,7 @@
     "occurrence_count": 6,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:13|B3:5055|B3:5081|B3:5166|B3:5384|B3:5417"
+    "sample_lines": "B3:13|B3:5054|B3:5080|B3:5165|B3:5383|B3:5416"
   },
   {
     "entity": "Miller Nichols",
@@ -525,7 +525,7 @@
     "occurrence_count": 5,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:205|B1:223|B1:814|B2:7418|B3:5231"
+    "sample_lines": "B1:205|B1:223|B1:814|B2:7418|B3:5230"
   },
   {
     "entity": "The Custodians",
@@ -533,7 +533,7 @@
     "occurrence_count": 5,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1371|B1:1598|B1:1749|B1:2848|B2:4076"
+    "sample_lines": "B1:1371|B1:1598|B1:1752|B1:2852|B2:4076"
   },
   {
     "entity": "47 AM",
@@ -541,7 +541,7 @@
     "occurrence_count": 5,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:1478|B2:1199|B2:5297|B3:444|B3:1661"
+    "sample_lines": "B1:1478|B2:1199|B2:5297|B3:444|B3:1659"
   },
   {
     "entity": "Morning Coffee",
@@ -549,7 +549,7 @@
     "occurrence_count": 5,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1699|B1:2509|B1:3901|B1:3928|B1:4127"
+    "sample_lines": "B1:1699|B1:2513|B1:3905|B1:3932|B1:4131"
   },
   {
     "entity": "The Keeper",
@@ -557,7 +557,15 @@
     "occurrence_count": 5,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2755|B1:3522|B3:1291|B3:1302|B3:1378"
+    "sample_lines": "B1:2759|B1:3526|B3:1291|B3:1302|B3:1378"
+  },
+  {
+    "entity": "Kofi Asante",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:635|B2:4190|B2:6198|B3:3549|B3:4611"
   },
   {
     "entity": "11 PM",
@@ -565,7 +573,7 @@
     "occurrence_count": 5,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:1193|B2:3108|B2:3422|B3:2343|B3:3381"
+    "sample_lines": "B2:1193|B2:3108|B2:3422|B3:2341|B3:3381"
   },
   {
     "entity": "The Specchi",
@@ -573,7 +581,7 @@
     "occurrence_count": 5,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5134|B2:5156|B2:5181|B3:1643|B3:2988"
+    "sample_lines": "B2:5134|B2:5156|B2:5181|B3:1641|B3:2988"
   },
   {
     "entity": "The Quality Hill",
@@ -581,15 +589,15 @@
     "occurrence_count": 5,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:53|B3:1429|B3:2265|B3:4090|B3:5028"
+    "sample_lines": "B3:53|B3:1429|B3:2263|B3:4089|B3:5027"
   },
   {
-    "entity": "Margaret Chen",
+    "entity": "Margaret Ferrand",
     "class": "AMBIGUOUS",
     "occurrence_count": 5,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:507|B3:1680|B3:2108|B3:3157|B3:3332"
+    "sample_lines": "B3:507|B3:1678|B3:2106|B3:3157|B3:3332"
   },
   {
     "entity": "Sister Maria Theresa",
@@ -597,7 +605,7 @@
     "occurrence_count": 5,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1807|B3:1811|B3:3800|B3:3837|B3:3946"
+    "sample_lines": "B3:1805|B3:1809|B3:3798|B3:3835|B3:3944"
   },
   {
     "entity": "Mojave",
@@ -605,7 +613,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:315|B1:367|B1:503|B1:4381"
+    "sample_lines": "B1:315|B1:367|B1:503|B1:4385"
   },
   {
     "entity": "But William",
@@ -613,7 +621,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:631|B1:999|B1:3239|B1:4237"
+    "sample_lines": "B1:631|B1:999|B1:3243|B1:4241"
   },
   {
     "entity": "Picture Cave",
@@ -621,7 +629,15 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B1:1356|B1:1356|B1:2103|B1:2103"
+    "sample_lines": "B1:1356|B1:1356|B1:2106|B1:2106"
+  },
+  {
+    "entity": "Pennsylvania Avenue",
+    "class": "REAL_WORLD",
+    "occurrence_count": 4,
+    "books": "1;2",
+    "categories": "street;proper_noun_phrase",
+    "sample_lines": "B1:1757|B1:1757|B2:4124|B2:4124"
   },
   {
     "entity": "Notebook Six",
@@ -629,7 +645,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1882|B1:1893|B1:2118|B1:2631"
+    "sample_lines": "B1:1885|B1:1896|B1:2121|B1:2635"
   },
   {
     "entity": "The Carrier Mark",
@@ -637,7 +653,7 @@
     "occurrence_count": 4,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2166|B2:539|B2:568|B2:591"
+    "sample_lines": "B1:2169|B2:539|B2:568|B2:591"
   },
   {
     "entity": "Nerudova Street",
@@ -645,7 +661,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B1:2976|B1:2976|B1:3049|B1:3049"
+    "sample_lines": "B1:2980|B1:2980|B1:3053|B1:3053"
   },
   {
     "entity": "São Paulo",
@@ -653,15 +669,7 @@
     "occurrence_count": 4,
     "books": "1;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:3153|B3:1665|B3:2397|B3:3542"
-  },
-  {
-    "entity": "Kofi Asante",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 4,
-    "books": "2;3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B2:635|B2:4190|B2:6198|B3:3551"
+    "sample_lines": "B1:3157|B3:1663|B3:2396|B3:3540"
   },
   {
     "entity": "The Fontomfrom",
@@ -685,7 +693,7 @@
     "occurrence_count": 4,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:2044|B2:2874|B2:3078|B3:4781"
+    "sample_lines": "B2:2044|B2:2874|B2:3078|B3:4780"
   },
   {
     "entity": "85 Hz",
@@ -693,7 +701,7 @@
     "occurrence_count": 4,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2184|B3:4294|B3:4875|B3:5092"
+    "sample_lines": "B2:2184|B3:4293|B3:4874|B3:5091"
   },
   {
     "entity": "David Kim",
@@ -733,7 +741,7 @@
     "occurrence_count": 4,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1600|B3:1675|B3:2108|B3:3086"
+    "sample_lines": "B3:1598|B3:1673|B3:2106|B3:3086"
   },
   {
     "entity": "Bohemia",
@@ -741,7 +749,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:11|B1:3567|B3:16"
+    "sample_lines": "B1:11|B1:3571|B3:16"
   },
   {
     "entity": "Nichols Library",
@@ -757,7 +765,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:224|B1:370|B1:3476"
+    "sample_lines": "B1:224|B1:370|B1:3480"
   },
   {
     "entity": "James Masters",
@@ -765,7 +773,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:227|B1:805|B3:5231"
+    "sample_lines": "B1:227|B1:805|B3:5230"
   },
   {
     "entity": "Westport",
@@ -805,7 +813,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1318|B1:3657|B3:2853"
+    "sample_lines": "B1:1318|B1:3661|B3:2852"
   },
   {
     "entity": "Then Nadia",
@@ -813,7 +821,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1378|B1:2056|B1:2379"
+    "sample_lines": "B1:1378|B1:2059|B1:2383"
   },
   {
     "entity": "Father Moreau",
@@ -821,7 +829,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1578|B1:1589|B1:1843"
+    "sample_lines": "B1:1578|B1:1589|B1:1846"
   },
   {
     "entity": "In Prague",
@@ -829,7 +837,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1865|B1:2698|B1:2767"
+    "sample_lines": "B1:1868|B1:2702|B1:2771"
   },
   {
     "entity": "Strahov Library",
@@ -837,7 +845,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2476|B1:3250|B1:3709"
+    "sample_lines": "B1:2480|B1:3254|B1:3713"
   },
   {
     "entity": "Then Prague",
@@ -845,7 +853,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2487|B1:2695|B1:2727"
+    "sample_lines": "B1:2491|B1:2699|B1:2731"
   },
   {
     "entity": "Codex Gigas",
@@ -853,7 +861,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2560|B1:2594|B3:1346"
+    "sample_lines": "B1:2564|B1:2598|B3:1346"
   },
   {
     "entity": "Then Blake",
@@ -861,7 +869,7 @@
     "occurrence_count": 3,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3315|B1:3373|B2:7167"
+    "sample_lines": "B1:3319|B1:3377|B2:7167"
   },
   {
     "entity": "The Third Way",
@@ -869,7 +877,7 @@
     "occurrence_count": 3,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3491|B1:3684|B1:4047"
+    "sample_lines": "B1:3495|B1:3688|B1:4051"
   },
   {
     "entity": "Site Echo",
@@ -877,7 +885,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4223|B1:4238|B3:4323"
+    "sample_lines": "B1:4227|B1:4242|B3:4322"
   },
   {
     "entity": "Nadia Katar",
@@ -885,7 +893,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4589|B1:4610|B3:3883"
+    "sample_lines": "B1:4593|B1:4614|B3:3881"
   },
   {
     "entity": "The Don Quixote",
@@ -896,20 +904,12 @@
     "sample_lines": "B2:445|B2:491|B2:591"
   },
   {
-    "entity": "Hotel Phillips",
-    "class": "HYBRID",
-    "occurrence_count": 3,
-    "books": "2",
-    "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B2:619|B2:3091|B2:3091"
-  },
-  {
     "entity": "Reykjavík",
     "class": "REAL_WORLD",
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "gazetteer",
-    "sample_lines": "B2:818|B2:908|B3:5317"
+    "sample_lines": "B2:818|B2:908|B3:5316"
   },
   {
     "entity": "222 Hz",
@@ -925,7 +925,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:1190|B2:6388|B3:3896"
+    "sample_lines": "B2:1190|B2:6388|B3:3894"
   },
   {
     "entity": "Senator Holt",
@@ -934,6 +934,14 @@
     "books": "2",
     "categories": "proper_noun_phrase",
     "sample_lines": "B2:1658|B2:6598|B2:6599"
+  },
+  {
+    "entity": "The Iceland",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:1765|B3:2367|B3:4593"
   },
   {
     "entity": "The Testament",
@@ -949,7 +957,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:2040|B2:4554|B3:5058"
+    "sample_lines": "B2:2040|B2:4554|B3:5057"
   },
   {
     "entity": "Sagrada Fam",
@@ -976,14 +984,6 @@
     "sample_lines": "B2:3456|B2:3457|B2:5608"
   },
   {
-    "entity": "Troost",
-    "class": "REAL_WORLD",
-    "occurrence_count": 3,
-    "books": "2;3",
-    "categories": "gazetteer",
-    "sample_lines": "B2:4123|B3:3110|B3:4004"
-  },
-  {
     "entity": "000 Hz",
     "class": "AMBIGUOUS",
     "occurrence_count": 3,
@@ -997,7 +997,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5251|B2:5347|B3:1722"
+    "sample_lines": "B2:5251|B2:5347|B3:1720"
   },
   {
     "entity": "Father Emmanuel Crane Jr",
@@ -1005,7 +1005,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5339|B3:1887|B3:1981"
+    "sample_lines": "B2:5339|B3:1885|B3:1979"
   },
   {
     "entity": "The All",
@@ -1029,7 +1029,7 @@
     "occurrence_count": 3,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:6405|B2:7208|B3:4612"
+    "sample_lines": "B2:6405|B2:7208|B3:4611"
   },
   {
     "entity": "55 Hz",
@@ -1037,7 +1037,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:79|B3:3677|B3:4107"
+    "sample_lines": "B3:79|B3:3675|B3:4106"
   },
   {
     "entity": "14 AM",
@@ -1048,12 +1048,12 @@
     "sample_lines": "B3:138|B3:570|B3:3078"
   },
   {
-    "entity": "Marcus Chen",
+    "entity": "Marcus Whitaker",
     "class": "AMBIGUOUS",
     "occurrence_count": 3,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:144|B3:539|B3:4605"
+    "sample_lines": "B3:144|B3:539|B3:4604"
   },
   {
     "entity": "52 Hz",
@@ -1085,7 +1085,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1621|B3:2991|B3:4891"
+    "sample_lines": "B3:1619|B3:2991|B3:4890"
   },
   {
     "entity": "Theological Studies",
@@ -1093,7 +1093,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1900|B3:1981|B3:2022"
+    "sample_lines": "B3:1898|B3:1979|B3:2020"
   },
   {
     "entity": "Johns Hopkins",
@@ -1101,7 +1101,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2576|B3:2916|B3:3235"
+    "sample_lines": "B3:2575|B3:2915|B3:3235"
   },
   {
     "entity": "The Pentecost",
@@ -1117,7 +1117,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3659|B3:4071|B3:4772"
+    "sample_lines": "B3:3657|B3:4070|B3:4771"
   },
   {
     "entity": "Uncle Andrew",
@@ -1125,7 +1125,7 @@
     "occurrence_count": 3,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4550|B3:4551|B3:4565"
+    "sample_lines": "B3:4549|B3:4550|B3:4564"
   },
   {
     "entity": "Miller Nichols Library",
@@ -1165,7 +1165,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:687|B1:4470"
+    "sample_lines": "B1:687|B1:4474"
   },
   {
     "entity": "High Street",
@@ -1200,20 +1200,12 @@
     "sample_lines": "B1:1312|B1:1313"
   },
   {
-    "entity": "Washington County",
+    "entity": "1647 Genessee Street",
     "class": "REAL_WORLD",
     "occurrence_count": 2,
     "books": "1",
-    "categories": "gazetteer;proper_noun_phrase",
-    "sample_lines": "B1:1356|B1:1356"
-  },
-  {
-    "entity": "2847 Genessee Street",
-    "class": "HYBRID",
-    "occurrence_count": 2,
-    "books": "1",
     "categories": "address",
-    "sample_lines": "B1:1504|B1:2073"
+    "sample_lines": "B1:1504|B1:2076"
   },
   {
     "entity": "Notebook Three",
@@ -1221,7 +1213,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1536|B1:2076"
+    "sample_lines": "B1:1536|B1:2079"
   },
   {
     "entity": "Wyandotte",
@@ -1232,20 +1224,36 @@
     "sample_lines": "B1:1703|B1:1722"
   },
   {
-    "entity": "Pennsylvania Avenue",
+    "entity": "Bethany Falls",
     "class": "REAL_WORLD",
     "occurrence_count": 2,
     "books": "1",
-    "categories": "street;proper_noun_phrase",
-    "sample_lines": "B1:1754|B1:1754"
+    "categories": "gazetteer;proper_noun_phrase",
+    "sample_lines": "B1:1726|B1:1726"
   },
   {
-    "entity": "Margaret Masters",
+    "entity": "Hunt Midwest",
+    "class": "REAL_WORLD",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "gazetteer;proper_noun_phrase",
+    "sample_lines": "B1:1727|B1:1727"
+  },
+  {
+    "entity": "Pennsylvania",
+    "class": "REAL_WORLD",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "gazetteer",
+    "sample_lines": "B1:1757|B2:4124"
+  },
+  {
+    "entity": "Lorraine Masters",
     "class": "AMBIGUOUS",
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1917|B2:3561"
+    "sample_lines": "B1:1920|B2:3561"
   },
   {
     "entity": "Carrier Mark",
@@ -1253,7 +1261,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2174|B1:2197"
+    "sample_lines": "B1:2177|B1:2200"
   },
   {
     "entity": "William Carroll Masters",
@@ -1261,7 +1269,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2303|B1:2411"
+    "sample_lines": "B1:2307|B1:2415"
   },
   {
     "entity": "The Strahov Library",
@@ -1269,7 +1277,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2457|B1:2720"
+    "sample_lines": "B1:2461|B1:2724"
   },
   {
     "entity": "The Ars",
@@ -1277,7 +1285,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2601|B2:1991"
+    "sample_lines": "B1:2605|B2:1991"
   },
   {
     "entity": "The Voynich",
@@ -1285,7 +1293,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2602|B2:3275"
+    "sample_lines": "B1:2606|B2:3275"
   },
   {
     "entity": "The Codex Gigas",
@@ -1293,7 +1301,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2602|B1:4398"
+    "sample_lines": "B1:2606|B1:4402"
   },
   {
     "entity": "Powder Tower",
@@ -1301,7 +1309,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2940|B1:3070"
+    "sample_lines": "B1:2944|B1:3074"
   },
   {
     "entity": "Moravian Riesling",
@@ -1309,7 +1317,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3007|B1:3722"
+    "sample_lines": "B1:3011|B1:3726"
   },
   {
     "entity": "In Kansas City",
@@ -1317,7 +1325,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3010|B2:5880"
+    "sample_lines": "B1:3014|B2:5880"
   },
   {
     "entity": "Town Square",
@@ -1325,7 +1333,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3070|B1:3569"
+    "sample_lines": "B1:3074|B1:3573"
   },
   {
     "entity": "The Prague",
@@ -1333,7 +1341,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3192|B2:6892"
+    "sample_lines": "B1:3196|B2:6892"
   },
   {
     "entity": "The Latin",
@@ -1341,7 +1349,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3341|B2:898"
+    "sample_lines": "B1:3345|B2:898"
   },
   {
     "entity": "With Andrew",
@@ -1349,7 +1357,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3378|B1:3776"
+    "sample_lines": "B1:3382|B1:3780"
   },
   {
     "entity": "Third Way",
@@ -1357,7 +1365,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3700|B1:3790"
+    "sample_lines": "B1:3704|B1:3794"
   },
   {
     "entity": "Theological Hall",
@@ -1365,7 +1373,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3710|B2:1095"
+    "sample_lines": "B1:3714|B2:1095"
   },
   {
     "entity": "Third Street",
@@ -1373,7 +1381,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B1:3942|B1:3942"
+    "sample_lines": "B1:3946|B1:3946"
   },
   {
     "entity": "Nadia Masters",
@@ -1381,7 +1389,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4612|B1:4615"
+    "sample_lines": "B1:4616|B1:4619"
   },
   {
     "entity": "Archaeological Method",
@@ -1416,6 +1424,14 @@
     "sample_lines": "B2:271|B2:378"
   },
   {
+    "entity": "The Washington Street",
+    "class": "REAL_WORLD",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "street;proper_noun_phrase",
+    "sample_lines": "B2:619|B2:619"
+  },
+  {
     "entity": "Independence",
     "class": "REAL_WORLD",
     "occurrence_count": 2,
@@ -1438,14 +1454,6 @@
     "books": "2",
     "categories": "street;proper_noun_phrase",
     "sample_lines": "B2:1699|B2:1699"
-  },
-  {
-    "entity": "The Iceland",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 2,
-    "books": "2;3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B2:1765|B3:4594"
   },
   {
     "entity": "The Merkabah",
@@ -1493,7 +1501,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:3408|B3:1884"
+    "sample_lines": "B2:3408|B3:1882"
   },
   {
     "entity": "Overland Park",
@@ -1509,7 +1517,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:3589|B3:2916"
+    "sample_lines": "B2:3589|B3:2915"
   },
   {
     "entity": "Not How",
@@ -1541,7 +1549,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:4553|B3:5058"
+    "sample_lines": "B2:4553|B3:5057"
   },
   {
     "entity": "00 PM",
@@ -1584,7 +1592,7 @@
     "sample_lines": "B2:5052|B2:6793"
   },
   {
-    "entity": "Sarah Chen",
+    "entity": "Rosalind Lindgren",
     "class": "AMBIGUOUS",
     "occurrence_count": 2,
     "books": "2",
@@ -1637,7 +1645,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:19|B3:5384"
+    "sample_lines": "B3:19|B3:5383"
   },
   {
     "entity": "Volume Two",
@@ -1645,7 +1653,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:19|B3:5354"
+    "sample_lines": "B3:19|B3:5353"
   },
   {
     "entity": "The Listening",
@@ -1653,7 +1661,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:30|B3:5384"
+    "sample_lines": "B3:30|B3:5383"
   },
   {
     "entity": "Harris Hall",
@@ -1685,7 +1693,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:858|B3:3470"
+    "sample_lines": "B3:858|B3:3468"
   },
   {
     "entity": "440 Hz",
@@ -1693,7 +1701,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:866|B3:3475"
+    "sample_lines": "B3:866|B3:3473"
   },
   {
     "entity": "220 Hz",
@@ -1701,7 +1709,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:897|B3:4147"
+    "sample_lines": "B3:897|B3:4146"
   },
   {
     "entity": "Grand Boulevard",
@@ -1741,7 +1749,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "gazetteer",
-    "sample_lines": "B3:1384|B3:4763"
+    "sample_lines": "B3:1384|B3:4762"
   },
   {
     "entity": "Acoustic Consciousness",
@@ -1749,7 +1757,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1605|B3:1742"
+    "sample_lines": "B3:1603|B3:1740"
   },
   {
     "entity": "The Board",
@@ -1757,7 +1765,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1790|B3:1839"
+    "sample_lines": "B3:1788|B3:1837"
   },
   {
     "entity": "But Dr",
@@ -1765,7 +1773,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B3:2604|B3:2604"
+    "sample_lines": "B3:2603|B3:2603"
   },
   {
     "entity": "Hour Eight",
@@ -1773,7 +1781,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2654|B3:2694"
+    "sample_lines": "B3:2653|B3:2693"
   },
   {
     "entity": "Kyoto University",
@@ -1781,7 +1789,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3034|B3:3502"
+    "sample_lines": "B3:3034|B3:3500"
   },
   {
     "entity": "Mary Magdalene",
@@ -1789,7 +1797,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3424|B3:4808"
+    "sample_lines": "B3:3424|B3:4807"
   },
   {
     "entity": "Buenos Aires",
@@ -1797,7 +1805,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3444|B3:3461"
+    "sample_lines": "B3:3442|B3:3459"
   },
   {
     "entity": "Adunni Okafor",
@@ -1805,7 +1813,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3559|B3:3621"
+    "sample_lines": "B3:3557|B3:3619"
   },
   {
     "entity": "91 BPM",
@@ -1813,7 +1821,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3678|B3:3729"
+    "sample_lines": "B3:3676|B3:3727"
   },
   {
     "entity": "71 BPM",
@@ -1821,7 +1829,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3803|B3:3808"
+    "sample_lines": "B3:3801|B3:3806"
   },
   {
     "entity": "The October",
@@ -1829,7 +1837,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4030|B3:4166"
+    "sample_lines": "B3:4029|B3:4165"
   },
   {
     "entity": "The Moleskines",
@@ -1837,7 +1845,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4478|B3:4615"
+    "sample_lines": "B3:4477|B3:4614"
   },
   {
     "entity": "The Volvo",
@@ -1845,7 +1853,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4865|B3:4875"
+    "sample_lines": "B3:4864|B3:4874"
   },
   {
     "entity": "Linking Road",
@@ -1853,7 +1861,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B3:4970|B3:4970"
+    "sample_lines": "B3:4969|B3:4969"
   },
   {
     "entity": "The Lamy",
@@ -1861,7 +1869,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5033|B3:5082"
+    "sample_lines": "B3:5032|B3:5081"
   },
   {
     "entity": "The Inheritance",
@@ -2176,6 +2184,22 @@
     "sample_lines": "B1:1315"
   },
   {
+    "entity": "Osage",
+    "class": "REAL_WORLD",
+    "occurrence_count": 1,
+    "books": "1",
+    "categories": "gazetteer",
+    "sample_lines": "B1:1356"
+  },
+  {
+    "entity": "Warren County",
+    "class": "REAL_WORLD",
+    "occurrence_count": 1,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1356"
+  },
+  {
     "entity": "North American",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
@@ -2256,36 +2280,12 @@
     "sample_lines": "B1:1661"
   },
   {
-    "entity": "Bethany Falls",
-    "class": "REAL_WORLD",
-    "occurrence_count": 1,
-    "books": "1",
-    "categories": "gazetteer",
-    "sample_lines": "B1:1725"
-  },
-  {
-    "entity": "The Bethany Falls",
+    "entity": "Midwest Precote",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
     "sample_lines": "B1:1725"
-  },
-  {
-    "entity": "Limestone Company",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 1,
-    "books": "1",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1726"
-  },
-  {
-    "entity": "Pennsylvania",
-    "class": "REAL_WORLD",
-    "occurrence_count": 1,
-    "books": "1",
-    "categories": "gazetteer",
-    "sample_lines": "B1:1754"
   },
   {
     "entity": "1112 Pennsylvania Avenue",
@@ -2293,7 +2293,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "address",
-    "sample_lines": "B1:1754"
+    "sample_lines": "B1:1757"
   },
   {
     "entity": "Father Vincent Moreau",
@@ -2301,7 +2301,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1794"
+    "sample_lines": "B1:1797"
   },
   {
     "entity": "Sister Volkov",
@@ -2309,7 +2309,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1833"
+    "sample_lines": "B1:1836"
   },
   {
     "entity": "Sister Katarina",
@@ -2317,7 +2317,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1865"
+    "sample_lines": "B1:1868"
   },
   {
     "entity": "Walnut",
@@ -2325,7 +2325,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "gazetteer",
-    "sample_lines": "B1:1993"
+    "sample_lines": "B1:1996"
   },
   {
     "entity": "At Ethan",
@@ -2333,7 +2333,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2007"
+    "sample_lines": "B1:2010"
   },
   {
     "entity": "Whatever Dad",
@@ -2341,7 +2341,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2010"
+    "sample_lines": "B1:2013"
   },
   {
     "entity": "Called Nadia",
@@ -2349,7 +2349,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2051"
+    "sample_lines": "B1:2054"
   },
   {
     "entity": "Post Office",
@@ -2357,7 +2357,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2055"
+    "sample_lines": "B1:2058"
   },
   {
     "entity": "The Analysis Chamber",
@@ -2365,7 +2365,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2073"
+    "sample_lines": "B1:2076"
   },
   {
     "entity": "Mud Glyph",
@@ -2373,7 +2373,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2103"
+    "sample_lines": "B1:2106"
   },
   {
     "entity": "Gottschall Rockshelter",
@@ -2381,7 +2381,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2104"
+    "sample_lines": "B1:2107"
   },
   {
     "entity": "First Figura",
@@ -2389,7 +2389,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2125"
+    "sample_lines": "B1:2128"
   },
   {
     "entity": "With Elena",
@@ -2397,7 +2397,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2128"
+    "sample_lines": "B1:2131"
   },
   {
     "entity": "French Jesuits",
@@ -2405,7 +2405,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2174"
+    "sample_lines": "B1:2177"
   },
   {
     "entity": "New World",
@@ -2413,7 +2413,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2180"
+    "sample_lines": "B1:2183"
   },
   {
     "entity": "The Fibonacci",
@@ -2421,7 +2421,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2333"
+    "sample_lines": "B1:2337"
   },
   {
     "entity": "Father Elias Dryden",
@@ -2429,7 +2429,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2431"
+    "sample_lines": "B1:2435"
   },
   {
     "entity": "Father Dryden",
@@ -2437,7 +2437,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2439"
+    "sample_lines": "B1:2443"
   },
   {
     "entity": "Whatever William",
@@ -2445,7 +2445,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2500"
+    "sample_lines": "B1:2504"
   },
   {
     "entity": "Sankt Emmeram",
@@ -2453,7 +2453,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2542"
+    "sample_lines": "B1:2546"
   },
   {
     "entity": "Recite Psalm",
@@ -2461,7 +2461,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2583"
+    "sample_lines": "B1:2587"
   },
   {
     "entity": "Latin Vulgate",
@@ -2469,7 +2469,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2595"
+    "sample_lines": "B1:2599"
   },
   {
     "entity": "From Nadia",
@@ -2477,7 +2477,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2772"
+    "sample_lines": "B1:2776"
   },
   {
     "entity": "Morning Coffees",
@@ -2485,7 +2485,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2858"
+    "sample_lines": "B1:2862"
   },
   {
     "entity": "Except Blake",
@@ -2493,7 +2493,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2870"
+    "sample_lines": "B1:2874"
   },
   {
     "entity": "Havel Airport",
@@ -2501,7 +2501,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2896"
+    "sample_lines": "B1:2900"
   },
   {
     "entity": "Old Town",
@@ -2509,7 +2509,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2913"
+    "sample_lines": "B1:2917"
   },
   {
     "entity": "Miroslav Khoury",
@@ -2517,7 +2517,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2976"
+    "sample_lines": "B1:2980"
   },
   {
     "entity": "In America",
@@ -2525,7 +2525,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2981"
+    "sample_lines": "B1:2985"
   },
   {
     "entity": "The European",
@@ -2533,7 +2533,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2981"
+    "sample_lines": "B1:2985"
   },
   {
     "entity": "From Rudolf",
@@ -2541,7 +2541,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3023"
+    "sample_lines": "B1:3027"
   },
   {
     "entity": "Not God",
@@ -2549,7 +2549,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3143"
+    "sample_lines": "B1:3147"
   },
   {
     "entity": "The Thai",
@@ -2557,7 +2557,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3212"
+    "sample_lines": "B1:3216"
   },
   {
     "entity": "Giving Blake",
@@ -2565,7 +2565,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3262"
+    "sample_lines": "B1:3266"
   },
   {
     "entity": "And Keepers",
@@ -2573,7 +2573,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3489"
+    "sample_lines": "B1:3493"
   },
   {
     "entity": "And Prague",
@@ -2581,7 +2581,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3505"
+    "sample_lines": "B1:3509"
   },
   {
     "entity": "The International Symposium",
@@ -2589,7 +2589,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3566"
+    "sample_lines": "B1:3570"
   },
   {
     "entity": "Medieval Manuscript Studies",
@@ -2597,7 +2597,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3566"
+    "sample_lines": "B1:3570"
   },
   {
     "entity": "Conference Room",
@@ -2605,7 +2605,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3567"
+    "sample_lines": "B1:3571"
   },
   {
     "entity": "Grand Hotel Bohemia",
@@ -2613,7 +2613,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3567"
+    "sample_lines": "B1:3571"
   },
   {
     "entity": "Klaus Bergmann",
@@ -2621,15 +2621,15 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3601"
+    "sample_lines": "B1:3605"
   },
   {
-    "entity": "Professor Sarah Chen",
+    "entity": "Professor Sarah Ashworth",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3616"
+    "sample_lines": "B1:3620"
   },
   {
     "entity": "Thomas Crane",
@@ -2637,7 +2637,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3633"
+    "sample_lines": "B1:3637"
   },
   {
     "entity": "The Theological Hall",
@@ -2645,7 +2645,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3712"
+    "sample_lines": "B1:3716"
   },
   {
     "entity": "The Motif Watchers",
@@ -2653,7 +2653,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3727"
+    "sample_lines": "B1:3731"
   },
   {
     "entity": "Andrew Masters",
@@ -2661,7 +2661,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3728"
+    "sample_lines": "B1:3732"
   },
   {
     "entity": "What James",
@@ -2669,7 +2669,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3789"
+    "sample_lines": "B1:3793"
   },
   {
     "entity": "The Moravian Riesling",
@@ -2677,7 +2677,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3797"
+    "sample_lines": "B1:3801"
   },
   {
     "entity": "The Gr",
@@ -2685,7 +2685,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3859"
+    "sample_lines": "B1:3863"
   },
   {
     "entity": "Everything William",
@@ -2693,7 +2693,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3895"
+    "sample_lines": "B1:3899"
   },
   {
     "entity": "That William",
@@ -2701,7 +2701,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3960"
+    "sample_lines": "B1:3964"
   },
   {
     "entity": "Before Miroslav",
@@ -2709,7 +2709,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3999"
+    "sample_lines": "B1:4003"
   },
   {
     "entity": "Strahov Latin",
@@ -2717,15 +2717,15 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4079"
+    "sample_lines": "B1:4083"
   },
   {
-    "entity": "Professor Chen",
+    "entity": "Professor Ashworth",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4079"
+    "sample_lines": "B1:4083"
   },
   {
     "entity": "The Ozarks",
@@ -2733,7 +2733,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4201"
+    "sample_lines": "B1:4205"
   },
   {
     "entity": "Analysis Chamber",
@@ -2741,7 +2741,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4292"
+    "sample_lines": "B1:4296"
   },
   {
     "entity": "The Ozark",
@@ -2749,7 +2749,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4376"
+    "sample_lines": "B1:4380"
   },
   {
     "entity": "The Portuguese",
@@ -2757,7 +2757,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4387"
+    "sample_lines": "B1:4391"
   },
   {
     "entity": "Or William",
@@ -2765,7 +2765,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4416"
+    "sample_lines": "B1:4420"
   },
   {
     "entity": "The Masters Foundation",
@@ -2773,7 +2773,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4500"
+    "sample_lines": "B1:4504"
   },
   {
     "entity": "Acoustic Research",
@@ -2781,7 +2781,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4500"
+    "sample_lines": "B1:4504"
   },
   {
     "entity": "The Jackson County",
@@ -2789,7 +2789,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4554"
+    "sample_lines": "B1:4558"
   },
   {
     "entity": "The Slovak",
@@ -2797,7 +2797,7 @@
     "occurrence_count": 1,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4616"
+    "sample_lines": "B1:4620"
   },
   {
     "entity": "The Grimoire",
@@ -2966,14 +2966,6 @@
     "books": "2",
     "categories": "proper_noun_phrase",
     "sample_lines": "B2:561"
-  },
-  {
-    "entity": "The Hotel Phillips Building",
-    "class": "REAL_WORLD",
-    "occurrence_count": 1,
-    "books": "2",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B2:619"
   },
   {
     "entity": "Volta Acoustic Survey",
@@ -3608,7 +3600,7 @@
     "sample_lines": "B2:4865"
   },
   {
-    "entity": "Senator Margaret Holt",
+    "entity": "Senator Deborah Holt",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "2",
@@ -4152,7 +4144,7 @@
     "sample_lines": "B3:1140"
   },
   {
-    "entity": "Laura Chen",
+    "entity": "Laura Okada",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
@@ -4160,7 +4152,7 @@
     "sample_lines": "B3:1154"
   },
   {
-    "entity": "Marcus Jr",
+    "entity": "Idris Broussard",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
@@ -4208,20 +4200,12 @@
     "sample_lines": "B3:1381"
   },
   {
-    "entity": "The Opposition",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 1,
-    "books": "3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1587"
-  },
-  {
     "entity": "Cognigenics Inc",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1604"
+    "sample_lines": "B3:1602"
   },
   {
     "entity": "United States Patent Application No",
@@ -4229,7 +4213,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1604"
+    "sample_lines": "B3:1602"
   },
   {
     "entity": "23 AM",
@@ -4237,7 +4221,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:1612"
+    "sample_lines": "B3:1610"
   },
   {
     "entity": "23 AM Central European Time",
@@ -4245,7 +4229,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:1642"
+    "sample_lines": "B3:1640"
   },
   {
     "entity": "Central European Time",
@@ -4253,7 +4237,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1642"
+    "sample_lines": "B3:1640"
   },
   {
     "entity": "By Thursday",
@@ -4261,7 +4245,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1665"
+    "sample_lines": "B3:1663"
   },
   {
     "entity": "By Friday",
@@ -4269,7 +4253,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1673"
+    "sample_lines": "B3:1671"
   },
   {
     "entity": "Judith Hollander",
@@ -4277,7 +4261,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1724"
+    "sample_lines": "B3:1722"
   },
   {
     "entity": "Methodological Concerns",
@@ -4285,7 +4269,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1724"
+    "sample_lines": "B3:1722"
   },
   {
     "entity": "Acoustic Consciousness Research",
@@ -4293,7 +4277,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1725"
+    "sample_lines": "B3:1723"
   },
   {
     "entity": "Critical Analysis",
@@ -4301,7 +4285,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1725"
+    "sample_lines": "B3:1723"
   },
   {
     "entity": "Peter Kline",
@@ -4309,7 +4293,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1725"
+    "sample_lines": "B3:1723"
   },
   {
     "entity": "Replication Failure",
@@ -4317,7 +4301,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1726"
+    "sample_lines": "B3:1724"
   },
   {
     "entity": "Human Frequency Resonance",
@@ -4325,7 +4309,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1726"
+    "sample_lines": "B3:1724"
   },
   {
     "entity": "Compressed Acoustic",
@@ -4333,7 +4317,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1727"
+    "sample_lines": "B3:1725"
   },
   {
     "entity": "Exposure Protocols",
@@ -4341,7 +4325,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1728"
+    "sample_lines": "B3:1726"
   },
   {
     "entity": "Safety Analysis",
@@ -4349,7 +4333,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1728"
+    "sample_lines": "B3:1726"
   },
   {
     "entity": "The Hollander",
@@ -4357,7 +4341,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1734"
+    "sample_lines": "B3:1732"
   },
   {
     "entity": "The Kline",
@@ -4365,7 +4349,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1737"
+    "sample_lines": "B3:1735"
   },
   {
     "entity": "The Vance",
@@ -4373,7 +4357,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1739"
+    "sample_lines": "B3:1737"
   },
   {
     "entity": "Institutional Capture",
@@ -4381,7 +4365,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1743"
+    "sample_lines": "B3:1741"
   },
   {
     "entity": "James Strand",
@@ -4389,7 +4373,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1755"
+    "sample_lines": "B3:1753"
   },
   {
     "entity": "Eleanor Whitman",
@@ -4397,7 +4381,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1771"
+    "sample_lines": "B3:1769"
   },
   {
     "entity": "45 CFR",
@@ -4405,7 +4389,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:1791"
+    "sample_lines": "B3:1789"
   },
   {
     "entity": "Aaron Levy",
@@ -4413,7 +4397,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1813"
+    "sample_lines": "B3:1811"
   },
   {
     "entity": "The Sisters",
@@ -4421,7 +4405,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1832"
+    "sample_lines": "B3:1830"
   },
   {
     "entity": "Tell Blake",
@@ -4429,7 +4413,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1864"
+    "sample_lines": "B3:1862"
   },
   {
     "entity": "The Acoustic Gospel",
@@ -4437,7 +4421,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1982"
+    "sample_lines": "B3:1980"
   },
   {
     "entity": "Delayed Disclosure",
@@ -4445,7 +4429,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1983"
+    "sample_lines": "B3:1981"
   },
   {
     "entity": "Colonel David Reese",
@@ -4453,7 +4437,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2058"
+    "sample_lines": "B3:2056"
   },
   {
     "entity": "Technology Directorate",
@@ -4461,7 +4445,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2059"
+    "sample_lines": "B3:2057"
   },
   {
     "entity": "The Lancet",
@@ -4469,7 +4453,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2071"
+    "sample_lines": "B3:2069"
   },
   {
     "entity": "The Department",
@@ -4477,7 +4461,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2075"
+    "sample_lines": "B3:2073"
   },
   {
     "entity": "Colonel Reese",
@@ -4485,7 +4469,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2136"
+    "sample_lines": "B3:2134"
   },
   {
     "entity": "Use Research",
@@ -4493,7 +4477,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2141"
+    "sample_lines": "B3:2139"
   },
   {
     "entity": "Great Plains",
@@ -4501,7 +4485,15 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2188"
+    "sample_lines": "B3:2186"
+  },
+  {
+    "entity": "Northland",
+    "class": "REAL_WORLD",
+    "occurrence_count": 1,
+    "books": "3",
+    "categories": "gazetteer",
+    "sample_lines": "B3:2389"
   },
   {
     "entity": "00 AM",
@@ -4509,15 +4501,15 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:2473"
+    "sample_lines": "B3:2472"
   },
   {
-    "entity": "Lin Chen",
+    "entity": "Lin Zhao",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2497"
+    "sample_lines": "B3:2496"
   },
   {
     "entity": "Tomoko Ando",
@@ -4525,7 +4517,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2498"
+    "sample_lines": "B3:2497"
   },
   {
     "entity": "Block Three",
@@ -4533,7 +4525,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2502"
+    "sample_lines": "B3:2501"
   },
   {
     "entity": "Week Thirty",
@@ -4541,7 +4533,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2531"
+    "sample_lines": "B3:2530"
   },
   {
     "entity": "Hour One",
@@ -4549,7 +4541,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2558"
+    "sample_lines": "B3:2557"
   },
   {
     "entity": "By Hour Eight",
@@ -4557,7 +4549,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2594"
+    "sample_lines": "B3:2593"
   },
   {
     "entity": "Block Two",
@@ -4565,7 +4557,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2694"
+    "sample_lines": "B3:2693"
   },
   {
     "entity": "55 AM",
@@ -4573,7 +4565,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:2739"
+    "sample_lines": "B3:2738"
   },
   {
     "entity": "Focus Level",
@@ -4581,7 +4573,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2760"
+    "sample_lines": "B3:2759"
   },
   {
     "entity": "The Focus Level",
@@ -4589,7 +4581,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2765"
+    "sample_lines": "B3:2764"
   },
   {
     "entity": "Then Yuki",
@@ -4597,7 +4589,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2783"
+    "sample_lines": "B3:2782"
   },
   {
     "entity": "The Lempel",
@@ -4605,7 +4597,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2812"
+    "sample_lines": "B3:2811"
   },
   {
     "entity": "Level Two",
@@ -4613,7 +4605,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2834"
+    "sample_lines": "B3:2833"
   },
   {
     "entity": "Every Moleskine",
@@ -4728,7 +4720,7 @@
     "sample_lines": "B3:3230"
   },
   {
-    "entity": "Michael Chen",
+    "entity": "Michael Halloran",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
@@ -4752,20 +4744,12 @@
     "sample_lines": "B3:3406"
   },
   {
-    "entity": "The Frequency",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 1,
-    "books": "3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3432"
-  },
-  {
     "entity": "Calle Defensa",
     "class": "AMBIGUOUS",
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3444"
+    "sample_lines": "B3:3442"
   },
   {
     "entity": "San Telmo",
@@ -4773,7 +4757,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3444"
+    "sample_lines": "B3:3442"
   },
   {
     "entity": "Elena Guti",
@@ -4781,7 +4765,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3457"
+    "sample_lines": "B3:3455"
   },
   {
     "entity": "Western Hemisphere",
@@ -4789,7 +4773,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3472"
+    "sample_lines": "B3:3470"
   },
   {
     "entity": "Engineering Building",
@@ -4797,7 +4781,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3501"
+    "sample_lines": "B3:3499"
   },
   {
     "entity": "Professor Kenji Yamamoto",
@@ -4805,7 +4789,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3509"
+    "sample_lines": "B3:3507"
   },
   {
     "entity": "Acoustics Department",
@@ -4813,7 +4797,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3510"
+    "sample_lines": "B3:3508"
   },
   {
     "entity": "Izu Peninsula",
@@ -4821,7 +4805,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3518"
+    "sample_lines": "B3:3516"
   },
   {
     "entity": "Professor Yamamoto",
@@ -4829,7 +4813,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3528"
+    "sample_lines": "B3:3526"
   },
   {
     "entity": "Acoustical Society",
@@ -4837,7 +4821,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3536"
+    "sample_lines": "B3:3534"
   },
   {
     "entity": "Local Geological Variation",
@@ -4845,7 +4829,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3537"
+    "sample_lines": "B3:3535"
   },
   {
     "entity": "Acoustic Resonance Chamber Output",
@@ -4853,7 +4837,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3538"
+    "sample_lines": "B3:3536"
   },
   {
     "entity": "An Initial Observation",
@@ -4861,7 +4845,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3538"
+    "sample_lines": "B3:3536"
   },
   {
     "entity": "44 Hz",
@@ -4869,7 +4853,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3580"
+    "sample_lines": "B3:3578"
   },
   {
     "entity": "50 Hz",
@@ -4877,7 +4861,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3581"
+    "sample_lines": "B3:3579"
   },
   {
     "entity": "West African",
@@ -4885,7 +4869,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3581"
+    "sample_lines": "B3:3579"
   },
   {
     "entity": "30 AM",
@@ -4893,7 +4877,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3849"
+    "sample_lines": "B3:3847"
   },
   {
     "entity": "58 BPM",
@@ -4901,7 +4885,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3873"
+    "sample_lines": "B3:3871"
   },
   {
     "entity": "67 Hz",
@@ -4909,7 +4893,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3895"
+    "sample_lines": "B3:3893"
   },
   {
     "entity": "40 AM",
@@ -4917,7 +4901,23 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4001"
+    "sample_lines": "B3:3999"
+  },
+  {
+    "entity": "Troost",
+    "class": "REAL_WORLD",
+    "occurrence_count": 1,
+    "books": "3",
+    "categories": "gazetteer",
+    "sample_lines": "B3:4002"
+  },
+  {
+    "entity": "Broadway",
+    "class": "REAL_WORLD",
+    "occurrence_count": 1,
+    "books": "3",
+    "categories": "gazetteer",
+    "sample_lines": "B3:4004"
   },
   {
     "entity": "30 Hz",
@@ -4925,7 +4925,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4225"
+    "sample_lines": "B3:4224"
   },
   {
     "entity": "Price Chopper",
@@ -4933,7 +4933,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4228"
+    "sample_lines": "B3:4227"
   },
   {
     "entity": "The Muzak",
@@ -4941,7 +4941,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4233"
+    "sample_lines": "B3:4232"
   },
   {
     "entity": "The Norton",
@@ -4949,7 +4949,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4241"
+    "sample_lines": "B3:4240"
   },
   {
     "entity": "500 Hz",
@@ -4957,7 +4957,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4262"
+    "sample_lines": "B3:4261"
   },
   {
     "entity": "111 Hz",
@@ -4965,7 +4965,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4272"
+    "sample_lines": "B3:4271"
   },
   {
     "entity": "Not Norton",
@@ -4973,7 +4973,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4404"
+    "sample_lines": "B3:4403"
   },
   {
     "entity": "California Pinot",
@@ -4981,7 +4981,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4404"
+    "sample_lines": "B3:4403"
   },
   {
     "entity": "But Jennifer",
@@ -4989,7 +4989,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4519"
+    "sample_lines": "B3:4518"
   },
   {
     "entity": "Tell Sophie",
@@ -4997,7 +4997,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4556"
+    "sample_lines": "B3:4555"
   },
   {
     "entity": "250 Hz",
@@ -5005,15 +5005,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4568"
-  },
-  {
-    "entity": "Kofi Mensah",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 1,
-    "books": "3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4612"
+    "sample_lines": "B3:4567"
   },
   {
     "entity": "Iceland Geology",
@@ -5021,7 +5013,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4667"
+    "sample_lines": "B3:4666"
   },
   {
     "entity": "262 Hz",
@@ -5029,7 +5021,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4702"
+    "sample_lines": "B3:4701"
   },
   {
     "entity": "44 AM",
@@ -5037,7 +5029,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4827"
+    "sample_lines": "B3:4826"
   },
   {
     "entity": "Eva Lindqvist",
@@ -5045,7 +5037,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4827"
+    "sample_lines": "B3:4826"
   },
   {
     "entity": "44 PM",
@@ -5053,7 +5045,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4828"
+    "sample_lines": "B3:4827"
   },
   {
     "entity": "53 AM",
@@ -5061,7 +5053,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4863"
+    "sample_lines": "B3:4862"
   },
   {
     "entity": "By February",
@@ -5069,7 +5061,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4886"
+    "sample_lines": "B3:4885"
   },
   {
     "entity": "Kenji Yamamoto",
@@ -5077,7 +5069,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4907"
+    "sample_lines": "B3:4906"
   },
   {
     "entity": "Rural Germany",
@@ -5085,7 +5077,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4928"
+    "sample_lines": "B3:4927"
   },
   {
     "entity": "Black Forest",
@@ -5093,7 +5085,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4928"
+    "sample_lines": "B3:4927"
   },
   {
     "entity": "Lena Hoffmann",
@@ -5101,7 +5093,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4933"
+    "sample_lines": "B3:4932"
   },
   {
     "entity": "Rudolf Werner",
@@ -5109,7 +5101,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4942"
+    "sample_lines": "B3:4941"
   },
   {
     "entity": "Priya Desai",
@@ -5117,7 +5109,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4966"
+    "sample_lines": "B3:4965"
   },
   {
     "entity": "65 Hz",
@@ -5125,7 +5117,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4971"
+    "sample_lines": "B3:4970"
   },
   {
     "entity": "80 Hz",
@@ -5133,7 +5125,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:4971"
+    "sample_lines": "B3:4970"
   },
   {
     "entity": "Arjun Mehta",
@@ -5141,7 +5133,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4974"
+    "sample_lines": "B3:4973"
   },
   {
     "entity": "Ain Sof",
@@ -5149,7 +5141,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5058"
+    "sample_lines": "B3:5057"
   },
   {
     "entity": "The February",
@@ -5157,7 +5149,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5109"
+    "sample_lines": "B3:5108"
   },
   {
     "entity": "Volume Three",
@@ -5165,7 +5157,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5355"
+    "sample_lines": "B3:5354"
   },
   {
     "entity": "Jason Carroll Holloway",
@@ -5173,7 +5165,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5441"
+    "sample_lines": "B3:5440"
   },
   {
     "entity": "English Literature",
@@ -5181,7 +5173,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5441"
+    "sample_lines": "B3:5440"
   },
   {
     "entity": "Dobbs Ferry",
@@ -5189,7 +5181,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5442"
+    "sample_lines": "B3:5441"
   },
   {
     "entity": "New York",
@@ -5197,7 +5189,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5442"
+    "sample_lines": "B3:5441"
   },
   {
     "entity": "Creative Writing",
@@ -5205,7 +5197,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5443"
+    "sample_lines": "B3:5442"
   },
   {
     "entity": "Data Analytics",
@@ -5213,7 +5205,7 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5443"
+    "sample_lines": "B3:5442"
   },
   {
     "entity": "Seventh City Press",
@@ -5221,6 +5213,6 @@
     "occurrence_count": 1,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5448"
+    "sample_lines": "B3:5447"
   }
 ]

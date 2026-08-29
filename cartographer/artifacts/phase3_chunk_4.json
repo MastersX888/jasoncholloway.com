@@ -1,11 +1,19 @@
 [
   {
+    "entity": "In Kansas City",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3014|B2:5880"
+  },
+  {
     "entity": "Town Square",
     "class": "AMBIGUOUS",
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3070|B1:3569"
+    "sample_lines": "B1:3074|B1:3573"
   },
   {
     "entity": "The Prague",
@@ -13,7 +21,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3192|B2:6892"
+    "sample_lines": "B1:3196|B2:6892"
   },
   {
     "entity": "The Latin",
@@ -21,7 +29,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3341|B2:898"
+    "sample_lines": "B1:3345|B2:898"
   },
   {
     "entity": "With Andrew",
@@ -29,7 +37,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3378|B1:3776"
+    "sample_lines": "B1:3382|B1:3780"
   },
   {
     "entity": "Third Way",
@@ -37,7 +45,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3700|B1:3790"
+    "sample_lines": "B1:3704|B1:3794"
   },
   {
     "entity": "Theological Hall",
@@ -45,7 +53,7 @@
     "occurrence_count": 2,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3710|B2:1095"
+    "sample_lines": "B1:3714|B2:1095"
   },
   {
     "entity": "Nadia Masters",
@@ -53,7 +61,7 @@
     "occurrence_count": 2,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:4612|B1:4615"
+    "sample_lines": "B1:4616|B1:4619"
   },
   {
     "entity": "Archaeological Method",
@@ -96,14 +104,6 @@
     "sample_lines": "B2:1699|B2:1699"
   },
   {
-    "entity": "The Iceland",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 2,
-    "books": "2;3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B2:1765|B3:4594"
-  },
-  {
     "entity": "The Merkabah",
     "class": "AMBIGUOUS",
     "occurrence_count": 2,
@@ -141,7 +141,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:3408|B3:1884"
+    "sample_lines": "B2:3408|B3:1882"
   },
   {
     "entity": "Monroe Institute",
@@ -149,7 +149,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:3589|B3:2916"
+    "sample_lines": "B2:3589|B3:2915"
   },
   {
     "entity": "Not How",
@@ -181,7 +181,7 @@
     "occurrence_count": 2,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:4553|B3:5058"
+    "sample_lines": "B2:4553|B3:5057"
   },
   {
     "entity": "00 PM",
@@ -208,7 +208,7 @@
     "sample_lines": "B2:5052|B2:6793"
   },
   {
-    "entity": "Sarah Chen",
+    "entity": "Rosalind Lindgren",
     "class": "AMBIGUOUS",
     "occurrence_count": 2,
     "books": "2",

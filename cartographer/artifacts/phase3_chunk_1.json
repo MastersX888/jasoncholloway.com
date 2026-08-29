@@ -5,7 +5,7 @@
     "occurrence_count": 7,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:205|B3:309|B3:371|B3:1135|B3:2436|B3:3416|B3:4354"
+    "sample_lines": "B3:205|B3:309|B3:371|B3:1135|B3:2435|B3:3416|B3:4353"
   },
   {
     "entity": "And Nadia",
@@ -13,7 +13,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:741|B1:955|B1:2721|B2:3128|B3:2585|B3:4173"
+    "sample_lines": "B1:741|B1:955|B1:2725|B2:3128|B3:2584|B3:4172"
   },
   {
     "entity": "Central",
@@ -21,7 +21,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "gazetteer",
-    "sample_lines": "B1:2555|B2:847|B2:1504|B2:3155|B2:3200|B3:1642"
+    "sample_lines": "B1:2559|B2:847|B2:1504|B2:3155|B2:3200|B3:1640"
   },
   {
     "entity": "Helena Vance",
@@ -29,7 +29,7 @@
     "occurrence_count": 6,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:3656|B2:1991|B2:2940|B2:5250|B2:6656|B3:1727"
+    "sample_lines": "B1:3660|B2:1991|B2:2940|B2:5250|B2:6656|B3:1725"
   },
   {
     "entity": "Land Cruiser",
@@ -45,7 +45,7 @@
     "occurrence_count": 6,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:13|B3:5055|B3:5081|B3:5166|B3:5384|B3:5417"
+    "sample_lines": "B3:13|B3:5054|B3:5080|B3:5165|B3:5383|B3:5416"
   },
   {
     "entity": "William Masters",
@@ -53,7 +53,7 @@
     "occurrence_count": 5,
     "books": "1;2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:205|B1:223|B1:814|B2:7418|B3:5231"
+    "sample_lines": "B1:205|B1:223|B1:814|B2:7418|B3:5230"
   },
   {
     "entity": "The Custodians",
@@ -61,7 +61,7 @@
     "occurrence_count": 5,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1371|B1:1598|B1:1749|B1:2848|B2:4076"
+    "sample_lines": "B1:1371|B1:1598|B1:1752|B1:2852|B2:4076"
   },
   {
     "entity": "47 AM",
@@ -69,7 +69,7 @@
     "occurrence_count": 5,
     "books": "1;2;3",
     "categories": "address",
-    "sample_lines": "B1:1478|B2:1199|B2:5297|B3:444|B3:1661"
+    "sample_lines": "B1:1478|B2:1199|B2:5297|B3:444|B3:1659"
   },
   {
     "entity": "Morning Coffee",
@@ -77,7 +77,15 @@
     "occurrence_count": 5,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1699|B1:2509|B1:3901|B1:3928|B1:4127"
+    "sample_lines": "B1:1699|B1:2513|B1:3905|B1:3932|B1:4131"
+  },
+  {
+    "entity": "Kofi Asante",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:635|B2:4190|B2:6198|B3:3549|B3:4611"
   },
   {
     "entity": "11 PM",
@@ -85,7 +93,7 @@
     "occurrence_count": 5,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:1193|B2:3108|B2:3422|B3:2343|B3:3381"
+    "sample_lines": "B2:1193|B2:3108|B2:3422|B3:2341|B3:3381"
   },
   {
     "entity": "The Specchi",
@@ -93,15 +101,15 @@
     "occurrence_count": 5,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:5134|B2:5156|B2:5181|B3:1643|B3:2988"
+    "sample_lines": "B2:5134|B2:5156|B2:5181|B3:1641|B3:2988"
   },
   {
-    "entity": "Margaret Chen",
+    "entity": "Margaret Ferrand",
     "class": "AMBIGUOUS",
     "occurrence_count": 5,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:507|B3:1680|B3:2108|B3:3157|B3:3332"
+    "sample_lines": "B3:507|B3:1678|B3:2106|B3:3157|B3:3332"
   },
   {
     "entity": "Sister Maria Theresa",
@@ -109,7 +117,7 @@
     "occurrence_count": 5,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1807|B3:1811|B3:3800|B3:3837|B3:3946"
+    "sample_lines": "B3:1805|B3:1809|B3:3798|B3:3835|B3:3944"
   },
   {
     "entity": "But William",
@@ -117,7 +125,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:631|B1:999|B1:3239|B1:4237"
+    "sample_lines": "B1:631|B1:999|B1:3243|B1:4241"
   },
   {
     "entity": "Notebook Six",
@@ -125,7 +133,7 @@
     "occurrence_count": 4,
     "books": "1",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:1882|B1:1893|B1:2118|B1:2631"
+    "sample_lines": "B1:1885|B1:1896|B1:2121|B1:2635"
   },
   {
     "entity": "The Carrier Mark",
@@ -133,15 +141,7 @@
     "occurrence_count": 4,
     "books": "1;2",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:2166|B2:539|B2:568|B2:591"
-  },
-  {
-    "entity": "Kofi Asante",
-    "class": "AMBIGUOUS",
-    "occurrence_count": 4,
-    "books": "2;3",
-    "categories": "proper_noun_phrase",
-    "sample_lines": "B2:635|B2:4190|B2:6198|B3:3551"
+    "sample_lines": "B1:2169|B2:539|B2:568|B2:591"
   },
   {
     "entity": "The Fontomfrom",
@@ -165,7 +165,7 @@
     "occurrence_count": 4,
     "books": "2;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B2:2044|B2:2874|B2:3078|B3:4781"
+    "sample_lines": "B2:2044|B2:2874|B2:3078|B3:4780"
   },
   {
     "entity": "85 Hz",
@@ -173,7 +173,7 @@
     "occurrence_count": 4,
     "books": "2;3",
     "categories": "address",
-    "sample_lines": "B2:2184|B3:4294|B3:4875|B3:5092"
+    "sample_lines": "B2:2184|B3:4293|B3:4874|B3:5091"
   },
   {
     "entity": "David Kim",
@@ -205,7 +205,7 @@
     "occurrence_count": 4,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1600|B3:1675|B3:2108|B3:3086"
+    "sample_lines": "B3:1598|B3:1673|B3:2106|B3:3086"
   },
   {
     "entity": "James Masters",
@@ -213,7 +213,7 @@
     "occurrence_count": 3,
     "books": "1;3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B1:227|B1:805|B3:5231"
+    "sample_lines": "B1:227|B1:805|B3:5230"
   },
   {
     "entity": "Don Quixote",

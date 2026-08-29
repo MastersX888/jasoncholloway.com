@@ -29,7 +29,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:19|B3:5384"
+    "sample_lines": "B3:19|B3:5383"
   },
   {
     "entity": "Volume Two",
@@ -37,7 +37,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:19|B3:5354"
+    "sample_lines": "B3:19|B3:5353"
   },
   {
     "entity": "The Listening",
@@ -45,7 +45,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:30|B3:5384"
+    "sample_lines": "B3:30|B3:5383"
   },
   {
     "entity": "Harris Hall",
@@ -77,7 +77,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:858|B3:3470"
+    "sample_lines": "B3:858|B3:3468"
   },
   {
     "entity": "440 Hz",
@@ -85,7 +85,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:866|B3:3475"
+    "sample_lines": "B3:866|B3:3473"
   },
   {
     "entity": "220 Hz",
@@ -93,7 +93,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:897|B3:4147"
+    "sample_lines": "B3:897|B3:4146"
   },
   {
     "entity": "Mud Pie Vegan Bakery",
@@ -125,7 +125,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1605|B3:1742"
+    "sample_lines": "B3:1603|B3:1740"
   },
   {
     "entity": "The Board",
@@ -133,7 +133,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:1790|B3:1839"
+    "sample_lines": "B3:1788|B3:1837"
   },
   {
     "entity": "But Dr",
@@ -141,7 +141,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "street;proper_noun_phrase",
-    "sample_lines": "B3:2604|B3:2604"
+    "sample_lines": "B3:2603|B3:2603"
   },
   {
     "entity": "Hour Eight",
@@ -149,7 +149,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:2654|B3:2694"
+    "sample_lines": "B3:2653|B3:2693"
   },
   {
     "entity": "Mary Magdalene",
@@ -157,7 +157,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3424|B3:4808"
+    "sample_lines": "B3:3424|B3:4807"
   },
   {
     "entity": "Buenos Aires",
@@ -165,7 +165,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3444|B3:3461"
+    "sample_lines": "B3:3442|B3:3459"
   },
   {
     "entity": "Adunni Okafor",
@@ -173,7 +173,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:3559|B3:3621"
+    "sample_lines": "B3:3557|B3:3619"
   },
   {
     "entity": "91 BPM",
@@ -181,7 +181,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3678|B3:3729"
+    "sample_lines": "B3:3676|B3:3727"
   },
   {
     "entity": "71 BPM",
@@ -189,7 +189,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "address",
-    "sample_lines": "B3:3803|B3:3808"
+    "sample_lines": "B3:3801|B3:3806"
   },
   {
     "entity": "The October",
@@ -197,7 +197,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4030|B3:4166"
+    "sample_lines": "B3:4029|B3:4165"
   },
   {
     "entity": "The Moleskines",
@@ -205,7 +205,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4478|B3:4615"
+    "sample_lines": "B3:4477|B3:4614"
   },
   {
     "entity": "The Volvo",
@@ -213,7 +213,7 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:4865|B3:4875"
+    "sample_lines": "B3:4864|B3:4874"
   },
   {
     "entity": "The Lamy",
@@ -221,6 +221,6 @@
     "occurrence_count": 2,
     "books": "3",
     "categories": "proper_noun_phrase",
-    "sample_lines": "B3:5033|B3:5082"
+    "sample_lines": "B3:5032|B3:5081"
   }
 ]

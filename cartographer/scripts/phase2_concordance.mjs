@@ -5,8 +5,13 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const ROOT = "/workspace/cartographer";
+// Resolve from this file's location so the pipeline runs outside the original
+// /workspace cloud environment; CARTOGRAPHER_ROOT still overrides if needed.
+const ROOT =
+  process.env.CARTOGRAPHER_ROOT ||
+  path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CORPUS = path.join(ROOT, "corpus");
 const OUT = path.join(ROOT, "artifacts");
 

@@ -1,15 +1,15 @@
 {
-  "total_entity_occurrences": 3784,
-  "distinct_entities": 653,
-  "distinct_capitalized_or_place": 570,
+  "total_entity_occurrences": 3803,
+  "distinct_entities": 652,
+  "distinct_capitalized_or_place": 569,
   "by_category": {
-    "proper_noun_phrase": 1178,
-    "gazetteer": 942,
+    "proper_noun_phrase": 1180,
+    "gazetteer": 949,
     "motion": 222,
-    "spatial_predicate": 450,
+    "spatial_predicate": 452,
     "address": 215,
     "distance_time": 334,
     "measurement": 421,
-    "street": 22
+    "street": 30
   }
 }

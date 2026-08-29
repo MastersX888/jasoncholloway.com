@@ -7,12 +7,21 @@
  */
 import fs from "fs";
 import path from "path";
+import { fileURLToPath } from "url";
 
-const ROOT = "/workspace/cartographer";
+// Resolve from this file's location so the pipeline runs outside the original
+// /workspace cloud environment; CARTOGRAPHER_ROOT still overrides if needed.
+const ROOT =
+  process.env.CARTOGRAPHER_ROOT ||
+  path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const REPO = path.resolve(ROOT, "..");
 const RAW = path.join(ROOT, "corpus_raw/omnibus_v8_fulltext.txt");
 const OUT = path.join(ROOT, "artifacts");
 const CORPUS = path.join(ROOT, "corpus");
-const AUDIO = "/workspace/audiobook_project/output/elevenlabs_scripts/masters-x-omnibus";
+const AUDIO = path.join(
+  REPO,
+  "audiobook_project/output/elevenlabs_scripts/masters-x-omnibus"
+);
 
 fs.mkdirSync(OUT, { recursive: true });
 fs.mkdirSync(CORPUS, { recursive: true });

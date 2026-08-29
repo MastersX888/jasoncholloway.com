@@ -3,6 +3,21 @@
 **Priority:** High
 **Upload ready:** NO — spine recheck required before Ingram
 
+## Page count RESOLVED 2026-08-29
+The `CANON 170` figure below is **stale** — it predates the geo fix. Do not use it.
+
+- **Live / authoritative: 177 pp**, per the pre-flight table in
+  `scratch/ops_reports/INGRAM_UPLOAD_RUN_2026-07-31.md`. Those files were approved
+  and went live 2026-08-03.
+- The current rebuild produces **177 pp**, matching live exactly.
+- The "+7 HC / +11 PB drift" noted earlier on 2026-08-29 was this stale comparison,
+  not a regression. All six individual print interiors matched the live counts 6/6.
+  **No spine or cover rework is required.**
+
+**Upload ready: YES.** Carries the SUB-BOOK divider removal. Staged for the 2026-08-29
+revision round at `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798295812705_HC_interior.pdf`.
+
+
 ## Present
 - `interior.pdf` — post-geo rebuild · Royal 6.14×9.21 · ~179 pp (NEAR_LIVE vs CANON 170)
 - `cover_jacket.pdf` — **geometry era** (`JACKET_MX3_9798295812705_v1.pdf`) · matches site `book3-hardcover-v3.png`

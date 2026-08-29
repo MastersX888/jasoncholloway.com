@@ -4,6 +4,36 @@
 **Upload ready:** CHECK — spine/visual review required
 **Covers:** geometry jacket + caselam staged 2026-07-28 (from omnibus-hardcover-v3 + new Ingram template)
 
+## ⚠ MANDATORY POST-BUILD STEP (added 2026-08-29)
+`generate_omnibus_interior_HC_CURRENT.py` now emits **680** pages, not 684. The
+SUB-BOOK divider removal reclaimed four pages (each divider held a recto plus its
+blank verso). The live jacket and caselam were built for 684 and their source PDFs
+are not on this machine, so the count must be held.
+
+After **every** omnibus HC rebuild, run:
+
+```
+python production_staging/_scripts_from_windows/pad_omnibus_hc_to_canon.py
+```
+
+It appends the shortfall as blank pages at Royal trim, is idempotent, and refuses
+to run on a wrong trim or an unexpected gap. Verify 684 before upload. See
+`production_staging/SUBBOOK_REMOVAL_2026-08-29.md`.
+
+## Canon fix rebuild 2026-08-29 — UPLOAD READY
+Rebuilt from the patched Book 1 BUILD docx to carry the Chapter One canon fix
+(grandfather d. 2003; "a grandson who did not yet exist"). See
+`production_staging/CANON_FIX_2026-08-29.md`.
+
+- **684 pp — exactly canon** (680 from the generator + 4 padded blanks). Spine
+  width unchanged, so the staged jacket and caselam remain valid. No cover rework.
+- Trim verified Royal 6.14×9.21.
+- Canon fix confirmed present in the rendered PDF text.
+- SUB-BOOK dividers removed; both chapter boundaries now match the standard shape.
+
+Unlike Books 1–3 individually (which drift +7 HC / +11 PB against canon and are
+blocked pending diagnosis), the omnibus reproduces its canon page count exactly.
+
 ## Present
 - `interior.pdf` — 684 pp Royal
 - `cover_jacket.pdf` / `cover_caselam.pdf` — geometry era, new template spine

@@ -6,46 +6,46 @@
 ## 1. Editorial corrections (required present / banned absent)
 
 ### BUILD_DOCX_1 — **PASS**
-- All 8 required present; all 6 banned absent.
+- All 12 required present; all 11 banned absent.
 
 ### BUILD_DOCX_2 — **PASS**
-- All 8 required present; all 8 banned absent.
+- All 12 required present; all 12 banned absent.
 
 ### BUILD_DOCX_3 — **PASS**
-- All 10 required present; all 10 banned absent.
+- All 18 required present; all 18 banned absent.
 
 ### OMNI_HC — **PASS**
-- All 26 required present; all 24 banned absent.
+- All 42 required present; all 41 banned absent.
 
 ### OMNI_PB — **PASS**
-- All 26 required present; all 24 banned absent.
+- All 42 required present; all 41 banned absent.
 
 ### B1_HC — **PASS**
-- All 8 required present; all 6 banned absent.
+- All 12 required present; all 11 banned absent.
 
 ### B1_PB — **PASS**
-- All 8 required present; all 6 banned absent.
+- All 12 required present; all 11 banned absent.
 
 ### B2_HC — **PASS**
-- All 8 required present; all 8 banned absent.
+- All 12 required present; all 12 banned absent.
 
 ### B2_PB — **PASS**
-- All 8 required present; all 8 banned absent.
+- All 12 required present; all 12 banned absent.
 
 ### B3_HC — **PASS**
-- All 10 required present; all 10 banned absent.
+- All 18 required present; all 18 banned absent.
 
 ### B3_PB — **PASS**
-- All 10 required present; all 10 banned absent.
+- All 18 required present; all 18 banned absent.
 
 ### B1_EPUB — **PASS**
-- All 8 required present; all 6 banned absent.
+- All 12 required present; all 11 banned absent.
 
 ### B2_EPUB — **PASS**
-- All 8 required present; all 8 banned absent.
+- All 12 required present; all 12 banned absent.
 
 ### B3_EPUB — **PASS**
-- All 10 required present; all 10 banned absent.
+- All 18 required present; all 18 banned absent.
 
 ## 2. Italic preservation
 
@@ -61,14 +61,14 @@
 
 | Format | Pages sampled | Italic spans | Italic chars |
 |---|---:|---:|---:|
-| OMNI_HC | 41 | 16 | 353 |
+| OMNI_HC | 41 | 12 | 192 |
 | OMNI_PB | 41 | 44 | 1638 |
-| B1_HC | 53 | 10 | 204 |
-| B1_PB | 47 | 21 | 442 |
-| B2_HC | 45 | 9 | 167 |
-| B2_PB | 45 | 14 | 227 |
-| B3_HC | 45 | 14 | 290 |
-| B3_PB | 41 | 8 | 170 |
+| B1_HC | 41 | 41 | 1432 |
+| B1_PB | 48 | 71 | 2411 |
+| B2_HC | 45 | 23 | 738 |
+| B2_PB | 46 | 27 | 742 |
+| B3_HC | 45 | 53 | 3002 |
+| B3_PB | 41 | 37 | 1807 |
 
 ### EPUB italic tags
 
@@ -94,6 +94,10 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 | RIVERWARDS | Y | Y | Y | Y | Y | Y |
 | hundred and fifty feet | Y | Y | Y | Y | Y | Y |
 | bottomed out at a hundred and sixty | Y | Y | Y | Y | Y | Y |
+| grandfather died in 2003 | Y | Y | Y | Y | Y | Y |
+| Lorraine Masters | Y | Y | Y | Y | Y | Y |
+| Lorraine's | Y | Y | Y | Y | Y | Y |
+| Sarah Ashworth | Y | Y | Y | Y | Y | Y |
 
 ### Book 2
 
@@ -107,6 +111,10 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 | 11 PM. Washington Street | Y | Y | Y | Y | Y | Y |
 | apartment hummed its limestone | Y | Y | Y | Y | Y | Y |
 | bathroom sink in an apartment in Kansas  | Y | Y | Y | Y | Y | Y |
+| Lorraine Masters | Y | Y | Y | Y | Y | Y |
+| Senator Deborah Holt | Y | Y | Y | Y | Y | Y |
+| Rosalind Lindgren | Y | Y | Y | Y | Y | Y |
+| had been born with | Y | Y | Y | Y | Y | Y |
 
 ### Book 3
 
@@ -122,6 +130,14 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 | The apartment hummed at 55 Hz | Y | Y | Y | Y | Y | Y |
 | apartment was clean. The apartment was e | Y | Y | Y | Y | Y | Y |
 | hallway outside his door | Y | Y | Y | Y | Y | Y |
+| Marcus Whitaker | Y | Y | Y | Y | Y | Y |
+| Margaret Ferrand | Y | Y | Y | Y | Y | Y |
+| Laura Okada | Y | Y | Y | Y | Y | Y |
+| Lin Zhao | Y | Y | Y | Y | Y | Y |
+| Michael Halloran | Y | Y | Y | Y | Y | Y |
+| Nolan Eriksen | Y | Y | Y | Y | Y | Y |
+| Idris Broussard | Y | Y | Y | Y | Y | Y |
+| Kofi Asante | Y | Y | Y | Y | Y | Y |
 
 ## 4. Typography / trim smoke
 
@@ -129,31 +145,33 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 |---|---:|---|---|
 | OMNI_HC | 684 | 6.14×9.21 | Y |
 | OMNI_PB | 732 | 5.50×8.50 | Y |
-| B1_HC | 159 | 6.14×9.21 | Y |
-| B1_PB | 185 | 5.50×8.50 | Y |
+| B1_HC | 163 | 6.14×9.21 | Y |
+| B1_PB | 189 | 5.50×8.50 | Y |
 | B2_HC | 225 | 6.14×9.21 | Y |
-| B2_PB | 265 | 5.50×8.50 | Y |
-| B3_HC | 179 | 6.14×9.21 | Y |
+| B2_PB | 271 | 5.50×8.50 | Y |
+| B3_HC | 177 | 6.14×9.21 | Y |
 | B3_PB | 205 | 5.50×8.50 | Y |
 
 ## 5. Body-italic probes (narrative emphasis)
 
 | ISBN | Format | Italic | Roman | Not found | Verdict |
 |---|---|---:|---:|---:|---|
-| 9798256008048 | Vol I PB | 12 | 0 | 0 | PASS |
-| 9798256009953 | Vol II PB | 12 | 0 | 0 | PASS |
+| 9798256008048 | Vol I PB | 42 | 0 | 1 | **FAIL** |
+| 9798256009953 | Vol II PB | 17 | 0 | 0 | PASS |
 | 9798256010072 | Vol III PB | 11 | 0 | 0 | PASS |
-| 9798295800801 | Vol I HC | 12 | 0 | 0 | PASS |
-| 9798295812675 | Vol II HC | 12 | 0 | 0 | PASS |
+| 9798295800801 | Vol I HC | 43 | 0 | 0 | PASS |
+| 9798295812675 | Vol II HC | 17 | 0 | 0 | PASS |
 | 9798295812705 | Vol III HC | 11 | 0 | 0 | PASS |
-| 9798256072704 | Omnibus PB | 35 | 0 | 0 | PASS |
-| 9798295884412 | Omnibus HC | 35 | 0 | 0 | PASS |
-| 9798256008819 | Vol I EPUB | 12 | 0 | 0 | PASS |
-| 9798256009625 | Vol II EPUB | 12 | 0 | 0 | PASS |
+| 9798256072704 | Omnibus PB | 70 | 1 | 0 | **FAIL** |
+|  | roman: the gap is where I work | | | | |
+| 9798295884412 | Omnibus HC | 71 | 0 | 0 | PASS |
+| 9798256008819 | Vol I EPUB | 43 | 0 | 0 | PASS |
+| 9798256009625 | Vol II EPUB | 17 | 0 | 0 | PASS |
 | 9798256009809 | Vol III EPUB | 11 | 0 | 0 | PASS |
 
 ## Verdict
 
-**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, body italics verified, formats consistent.
+**UPLOAD AUDIT: FAIL / NEEDS REVIEW**
+- **Narrative emphasis collapsed to roman in a delivery format** (see section 5).
 
 *Seventh City Press · PRE-UPLOAD AUDIT · f = 111.2 Hz*

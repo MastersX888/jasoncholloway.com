@@ -69,3 +69,62 @@ h2.back-title {
 .also-by .book-entry { text-indent: 0; text-align: center; margin: 0.4em 0; }
 
 .title-page, .copyright-page, .epigraph-page { text-align: center; page-break-after: always; }
+
+/* Centred matter must clear the body first-line indent, or every line
+   sits half an indent right of centre. */
+.title-page p,
+.copyright-page p,
+.epigraph-page p,
+.end-closer p {
+  text-indent: 0;
+  text-align: center;
+}
+
+h1.book-title {
+  text-align: center;
+  font-size: 2em;
+  letter-spacing: 0.16em;
+  font-weight: normal;
+  margin: 3em 0 0.3em;
+}
+hr.title-rule {
+  border: none;
+  border-top: 0.5px solid #999;
+  width: 96px;
+  margin: 0.8em auto;
+}
+p.book-subtitle { font-size: 1.15em; font-style: italic; margin: 0.6em 0; }
+p.book-volume {
+  font-size: 0.85em;
+  letter-spacing: 0.22em;
+  color: #666;
+  margin: 1.4em 0;
+}
+p.book-author { font-size: 1.05em; letter-spacing: 0.06em; margin-top: 2.6em; }
+
+.copyright-page { font-size: 0.85em; color: #444; }
+.copyright-page p { margin-bottom: 0.7em; }
+p.copyright-line { margin-bottom: 1.2em; }
+
+.epigraph-page { margin-top: 22%; }
+p.epigraph-quote { font-style: italic; font-size: 1.05em; line-height: 1.7; }
+p.epigraph-attr {
+  font-size: 0.85em;
+  letter-spacing: 0.1em;
+  color: #666;
+  margin-top: 1.4em;
+}
+
+.end-closer { text-align: center; margin: 20% 0; page-break-before: always; }
+p.end-volume-label {
+  letter-spacing: 0.22em;
+  font-size: 0.85em;
+  color: #666;
+  margin: 1em 0;
+}
+p.end-series-title {
+  letter-spacing: 0.16em;
+  font-size: 1.3em;
+  margin: 1.2em 0 0.2em;
+}
+p.end-volume-subtitle { font-style: italic; color: #666; margin-bottom: 1em; }

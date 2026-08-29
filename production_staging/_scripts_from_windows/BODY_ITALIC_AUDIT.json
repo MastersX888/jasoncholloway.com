@@ -3,18 +3,16 @@
     "isbn": "9798256008048",
     "label": "Vol I PB",
     "kind": "pdf",
-    "italic": 0,
-    "roman": 12,
+    "italic": 12,
+    "roman": 0,
     "not_found": 0,
-    "pages": 185,
-    "pass": false,
-    "roman_samples": [
+    "pages": 189,
+    "pass": true,
+    "roman_samples": [],
+    "italic_samples": [
       "Always know your exits.",
-      "Don't go alone,",
-      "First flight. 1956. I saw things from up there. -W",
-      "Just call her,"
-    ],
-    "italic_samples": []
+      "The people who killed your father."
+    ]
   },
   {
     "isbn": "9798256009953",
@@ -23,7 +21,7 @@
     "italic": 12,
     "roman": 0,
     "not_found": 0,
-    "pages": 265,
+    "pages": 271,
     "pass": true,
     "roman_samples": [],
     "italic_samples": [
@@ -53,12 +51,12 @@
     "italic": 12,
     "roman": 0,
     "not_found": 0,
-    "pages": 159,
+    "pages": 163,
     "pass": true,
     "roman_samples": [],
     "italic_samples": [
       "Always know your exits.",
-      "Don't go alone,"
+      "The people who killed your father."
     ]
   },
   {
@@ -103,7 +101,7 @@
     "roman_samples": [],
     "italic_samples": [
       "Always know your exits.",
-      "Don't go alone,"
+      "The people who killed your father."
     ]
   },
   {
@@ -118,7 +116,7 @@
     "roman_samples": [],
     "italic_samples": [
       "Always know your exits.",
-      "Don't go alone,"
+      "The people who killed your father."
     ]
   },
   {
@@ -133,7 +131,7 @@
     "roman_samples": [],
     "italic_samples": [
       "Always know your exits.",
-      "Don't go alone,"
+      "The people who killed your father."
     ]
   },
   {

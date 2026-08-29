@@ -3,6 +3,21 @@
 **Priority:** High
 **Upload ready:** NO
 
+## Page count RESOLVED 2026-08-29
+The `CANON 178` figure below is **stale** — it predates the geo fix. Do not use it.
+
+- **Live / authoritative: 189 pp**, per the pre-flight table in
+  `scratch/ops_reports/INGRAM_UPLOAD_RUN_2026-07-31.md`. Those files were approved
+  and went live 2026-08-03.
+- The current rebuild produces **189 pp**, matching live exactly.
+- The "+7 HC / +11 PB drift" noted earlier on 2026-08-29 was this stale comparison,
+  not a regression. All six individual print interiors matched the live counts 6/6.
+  **No spine or cover rework is required.**
+
+**Upload ready: YES.** Carries the Chapter One canon fix. Staged for the 2026-08-29
+revision round at `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798256008048_PB_interior.pdf`.
+
+
 ## Present
 - `interior.pdf` — 0.40 MB · **176 pp** · Demy 5.5×8.5 · `%PDF` OK
 - `MANUSCRIPT_CURRENT.txt`

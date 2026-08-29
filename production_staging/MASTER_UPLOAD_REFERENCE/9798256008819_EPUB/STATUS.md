@@ -1,4 +1,11 @@
 # Book 1 Inheritance — EPUB 9798256008819
+
+> **SUPERSEDED 2026-08-29.** This is a July snapshot of the old `Desktop\google_books_upload`
+> build, which no longer exists on disk. The current master and its verification record live in
+> `production_staging/b1_inheritance/9798256008819_EPUB/`. The `PRE_GEO_FIX` note below is wrong
+> for the current source: the Book 1 BUILD docx matches the Book 1 slice of
+> `OMNIBUS_CURRENT_DRAFT_GEO_FIXED.txt` exactly.
+
 **Priority:** Medium
 **Upload ready:** NO
 

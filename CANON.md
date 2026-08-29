@@ -72,7 +72,34 @@ This file documents the locked narrative, biographical, and bibliographical fact
 *   **William Masters' Notebooks:** **seven** leather notebooks left for Blake (v8 omnibus)
 *   **Blake's Moleskines:** Epigraph signed **Moleskine IX**; narrative completes **ten** volumes; nine returned packed at trilogy close
 *   **Andrew Chen** — canonical proper name for the Distribution File compiler (not "Blackwood")
-*   **Marcus Chen** — unrelated character; shared surname with Andrew Chen is intentional
+*   **Andrew Chen is the ONLY Chen (ruled 2026-08-29).** The former seven-way surname collision is closed. Any occurrence of "Chen" other than Andrew's is a regression. Renames applied 2026-08-29 (`production_staging/NAME_FIX_2026-08-29.md`):
+    *   **Sarah Chen** (Vol. I, Cambridge manuscript scholar) → **Sarah Ashworth**
+    *   **Sarah Chen** (Vol. II, Stanford neuroscience dept. chair — *a different person from the Vol. I Sarah*) → **Rosalind Lindgren**
+    *   **Marcus Chen** (Vol. III, Director of Instruction) → **Marcus Whitaker**
+    *   **Margaret Chen** (Vol. III, Foundation board chair) → **Margaret Ferrand** (given name retained by ruling; the residual "Margaret" clash with Blake's mother was closed separately on 2026-08-29 — see the Margaret ruling below)
+    *   **Laura Chen** (Vol. III, candidate) → **Laura Okada**
+    *   **Lin Chen** (Vol. III, chamber participant) → **Lin Zhao**
+    *   **Michael Chen** (Vol. III, Maryland subject) → **Michael Halloran**
+    *   **Andrew Tanaka** (Vol. III) → **Nolan Eriksen** — also collided with Yuki Tanaka; the "the other Andrew" disambiguating appositive was removed with him
+    *   Bare "Chen" now unambiguously means Andrew. In Vol. I the three bare-surname references belonged to the Cambridge scholar and are now "Ashworth".
+*   **Margaret Ferrand is the ONLY Margaret (ruled 2026-08-29).** The two remaining given-name collisions were closed in a second rename pass (`production_staging/NAME_FIX_2026-08-29.md`, Batch 2):
+    *   **Margaret Masters** (Vols. I–II, Blake's mother — 24 mentions) → **Lorraine Masters**
+    *   **Senator Margaret Holt** (Vol. II, subcommittee chair — 1 mention) → **Senator Deborah Holt**. The **given name only** changed; the surname "Holt" and all seventeen bare-surname references are unchanged.
+    *   **Margaret Ferrand** (Vol. III) is deliberately untouched and keeps all ten of her Vol. III mentions. Any "Margaret" appearing in Vol. I or Vol. II is now a regression.
+*   **Lorraine Masters** — Blake's mother. Born c. 1960–61; **sixty-three** at Book 1 present (~2024). Widow of **James Masters** (d. September 2010 — murdered, staged as a single-car accident; Oscar-01) and daughter-in-law of **William Masters** (d. 2003). Mother of Blake and of a second, now-deceased child; **Ethan**, thirty-one, is her grandson and Blake's nephew.
+    *   **Home:** the red-brick ranch on Fifty-Third Street, Kansas City, Missouri — live oaks James planted as saplings, three beehives at the property line, a house that smells of bread and lavender. She serves **tea rather than coffee** when she intends to be told the truth.
+    *   **The fourteen-year silence:** she learned the week after James's funeral that he had been murdered, and kept it because Blake's survival was made the price of it — *"So I paid it."*
+    *   **"The perceptual fingerprint"** is her coinage, from her private correspondence with William Masters; the Foundation's twelve-year assessment programme still uses the term in Vol. II.
+    *   She concealed William's complete documentation — the USB marked **SEVEN SITES** — behind her sewing supplies. The men who searched the house were looking for James's work, not William's.
+    *   William's letters called her *"the woman who kept him human."*
+    *   **Book 1 endgame:** working with the Foundation's Kansas City operation alongside Ethan.
+*   **Idris Broussard — not "Marcus Jr." (ruled 2026-08-29).** The Vol. III cohort student with rhythmic pattern recognition. The old form carried two faults: there is **no Marcus Sr. anywhere in the trilogy**, so "Jr." falsely implied he was the son of **Marcus Whitaker**, the Director of Instruction; and he was the only member of the eight-student list given a suffix instead of a surname. **Marcus Whitaker is unaffected** and keeps every one of his mentions — this rename touched exactly one `Marcus` token in Vol. III and no other.
+*   **Kofi Asante is the ONLY name for the Ghanaian researcher (ruled 2026-08-29).** University of Ghana; Vol. II principal, returning in Vol. III to receive the monitoring equipment and keep the Volta caves under observation. A single Vol. III instance read **"Kofi Mensah"** — an **error**, not a second character: same university, same role, same cave responsibility. Corrected to Asante. **`Kofi Mensah` is not an alternate or earlier name and must never be restored.** Any future occurrence is a regression.
+*   **Sabrina Volkov is Nadia's sister (ruled 2026-08-29)** — not a relation by marriage. The shared Volkov surname is correct and by birth; Volkov is Nadia's pre-marriage name. Blake is therefore Sabrina's brother-in-law. Vol. II phrasing corrected 2026-08-29.
+*   **"Restless candlelight guttered." is ROMAN in both places — never italic (ruled 2026-08-29).** This sentence occurs exactly **twice** in the trilogy: it is the **first narrative line of Vol. I** and the **last line of Vol. III**. In the omnibus the two instances sit 667 printed pages apart in a single volume (HC pp. 9 and 677). Both are roman, and that typographic identity **is** the ending — the trilogy closes by returning verbatim to its own opening sentence, and the recognition depends on the two lines matching on the page.
+    *   The run in `_sources/build_docx/MASTERS_X_BOOK3_BUILD.docx` (para 1602) carries an **explicit** `<w:i w:val="0"/>`. That is deliberate, not an artifact of an italic-normalisation pass.
+    *   Vol. III spends its final five paragraphs deliberately **leaving** the italic register — Blake's report ends, the byline is ruled under, the scene break fires, then four roman paragraphs of physical narration. Italicising the last sentence would reverse that movement in its final six words.
+    *   **An italic-normalisation or QC pass must NOT "fix" either instance.** The trilogy has **no closing-line italic convention**: Vols. I, II and III all end in roman narration in all three formats. Setting this line italic would label a beginning as a quoted specimen and break the match with page one.
 *   **The Masters Foundation for Acoustic Research** — incorporated name (*Vol. II*); later styled **the William Masters Foundation** on the Distribution File title page (in-universe renaming/honorific evolution)
 *   **Reading sequence counts (locked 2026-08-02, Jason choice C):**
     *   **Full research corpus:** **twenty-three** texts — novels, Strahov Premonstratensian curriculum / desks, research-archive Part I, marketing blurbs that mean the complete list.

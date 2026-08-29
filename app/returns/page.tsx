@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Returns & Refunds",
   description:
-    "Return and refund policy for print books sold by Seventh City Press through jasoncholloway.com — 30-day returns for damaged, defective, or incorrect orders.",
+    "Return and refund policy for print books sold by Seventh City Press through jasoncholloway.com — damaged or defective copies are replaced by the printer, with 30-day returns for incorrect orders.",
   alternates: {
     canonical: "https://jasoncholloway.com/returns/",
   },
@@ -56,6 +56,53 @@ export default function ReturnsPage() {
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="container" style={{ maxWidth: "720px" }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "2.5rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem" }}>
+            <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)", padding: "1.5rem 1.75rem" }}>
+              <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>
+                Damaged or defective book? Start here.
+              </h2>
+              <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+                <p style={{ margin: 0 }}>
+                  Uncut or stuck pages, misprinted text, a torn cover — these are manufacturing defects, and the
+                  printer, <strong>IngramSpark, replaces them</strong>. If you ordered through the direct checkout on
+                  this site (an IngramSpark Share Link / e-commerce order), the fastest path is to file the claim
+                  yourself as the buyer:
+                </p>
+                <ol style={{ paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.65rem", margin: 0 }}>
+                  <li>
+                    Find your <strong>order-confirmation email</strong> — it has your <strong>Order Number</strong>.
+                  </li>
+                  <li>
+                    Open{" "}
+                    <a
+                      href="https://www.ingramspark.com/report-an-issue"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "var(--gold)" }}
+                    >
+                      ingramspark.com/report-an-issue
+                    </a>
+                    .
+                  </li>
+                  <li>
+                    Use the <strong>same email address you used at checkout</strong> — that, plus the order number,
+                    is how they match your claim.
+                  </li>
+                  <li>Describe the defect and request a replacement.</li>
+                </ol>
+                <p style={{ margin: 0 }}>
+                  Direct Share Link purchases are not refunded, but defective copies <strong>are</strong> replaced —
+                  typically printed and shipped within <strong>two to three business days</strong> of the claim being
+                  accepted. Step-by-step help is also on the{" "}
+                  <Link href="/contact/" style={{ color: "var(--cyan)" }}>Contact page</Link>, and if the form asks
+                  for something you don&apos;t have, email{" "}
+                  <a href="mailto:jason@seventhcitypress.com" style={{ color: "var(--gold)" }}>
+                    jason@seventhcitypress.com
+                  </a>{" "}
+                  and I will help.
+                </p>
+              </div>
+            </div>
+
             <div>
               <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>Return window</h2>
               <p>

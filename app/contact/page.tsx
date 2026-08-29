@@ -5,7 +5,7 @@ import SocialLinks from "@/components/layout/SocialLinks";
 export const metadata: Metadata = {
   title: "Contact & Press",
   description:
-    "Get in touch with Jason Carroll Holloway or Seventh City Press for rights, media inquiries, review copies, and press kit downloads.",
+    "Get in touch with Jason Carroll Holloway or Seventh City Press for order support, damaged or defective books, rights, media inquiries, review copies, and press kit downloads.",
   alternates: {
     canonical: "https://jasoncholloway.com/contact/",
   },
@@ -35,6 +35,65 @@ export default function ContactPage() {
         <div className="container">
           <div className="resp-main-sidebar" style={{ display: "grid", gridTemplateColumns: "1fr 340px", gap: "4rem", alignItems: "start" }}>
             <div>
+              <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
+                <span className="label">Order Support</span>
+              </div>
+              <div className="card" style={{ background: "var(--bg-surface)", borderColor: "var(--border)", marginBottom: "3rem" }}>
+                <h2 className="display-md" style={{ marginBottom: "0.75rem", fontSize: "1.35rem" }}>
+                  Did you receive a damaged book?
+                </h2>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", color: "var(--text-muted)", lineHeight: 1.85, fontSize: "1rem" }}>
+                  <p>
+                    If your copy arrived with a printing or binding defect — uncut or stuck pages, misprinted
+                    text, a damaged cover — that is a manufacturing defect, and the printer,{" "}
+                    <strong>IngramSpark, will replace it</strong>. There is no need to return the defective copy
+                    first.
+                  </p>
+                  <p>
+                    If you bought the book through the direct checkout on this site (an IngramSpark Share Link /
+                    e-commerce order), you file the claim yourself as the buyer. It is the faster path — these
+                    claims are not routed through the publisher queue. Here is exactly what to do:
+                  </p>
+                  <ol style={{ paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.65rem" }}>
+                    <li>
+                      Find your original <strong>order-confirmation email</strong>. It contains your{" "}
+                      <strong>Order Number</strong>.
+                    </li>
+                    <li>
+                      Open IngramSpark&apos;s consumer claim form:{" "}
+                      <a
+                        href="https://www.ingramspark.com/report-an-issue"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ color: "var(--gold)" }}
+                      >
+                        ingramspark.com/report-an-issue
+                      </a>
+                    </li>
+                    <li>
+                      Use the <strong>same email address you used at checkout</strong>. IngramSpark matches your
+                      claim to that address and the order number.
+                    </li>
+                    <li>
+                      Describe the defect (for example, &ldquo;the book arrived with uncut top pages&rdquo;) and
+                      request a replacement.
+                    </li>
+                  </ol>
+                  <p>
+                    Direct Share Link purchases are not refunded, but defective copies <strong>are</strong>{" "}
+                    replaced. Once IngramSpark accepts the request, their usual practice is to print and ship the
+                    replacement within <strong>two to three business days</strong>.
+                  </p>
+                  <p style={{ margin: 0 }}>
+                    If anything in the form is unclear, or if they ask for something you don&apos;t have, email{" "}
+                    <a href="mailto:jason@seventhcitypress.com" style={{ color: "var(--gold)", fontFamily: "var(--font-mono)", fontSize: "0.9rem" }}>
+                      jason@seventhcitypress.com
+                    </a>{" "}
+                    and I will help. And thank you for reading — I&apos;m sorry the first copy wasn&apos;t right.
+                  </p>
+                </div>
+              </div>
+
               <div className="section-label-row" style={{ marginBottom: "1.5rem" }}>
                 <span className="label">Media & Press Inquiries</span>
               </div>

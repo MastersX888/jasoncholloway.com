@@ -32,6 +32,11 @@ REQUIRED = {
         "RIVERWARDS",
         "hundred and fifty feet",
         "bottomed out at a hundred and sixty",
+        # canon fix + name rulings, 2026-08-29
+        "grandfather died in 2003",
+        "Lorraine Masters",
+        "Lorraine's",
+        "Sarah Ashworth",
     ],
     2: [
         "Washington Street office",
@@ -42,6 +47,11 @@ REQUIRED = {
         "11 PM. Washington Street",
         "apartment hummed its limestone",
         "bathroom sink in an apartment in Kansas City",
+        # name rulings, 2026-08-29
+        "Lorraine Masters",
+        "Senator Deborah Holt",
+        "Rosalind Lindgren",
+        "had been born with",
     ],
     3: [
         "Iceland basalt chamber",
@@ -53,7 +63,16 @@ REQUIRED = {
         "Quality Hill balcony",
         "The apartment hummed at 55 Hz",
         "apartment was clean. The apartment was empty",
-        "hallway outside his door",  # Marcus Chen follow-up
+        "hallway outside his door",  # Marcus Whitaker follow-up
+        # name rulings, 2026-08-29
+        "Marcus Whitaker",
+        "Margaret Ferrand",
+        "Laura Okada",
+        "Lin Zhao",
+        "Michael Halloran",
+        "Nolan Eriksen",
+        "Idris Broussard",
+        "Kofi Asante",
     ],
 }
 
@@ -66,6 +85,15 @@ BANNED = {
         "MISSOURI COLD STORAGE",
         "fifty-five feet below the surface",
         "The shaft dropped a hundred and sixty feet",
+        # canon fix + name rulings, 2026-08-29. Bare "Margaret" is deliberately
+        # NOT banned: Margaret Ferrand keeps the given name in vol 3, and the
+        # omnibus audit unions all three books' banned lists. "Margaret's" is safe
+        # only while Ferrand's possessive stays "Margaret Ferrand's".
+        "grandfather died in 2010",
+        "would never meet",
+        "Margaret Masters",
+        "Margaret's",
+        "Sarah Chen",
     ],
     2: [
         "Hotel Phillips Building office",
@@ -76,6 +104,11 @@ BANNED = {
         "11 PM. Quality Hill. The Foundation",
         "The house hummed its limestone fundamental",
         "bathroom sink in a house in Kansas City",
+        # name rulings, 2026-08-29
+        "Margaret Masters",
+        "Senator Margaret",
+        "Sarah Chen",
+        "shared by marriage",
     ],
     3: [
         "Somewhere below them, 160 feet below, in the SubTropolis",
@@ -89,6 +122,18 @@ BANNED = {
         "Marcus Chen on his front porch",
         # residual that should be gone after apartment pass
         "The house hummed at 53.6",
+        # name rulings, 2026-08-29. Yuki Tanaka is retained, so only the Andrew
+        # Tanaka form is banned.
+        "Marcus Chen",
+        "Margaret Chen",
+        "Laura Chen",
+        "Lin Chen",
+        "Michael Chen",
+        "Andrew Tanaka",
+        # "Jr." implied a Marcus Sr. who never existed and read as the Director
+        # of Instruction's son; the cohort list gives everyone else a surname.
+        "Marcus Jr.",
+        "Kofi Mensah",
     ],
 }
 

@@ -21,6 +21,7 @@ def format_isbn(raw):
 
 import html
 import importlib.util
+import re
 import sys
 import zipfile
 from pathlib import Path
@@ -310,11 +311,15 @@ def build_epub(cfg: dict, is_kindle: bool = False) -> Path:
         with open(cfg["cover"], "rb") as f:
             book.set_cover("cover.jpg", f.read())
 
+    # An empty stylesheet ships a book that renders with reader defaults, so
+    # refuse to build rather than emitting a silently unstyled EPUB.
+    if not CSS_PATH.is_file():
+        raise RuntimeError(f"stylesheet not found: {CSS_PATH}")
     style = epub.EpubItem(
         uid="style",
         file_name="style/book.css",
         media_type="text/css",
-        content=CSS_PATH.read_bytes() if CSS_PATH.is_file() else b"",
+        content=CSS_PATH.read_bytes(),
     )
     book.add_item(style)
 
@@ -375,8 +380,9 @@ def build_epub(cfg: dict, is_kindle: bool = False) -> Path:
 
     back_pages = (back_page, closer_page)
     book.toc = (*epub_chapters, *back_pages)
+    nav_page = epub.EpubNav()
     book.add_item(epub.EpubNcx())
-    book.add_item(epub.EpubNav())
+    book.add_item(nav_page)
     book.spine = [
         "nav",
         title_page,
@@ -385,6 +391,19 @@ def build_epub(cfg: dict, is_kindle: bool = False) -> Path:
         *epub_chapters,
         *back_pages,
     ]
+
+    # ebooklib rebuilds each document head, so a <link> written into the raw
+    # markup is discarded; the stylesheet is only emitted for items it is
+    # registered against.
+    for page in (
+        title_page,
+        copyright_page,
+        epigraph_page,
+        *epub_chapters,
+        *back_pages,
+        nav_page,
+    ):
+        page.add_item(style)
 
     cfg["output"].parent.mkdir(parents=True, exist_ok=True)
     out_path = Path(BUILD_OUTPUT) if BUILD_OUTPUT else (cfg["output"])
@@ -413,26 +432,66 @@ def validate_epub(path: Path, cfg: dict, is_kindle: bool = False) -> None:
             if cfg["isbn"] not in cr:
                 raise RuntimeError(f"{path.name}: copyright ISBN missing")
         body = "".join(z.read(n).decode("utf-8", "replace") for n in names if n.endswith(".xhtml"))
-        # if "Blackwood" in body:
-        #     raise RuntimeError(f"{path.name}: Blackwood found in content")
-        # if cfg["vol"] == 1:
-        #     if "grandfather died in 2010" in body:
-        #         raise RuntimeError(f"{path.name}: grandfather 2010 found")
-        #     if "grandfather died in 2003" not in body:
-        #         raise RuntimeError(f"{path.name}: grandfather 2003 missing")
-        # if cfg["vol"] == 3 and "sphere was still down there" not in body:
-        #     raise RuntimeError(f"{path.name}: sphere paragraph missing")
-        # if "never entered a cave" in body:
-        #     raise RuntimeError(f"{path.name}: Revision 1 cave contradiction still present")
-        # if "skim milk" in body:
-        #     raise RuntimeError(f"{path.name}: Revision 2 skim milk still present")
-        # if cfg["vol"] == 2 and "never crossed the threshold" not in body:
-        #     raise RuntimeError(f"{path.name}: Revision 1 threshold fix missing")
-        # if cfg["vol"] == 3:
-        #     if "sugar had settled and dried" not in body:
-        #         raise RuntimeError(f"{path.name}: Revision 2 coffee fix missing")
-        #     if "Miroslav had given her when she defended" not in body:
-        #         raise RuntimeError(f"{path.name}: Revision 3 Montblanc fix missing")
+        if "Blackwood" in body:
+            raise RuntimeError(f"{path.name}: Blackwood found in content")
+        if cfg["vol"] == 1:
+            # CANON.md: William Masters d. 2003, James Masters d. September 2010.
+            # Blake's line named the father's year for the grandfather's death.
+            if "grandfather died in 2010" in body:
+                raise RuntimeError(f"{path.name}: grandfather 2010 found")
+            if "grandfather died in 2003" not in body:
+                raise RuntimeError(f"{path.name}: grandfather 2003 missing")
+            # William teaches nine-year-old Blake to fly in the summer of 1999,
+            # so he cannot be aimed at a grandson he "would never meet".
+            if "would never meet" in body:
+                raise RuntimeError(f"{path.name}: 'would never meet' contradicts the 1999 flashback")
+
+        # Name rulings of 2026-08-29. CANON.md had previously blessed the Chen
+        # surname collision as intentional, so a rebuild from a stale source could
+        # restore the old names with nothing objecting. These gates fail the build
+        # instead. Note Yuki Tanaka is a separate retained character; only Andrew
+        # Tanaka was renamed, so "Tanaka" alone must not be banned.
+        for gone in ("Sarah Chen", "Marcus Chen", "Margaret Chen", "Laura Chen",
+                     "Lin Chen", "Michael Chen", "Andrew Tanaka", "Marcus Jr.",
+                     "Kofi Mensah"):
+            if gone in body:
+                raise RuntimeError(f"{path.name}: renamed character '{gone}' is back")
+        chen_all = len(re.findall(r"\bChen\b", body))
+        chen_andrew = len(re.findall(r"\bAndrew(?:\s|<[^>]*>)+Chen\b", body))
+        if chen_all != chen_andrew:
+            raise RuntimeError(
+                f"{path.name}: {chen_all - chen_andrew} bare 'Chen' not preceded by "
+                f"'Andrew' - Andrew Chen is the only Chen in the trilogy"
+            )
+        # Blake's mother is Lorraine Masters and Senator Holt is Deborah, leaving
+        # Margaret Ferrand (vol 3 board chair) as the trilogy's only Margaret.
+        if cfg["vol"] in (1, 2) and "Margaret" in body:
+            raise RuntimeError(
+                f"{path.name}: 'Margaret' found - vol {cfg['vol']} has no Margaret"
+            )
+        if cfg["vol"] == 1 and "Lorraine" not in body:
+            raise RuntimeError(f"{path.name}: Lorraine Masters missing")
+        if cfg["vol"] == 2:
+            if "shared by marriage" in body:
+                raise RuntimeError(
+                    f"{path.name}: Sabrina is Nadia's sister, not a relation by marriage"
+                )
+            for needed in ("Lorraine", "Deborah", "Rosalind Lindgren"):
+                if needed not in body:
+                    raise RuntimeError(f"{path.name}: '{needed}' missing")
+        if cfg["vol"] == 3:
+            for needed in ("Margaret Ferrand", "Idris Broussard"):
+                if needed not in body:
+                    raise RuntimeError(f"{path.name}: '{needed}' missing")
+        # The gates below stay off deliberately. Their strings fail identically in
+        # the DEMY fix corpus, the BUILD docx and the omnibus, i.e. they never
+        # matched any draft on disk and were written speculatively rather than
+        # against applied edits. Audited 2026-08-29; do not enable without first
+        # confirming the target prose actually exists.
+        #   vol 3: "sphere was still down there"
+        #   vol 2: "never crossed the threshold"   (and "never entered a cave" absent)
+        #   vol 3: "sugar had settled and dried", "Miroslav had given her when she defended"
+        #   any:   "skim milk" absent
         if "\u2726 \u2295 \u2726" in body or "? ? ?" in body:
             raise RuntimeError(f"{path.name}: alternate scene-break symbols found")
         if '<hr class="sb-rule"' in body:
@@ -445,6 +504,19 @@ def validate_epub(path: Path, cfg: dict, is_kindle: bool = False) -> None:
         css = z.read("EPUB/style/book.css").decode("utf-8")
         if "p.chapter-subtitle" not in css:
             raise RuntimeError(f"{path.name}: chapter-subtitle CSS missing")
+        # cover.xhtml is a full-bleed image page and needs no stylesheet.
+        unlinked = [
+            n
+            for n in names
+            if n.endswith(".xhtml")
+            and not n.endswith("cover.xhtml")
+            and "style/book.css" not in z.read(n).decode("utf-8", "replace")
+        ]
+        if unlinked:
+            raise RuntimeError(
+                f"{path.name}: stylesheet not linked in {len(unlinked)} page(s), "
+                f"e.g. {unlinked[:3]}"
+            )
         if not any("back_matter.xhtml" in n for n in names):
             raise RuntimeError(f"{path.name}: back_matter.xhtml missing")
         if not any("end_closer.xhtml" in n for n in names):
@@ -460,7 +532,22 @@ def validate_epub(path: Path, cfg: dict, is_kindle: bool = False) -> None:
 if __name__ == '__main__':
     import sys
     target_isbn = sys.argv[1].replace('-', '') if len(sys.argv) > 1 else None
+    built = 0
+    failed = []
     for cfg in VOLUMES:
-        if not target_isbn or cfg['isbn_bare'] == target_isbn:
-            out_path = build_epub(cfg, is_kindle=False)
-            print(f'Built {out_path}')
+        if target_isbn and cfg['isbn_bare'] != target_isbn:
+            continue
+        out_path = build_epub(cfg, is_kindle=False)
+        print(f'Built {out_path}')
+        try:
+            validate_epub(out_path, cfg, is_kindle=False)
+        except RuntimeError as exc:
+            failed.append(str(exc))
+            print(f'  VALIDATE FAIL  {exc}')
+        else:
+            print(f'  validate OK    {out_path.name}')
+        built += 1
+    if not built:
+        sys.exit(f'no volume matched ISBN {target_isbn}')
+    if failed:
+        sys.exit(f'{len(failed)} volume(s) failed validation')

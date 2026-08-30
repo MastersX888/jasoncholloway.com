@@ -164,3 +164,16 @@ scripts/_*.py
 # copies under groundswell-monitor/ are the only copy of anything superseded
 # there, because that directory is ignored above and has no git history of its own.
 *.bak
+
+# kc-events/ — extracted to its own git repository (added 2026-08-30)
+# A complete event-discovery application: 39 Python modules covering ingest
+# adapters, dedup, scoring, discovery, a SQLite layer, a CLI, a weekly runner
+# and a local dashboard. The blanket `*.py` above hid every one of them, so
+# this repo tracked 24 files — configs, README, seed data, reports — and none
+# of the program. Copying the folder would have kept the settings and lost the
+# application, which is why it now has history of its own.
+#
+# It is a nested repository at kc-events/.git with one initial commit of 78
+# files. Python source is tracked by default there; that inversion is the point.
+# This rule stops the trilogy repo from re-absorbing it as an embedded gitlink.
+/kc-events/

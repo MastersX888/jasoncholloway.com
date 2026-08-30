@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "label": "Facebook author",
+      "post_id": "B98BJ",
+      "status": "published",
+      "url": "https://facebook.com/1224164874114610_122109358461290334",
+      "error": null
+    },
+    {
+      "label": "Instagram",
+      "post_id": "8rf8Q",
+      "status": "failed",
+      "url": null,
+      "error": "Error publishing Instagram post: At least one media file (image or video) is required for Instagram posts"
+    }
+  ],
+  "board_id": null,
+  "media_id": "yJYo3"
+}

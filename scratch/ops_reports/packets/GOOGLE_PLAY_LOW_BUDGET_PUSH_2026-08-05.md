@@ -14,7 +14,7 @@
 | Catalog | 4/4 Live — MX I–III $6.99 · Hawkes $9.99 |
 | Series | **Masters X** Live · 3 titles · store `https://play.google.com/store/books/series?id=Ucm1HAAAABDl1M` |
 | Vol I Play URL | `https://play.google.com/store/books/details?id=3zr1EQAAQBAJ` |
-| Promo | **`MX1-Play-199-2026-08`** · ID `48915727` · **Status: Active** · Aug 6–12, 2026 · US · USD **$1.99** · ISBN `9798256008819` |
+| Promo | **`MX1-Play-199-2026-08`** · ID `48915727` · **Status: Ended** (Jason 2026-08-12 AM CT) · Aug 6–12, 2026 · US · was **$1.99** · ISBN `9798256008819` · **1 unit / $1.39** · store back to list **$6.99** (up to ~24h) |
 | Google Ads | Account `ocid=8427080802`. Campaign `#2` id `24114368389` · **Performance Max** · budget **$4.00/day** · geo **US**. **ENABLED 2026-08-06 ~13:40 CT**. Primary **Purchase** goal attached 2026-08-06 ~14:15 CT (conversion ID `18344196783` / label `1wBzCMqEqd0cEK_1mKtE`). Site tag **LIVE** on jasoncholloway.com (`0b44ec2`). Variety **text** added (6 lines). River **images** + **website/social sitelinks** still pending Jason (~7 min). Diagnostics Aug 6 PM: asset group **No ads** · $0 spend · not serving yet. Closeout: `GOOGLE_ADS_CLOSEOUT_MX1_2026-08-06.md`. Hard stop: `$4/day` + `MX1-HardCap-25-Pause`. Strip $1.99 after **2026-08-12**. |
 
 ## Hard caps (do not exceed)

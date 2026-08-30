@@ -179,8 +179,8 @@ Any migration requires **feed resubmit + returns policy + shipping SLA** re-vali
 
 ## Decision gates (week card)
 
-- [ ] Jason: approve Part A deploy
-- [ ] Jason: add FB payment method + publish $35 boost (Tier 3)
+- [x] Jason: approve Part A deploy
+- [x] Jason: add FB payment method + publish Facebook ad (Tier 3) — done 2026-08-24
 - [ ] Optional: request Ingram **exact print + compensation** export for all 10 SKUs (replaces placeholders above)
 - [ ] Optional: Books.by trial upload — **only if** multi-SKU cart is Q4 marketing requirement
 

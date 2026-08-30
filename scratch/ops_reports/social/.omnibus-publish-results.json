@@ -1,0 +1,23 @@
+{
+  "approved": "2026-08-23 Jason",
+  "posts": {
+    "facebook": {
+      "post_id": "4luxC",
+      "outstand_url": "https://app.outstand.so/posts/4luxC",
+      "urls": {
+        "facebook:Seventh City Press": "https://facebook.com/1172985912572281_122109673659409612"
+      },
+      "statuses": {
+        "facebook:Seventh City Press": "published"
+      }
+    },
+    "pinterest": {
+      "post_id": "LbKRn",
+      "outstand_url": "https://app.outstand.so/posts/LbKRn",
+      "urls": {},
+      "statuses": {
+        "pinterest:SeventhCityPress": "failed"
+      }
+    }
+  }
+}

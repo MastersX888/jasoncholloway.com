@@ -1,8 +1,6 @@
 # Seventh City Press — Google Business Profile Import Package
 
-**Prepared:** July 12, 2026  
-**Steps refreshed:** August 1, 2026 — see also `scratch/ops_reports/packets/GBP_IMPORT_PACKET_2026-08-01.md`  
-**Status:** Package ready · **Claim 5 IN PROGRESS** (~03:58 CT 2026-08-03) — import/verify in flight (Jason / parent browser)
+**Prepared:** July 12, 2026
 
 ---
 
@@ -14,8 +12,7 @@
 | `assets/scp-logo-profile-720.png` | **Profile photo / logo** (heptagram from book spine) |
 | `assets/scp-logo-profile-250.png` | Minimum-size logo variant |
 | `assets/scp-heptagram-mark-1024.png` | Mark only, no text |
-| `assets/scp-logo-google-workspace-320x132.png` | **Google Workspace custom logo** (320×132 banner, dark) |
-| `assets/scp-logo-google-workspace-320x132-light.png` | Workspace logo alternate (cream ground) |
+| `assets/scp-logo-lockup-1200.png` | Mark + SEVENTH CITY PRESS wordmark |
 | `seventhcitypress-google-business-assets.zip` | All assets + CSV for upload |
 
 ---

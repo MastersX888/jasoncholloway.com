@@ -64,7 +64,7 @@
 | **Browser MCP** | **BLOCKED** — 0 tabs; `browser_navigate` (default, `newTab: true`, `position: side`) all return *No browser tab available* |
 | **CSV fresh download** | **Failed** — `csv_url` returns GR sign-up HTML (auth required); no session cookie in shell |
 | **CSV on disk** | Stale: `Downloads/goodreads_library_export.csv` — **4 rows** (Kindle Vol I–III + Omnibus PB), mtime 15:08 CT |
-| **CSV copied to ops** | `scratch/ops/goodreads_library_export_stale_2026-07-17.csv` |
+| **CSV copied to ops** | `scratch/ops/goodreads_library_export_DUP_of_2026-08-02.csv` — **renamed 2026-08-29.** Written here as `..._stale_2026-07-17.csv`, but by 15:34 the Downloads file had already been replaced by the 15:08 re-export (note the size change from 1767 to 2310 bytes, and the mtime recorded on the row above). The copy is therefore byte-identical to the Aug 2 export, not the July one, and the old name asserted a provenance it never had. The genuine 1767-byte July 17 export is not in the repo. |
 | **StoryGraph import** | **Not executed** — requires logged-in browser session |
 | **Books added** | 0 |
 | **Phase** | `storygraph` (unchanged) |

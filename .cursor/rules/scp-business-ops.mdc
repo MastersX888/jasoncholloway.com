@@ -11,13 +11,16 @@ Jason is wrapping the Masters X trilogy imprint (Seventh City Press LLC): books 
 
 Evening-only involvement: review an approval checklist, send approved items, move on to audiobook/screenplay, new writing, and 501(c)(3) career in Kansas City.
 
-## Three parallel agents
+## Three parallel agents + growth desk
 
 1. **Email (daily)** — MCP accounts gmail-personal, scp-jason, proton-personal. Skill: `~/.cursor/skills/email-daily-sweep/SKILL.md`. Reports: `scratch/email_reports/`.
 2. **Social (daily)** — unified analytics: Facebook Business, Instagram, X, Bluesky, Pinterest, Outstand. Skill: `~/.cursor/skills/social-daily-sweep/SKILL.md`. Reports: `scratch/ops_reports/social/`.
 3. **Groundswell (weekly + data refresh)** — `groundswell-monitor/` dashboard, pipelines, weekly deliverables. Skill: `~/.cursor/skills/groundswell-weekly-agent/SKILL.md`.
+4. **Growth (weekly ledger + monthly P&L + monthly treasury research)** — report-only. Skills: growth-ledger-weekly, profitability-review-monthly, treasury-advisory-monthly. Never spend or trade. Kraken MCP is `market,account,paper` only.
 
 Master plan: `scratch/SCP_AUTOMATION_MASTER_PLAN.md`
+
+**Oversight committee:** Morgan chairs the SVP Oversight Committee. Full charter: `scratch/ops_reports/SVP_OVERSIGHT_COMMITTEE_2026-08-09.md`. Rule: `.cursor/rules/svp-oversight-committee.mdc`.
 
 ## Priority order for Jason
 
@@ -32,6 +35,8 @@ Master plan: `scratch/SCP_AUTOMATION_MASTER_PLAN.md`
 - **Amazon:** Kindle Vol I–III only (ASINs B0H4KYMSM1, B0H4KQ4YQJ, B0H4L36X21). No omnibus on Amazon.
 - **Print/omnibus:** IngramSpark only.
 - **Email registry:** `scripts/email-accounts.registry.json`
+- Canonical business plan: `scratch/ops_reports/SCP_BUSINESS_PLAN_REFINED.md`
+- Architecture: `scratch/ops_reports/SVP_ARCHITECTURE_DESIGN_2026-08-13.md`
 
 ## Executive QC gate (Vivian)
 
@@ -39,4 +44,4 @@ Master plan: `scratch/SCP_AUTOMATION_MASTER_PLAN.md`
 
 ## Never auto without approval
 
-Money, legal, press/reader replies, social posts, vendor commitments. No publish without Vivian pass + Jason approval.
+Money, legal, press/reader replies, social posts, vendor commitments, NetGalley/Edelweiss payment, portal uploads after go-live, following social accounts, asserting unverified trade terms, **trade execution, fund transfers, opening brokerage/exchange/bank accounts**. No publish without Vivian pass + Jason approval. No artifact may imply the LLC or an agent holds a trading or investment-adviser license. Kraken live orders stay off until a separate week-card enables `trade`.

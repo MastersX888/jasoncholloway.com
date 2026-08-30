@@ -80,3 +80,38 @@ Prefix: `https://jasoncholloway.com`
 - **Live check:** `/moments/` hub shows 17 scenes + Breitling URLs; sitemap.xml lists all 5 new slugs
 - **Bing ping:** `bing.com/ping?sitemap=…` returns **410 Gone** (endpoint retired) — use [Bing Webmaster Tools](https://www.bing.com/webmasters) → Sitemaps instead
 - **Google:** manual GSC required (no Indexing API scope for literary pages)
+
+## Agent log — 2026-08-08 GSC session (browser)
+
+**Sitemaps**
+| Property | Action | Result |
+|----------|--------|--------|
+| jasoncholloway.com | Resubmitted `sitemap.xml` | **Success** — 55 discovered pages, last read Aug 8 |
+| seventhcitypress.com | Already submitted | **Success** — 3 pages, last read Jul 31 (no resubmit needed) |
+
+**Indexing requested** (URL Inspection → priority crawl queue)
+1. `/books/masters-x/moments/the-forgetting/` — unknown to Google → requested
+2. `/books/masters-x/moments/breitling-stopped/` — requested
+3. `/books/masters-x/moments/breitling-wound-again/` — requested
+4. `/books/masters-x/moments/pentecost-condition/` — requested
+5. `/books/masters-x/moments/breitling-eight-hertz/` — requested
+6. `/books/masters-x/moments/` (hub) — discovered, not indexed → requested
+
+**Deferred to next session** (per packet, ≤10/day cap headroom used)
+- Comp pages: `/books/books-like-the-historian/`, `/books/literary-conspiracy-fiction/`
+- Redirect check: `/books/masters-x/reading-experience/`
+
+## Agent log — 2026-08-08 GSC session #2 (comp pages + redirect)
+
+**Comp pages**
+| URL | GSC status | Action |
+|-----|------------|--------|
+| `/books/books-like-the-historian/` | **Page is indexed** | None needed |
+| `/books/literary-conspiracy-fiction/` | Discovered — not indexed | **Indexing requested** |
+
+**Redirect check** — `/books/masters-x/reading-experience/`
+| Check | Result |
+|-------|--------|
+| Live HTTP | **301** → `/books/masters-x/moments/` (Cloudflare `_redirects` rule confirmed) |
+| GSC URL Inspection | URL unknown to Google (expected — redirect stub, not indexed) |
+| Verdict | **PASS** — 301 to moments hub works; do not request indexing on redirect URL |

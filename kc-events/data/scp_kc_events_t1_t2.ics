@@ -6,8 +6,8 @@ METHOD:PUBLISH
 X-WR-CALNAME:SCP - KC Events
 X-WR-TIMEZONE:America/Chicago
 BEGIN:VEVENT
-UID:evt_ee4c9c9d9b5e@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_b8edc792a5ec@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260923T000000Z
 DTEND:20260923T010000Z
 SUMMARY:[T1] Jodi Picoult\, Hollow Bones
@@ -15,8 +15,8 @@ DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
  s\; likely audience overlap with literary readers\; elevated visibility / 
  prestige signal\; useful networking potential.\n\nScore: 80.0 - Tier 1\n\n
  Join Rainy Day Books at Unity Temple to celebrate Hollow Bones with belove
- d author Jodi Picoult! Event Logistics This event takes place in Unity Tem
- ple's Sanctuary and includes a conversatio...\n\nRSVP: https://rainydayboo
+ d author Jodi Picoult in conversation with Megan Bannen! Event Logistics T
+ his event takes place in Unity Temple's Sa...\n\nRSVP: https://rainydayboo
  ks.com/event/2026-09-22/jodi-picoult-hollow-bones\n\nSource: https://rainy
  daybooks.com/event/2026-09-22/jodi-picoult-hollow-bones\n\nSeventh City Pr
  ess - KC Event Discernment (provisional scoring)
@@ -24,8 +24,31 @@ URL:https://rainydaybooks.com/event/2026-09-22/jodi-picoult-hollow-bones
 CATEGORIES:SCP-KC,Tier1
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_ff6a1052996b@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_c020ca543159@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260926T000000Z
+DTEND:20260926T010000Z
+SUMMARY:[T1] Terri Lewis\, When They Came Home with The National WWI Museum
+  and Memorial
+LOCATION:Rainy Day Books - Rainy Day Books The Fairway Shops 2706 W 53rd St
+ reet Fairway\, KS 66205
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers\; elevated visibility / 
+ prestige signal\; useful networking potential.\n\nScore: 84.0 - Tier 1\n\n
+ Join Rainy Day Books in-store to discuss When They Came Home with author T
+ erri Lewis\, presented in partnership with The National WWI Museum and Mem
+ orial. This event includes a talk from Terri along...\n\nRSVP: https://rai
+ nydaybooks.com/event/2026-09-25/terri-lewis-when-they-came-home-national-w
+ wi-museum-and-memorial\n\nSource: https://rainydaybooks.com/event/2026-09-
+ 25/terri-lewis-when-they-came-home-national-wwi-museum-and-memorial\n\nSev
+ enth City Press - KC Event Discernment (provisional scoring)
+URL:https://rainydaybooks.com/event/2026-09-25/terri-lewis-when-they-came-h
+ ome-national-wwi-museum-and-memorial
+CATEGORIES:SCP-KC,Tier1
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_35acc7b30a01@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261007T000000Z
 DTEND:20261007T010000Z
 SUMMARY:[T1] John Green\, Hollywood\, Ending
@@ -33,8 +56,8 @@ DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
  s\; likely audience overlap with literary readers\; elevated visibility / 
  prestige signal\; useful networking potential.\n\nScore: 80.0 - Tier 1\n\n
  Join Rainy Day Books at Unity Temple to celebrate the exciting new release
-  from author John Green\, Hollywood\, Ending! John Green\, #1 internationa
- lly bestselling and award-winning author\, mak...\n\nRSVP: https://rainyda
+  from author John Green\, Hollywood\, Ending\, in conversation with Gillia
+ n Flynn! John Green\, #1 internationally bests...\n\nRSVP: https://rainyda
  ybooks.com/event/2026-10-06/john-green-hollywood-ending\n\nSource: https:/
  /rainydaybooks.com/event/2026-10-06/john-green-hollywood-ending\n\nSeventh
   City Press - KC Event Discernment (provisional scoring)
@@ -42,8 +65,8 @@ URL:https://rainydaybooks.com/event/2026-10-06/john-green-hollywood-ending
 CATEGORIES:SCP-KC,Tier1
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_5ad1ffcb7309@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_fabcf0bd32ee@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261008T000000Z
 DTEND:20261008T013000Z
 SUMMARY:[T1] V.E. Schwab\, Victorious
@@ -60,8 +83,8 @@ URL:https://rainydaybooks.com/event/2026-10-07/ve-schwab-victorious
 CATEGORIES:SCP-KC,Tier1
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_36e68add6b31@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_aff9b3ecbf52@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261112T010000Z
 DTEND:20261112T020000Z
 SUMMARY:[T1] Adam Grant\, Vibe
@@ -78,152 +101,8 @@ URL:https://rainydaybooks.com/event/2026-11-11/adam-grant-vibe
 CATEGORIES:SCP-KC,Tier1
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_ad76926634fa@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260806T000000Z
-DTEND:20260806T010000Z
-SUMMARY:[T2] Robin Andersen\, The Complicit Lens
-LOCATION:Rainy Day Books - Rainy Day Books The Fairway Shops 2706 W 53rd St
- reet Fairway\, KS 66205
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books in-store to discuss
-  The Complicit Lens with author Robin Andersen. This event includes a conv
- ersation with Robin and moderator Spencer Graves\, along with an opportuni
- ty to get ...\n\nRSVP: https://rainydaybooks.com/event/2026-08-05/robin-an
- dersen-complicit-lens\n\nSource: https://rainydaybooks.com/event/2026-08-0
- 5/robin-andersen-complicit-lens\n\nSeventh City Press - KC Event Discernme
- nt (provisional scoring)
-URL:https://rainydaybooks.com/event/2026-08-05/robin-andersen-complicit-len
- s
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_3011360624f4@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260812T000000Z
-DTEND:20260812T010000Z
-SUMMARY:[T2] Laura Moriarty\, Sunlight Finds You
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books at Unity Temple to 
- celebrate Sunlight Finds You with author Laura Moriarty. This event includ
- es a talk from Laura in Unity Hall (downstairs) within Unity Temple on the
-  P...\n\nRSVP: https://rainydaybooks.com/event/2026-08-11/laura-moriarty-s
- unlight-finds-you\n\nSource: https://rainydaybooks.com/event/2026-08-11/la
- ura-moriarty-sunlight-finds-you\n\nSeventh City Press - KC Event Discernme
- nt (provisional scoring)
-URL:https://rainydaybooks.com/event/2026-08-11/laura-moriarty-sunlight-find
- s-you
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_8237d6a10a92@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260815T000000Z
-DTEND:20260815T010000Z
-SUMMARY:[T2] Riverfront Reading Series featuring Catherine Strayhill and Br
- andon Whitehead
-LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial\; seen across 2 sources.\n\nScore: 76.0 - Tier 2\n\nRiverfront Readi
- ng Series featuring Catherine Strayhill and Brandon Whitehead\n\nRSVP: htt
- ps://thewritersplace.wildapricot.org/event-6770558\n\nSource: https://thew
- ritersplace.wildapricot.org/event-6770558\n\nSeventh City Press - KC Event
-  Discernment (provisional scoring)
-URL:https://thewritersplace.wildapricot.org/event-6770558
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_b1030c2742c7@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260815T140000Z
-DTEND:20260815T210000Z
-SUMMARY:[T2] Genealogy KC 2026 Conference
-LOCATION:Kansas City\, MO - 6751 NE 70th St\, Kansas City\, MO 64119
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers.\n\nScore: 73.0 - Tier 2
- \n\nMidwest free genealogy technology and research conference.\n\nRSVP: ht
- tps://genealogykc.org/\n\nSource: https://genealogykc.org/\n\nSeventh City
-  Press - KC Event Discernment (provisional scoring)
-URL:https://genealogykc.org/
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_38c93f1e53da@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260815T190000Z
-DTEND:20260815T200000Z
-SUMMARY:[T2] The Beat Goes On at The Writers Place
-LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial\; seen across 2 sources.\n\nScore: 70.0 - Tier 2\n\nThe Beat Goes On
-  at The Writers Place\n\nRSVP: https://thewritersplace.wildapricot.org/eve
- nt-6754931\n\nSource: https://thewritersplace.wildapricot.org/event-675493
- 1\n\nSeventh City Press - KC Event Discernment (provisional scoring)
-URL:https://thewritersplace.wildapricot.org/event-6754931
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_567aa70d7df2@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260822T000000Z
-DTEND:20260822T010000Z
-SUMMARY:[T2] The Writers Place Reading Series featuring Matthew Goldberg\, 
- William Trowbridge\, and Rick Christiansen
-LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial\; seen across 2 sources.\n\nScore: 76.0 - Tier 2\n\nThe Writers Plac
- e Reading Series featuring Matthew Goldberg\, William Trowbridge\, and Ric
- k Christiansen\n\nRSVP: https://thewritersplace.wildapricot.org/event-6674
- 412\n\nSource: https://thewritersplace.wildapricot.org/event-6674412\n\nSe
- venth City Press - KC Event Discernment (provisional scoring)
-URL:https://thewritersplace.wildapricot.org/event-6674412
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_2abc9dc32636@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260822T150000Z
-DTEND:20260822T190000Z
-SUMMARY:[T2] Jordan Morris & Charlie Mylie\, Princess Pony Says Nay
-LOCATION:Rainy Day Books - Rainy Day Books The Fairway Shops 2706 W 53rd St
- reet Fairway\, KS 66205
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books in-store to celebra
- te Princess Pony Says Nay from local author-illustrator duo Jordan Morris 
- and Charlie Mylie\, joined by A REAL-LIFE PONY! Event details: Story Time 
- le...\n\nRSVP: https://rainydaybooks.com/event/2026-08-22/jordan-morris-ch
- arlie-mylie-princess-pony-says-nay\n\nSource: https://rainydaybooks.com/ev
- ent/2026-08-22/jordan-morris-charlie-mylie-princess-pony-says-nay\n\nSeven
- th City Press - KC Event Discernment (provisional scoring)
-URL:https://rainydaybooks.com/event/2026-08-22/jordan-morris-charlie-mylie-
- princess-pony-says-nay
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_56f58773d8f7@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260822T190000Z
-DTEND:20260822T200000Z
-SUMMARY:[T2] Script in Hand Readings
-LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
-DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; useful networking pote
- ntial\; seen across 2 sources.\n\nScore: 70.0 - Tier 2\n\nScript in Hand R
- eadings\n\nRSVP: https://thewritersplace.wildapricot.org/event-6751907\n\n
- Source: https://thewritersplace.wildapricot.org/event-6751907\n\nSeventh C
- ity Press - KC Event Discernment (provisional scoring)
-URL:https://thewritersplace.wildapricot.org/event-6751907
-CATEGORIES:SCP-KC,Tier2
-END:VEVENT
-BEGIN:VEVENT
-UID:evt_02deecb875c7@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_6ed39668015c@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260825T000000Z
 DTEND:20260825T010000Z
 SUMMARY:[T2] Open Mic Night
@@ -238,8 +117,46 @@ URL:https://thewritersplace.wildapricot.org/event-6505619
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_0c30770b444a@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_6f59c21f0df6@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260827T170000Z
+DTEND:20260827T180000Z
+SUMMARY:[T2] This year's featured authors are @tayari
+LOCATION:Kansas City Public Library
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers\; useful networking pote
+ ntial.\n\nScore: 76.0 - Tier 2\n\nThis year's featured authors are @tayari
+ .bsky.social\, Tessa Bailey\, @danielmiyares.bsky.social\, @victoriaaveyar
+ d.bsky.social\, Soman Chainani\, and Giselle Anatol! Set a reminder becaus
+ e free tickets are available starting August 27! 🗓️ (2/3)\n\nRSVP: ht
+ tps://bsky.app/profile/kclibrary.bsky.social/post/3mtjzsuvngk2r\n\nSource:
+  https://bsky.app/profile/kclibrary.bsky.social/post/3mtjzsuvngk2r\n\nSeve
+ nth City Press - KC Event Discernment (provisional scoring)
+URL:https://bsky.app/profile/kclibrary.bsky.social/post/3mtjzsuvngk2r
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_84772c950833@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260828T230000Z
+DTEND:20260829T000000Z
+SUMMARY:[T2] Congressman Jared Huffman\, No Prophets
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers.\n\nScore: 70.0 - Tier 2
+ \n\nOverview Enjoy an event with California Congressman Jared Huffman and 
+ Missouri Congressman Emanuel Cleaver\, II in Kansas City! Join Rainy Day B
+ ooks and Congressman Emanuel Cleaver\, II at Community ...\n\nRSVP: https:
+ //rainydaybooks.com/event/2026-08-28/congressman-jared-huffman-no-prophets
+ \n\nSource: https://rainydaybooks.com/event/2026-08-28/congressman-jared-h
+ uffman-no-prophets\n\nSeventh City Press - KC Event Discernment (provision
+ al scoring)
+URL:https://rainydaybooks.com/event/2026-08-28/congressman-jared-huffman-no
+ -prophets
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_e16c9b3b3433@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260829T150000Z
 DTEND:20260829T153000Z
 SUMMARY:[T2] STORY TIME! John Hare\, Stubby
@@ -257,8 +174,8 @@ URL:https://rainydaybooks.com/event/2026-08-29/story-time-john-hare-stubby
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_8622a0edf44b@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_23694f4493d0@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260829T210000Z
 DTEND:20260829T220000Z
 SUMMARY:[T2] Annual Party and Silent Auction
@@ -273,26 +190,26 @@ URL:https://thewritersplace.wildapricot.org/event-6674382
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_d40aee91c7cf@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_c1139d5738a0@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260909T000000Z
 DTEND:20260909T010000Z
 SUMMARY:[T2] Dr. Sasha Hamdani\, Too Sensitive
 DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
  s\; likely audience overlap with literary readers.\n\nScore: 62.0 - Tier 2
  \n\nJoin Rainy Day Books at Unity Temple to celebrate the newest release f
- rom Dr. Sasha Hamdani\, Too Sensitive! "Too Sensitive is the book so many 
- women have been waiting for. Dr. Hamdani connects th...\n\nRSVP: https://r
- ainydaybooks.com/event/2026-09-08/dr-sasha-hamdani-too-sensitive\n\nSource
- : https://rainydaybooks.com/event/2026-09-08/dr-sasha-hamdani-too-sensitiv
- e\n\nSeventh City Press - KC Event Discernment (provisional scoring)
+ rom Dr. Sasha Hamdani\, Too Sensitive\, with Heidi Gardner! "Too Sensitive
+  is the book so many women have been waiting for. Dr....\n\nRSVP: https://
+ rainydaybooks.com/event/2026-09-08/dr-sasha-hamdani-too-sensitive\n\nSourc
+ e: https://rainydaybooks.com/event/2026-09-08/dr-sasha-hamdani-too-sensiti
+ ve\n\nSeventh City Press - KC Event Discernment (provisional scoring)
 URL:https://rainydaybooks.com/event/2026-09-08/dr-sasha-hamdani-too-sensiti
  ve
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_7575ad9785cb@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_635687632d6a@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260919T000000Z
 DTEND:20260919T010000Z
 SUMMARY:[T2] The Writers Place Reading Series featuring Annette Billings\, 
@@ -310,26 +227,26 @@ URL:https://thewritersplace.wildapricot.org/event-6674428
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_6d6f706eaae2@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
-DTSTART:20260923T000000Z
-DTEND:20260923T010000Z
-SUMMARY:[T2] Jodi Picoult presents Hollow Bones - September 22 at 7:00 pm\,
-  Unity Temple on the Plaza. Tickets at rainydaybooks.com.
-LOCATION:Unity Temple on the Plaza
+UID:evt_3a2a4df16d93@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260922T000000Z
+DTEND:20260922T010000Z
+SUMMARY:[T2] Geneva Lee\, Harbinger
 DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
- s\; likely audience overlap with literary readers\; elevated visibility / 
- prestige signal.\n\nScore: 65.0 - Tier 2\n\nJodi Picoult presents Hollow B
- ones - September 22 at 7:00 pm\, Unity Temple on the Plaza. Tickets at rai
- nydaybooks.com.\n\nRSVP: https://www.instagram.com/rainydaybooks/\n\nSourc
- e: https://www.instagram.com/rainydaybooks/\n\nSeventh City Press - KC Eve
- nt Discernment (provisional scoring)
-URL:https://www.instagram.com/rainydaybooks/
+ s\; likely audience overlap with literary readers\; useful networking pote
+ ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books at Unity Temple to 
+ celebrate the launch of\, Harbinger\, from beloved author Geneva Lee! "Rom
+ ance\, banter\, and all the yearning? I'm obsessed." -#1 NYT bestselling a
+ uthor...\n\nRSVP: https://rainydaybooks.com/event/2026-09-21/geneva-lee-ha
+ rbinger\n\nSource: https://rainydaybooks.com/event/2026-09-21/geneva-lee-h
+ arbinger\n\nSeventh City Press - KC Event Discernment (provisional scoring
+ )
+URL:https://rainydaybooks.com/event/2026-09-21/geneva-lee-harbinger
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_65756004b000@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_2e9a6f2734a4@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260925T000000Z
 DTEND:20260925T010000Z
 SUMMARY:[T2] Lyla Sage\, Free Falling
@@ -345,29 +262,60 @@ URL:https://rainydaybooks.com/event/2026-09-24/lyla-sage-free-falling
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_96ba5eed3318@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_9280b51cad45@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260926T000000Z
 DTEND:20260926T010000Z
-SUMMARY:[T2] Terri Lewis\, When They Came Home
-LOCATION:Rainy Day Books - Rainy Day Books The Fairway Shops 2706 W 53rd St
- reet Fairway\, KS 66205
+SUMMARY:[T2] I-70 Review Magazine Release & Contributor Reading
+LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
 DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
  s\; likely audience overlap with literary readers\; useful networking pote
- ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books in-store to discuss
-  When They Came Home with author Terri Lewis. This event includes a talk f
- rom Terri along with an opportunity to get your book signed and personaliz
- ed. Wheth...\n\nRSVP: https://rainydaybooks.com/event/2026-09-25/terri-lew
- is-when-they-came-home\n\nSource: https://rainydaybooks.com/event/2026-09-
- 25/terri-lewis-when-they-came-home\n\nSeventh City Press - KC Event Discer
- nment (provisional scoring)
-URL:https://rainydaybooks.com/event/2026-09-25/terri-lewis-when-they-came-h
- ome
+ ntial\; seen across 2 sources.\n\nScore: 70.0 - Tier 2\n\nI-70 Review Maga
+ zine Release & Contributor Reading\n\nRSVP: https://thewritersplace.wildap
+ ricot.org/event-6807855\n\nSource: https://thewritersplace.wildapricot.org
+ /event-6807855\n\nSeventh City Press - KC Event Discernment (provisional s
+ coring)
+URL:https://thewritersplace.wildapricot.org/event-6807855
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_88489ecd6ee4@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_1dfe7077017e@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260926T150000Z
+DTEND:20260926T160000Z
+SUMMARY:[T2] 100 Thousand Poets for Change
+LOCATION:The Writers Place - 31 W 31st St\, Kansas City\, MO 64108
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers\; useful networking pote
+ ntial\; seen across 2 sources.\n\nScore: 70.0 - Tier 2\n\n100 Thousand Poe
+ ts for Change\n\nRSVP: https://thewritersplace.wildapricot.org/event-68078
+ 57\n\nSource: https://thewritersplace.wildapricot.org/event-6807857\n\nSev
+ enth City Press - KC Event Discernment (provisional scoring)
+URL:https://thewritersplace.wildapricot.org/event-6807857
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_5d67ab2d05a3@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20260929T000000Z
+DTEND:20260929T010000Z
+SUMMARY:[T2] Majority 54 Live! Ravi Gupta\, The Invisible List
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers.\n\nScore: 62.0 - Tier 2
+ \n\nJoin Rainy Day Books at Unity Temple for a live recording of the Major
+ ity 54 podcast with hosts Ravi Gupta and Jason Kander\, discussing Ravi's 
+ new book\, The Invisible List ! This event includes a c...\n\nRSVP: https:
+ //rainydaybooks.com/event/2026-09-28/majority-54-live-ravi-gupta-invisible
+ -list\n\nSource: https://rainydaybooks.com/event/2026-09-28/majority-54-li
+ ve-ravi-gupta-invisible-list\n\nSeventh City Press - KC Event Discernment 
+ (provisional scoring)
+URL:https://rainydaybooks.com/event/2026-09-28/majority-54-live-ravi-gupta-
+ invisible-list
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_e0ece5858a3e@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20260929T000000Z
 DTEND:20260929T010000Z
 SUMMARY:[T2] Open Mic Night
@@ -382,8 +330,8 @@ URL:https://thewritersplace.wildapricot.org/event-6505669
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_c003b248536f@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_e6d54e4ba5eb@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261016T210000Z
 DTEND:20261016T223000Z
 SUMMARY:[T2] Lindsay Currie\, The Secret Bookstore Sleuth Society
@@ -401,8 +349,8 @@ URL:https://rainydaybooks.com/event/2026-10-16/lindsay-currie-secret-bookst
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_8fd3226a0843@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_619fc940a086@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261017T000000Z
 DTEND:20261017T010000Z
 SUMMARY:[T2] The Writers Place Reading Series featuring Daniel Biegelson\, 
@@ -419,8 +367,26 @@ URL:https://thewritersplace.wildapricot.org/event-6674432
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_7b54bde89a90@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_0a76e9f1bc0c@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20261023T000000Z
+DTEND:20261023T010000Z
+SUMMARY:[T2] Thomas Frank\, The Creativity Con
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers\; useful networking pote
+ ntial.\n\nScore: 70.0 - Tier 2\n\nJoin Rainy Day Books at Unity Temple to 
+ celebrate The Creativity Con with author Thomas Frank. This event includes
+  a talk from Thomas in Unity Hall (downstairs) within Unity Temple on the 
+ Plaza\, al...\n\nRSVP: https://rainydaybooks.com/event/2026-10-22/thomas-f
+ rank-creativity-con\n\nSource: https://rainydaybooks.com/event/2026-10-22/
+ thomas-frank-creativity-con\n\nSeventh City Press - KC Event Discernment (
+ provisional scoring)
+URL:https://rainydaybooks.com/event/2026-10-22/thomas-frank-creativity-con
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_4c4afa9bf75a@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261027T000000Z
 DTEND:20261027T010000Z
 SUMMARY:[T2] Open Mic Night
@@ -435,8 +401,8 @@ URL:https://thewritersplace.wildapricot.org/event-6507348
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_74c753d0f020@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_a5ff2918619d@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261121T010000Z
 DTEND:20261121T020000Z
 SUMMARY:[T2] The Writers Place Reading Series featuring Jocelyn Cullity\, R
@@ -453,8 +419,8 @@ URL:https://thewritersplace.wildapricot.org/event-6674434
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 BEGIN:VEVENT
-UID:evt_d134370da7fe@kc-events.seventhcitypress
-DTSTAMP:20260805T020650Z
+UID:evt_93b7fba3b896@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
 DTSTART:20261128T010000Z
 DTEND:20261128T020000Z
 SUMMARY:[T2] Open Mic Night
@@ -466,6 +432,23 @@ DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
  ttps://thewritersplace.wildapricot.org/event-6507356\n\nSeventh City Press
   - KC Event Discernment (provisional scoring)
 URL:https://thewritersplace.wildapricot.org/event-6507356
+CATEGORIES:SCP-KC,Tier2
+END:VEVENT
+BEGIN:VEVENT
+UID:evt_ed6204d3c21c@kc-events.seventhcitypress
+DTSTAMP:20260822T210451Z
+DTSTART:20270401T233000Z
+DTEND:20270402T003000Z
+SUMMARY:[T2] Midwest Poets Series: Hayan Charara and Fady Joudah
+LOCATION:Rockhurst University - Arrupe Hall - Kansas City\, MO
+DESCRIPTION:Strong thematic overlap with literary/kc-history/genealogy focu
+ s\; likely audience overlap with literary readers\; useful networking pote
+ ntial.\n\nScore: 73.0 - Tier 2\n\nRockhurst University Midwest Poets Serie
+ s - free and open to the public.\n\nRSVP: https://www.rockhurst.edu/center
+ -arts-letters/midwest-poets-series\n\nSource: https://www.rockhurst.edu/ce
+ nter-arts-letters/midwest-poets-series\n\nSeventh City Press - KC Event Di
+ scernment (provisional scoring)
+URL:https://www.rockhurst.edu/center-arts-letters/midwest-poets-series
 CATEGORIES:SCP-KC,Tier2
 END:VEVENT
 END:VCALENDAR

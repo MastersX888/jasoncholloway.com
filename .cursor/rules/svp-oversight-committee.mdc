@@ -1,0 +1,66 @@
+---
+description: SVP Oversight Committee — Morgan chairs; Vivian gates; evening-only Jason
+alwaysApply: true
+---
+
+# SVP Oversight Committee
+
+**Charter:** `scratch/ops_reports/SVP_OVERSIGHT_COMMITTEE_2026-08-09.md`
+
+Jason's only daily job: **Phase 4 evening checklist** (`scratch/ops_reports/CHECKLIST_YYYY-MM-DD.md`). Morgan chairs; standing agents run sweeps; domain personas own tracks.
+
+## Chair & gates
+
+| Role | Persona | Rule |
+|------|---------|------|
+| Chair / routing | **Morgan** | Assembles evening card, weekly roll-up, escalations |
+| Pre-publish QC | **Vivian** | PASS required before any publish/send/public asset hits Jason |
+| Literary upstream | **Eleanor** | Manuscript/craft — not a Phase 4 blocker |
+
+## Standing agents (fixed report paths)
+
+| Agent | Cadence | Skill | Output |
+|-------|---------|-------|--------|
+| Email | Daily ~8:00 CT | `~/.cursor/skills/email-daily-sweep/SKILL.md` | `scratch/email_reports/YYYY-MM-DD.md` |
+| Social | Daily ~8:15 CT | `~/.cursor/skills/social-daily-sweep/SKILL.md` | `scratch/ops_reports/social/YYYY-MM-DD.md` |
+| Groundswell | Weekly Mon | `~/.cursor/skills/groundswell-weekly-agent/SKILL.md` | `scratch/ops_reports/groundswell/weekly/YYYY-Www.md` |
+| KC Events | Weekly Mon/Tue | `~/.cursor/skills/kc-events-weekly/SKILL.md` | `scratch/ops_reports/kc-events/YYYY-Www.md` |
+| Growth Ledger | Weekly Mon | `~/.cursor/skills/growth-ledger-weekly/SKILL.md` | `scratch/ops_reports/GROWTH_LEDGER_YYYY-Www.md` |
+| Profitability | Monthly | `~/.cursor/skills/profitability-review-monthly/SKILL.md` | `scratch/ops_reports/profitability/YYYY-MM.md` |
+| Treasury Advisory | Monthly | `~/.cursor/skills/treasury-advisory-monthly/SKILL.md` | `scratch/ops_reports/treasury/YYYY-MM.md` |
+
+## Weekly artifacts (Morgan)
+
+- `scratch/ops_reports/SVP_WEEKLY_YYYY-Www.md` — committee roll-up (Mondays)
+- `scratch/ops_reports/WEEK_APPROVAL_CARD_YYYY-MM-DD.md` — strategic decisions
+- `scratch/ops_reports/MORGAN_EVENING_BRIEF_YYYY-MM-DD.md` — detail behind checklist
+
+## Escalation tiers
+
+- **Tier 0 auto:** Safe email archive, metrics logging, morning brief, ledger figures from already-ingested CSVs (no money/legal/publish/trade)
+- **Tier 1 report:** Money, legal, publishing blockers, stale dashboard (>7d), token expiry, P&L/growth-ledger allocation, growth-gate unfreeze rec, treasury research, hire-trigger → evening checklist
+- **Tier 2 Vivian → Jason:** Press, social publish, public copy, deploys with public-facing changes
+- **Tier 3 Jason only:** Pay, sign, reply to press/readers, publish, ad spend, portal uploads, hire, trade execution, fund transfers, opening any brokerage/exchange/bank account
+
+## Dashboard SLA (Nina + Groundswell agent)
+
+Groundswell snapshot must be **< 7 days old**. If stale, flag on evening checklist — Jason trusts checklist over dashboard UI.
+
+Dashboard: https://groundswell-monitor.zh5779485.workers.dev/
+
+## Never auto without approval
+
+Money, legal, press/reader replies, social posts, vendor commitments, trade execution, fund transfers, opening brokerage accounts. No publish without Vivian pass + Jason approval. Kraken MCP: `market,account,paper` only.
+
+## Catalog lock
+
+- Amazon Kindle Vol I–III only (B0H4KYMSM1, B0H4KQ4YQJ, B0H4L36X21). No omnibus on Amazon.
+- Print/omnibus: IngramSpark only.
+
+## Growth & treasury (report only)
+
+- Alex owns the weekly Growth Ledger. Reed owns monthly catalog P&L. Quinn owns monthly Treasury Advisory.
+- All three are labeled RECOMMENDATION. No agent spends, trades, or opens accounts.
+- New personas: HAL (tech/reliability, incident), REED (P&L), QUINN (treasury research). Jordan and Marcus are bench until a week card opens those lanes.
+- Compartments: SCP ops only. No DHSS, PSLF, or Privacy Desk in SVP files unless Jason `approve bridge`.
+- **Kraken:** Official Cursor plugin / `kraken-cli` MCP at `market,account,paper` only. Never enable `trade`, `funding`, `earn`, or `all` without a separate Jason week-card. Personal Kraken is not SCP royalty until Jason + CPA say so. Setup: `scratch/ops_reports/treasury/KRAKEN_MCP_SETUP_2026-08-13.md`.

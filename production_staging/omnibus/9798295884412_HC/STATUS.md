@@ -31,8 +31,11 @@ Rebuilt from the patched Book 1 BUILD docx to carry the Chapter One canon fix
 - Canon fix confirmed present in the rendered PDF text.
 - SUB-BOOK dividers removed; both chapter boundaries now match the standard shape.
 
-Unlike Books 1–3 individually (which drift +7 HC / +11 PB against canon and are
-blocked pending diagnosis), the omnibus reproduces its canon page count exactly.
+The omnibus reproduces its canon page count exactly. Books 1–3 individually are
+resolved as well: all six individual print interiors match their live IngramSpark
+counts exactly, 6 of 6. The earlier "+7 HC / +11 PB drift" report was a comparison
+against stale canon figures and was retracted 2026-08-29 — those titles are not
+blocked and need no spine or cover rework.
 
 ## Present
 - `interior.pdf` — 684 pp Royal

@@ -152,7 +152,7 @@ Expected historic names (may differ):
 - `COVER_OMNIBUS_HC_9798295884412_CORRECTED_v6.pdf`
 - `COVER_OMNIBUS_PB_9798256072704_CORRECTED_v6.pdf`
 
-**Live Ingram page counts (CANON):** HC **686**, PB **734**.  
+**Live Omnibus page counts (corrected 2026-08-29):** HC **684**, PB **732**. Source of truth is `lib/data/ingram-catalog.json`, **not** `CANON.md` — canon no longer holds page counts. The line that stood here, *"Live Ingram page counts (CANON): HC 686, PB 734"*, was false twice over: the figures were a stale July estimate, and Ingram never held them. **Note that 732 is now the correct Omnibus PB count**, so an on-count 732 pp Demy interior must not be flagged stale on page count alone.  
 If harvested interiors still show ~732 / ~907, flag as **STALE_V6** — usable as reference but must be rebuilt from current draft before re-upload.
 
 ### Book 1 — Inheritance
@@ -231,18 +231,18 @@ These are the **current geo-fixed + apartment/balcony** drafts already in the re
   - Royal HC: 6.14×9.21 in (≈442×663 pt)
   - Demy PB: 5.5×8.5 in (≈396×612 pt)
 - Target ISBN appears in file metadata or first/last pages
-- Page count vs CANON live targets:
+- Page count vs live targets *(corrected 2026-08-29 from `lib/data/ingram-catalog.json`; these are build data, not canon)*:
 
 | Edition | ISBN | Live pages |
 |---|---|---|
-| B1 HC | 9798295800801 | 156 |
-| B1 PB | 9798256008048 | 178 |
-| B2 HC | 9798295812675 | 218 |
-| B2 PB | 9798256009953 | 260 |
-| B3 HC | 9798295812705 | 170 |
-| B3 PB | 9798256010072 | 200 |
-| Omnibus HC | 9798295884412 | **686** |
-| Omnibus PB | 9798256072704 | **734** |
+| B1 HC | 9798295800801 | 163 |
+| B1 PB | 9798256008048 | 189 |
+| B2 HC | 9798295812675 | 225 |
+| B2 PB | 9798256009953 | 271 |
+| B3 HC | 9798295812705 | 177 |
+| B3 PB | 9798256010072 | 205 |
+| Omnibus HC | 9798295884412 | **684** |
+| Omnibus PB | 9798256072704 | **732** |
 
 If page count matches old v6 (~257/311/383/495/285/355/732/907), mark **STALE_V6 — rebuild required before re-upload**.
 
@@ -316,7 +316,7 @@ For every ISBN folder, rewrite `STATUS.md` to:
 
 | Situation | Action |
 |---|---|
-| Omnibus HC interior found at 686 pp | Slot it; Omnibus becomes first upload candidate once jacket exists |
+| Omnibus HC interior found at 684 pp | Slot it; Omnibus becomes first upload candidate once jacket exists |
 | Omnibus HC interior found at ~732 pp | Slot as `interior_STALE_V6.pdf`; report rebuild needed from current draft |
 | Omnibus jacket missing | Search Downloads for Ingram templates; list best comps; do not fabricate |
 | Generators `.py` found | Copy to `_scripts_from_windows/`; note they can rebuild from current draft next |

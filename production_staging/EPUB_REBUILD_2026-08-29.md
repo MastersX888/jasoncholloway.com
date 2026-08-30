@@ -1,5 +1,28 @@
 # Retail EPUB rebuild — 2026-08-29
 
+> **DATED RECORD — this documents the 11:22 rebuild, not the files being uploaded
+> tonight.** Annotation added 2026-08-29 evening; the body below is kept as the
+> morning record and is not rewritten. The three retail EPUBs were rebuilt **again
+> at 17:22** to carry the character-name pass, so every byte figure in the Results
+> table is superseded:
+>
+> | ISBN | Recorded here (11:22) | Current on disk (17:22) |
+> |---|---:|---:|
+> | 9798256008819 | 754,069 B | **754,075 B** · 17:22:28 |
+> | 9798256009625 | 853,387 B | **853,389 B** · 17:22:30 |
+> | 9798256009809 | 752,644 B | **752,604 B** · 17:22:32 |
+>
+> EPUBCheck was re-run against the 17:22 files on 2026-08-29 evening with
+> EPUBCheck 5.3.0: all three **0 fatals / 0 errors / 0 warnings / 0 infos**, so the
+> VALID verdict below still holds for the current build.
+>
+> Two further items in the body are now out of date. The **Open editorial item**
+> (grandfather 2010) was **resolved the same day** — see
+> `production_staging/CANON_FIX_2026-08-29.md`. And the Upload manifest section
+> covers the retail line only; the three **Kindle** EPUBs
+> (`*_KINDLE.epub`, built 17:24) are separate required KDP uploads with UUID
+> `dc:identifier` values, documented in the per-volume `*_KINDLE/STATUS.md` files.
+
 **Trigger:** Jason noticed the scene-break ornaments were not centered in the
 Booktopia ebook preview for
 `https://www.booktopia.com.au/masters-x-jason-carroll-holloway/ebook/9798256008819.html`.

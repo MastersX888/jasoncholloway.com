@@ -1,4 +1,18 @@
 # Book 1 Inheritance — Paperback 9798256008048
+
+> **SUPERSEDED SNAPSHOT — banner added 2026-08-29. Do not use this file for upload
+> decisions.** This directory is the partial July 2026 repo mirror of
+> `Desktop\MASTER_UPLOAD_FOLDER`, last synced 2026-07-30 (see `../README.md`). Everything
+> below is kept as the July record. The authoritative, current status for this edition is
+> `production_staging/b1_inheritance/9798256008048_PB/STATUS.md`.
+>
+> **Live / authoritative page count: 189 pp**, which the current rebuild matches exactly.
+> The `Upload ready: NO` line and every page figure below (176, CANON 178, NEAR_LIVE −2)
+> are stale. The "+7 HC / +11 PB drift" reported earlier on 2026-08-29 was a comparison
+> against stale pre-geo-fix canon numbers, not a regression, and was retracted the same
+> day; no spine or cover rework is required. The missing `cover_wrap.pdf` noted below is
+> a real and still-open asset gap.
+
 **Priority:** High
 **Upload ready:** NO
 

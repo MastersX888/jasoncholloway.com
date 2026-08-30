@@ -1,7 +1,7 @@
 # Book 1 Inheritance — Hardcover 9798295800801
 **Portal status (Jason verbal ~2026-08-03 afternoon CT):** **LIVE / APPROVED** — see `scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md`. Local harvest notes below are historical staging inventory, not portal evidence.
 **Priority:** High (after Omnibus)
-**Upload ready:** NO — spine recheck required before Ingram
+**Upload ready:** YES — interior matches live 163 pp exactly; no spine or cover rework required (resolved 2026-08-29)
 
 ## Page count RESOLVED 2026-08-29
 The `CANON 156` figure below is **stale** — it predates the geo fix. Do not use it.
@@ -26,7 +26,9 @@ revision round at `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798295800801_HC_inte
 - `MANUSCRIPT_CURRENT.txt`
 
 ## Still missing / blockers
-- Spine width: jacket built for ~156 pp; interior ~159 — confirm Δ before upload
+- ~~Spine width: jacket built for ~156 pp; interior ~159 — confirm Δ before upload~~
+  **SUPERSEDED 2026-08-29:** based on the stale canon figure. Interior is 163 pp and
+  matches live; no spine rework required.
 - PB wrap (geometry) still missing for sibling ISBN
 
 ## Cover source

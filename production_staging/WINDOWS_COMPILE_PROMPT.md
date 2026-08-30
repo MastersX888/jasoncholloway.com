@@ -116,7 +116,7 @@ python production_staging\_scripts_from_windows\generate_omnibus_interior_PB_CUR
 6. Verify with `production_staging/_docs/porter_verify_pdfs.py` (or PyMuPDF):
    - Demy 5.5×8.5
    - ISBN 9798256072704 on copyright
-   - Page count near CANON **734** (record actual)
+   - Page count **732** per `lib/data/ingram-catalog.json` — corrected 2026-08-29 from a stale CANON 734 (record actual)
    - Spot-check geo strings in extracted text
 
 ### Phase C — Omnibus HC interior (generator missing)
@@ -129,7 +129,7 @@ Get-ChildItem -Path C:\Users\zh577 -Recurse -Filter '*omnibus*interior*.py' -Err
 ```
 
 **If found:** adapt paths like PB; output to  
-`production_staging/omnibus/9798295884412_HC/interior.pdf` · Royal 6.14×9.21 · ISBN 9798295884412 · target ~**686** pp.
+`production_staging/omnibus/9798295884412_HC/interior.pdf` · Royal 6.14×9.21 · ISBN 9798295884412 · target **684** pp *(per `lib/data/ingram-catalog.json`, corrected 2026-08-29 from a stale CANON 686)*.
 
 **If not found:** clone the PB generator to `generate_omnibus_interior_HC_CURRENT.py` and change:
 - trim to 6.14×9.21 in
@@ -212,7 +212,7 @@ Omnibus HC
 - [ ] ISBN 9798295884412
 - [ ] Text extract contains `Washington Street office` OR equivalent geo fixes / `1647 Genessee` / `Warren County` / `apartment` (Quality Hill) — proves post-geo source
 - [ ] Jacket + caselam present
-- [ ] Page count recorded vs CANON 686
+- [ ] Page count recorded vs **684** (`lib/data/ingram-catalog.json`; CANON 686 was stale, corrected 2026-08-29)
 
 Omnibus PB
 - [ ] Demy 5.5×8.5

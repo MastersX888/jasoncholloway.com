@@ -5,6 +5,11 @@
 > `production_staging/b1_inheritance/9798256008819_EPUB/`. The `PRE_GEO_FIX` note below is wrong
 > for the current source: the Book 1 BUILD docx matches the Book 1 slice of
 > `OMNIBUS_CURRENT_DRAFT_GEO_FIXED.txt` exactly.
+>
+> *Added 2026-08-29:* the `Upload ready: NO` line below is stale too — this EPUB was
+> rebuilt the same day and is cleared. The "+7 HC / +11 PB drift" reported earlier that
+> day against the Books 1–3 print interiors was a comparison with stale pre-geo-fix canon
+> numbers, not a regression, and was retracted; no title is blocked on page count.
 
 **Priority:** Medium
 **Upload ready:** NO

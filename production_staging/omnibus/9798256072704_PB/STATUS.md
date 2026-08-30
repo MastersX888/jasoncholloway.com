@@ -18,10 +18,18 @@ Rebuilt from the patched Book 1 BUILD docx to carry the Chapter One canon fix
   `production_staging/SUBBOOK_REMOVAL_2026-08-29.md`.
 - Note: this interior was briefly overwritten by a stray EPUB during that session
   (leaked `BUILD_OUTPUT`) and was rebuilt from source. Signature verified `%PDF`,
-  732 pp, 1,315,351 B — byte-size identical to the pre-incident build.
+  732 pp, ~~1,315,351 B~~ — byte-size identical to the pre-incident build.
+  **Size superseded 2026-08-29:** that figure predates the 17:22 character-name
+  rebuild. The current `interior.pdf` is **1,315,378 bytes**, built **2026-08-29
+  17:22:23**, SHA256 `1de0fef6337e3d0c…`, and is byte-identical to the staged
+  copy at `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798256072704_PB_interior.pdf`.
+  732 pp and the 1.684" spine are unchanged, so the wrap is still valid.
 
-Unlike Books 1–3 individually (which drift against canon and are blocked pending
-diagnosis), the omnibus reproduces its canon page count exactly.
+The omnibus reproduces its canon page count exactly. Books 1–3 individually are
+resolved as well: all six individual print interiors match their live IngramSpark
+counts exactly, 6 of 6. The earlier "+7 HC / +11 PB drift" report was a comparison
+against stale canon figures and was retracted 2026-08-29 — those titles are not
+blocked and need no spine or cover rework.
 
 ## Present
 - `interior.pdf` — 732 pp Demy

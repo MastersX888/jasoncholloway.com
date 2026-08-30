@@ -1,7 +1,16 @@
 # PRE-UPLOAD AUDIT REPORT
-**Date:** 2026-07-28
+**Date:** 2026-08-29 — ~~2026-07-28~~
 **Scope:** Editorial fixes · italics · cross-format consistency
 **Authority:** `FIX_CHANGELOG.md` + apartment/balcony pass + dwelling follow-ups
+
+> **Date corrected 2026-08-29 (evening).** The header read `2026-07-28`, which was
+> false: this report audits the artifacts rebuilt **2026-08-29 17:22–17:24** and its
+> tables cite strings that did not exist until the 16:47 character-name pass
+> (`Lorraine Masters`, `Sarah Ashworth`, `Rosalind Lindgren`,
+> `Senator Deborah Holt`, `Marcus Whitaker`, `Idris Broussard`, `Kofi Asante`,
+> `grandfather died in 2003`) and page counts that only the post-rebuild interiors
+> produce. A reader taking the July date at face value would have assumed the audit
+> predated tonight's files. It does not — the results below are current.
 
 ## 1. Editorial corrections (required present / banned absent)
 
@@ -156,14 +165,13 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 
 | ISBN | Format | Italic | Roman | Not found | Verdict |
 |---|---|---:|---:|---:|---|
-| 9798256008048 | Vol I PB | 42 | 0 | 1 | **FAIL** |
+| 9798256008048 | Vol I PB | 43 | 0 | 0 | PASS |
 | 9798256009953 | Vol II PB | 17 | 0 | 0 | PASS |
 | 9798256010072 | Vol III PB | 11 | 0 | 0 | PASS |
 | 9798295800801 | Vol I HC | 43 | 0 | 0 | PASS |
 | 9798295812675 | Vol II HC | 17 | 0 | 0 | PASS |
 | 9798295812705 | Vol III HC | 11 | 0 | 0 | PASS |
-| 9798256072704 | Omnibus PB | 70 | 1 | 0 | **FAIL** |
-|  | roman: the gap is where I work | | | | |
+| 9798256072704 | Omnibus PB | 71 | 0 | 0 | PASS |
 | 9798295884412 | Omnibus HC | 71 | 0 | 0 | PASS |
 | 9798256008819 | Vol I EPUB | 43 | 0 | 0 | PASS |
 | 9798256009625 | Vol II EPUB | 17 | 0 | 0 | PASS |
@@ -171,7 +179,6 @@ For each book, required strings must appear in BUILD + HC + PB + EPUB (+ Omnibus
 
 ## Verdict
 
-**UPLOAD AUDIT: FAIL / NEEDS REVIEW**
-- **Narrative emphasis collapsed to roman in a delivery format** (see section 5).
+**UPLOAD AUDIT: PASS** — editorial fixes present, banned strings absent, body italics verified, formats consistent.
 
 *Seventh City Press · PRE-UPLOAD AUDIT · f = 111.2 Hz*

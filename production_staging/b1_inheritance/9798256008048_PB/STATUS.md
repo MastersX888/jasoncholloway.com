@@ -1,7 +1,7 @@
 # Book 1 Inheritance — Paperback 9798256008048
 **Portal status (Jason verbal ~2026-08-03 afternoon CT):** **LIVE / APPROVED** — see `scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md`. Local harvest notes below are historical staging inventory, not portal evidence.
 **Priority:** High
-**Upload ready:** NO
+**Upload ready:** YES — interior matches live 189 pp exactly; no spine or cover rework required (resolved 2026-08-29)
 
 ## Page count RESOLVED 2026-08-29
 The `CANON 178` figure below is **stale** — it predates the geo fix. Do not use it.
@@ -19,7 +19,13 @@ revision round at `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798256008048_PB_inte
 
 
 ## Present
-- `interior.pdf` — 0.40 MB · **176 pp** · Demy 5.5×8.5 · `%PDF` OK
+> **July harvest inventory — size and page figure both superseded 2026-08-29.**
+> The current `interior.pdf` is **436,213 bytes (0.44 MB)**, **189 pp**, built
+> **2026-08-29 17:23:30**, SHA256 `5353d4c8030be682…`, and is byte-identical to
+> the staged copy at
+> `Desktop/MASTER_UPLOAD_FOLDER_2026-08-29/9798256008048_PB_interior.pdf`.
+
+- ~~`interior.pdf` — 0.40 MB · **176 pp**~~ · Demy 5.5×8.5 · `%PDF` OK
 - `MANUSCRIPT_CURRENT.txt`
 
 ## Still missing

@@ -14,6 +14,10 @@ import WaveDivider from "@/components/ui/WaveDivider";
 import { mastersXSeriesNode } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
 
+const omnibus = books.find((b) => b.slug === "omnibus");
+if (!omnibus) throw new Error("Omnibus edition missing from lib/data/books.ts.");
+const OMNIBUS_TOTAL_PAGES = `${omnibus.pageCountHC ?? omnibus.pageCount} HC · ${omnibus.pageCountPB ?? omnibus.pageCount} PB`;
+
 export const metadata: Metadata = buildMetadata({
   title: "Masters X Trilogy | KC Literary Thriller",
   description:
@@ -96,7 +100,7 @@ export default function MastersXPage() {
               { label: "Publisher", value: "Seventh City Press" },
               { label: "Format", value: "HC · PB · Ebook" },
               { label: "Distribution", value: "IngramSpark · Global" },
-              { label: "Total Pages", value: "686 HC · 734 PB" },
+              { label: "Total Pages", value: OMNIBUS_TOTAL_PAGES },
               { label: "BISAC", value: "FIC019000 · Literary Fiction" },
             ].map((item) => (
               <div key={item.label} style={{ textAlign: "center" }}>

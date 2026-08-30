@@ -1,0 +1,117 @@
+{
+  "production_staging/_epub_build/9798256008819.epub": {
+    "sha256": "32ac82818e89c280ff2b9b7a8c083a4152ae519205461570747d9ba5cad8db31",
+    "size": 754075,
+    "mtime": 1788042148.748
+  },
+  "production_staging/_epub_build/9798256009625.epub": {
+    "sha256": "db289aad4fe9d5a2bd1c928a8a1222ffc1cc03072deb51ee1d0cdeac7e1be763",
+    "size": 853389,
+    "mtime": 1788042150.743
+  },
+  "production_staging/_epub_build/9798256009809.epub": {
+    "sha256": "07c26d71f884d82d1e2497b8f2ee2668623fcd494181a4d4104a1cabde48bbc4",
+    "size": 752604,
+    "mtime": 1788042152.476
+  },
+  "production_staging/_sources/build_docx/MASTERS_X_BOOK1_BUILD.docx": {
+    "sha256": "7248653e3e6d54c65174c473a7b88123602f5743599b90b92ec7e29869d2444d",
+    "size": 128259,
+    "mtime": 1788040044.365
+  },
+  "production_staging/_sources/build_docx/MASTERS_X_BOOK2_BUILD.docx": {
+    "sha256": "c4423b2dbb72f344a95cd7ae4afddf4f942c9305fad0004cdc8bdac7da957364",
+    "size": 184582,
+    "mtime": 1788040063.608
+  },
+  "production_staging/_sources/build_docx/MASTERS_X_BOOK3_BUILD.docx": {
+    "sha256": "8af5e2fabd9842f05f61024115c33a7d4d1b2d191f1cba452aec0f6345715c77",
+    "size": 143004,
+    "mtime": 1788041499.782
+  },
+  "production_staging/_sources/MASTERS_X_BOOK1_ITALICIZED_FIXED.docx": {
+    "sha256": "6aefc4a0541f7dd2857fb15a912ca78b31c21b24b67e5fc000c5e573920cd996",
+    "size": 128149,
+    "mtime": 1788040046.846
+  },
+  "production_staging/_sources/MASTERS_X_BOOK2_ITALICIZED_FIXED.docx": {
+    "sha256": "a81665b11b1cd300da3607b4cc09b5a6d3ef00ba78069286a37d01fa98903eff",
+    "size": 184581,
+    "mtime": 1788040067.776
+  },
+  "production_staging/_sources/MASTERS_X_BOOK3_ITALICIZED_FIXED.docx": {
+    "sha256": "48ddf9ab734495c1e405c5e05b9e87c634d31f0d60aa2f7b84deee701590127c",
+    "size": 142928,
+    "mtime": 1788041504.344
+  },
+  "production_staging/b1_inheritance/9798256008048_PB/interior.pdf": {
+    "sha256": "5353d4c8030be682a87b7f325b9227efa296091de67edef07fb5d71c81efd0a1",
+    "size": 436213,
+    "mtime": 1788042210.501
+  },
+  "production_staging/b1_inheritance/9798256008819_EPUB/9798256008819.epub": {
+    "sha256": "32ac82818e89c280ff2b9b7a8c083a4152ae519205461570747d9ba5cad8db31",
+    "size": 754075,
+    "mtime": 1788042148.748
+  },
+  "production_staging/b1_inheritance/9798256008819_KINDLE/9798256008819_KINDLE.epub": {
+    "sha256": "627d0d767cb8fdb2d14d87352496b19f2682117589d521b3d1b41014b8e609de",
+    "size": 754129,
+    "mtime": 1788042276.991
+  },
+  "production_staging/b1_inheritance/9798295800801_HC/interior.pdf": {
+    "sha256": "4bc1cda9a38eb01568a467322e781154d1b74d65413aafcbc78e97036565c482",
+    "size": 415325,
+    "mtime": 1788042202.662
+  },
+  "production_staging/b2_grimoire/9798256009625_EPUB/9798256009625.epub": {
+    "sha256": "db289aad4fe9d5a2bd1c928a8a1222ffc1cc03072deb51ee1d0cdeac7e1be763",
+    "size": 853389,
+    "mtime": 1788042150.743
+  },
+  "production_staging/b2_grimoire/9798256009625_KINDLE/9798256009625_KINDLE.epub": {
+    "sha256": "1e3b7cdafd01a8e5a6fe32189ae4123a4f8b76d173274a7547a6e9dab85bf245",
+    "size": 853440,
+    "mtime": 1788042279.489
+  },
+  "production_staging/b2_grimoire/9798256009953_PB/interior.pdf": {
+    "sha256": "4b586ad6eedd69a45a66c647f77d83cc0b7eba2f2609bad3f433c6be5060a055",
+    "size": 614671,
+    "mtime": 1788042229.991
+  },
+  "production_staging/b2_grimoire/9798295812675_HC/interior.pdf": {
+    "sha256": "8d8b7c22452f7fa89d877ca0ced622c367f0cae51dfe5b9e49caa4e8b2865cf1",
+    "size": 577080,
+    "mtime": 1788042220.357
+  },
+  "production_staging/b3_kingdom/9798256009809_EPUB/9798256009809.epub": {
+    "sha256": "07c26d71f884d82d1e2497b8f2ee2668623fcd494181a4d4104a1cabde48bbc4",
+    "size": 752604,
+    "mtime": 1788042152.476
+  },
+  "production_staging/b3_kingdom/9798256009809_KINDLE/9798256009809_KINDLE.epub": {
+    "sha256": "6e4fe9e061dd77f961ce85309593bd09b21c58689d01433197dec83a02b6f73e",
+    "size": 752658,
+    "mtime": 1788042282.382
+  },
+  "production_staging/b3_kingdom/9798256010072_PB/interior.pdf": {
+    "sha256": "4283e9a228f24beb27fc20aacaa06a4ff2d2b4e4b228a6094c3456ca4c195898",
+    "size": 478334,
+    "mtime": 1788042252.572
+  },
+  "production_staging/b3_kingdom/9798295812705_HC/interior.pdf": {
+    "sha256": "59d412f58b947b59b0d22815e6aad101c1985bb026e82767b741b1a30f0e8699",
+    "size": 454520,
+    "mtime": 1788042240.825
+  },
+  "production_staging/omnibus/9798256072704_PB/interior.pdf": {
+    "sha256": "1de0fef6337e3d0cd479605d0834490d4ae52ccf6606418c38012326673641db",
+    "size": 1315378,
+    "mtime": 1788042143.287
+  },
+  "production_staging/omnibus/9798295884412_HC/interior.pdf": {
+    "sha256": "b2a79221693b902578dfb99338b53854f8df5fd20b6b74961bcfff9a0fd44b12",
+    "size": 1280121,
+    "mtime": 1788042144.539
+  }
+}

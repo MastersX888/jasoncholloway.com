@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node ../scripts/check-page-counts.mjs && node ../scripts/check-public-backups.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

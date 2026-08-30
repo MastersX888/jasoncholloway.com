@@ -3,6 +3,7 @@
 // Amazon carries ONLY the three Masters X Kindle editions (see buyLinks.ts).
 // Author spellings standardized to "Jason Carroll Holloway" across all titles.
 import { BUY_LINKS, bookshopIsbnUrl, googleBooksIsbnUrl, googlePlayIsbnUrl } from "./buyLinks";
+import { pageCountForIsbn } from "./pageCounts";
 
 export interface BookLink {
   label: string;
@@ -53,7 +54,14 @@ export interface Book {
   buyLinks: BookLink[];
 }
 
-export const books: Book[] = [
+/**
+ * A book as it is written down here. The page count fields are absent by
+ * design: they are derived from `ingram-catalog.json` by ISBN below, so no page
+ * count is ever typed twice.
+ */
+type BookSeed = Omit<Book, "pageCount" | "pageCountPB" | "pageCountHC">;
+
+const bookSeeds: BookSeed[] = [
   {
     slug: "the-inheritance-of-frequency",
     volume: 1,
@@ -77,9 +85,6 @@ export const books: Book[] = [
     interior: "B&W · Creme paper",
     laminateHC: "Matte",
     laminatePB: "Matte",
-    pageCount: 178,
-    pageCountPB: 178,
-    pageCountHC: 156,
     datePublished: "2026-05-14",
     datePublishedHC: "2026-05-14",
     datePublishedPB: "2026-06-01",
@@ -123,9 +128,6 @@ export const books: Book[] = [
     interior: "B&W · Creme paper",
     laminateHC: "Matte",
     laminatePB: "Matte",
-    pageCount: 260,
-    pageCountPB: 260,
-    pageCountHC: 218,
     datePublished: "2026-05-14",
     datePublishedHC: "2026-05-14",
     datePublishedPB: "2026-06-01",
@@ -169,9 +171,6 @@ export const books: Book[] = [
     interior: "B&W · Creme paper",
     laminateHC: "Matte",
     laminatePB: "Matte",
-    pageCount: 200,
-    pageCountPB: 200,
-    pageCountHC: 170,
     datePublished: "2026-05-14",
     datePublishedHC: "2026-05-14",
     datePublishedPB: "2026-06-01",
@@ -210,9 +209,6 @@ export const books: Book[] = [
     price_pb_is: "32.99",
     price_pb_msrp: "36.99",
     interior: "B&W · Creme paper",
-    pageCount: 686,
-    pageCountHC: 686,
-    pageCountPB: 734,
     datePublished: "2026-06-01",
     datePublishedHC: "2026-06-01",
     datePublishedPB: "2026-06-01",
@@ -248,9 +244,6 @@ export const books: Book[] = [
     price_hc_is: "24.99",
     price_hc_msrp: "29.99",
     interior: "B&W · Creme paper",
-    pageCount: 84,
-    pageCountPB: 84,
-    pageCountHC: 84,
     datePublished: "2026-04-02",
     datePublishedHC: "2026-06-01",
     datePublishedPB: "2026-04-02",
@@ -272,3 +265,16 @@ export const books: Book[] = [
     ],
   }
 ];
+
+export const books: Book[] = bookSeeds.map((seed) => {
+  const pageCountHC = seed.isbn_hc ? pageCountForIsbn(seed.isbn_hc) : undefined;
+  const pageCountPB = seed.isbn_pb ? pageCountForIsbn(seed.isbn_pb) : undefined;
+  // Every consumer reads `pageCountPB`/`pageCountHC` and only falls back to
+  // `pageCount` when the format-specific count is missing, so the fallback is
+  // the paperback count where a paperback exists.
+  const pageCount = pageCountPB ?? pageCountHC;
+  if (pageCount === undefined) {
+    throw new Error(`Book "${seed.slug}" has no print ISBN to derive a page count from.`);
+  }
+  return { ...seed, pageCount, pageCountPB, pageCountHC };
+});

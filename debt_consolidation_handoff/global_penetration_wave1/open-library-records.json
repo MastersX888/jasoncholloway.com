@@ -37,8 +37,8 @@
       "description_short": "A graduate student's inheritance unlocks seven notebooks of classified acoustic research — and the medieval tradition that encoded it.",
       "webpage": "https://jasoncholloway.com/books/masters-x/the-inheritance-of-frequency/",
       "editions": [
-        { "isbn_13": "9798256008048", "format": "paperback", "pages": 178, "publish_date": "2026-06-01" },
-        { "isbn_13": "9798295800801", "format": "hardcover", "pages": 156, "publish_date": "2026-05-14" },
+        { "isbn_13": "9798256008048", "format": "paperback", "pages": 189, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798295800801", "format": "hardcover", "pages": 163, "publish_date": "2026-05-14" },
         { "isbn_13": "9798256008819", "format": "ebook", "pages": 267, "publish_date": "2026-06-01" }
       ],
       "kindle_asin": "B0H4KYMSM1"
@@ -59,8 +59,8 @@
       "description_short": "Blake maps the preparation protocol from Iceland while a hidden reading list reveals cathedrals were always instruments.",
       "webpage": "https://jasoncholloway.com/books/masters-x/the-grimoire/",
       "editions": [
-        { "isbn_13": "9798256009953", "format": "paperback", "pages": 260, "publish_date": "2026-06-01" },
-        { "isbn_13": "9798295812675", "format": "hardcover", "pages": 218, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798256009953", "format": "paperback", "pages": 271, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798295812675", "format": "hardcover", "pages": 225, "publish_date": "2026-06-01" },
         { "isbn_13": "9798256009625", "format": "ebook", "pages": 385, "publish_date": "2026-06-01" }
       ],
       "kindle_asin": "B0H4KQ4YQJ"
@@ -81,8 +81,8 @@
       "description_short": "The demonstration. The open-source release. Who gets access to their own fundamental frequency?",
       "webpage": "https://jasoncholloway.com/books/masters-x/the-kingdom/",
       "editions": [
-        { "isbn_13": "9798256010072", "format": "paperback", "pages": 200, "publish_date": "2026-06-01" },
-        { "isbn_13": "9798295812705", "format": "hardcover", "pages": 170, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798256010072", "format": "paperback", "pages": 205, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798295812705", "format": "hardcover", "pages": 177, "publish_date": "2026-06-01" },
         { "isbn_13": "9798256009809", "format": "ebook", "pages": 291, "publish_date": "2026-06-01" }
       ],
       "kindle_asin": "B0H4L36X21"
@@ -102,8 +102,8 @@
       "description_short": "The complete Masters X trilogy — acoustic science, medieval cryptography, and human consciousness.",
       "webpage": "https://jasoncholloway.com/books/masters-x/omnibus/",
       "editions": [
-        { "isbn_13": "9798256072704", "format": "paperback", "pages": 734, "publish_date": "2026-06-01" },
-        { "isbn_13": "9798295884412", "format": "hardcover", "pages": 686, "publish_date": "2026-06-01" }
+        { "isbn_13": "9798256072704", "format": "paperback", "pages": 732, "publish_date": "2026-06-01" },
+        { "isbn_13": "9798295884412", "format": "hardcover", "pages": 684, "publish_date": "2026-06-01" }
       ],
       "kindle_asin": null,
       "note": "No Kindle omnibus — important for international readers seeking complete series in one purchase"

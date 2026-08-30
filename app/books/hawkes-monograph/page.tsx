@@ -6,6 +6,7 @@ import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
 import { books } from "@/lib/data/books";
+import { pageCountForIsbn } from "@/lib/data/pageCounts";
 import { buildBookGraph } from "@/lib/seo/bookSchema";
 import { buildMetadata } from "@/lib/seo/metadata";
 
@@ -48,7 +49,7 @@ export default function HawkesMonographPage() {
       price: "$12.99 (reg. $14.99)",
       ecommPrice: "12.99",
       msrpPrice: "14.99",
-      details: "Trade Paperback · 6×9 in · 84 pages",
+      details: `Trade Paperback · 6×9 in · ${pageCountForIsbn("9798295778247")} pages`,
       features: "Premium cream paper, matte cover finish",
       buyLabel: "Buy Paperback Direct",
       buyUrl: "https://shop.ingramspark.com/b/084?params=jXe3ooeHGvu40MxStyBhBq3zG9GDnsMEoktYWjm0boo",
@@ -60,17 +61,17 @@ export default function HawkesMonographPage() {
       price: "$24.99 (reg. $29.99)",
       ecommPrice: "24.99",
       msrpPrice: "29.99",
-      details: "Digital Cloth™ Cover w/Jacket · 6.14×9.21 in · 84 pages",
+      details: `Digital Cloth™ Cover w/Jacket · 6.14×9.21 in · ${pageCountForIsbn("9798349308444")} pages`,
       features: "Stitch-bound, gold foil element stamping",
       buyLabel: "Buy Hardcover Direct",
       buyUrl: "https://shop.ingramspark.com/b/084?params=cFmJXOovjW3SXqwinBStngm3FhivplmhE85eUOxrPve",
     },
     {
       format: "Ebook",
-      cover: "/covers/hawkes-ebook.png",
+      cover: "/covers/hawkes-ebook.jpg",
       isbn: "9798295778926",
       price: "$9.99",
-      details: "EPUB · Reflowable · 90 pages",
+      details: `EPUB · Reflowable · ${pageCountForIsbn("9798295778926")} pages`,
       features: "High-resolution figures, full text search",
       statusNote: "Available on Google Play Books",
     }

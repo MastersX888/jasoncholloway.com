@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ORGANIZATION_ID, organizationNode, personNode } from "../lib/entities";
 import { buildMetadata } from "../lib/metadata";
+import { pageCountForIsbn } from "../lib/pageCounts";
 import styles from './press-page.module.css';
 
 // DRAFT COPY — pending Vivian QC and Jason's approval.
@@ -39,8 +40,6 @@ const CATALOG = [
     isbnHc: "9798295800801",
     isbnEbook: "9798256008819",
     asin: "B0H4KYMSM1",
-    pagesPb: 178,
-    pagesHc: 156,
     position: 1,
   },
   {
@@ -52,8 +51,6 @@ const CATALOG = [
     isbnHc: "9798295812675",
     isbnEbook: "9798256009625",
     asin: "B0H4KQ4YQJ",
-    pagesPb: 260,
-    pagesHc: 218,
     position: 2,
   },
   {
@@ -65,8 +62,6 @@ const CATALOG = [
     isbnHc: "9798295812705",
     isbnEbook: "9798256009809",
     asin: "B0H4L36X21",
-    pagesPb: 200,
-    pagesHc: 170,
     position: 3,
   },
 ] as const;
@@ -101,7 +96,7 @@ const bookNodes = CATALOG.map((book) => {
         bookEdition: "First Edition",
         inLanguage: "en",
         datePublished: PB_PUBLISHED,
-        numberOfPages: book.pagesPb,
+        numberOfPages: pageCountForIsbn(book.isbnPb),
         author: AUTHOR_REF,
         publisher: PUBLISHER_REF,
       },
@@ -115,7 +110,7 @@ const bookNodes = CATALOG.map((book) => {
         bookEdition: "First Edition",
         inLanguage: "en",
         datePublished: HC_PUBLISHED,
-        numberOfPages: book.pagesHc,
+        numberOfPages: pageCountForIsbn(book.isbnHc),
         author: AUTHOR_REF,
         publisher: PUBLISHER_REF,
       },

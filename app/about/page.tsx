@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { books } from "@/lib/data/books";
 import { personNode } from "@/lib/seo/entities";
 import { buildMetadata } from "@/lib/seo/metadata";
+
+const omnibus = books.find((b) => b.slug === "omnibus");
+if (!omnibus) throw new Error("Omnibus edition missing from lib/data/books.ts.");
+const OMNIBUS_DESC = `The complete trilogy in a single volume — ${omnibus.pageCountHC ?? omnibus.pageCount} pages (hardcover) / ${omnibus.pageCountPB ?? omnibus.pageCount} pages (paperback).`;
 
 export const metadata: Metadata = buildMetadata({
   title: "About",
@@ -102,7 +107,7 @@ export default function AboutPage() {
                       title: "Masters X: Omnibus Edition",
                       type: "Collected Edition · Hardcover & Paperback",
                       publisher: "Seventh City Press, 2026",
-                      desc: "The complete trilogy in a single volume — 686 pages (hardcover) / 734 pages (paperback).",
+                      desc: OMNIBUS_DESC,
                     },
                     {
                       title: "Innocence, Desire, and the Architecture of the Fall",

@@ -28,7 +28,7 @@ Click **Sign in as Jason** (Google) at the top of the login form, then confirm y
 | Physical format | Paperback |
 | Publisher | Seventh City Press |
 | Publish date | 2026-06-01 |
-| Number of pages | 734 |
+| Number of pages | 732 |
 | Language | English |
 
 ---
@@ -48,7 +48,7 @@ Click **Sign in as Jason** (Google) at the top of the login form, then confirm y
 | Physical format | Paperback |
 | Publisher | Seventh City Press |
 | Publish date | 2026-06-01 |
-| Number of pages | 200 |
+| Number of pages | 205 |
 | Language | English |
 
 ---

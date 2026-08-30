@@ -26,13 +26,16 @@ This file documents the locked narrative, biographical, and bibliographical fact
 
 ### A. The Masters X Trilogy
 *   **Omnibus Retail Prices (IngramSpark direct):** Hardcover **$44.99** · Paperback **$32.99**
-    *   *Omnibus Hardcover:* 686 pages *(printed interior, July 2026)*
-    *   *Omnibus Paperback:* 734 pages *(printed interior, July 2026)*
-*   **Individual Page Counts (Ingram catalog, July 2026):**
-    *   *Vol. I: The Inheritance of Frequency:* 178 pp PB / 156 pp HC / 267 pp EPUB
-    *   *Vol. II: The Grimoire:* 260 pp PB / 218 pp HC / 385 pp EPUB
-    *   *Vol. III: The Kingdom:* 200 pp PB / 170 pp HC / 291 pp EPUB
-*   **Total Page Count Statement:** Cite **686 pages (HC)** or **734 pages (PB)** per edition — do not use a single omnibus number without format qualifier.
+*   **Print Page Counts — NOT CANON. Source of truth: `lib/data/ingram-catalog.json`.**  
+    *(Page counts are **build data, not canon.** This file is no longer the authority for them and no longer names figures to cite. `lib/data/ingram-catalog.json` is the IngramSpark sync artifact — the counts readers actually see in retail listings — and it is keyed by ISBN in both its `editions` array and its `byIsbn` map. Read the count from there.)*
+    *   *Convenience copy only — verified 2026-08-29 against the eight interior PDFs on disk and against the live IngramSpark listings (6 of 6 print titles matched). **Not authoritative; will go stale the next time an interior is re-flowed.** If this list and the JSON ever disagree, the JSON is right and this list is the bug:*
+        *   *Vol. I: The Inheritance of Frequency:* 163 pp HC / 189 pp PB
+        *   *Vol. II: The Grimoire:* 225 pp HC / 271 pp PB
+        *   *Vol. III: The Kingdom:* 177 pp HC / 205 pp PB
+        *   *Omnibus: The Complete Trilogy:* 684 pp HC / 732 pp PB
+        *   *EPUB (reflowable — no fixed pagination; these are Ingram catalog estimates, July 2026, not re-verified):* Vol. I 267 · Vol. II 385 · Vol. III 291
+*   **Total Page Count Statement:** **Do not cite a page count from this file.** Look the edition's ISBN up in `lib/data/ingram-catalog.json` and publish the count found there — always with a format qualifier, and never a single omnibus number covering both bindings. Hardcover and paperback of the same title never share a page count.
+*   **Page counts demoted from canon to build data (ruled 2026-08-29).** Until today this section held a July 2026 table *and an instruction to cite specific figures*, and the instruction is what did the damage: the stale table propagated out of canon on **2026-08-02** to live reader-facing listings — **TheStoryGraph, Goodreads, Open Library and Pinterest** — and into the `numberOfPages` field of the JSON-LD served by `jasoncholloway.com`. The same table then produced a phantom "page count drift" alarm on 2026-08-29 that briefly marked six shippable editions as blocked and left six `STATUS.md` files contradicting themselves. A page count is a property of a print build, not of the story: it moves whenever an interior is re-flowed, and no ruling can lock it. Canon therefore names **the file to read** and stops naming numbers. Live-count evidence: `scratch/ops_reports/INGRAM_UPLOAD_RUN_2026-07-31.md` and `scratch/ops_reports/INGRAM_ALL_TITLES_LIVE_2026-08-03.md`.
 *   **Locked ISBN Matrix:**
     *   *Vol. I Hardcover:* 9798295800801
     *   *Vol. I Paperback:* 9798256008048

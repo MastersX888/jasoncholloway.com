@@ -192,6 +192,14 @@ export function buildBookGraph(book: Book, options: BookGraphOptions) {
       ...(book.datePublishedEbook
         ? { datePublished: book.datePublishedEbook }
         : {}),
+      // No `numberOfPages` here, deliberately — this is where it would go, and
+      // it must not. The catalog does hold an EPUB count, but those figures are
+      // unverified July estimates: the 2026-08-29 pass verified the print counts
+      // against live IngramSpark and explicitly did not verify these. A
+      // reflowable EPUB has no fixed pagination to be right about either. An
+      // unverified count published to retailers is what put wrong values on four
+      // listings that still need support tickets. Measure the EPUBs first.
+      // Ruling: EBOOK_PAGECOUNT_RULING_2026-08-30.md
       author: AUTHOR_REF,
       publisher: PUBLISHER_REF,
       ...(book.asin_ebook

@@ -10,6 +10,14 @@
 // fails the build when a claim disagrees with the catalog.
 //
 // Exits 0 when consistent, 1 on any mismatch or structural problem.
+//
+// This gate polices counts that ARE published; it says nothing about a count
+// that is deliberately withheld, and it cannot. The EPUB editions publish no
+// `numberOfPages` at all, by ruling, because the catalog's EPUB counts are
+// unverified July estimates and a reflowable EPUB has no fixed pagination. The
+// catalog must keep an integer pageCount for those ISBNs — the loader below
+// requires one — so a green run here is not permission to emit the field.
+// See EBOOK_PAGECOUNT_RULING_2026-08-30.md before adding it anywhere.
 
 import { readdirSync, readFileSync, statSync } from "node:fs";
 import { join, relative, sep } from "node:path";

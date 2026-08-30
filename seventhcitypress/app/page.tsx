@@ -123,6 +123,11 @@ const bookNodes = CATALOG.map((book) => {
         bookFormat: "https://schema.org/EBook",
         inLanguage: "en",
         datePublished: PB_PUBLISHED,
+        // No `numberOfPages` here, deliberately — the paperback and hardcover
+        // branches above call pageCountForIsbn(); the ebook branch must not.
+        // The catalog's EPUB counts are unverified July estimates and a
+        // reflowable EPUB has no fixed pagination. Measure the EPUBs before
+        // adding this field. Ruling: EBOOK_PAGECOUNT_RULING_2026-08-30.md
         author: AUTHOR_REF,
         publisher: PUBLISHER_REF,
         identifier: {

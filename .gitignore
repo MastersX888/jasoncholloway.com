@@ -54,6 +54,19 @@ business_cards/
 *_out.txt
 *.py
 
+# Python bytecode is never source. `*.py` above never matched .pyc, so these
+# caches were fully trackable and one `git add -A` away from being committed.
+__pycache__/
+*.pyc
+
+# Print/EPUB build scripts MUST be tracked. The blanket `*.py` above hid this
+# whole directory; scripts were force-added past it one at a time, and
+# audit_body_italics.py -- the Section 5 body-italic shipping gate -- was never
+# added, stayed invisible to git, and was lost when the folder was copied in.
+# Scoped to this one directory (and non-recursive, since `*` does not cross `/`)
+# so virtualenvs, node_modules and caches elsewhere stay ignored.
+!production_staging/_scripts_from_windows/*.py
+
 # Web-deliverable public assets — these MUST be tracked or they 404 in production.
 # Cloudflare Pages builds from git, so anything untracked never reaches the deploy.
 # Scoped to the two sites' `public/` download directories only; print-production
@@ -66,3 +79,88 @@ business_cards/
 # Not linked from any page and byte-identical to the tracked author-site copy;
 # needs an explicit publish decision before it ships.
 seventhcitypress/public/press-kit/PressKit_Agent_Prompt.pdf
+
+# Secret hygiene — login / token / credential console output (added 2026-08-29)
+# Seven such logs were committed in 32fedf6 on 2026-08-05 and reached origin.
+# Their contents are only an OAuth authorize URL with an already-spent PKCE
+# challenge, no live credential, so history is deliberately NOT being rewritten
+# and the seven are deliberately NOT being `git rm --cached`ed. These rules exist
+# only so a FUTURE login run cannot become trackable and get swept in by
+# `git add -A`. Scoped to scratch/ops/ so ordinary logs elsewhere are unaffected.
+# Do not add a negation for these patterns.
+#
+# `**/` here matches zero or more directories, so each rule covers both
+# scratch/ops/ itself and any subdirectory beneath it.
+scratch/ops/**/_wrangler_login*
+scratch/ops/**/_*login*
+scratch/ops/**/_*token*
+scratch/ops/**/_*credential*
+scratch/ops/**/_*secret*
+scratch/ops/**/_*oauth*
+scratch/ops/**/_*api_key*
+scratch/ops/**/_*apikey*
+scratch/ops/**/_*bearer*
+scratch/ops/**/*.pem
+
+# Site-side build / sync / generation scripts MUST be tracked, for exactly the
+# reason the print scripts above must be. The negation above was scoped to one
+# directory and this one was not in it, so on 2026-08-29 generate_press_kit.py
+# was rewritten to read page counts from lib/data/ingram-catalog.json and
+# `git diff` reported nothing at all. sync-ingram-metadata.py, which WRITES that
+# catalog, was in the same position. Non-recursive, so scripts/__pycache__/ and
+# any virtualenv beneath scripts/ stay ignored.
+!scripts/*.py
+
+# ...except the one-off social-ops drivers. Every scripts/*.py whose name starts
+# with `_` is a single-run Playwright or API cleanup driver written for one
+# evening's work (Meta post deletion, X timeline purges, IG caption probes).
+# They are history, not tooling. A script that is meant to be re-run must NOT be
+# given a leading underscore, or this rule will hide it.
+scripts/_*.py
+
+# Cartographer regeneration driver and its two verifiers. These encode the
+# "trap 2" input-path rule from cartographer/REGEN_2026-08-29.md: running
+# phase1_normalize.mjs against its hardcoded default input silently reverts 39
+# geographic corrections. The .mjs phase scripts beside them are already
+# tracked; the Python that records how to invoke them safely is not.
+!cartographer/*.py
+
+# Name-migration rule sets and their re-runnable regression checks, cited by
+# path in production_staging/NAME_FIX_2026-08-29.md as the authoritative record
+# of what changed in the prose and how to re-verify it. Non-recursive, so the
+# print binaries under production_staging/*/ stay ignored.
+!production_staging/*.py
+
+# EPUB/PDF porter verifiers. Both were force-added past the blanket `*.py` and
+# are tracked today, so this makes no file newly visible -- it only stops them
+# from being one `git rm --cached` or one bad copy away from invisible again.
+!production_staging/_docs/*.py
+
+# Press-kit verification toolkit, including prove_gate.py, which corrupts a
+# generator, runs the real prebuild command, and proves the gate fails -- the
+# only proof that scripts/check-page-counts.mjs catches a stale page count.
+# Scoped to this one directory; the rest of scratch/ stays ignored.
+!scratch/_press_tools/*.py
+
+# Key-rotation tooling for a Worker directory that is otherwise tracked.
+# No credentials are embedded; both scripts read from `gh` and the environment.
+!the-bridge-worker/*.py
+
+# Single-run undo copies — `.bak` files expire on commit (added 2026-08-29)
+# Every one of these is written by a script immediately before it overwrites
+# something, so that one run can be reversed if it goes wrong. Once the change is
+# committed the copy has no remaining value: git history IS the durable undo, and
+# a `.bak` sitting beside the file is a worse version of it that no tooling reads.
+# 204 of them were untracked tonight and one `git add -A` away from putting
+# 45.8 MB into clone history permanently — 81% of the untracked payload.
+#
+# `.pdf.PRE_*.bak` and `.epub.PRE_*.bak` under production_staging/ are why this
+# rule is load-bearing rather than merely tidy. They are print binaries that the
+# `*.pdf` and `*.epub` rules above already intend to exclude, and they slipped
+# past those rules purely because of the trailing `.bak`. The twelve largest
+# untracked files in the repo are all of this kind. This rule closes that hole.
+#
+# Ignoring is the goal, not cleaning — do NOT delete what this hides. The `.bak`
+# copies under groundswell-monitor/ are the only copy of anything superseded
+# there, because that directory is ignored above and has no git history of its own.
+*.bak

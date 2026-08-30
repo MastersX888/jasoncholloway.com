@@ -81,12 +81,21 @@ __pycache__/
 seventhcitypress/public/press-kit/PressKit_Agent_Prompt.pdf
 
 # Secret hygiene — login / token / credential console output (added 2026-08-29)
-# Seven such logs were committed in 32fedf6 on 2026-08-05 and reached origin.
+# Seven such logs were committed in 32fedf6 on 2026-08-05 and reached origin:
+# _wrangler_login3.txt, _wrangler_login_am2.txt, _wrangler_login_clean.txt,
+# _wrangler_login_morning.txt, _wrangler_login_retry.txt, _wrangler_login_tls.txt
+# and _pages_create_token_log.txt. All seven were deleted from the working tree
+# and their deletions committed in 1b20fcc, so none is present at HEAD.
+#
 # Their contents are only an OAuth authorize URL with an already-spent PKCE
-# challenge, no live credential, so history is deliberately NOT being rewritten
-# and the seven are deliberately NOT being `git rm --cached`ed. These rules exist
-# only so a FUTURE login run cannot become trackable and get swept in by
-# `git add -A`. Scoped to scratch/ops/ so ordinary logs elsewhere are unaffected.
+# challenge, no live credential, so history is deliberately NOT being rewritten;
+# the blobs remain reachable in 32fedf6 and that is an accepted, reviewed risk.
+# Deleting them at HEAD is not the same as removing them from history, and no
+# rewrite is planned.
+#
+# These rules therefore serve the future, not the past: a NEW login run must not
+# become trackable and get swept in by `git add -A`. Scoped to scratch/ops/ so
+# ordinary logs elsewhere are unaffected.
 # Do not add a negation for these patterns.
 #
 # `**/` here matches zero or more directories, so each rule covers both

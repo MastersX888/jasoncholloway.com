@@ -42,7 +42,11 @@ const MUST_TRACK = [
 const EXEMPT = [
   /^scripts\/_[^/]*\.py$/, // one-off social-ops drivers
   /\.bak$/,
-  /\.PRE_[A-Z0-9_]+\./,
+  // PRE_* snapshots, e.g. foo.PRE_HARDENING_2026-08-29.py. The hyphen must be
+  // in the class: real tags carry an ISO date, and without it `[A-Z0-9_]+`
+  // stopped at the first `-` and then failed to find the required `.`, so this
+  // rule matched none of the names it was written for.
+  /\.PRE_[A-Z0-9_-]+\./,
 ];
 
 const only = process.argv.slice(2);

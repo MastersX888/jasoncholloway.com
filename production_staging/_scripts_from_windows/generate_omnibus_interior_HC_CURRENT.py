@@ -70,8 +70,8 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 OUTPUT_PDF = Path(BUILD_OUTPUT) if BUILD_OUTPUT else (OUTPUT_DIR / "interior.pdf")
 
 # ─── Trim (IngramSpark Royal 6.14 x 9.21 hardcover) ───
-# Margins tuned to match harvested PRE_GEO HC text block (~4.44" x ~8.0"),
-# which produced 684 pp (CANON 686). Wider blocks undershoot page count.
+# Margins match the harvested PRE_GEO HC text block (~4.44" x ~8.0"), which
+# yields the shipped 684 pp. 684 is correct; the old "CANON 686" was stale.
 TRIM_W = BUILD_WIDTH_PT if BUILD_WIDTH_PT else (6.14 * inch)
 TRIM_H = BUILD_HEIGHT_PT if BUILD_HEIGHT_PT else (9.21 * inch)
 M_GUTTER  = 0.875 * inch
@@ -102,8 +102,8 @@ addMapping("Garamond", 1, 1, "GaramondIt")   # bold+italic — no separate BI
 MED = Color(0.4, 0.4, 0.4)
 LT = Color(0.55, 0.55, 0.55)
 
-# ─── Styles (11pt body; HC leading 20.35 ≈ CANON 686 pp on Royal) ───
-# PB stays at 18pt leading. Open leading here matches harvested PRE_GEO density.
+# ─── Styles (11pt body; HC leading 20.35 -> the shipped 684 pp on Royal) ───
+# PB is 18pt. Never re-tune leading toward 686: the cover is cut for 684 pp.
 S_BODY = ParagraphStyle("Body", fontName="Garamond", fontSize=11, leading=20.35,
                          alignment=TA_JUSTIFY, firstLineIndent=20, spaceAfter=4.35, spaceBefore=0)
 S_BODY1 = ParagraphStyle("Body1", parent=S_BODY, firstLineIndent=0)

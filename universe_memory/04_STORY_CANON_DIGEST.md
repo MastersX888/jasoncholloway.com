@@ -1,6 +1,6 @@
 # Story Canon Digest
 
-**Authority:** `CANON.md` (website-locked facts). This digest adds measured print data and flags open discrepancies.
+**Authority:** `CANON.md` (website-locked facts) — **except print page counts,** whose authority is `lib/data/ingram-catalog.json` (demoted out of canon 2026-08-29; see §Open Decisions 1–2). This digest adds measured print data and flags open discrepancies.
 
 ---
 
@@ -8,14 +8,20 @@
 
 ### Masters X Trilogy
 
-| Item | CANON.md | Measured (July 2026) | Notes |
-|------|----------|----------------------|-------|
-| Omnibus HC pages | **686** | 684 (v8 content PDF) | HC/PB differ by binding — cite per format |
-| Omnibus PB pages | **734** | — | Author-confirmed July 2026 |
-| Vol. I | 178 PB / 156 HC / 267 EPUB | Ingram report July 2026 | Confirmed |
-| Vol. II | 260 PB / 218 HC / 385 EPUB | Ingram report July 2026 | Confirmed |
-| Vol. III | 200 PB / 170 HC / 291 EPUB | Ingram report July 2026 | Confirmed |
-| Distribution File | — | **247** | 5 parts; see extracted fulltext |
+**Print page counts are NOT canon — source of truth is `lib/data/ingram-catalog.json`.** `CANON.md` §2A was demoted from authority to pointer on 2026-08-29 and no longer names figures to cite; the table below is a convenience copy of the JSON and is **not** authoritative. If the two disagree, the JSON is right.
+
+| Edition | ISBN | HC | PB | EPUB (reflowable, est.) |
+|------|------|---:|---:|---:|
+| Vol. I *Inheritance of Frequency* | 9798295800801 HC · 9798256008048 PB | 163 | 189 | 267 |
+| Vol. II *The Grimoire* | 9798295812675 HC · 9798256009953 PB | 225 | 271 | 385 |
+| Vol. III *The Kingdom* | 9798295812705 HC · 9798256010072 PB | 177 | 205 | 291 |
+| Omnibus *Complete Trilogy* | 9798295884412 HC · 9798256072704 PB | 684 | 732 | — |
+
+Print figures verified 2026-08-29 two independent ways: PyMuPDF read them out of the eight interior PDFs on disk, and they match the live IngramSpark counts 6 of 6. EPUB figures are unverified July 2026 Ingram estimates — EPUB has no fixed pagination.
+
+| Item | Measured | Notes |
+|------|---------:|-------|
+| Distribution File | **247** | In-universe document; 5 parts; see extracted fulltext |
 
 ### ISBN Matrix (locked — from CANON.md)
 
@@ -60,8 +66,8 @@ Omnibus HC 9798295884412 · PB 9798256072704
 
 ## Open Decisions / Contradictions to Resolve
 
-1. **Omnibus page counts:** **Resolved** — HC 686, PB 734 (`CANON.md` §2A). v8 extraction = 684 content pages.
-2. **Vol. I & II page counts:** Still estimates in CANON.
+1. **Omnibus page counts:** **Resolved 2026-08-29** — HC **684**, PB **732**, read from the interior PDFs and matching the live IngramSpark listings. The old 686/734 pair was never a print measurement.
+2. **Vol. I–III page counts:** **Resolved 2026-08-29** — HC 163 / 225 / 177, PB 189 / 271 / 205; all six match live 6 of 6, so they are no longer estimates. They are also no longer canon: page counts moved out of `CANON.md` §2A into `lib/data/ingram-catalog.json` on 2026-08-29. The stale July table had been published from canon to TheStoryGraph, Goodreads, Open Library and Pinterest on 2026-08-02 and into the site's JSON-LD `numberOfPages` — a canon instruction to cite fixed page numbers is what carried it there. Page counts are build data, not narrative canon.
 3. **Email delivery:** On-page at `/chapters-sent/` (commit `5f292c3`).
 4. **Hawkes monograph ISBNs:** **Resolved** — PB 9798295778247, HC 9798349308444, EB 9798295778926.
 5. **Andrew Chen:** **Resolved** — canonical (not Blackwood).

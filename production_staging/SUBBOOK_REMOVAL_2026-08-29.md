@@ -131,12 +131,23 @@ constructed environment; the result is 732 pages and byte-identical in size
 (1,315,351 B) to the pre-incident build, confirming a deterministic rebuild. No
 other artifact was affected — all eight interiors were signature-checked afterwards.
 
+> **Size figure is dated — annotation added 2026-08-29 evening.** The `1,315,351 B`
+> above is correct *for the moment this incident was repaired* and is kept as that
+> record. It is **not** the file being uploaded tonight: the omnibus paperback was
+> rebuilt again at **17:22:23** for the character-name pass and is now
+> **1,315,378 bytes** (SHA256 `1de0fef6337e3d0c…`), still 732 pp with the spine
+> unchanged. Current figures: `production_staging/_STAGE_LOG.txt`.
+
 Lesson for future runs: drive these generators from a script that strips `BUILD_*`
 from the environment per job rather than setting shell variables.
 
 ## Still open
 
-- The Books 1–3 individual print interiors remain blocked on the pre-existing
+- ~~The Books 1–3 individual print interiors remain blocked on the pre-existing
   +7 HC / +11 PB page-count drift documented in `CANON_FIX_2026-08-29.md`. This
-  change did not affect it.
+  change did not affect it.~~
+  **RESOLVED 2026-08-29:** not blocked. The drift report was a comparison against stale
+  pre-geo-fix canon figures, not a regression, and was retracted the same day. Graded
+  against the live IngramSpark counts the six individual interiors match exactly, 6 of 6
+  (B1 163 HC / 189 PB, B2 225 / 271, B3 177 / 205). No spine or cover rework is required.
 - `cover_wrap.pdf` for Book 1 paperback `9798256008048` is still missing.

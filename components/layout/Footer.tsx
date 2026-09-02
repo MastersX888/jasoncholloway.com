@@ -29,6 +29,7 @@ export default function Footer() {
               <Link href="/books/masters-x/the-grimoire">The Grimoire</Link>
               <Link href="/books/masters-x/the-kingdom">The Kingdom</Link>
               <Link href="/books/masters-x/omnibus">Omnibus Edition</Link>
+              <Link href="/note-on-the-text">A Note on the Text</Link>
               <Link href="/books/hawkes-monograph">Hawkes Monograph</Link>
             </nav>
           </div>

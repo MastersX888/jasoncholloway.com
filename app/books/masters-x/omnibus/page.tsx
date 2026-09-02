@@ -6,6 +6,7 @@ import { omnibusSavingsLine } from "@/lib/data/trilogyCheckout";
 import WaveDivider from "@/components/ui/WaveDivider";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import BookViewTracker from "@/components/analytics/BookViewTracker";
+import NoteOnTheTextLink from "@/components/books/NoteOnTheTextLink";
 import { buildBookItem } from "@/lib/analytics/gtag";
 import {
   MASTERS_X_ABOUT,
@@ -444,6 +445,8 @@ export default function OmnibusPage() {
                   </div>
                 ))}
               </div>
+
+              <NoteOnTheTextLink />
 
               <Link href="/books/masters-x" className="btn btn-outline" style={{ justifyContent: "center" }}>
                 ← Back to Trilogy Hub

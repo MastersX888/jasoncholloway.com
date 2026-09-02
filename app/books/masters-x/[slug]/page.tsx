@@ -17,6 +17,7 @@ import {
   MASTERS_X_KEYWORDS,
 } from "@/lib/seo/mastersXEntities";
 import OmnibusVolumeNudge from "@/components/books/OmnibusVolumeNudge";
+import NoteOnTheTextLink from "@/components/books/NoteOnTheTextLink";
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
@@ -639,6 +640,11 @@ export default function BookPage({ params }: Props) {
       )}
 
       {/* Navigation between books */}
+      <section style={{ background: "var(--bg)", borderTop: "1px solid var(--border-faint)", padding: "2rem 0 0" }}>
+        <div className="container" style={{ maxWidth: "800px" }}>
+          <NoteOnTheTextLink />
+        </div>
+      </section>
       <section style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", padding: "3rem 0" }}>
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", gap: "2rem" }}>

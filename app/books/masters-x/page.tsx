@@ -12,6 +12,7 @@ import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import NotaIcon from "@/components/ui/NotaIcon";
 import WaveDivider from "@/components/ui/WaveDivider";
 import OpenStoreButton from "@/components/store/OpenStoreButton";
+import NoteOnTheTextLink from "@/components/books/NoteOnTheTextLink";
 import { omnibusComparison } from "@/lib/data/storefront";
 import {
   MASTERS_X_ABOUT,
@@ -105,6 +106,7 @@ export default function MastersXPage() {
             <p style={{ maxWidth: "60ch", color: "var(--text-faint)", fontSize: "0.9rem", fontStyle: "italic", marginBottom: "0.5rem" }}>
               For readers of Umberto Eco’s <em>Foucault’s Pendulum</em>, Dan Brown’s <em>The Da Vinci Code</em>, Elizabeth Kostova’s <em>The Historian</em>, and Anthony Doerr’s <em>Cloud Cuckoo Land</em>.
             </p>
+            <NoteOnTheTextLink variant="card" />
           </div>
         </div>
       </section>

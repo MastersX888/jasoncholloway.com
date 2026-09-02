@@ -1,0 +1,12 @@
+{
+  "total_entities": 655,
+  "class_counts": {
+    "HYBRID": 28,
+    "REAL_WORLD": 111,
+    "FICTIONAL": 57,
+    "AMBIGUOUS": 459
+  },
+  "hybrid_count": 28,
+  "identity_nodes": 17,
+  "identity_edges": 43
+}

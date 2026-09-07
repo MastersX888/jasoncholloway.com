@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS, googlePlayIsbnUrl } from "@/lib/data/buyLinks";
+import { purchaseRoute } from "@/lib/data/books";
 import { omnibusSavingsLine } from "@/lib/data/trilogyCheckout";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
@@ -115,7 +116,9 @@ export default function MastersXPage() {
         const omnibus = books.find(b => b.slug === "omnibus");
         if (!omnibus) return null;
         const pbLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Paperback");
-        const hcLink = omnibus.buyLinks.find(l => l.url.includes("shop.ingramspark.com") && l.format === "Hardcover");
+        // IngramSpark has the omnibus hardcover's direct checkout disabled;
+        // purchaseRoute() reroutes it and carries the destination's real price.
+        const hcRoute = purchaseRoute(omnibus, "Hardcover");
         return (
           <section className="section omnibus-flagship-hub omnibus-flagship-hub--primary" style={{ background: "var(--bg-surface)", borderTop: "1px solid var(--border-faint)", borderBottom: "1px solid var(--border-faint)" }}>
             <div className="container">
@@ -141,12 +144,12 @@ export default function MastersXPage() {
                     {omnibus.shortDesc ?? omnibus.description.split("\n\n")[0]}
                   </p>
                   <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginTop: "0.5rem" }}>
-                    {hcLink && (
+                    {hcRoute && (
                       <BuyDirectButton
                         label="Complete Trilogy · Hardcover"
-                        url={hcLink.url}
-                        ecommPrice={omnibus.price_hc_is ?? ""}
-                        msrpPrice={omnibus.price_hc_msrp}
+                        url={hcRoute.url}
+                        ecommPrice={hcRoute.price ?? ""}
+                        msrpPrice={hcRoute.listPrice}
                         itemId={omnibus.isbn_hc}
                         itemName={`${omnibus.title}: ${omnibus.subtitle} (Hardcover)`}
                         itemVariant="Hardcover"

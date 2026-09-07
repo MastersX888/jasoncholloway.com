@@ -103,6 +103,26 @@ function printOffer(book: Book, format: "Hardcover" | "Paperback"): StoreOffer |
   const itemId = format === "Hardcover" ? book.isbn_hc : book.isbn_pb;
   if (!url || !itemId) return null;
   const offerKey = `${book.slug}-${format.toLowerCase()}`;
+  const price = format === "Hardcover" ? book.price_hc_is : book.price_pb_is;
+
+  // IngramSpark is refusing to sell this format (see Book.directCheckoutUnavailable).
+  // Sending a reader to a disabled Buy Now button loses the sale outright, so the
+  // row stays — at the retail price, through Bookshop.org, which does sell it.
+  if (book.directCheckoutUnavailable?.includes(format)) {
+    return {
+      key: offerKey,
+      format,
+      label: format,
+      itemId,
+      itemName: `${bookName(book)} (${format})`,
+      itemVariant: format,
+      url: bookshopIsbnUrl(itemId),
+      price: format === "Hardcover" ? book.price_hc_msrp : book.price_pb_msrp,
+      channel: "bookshop",
+      channelLabel: "Bookshop.org",
+      fulfillment: "Ships from Bookshop.org — supports independent bookstores",
+    };
+  }
 
   return {
     key: offerKey,
@@ -112,7 +132,7 @@ function printOffer(book: Book, format: "Hardcover" | "Paperback"): StoreOffer |
     itemName: `${bookName(book)} (${format})`,
     itemVariant: format,
     url: directCheckoutUrl(offerKey, url),
-    price: format === "Hardcover" ? book.price_hc_is : book.price_pb_is,
+    price,
     listPrice: format === "Hardcover" ? book.price_hc_msrp : book.price_pb_msrp,
     channel: "direct",
     channelLabel: DIRECT_LABEL,

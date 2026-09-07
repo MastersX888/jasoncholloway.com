@@ -14,6 +14,7 @@ import {
   MASTERS_X_KEYWORDS,
 } from "@/lib/seo/mastersXEntities";
 import type { Metadata } from "next";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 const omnibus = books.find((b) => b.slug === "omnibus");
 
@@ -169,7 +170,7 @@ export default function OmnibusPage() {
       <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd, breadcrumbJsonLd) }}
       />
       <section className="page-header" style={{ paddingBottom: "4rem" }}>
         <div className="container">

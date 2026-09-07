@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import { getFieldNoteVolumes } from "@/lib/data/fieldNotes";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 export interface FaqItem {
   q: string;
@@ -89,7 +90,7 @@ export default function FieldNoteLayout({
     <div data-register="research">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldScripts) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(ldScripts) }}
       />
 
       {/* ─── PAGE HEADER ─── */}

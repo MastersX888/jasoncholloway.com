@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 export const metadata: Metadata = buildMetadata({
   // The query is "books like Foucault's Pendulum"; the author suffix was the
@@ -76,7 +77,7 @@ export default function FoucaultsPendulumCompPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(ldScripts) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(ldScripts) }}
       />
 
       <section className="page-header" style={{ paddingBottom: "3rem" }}>

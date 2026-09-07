@@ -26,6 +26,7 @@ export async function generateStaticParams() {
   }));
 }
 import type { Metadata } from "next";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
@@ -274,7 +275,7 @@ export default function BookPage({ params }: Props) {
       <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])]) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd, breadcrumbJsonLd, ...(faqJsonLd ? [faqJsonLd] : [])) }}
       />
       <section className="page-header vol-page" data-volume={slug} style={{ paddingBottom: "4rem" }}>
         <div className="container">

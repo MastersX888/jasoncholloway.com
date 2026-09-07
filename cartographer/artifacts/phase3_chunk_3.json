@@ -1,0 +1,226 @@
+[
+  {
+    "entity": "14 AM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:138|B3:570|B3:3078"
+  },
+  {
+    "entity": "Marcus Chen",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:144|B3:539|B3:4605"
+  },
+  {
+    "entity": "52 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:280|B3:684|B3:1175"
+  },
+  {
+    "entity": "800 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:925|B3:1055|B3:1082"
+  },
+  {
+    "entity": "The April",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1286|B3:1353|B3:1393"
+  },
+  {
+    "entity": "Creative Commons",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1621|B3:2991|B3:4891"
+  },
+  {
+    "entity": "Theological Studies",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1900|B3:1981|B3:2022"
+  },
+  {
+    "entity": "Johns Hopkins",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:2576|B3:2916|B3:3235"
+  },
+  {
+    "entity": "The Pentecost",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:3066|B3:3376|B3:3409"
+  },
+  {
+    "entity": "67 BPM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:3659|B3:4071|B3:4772"
+  },
+  {
+    "entity": "Uncle Andrew",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:4550|B3:4551|B3:4565"
+  },
+  {
+    "entity": "Breitling Navitimer",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:215|B1:222"
+  },
+  {
+    "entity": "Now Blake",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:230|B1:655"
+  },
+  {
+    "entity": "First National Bank",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:474|B1:739"
+  },
+  {
+    "entity": "Holy Mother",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:687|B1:4470"
+  },
+  {
+    "entity": "47 PM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "address",
+    "sample_lines": "B1:952|B2:5652"
+  },
+  {
+    "entity": "The Moreau",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:987|B3:3324"
+  },
+  {
+    "entity": "Since Father Moreau",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1312|B1:1313"
+  },
+  {
+    "entity": "Notebook Three",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1536|B1:2076"
+  },
+  {
+    "entity": "Margaret Masters",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1917|B2:3561"
+  },
+  {
+    "entity": "Carrier Mark",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2174|B1:2197"
+  },
+  {
+    "entity": "William Carroll Masters",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2303|B1:2411"
+  },
+  {
+    "entity": "The Ars",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2601|B2:1991"
+  },
+  {
+    "entity": "The Voynich",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2602|B2:3275"
+  },
+  {
+    "entity": "The Codex Gigas",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2602|B1:4398"
+  },
+  {
+    "entity": "Powder Tower",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2940|B1:3070"
+  },
+  {
+    "entity": "Moravian Riesling",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3007|B1:3722"
+  },
+  {
+    "entity": "In Kansas City",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3010|B2:5880"
+  }
+]

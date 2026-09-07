@@ -1,0 +1,457 @@
+{
+  "pass": "apartment / balcony (locked author ruling)",
+  "ruling": "Blake & Nadia's Quality Hill residence is an APARTMENT with a BALCONY. They travel and work constantly; a house does not fit. Author: \"it needs to be balcony and apartments.\"",
+  "file": "corpus/MASTERS_X_BOOK3_DEMY_9798256010072.txt",
+  "edit_count": 48,
+  "edits": [
+    {
+      "line": 64,
+      "old": "The house was clean. The house was empty.",
+      "new": "The apartment was clean. The apartment was empty.",
+      "reason": "Their Quality Hill residence on Blake's return."
+    },
+    {
+      "line": 77,
+      "old": "The house had a frequency.",
+      "new": "The apartment had a frequency.",
+      "reason": "Residence acoustics."
+    },
+    {
+      "line": 83,
+      "old": "this particular house under this particular life.",
+      "new": "this particular apartment under this particular life.",
+      "reason": "Residence."
+    },
+    {
+      "line": 84,
+      "old": "The house's",
+      "new": "The apartment's",
+      "reason": "Residence acoustics ('The house's own fundamental')."
+    },
+    {
+      "line": 125,
+      "old": "sink in this house, on this counter.",
+      "new": "sink in this apartment, on this counter.",
+      "reason": "Residence (three generations of Masters men in the same unit)."
+    },
+    {
+      "line": 138,
+      "old": "Just a man, in a house, at a table",
+      "new": "Just a man, in an apartment, at a table",
+      "reason": "Blake in his own residence."
+    },
+    {
+      "line": 1572,
+      "old": "the kitchen and the house and the",
+      "new": "the kitchen and the apartment and the",
+      "reason": "Residence; anaphoric chain kept intact."
+    },
+    {
+      "line": 1573,
+      "old": "foundation beneath the house and the Kansas City limestone",
+      "new": "foundation beneath the apartment and the Kansas City limestone",
+      "reason": "Residence; anaphoric chain kept intact."
+    },
+    {
+      "line": 2277,
+      "old": "\"I can hear the house.\"",
+      "new": "\"I can hear the apartment.\"",
+      "reason": "Residence acoustics (explicit in ruling)."
+    },
+    {
+      "line": 2285,
+      "old": "The house has a",
+      "new": "The apartment has a",
+      "reason": "Residence acoustics."
+    },
+    {
+      "line": 2293,
+      "old": "The house sounds like an old instrument.",
+      "new": "The apartment sounds like an old instrument.",
+      "reason": "Residence acoustics."
+    },
+    {
+      "line": 2299,
+      "old": "\"I don't know if I'm talking about the house.\"",
+      "new": "\"I don't know if I'm talking about the apartment.\"",
+      "reason": "Residence acoustics; the double meaning survives the swap."
+    },
+    {
+      "line": 2340,
+      "old": "The house was quiet. The house was tired. The house kept",
+      "new": "The apartment was quiet. The apartment was tired. The apartment kept",
+      "reason": "Residence acoustics; triple anaphora preserved."
+    },
+    {
+      "line": 3663,
+      "old": "of your house, not by measuring",
+      "new": "of your home, not by measuring",
+      "reason": "Generic second-person aphorism ('the rhythm of your wife the way you learn the rhythm of your ___'); 'home' keeps it universal and removes the house signal."
+    },
+    {
+      "line": 3679,
+      "old": "the house humming its 55 Hz",
+      "new": "the apartment humming its 55 Hz",
+      "reason": "Residence acoustics heard from outside."
+    },
+    {
+      "line": 3762,
+      "old": "to anyone in this house, you hear",
+      "new": "to anyone in this apartment, you hear",
+      "reason": "Residence."
+    },
+    {
+      "line": 3772,
+      "old": "you could hear the limestone under this house.",
+      "new": "you could hear the limestone under this apartment.",
+      "reason": "Residence."
+    },
+    {
+      "line": 3951,
+      "old": "Not in this house.",
+      "new": "Not in this apartment.",
+      "reason": "Residence."
+    },
+    {
+      "line": 3955,
+      "old": "girl who was leaving this house at",
+      "new": "girl who was leaving this apartment at",
+      "reason": "Residence."
+    },
+    {
+      "line": 4110,
+      "old": "The house hummed at 55 Hz.",
+      "new": "The apartment hummed at 55 Hz.",
+      "reason": "Residence acoustics (explicit in ruling)."
+    },
+    {
+      "line": 4113,
+      "old": "sound of the house.",
+      "new": "sound of the apartment.",
+      "reason": "Residence acoustics (explicit in ruling)."
+    },
+    {
+      "line": 4124,
+      "old": "Nadia's contribution to the sound of the house.",
+      "new": "Nadia's contribution to the sound of the apartment.",
+      "reason": "Residence acoustics (explicit in ruling)."
+    },
+    {
+      "line": 4157,
+      "old": "her system was the house and the",
+      "new": "her system was the apartment and the",
+      "reason": "Residence."
+    },
+    {
+      "line": 4163,
+      "old": "house was still running on her architecture",
+      "new": "apartment was still running on her architecture",
+      "reason": "Residence."
+    },
+    {
+      "line": 4167,
+      "old": "and the house would recalibrate",
+      "new": "and the apartment would recalibrate",
+      "reason": "Residence."
+    },
+    {
+      "line": 4181,
+      "old": "The house hummed at 53.6",
+      "new": "The apartment hummed at 53.6",
+      "reason": "Residence acoustics."
+    },
+    {
+      "line": 4182,
+      "old": "the sound of a house with one heartbeat",
+      "new": "the sound of an apartment with one heartbeat",
+      "reason": "Residence acoustics."
+    },
+    {
+      "line": 4216,
+      "old": "He sat on the Quality Hill porch.",
+      "new": "He sat on the Quality Hill balcony.",
+      "reason": "Their Quality Hill outdoor space."
+    },
+    {
+      "line": 4217,
+      "old": "The porch was old, the original porch, the porch his grandfather",
+      "new": "The balcony was old, the original balcony, the balcony his grandfather",
+      "reason": "Their balcony; 'his grandfather built' retained, consistent with the structure the grandfather built that the family has occupied for three generations."
+    },
+    {
+      "line": 4226,
+      "old": "when they lean on porches and look",
+      "new": "when they lean on balconies and look",
+      "reason": "Masters men on this same railing."
+    },
+    {
+      "line": 4245,
+      "old": "he had served Nadia on their first night in this house",
+      "new": "he had served Nadia on their first night in this apartment",
+      "reason": "Residence."
+    },
+    {
+      "line": 4268,
+      "old": "He fixed the porch railing.",
+      "new": "He fixed the balcony railing.",
+      "reason": "Their balcony rail (rule 4)."
+    },
+    {
+      "line": 4276,
+      "old": "into the wood into the house. He",
+      "new": "into the wood into the building. He",
+      "reason": "Structural referent: the tremor conducts into the building carcass and its limestone foundations, not into the unit."
+    },
+    {
+      "line": 4277,
+      "old": "was shaking the house. Very slightly. Not enough to feel unless you were",
+      "new": "was shaking the building. Very slightly. Not enough to feel unless you were",
+      "reason": "Structural referent (foundations)."
+    },
+    {
+      "line": 4278,
+      "old": "the house, unless you had limestone foundations",
+      "new": "the building, unless you had limestone foundations",
+      "reason": "Structural referent (foundations)."
+    },
+    {
+      "line": 4286,
+      "old": "measures the frequency of a man fixing a porch rail.",
+      "new": "measures the frequency of a man fixing a balcony rail.",
+      "reason": "Their balcony rail (rule 4)."
+    },
+    {
+      "line": 4301,
+      "old": "She found him on the porch.",
+      "new": "She found him on the balcony.",
+      "reason": "Their balcony; Norton wine scene."
+    },
+    {
+      "line": 4307,
+      "old": "on the porch rail, the rail he",
+      "new": "on the balcony rail, the rail he",
+      "reason": "Their balcony rail (rule 4)."
+    },
+    {
+      "line": 4322,
+      "old": "change it, that the frequency of a man sitting on a porch drinking wine",
+      "new": "change it, that the frequency of a man sitting on a balcony drinking wine",
+      "reason": "Their balcony."
+    },
+    {
+      "line": 4326,
+      "old": "Day fifteen. The porch.",
+      "new": "Day fifteen. The balcony.",
+      "reason": "Their balcony."
+    },
+    {
+      "line": 4336,
+      "old": "Fourteen years later, on a porch in October",
+      "new": "Fourteen years later, on a balcony in October",
+      "reason": "Their balcony."
+    },
+    {
+      "line": 4367,
+      "old": "the frequency of the house's own limestone foundation",
+      "new": "the frequency of the building's own limestone foundation",
+      "reason": "Structural referent; the same sentence already says 'his body and the building were synchronizing'."
+    },
+    {
+      "line": 4390,
+      "old": "this particular porch drinking this particular wine.",
+      "new": "this particular balcony drinking this particular wine.",
+      "reason": "Their balcony."
+    },
+    {
+      "line": 4445,
+      "old": "the light moved across the porch",
+      "new": "the light moved across the balcony",
+      "reason": "Their balcony."
+    },
+    {
+      "line": 4489,
+      "old": "porch at 9 PM.",
+      "new": "balcony at 9 PM.",
+      "reason": "Their balcony ('a man sitting on a ___ at 9 PM')."
+    },
+    {
+      "line": 5118,
+      "old": "entering a house that had been her house and was her house again.",
+      "new": "entering an apartment that had been her apartment and was her apartment again.",
+      "reason": "Residence; triple possession preserved."
+    },
+    {
+      "line": 5144,
+      "old": "separate bedrooms and separate houses and",
+      "new": "separate bedrooms and separate apartments and",
+      "reason": "The dwellings of this marriage are apartments."
+    },
+    {
+      "line": 5182,
+      "old": "And listen to the house.\"",
+      "new": "And listen to the apartment.\"",
+      "reason": "Residence acoustics (explicit in ruling)."
+    }
+  ],
+  "kept_unchanged": [
+    {
+      "line": 144,
+      "text": "Marcus Chen on his front porch, wearing a Kansas City Royals cap",
+      "reason": "Locked ruling: Marcus Chen 'front porch' stays unchanged."
+    },
+    {
+      "line": 4525,
+      "text": "cannot read, and I want to sit in a house where the most important",
+      "reason": "Andrew talking about his sister Jennifer's house in Annapolis."
+    },
+    {
+      "line": 4574,
+      "text": " \"Are you coming to our house?\"",
+      "reason": "Sophie (Andrew's niece) about the Annapolis house."
+    },
+    {
+      "line": 92,
+      "text": "structure since Blake Masters' grandfather built it.",
+      "reason": "Says 'the structure', not 'the house'; a grandfather-built Quality Hill building is compatible with the apartment ruling."
+    }
+  ],
+  "flagged_details_left_alone": [
+    {
+      "lines": [
+        48,
+        51
+      ],
+      "text": "front walk / flagstones",
+      "disposition": "kept",
+      "reason": "Rule 5: a Quality Hill apartment building can have a front walk with flagstones. No hard contradiction."
+    },
+    {
+      "lines": [
+        3655,
+        3673,
+        5094
+      ],
+      "text": "driveway",
+      "disposition": "kept",
+      "reason": "Rule 5 / rule 6: apartment buildings have driveways, and the scenes only need Blake to hear Nadia arrive by car. Rewording would cost more prose than it buys."
+    },
+    {
+      "lines": [
+        3961,
+        4095
+      ],
+      "text": "came downstairs",
+      "disposition": "kept",
+      "reason": "Compatible with a two-level / loft unit in an older Quality Hill building. Flagged for the author: if the unit is single-level, 'came into the kitchen at 6:52' is the minimal substitution."
+    },
+    {
+      "lines": [
+        5141
+      ],
+      "text": "The elm in the backyard",
+      "disposition": "kept",
+      "reason": "Rule 5 protects the elm. A shared back garden / courtyard behind the building fits. Flagged: 'courtyard' is the minimal substitution if the author wants it tightened."
+    },
+    {
+      "lines": [
+        92,
+        4217
+      ],
+      "text": "his grandfather built it / the balcony his grandfather built",
+      "disposition": "kept",
+      "reason": "Reads as the grandfather having built the structure the family has occupied for three generations. Rule 5: not demolished."
+    },
+    {
+      "lines": [
+        144
+      ],
+      "text": "Marcus Chen on his front porch",
+      "disposition": "kept per explicit ruling",
+      "reason": "The ruling names Marcus Chen's 'front porch' as a KEEP. Noted here because in context Marcus is knocking at Blake's door, so this is the one residual 'porch' attached to the Quality Hill address. Minimal substitution if the author reverses: 'Marcus Chen in the hallway outside his door'."
+    }
+  ],
+  "book1_book2_scan": {
+    "note": "Scan only. The task locked the edit scope to the Book 3 corpus file, so nothing in Books 1-2 was modified.",
+    "MASTERS_X_BOOK1_DEMY_9798256008048.txt": {
+      "porch": [
+        {
+          "lines": [
+            4068,
+            4074
+          ],
+          "text": "Quiet streets, porch lights ... A porch light was just a porch light.",
+          "verdict": "no change needed - Andrew's Gladstone neighborhood, other people's postwar ranches."
+        }
+      ],
+      "house": [
+        {
+          "lines": [
+            381,
+            536,
+            841,
+            845,
+            997,
+            1935,
+            3126,
+            3889,
+            3895,
+            3942,
+            3945,
+            3948,
+            4019,
+            4168
+          ],
+          "verdict": "no change needed - Jefferson City, a campus coffee shop, the grandmother's Gladstone house, Margaret's red-brick ranch, etc. None is the Quality Hill residence."
+        }
+      ],
+      "quality_hill": [
+        {
+          "lines": [
+            4472
+          ],
+          "text": "Quality Hill with the convent ring ...",
+          "verdict": "no dwelling noun attached."
+        }
+      ]
+    },
+    "MASTERS_X_BOOK2_DEMY_9798256009953.txt": {
+      "porch": [],
+      "house": [
+        {
+          "lines": [
+            6941
+          ],
+          "text": "reached the sugar bowl. The house hummed its limestone fundamental,",
+          "verdict": "CONFLICT - this is the Quality Hill kitchen (sugar bowl / November light motif) and matches the ruling's 'the house hummed' case. Proposed edit, NOT applied because Book 2 is outside the locked edit scope: 'The house hummed its limestone fundamental,' -> 'The apartment hummed its limestone fundamental,'."
+        },
+        {
+          "lines": [
+            7419
+          ],
+          "text": "wound this watch every morning at the bathroom sink in a house in Kansas City.",
+          "verdict": "CONFLICT (soft) - William Masters at the same bathroom sink that Book 3 line 125 places in the Quality Hill residence. Proposed edit, NOT applied: 'in a house in Kansas City' -> 'in an apartment in Kansas City'."
+        },
+        {
+          "lines": [
+            507,
+            1256,
+            1556,
+            3666,
+            4422,
+            5956
+          ],
+          "verdict": "no change needed - Vance's cleared house, metaphor ('each meeting a room in the house she maintained'), 'house the institution', 'a house I've never been inside', Kofi's grandmother's house, and the avoided-room simile."
+        }
+      ],
+      "quality_hill": [
+        {
+          "lines": [
+            1495
+          ],
+          "text": "apartment on Quality Hill where Nadia slept ...",
+          "verdict": "already correct - Book 2 already calls it an apartment."
+        }
+      ]
+    }
+  }
+}

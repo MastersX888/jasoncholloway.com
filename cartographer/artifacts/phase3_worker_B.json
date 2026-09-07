@@ -1,0 +1,422 @@
+[
+  {
+    "entity": "14 AM",
+    "class": "AMBIGUOUS",
+    "notes": "NER fragment from clock times (e.g., 7:14 AM), not a geographic entity."
+  },
+  {
+    "entity": "Marcus Chen",
+    "class": "FICTIONAL",
+    "notes": "Invented UMKC Director of Instruction who appears in classroom-protocol scenes."
+  },
+  {
+    "entity": "52 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "Acoustic frequency tag (HVAC hum) misclassified as an address."
+  },
+  {
+    "entity": "800 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "Acoustic frequency measurement in wind/turbulence passages, not a place."
+  },
+  {
+    "entity": "The April",
+    "class": "AMBIGUOUS",
+    "notes": "NER fragment from seasonal phrases like 'The April sun/light.'"
+  },
+  {
+    "entity": "Creative Commons",
+    "class": "REAL_WORLD",
+    "notes": "Real open-licensing framework cited for Andrew's published specification."
+  },
+  {
+    "entity": "Theological Studies",
+    "class": "REAL_WORLD",
+    "notes": "Real peer-reviewed Catholic theology journal referenced for publication."
+  },
+  {
+    "entity": "Johns Hopkins",
+    "class": "REAL_WORLD",
+    "notes": "Real university/hospital contacted for combined intervention planning."
+  },
+  {
+    "entity": "The Pentecost",
+    "class": "REAL_WORLD",
+    "notes": "Real Christian feast and theological concept used metaphorically in the text."
+  },
+  {
+    "entity": "67 BPM",
+    "class": "AMBIGUOUS",
+    "notes": "Resting-heartbeat measurement for Nadia, not a mappable location."
+  },
+  {
+    "entity": "Uncle Andrew",
+    "class": "FICTIONAL",
+    "notes": "Familial nickname Sophie uses for Andrew Chen, an invented character."
+  },
+  {
+    "entity": "Breitling Navitimer",
+    "class": "REAL_WORLD",
+    "notes": "Real Swiss pilot-watch model inherited from Blake's grandfather."
+  },
+  {
+    "entity": "Now Blake",
+    "class": "AMBIGUOUS",
+    "notes": "Sentence-initial NER fragment ('Now Blake wore/wondered'), not an entity."
+  },
+  {
+    "entity": "First National Bank",
+    "class": "AMBIGUOUS",
+    "notes": "Generic bank name used as a KC destination; specific real branch unconfirmed."
+  },
+  {
+    "entity": "Holy Mother",
+    "class": "FICTIONAL",
+    "notes": "Fictional 'Sisters of the Holy Mother' convent order outside Kyiv."
+  },
+  {
+    "entity": "47 PM",
+    "class": "AMBIGUOUS",
+    "notes": "Time fragment extracted from timestamps such as 6:47 PM."
+  },
+  {
+    "entity": "The Moreau",
+    "class": "AMBIGUOUS",
+    "notes": "Partial reference to Moreau collection/chamber; truncated from fuller Moreau entity."
+  },
+  {
+    "entity": "Since Father Moreau",
+    "class": "AMBIGUOUS",
+    "notes": "Dialogue fragment about murdered Father Moreau, not a standalone place name."
+  },
+  {
+    "entity": "Notebook Three",
+    "class": "FICTIONAL",
+    "notes": "In-universe William Carroll Masters notebook driving the resonance algorithm."
+  },
+  {
+    "entity": "Margaret Masters",
+    "class": "FICTIONAL",
+    "notes": "Invented character: Blake's mother in the Masters family lineage."
+  },
+  {
+    "entity": "Carrier Mark",
+    "class": "FICTIONAL",
+    "notes": "In-universe Jesuit bloodline tattoo/symbol on Blake's shoulder."
+  },
+  {
+    "entity": "William Carroll Masters",
+    "class": "FICTIONAL",
+    "notes": "Invented character: Blake's grandfather who documented the mirror tradition."
+  },
+  {
+    "entity": "The Ars",
+    "class": "AMBIGUOUS",
+    "notes": "Truncated fragment of 'Ars Notoria'; incomplete entity boundary."
+  },
+  {
+    "entity": "The Voynich",
+    "class": "REAL_WORLD",
+    "notes": "Reference to the real Voynich manuscript studied alongside other codices."
+  },
+  {
+    "entity": "The Codex Gigas",
+    "class": "REAL_WORLD",
+    "notes": "Reference to the real medieval Devil's Bible manuscript and its missing pages."
+  },
+  {
+    "entity": "Powder Tower",
+    "class": "REAL_WORLD",
+    "notes": "Real Prague gate tower (Prašná brána) near the characters' hotel."
+  },
+  {
+    "entity": "Moravian Riesling",
+    "class": "REAL_WORLD",
+    "notes": "Real Moravian wine served during the Strahov/Prague scenes."
+  },
+  {
+    "entity": "In Kansas City",
+    "class": "AMBIGUOUS",
+    "notes": "Prepositional phrase ('In Kansas City, the…'), not a named entity."
+  },
+  {
+    "entity": "Town Square",
+    "class": "REAL_WORLD",
+    "notes": "Prague Old Town Square referenced on the walk past Powder Tower."
+  },
+  {
+    "entity": "The Prague",
+    "class": "AMBIGUOUS",
+    "notes": "NER fragment from phrases like 'The Prague courtyard/gesture.'"
+  },
+  {
+    "entity": "The Latin",
+    "class": "AMBIGUOUS",
+    "notes": "Fragment referring to Latin language/text, not a geographic proper noun."
+  },
+  {
+    "entity": "With Andrew",
+    "class": "AMBIGUOUS",
+    "notes": "Sentence fragment ('With Andrew's infrastructure'), not a place or person entity."
+  },
+  {
+    "entity": "Third Way",
+    "class": "FICTIONAL",
+    "notes": "In-universe strategic concept for distributed resonance stewardship."
+  },
+  {
+    "entity": "Theological Hall",
+    "class": "REAL_WORLD",
+    "notes": "Real Strahov Theological Hall in Prague where Latin transcription occurs."
+  },
+  {
+    "entity": "Nadia Masters",
+    "class": "FICTIONAL",
+    "notes": "Nadia Volkov's maiden name, an invented character identifier."
+  },
+  {
+    "entity": "Archaeological Method",
+    "class": "AMBIGUOUS",
+    "notes": "Partial name of the real Journal of Archaeological Method and Theory."
+  },
+  {
+    "entity": "The Book",
+    "class": "AMBIGUOUS",
+    "notes": "Truncated reference to Sefer Yetzirah ('The Book of Formation')."
+  },
+  {
+    "entity": "The Wisdom",
+    "class": "AMBIGUOUS",
+    "notes": "Truncated reference to the Wisdom of Solomon biblical text."
+  },
+  {
+    "entity": "Protestant Bible",
+    "class": "REAL_WORLD",
+    "notes": "Real Protestant biblical canon contrasted with deuterocanonical books."
+  },
+  {
+    "entity": "No Dr",
+    "class": "AMBIGUOUS",
+    "notes": "NER artifact from 'No Dr., no Ms.' letterhead formatting."
+  },
+  {
+    "entity": "The Iceland",
+    "class": "AMBIGUOUS",
+    "notes": "Fragment of Iceland references; may denote fictional facility on real Iceland."
+  },
+  {
+    "entity": "The Merkabah",
+    "class": "REAL_WORLD",
+    "notes": "Real Jewish Merkabah mysticism tradition cited in historical exposition."
+  },
+  {
+    "entity": "The Christians",
+    "class": "AMBIGUOUS",
+    "notes": "Religious-group reference in comparative theology, not a mappable place."
+  },
+  {
+    "entity": "The Cognigenics",
+    "class": "FICTIONAL",
+    "notes": "Antagonist biotech corporation opposing the Foundation's ethics."
+  },
+  {
+    "entity": "The Monroe Institute",
+    "class": "REAL_WORLD",
+    "notes": "Real Virginia consciousness-research institute cited for Hemi-Sync protocols."
+  },
+  {
+    "entity": "47 PM Kansas City",
+    "class": "AMBIGUOUS",
+    "notes": "Composite time-and-city fragment from '11:47 PM Kansas City time.'"
+  },
+  {
+    "entity": "Monroe Institute",
+    "class": "REAL_WORLD",
+    "notes": "Same real institute as 'The Monroe Institute' without article."
+  },
+  {
+    "entity": "Not How",
+    "class": "AMBIGUOUS",
+    "notes": "Dialogue fragment ('Not How is Yuki?'), not a geographic entity."
+  },
+  {
+    "entity": "2004 Land Cruiser",
+    "class": "REAL_WORLD",
+    "notes": "Real Toyota Land Cruiser model/year used by Kofi's UN team in Ghana."
+  },
+  {
+    "entity": "Ama Ata Asante",
+    "class": "FICTIONAL",
+    "notes": "Invented ninety-one-year-old Ghanaian elder guarding the cave entrance."
+  },
+  {
+    "entity": "The Ashanti",
+    "class": "REAL_WORLD",
+    "notes": "Real Ghanaian Ashanti people whose oral tradition encodes resonance knowledge."
+  },
+  {
+    "entity": "00 PM",
+    "class": "AMBIGUOUS",
+    "notes": "Time fragment from clock readings such as 2:00 PM or 3:00 PM."
+  },
+  {
+    "entity": "Commerce Committee",
+    "class": "REAL_WORLD",
+    "notes": "Real U.S. Senate Commerce Committee chaired by Senator Margaret Holt."
+  },
+  {
+    "entity": "Reagan National",
+    "class": "REAL_WORLD",
+    "notes": "Real Reagan National Airport (DCA) where Nadia calls Blake from a gate."
+  },
+  {
+    "entity": "Sarah Chen",
+    "class": "FICTIONAL",
+    "notes": "Invented endowed-chair professor in computational neuroscience."
+  },
+  {
+    "entity": "The Stanford",
+    "class": "AMBIGUOUS",
+    "notes": "Truncated reference to a Stanford research protocol, not a full entity."
+  },
+  {
+    "entity": "Year Three",
+    "class": "AMBIGUOUS",
+    "notes": "Relative temporal marker for a frost heave, not a geographic name."
+  },
+  {
+    "entity": "The Icelandic",
+    "class": "AMBIGUOUS",
+    "notes": "Adjective fragment ('The Icelandic light/dark'), not a place name."
+  },
+  {
+    "entity": "To Ghana",
+    "class": "AMBIGUOUS",
+    "notes": "Travel prepositional phrase, not a standalone geographic entity."
+  },
+  {
+    "entity": "The Body",
+    "class": "FICTIONAL",
+    "notes": "Title of an in-universe notebook volume in Blake's tripartite schema."
+  },
+  {
+    "entity": "Volume Two",
+    "class": "FICTIONAL",
+    "notes": "In-universe notebook volume numbering in Blake's manuscript system."
+  },
+  {
+    "entity": "The Listening",
+    "class": "FICTIONAL",
+    "notes": "In-universe third volume/concept in Blake's Word-Body-Listening framework."
+  },
+  {
+    "entity": "Harris Hall",
+    "class": "REAL_WORLD",
+    "notes": "Real UMKC campus building hosting Room 204 seminar sessions."
+  },
+  {
+    "entity": "Sofia Petrov",
+    "class": "FICTIONAL",
+    "notes": "Invented UMKC physics sophomore and resonance-sensitive candidate."
+  },
+  {
+    "entity": "If Blake",
+    "class": "AMBIGUOUS",
+    "notes": "Conditional sentence fragment, not a proper noun or location."
+  },
+  {
+    "entity": "48 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "HVAC cycling frequency mis-tagged as an address."
+  },
+  {
+    "entity": "440 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "Musical pitch (A4) measurement, not a geographic entity."
+  },
+  {
+    "entity": "220 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "Musical pitch (A3) measurement in barista/pipe resonance passages."
+  },
+  {
+    "entity": "Mud Pie Vegan Bakery",
+    "class": "REAL_WORLD",
+    "notes": "Real Kansas City-area vegan bakery on Grand Boulevard where Marcus meets Blake."
+  },
+  {
+    "entity": "Thom Yorke",
+    "class": "REAL_WORLD",
+    "notes": "Real Radiohead vocalist referenced for approximate vocal frequency."
+  },
+  {
+    "entity": "180 Hz",
+    "class": "AMBIGUOUS",
+    "notes": "Vocal-frequency measurement associated with Thom Yorke, not a place."
+  },
+  {
+    "entity": "Acoustic Consciousness",
+    "class": "FICTIONAL",
+    "notes": "In-universe patent title and research field within the novel's science."
+  },
+  {
+    "entity": "The Board",
+    "class": "AMBIGUOUS",
+    "notes": "Institutional governing body ruling on classroom protocol; specific real committee unclear."
+  },
+  {
+    "entity": "But Dr",
+    "class": "AMBIGUOUS",
+    "notes": "NER artifact from mid-sentence 'But Dr. Nakamura' boundary error."
+  },
+  {
+    "entity": "Hour Eight",
+    "class": "FICTIONAL",
+    "notes": "Named block in the in-universe classroom demonstration schedule."
+  },
+  {
+    "entity": "Mary Magdalene",
+    "class": "REAL_WORLD",
+    "notes": "Real biblical figure referenced in comparative church-history exposition."
+  },
+  {
+    "entity": "Buenos Aires",
+    "class": "REAL_WORLD",
+    "notes": "Real Argentine city where a church-basement resonance scene is set."
+  },
+  {
+    "entity": "Adunni Okafor",
+    "class": "FICTIONAL",
+    "notes": "Invented Lagos grandmother who publishes independent resonance research."
+  },
+  {
+    "entity": "91 BPM",
+    "class": "AMBIGUOUS",
+    "notes": "Heartbeat-rate measurement, not a geographic entity."
+  },
+  {
+    "entity": "71 BPM",
+    "class": "AMBIGUOUS",
+    "notes": "Elevated heartbeat measurement for Nadia, not a mappable location."
+  },
+  {
+    "entity": "The October",
+    "class": "AMBIGUOUS",
+    "notes": "NER fragment from seasonal phrases like 'The October air/light.'"
+  },
+  {
+    "entity": "The Moleskines",
+    "class": "REAL_WORLD",
+    "notes": "Real Moleskine brand notebooks used as physical story artifacts."
+  },
+  {
+    "entity": "The Volvo",
+    "class": "REAL_WORLD",
+    "notes": "Real Volvo automobile Nadia drives from the parking lot."
+  },
+  {
+    "entity": "The Lamy",
+    "class": "REAL_WORLD",
+    "notes": "Real Lamy 2000 fountain pen gifted to Blake by Nadia."
+  }
+]

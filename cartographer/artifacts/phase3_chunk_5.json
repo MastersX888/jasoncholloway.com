@@ -1,0 +1,226 @@
+[
+  {
+    "entity": "Year Three",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5543|B2:5544"
+  },
+  {
+    "entity": "The Icelandic",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5925|B2:7433"
+  },
+  {
+    "entity": "To Ghana",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:6868|B2:6869"
+  },
+  {
+    "entity": "The Body",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:19|B3:5384"
+  },
+  {
+    "entity": "Volume Two",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:19|B3:5354"
+  },
+  {
+    "entity": "The Listening",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:30|B3:5384"
+  },
+  {
+    "entity": "Harris Hall",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:249|B3:655"
+  },
+  {
+    "entity": "Sofia Petrov",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:304|B3:1145"
+  },
+  {
+    "entity": "If Blake",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:495|B3:511"
+  },
+  {
+    "entity": "48 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:858|B3:3470"
+  },
+  {
+    "entity": "440 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:866|B3:3475"
+  },
+  {
+    "entity": "220 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:897|B3:4147"
+  },
+  {
+    "entity": "Mud Pie Vegan Bakery",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:932|B3:1236"
+  },
+  {
+    "entity": "Thom Yorke",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:938|B3:1247"
+  },
+  {
+    "entity": "180 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:998|B3:1253"
+  },
+  {
+    "entity": "Acoustic Consciousness",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1605|B3:1742"
+  },
+  {
+    "entity": "The Board",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1790|B3:1839"
+  },
+  {
+    "entity": "But Dr",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "street;proper_noun_phrase",
+    "sample_lines": "B3:2604|B3:2604"
+  },
+  {
+    "entity": "Hour Eight",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:2654|B3:2694"
+  },
+  {
+    "entity": "Mary Magdalene",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:3424|B3:4808"
+  },
+  {
+    "entity": "Buenos Aires",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:3444|B3:3461"
+  },
+  {
+    "entity": "Adunni Okafor",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:3559|B3:3621"
+  },
+  {
+    "entity": "91 BPM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:3678|B3:3729"
+  },
+  {
+    "entity": "71 BPM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:3803|B3:3808"
+  },
+  {
+    "entity": "The October",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:4030|B3:4166"
+  },
+  {
+    "entity": "The Moleskines",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:4478|B3:4615"
+  },
+  {
+    "entity": "The Volvo",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:4865|B3:4875"
+  },
+  {
+    "entity": "The Lamy",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 2,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:5033|B3:5082"
+  }
+]

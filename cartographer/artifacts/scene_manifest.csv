@@ -1,0 +1,670 @@
+book,scene_id,chapter_slug,line_start,line_end,slug_text,pov,time_marker,asserted_location,is_slug
+1,s001-seven-parts-seven-locations-prague-where-the-emp,prologue,76,180,"\"Seven parts. Seven locations. Prague, where the emperor collects",Aldric,"","Prague, where the emperor collects",true
+1,s002-aldric-gathered-his-cloak-checked-the-first-satchel,prologue,181,262,"Aldric gathered his cloak. Checked the first satchel. Prague. Hoisted",Blake,"","Prague",true
+1,s003-feeling-he-d-had-at-subtropolis-right-before-they-d,chapter-one,263,368,"feeling he'd had at SubTropolis, right before they'd fired him. The same",Blake,"","feeling he'd had at SubTropolis, right before they'd fired him",true
+1,s004-the-apartment-was-small-a-studio-in-westport-third,chapter-one,369,372,"The apartment was small. A studio in Westport, third floor walkup.",Blake,"","The apartment was small",true
+1,s005-colonel-blake-himself-in-his-g4s-uniform-subtropol,chapter-one,373,457,"colonel. Blake himself in his G4S uniform, SubTropolis badge visible, a",Blake,"","Blake himself in his G4S uniform, SubTropolis badge visible, a",true
+1,s006-the-carvings-shouldn-t-have-existed-subtropolis-was,chapter-one,458,500,"The carvings shouldn't have existed. SubTropolis was a limestone",Blake,"","SubTropolis was a limestone",true
+1,s007-geometric-motifs-swam-behind-his-closed-eyes-the-su,chapter-one,501,584,"Geometric motifs swam behind his closed eyes. The SubTropolis",Blake,"","The SubTropolis",true
+1,s008-work-on-medieval-grimoires-your-time-at-subtropolis,chapter-two,585,693,"work on medieval grimoires. Your time at SubTropolis. What happened",Blake,"","Your time at SubTropolis",true
+1,s009-beneath-subtropolis-the-patterns-that-had-made-his,chapter-two,694,748,"beneath SubTropolis. The patterns that had made his vision swim and",Blake,"","beneath SubTropolis",true
+1,s010-blake-followed-patricia-thornton-down-a-hallway-mark,chapter-three,749,795,"Blake followed Patricia Thornton down a hallway marked PRIVATE.",Blake,"","Blake followed Patricia Thornton down a hallway marked PRIVATE.",true
+1,s011-subtropolis-amplified-focused-intentional,chapter-three,796,891,"SubTropolis, amplified. Focused. Intentional.",Blake,"","SubTropolis, amplified",true
+1,s012-model-airplanes-i-hung-in-the-garage-the-patterns-i,chapter-three,892,950,"model airplanes I hung in the garage. The patterns in flowstone at Meramec Caverns.",Blake,"","The patterns in flowstone at Meramec Caverns.",true
+1,s013-he-climbed-the-stairs-to-his-apartment-set-the-canv,chapter-three,951,951,"He climbed the stairs to his apartment. Set the canvas bag on the",Blake,"","He climbed the stairs to his apartment",true
+1,s014-kitchen-table-the-breitling-showed-6-47-pm,chapter-three,952,967,"kitchen table. The Breitling showed 6:47 PM.",Blake,"47 PM","kitchen table",true
+1,s015-the-notebooks-were-in-his-apartment-now-seven-of-th,chapter-four,968,981,"The notebooks were in his apartment now. Seven of them, locked",Blake,"","The notebooks were in his apartment now",true
+1,s016-that-had-no-names-he-d-wake-at-3-47-as-always-and,chapter-four,982,1039,"that had no names. He'd wake at 3:47, as always, and sit at the kitchen",Blake,"","He'd wake at 3:47, as always, and sit at the kitchen",true
+1,s017-notebooks-in-the-carvings-beneath-subtropolis-in-t,chapter-four,1040,1068,"notebooks. In the carvings beneath SubTropolis. In the flowstone at",Blake,"","In the carvings beneath SubTropolis",true
+1,s018-meramec-caverns-tourist-attraction-outside-sullivan,chapter-four,1069,1135,"Meramec Caverns. Tourist attraction outside Sullivan, Missouri. But",Blake,"","Meramec Caverns",true
+1,s019-october-air-hit-him-sharp-and-clean-everything-was,chapter-four,1136,1249,"October air hit him sharp and clean. Everything was different. The",Blake,"October","",true
+1,s020-walked-past-him-set-the-bags-on-the-kitchen-table,chapter-five,1250,1252,"walked past him, set the bags on the kitchen table. \"Pad Thai. Tom Kha.",Blake,"","walked past him, set the bags on the kitchen table",true
+1,s021-she-turned-and-looked-at-him-properly-in-the-apartm,chapter-five,1253,1265,"She turned and looked at him properly. In the apartment light,",Blake,"","In the apartment light,",true
+1,s022-before-the-patterns-from-the-notebooks-from-subtro,chapter-five,1266,1287,"before. The patterns from the notebooks, from SubTropolis, they're",Nadia,"","The patterns from the notebooks, from SubTropolis, they're",true
+1,s023-austrian-unopened-for-six-months-it-caught-the-kit,chapter-five,1288,1291,"Austrian, unopened for six months. It caught the kitchen light and threw",Nadia,"","It caught the kitchen light and threw",true
+1,s024-nadia-s-presence-changed-the-apartment-s-resonance,chapter-five,1292,1326,"Nadia's presence changed the apartment's resonance. She occupied",Nadia,"","Nadia's presence changed the apartment's resonance",true
+1,s025-way-a-priest-handles-a-relic-opened-it-on-the-kitch,chapter-five,1327,1355,"way a priest handles a relic. Opened it on the kitchen floor between",Blake,"","Opened it on the kitchen floor between",true
+1,s026-picture-cave-she-said-washington-county-missou,chapter-five,1356,1375,"\"Picture Cave,\" she said. \"Washington County, Missouri. Dated to",Blake,"","\"Picture Cave,\" she said",true
+1,s027-silence-two-people-sitting-on-a-kitchen-floor-with,chapter-five,1376,1432,"Silence. Two people sitting on a kitchen floor with a medieval",Blake,"","Two people sitting on a kitchen floor with a medieval",true
+1,s028-laughing-on-his-kitchen-floor-the-way-she-d-said-i,chapter-five,1433,1438,"laughing on his kitchen floor. The way she'd said I wanted to seem competent",Blake,"","laughing on his kitchen floor",true
+1,s029-he-got-up-went-to-the-kitchen,chapter-five,1439,1455,"He got up. Went to the kitchen.",Blake,"","Went to the kitchen.",true
+1,s030-tomorrow-nadia-said-i-ll-take-you-to-genessee-s,chapter-five,1456,1461,"\"Tomorrow,\" Nadia said. \"I'll take you to Genessee Street. The",Blake,"","\"I'll take you to Genessee Street",true
+1,s031-subtropolis-she-said-eventually-when-you-re-re,chapter-five,1462,1477,"\"SubTropolis,\" she said. \"Eventually. When you're ready. But first,",Blake,"","\"SubTropolis,\" she said",true
+1,s032-and-freshly-in-months-maybe-years-the-3-47-am-sil,chapter-five,1478,1489,"And freshly, in months, maybe years. The 3:47 AM silence in",Blake,"may","",true
+1,s033-genessee-street-smelled-like-river-water-and-old-bri,chapter-six,1490,1490,"Genessee Street smelled like river water and old brick.",Blake,"","Genessee Street smelled like river water and old brick.",true
+1,s034-october-morning-sharp-bright-the-kind-of-kansas-c,chapter-six,1491,1503,"October morning. Sharp. Bright. The kind of Kansas City day",Blake,"October","",true
+1,s035-2847-genessee-street-looked-abandoned-graffiti-on-t,chapter-six,1504,1529,"2847 Genessee Street looked abandoned. Graffiti on the loading",Blake,"","2847 Genessee Street looked abandoned",true
+1,s036-apartment-at-6-am-with-seven-leather-notebooks-i-th,chapter-six,1530,1601,"apartment at 6 AM with seven leather notebooks. I thought she was",Blake,"6 AM","apartment at 6 AM with seven leather notebooks",true
+1,s037-late-afternoon-andrew-gone-nadia-reorganizing-docu,chapter-six,1602,1698,"Late afternoon. Andrew gone. Nadia reorganizing documents at the",Blake,"afternoon","",true
+1,s038-morning-coffee-2-was-different,chapter-seven,1699,1724,"Morning Coffee #2 was different.",Blake,"Morning","",true
+1,s039-subtropolis-wasn-t-built-it-was-discovered-the-be,chapter-seven,1725,1864,"\"SubTropolis wasn't built. It was discovered. The Bethany Falls",Blake,"","\"SubTropolis wasn't built",true
+1,s040-he-killed-my-mentor-sister-katarina-in-prague-20,chapter-seven,1865,1876,"\"He killed my mentor. Sister Katarina. In Prague. 2019. Made it",Blake,"","In Prague",true
+1,s041-subtropolis-the-deep-chambers,chapter-seven,1877,1935,"SubTropolis. The deep chambers.",Blake,"","SubTropolis",true
+1,s042-ethan-was-in-the-kitchen-blake-s-nephew-thirty-one,chapter-eight,1936,1951,"Ethan was in the kitchen. Blake's nephew, thirty-one, practical, the",Blake,"","Ethan was in the kitchen",true
+1,s043-the-kitchen-went-quiet-outside-a-cardinal-landed-o,chapter-eight,1952,1959,"The kitchen went quiet. Outside, a cardinal landed on the feeder.",Blake,"","The kitchen went quiet",true
+1,s044-through-the-kitchen-window-he-could-see-the-backyard,chapter-eight,1960,1996,"Through the kitchen window he could see the backyard. Smaller",Blake,"","Through the kitchen window he could see the backyard",true
+1,s045-inside-a-key-different-from-william-s-smaller-mo,chapter-eight,1997,1997,"Inside: a key. Different from William's. Smaller, modern, a Post",Blake,"","",true
+1,s046-office-box-key-and-a-note-in-james-s-handwriting,chapter-eight,1998,2054,"Office box key. And a note in James's handwriting:",Blake,"","Office box key",true
+1,s047-post-office-box-and-a-note-three-words-don-t-go,chapter-eight,2055,2058,"\"Post Office box. And a note. Three words: Don't go alone.\"",Blake,"","\"Post Office box",true
+1,s048-i-m-heading-back-now-he-said-meet-me-at-genesse,chapter-eight,2059,2072,"\"I'm heading back now,\" he said. \"Meet me at Genessee Street?\"",Blake,"","\"Meet me at Genessee Street?\"",true
+1,s049-the-analysis-chamber-lived-in-the-basement-of-2847-g,chapter-nine,2073,2102,"The Analysis Chamber lived in the basement of 2847 Genessee Street.",Nadia,"","The Analysis Chamber lived in the basement of 2847 Genessee Street.",true
+1,s050-the-missouri-and-mississippi-river-valleys-picture,chapter-nine,2103,2126,"the Missouri and Mississippi river valleys. Picture Cave, Mud Glyph",Nadia,"","Picture Cave, Mud Glyph",true
+1,s051-you-ve-done-this-before,chapter-nine,2127,2148,"\"You've done this before.\"",Blake,"","",true
+1,s052-strahov-chamber-was-approaching-8-13-a-pause-at,chapter-nine,2149,2187,"Strahov chamber was approaching 8:13.\" A pause. \"At 13:21, you'd",Blake,"","Strahov chamber was approaching 8:13.\" A pause",true
+1,s053-the-lamp-hummed-genessee-street-was-quiet,chapter-nine,2188,2200,"The lamp hummed. Genessee Street was quiet.",Blake,"","Genessee Street was quiet.",true
+1,s054-we-should-get-some-rest-nadia-said-tomorrow-we,chapter-nine,2201,2224,"\"We should get some rest,\" Nadia said. \"Tomorrow we go to",Blake,"","",true
+1,s055-chapter-ten,chapter-ten,2225,2242,"CHAPTER TEN",Blake,"","",true
+1,s056-condensation-the-commercial-mining-level-subtropol,chapter-ten,2243,2253,"condensation. The commercial mining level, SubTropolis proper,",Blake,"","The commercial mining level, SubTropolis proper,",true
+1,s057-and-put-it-in-her-pocket-before-they-left-genessee-s,chapter-ten,2254,2255,"and put it in her pocket before they left Genessee Street. Blake had",Blake,"","and put it in her pocket before they left Genessee Street",true
+1,s058-at-the-bottom-the-shaft-opened-into-a-natural-chamb,chapter-ten,2256,2274,"At the bottom, the shaft opened into a natural chamber. The",Blake,"","At the bottom, the shaft opened into a natural chamber",true
+1,s059-four-years-the-climate-controlled-warehouses-and-of,chapter-ten,2275,2292,"four years. The climate-controlled warehouses and office spaces. This",Blake,"","The climate-controlled warehouses and office spaces",true
+1,s060-chamber-whose-ceiling-rose-beyond-the-reach-of-their,chapter-ten,2293,2441,"chamber whose ceiling rose beyond the reach of their flashlights. His",Blake,"","chamber whose ceiling rose beyond the reach of their flashlights",true
+1,s061-the-old-priest-reached-into-his-robe-a-small-leathe,chapter-ten,2442,2442,"The old priest reached into his robe. A small leather case. \"William",Blake,"","",true
+1,s062-left-this-for-you-he-said-you-d-need-it-when-you-re,chapter-ten,2443,2456,"left this for you. He said you'd need it when you reached Prague.\"",Blake,"","He said you'd need it when you reached Prague.\"",true
+1,s063-the-strahov-library-dryden-said-one-of-the-olde,chapter-ten,2457,2474,"\"The Strahov Library,\" Dryden said. \"One of the oldest in Europe.",Blake,"","\"The Strahov Library,\" Dryden said",true
+1,s064-three-keys-now-william-s-oscar-01-key-james-s-key,chapter-ten,2475,2475,"Three keys now. William's Oscar-01 key. James's key from",Blake,"","",true
+1,s065-margaret-s-box-and-the-strahov-library-key-waiting,chapter-ten,2476,2484,"Margaret's box. And the Strahov Library key, waiting since 1965.",Blake,"","And the Strahov Library key, waiting since 1965.",true
+1,s066-early-light-she-looked-different-not-less-committe,chapter-ten,2485,2485,"early light, she looked different. Not less committed. Less divided.",Blake,"","",true
+1,s067-prague-blake-confirmed-but-first-we-analyze-wha,chapter-ten,2486,2486,"\"Prague,\" Blake confirmed. \"But first we analyze what we found.",Blake,"","\"Prague,\" Blake confirmed",true
+1,s068-we-back-up-everything-make-it-impossible-to-suppres,chapter-ten,2487,2487,"We back up everything. Make it impossible to suppress. Then Prague.\"",Blake,"","Then Prague.\"",true
+1,s069-i-know-prague-she-said-quietly-i-know-the-strah,chapter-ten,2488,2498,"\"I know Prague,\" she said quietly. \"I know the Strahov. I know the",Blake,"","\"I know Prague,\" she said quietly",true
+1,s070-neither-said-it-not-yet-there-was-prague-first-th,chapter-ten,2499,2508,"Neither said it. Not yet. There was Prague first. The Strahov",Blake,"","There was Prague first",true
+1,s071-morning-coffee-3-was-the-one-that-hurt,chapter-eleven,2509,2680,"Morning Coffee #3 was the one that hurt.",Blake,"Morning","",true
+1,s072-prague-is-where-the-complete-system-was-last-assemb,chapter-eleven,2681,2684,"\"Prague is where the complete system was last assembled. Something",Blake,"","\"Prague is where the complete system was last assembled",true
+1,s073-carried-this-to-prague-in-1965-found-the-chamber-c,chapter-eleven,2685,2687,"carried this to Prague in 1965. Found the chamber. Chose not to open",Blake,"","carried this to Prague in 1965",true
+1,s074-i-know-prague-she-said-i-know-the-strahov-i-kn,chapter-eleven,2688,2693,"\"I know Prague,\" she said. \"I know the Strahov. I know the Jesuits",Blake,"","\"I know Prague,\" she said",true
+1,s075-three-days-blake-said-andrew-distributes-the-su,chapter-eleven,2694,2694,"\"Three days,\" Blake said. \"Andrew distributes the SubTropolis data",Blake,"","\"Andrew distributes the SubTropolis data",true
+1,s076-across-redundant-servers-then-prague,chapter-eleven,2695,2697,"across redundant servers. Then Prague.\"",Blake,"","Then Prague.\"",true
+1,s077-blake-in-prague-the-dynamic-changes-kansas-city,chapter-eleven,2698,2698,"\"Blake. In Prague. The dynamic changes. Kansas City was your",Blake,"","In Prague",true
+1,s078-territory-prague-is-mine-she-met-his-eyes-let-m,chapter-eleven,2699,2718,"territory. Prague is mine.\" She met his eyes. \"Let me lead.\"",Blake,"","Prague is mine.\" She met his eyes",true
+1,s079-through-october-streets-that-hummed-with-symmetry-p,chapter-eleven,2719,2719,"through October streets that hummed with symmetry. Prague in three",Blake,"October","Prague in three",true
+1,s080-days-the-strahov-library-the-chamber-beneath-it,chapter-eleven,2720,2725,"days. The Strahov Library. The chamber beneath it.",Blake,"","The Strahov Library",true
+1,s081-three-days,chapter-eleven,2726,2726,"Three days.",Blake,"","",true
+1,s082-then-prague,chapter-eleven,2727,2734,"Then Prague.",Blake,"","Then Prague.",true
+1,s083-the-night-before-prague-nadia-cut-blake-s-hair,chapter-twelve,2735,2735,"The night before Prague, Nadia cut Blake's hair.",Blake,"night","The night before Prague, Nadia cut Blake's hair.",true
+1,s084-it-wasn-t-planned-they-were-in-his-apartment-the-f,chapter-twelve,2736,2736,"It wasn't planned. They were in his apartment. The first time she'd",Blake,"","They were in his apartment",true
+1,s085-been-back-since-the-early-days-she-d-come-to-go-ove,chapter-twelve,2737,2750,"been back since the early days. She'd come to go over the Strahov",Blake,"","She'd come to go over the Strahov",true
+1,s086-he-sat-in-the-kitchen-chair-she-found-scissors-in-a,chapter-twelve,2751,2752,"He sat in the kitchen chair. She found scissors in a drawer. Stood",Blake,"","He sat in the kitchen chair",true
+1,s087-precision-she-brought-to-manuscript-pages-the-sciss,chapter-twelve,2753,2764,"precision she brought to manuscript pages. The scissors were kitchen",Blake,"","The scissors were kitchen",true
+1,s088-not-of-prague-i-know-prague-her-fingers-kept-wor,chapter-twelve,2765,2766,"\"Not of Prague. I know Prague.\" Her fingers kept working. \"I'm",Blake,"","\"Not of Prague",true
+1,s089-already-seeing-things-i-can-t-see-in-prague-with-t,chapter-twelve,2767,2790,"already seeing things I can't see. In Prague, with the concentrated",Blake,"","In Prague, with the concentrated",true
+1,s090-something-more-vulnerable-than-the-kitchen-floor-lau,chapter-twelve,2791,2797,"something more vulnerable than the kitchen-floor laugh. \"That's a",Blake,"","something more vulnerable than the kitchen-floor laugh",true
+1,s091-they-were-close-kitchen-chair-close-neither-of-the,chapter-twelve,2798,2799,"They were close. Kitchen chair close. Neither of them in danger.",Blake,"","Kitchen chair close",true
+1,s092-i-can-t-she-said-not-tonight-not-before-prague,chapter-twelve,2800,2814,"\"I can't,\" she said. \"Not tonight. Not before Prague. If we, and then",Blake,"night","Not before Prague",true
+1,s093-prague-first-he-said-then-we-figure-this-out,chapter-twelve,2815,2815,"\"Prague first,\" he said. \"Then we figure this out.\"",Blake,"","\"Prague first,\" he said",true
+1,s094-okay-prague-first,chapter-twelve,2816,2837,"\"Okay. Prague first.\"",Blake,"","Prague first.\"",true
+1,s095-the-chamber-beneath-strahov-contains-what-rudolf-ii,chapter-twelve,2838,2845,"The chamber beneath Strahov contains what Rudolf II spent his life gathering. I",Blake,"","The chamber beneath Strahov contains what Rudolf II spent his life gathering",true
+1,s096-key-open-the-chamber-and-whatever-you-find-share,chapter-twelve,2846,2852,"key. Open the chamber. And whatever you find, share it. Make it impossible to",Blake,"","Open the chamber",true
+1,s097-the-chamber-is-waiting-i-was-not-brave-enough-to-op,chapter-twelve,2853,2855,"The chamber is waiting. I was not brave enough to open it. But you are.",Blake,"","The chamber is waiting",true
+1,s098-blake-read-the-letter-three-times-then-he-set-it-do,chapter-twelve,2856,2860,"Blake read the letter three times. Then he set it down on the kitchen",Blake,"","Then he set it down on the kitchen",true
+1,s099-william-s-oscar-01-key-the-beginning-james-s-key,chapter-twelve,2861,2861,"William's Oscar-01 key, the beginning. James's key. The middle.",Blake,"","",true
+1,s100-the-strahov-key-the-destination,chapter-twelve,2862,2881,"The Strahov key. The destination.",Blake,"","The Strahov key",true
+1,s101-resonance-the-one-he-d-calibrated-to-in-the-subtrop,chapter-twelve,2882,2890,"resonance. The one he'd calibrated to in the SubTropolis vault, when a",Blake,"","The one he'd calibrated to in the SubTropolis vault, when a",true
+1,s102-chapter-thirteen,chapter-thirteen,2891,2928,"CHAPTER THIRTEEN",Blake,"","",true
+1,s103-blake-narrowed-the-patterns-dimmed-to-manageable-le,chapter-thirteen,2929,2930,"Blake narrowed. The patterns dimmed to manageable levels. Prague",Blake,"","Prague",true
+1,s104-you-ve-done-this-before-guided-someone-through-pra,chapter-thirteen,2931,2951,"\"You've done this before. Guided someone through Prague.\"",Blake,"","Guided someone through Prague.\"",true
+1,s105-nadia-s-expression-closed-she-went-into-the-straho,chapter-thirteen,2952,2955,"Nadia's expression closed. \"She went into the Strahov chamber. She",Blake,"","\"She went into the Strahov chamber",true
+1,s106-markus-chose-not-to-enter-the-chamber-he-teaches-m,chapter-thirteen,2956,2971,"\"Markus chose not to enter the chamber. He teaches mathematics",Blake,"","\"Markus chose not to enter the chamber",true
+1,s107-the-door-closed-blake-lay-on-the-bed-prague-s-geom,chapter-thirteen,2972,2991,"The door closed. Blake lay on the bed. Prague's geometric language",Blake,"","Prague's geometric language",true
+1,s108-old-thin-and-precise-his-apartment-was-a-library-w,chapter-thirteen,2992,3011,"old, thin and precise. His apartment was a library with a kitchen",Blake,"","His apartment was a library with a kitchen",true
+1,s109-prague-she-chose-wine-chose-honesty,chapter-thirteen,3012,3034,"Prague, she chose wine. Chose honesty.",Blake,"","Prague, she chose wine",true
+1,s110-he-wanted-to-go-further-into-the-chamber-beneath-s,chapter-thirteen,3035,3042,"\"He wanted to go further. Into the chamber beneath Strahov.\"",Blake,"","Into the chamber beneath Strahov.\"",true
+1,s111-tomorrow-dawn-the-library-is-empty-before-the-sta,chapter-thirteen,3043,3043,"\"Tomorrow. Dawn. The library is empty before the staff arrives.",Blake,"Dawn","",true
+1,s112-two-hours-in-the-chamber-miroslav-walked-them-to-t,chapter-thirteen,3044,3045,"Two hours in the chamber.\" Miroslav walked them to the door. At the threshold: \"Your grandfather asked me to tell you one thing.",Blake,"","Two hours in the chamber.\" Miroslav walked them to the door",true
+1,s113-he-said-the-chamber-shows-you-everything-the-gift,chapter-thirteen,3046,3064,"He said: 'The chamber shows you everything. The gift lets you see it. But",Blake,"","He said: 'The chamber shows you everything",true
+1,s114-blake-took-her-hand-deliberately-on-a-medieval-str,chapter-thirteen,3065,3072,"Blake took her hand. Deliberately. On a medieval street in Prague",Blake,"","On a medieval street in Prague",true
+1,s115-tomorrow,chapter-thirteen,3073,3078,"\"Tomorrow.\"",Blake,"","",true
+1,s116-she-went-into-her-room-blake-stood-in-the-hallway,chapter-thirteen,3079,3095,"She went into her room. Blake stood in the hallway, Prague",Blake,"","Blake stood in the hallway, Prague",true
+1,s117-he-stood-at-the-window-prague-s-angular-language-pr,chapter-fourteen,3096,3115,"He stood at the window. Prague's angular language pressing",Blake,"","Prague's angular language pressing",true
+1,s118-i-want-to-tell-you-something-nadia-said-before,chapter-fourteen,3116,3128,"\"I want to tell you something,\" Nadia said. \"Before tomorrow.",Blake,"","",true
+1,s119-in-prague-were-keepers-they-raised-me-taught-me-la,chapter-fourteen,3129,3144,"in Prague were Keepers. They raised me. Taught me languages. By",Blake,"","in Prague were Keepers",true
+1,s120-turned-the-ring-on-her-finger-when-i-took-it-off-b,chapter-fourteen,3145,3185,"turned the ring on her finger. \"When I took it off before SubTropolis.",Blake,"","\"When I took it off before SubTropolis.",true
+1,s121-unguarded-tomorrow-you-re-going-into-a-chamber-tha,chapter-fourteen,3186,3187,"Unguarded. \"Tomorrow you're going into a chamber that has broken",Blake,"","\"Tomorrow you're going into a chamber that has broken",true
+1,s122-breaker-i-won-t-write-a-report-i-will-stay-in-that,chapter-fourteen,3188,3191,"breaker. I won't write a report. I will stay in that chamber until you come",Blake,"","I will stay in that chamber until you come",true
+1,s123-she-looked-at-him-the-window-light-the-prague-cour,chapter-fourteen,3192,3195,"She looked at him. The window light. The Prague courtyard. The",Blake,"","The Prague courtyard",true
+1,s124-hand-in-the-dark-but-hearing-it-in-her-voice-in-p,chapter-fourteen,3196,3204,"hand in the dark. But hearing it, in her voice, in Prague, was different",Blake,"","But hearing it, in her voice, in Prague, was different",true
+1,s125-not-just-the-chamber-us-if-you-go-into-that-chamb,chapter-fourteen,3205,3210,"\"Not just the chamber. Us. If you go into that chamber and come",Blake,"","\"Not just the chamber",true
+1,s126-then-i-ll-protect-the-ordinary-moments-he-said,chapter-fourteen,3211,3211,"\"Then I'll protect the ordinary moments,\" he said. \"The coffee at",Blake,"","",true
+1,s127-3-47-the-thai-food-on-the-kitchen-floor-the-haircu,chapter-fourteen,3212,3216,"3:47. The Thai food on the kitchen floor. The haircut.\"",Blake,"","The Thai food on the kitchen floor",true
+1,s128-they-stayed-like-that-for-a-long-time-prague-hummin,chapter-fourteen,3217,3224,"They stayed like that for a long time. Prague humming its ancient",Blake,"","Prague humming its ancient",true
+1,s129-dawn-she-said-strahov-four-hours,chapter-fourteen,3225,3227,"\"Dawn,\" she said. \"Strahov. Four hours.\"",Blake,"Dawn","\"Strahov",true
+1,s130-chamber-shows-you-everything-but-only-love-lets-you,chapter-fourteen,3228,3244,"chamber shows you everything. But only love lets you survive it.\" She",Blake,"","chamber shows you everything",true
+1,s131-chapter-fifteen,chapter-fifteen,3245,3249,"CHAPTER FIFTEEN",Blake,"","",true
+1,s132-strahov-library-wasn-t-open-for-another-four-hours,chapter-fifteen,3250,3262,"Strahov Library wasn't open for another four hours. They had the",Blake,"","Strahov Library wasn't open for another four hours",true
+1,s133-flooded-him-premonstratensian-monks-the-chamber-i,chapter-fifteen,3263,3280,"flooded him. \"Premonstratensian monks. The chamber is beneath the",Blake,"","The chamber is beneath the",true
+1,s134-not-yet-nadia-said-she-touched-his-arm-save-it,chapter-fifteen,3281,3293,"\"Not yet,\" Nadia said. She touched his arm. \"Save it for the",Blake,"","",true
+1,s135-the-chamber-is-designed-miroslav-said-the-propo,chapter-fifteen,3294,3305,"\"The chamber is designed,\" Miroslav said. \"The proportions",Blake,"","\"The chamber is designed,\" Miroslav said",true
+1,s136-blake-the-chamber-was-designed-for-someone-with-th,chapter-fifteen,3306,3312,"\"Blake. The chamber was designed for someone with the gift. For",Blake,"","The chamber was designed for someone with the gift",true
+1,s137-the-chamber-was-smaller-than-blake-expected,chapter-fifteen,3313,3327,"The chamber was smaller than Blake expected.",Blake,"","The chamber was smaller than Blake expected.",true
+1,s138-he-breathed-the-density-of-information-was-staggeri,chapter-fifteen,3328,3372,"He breathed. The density of information was staggering, more",Blake,"","",true
+1,s139-they-stood-in-the-chamber-then-blake-said-we-docu,chapter-fifteen,3373,3391,"They stood in the chamber. Then Blake said: \"We document",Blake,"","They stood in the chamber",true
+1,s140-at-seven-thirty-they-emerged-into-prague-s-october,chapter-fifteen,3392,3393,"At seven-thirty, they emerged into Prague's October morning. Cold",Blake,"October","At seven-thirty, they emerged into Prague's October morning",true
+1,s141-blake-missed-it-already-the-chamber-s-full-sight-t,chapter-fifteen,3394,3414,"Blake missed it already. The chamber's full sight. The door he'd",Blake,"","The chamber's full sight",true
+1,s142-ring-between-their-palms-the-strahov-chamber-beneat,chapter-fifteen,3415,3430,"ring between their palms. The Strahov chamber beneath their feet,",Blake,"","The Strahov chamber beneath their feet,",true
+1,s143-the-evening-after-the-strahov-blake-couldn-t-look-a,chapter-sixteen,3431,3449,"The evening after the Strahov, Blake couldn't look at Nadia without",Blake,"evening","The evening after the Strahov, Blake couldn't look at Nadia without",true
+1,s144-sorry-the-chamber-it-s-taking-longer-to-fade-than,chapter-sixteen,3450,3476,"\"Sorry. The chamber, it's taking longer to fade than I expected.\"",Blake,"","The chamber, it's taking longer to fade than I expected.\"",true
+1,s145-credentials-but-not-government-agents-they-knew-ab,chapter-sixteen,3477,3695,"credentials, but not government agents. They knew about Prague. Their offer: join",Blake,"","They knew about Prague",true
+1,s146-the-word-held-everything-the-bridge-the-confession,chapter-seventeen,3696,3707,"The word held everything. The bridge, the confession, the Strahov,",Blake,"","The bridge, the confession, the Strahov,",true
+1,s147-miroslav-gave-blake-his-father-s-manuscript-on-their,chapter-eighteen,3708,3708,"Miroslav gave Blake his father's manuscript on their last night in Prague.",Blake,"night","Miroslav gave Blake his father's manuscript on their last night in Prague.",true
+1,s148-not-at-the-apartment-at-the-strahov-library-after,chapter-eighteen,3709,3744,"Not at the apartment. At the Strahov Library, after hours, the two",Blake,"","Not at the apartment",true
+1,s149-september-15-2010-the-day-james-died,chapter-eighteen,3745,3770,"September 15, 2010. The day James died.",Nadia,"September 15, 2010","",true
+1,s150-we-go-home-blake-said-take-everything-strahov,chapter-eighteen,3771,3790,"\"We go home,\" Blake said. \"Take everything. Strahov",Nadia,"","Strahov",true
+1,s151-they-left-prague-the-next-morning,chapter-eighteen,3791,3799,"They left Prague the next morning.",Blake,"morning","They left Prague the next morning.",true
+1,s152-they-walked-through-mal-strana-in-early-morning-pr,chapter-eighteen,3800,3838,"They walked through Malá Strana in early morning. Prague waking",Blake,"morning","Prague waking",true
+1,s153-the-apartment-had-been-entered-while-they-were-in-pr,chapter-nineteen,3839,3869,"The apartment had been entered while they were in Prague.",Blake,"","The apartment had been entered while they were in Prague.",true
+1,s154-nadia-stopped-at-the-kitchen-table-blake-the-tabl,chapter-nineteen,3870,3900,"Nadia stopped at the kitchen table. \"Blake. The table.\"",Blake,"","Nadia stopped at the kitchen table",true
+1,s155-morning-coffee-4,chapter-nineteen,3901,3915,"Morning Coffee #4.",Blake,"Morning","",true
+1,s156-i-know-she-picked-up-her-coffee-the-strahov-acc,chapter-nineteen,3916,3927,"\"I know.\" She picked up her coffee. \"The Strahov accelerated",Blake,"","\"The Strahov accelerated",true
+1,s157-morning-coffee-4-the-last-one-that-felt-like-the-f,chapter-nineteen,3928,3938,"Morning Coffee #4. The last one that felt like the first ones.",Blake,"Morning","",true
+1,s158-strahov-photographs-the-timeline-he-parked-behind,chapter-twenty,3939,3950,"Strahov photographs, the timeline. He parked behind Ethan's truck,",Blake,"","Strahov photographs, the timeline",true
+1,s159-inside-james-s-engineering-awards-still-hung-in-the,chapter-twenty,3951,4004,"Inside: James's engineering awards still hung in the hallway. His",Blake,"","Inside: James's engineering awards still hung in the hallway",true
+1,s160-oscar-01-subtropolis-meramec-caverns-the-at-t-bun,chapter-twenty,4005,4013,"Oscar-01. SubTropolis. Meramec Caverns. The AT&T bunker at",Blake,"","SubTropolis",true
+1,s161-watchers-took-everything-from-the-apartment-but-the,chapter-twenty,4014,4018,"Watchers took everything from the apartment. But they never really",Blake,"","Watchers took everything from the apartment",true
+1,s162-forming-the-same-proportional-relationships-as-the-s,chapter-twenty,4019,4078,"forming the same proportional relationships as the Strahov ceiling. \"He",Blake,"","forming the same proportional relationships as the Strahov ceiling",true
+1,s163-strahov-latin-the-work-was-ready-professor-chen-ha,chapter-twenty-one,4079,4079,"Strahov Latin. The work was ready. Professor Chen had agreed to lead",Blake,"","Strahov Latin",true
+1,s164-independent-verification-miroslav-confirmed-the-pra,chapter-twenty-one,4080,4126,"independent verification. Miroslav confirmed the Prague end.",Blake,"","Miroslav confirmed the Prague end.",true
+1,s165-morning-coffee-won-t-always-feel-like-it-used-to-yo,chapter-twenty-one,4127,4156,"Morning Coffee won't always feel like it used to. You'll see more math",Blake,"Morning","",true
+1,s166-tomorrow,chapter-twenty-one,4157,4253,"\"Tomorrow.\"",Blake,"","",true
+1,s167-the-chamber,epilogue,4254,4411,"The chamber.",Blake,"","The chamber.",true
+1,s168-the-foundation-needs-permanent-sites-training-prot,epilogue,4412,4439,"\"The Foundation needs permanent sites. Training protocols. A",Blake,"","\"The Foundation needs permanent sites",true
+1,s169-the-chamber-like-a-memory-of-a-conversation-he-d-nev,epilogue,4440,4464,"the chamber like a memory of a conversation he'd never had.",Nadia,"","the chamber like a memory of a conversation he'd never had.",true
+1,s170-six-months-later,epilogue,4465,4466,"SIX MONTHS LATER",Nadia,"","",true
+1,s171-not-a-decision-a-recognition-nadia-sat-at-the-kitc,epilogue,4467,4499,"Not a decision, a recognition. Nadia sat at the kitchen table on",Nadia,"","Nadia sat at the kitchen table on",true
+1,s172-the-masters-foundation-for-acoustic-research-501-c,epilogue,4500,4526,"\"The Masters Foundation for Acoustic Research. 501(c)(3). Tax-exempt.",Nadia,"","\"The Masters Foundation for Acoustic Research",true
+1,s173-the-foundation-needs-a-director-she-said-full-t,epilogue,4527,4541,"\"The Foundation needs a director,\" she said. \"Full-time. Salary.",Nadia,"","\"The Foundation needs a director,\" she said",true
+1,s174-tuesday-coffee-the-elm-tree-the-beginning-of-the,epilogue,4542,4604,"Tuesday. Coffee. The elm tree. The beginning of the Foundation;",Nadia,"","The beginning of the Foundation;",true
+1,s175-bench-she-sat-down-and-took-an-envelope-from-her-ba,epilogue,4605,4645,"bench. She sat down and took an envelope from her bag, a Foundation",Nadia,"","She sat down and took an envelope from her bag, a Foundation",true
+2,s001-chapter-one,chapter-one,10,10,"CHAPTER ONE",Nadia,"","",true
+2,s002-the-stone-cottage,chapter-one,11,16,"THE STONE COTTAGE",Nadia,"","THE STONE COTTAGE",true
+2,s003-the-stone-cottage-one-window-facing-south-the-desk,chapter-one,17,42,"The stone cottage. One window facing south. The desk Blake had",Nadia,"","The stone cottage",true
+2,s004-he-would-not-miss-the-wind-the-gale-in-m-rdalsj-kul,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,43,90,"He would not miss the wind. The gale in Mýrdalsjökull had",Nadia,"","The gale in Mýrdalsjökull had",true
+2,s005-fedex-from-prague-return-address-eva-ern-charl,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,91,100,"FedEx, from Prague. Return address: Eva Černá, Charles University",Eva,"","FedEx, from Prague",true
+2,s006-he-opened-the-package-at-the-kitchen-table-inside,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,101,103,"He opened the package at the kitchen table. Inside: a photocopy of",Blake,"","He opened the package at the kitchen table",true
+2,s007-was-not-from-the-strahov-collection-itself-eva-s-co,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,104,119,"was not from the Strahov collection itself. Eva's cover letter explained",Blake,"","was not from the Strahov collection itself",true
+2,s008-fragments-during-the-prague-research-de-occulta-phi,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,120,130,"fragments during the Prague research. De Occulta Philosophia,",Blake,"","fragments during the Prague research",true
+2,s009-the-strahov-monks-had-been-reading-across-traditions,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,131,155,"The Strahov monks had been reading across traditions. The",Blake,"","The Strahov monks had been reading across traditions",true
+2,s010-to-the-spine-of-the-moleskine-iceland-in-september,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,156,169,"to the spine of the Moleskine. Iceland in September, the light was amber",Blake,"September, the light was ambe","Iceland in September, the light was amber",true
+2,s011-i-m-saying-the-library-was-a-preparation-chamber-n,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,170,170,"\"I'm saying the library was a preparation chamber. Not for sound.",Blake,"","\"I'm saying the library was a preparation chamber",true
+2,s012-for-knowledge-the-monks-entered-the-acoustic-chambe,volume,-every-word-of-it-set-down-in-the-seventh-moleskine-with-a-pen,171,251,"For knowledge. The monks entered the acoustic chamber with their",Blake,"","The monks entered the acoustic chamber with their",true
+2,s013-he-set-up-a-reading-station-on-the-cottage-desk-thr,chapter-two,252,295,"He set up a reading station on the cottage desk. Three stacks:",Blake,"","He set up a reading station on the cottage desk",true
+2,s014-blake-sat-with-this-for-a-long-time-the-cottage-was,chapter-two,296,414,"Blake sat with this for a long time. The cottage was silent. The wind",Blake,"","The cottage was silent",true
+2,s015-the-library-wasn-t-a-library-it-was-a-preparation-c,chapter-14,415,415,"the library wasn't a library. It was a preparation chamber for the eyes the",Blake,"","It was a preparation chamber for the eyes the",true
+2,s016-way-the-crypt-was-a-preparation-chamber-for-the-ears,chapter-14,416,417,"way the crypt was a preparation chamber for the ears. The monks didn't",Blake,"","way the crypt was a preparation chamber for the ears",true
+2,s017-the-wind-picked-up-outside-the-cottage-windows-ratt,chapter-14,418,522,"The wind picked up outside. The cottage windows rattled, thin glass",Blake,"","The cottage windows rattled, thin glass",true
+2,s018-corresponds-to-the-strahov-crypt-he-mapped-the-site,chapter-14,523,524,"corresponds to the Strahov crypt. He mapped the sites by hanging toy",Blake,"","corresponds to the Strahov crypt",true
+2,s019-the-cottage-was-very-quiet-blake-looked-at-the-mole,chapter-14,525,554,"The cottage was very quiet. Blake looked at the Moleskine, at the",Blake,"","The cottage was very quiet",true
+2,s020-page-218-moreau-describing-his-selection-process-fo,chapter-14,555,607,"Page 218. Moreau describing his selection process for chamber",Nadia,"","Moreau describing his selection process for chamber",true
+2,s021-chapter-three,chapter-three,608,610,"CHAPTER THREE",Nadia,"","",true
+2,s022-at-five-twelve-in-the-morning-the-foundation-is-the,chapter-three,611,618,"At five-twelve in the morning, the Foundation is the quietest building in",Nadia,"morning","At five-twelve in the morning, the Foundation is the quietest building in",true
+2,s023-the-hotel-phillips-building-office-in-november-thir,chapter-three,619,634,"The Hotel Phillips Building office in November. Third cup of",Nadia,"November","The Hotel Phillips Building office in November",true
+2,s024-dr-kofi-asante-university-of-ghana-department-of,chapter-three,635,635,"Dr. Kofi Asante. University of Ghana, Department of African",Nadia,"","Kofi Asante",true
+2,s025-studies-archaeoacoustics-he-had-contacted-the-foun,chapter-three,636,662,"Studies. Archaeoacoustics. He had contacted the Foundation four",Nadia,"","He had contacted the Foundation four",true
+2,s026-waves-within-2-of-the-strahov-specification-the-se,chapter-three,663,665,"waves within 2% of the Strahov specification. The seventh produces",Nadia,"","waves within 2% of the Strahov specification",true
+2,s027-something-i-cannot-explain-with-the-strahov-model,chapter-three,666,678,"\"Something I cannot explain with the Strahov model. A secondary",Nadia,"","\"Something I cannot explain with the Strahov model",true
+2,s028-she-almost-smiled-dr-asante,chapter-three,679,680,"She almost smiled. \"Dr. Asante -\"",Nadia,"","Asante -\"",true
+2,s029-kofi-what-made-you-look-for-the-strahov-frequency,chapter-three,681,697,"\"Kofi. What made you look for the Strahov frequency in Ghana?\"",Nadia,"","What made you look for the Strahov frequency in Ghana?\"",true
+2,s030-they-went-to-the-foundation-s-small-conference-room,chapter-three,698,705,"They went to the Foundation's small conference room. Kofi plugged in",Blake,"","They went to the Foundation's small conference room",true
+2,s031-but-not-the-strahov-pattern,chapter-three,706,706,"But not the Strahov pattern.",Blake,"","But not the Strahov pattern.",true
+2,s032-the-strahov-cymatics-produced-hexagons-she-d-seen-t,chapter-three,707,716,"The Strahov cymatics produced hexagons. She'd seen them in",Blake,"","The Strahov cymatics produced hexagons",true
+2,s033-she-d-never-seen-in-the-foundation-s-data-a-pattern,chapter-three,717,738,"she'd never seen in the Foundation's data. A pattern that was eight",Blake,"","she'd never seen in the Foundation's data",true
+2,s034-clinical-precision-of-the-foundation-s-monitoring-eq,chapter-three,739,759,"clinical precision of the Foundation's monitoring equipment. This was",Blake,"","clinical precision of the Foundation's monitoring equipment",true
+2,s035-that-evening-nine-forty-alone-in-the-office-the-f,chapter-three,760,764,"That evening, nine-forty, alone in the office. The Fontomfrom sat on",Blake,"evening","office",true
+2,s036-she-called-blake-iceland-1-am-he-picked-up-the-wa,chapter-three,765,782,"She called Blake. Iceland, 1 AM. He picked up the way he always",Blake,"1 AM","Iceland, 1 AM",true
+2,s037-silence-from-iceland-the-hum-of-the-satellite-conne,chapter-three,783,787,"Silence from Iceland. The hum of the satellite connection, which",Blake,"","Silence from Iceland",true
+2,s038-you-re-the-foundation-blake-said-carefully-you,chapter-three,788,829,"\"You're the Foundation,\" Blake said carefully. \"You're the reason",Blake,"","\"You're the Foundation,\" Blake said carefully",true
+2,s039-andrew-had-watched-from-the-cottage-window-said-not,chapter-four,830,844,"Andrew had watched from the cottage window. Said nothing when",Blake,"","Andrew had watched from the cottage window",true
+2,s040-nor-patience-for-typesetting-blake-printed-it-on-th,chapter-four,845,896,"nor patience for typesetting. Blake printed it on the cottage's inkjet,",Blake,"","Blake printed it on the cottage's inkjet,",true
+2,s041-chamber-the-inner-circle-the-node-the-perpendicul,chapter-four,897,903,"chamber. The inner circle: the node. The perpendicular lines: the four",Blake,"","chamber",true
+2,s042-he-worked-through-the-night-the-december-dark-was-t,chapter-four,904,980,"He worked through the night. The December dark was total. Iceland at",Blake,"night","Iceland at",true
+2,s043-just-been-revised-at-the-foundation-level-they-had,chapter-four,981,1029,"just been revised at the foundation level. \"They had the body positions.",Blake,"","just been revised at the foundation level",true
+2,s044-twenty-two-letters-of-the-hebrew-alphabet-the-kabba,chapter-four,1030,1062,"twenty-two letters of the Hebrew alphabet. The Kabbalistic foundation",Blake,"","The Kabbalistic foundation",true
+2,s045-to-respond-to-the-position-of-the-body-in-the-chambe,chapter-four,1063,1079,"to respond to the position of the body in the chamber. The monks had",Blake,"","to respond to the position of the body in the chamber",true
+2,s046-i-know-that-s-why-the-strahov-monks-had-both-texts,chapter-four,1080,1082,"\"I know. That's why the Strahov monks had both texts on the same",Blake,"","That's why the Strahov monks had both texts on the same",true
+2,s047-late-three-in-the-morning-iceland-time-the-wind-h,chapter-four,1083,1087,"Late. Three in the morning, Iceland time. The wind had died for the first",Blake,"morning","Three in the morning, Iceland time",true
+2,s048-blake-lay-on-the-cottage-floor-not-in-distress-in,chapter-four,1088,1151,"Blake lay on the cottage floor. Not in distress. In saturation. He had",Blake,"","Blake lay on the cottage floor",true
+2,s049-the-cottage-was-silent-the-wind-was-still-the-whit,chapter-four,1152,1163,"The cottage was silent. The wind was still. The whiteboard glowed",Andrew,"","The cottage was silent",true
+2,s050-at-five-twelve-in-the-morning-the-foundation-was-a,chapter-five,1164,1169,"At five-twelve in the morning, the Foundation was a frequency she",Andrew,"morning","At five-twelve in the morning, the Foundation was a frequency she",true
+2,s051-the-iceland-chambers-nadia-s-frequency-was-institut,chapter-five,1170,1190,"the Iceland chambers. Nadia's frequency was institutional. The particular",Andrew,"","the Iceland chambers",true
+2,s052-thought-the-coffee-was-for-work-the-work-was-the-f,chapter-five,1191,1197,"thought. The coffee was for work. The work was the Foundation. The",Andrew,"","The work was the Foundation",true
+2,s053-january-kansas-city-the-temperature-outside-was-fo,chapter-five,1198,1209,"January. Kansas City. The temperature outside was fourteen",Andrew,"January","",true
+2,s054-the-monitoring-report-was-from-andrew-subject-line,chapter-five,1210,1220,"The monitoring report was from Andrew. Subject line: \"Iceland. Session",Andrew,"","Subject line: \"Iceland",true
+2,s055-subject-b-m-session-8th-chamber-duration-6-hour,chapter-five,1221,1294,"Subject: B.M. Session, 8th chamber. Duration: 6 hours. Entry: solo,",Andrew,"","Session, 8th chamber",true
+2,s056-the-spoon-turned-the-foundation-was-quiet-in-the-wa,chapter-five,1295,1322,"The spoon turned. The Foundation was quiet in the way it was always",Blake,"","The Foundation was quiet in the way it was always",true
+2,s057-addressed-the-process-because-the-process-was-the-f,chapter-five,1323,1324,"addressed the process. Because the process was the Foundation. And",Blake,"","Because the process was the Foundation",true
+2,s058-silence-three-seconds-wind-against-the-iceland-cot,chapter-five,1325,1357,"Silence. Three seconds. Wind against the Iceland cottage windows,",Blake,"","Wind against the Iceland cottage windows,",true
+2,s059-that-distinguishes-the-foundation-from-cognigenics,chapter-five,1358,1366,"that distinguishes the Foundation from Cognigenics. The consent that",Nadia,"","that distinguishes the Foundation from Cognigenics",true
+2,s060-consent-the-foundation-s-first-principle-and-then-y,chapter-five,1367,1417,"consent the Foundation's first principle. And then you walked into the",Nadia,"","consent the Foundation's first principle",true
+2,s061-10-15-pm-the-building-was-empty-the-security-guard,chapter-five,1418,1418,"10:15 PM. The building was empty. The security guard had said good",Nadia,"15 PM","",true
+2,s062-night-at-9-45-the-stairwell-light-buzzed-the-serve,chapter-five,1419,1462,"night at 9:45. The stairwell light buzzed. The server room fans turned.",Nadia,"night","The server room fans turned.",true
+2,s063-she-closed-the-laptop-the-screen-went-dark-the-off,chapter-five,1463,1470,"She closed the laptop. The screen went dark. The office went dark.",Nadia,"","The office went dark.",true
+2,s064-she-picked-up-her-coat-turned-off-the-hallway-light,chapter-five,1471,1489,"She picked up her coat. Turned off the hallway light. Locked the",Nadia,"","Turned off the hallway light",true
+2,s065-not-to-the-foundation-not-to-dr-blake-masters-c-o,chapter-six,1490,1492,"Not to the Foundation. Not to \"Dr. Blake Masters c/o N. Volkov.\"",Nadia,"","Not to the Foundation",true
+2,s066-nadia-volkov-handwritten-the-postal-code-correct,chapter-six,1493,1505,"Nadia Volkov. Handwritten. The postal code correct. The apartment",Nadia,"","The apartment",true
+2,s067-university-prague-the-postmark-was-eleven-days-old,chapter-six,1506,1527,"University, Prague. The postmark was eleven days old. International",Nadia,"","University, Prague",true
+2,s068-ms-volkov,chapter-six,1528,1566,"Ms. Volkov -",Blake,"","",true
+2,s069-nadia-closed-the-office-door-not-the-way-she-closed,chapter-six,1567,1633,"Nadia closed the office door. Not the way she closed it for meetings,",Nadia,"","Nadia closed the office door",true
+2,s070-foundation-of-the-church-the-man-on-whom-the-instit,chapter-six,1634,1647,"foundation of the church. The man on whom the institution was built.",Nadia,"","foundation of the church",true
+2,s071-asked-during-the-foundation-s-first-site-visit-whe,chapter-six,1648,1659,"asked, during the Foundation's first site visit, whether \"Dr. Masters\"",Blake,"","asked, during the Foundation's first site visit, whether \"Dr",true
+2,s072-her-that-the-foundation-s-principal-investigator,chapter-six,1660,1691,"her, that \"the Foundation's principal investigator, Dr. Blake Masters,",Blake,"","her, that \"the Foundation's principal investigator, Dr",true
+2,s073-eleven-minutes-the-office-was-silent-the-hvac-humm,chapter-six,1692,1692,"Eleven minutes. The office was silent. The HVAC hummed. The",Blake,"","The office was silent",true
+2,s074-server-room-turned-the-stairwell-light-buzzed,chapter-six,1693,1697,"server room turned. The stairwell light buzzed.",Blake,"","server room turned",true
+2,s075-permitted-herself-to-have-cream-stock-no-letterhea,chapter-six,1698,1729,"permitted herself to have. Cream stock. No letterhead. No Foundation",Blake,"","No Foundation",true
+2,s076-somewhere-to-live-i-saw-the-foundation-survive-a-fe,chapter-six,1730,1764,"somewhere to live. I saw the Foundation survive a federal investigation",Blake,"","I saw the Foundation survive a federal investigation",true
+2,s077-the-iceland-address-the-stone-cottage-the-postal-c,chapter-six,1765,1772,"The Iceland address. The stone cottage. The postal code she had",Blake,"","The Iceland address",true
+2,s078-she-walked-to-the-foundation-s-mailbox-quality-hill,chapter-six,1773,1773,"She walked to the Foundation's mailbox. Quality Hill. February.",Blake,"February","She walked to the Foundation's mailbox",true
+2,s079-the-air-was-twenty-eight-degrees-she-was-wearing-th,chapter-six,1774,1817,"The air was twenty-eight degrees. She was wearing the wool coat she kept on the hook behind her office door and no gloves, because she had",Blake,"","She was wearing the wool coat she kept on the hook behind her office door and no gloves, because she had",true
+2,s080-she-closed-the-laptop-the-screen-went-dark,chapter-six,1818,1819,"She closed the laptop. The screen went dark.",Blake,"","",true
+2,s081-iceland-for-nine-days-it-would-arrive-during-a-snow,chapter-six,1820,1827,"Iceland for nine days. It would arrive during a snowstorm, the heavy,",Blake,"","Iceland for nine days",true
+2,s082-three-days-because-that-was-how-long-it-would-take,chapter-six,1828,1846,"Three days. Because that was how long it would take for Blake",Blake,"","",true
+2,s083-seven-meetings-two-deadlines-one-phone-call-with-k,chapter-six,1847,1851,"Seven meetings. Two deadlines. One phone call with Kofi,",Blake,"","",true
+2,s084-tomorrow-she-would-be-the-foundation-again-tonight,chapter-six,1852,1918,"Tomorrow she would be the Foundation again. Tonight she had",Blake,"night","Tomorrow she would be the Foundation again",true
+2,s085-foundation-s-own-adverse-event-reports-from-the-mar,chapter-seven,1919,1952,"Foundation's own adverse event reports. From the Maryland data. From",Andrew,"","Foundation's own adverse event reports",true
+2,s086-blake-looked-at-the-screen-the-maryland-chamber-had,chapter-seven,1953,1963,"Blake looked at the screen. The Maryland chamber had activated",Blake,"","The Maryland chamber had activated",true
+2,s087-first-cohort-the-foundation-data-climbed-in-clean-s,chapter-seven,1964,1980,"first cohort. The Foundation data climbed in clean steps, each harmonic",Blake,"","The Foundation data climbed in clean steps, each harmonic",true
+2,s088-the-chamber-blake,chapter-seven,1981,2013,"the chamber, Blake.\"",Blake,"","the chamber, Blake.\"",true
+2,s089-13th-century-had-geometry-but-not-acoustics-the-str,chapter-seven,2014,2019,"13th century had geometry but not acoustics. The Strahov monks, 15th",Blake,"","The Strahov monks, 15th",true
+2,s090-deployed-as-technology-the-foundation-present-the,chapter-seven,2020,2037,"deployed as technology. The Foundation, present, the knowledge",Blake,"","The Foundation, present, the knowledge",true
+2,s091-foundation-and-cognigenics-solomon-s-temple-open-to,chapter-seven,2038,2043,"Foundation and Cognigenics. Solomon's temple open to the priests and",Blake,"","Foundation and Cognigenics",true
+2,s092-the-phone-rang-at-4-pm-not-blake-s-cell-the-founda,chapter-seven,2044,2103,"The phone rang at 4 PM. Not Blake's cell, the Foundation's satellite line,",Blake,"4 PM","Not Blake's cell, the Foundation's satellite line,",true
+2,s093-late-after-midnight-blake-stood-at-the-whiteboard,chapter-seven,2104,2196,"Late. After midnight. Blake stood at the whiteboard in the LED lantern's",Blake,"midnight","",true
+2,s094-backpack-conspicuous-enough-in-a-medieval-french-c,chapter-eight,2197,2200,"backpack. Conspicuous enough, in a medieval French cathedral, to",Blake,"","Conspicuous enough, in a medieval French cathedral, to",true
+2,s095-chartres-a-tuesday-in-march-the-cathedral-was-empt,chapter-eight,2201,2224,"Chartres. A Tuesday in March. The cathedral was empty, not the",Blake,"March","The cathedral was empty, not the",true
+2,s096-limestone-quarried-eight-kilometers-from-the-cathed,chapter-eight,2225,2228,"limestone, quarried eight kilometers from the cathedral. Local stone.",Blake,"","limestone, quarried eight kilometers from the cathedral",true
+2,s097-the-cathedral-spoke,chapter-eight,2229,2244,"The cathedral spoke.",Blake,"","The cathedral spoke.",true
+2,s098-108-hz-below-the-strahov-specification-below-the-a,chapter-eight,2245,2278,"108 Hz. Below the Strahov specification. Below the Ars Notoria's",Blake,"","Below the Strahov specification",true
+2,s099-candle-lighting-woman-was-gone-blake-was-alone-in-c,chapter-eight,2279,2347,"candle-lighting woman was gone. Blake was alone in Chartres Cathedral,",Blake,"","Blake was alone in Chartres Cathedral,",true
+2,s100-he-called-andrew-from-the-cathedral-steps-the-march,chapter-eight,2348,2354,"He called Andrew from the cathedral steps. The March wind in",Blake,"March","He called Andrew from the cathedral steps",true
+2,s101-a-long-silence-the-satellite-delay-was-part-of-it,chapter-eight,2355,2370,"A long silence. The satellite delay was part of it. Iceland to France:",Blake,"","Iceland to France:",true
+2,s102-reims-two-days-later-the-second-cathedral,chapter-eight,2371,2376,"Reims. Two days later. The second cathedral.",Blake,"","The second cathedral.",true
+2,s103-empty-the-cathedral-was-a-presence-before-it-was-a,chapter-eight,2377,2379,"empty. The cathedral was a presence before it was a destination. The",Blake,"","The cathedral was a presence before it was a destination",true
+2,s104-the-cathedral-was-different-from-chartres-not-in-ki,chapter-eight,2380,2391,"The cathedral was different from Chartres. Not in kind, in",Blake,"","The cathedral was different from Chartres",true
+2,s105-111-8-within-one-percent-of-the-strahov-specificati,chapter-eight,2392,2414,"111.8. Within one percent of the Strahov specification. Within the",Blake,"","Within one percent of the Strahov specification",true
+2,s106-sitting-in-was-not-a-church-it-was-the-eighth-chamb,chapter-eight,2415,2431,"sitting in was not a church. It was the eighth chamber. It was the Iceland",Blake,"","It was the eighth chamber",true
+2,s107-he-was-not-measuring-a-cathedral-this-time-he-was-m,chapter-eight,2432,2440,"He was not measuring a cathedral this time. He was measuring a",Blake,"","He was not measuring a cathedral this time",true
+2,s108-length-and-alloy-they-sat-in-the-stone-chamber-with,chapter-eight,2441,2469,"length and alloy. They sat in the stone chamber with the body and the",Blake,"","They sat in the stone chamber with the body and the",true
+2,s109-the-burial-chamber-was-three-meters-underground-the,chapter-eight,2470,2471,"The burial chamber was three meters underground. The walls were",Blake,"","The burial chamber was three meters underground",true
+2,s110-dense-iron-bearing-the-chamber-was-six-meters-long,chapter-eight,2472,2491,"dense, iron-bearing. The chamber was six meters long, two meters wide,",Blake,"","The chamber was six meters long, two meters wide,",true
+2,s111-astrid-stood-at-the-chamber-entrance-watching-wha,chapter-eight,2492,2500,"Astrid stood at the chamber entrance, watching. \"What number?\"",Blake,"","Astrid stood at the chamber entrance, watching",true
+2,s112-chamber-knew-the-stone-was-singing-it-means-every-c,chapter-eight,2501,2506,"chamber knew the stone was singing. It means every culture that built",Blake,"","chamber knew the stone was singing",true
+2,s113-astrid-was-quiet-for-a-long-time-the-chamber-hummed,chapter-eight,2507,2532,"Astrid was quiet for a long time. The chamber hummed around",Blake,"","The chamber hummed around",true
+2,s114-sentence-abandoned-mid-clause-but-the-basement-was,chapter-eight,2533,2570,"sentence abandoned mid-clause. But the basement was the point. The",Blake,"","But the basement was the point",true
+2,s115-every-surface-is-the-choir-he-didn-t-build-a-chambe,chapter-eight,2571,2571,"Every surface is the choir. He didn't build a chamber with a sweet spot.",Blake,"","He didn't build a chamber with a sweet spot.",true
+2,s116-he-built-a-chamber-that-was-entirely-sweet-spot-the,chapter-eight,2572,2595,"He built a chamber that was entirely sweet spot. The catenary arch",Blake,"","He built a chamber that was entirely sweet spot",true
+2,s117-the-next-day-montserrat,chapter-eight,2596,2729,"The next day. Montserrat.",Blake,"","",true
+2,s118-foundation-i-am-the-person-you-are-speaking-to-wha,chapter-nine,2730,2835,"Foundation. I am the person you are speaking to. Whatever is in your",Teresa,"","Foundation",true
+2,s119-the-walls-lined-with-acoustic-tiles-instead-of-natur,chapter-nine,2836,2853,"the walls lined with acoustic tiles instead of natural stone. Each chamber",Teresa,"","Each chamber",true
+2,s120-bridge-that-your-foundation-uses-your-protocol-spen,chapter-nine,2854,2860,"bridge that your Foundation uses. Your protocol spends eight weeks on",Teresa,"","bridge that your Foundation uses",true
+2,s121-spent-eleven-days-marcus-was-sitting-in-the-chamber,chapter-nine,2861,2896,"spent eleven days. Marcus was sitting in the chamber, chair reclined, eyes",Teresa,"","Marcus was sitting in the chamber, chair reclined, eyes",true
+2,s122-the-medical-team-entered-the-chamber-not-because-th,chapter-nine,2897,2945,"the medical team entered the chamber. Not because they were slow.",Teresa,"","the medical team entered the chamber",true
+2,s123-foundation-calls-that-the-demon-i-call-it-what-it-i,chapter-nine,2946,2955,"Foundation calls that the demon. I call it what it is: a choice made by a",Teresa,"","Foundation calls that the demon",true
+2,s124-acquired-every-foundation-publication-every-confere,chapter-nine,2956,2999,"acquired every Foundation publication. Every conference presentation.",Nadia,"","acquired every Foundation publication",true
+2,s125-substrate-she-paused-you-know-when-the-foundatio,chapter-nine,3000,3061,"substrate.\" She paused. \"You know when the Foundation is healthy the",Nadia,"","\"You know when the Foundation is healthy the",true
+2,s126-sabrina-said-the-seizure-data-i-can-model-from-the,chapter-nine,3062,3064,"Sabrina said. \"The seizure data I can model from the Foundation's",Eva,"","\"The seizure data I can model from the Foundation's",true
+2,s127-the-third-the-foundation-s-institutional-legal-coun,chapter-nine,3065,3083,"The third: the Foundation's institutional legal counsel. The shortest",Eva,"","The third: the Foundation's institutional legal counsel",true
+2,s128-that-night-the-9-pm-call-blake-from-iceland-she-t,chapter-nine,3084,3107,"That night, the 9 PM call. Blake from Iceland. She told him about",Eva,"night","Blake from Iceland",true
+2,s129-11-pm-quality-hill-the-foundation-empty-the-serve,chapter-nine,3108,3115,"11 PM. Quality Hill. The Foundation empty. The server room turning.",Eva,"11 PM","Quality Hill",true
+2,s130-the-gospel-of-mary-photocopy-eva-s-letter-from-prag,chapter-nine,3116,3141,"The Gospel of Mary photocopy. Eva's letter from Prague. Teresa's",Eva,"","Eva's letter from Prague",true
+2,s131-a-foundation-they-had-an-irb-they-had-a-locked-dra,chapter-nine,3142,3149,"a Foundation. They had an IRB. They had a locked drawer and a lawyer",Eva,"","a Foundation",true
+2,s132-it-was-6-am-in-prague-eva-would-be-awake-eva-she,chapter-nine,3150,3156,"It was 6 AM in Prague. Eva would be awake. Eva, she had learned,",Andrew,"6 AM","It was 6 AM in Prague",true
+2,s133-ms-volkov,chapter-nine,3157,3158,"\"Ms. Volkov.\"",Andrew,"","",true
+2,s134-a-pause-the-sound-of-prague-in-the-morning-a-city,chapter-nine,3159,3210,"A pause. The sound of Prague in the morning, a city that has been",Andrew,"morning","The sound of Prague in the morning, a city that has been",true
+2,s135-beside-the-photographed-strahov-pages-he-opened-the,chapter-ten,3211,3215,"beside the photographed Strahov pages. He opened the file. The",Andrew,"","beside the photographed Strahov pages",true
+2,s136-the-chamber,chapter-ten,3216,3233,"The chamber.",Blake,"","The chamber.",true
+2,s137-the-chamber-was-approximately-seven-meters-in-diamet,chapter-ten,3234,3243,"The chamber was approximately seven meters in diameter at its",Blake,"","The chamber was approximately seven meters in diameter at its",true
+2,s138-111-23-hz-within-one-hundredth-of-a-hertz-of-the-su,chapter-ten,3244,3250,"111.23 Hz. Within one-hundredth of a hertz of the SubTropolis",Blake,"","Within one-hundredth of a hertz of the SubTropolis",true
+2,s139-tune-the-chamber-after-construction-build-it-to-the,chapter-ten,3251,3254,"tune the chamber after construction. Build it to the approximate",Blake,"","tune the chamber after construction",true
+2,s140-exactly-the-chamber-is-an-instrument-the-specific,chapter-ten,3255,3271,"\"Exactly. The chamber IS an instrument. The specifications give",Blake,"","The chamber IS an instrument",true
+2,s141-against-the-chamber-model-the-proportional-match-is,chapter-ten,3272,3274,"against the chamber model. The proportional match is...\"",Blake,"","against the chamber model",true
+2,s142-the-voynich-biological-section-isn-t-depicting-one-c,chapter-ten,3275,3278,"The Voynich biological section isn't depicting one chamber. It's",Blake,"","The Voynich biological section isn't depicting one chamber",true
+2,s143-corresponding-to-eight-frequency-harmonics-each-ch,chapter-ten,3279,3279,"\"Corresponding to eight frequency harmonics. Each chamber tuned",Blake,"","Each chamber tuned",true
+2,s144-to-a-different-harmonic-of-the-111-2-hz-fundamental,chapter-ten,3280,3282,"to a different harmonic of the 111.2 Hz fundamental. The first chamber",Blake,"","The first chamber",true
+2,s145-blake-stared-at-the-rendering-on-his-laptop-one-cha,chapter-ten,3283,3284,"Blake stared at the rendering on his laptop. One chamber was",Blake,"","One chamber was",true
+2,s146-a-cathedral-he-said-that-s-what-a-cathedral-is,chapter-ten,3285,3287,"\"A cathedral,\" he said. \"That's what a cathedral is. Multiple",Blake,"","\"A cathedral,\" he said",true
+2,s147-designing-churches-they-were-building-eight-chamber,chapter-ten,3288,3339,"designing churches. They were building eight-chamber resonance",Blake,"","They were building eight-chamber resonance",true
+2,s148-the-chamber-produces-the-right-frequency-environment,chapter-ten,3340,3350,"the chamber produces the right frequency environment, and the person",Andrew,"","the chamber produces the right frequency environment, and the person",true
+2,s149-in-my-garage-subtropolis-is-the-full-scale-site-b,chapter-ten,3351,3351,"\"In my garage. SubTropolis is the full-scale site, but I need proof of",Andrew,"","SubTropolis is the full-scale site, but I need proof of",true
+2,s150-concept-before-i-commit-foundation-resources-a-pau,chapter-ten,3352,3361,"concept before I commit Foundation resources.\" A pause. \"Nadia would",Andrew,"","concept before I commit Foundation resources.\" A pause",true
+2,s151-blake-the-scale-model-is-concrete-the-strahov-pag,chapter-ten,3362,3369,"\"Blake, the scale model IS concrete. The Strahov pages ARE",Andrew,"","The Strahov pages ARE",true
+2,s152-without-her-the-research-the-chamber-the-demonstr,chapter-ten,3370,3379,"Without her. The research, the chamber, the demonstration, all of it, I",Andrew,"","The research, the chamber, the demonstration, all of it, I",true
+2,s153-blake-looked-at-the-rendering-on-his-screen-the-cha,chapter-ten,3380,3391,"Blake looked at the rendering on his screen. The chamber, beautiful",Andrew,"","The chamber, beautiful",true
+2,s154-was-still-in-prague-eva-ern-had-connected-him-wit,chapter-ten,3392,3401,"was still in Prague. Eva Černá had connected him with a",Andrew,"","was still in Prague",true
+2,s155-polymer-sourced-from-a-materials-science-lab-at-umkc,chapter-ten,3402,3426,"polymer sourced from a materials science lab at UMKC. The polymer's",Blake,"","polymer sourced from a materials science lab at UMKC",true
+2,s156-she-wasn-t-wrong-the-cave-the-chamber-the-foundat,chapter-ten,3427,3438,"She wasn't wrong. The cave, the chamber, the Foundation, Blake's",Blake,"","The cave, the chamber, the Foundation, Blake's",true
+2,s157-repurposed-as-laboratory-equipment-he-was-aware-of,chapter-ten,3439,3504,"repurposed as laboratory equipment. He was aware of the symbolism.",Blake,"","repurposed as laboratory equipment",true
+2,s158-purchased-four-years-before-his-death-the-foundatio,chapter-eleven,3505,3515,"purchased four years before his death. The Foundation occupied the",Nadia,"","The Foundation occupied the",true
+2,s159-when-the-chamber-activated-she-didn-t-hear-harmonic,chapter-eleven,3516,3534,"When the chamber activated, she didn't hear harmonics. She felt",Nadia,"","When the chamber activated, she didn't hear harmonics",true
+2,s160-generation-raised-in-overland-park-she-had-applied,chapter-eleven,3535,3536,"generation, raised in Overland Park. She had applied to the Foundation's",Nadia,"","generation, raised in Overland Park",true
+2,s161-knowing-what-the-foundation-actually-studied-her-ap,chapter-eleven,3537,3631,"knowing what the Foundation actually studied. Her application essay on",Nadia,"","knowing what the Foundation actually studied",true
+2,s162-experience-in-different-language-so-had-the-strahov,chapter-eleven,3632,3694,"experience in different language. So had the Strahov parchment, in",Yuki,"","So had the Strahov parchment, in",true
+2,s163-prague-the-photograph-of-the-second-strahov-cymatic,chapter-eleven,3695,3729,"Prague. The photograph of the second Strahov cymatics disc.",Blake,"","Prague",true
+2,s164-yuki-had-used-in-the-laboratory-chair-recognition-t,chapter-eleven,3730,3752,"Yuki had used in the laboratory chair. Recognition that the form she was",Blake,"","Yuki had used in the laboratory chair",true
+2,s165-the-apartment-that-felt-like-hers-again-the-relief,chapter-eleven,3753,3771,"The apartment that felt like hers again. The relief that made her feel",Blake,"","The apartment that felt like hers again",true
+2,s166-occupied-by-her-own-work-foundation-reports-candid,chapter-eleven,3772,3781,"occupied by her own work. Foundation reports, candidate assessments,",Blake,"","Foundation reports, candidate assessments,",true
+2,s167-he-replied-at-4-am-her-time-which-meant-morning-in,chapter-eleven,3782,3798,"He replied at 4 AM her time, which meant morning in Prague: I",Blake,"4 AM","He replied at 4 AM her time, which meant morning in Prague: I",true
+2,s168-she-scheduled-the-call-for-saturday-morning-because,chapter-twelve,3799,3800,"She scheduled the call for Saturday morning because Saturday was the",Blake,"morning","",true
+2,s169-9-am-kansas-city-4-pm-prague-she-used-the-foundati,chapter-twelve,3801,3814,"9 AM Kansas City, 4 PM Prague. She used the Foundation's",Blake,"9 AM","She used the Foundation's",true
+2,s170-foundation-organization-was-how-she-loved-blake-mas,chapter-twelve,3815,3822,"Foundation. Organization was how she loved Blake Masters, by creating",Blake,"","Foundation",true
+2,s171-she-showered-dressed-made-coffee-in-the-kitchen-wh,chapter-twelve,3823,3826,"She showered. Dressed. Made coffee in the kitchen where Blake",Blake,"","Made coffee in the kitchen where Blake",true
+2,s172-masters-foundation-est-2024-printed-in-the-clean-sa,chapter-twelve,3827,3836,"MASTERS FOUNDATION est. 2024 printed in the clean sans-serif",Blake,"","MASTERS FOUNDATION est",true
+2,s173-rarely-understood-hair-up-was-foundation-nadia-com,chapter-twelve,3837,3907,"rarely understood. Hair up was Foundation Nadia: competent,",Blake,"","Hair up was Foundation Nadia: competent,",true
+2,s174-she-was-not-enough-the-foundation-was-not-enough-t,chapter-twelve,3908,3912,"She was not enough. The Foundation was not enough. The calls",Blake,"","The Foundation was not enough",true
+2,s175-tell-me-about-prague-she-said-because-she-was-a,chapter-twelve,3913,3916,"\"Tell me about Prague,\" she said. Because she was a professional",Blake,"","\"Tell me about Prague,\" she said",true
+2,s176-he-told-her-about-prague-not-everything-she-d-lear,chapter-twelve,3917,3935,"He told her about Prague. Not everything, she'd learned to hear the",Blake,"","He told her about Prague",true
+2,s177-when-he-finished-she-told-him-about-the-foundation,chapter-twelve,3936,3953,"When he finished, she told him about the Foundation. The",Blake,"","When he finished, she told him about the Foundation",true
+2,s178-metrics-since-the-first-chamber-session-nine-months,chapter-twelve,3954,4002,"metrics since the first chamber session. Nine months of sustained",Blake,"","metrics since the first chamber session",true
+2,s179-will-take-months-i-ll-need-to-stay-in-prague-to-mai,chapter-twelve,4003,4067,"will take months. I'll need to stay in Prague to maintain the institutional",Blake,"","I'll need to stay in Prague to maintain the institutional",true
+2,s180-obstruct-the-foundation-and-you-would-have-been-rig,chapter-twelve,4068,4083,"obstruct the Foundation. And you would have been right.\" She let the",Blake,"","obstruct the Foundation",true
+2,s181-the-manuscripts-are-extraordinary-but-if-the-found,chapter-twelve,4084,4097,"\"The manuscripts are extraordinary. But if the Foundation doesn't",Blake,"","But if the Foundation doesn't",true
+2,s182-architecture-if-you-stop-now-you-ll-lose-the-threa,chapter-twelve,4098,4114,"architecture, if you stop now, you'll lose the thread. And the Foundation",Blake,"","And the Foundation",true
+2,s183-the-apartment-was-very-quiet,chapter-twelve,4115,4127,"The apartment was very quiet.",Blake,"","The apartment was very quiet.",true
+2,s184-she-stood-up-went-to-the-kitchen-poured-a-glass-of,chapter-twelve,4128,4160,"She stood up. Went to the kitchen. Poured a glass of water, not",Blake,"","Went to the kitchen",true
+2,s185-chapter-thirteen,chapter-thirteen,4161,4189,"CHAPTER THIRTEEN",Blake,"","",true
+2,s186-top-of-it-kofi-asante-behind-the-wheel-arm-out-the,chapter-thirteen,4190,4197,"top of it. Kofi Asante behind the wheel, arm out the window, grinning",Blake,"","Kofi Asante behind the wheel, arm out the window, grinning",true
+2,s187-the-drive-to-the-volta-region-took-seven-hours-they,chapter-thirteen,4198,4228,"The drive to the Volta Region took seven hours. They talked for six of",Blake,"","The drive to the Volta Region took seven hours",true
+2,s188-never-entered-a-chamber-she-has-never-heard-the-wor,chapter-thirteen,4229,4317,"never entered a chamber. She has never heard the word harmonic used",Blake,"","never entered a chamber",true
+2,s189-not-with-the-sharp-recognition-of-iceland-with-some,chapter-thirteen,4318,4320,"Not with the sharp recognition of Iceland. With something softer.",Blake,"","Not with the sharp recognition of Iceland",true
+2,s190-in-the-iceland-chambers-was-crystalline-precise-sh,chapter-thirteen,4321,4378,"in the Iceland chambers was crystalline, precise, sharp-edged. This",Blake,"","in the Iceland chambers was crystalline, precise, sharp-edged",true
+2,s191-0-3-hz-the-distance-between-prague-and-ho-between,chapter-thirteen,4379,4380,"0.3 Hz. The distance between Prague and Ho. Between basalt and",Blake,"","The distance between Prague and Ho",true
+2,s192-three-days-seven-caves-blake-and-kofi-mapped-them,chapter-thirteen,4381,4412,"Three days. Seven caves. Blake and Kofi mapped them all, moving",Blake,"","",true
+2,s193-evening-the-laterite-landscape-in-amber-light-the,chapter-thirteen,4413,4464,"Evening. The laterite landscape in amber light, the color Blake had felt",Blake,"Evening","",true
+2,s194-ama-ata-asante-ninety-one-years-old-four-feet-ten,chapter-fourteen,4465,4579,"Ama Ata Asante. Ninety-one years old. Four feet ten inches. The",Blake,"","Ama Ata Asante",true
+2,s195-evening-the-seven-caves-plotted-on-a-hand-drawn-map,chapter-fourteen,4580,4608,"Evening. The seven caves plotted on a hand-drawn map that Kofi had",Blake,"Evening","",true
+2,s196-the-monks-in-prague-heard-it-in-basalt-the-drummers,chapter-fourteen,4609,4650,"The monks in Prague heard it in basalt. The drummers in Ghana",Blake,"","The monks in Prague heard it in basalt",true
+2,s197-back-in-iceland-the-cottage-felt-cold-after-ghana,chapter-fifteen,4651,4656,"Back in Iceland. The cottage felt cold after Ghana.",Blake,"","Back in Iceland",true
+2,s198-lantern-breitling-on-the-desk-blake-had-changed-g,chapter-fifteen,4657,4671,"lantern, Breitling on the desk. Blake had changed. Ghana had retuned",Blake,"","Ghana had retuned",true
+2,s199-blake-entered-the-eighth-chamber,chapter-fifteen,4672,4677,"Blake entered the eighth chamber.",Blake,"","Blake entered the eighth chamber.",true
+2,s200-three-hours-passed-normally-the-basalt-chamber-at-1,chapter-fifteen,4678,4720,"Three hours passed normally. The basalt chamber at 111.2 Hz, the",Blake,"","The basalt chamber at 111.2 Hz, the",true
+2,s201-eleven-minutes,chapter-fifteen,4721,4806,"Eleven minutes.",Andrew,"","",true
+2,s202-andrew-was-quiet-for-a-long-time-the-basalt-chamber,chapter-fifteen,4807,4856,"Andrew was quiet for a long time. The basalt chamber behind them",Andrew,"","The basalt chamber behind them",true
+2,s203-blake-masters-walked-back-to-the-stone-cottage-trem,chapter-fifteen,4857,4900,"Blake Masters walked back to the stone cottage, trembling, whole.",Nadia,"","Blake Masters walked back to the stone cottage, trembling, whole.",true
+2,s204-ms-volkov-you-are-the-institutional-administrator,chapter-sixteen,4901,4936,"\"Ms. Volkov. You are the institutional administrator of the Masters",Holt,"","",true
+2,s205-cognigenics-activation-your-foundation-s-protocol-w,chapter-sixteen,4937,5054,"Cognigenics activation. Your Foundation's protocol was the basis for",Holt,"","Your Foundation's protocol was the basis for",true
+2,s206-a-pause-iceland-breathing-is-that-bad,chapter-sixteen,5055,5109,"A pause. Iceland breathing. \"Is that bad?\"",Blake,"","Iceland breathing",true
+2,s207-that-amalgam-production-required-the-strahov-corres,chapter-seventeen,5110,5133,"that amalgam production required. The Strahov correspondence",Blake,"","The Strahov correspondence",true
+2,s208-the-specchi-family-active-on-murano-from-approximat,chapter-seventeen,5134,5145,"The Specchi family. Active on Murano from approximately 1340 to",Blake,"","Active on Murano from approximately 1340 to",true
+2,s209-unusual-for-murano-craftsmen-the-standard-practice,chapter-seventeen,5146,5152,"\"Unusual for Murano craftsmen. The standard practice was to ship",Blake,"","\"Unusual for Murano craftsmen",true
+2,s210-construction-of-st-francis-parish-in-the-west-botto,chapter-seventeen,5153,5172,"construction of St. Francis Parish in the West Bottoms. Twenty-seven",Blake,"","Francis Parish in the West Bottoms",true
+2,s211-disc-the-chamber-specifications-describe-focusing,chapter-seventeen,5173,5180,"disc. \"The chamber specifications describe focusing surfaces. But they",Blake,"","\"The chamber specifications describe focusing surfaces",true
+2,s212-a-guild-within-a-guild-the-specchi-had-operated-ins,chapter-seventeen,5181,5197,"A guild within a guild. The Specchi had operated inside the Murano",Blake,"","The Specchi had operated inside the Murano",true
+2,s213-chartres-gives-you-the-frequency-the-chamber-with,chapter-seventeen,5198,5205,"Chartres gives you the frequency. The chamber, with the mirrors, gives",Blake,"","The chamber, with the mirrors, gives",true
+2,s214-venice-itself-was-a-mirror-chamber-a-city-built-on,chapter-seventeen,5206,5236,"Venice itself was a mirror chamber. A city built on the principle of",Blake,"","Venice itself was a mirror chamber",true
+2,s215-the-chamber-needed-mirrors-the-foundation-had-candi,chapter-seventeen,5237,5274,"The chamber needed mirrors. The Foundation had candidates. And",Blake,"","The chamber needed mirrors",true
+2,s216-lethal-her-argument-was-simple-the-foundation-s-fi,chapter-eighteen,5275,5340,"lethal. Her argument was simple: the Foundation's fifty-two-week",Nadia,"","Her argument was simple: the Foundation's fifty-two-week",true
+2,s217-he-did-not-email-he-called-the-foundation-s-main-l,chapter-eighteen,5341,5398,"He did not email, he called. The Foundation's main line, not Nadia's",Andrew,"","The Foundation's main line, not Nadia's",true
+2,s218-she-opened-her-email-composed-a-message-to-the-foun,chapter-eighteen,5399,5407,"She opened her email. Composed a message to the Foundation's",Blake,"","Composed a message to the Foundation's",true
+2,s219-she-sent-it-closed-the-laptop-the-foundation-humme,chapter-eighteen,5408,5408,"She sent it. Closed the laptop. The Foundation hummed around",Blake,"","The Foundation hummed around",true
+2,s220-her-the-server-room-the-hvac-the-stairwell-light,chapter-eighteen,5409,5480,"her, the server room, the HVAC, the stairwell light. The frequency of a",Blake,"","her, the server room, the HVAC, the stairwell light",true
+2,s221-that-evening-the-cottage-blake-was-in-the-eighth-c,chapter-nineteen,5481,5533,"That evening. The cottage. Blake was in the eighth chamber, a scheduled",Blake,"evening","The cottage",true
+2,s222-between-the-control-module-and-the-chamber-felt-too,chapter-nineteen,5534,5626,"between the control module and the chamber felt too large. His",Blake,"","between the control module and the chamber felt too large",true
+2,s223-field-was-dark-july-dark-which-in-iceland-meant-a,chapter-nineteen,5627,5645,"field was dark. July dark, which in Iceland meant a deep blue rather than",Blake,"July","Iceland",true
+2,s224-chapter-twenty,chapter-twenty,5646,5753,"CHAPTER TWENTY",Blake,"","",true
+2,s225-august-was-the-month-when-iceland-s-endless-summer-d,chapter-twenty,5754,5799,"August was the month when Iceland's endless summer daylight started",Blake,"August","Iceland",true
+2,s226-chamber-he-paused-in-the-chamber-your-cardiac,chapter-twenty,5800,5824,"chamber -\" He paused. \"In the chamber, your cardiac rhythm was in",Blake,"","chamber -\" He paused",true
+2,s227-that-evening-blake-sat-alone-at-the-desk-andrew-ha,chapter-twenty,5825,5826,"That evening, Blake sat alone at the desk. Andrew had gone to his room,",Blake,"evening","",true
+2,s228-not-answering-a-stanford-email-blake-didn-t-know-abo,chapter-twenty,5827,5855,"not answering a Stanford email Blake didn't know about. The cottage",Blake,"","The cottage",true
+2,s229-deployed-in-senate-hearings-and-phone-calls-with-jes,chapter-twenty,5856,5880,"deployed in Senate hearings and phone calls with Jesuits. A different",Blake,"","deployed in Senate hearings and phone calls with Jesuits",true
+2,s230-stairwell-light-buzzed-in-iceland-the-wind-pressed,chapter-twenty,5881,5923,"stairwell light buzzed. In Iceland, the wind pressed. Between them, the",Blake,"","In Iceland, the wind pressed",true
+2,s231-stone-cottage-morning-coffee,chapter-twenty-one,5924,5924,"Stone cottage. Morning. Coffee.",Blake,"Morning","Stone cottage",true
+2,s232-september-the-icelandic-light-had-crossed-the-equin,chapter-twenty-one,5925,5997,"September. The Icelandic light had crossed the equinox, the days",Blake,"September","",true
+2,s233-hands-since-the-strahov-crypt-the-frequency-he-had,chapter-twenty-one,5998,6003,"hands since the Strahov crypt. The frequency he had traveled across",Nadia,"","hands since the Strahov crypt",true
+2,s234-continents-to-find-prague-venice-iceland-ghana,chapter-twenty-one,6004,6029,"continents to find. Prague, Venice, Iceland, Ghana. Six years. Hundreds",Nadia,"","Prague, Venice, Iceland, Ghana",true
+2,s235-body-as-resonance-chamber-jesus-was-not-speaking-to,chapter-twenty-one,6030,6045,"body as resonance chamber. Jesus was not speaking to sinners. He was",Nadia,"","body as resonance chamber",true
+2,s236-9-pm-the-call,chapter-twenty-one,6046,6141,"9 PM. The call.",Blake,"9 PM","",true
+2,s237-the-stone-cottage-the-pile-of-grimoires-on-the-desk,chapter-twenty-one,6142,6167,"The stone cottage. The pile of grimoires on the desk. Ars Notoria,",Blake,"","The stone cottage",true
+2,s238-chapter-twenty-two,chapter-twenty-two,6168,6185,"CHAPTER TWENTY-TWO",Blake,"","",true
+2,s239-same-seven-hour-road-from-accra-to-the-volta-region,chapter-twenty-two,6186,6197,"same seven-hour road from Accra to the Volta Region. Nadia sat in the",Blake,"","same seven-hour road from Accra to the Volta Region",true
+2,s240-nadia-looked-at-him-kofi-asante-mid-thirties-the,chapter-twenty-two,6198,6251,"Nadia looked at him. Kofi Asante, mid-thirties, the University of",Blake,"","Kofi Asante, mid-thirties, the University of",true
+2,s241-broadcasting-since-strahov-she-felt-it-in-her-chest,chapter-twenty-two,6252,6252,"broadcasting since Strahov. She felt it in her chest. The space between",Nadia,"","broadcasting since Strahov",true
+2,s242-the-ribs-the-resonance-chamber-that-evolution-had-b,chapter-twenty-two,6253,6297,"the ribs. The resonance chamber that evolution had built for breathing",Nadia,"","The resonance chamber that evolution had built for breathing",true
+2,s243-passage-at-the-midpoint-the-chamber-at-the-end-it,chapter-twenty-two,6298,6316,"passage at the midpoint, the chamber at the end, it's designed. Not by",Nadia,"","passage at the midpoint, the chamber at the end, it's designed",true
+2,s244-that-evening-ama-ata-s-compound-the-mango-tree-th,chapter-twenty-two,6317,6358,"That evening. Ama Ata's compound. The mango tree. The same chair.",Nadia,"evening","",true
+2,s245-late-the-guest-room-in-kofi-s-compound-a-small-roo,chapter-twenty-two,6359,6360,"Late. The guest room in Kofi's compound, a small room, cement walls,",Blake,"","",true
+2,s246-volta-night-the-sounds-of-insects-a-constant-mult,chapter-twenty-two,6361,6395,"Volta night. The sounds of insects, a constant, multi-layered drone that",Blake,"night","Volta night",true
+2,s247-foundation-not-in-the-orphanage-in-herself-in-the,chapter-twenty-two,6396,6404,"Foundation. Not in the orphanage. In herself. In the body that counted",Blake,"","Foundation",true
+2,s248-she-closed-her-eyes-the-volta-night-hummed-the-ins,chapter-twenty-two,6405,6423,"She closed her eyes. The Volta night hummed. The insects sang",Blake,"night","The Volta night hummed",true
+2,s249-october-the-cottage-smelled-of-october-the-particu,chapter-twenty-three,6424,6478,"October. The cottage smelled of October, the particular mix of cold air",Blake,"October","The cottage smelled of October, the particular mix of cold air",true
+2,s250-you-and-me-nadia-the-foundation-iceland-the-ent,chapter-twenty-three,6479,6602,"\"You and me. Nadia. The Foundation. Iceland. The entire fragile",Andrew,"","The Foundation",true
+2,s251-dirksen-106-november-the-hearing-room-smelled-the,chapter-twenty-four,6603,6613,"Dirksen 106. November. The hearing room smelled the same,",Nadia,"November","The hearing room smelled the same,",true
+2,s252-different-she-was-different-ghana-was-in-her-now-t,chapter-twenty-four,6614,6633,"different. She was different. Ghana was in her now the way Iceland was",Teresa,"","Ghana was in her now the way Iceland was",true
+2,s253-teresa-opened-the-folder-the-sound-of-paper-against,chapter-twenty-four,6634,6677,"Teresa opened the folder. The sound of paper against a Senate",Holt,"","The sound of paper against a Senate",true
+2,s254-frequency-foundation-s-protocol-as-a-preparation-s,chapter-twenty-four,6678,6687,"Frequency Foundation's protocol as a 'preparation' system. You used the",Nadia,"","Frequency Foundation's protocol as a 'preparation' system",true
+2,s255-the-frequency-is-geological-every-stone-chamber-on,chapter-twenty-four,6688,6692,"\"The frequency is geological. Every stone chamber on earth with",Nadia,"","Every stone chamber on earth with",true
+2,s256-al-saflieni-produces-it-the-crypt-at-strahov-monas,chapter-twenty-four,6693,6693,"Ħal-Saflieni produces it. The crypt at Strahov Monastery produces it.",Nadia,"","The crypt at Strahov Monastery produces it.",true
+2,s257-the-laterite-caves-of-the-volta-region-in-ghana-prod,chapter-twenty-four,6694,6834,"The laterite caves of the Volta Region in Ghana produce it. The earth",Nadia,"","The laterite caves of the Volta Region in Ghana produce it",true
+2,s258-the-kitchen-table-late-november-two-weeks-after-th,chapter-twenty-four,6835,6868,"The kitchen table. Late November. Two weeks after the hearing.",Blake,"November","The kitchen table",true
+2,s259-to-ghana-to-the-caves-to-ama-ata-i-held-the-entr,chapter-twenty-four,6869,6879,"“To Ghana. To the caves. To Ama Ata. I held the entrance at every",Blake,"","“To Ghana",true
+2,s260-andrew-can-monitor-from-iceland-she-said-the-sa,chapter-twenty-four,6880,6891,"“Andrew can monitor from Iceland,” she said. “The satellite uplink",Blake,"","“Andrew can monitor from Iceland,” she said",true
+2,s261-she-picked-up-her-coffee-the-prague-gesture-both-h,chapter-twenty-four,6892,6919,"She picked up her coffee. The Prague gesture, both hands around",Blake,"","The Prague gesture, both hands around",true
+2,s262-november-light-and-understood-that-the-next-chamber,chapter-twenty-four,6920,6939,"November light and understood that the next chamber would be",Blake,"November","chamber",true
+2,s263-the-call-ended-blake-sat-in-the-kitchen-the-novemb,chapter-twenty-four,6940,6945,"The call ended. Blake sat in the kitchen. The November light had",Blake,"November","Blake sat in the kitchen",true
+2,s264-december-ghana-the-laterite-the-warm-cave-the-wi,chapter-twenty-four,6946,6952,"December. Ghana. The laterite. The warm cave. The wife who was",Blake,"December","Ghana",true
+2,s265-chapter-twenty-five,chapter-twenty-five,6953,6955,"CHAPTER TWENTY-FIVE",Blake,"","",true
+2,s266-december-the-volta-region-did-not-do-december-the-w,chapter-twenty-five,6956,6956,"December. The Volta Region did not do December the way Iceland did",Blake,"December","The Volta Region did not do December the way Iceland did",true
+2,s267-december-december-in-the-volta-was-dry-the-harmatt,chapter-twenty-five,6957,6989,"December. December in the Volta was dry, the harmattan season, the",Blake,"December","Volta",true
+2,s268-watcher-position-the-position-that-andrew-occupied,chapter-twenty-five,6990,7005,"watcher position. The position that Andrew occupied in Iceland and that",Andrew,"","The position that Andrew occupied in Iceland and that",true
+2,s269-all-bands-normal-low-amplitude-beta-as-expected-p,chapter-twenty-five,7006,7018,"\"All bands normal. Low-amplitude beta, as expected prior to",Blake,"","",true
+2,s270-mine-andrew-monitors-from-iceland-i-monitor-from,chapter-twenty-five,7019,7020,"\"Mine. Andrew monitors from Iceland. I monitor from the",Blake,"","Andrew monitors from Iceland",true
+2,s271-exposure-without-full-lab-support-if-your-cardiac-d,chapter-twenty-five,7021,7034,"exposure without full lab support. If your cardiac drops below forty, we",Blake,"","exposure without full lab support",true
+2,s272-body-he-walked-the-two-hundred-meters-to-the-chambe,chapter-twenty-five,7035,7038,"body. He walked the two hundred meters to the chamber. The cave",Blake,"","He walked the two hundred meters to the chamber",true
+2,s273-the-chamber,chapter-twenty-five,7039,7194,"The chamber.",Blake,"","The chamber.",true
+2,s274-evening-each-cortical-region-releasing-the-shared-f,chapter-twenty-five,7195,7207,"evening. Each cortical region releasing the shared frequency at its own",Blake,"evening","",true
+2,s275-the-volta-sky-amber-with-harmattan-dust-the-aftern,chapter-twenty-five,7208,7246,"The Volta sky, amber with harmattan dust. The afternoon light,",Blake,"afternoon","The Volta sky, amber with harmattan dust",true
+2,s276-the-stone-cottage-december-winter-dark,chapter-twenty-six,7247,7278,"The stone cottage. December. Winter dark.",Blake,"December","The stone cottage",true
+2,s277-9-pm-the-last-call,chapter-twenty-six,7279,7310,"9 PM. The last call.",Blake,"9 PM","",true
+2,s278-silence-the-satellite-delay-the-wind-against-the-c,chapter-twenty-six,7311,7366,"Silence. The satellite delay. The wind against the cottage walls.",Blake,"","The wind against the cottage walls.",true
+2,s279-midnight-the-cottage,chapter-twenty-six,7367,7392,"Midnight. The cottage.",Blake,"Midnight","The cottage.",true
+2,s280-the-volta-dust-playing-drums-they-were-here-his-fa,chapter-twenty-six,7393,7444,"the Volta dust playing drums, they were here. His father, who had not",Blake,"","the Volta dust playing drums, they were here",true
+2,s281-a-trembling-man-in-a-lava-field-in-iceland-in-decemb,chapter-twenty-six,7445,7448,"A trembling man in a lava field in Iceland in December in the dark.",Nadia,"December","A trembling man in a lava field in Iceland in December in the dark.",true
+2,s282-awake-counting-something-somewhere-in-the-stone-co,chapter-twenty-six,7449,7449,"awake, counting something. Somewhere in the stone cottage, Andrew",Andrew,"","Somewhere in the stone cottage, Andrew",true
+2,s283-was-backing-up-data-somewhere-in-the-volta-region,chapter-twenty-six,7450,7459,"was backing up data. Somewhere in the Volta Region, Kofi's",,"","Somewhere in the Volta Region, Kofi's",true
+3,s001-prologue,prologue,10,10,"PROLOGUE",Blake,"","",true
+3,s002-the-listening-m-rdalsj-kull,prologue,11,15,"THE LISTENING. MÝRDALSJÖKULL,",Blake,"","MÝRDALSJÖKULL,",true
+3,s003-and-never-explained-it-came-in-the-cave-in-strahov,prologue,16,30,"and never explained. It came in the cave in Strahov, in the room beneath Bohemia, in",Blake,"","It came in the cave in Strahov, in the room beneath Bohemia, in",true
+3,s004-there-is-no-manuscript-here-there-is-no-chamber-th,prologue,31,52,"There is no manuscript here. There is no chamber. There is no instrument. There is",Blake,"","There is no chamber",true
+3,s005-the-quality-hill-apartment-kansas-city-november-t,chapter-one,53,77,"The Quality Hill apartment. Kansas City. November. The key",Blake,"November","The Quality Hill apartment",true
+3,s006-the-distinction-mattering-now-in-a-way-it-hadn-t-bef,chapter-one,78,80,"the distinction mattering now in a way it hadn't before Iceland. The",Blake,"","the distinction mattering now in a way it hadn't before Iceland",true
+3,s007-buzz-and-beneath-all-of-that-the-foundation-itself,chapter-one,81,82,"buzz. And beneath all of that, the foundation itself: Kansas City",Blake,"","And beneath all of that, the foundation itself: Kansas City",true
+3,s008-this-particular-house-under-this-particular-life-10,chapter-one,83,83,"this particular house under this particular life. 109 Hz. Not the Strahov",Blake,"","Not the Strahov",true
+3,s009-specification-not-the-iceland-basalt-not-the-volta,chapter-one,84,105,"specification. Not the Iceland basalt. Not the Volta laterite. The house's",Blake,"","Not the Iceland basalt",true
+3,s010-the-breitling-he-had-told-himself-that-night-in-th,chapter-one,106,130,"The Breitling. He had told himself, that night in the cottage, that he",Blake,"night","He had told himself, that night in the cottage, that he",true
+3,s011-he-poured-the-coffee-into-the-same-mug-from-the-firs,chapter-one,131,131,"He poured the coffee into the same mug from the first book. Sat at",Blake,"","",true
+3,s012-the-kitchen-table,chapter-one,132,162,"the kitchen table.",Blake,"","the kitchen table.",true
+3,s013-he-came-in-anyway-sat-at-the-kitchen-table-and-pour,chapter-one,163,169,"He came in anyway. Sat at the kitchen table and poured himself a",Blake,"","Sat at the kitchen table and poured himself a",true
+3,s014-they-sat-for-a-while-the-kitchen-was-quiet-marcus,chapter-one,170,191,"They sat for a while. The kitchen was quiet. Marcus looked at",Blake,"","The kitchen was quiet",true
+3,s015-night-in-iceland-the-kind-of-confession-that-happen,chapter-one,192,311,"night in Iceland, the kind of confession that happens when the",Blake,"night","Iceland",true
+3,s016-it-sounds-like-a-cathedral-from-the-inside,chapter-two,312,313,"\"It sounds like a cathedral. From the inside.\"",Blake,"","\"It sounds like a cathedral",true
+3,s017-it-sounds-like-being-inside-a-cathedral-not-listen,chapter-two,314,324,"\"It sounds like being inside a cathedral. Not listening to a cathedral,",Blake,"","\"It sounds like being inside a cathedral",true
+3,s018-geometrically-the-dome-to-nave-ratio-of-chartres-ca,chapter-two,325,328,"geometrically. The dome-to-nave ratio of Chartres Cathedral: 1.618, the",Blake,"","The dome-to-nave ratio of Chartres Cathedral: 1.618, the",true
+3,s019-that-s-because-you-are-a-cathedral-he-said-your,chapter-two,329,360,"\"That's because you ARE a cathedral,\" he said. \"Your chest is the",Blake,"","\"That's because you ARE a cathedral,\" he said",true
+3,s020-you-re-resonating-with-it-your-body-is-recognizing,chapter-two,361,385,"You're resonating with it. Your body is recognizing another chamber.\"",Blake,"","Your body is recognizing another chamber.\"",true
+3,s021-composite-standing-wave-at-108-hz-three-hertz-below,chapter-two,386,400,"composite standing wave at 108 Hz. Three hertz below the Strahov",Blake,"","Three hertz below the Strahov",true
+3,s022-that-he-d-missed-in-two-years-of-iceland-grey-the-a,chapter-two,401,424,"that he'd missed in two years of Iceland grey. The air carried the smell of",Blake,"","that he'd missed in two years of Iceland grey",true
+3,s023-chambers-you-could-control-the-foundation-you-coul,chapter-two,425,478,"chambers. You could control the Foundation. You could control the",Blake,"","You could control the Foundation",true
+3,s024-six-weeks-no-chamber-no-frequency-generator-no-ba,chapter-three,479,480,"Six weeks. No chamber. No frequency generator. No basalt. No",Blake,"","No chamber",true
+3,s025-just-chairs-just-breathing-just-a-man-whose-trembl,chapter-three,481,527,"Just chairs. Just breathing. Just a man whose trembling hands drew",Blake,"","",true
+3,s026-two-thousand-year-institution-to-preserve-what-he-sa,chapter-three,528,531,"two-thousand-year institution to preserve what he said. The Foundation",Nadia,"","The Foundation",true
+3,s027-she-restructured-the-foundation-in-eleven-days,chapter-three,532,553,"She restructured the Foundation in eleven days.",Nadia,"","She restructured the Foundation in eleven days.",true
+3,s028-andrew-chen-chief-science-officer-remained-in-icel,chapter-three,554,561,"Andrew Chen, Chief Science Officer, remained in Iceland. His title",Andrew,"","Andrew Chen, Chief Science Officer, remained in Iceland",true
+3,s029-the-strahov-monks-used-one-lead-box-we-re-using-se,chapter-three,562,566,"\"The Strahov monks used one lead box. We're using seven digital",Blake,"","\"The Strahov monks used one lead box",true
+3,s030-attention-protocol-eeg-at-baseline-and-quarterly-n,chapter-three,567,589,"attention protocol. EEG at baseline and quarterly. No chamber",Blake,"","No chamber",true
+3,s031-she-updated-the-foundation-s-website-that-afternoon,chapter-three,590,603,"She updated the Foundation's website that afternoon. The mission",Andrew,"afternoon","She updated the Foundation's website that afternoon",true
+3,s032-departure-the-hvac-cycled-the-fluorescents-in-the,chapter-three,604,625,"departure. The HVAC cycled. The fluorescents in the hallway buzzed.",Andrew,"","The fluorescents in the hallway buzzed.",true
+3,s033-andrew-chen-entered-the-foundation-lobby-and-stopped,chapter-four,626,660,"Andrew Chen entered the Foundation lobby and stopped walking.",Andrew,"","Andrew Chen entered the Foundation lobby and stopped walking.",true
+3,s034-whiteboard-blake-s-cathedral-torso-diagram-still-dr,chapter-four,661,814,"whiteboard. Blake's cathedral-torso diagram still drawn in dry-erase",Andrew,"","Blake's cathedral-torso diagram still drawn in dry-erase",true
+3,s035-i-ve-been-running-the-foundation-the-coherence-was,chapter-four,815,878,"\"I've been running the Foundation. The coherence was not the",Yuki,"","\"I've been running the Foundation",true
+3,s036-the-basalt-chamber-she-was-cohort-4-the-musician,chapter-five,879,993,"the basalt chamber. She was Cohort 4, the musician, the oboist whose",Marcus,"","the basalt chamber",true
+3,s037-three-blocks-south-of-the-foundation-the-washing-ma,volume-low-enough-to-suggest-sophistication-and-loud-enough-to,994,1021,"three blocks south of the Foundation. The washing machine was in the",Yuki,"","three blocks south of the Foundation",true
+3,s038-she-sat-on-the-basement-step-and-listened-to-her-lau,volume-low-enough-to-suggest-sophistication-and-loud-enough-to,1022,1046,"She sat on the basement step and listened to her laundry.",Blake,"","She sat on the basement step and listened to her laundry.",true
+3,s039-the-basalt-caves-she-was-drying-her-socks-in-a-cham,volume-low-enough-to-suggest-sophistication-and-loud-enough-to,1047,1113,"the basalt caves. She was drying her socks in a chamber that produced",Blake,"","She was drying her socks in a chamber that produced",true
+3,s040-six-weeks,chapter-six,1114,1136,"Six weeks.",Blake,"","",true
+3,s041-geometry-of-the-campus-quad-she-could-look-at-a-cat,chapter-six,1137,1234,"geometry of the campus quad. She could look at a cathedral photograph",Blake,"","She could look at a cathedral photograph",true
+3,s042-they-did-not-walk-to-a-chamber-they-did-not-walk-to,chapter-six,1235,1264,"They did not walk to a chamber. They did not walk to a lab. They",Blake,"","They did not walk to a chamber",true
+3,s043-the-foundation-parking-lot-april-3-15-pm,chapter-seven,1265,1335,"The Foundation parking lot. April. 3:15 PM.",Blake,"April","The Foundation parking lot",true
+3,s044-the-same-pattern-blake-had-decoded-in-the-strahov-ma,chapter-seven,1336,1428,"the same pattern Blake had decoded in the Strahov manuscript. But",Blake,"","the same pattern Blake had decoded in the Strahov manuscript",true
+3,s045-morning-the-quality-hill-kitchen-april-light-throu,chapter-eight,1429,1512,"Morning. The Quality Hill kitchen. April light through the east window,",Blake,"Morning","The Quality Hill kitchen",true
+3,s046-the-kitchen-was-quiet-the-hvac-cycled-the-elm-outs,chapter-eight,1513,1613,"The kitchen was quiet. The HVAC cycled. The elm outside the window",Blake,"","The kitchen was quiet",true
+3,s047-leds-reflecting-off-the-hallway-wall-she-read-it-th,chapter-nine,1614,1641,"LEDs reflecting off the hallway wall. She read it the way she read",Nadia,"","LEDs reflecting off the hallway wall",true
+3,s048-she-called-eva-ern-prague-11-23-am-central-europ,chapter-nine,1642,1642,"She called Eva Černá. Prague. 11:23 AM Central European Time.",Nadia,"23 AM","Prague",true
+3,s049-eva-the-specchi-mirror-formula-the-one-from-the-s,chapter-nine,1643,1655,"\"Eva. The Specchi mirror formula, the one from the Strahov",Nadia,"","The Specchi mirror formula, the one from the Strahov",true
+3,s050-she-called-giacomo-in-venice-confirmed-the-formula,chapter-nine,1656,1660,"She called Giacomo in Venice. Confirmed the formula through the",Nadia,"","She called Giacomo in Venice",true
+3,s051-she-published-it-at-6-47-am-before-the-coffee-coole,chapter-nine,1661,1682,"She published it at 6:47 AM. Before the coffee cooled. Before the",Nadia,"47 AM","",true
+3,s052-that-was-documented-in-a-public-archive-in-prague-t,chapter-nine,1683,1754,"that was documented in a public archive in Prague. They are claiming",Nadia,"","that was documented in a public archive in Prague",true
+3,s053-dr-james-strand-the-foundation-s-research-director,chapter-ten,1755,1773,"Dr. James Strand, the Foundation's research director, was",Nadia,"","James Strand, the Foundation's research director, was",true
+3,s054-who-believed-it-she-was-not-the-foundation-s-advers,chapter-ten,1774,1823,"who believed it. She was not the Foundation's adversary. She was the",Nadia,"","She was not the Foundation's adversary",true
+3,s055-classroom-we-recommend-it-for-chamber-based-work-w,chapter-ten,1824,1883,"classroom. We recommend it for chamber-based work, which we no",Blake,"","We recommend it for chamber-based work, which we no",true
+3,s056-the-phone-rang-at-11-47-pm-kansas-city-time-blake-w,chapter-eleven,1884,1913,"The phone rang at 11:47 PM Kansas City time. Blake was at the kitchen",Blake,"47 PM","Blake was at the kitchen",true
+3,s057-institutional-one-every-week-of-preparation-the-fou,chapter-eleven,1914,1922,"institutional one. Every week of preparation the Foundation requires is a",Blake,"","Every week of preparation the Foundation requires is a",true
+3,s058-form-you-stop-the-bleeding-the-foundation-s-patien,chapter-eleven,1923,1924,"form. You stop the bleeding. The Foundation's patients are bleeding.",Blake,"","The Foundation's patients are bleeding.",true
+3,s059-own-divine-architecture-and-the-foundation-is-askin,chapter-eleven,1925,1944,"own divine architecture. And the Foundation is asking them to fill out a",Blake,"","And the Foundation is asking them to fill out a",true
+3,s060-are-right-about-the-harm-and-right-to-fear-it-that,chapter-eleven,1945,1968,"are right about the harm and right to fear it. That the Foundation is",Blake,"","That the Foundation is",true
+3,s061-scattered-the-satchels-the-strahov-monks-heard-it-b,chapter-eleven,1969,1975,"scattered the satchels. The Strahov monks heard it before they sealed the",Blake,"","The Strahov monks heard it before they sealed the",true
+3,s062-blake-sat-at-the-kitchen-table-for-a-long-time-the,chapter-eleven,1976,1979,"Blake sat at the kitchen table for a long time. The kettle had cooled",Blake,"","Blake sat at the kitchen table for a long time",true
+3,s063-three-days-later-the-article-appeared,chapter-eleven,1980,1993,"Three days later, the article appeared.",Nadia,"","",true
+3,s064-gatekeeping-prayer-every-week-of-preparation-that-t,chapter-eleven,1994,2001,"gatekeeping prayer. Every week of preparation that the Foundation",Blake,"","Every week of preparation that the Foundation",true
+3,s065-form-you-stop-the-bleeding-the-foundation-s-patien,chapter-eleven,2002,2003,"form. You stop the bleeding. The Foundation's patients are bleeding.",Nadia,"","The Foundation's patients are bleeding.",true
+3,s066-own-divine-architecture-and-the-foundation-is-askin,chapter-eleven,2004,2075,"own divine architecture. And the Foundation is asking them to fill out a",Nadia,"","And the Foundation is asking them to fill out a",true
+3,s067-masters-research-since-the-strahov-crypt-we-believ,chapter-twelve,2076,2081,"Masters' research since the Strahov crypt. We believe the Foundation's",Nadia,"","Masters' research since the Strahov crypt",true
+3,s068-something-dangerous-she-poured-the-coffee-into-the,chapter-twelve,2082,2087,"something dangerous. She poured the coffee into the Foundation's",Nadia,"","She poured the coffee into the Foundation's",true
+3,s069-classified-status-the-foundation-s-research-would,chapter-twelve,2088,2168,"\"Classified status. The Foundation's research would be designated",Nadia,"","The Foundation's research would be designated",true
+3,s070-she-set-down-the-cup-the-kitchen-was-dark-except-fo,chapter-twelve,2169,2217,"She set down the cup. The kitchen was dark except for the light",Blake,"","The kitchen was dark except for the light",true
+3,s071-sabrina-s-full-assessment-her-office-at-the-foundat,chapter-thirteen,2218,2264,"Sabrina's full assessment. Her office at the Foundation, the clinical suite",Nadia,"","Her office at the Foundation, the clinical suite",true
+3,s072-3-am-the-quality-hill-kitchen,chapter-thirteen,2265,2277,"3 AM. The Quality Hill kitchen.",Nadia,"3 AM","The Quality Hill kitchen.",true
+3,s073-she-sat-down-on-the-floor-in-her-pajamas-at-3-am,chapter-thirteen,2278,2329,"She sat down. On the floor. In her pajamas, at 3 AM, on the kitchen",Nadia,"3 AM","In her pajamas, at 3 AM, on the kitchen",true
+3,s074-morning-blake-was-asleep-on-the-floor-nadia-was-aw,chapter-thirteen,2330,2342,"Morning. Blake was asleep on the floor. Nadia was awake, still",Andrew,"Morning","",true
+3,s075-andrew-arrived-from-iceland-at-11-pm-the-airport-sh,chapter-thirteen,2343,2359,"Andrew arrived from Iceland at 11 PM. The airport shuttle dropped him",Andrew,"11 PM","Andrew arrived from Iceland at 11 PM",true
+3,s076-nadia-met-him-in-the-hallway-coffee-in-hand-his-co,chapter-thirteen,2360,2366,"Nadia met him in the hallway. Coffee in hand, his coffee, prepared",Andrew,"","Nadia met him in the hallway",true
+3,s077-the-chamber-is-ready-she-said-marcus-ran-the-mi,chapter-thirteen,2367,2368,"“The chamber is ready,” she said. “Marcus ran the mirror",Andrew,"","“The chamber is ready,” she said",true
+3,s078-specification-the-basalt-chamber-resonance-is-stabl,chapter-thirteen,2369,2370,"specification. The basalt chamber resonance is stable at 111.2. Andrew,",Andrew,"","The basalt chamber resonance is stable at 111.2",true
+3,s079-reykjavik-the-panel-is-arriving-at-seven-am-sabrin,chapter-thirteen,2371,2389,"Reykjavik. The panel is arriving at seven AM. Sabrina’s pre-screening",Andrew,"","Reykjavik",true
+3,s080-andrew-drank-his-coffee-the-hallway-was-quiet-excep,chapter-thirteen,2390,2390,"Andrew drank his coffee. The hallway was quiet except for the",Andrew,"","The hallway was quiet except for the",true
+3,s081-hum-somewhere-below-them-160-feet-below-in-the-su,chapter-thirteen,2391,2392,"hum. Somewhere below them, 160 feet below, in the SubTropolis",Blake,"","Somewhere below them, 160 feet below, in the SubTropolis",true
+3,s082-the-foundation-s-primary-research-chamber-the-mirro,chapter-thirteen,2393,2400,"the Foundation’s primary research chamber, the mirrors waited. Six",Blake,"","the Foundation’s primary research chamber, the mirrors waited",true
+3,s083-home-i-told-him-to-sleep-he-won-t-sleep-he-ll-si,chapter-thirteen,2401,2411,"“Home. I told him to sleep. He won’t sleep. He’ll sit at the kitchen",Nadia,"","He’ll sit at the kitchen",true
+3,s084-full-52-week-preparation-all-have-sustained-weekly,chapter-thirteen,2412,2450,"full 52-week preparation. All have sustained weekly chamber sessions",Andrew,"","All have sustained weekly chamber sessions",true
+3,s085-he-walked-down-the-hallway-quiet-footsteps-on-the-l,chapter-thirteen,2451,2472,"He walked down the hallway. Quiet footsteps on the linoleum.",Andrew,"","He walked down the hallway",true
+3,s086-the-tone-activated-at-6-00-am-and-the-chamber-woke,chapter-fourteen,2473,2486,"The tone activated at 6:00 AM, and the chamber woke.",Andrew,"00 AM","The tone activated at 6:00 AM, and the chamber woke.",true
+3,s087-not-metaphorically-the-chamber-woke-the-distinctio,chapter-fourteen,2487,2500,"Not metaphorically: the chamber woke. The distinction was",Andrew,"","Not metaphorically: the chamber woke",true
+3,s088-station-he-was-not-in-the-first-rotation-he-would,chapter-fourteen,2501,2523,"station. He was not in the first rotation. He would enter the chamber",Andrew,"","He would enter the chamber",true
+3,s089-positioned-in-the-observation-area-adjacent-to-the-c,chapter-fourteen,2524,2589,"positioned in the observation area adjacent to the chamber. Their",Andrew,"","positioned in the observation area adjacent to the chamber",true
+3,s090-the-chamber-operating-as-designed-seven-researcher,chapter-fourteen,2590,2603,"The chamber, operating as designed. Seven researchers watching",Nadia,"","The chamber, operating as designed",true
+3,s091-strahov-specifications-didn-t-describe-it-but-dr-n,chapter-fourteen,2604,2705,"Strahov specifications didn't describe it. But Dr. Nakamura, the",Yuki,"","Strahov specifications didn't describe it",true
+3,s092-performing-within-them-she-wanted-to-be-present-for,chapter-fifteen,2706,2719,"performing within them. She wanted to be present for the chamber's",Blake,"","She wanted to be present for the chamber's",true
+3,s093-like-a-resident-population-of-organized-energy-but,chapter-fifteen,2720,2800,"like a resident population of organized energy. But the chamber's",Yuki,"","But the chamber's",true
+3,s094-the-oscillation-was-gone-the-chamber-was-silent-th,chapter-fifteen,2801,2886,"The oscillation was gone. The chamber was silent. The mirrors were",Blake,"","The chamber was silent",true
+3,s095-you-d-need-to-bring-them-here-to-the-chamber,chapter-fifteen,2887,2914,"\"You'd need to bring them here. To the chamber.\"",Blake,"","To the chamber.\"",true
+3,s096-the-foundation-will-handle-it-she-said-i-ll-coo,chapter-fifteen,2915,2921,"\"The Foundation will handle it,\" she said. \"I'll coordinate with",Blake,"","\"The Foundation will handle it,\" she said",true
+3,s097-she-got-in-her-car-she-drove-to-the-apartment-she,chapter-fifteen,2922,2953,"She got in her car. She drove to the apartment. She slept for",Blake,"","She drove to the apartment",true
+3,s098-andrew-sat-in-the-iceland-control-module-for-the-las,chapter-sixteen,2954,2956,"Andrew sat in the Iceland control module for the last time and looked at",Andrew,"","Andrew sat in the Iceland control module for the last time and looked at",true
+3,s099-recording-every-chamber-session-every-moleskine-en,chapter-sixteen,2957,2977,"recording. Every chamber session. Every Moleskine entry that Blake had",Andrew,"","Every chamber session",true
+3,s100-he-called-blake-morning-in-kansas-city-evening-in,chapter-sixteen,2978,2986,"He called Blake. Morning in Kansas City, evening in Iceland. The",Andrew,"Morning","Iceland",true
+3,s101-the-preparation-curriculum-the-chamber-designs-the,chapter-sixteen,2987,3010,"The preparation curriculum. The chamber designs. The mineral analysis.",Andrew,"","The chamber designs",true
+3,s102-tonight-midnight-reykjavik-time,chapter-sixteen,3011,3011,"\"Tonight. Midnight Reykjavik time.\"",Andrew,"night","Reykjavik",true
+3,s103-midnight-the-site-went-live,chapter-sixteen,3012,3019,"Midnight. The site went live.",Andrew,"Midnight","",true
+3,s104-by-6-am-reykjavik-time-14-000-downloads-by-noon-2,chapter-sixteen,3020,3032,"By 6 AM Reykjavik time: 14,000 downloads. By noon: 200,000. The",Nadia,"6 AM","By 6 AM Reykjavik time: 14,000 downloads",true
+3,s105-published-specifications-the-osaka-group-a-materia,chapter-sixteen,3033,3107,"published specifications. The Osaka group, a materials science lab at",Nadia,"","The Osaka group, a materials science lab at",true
+3,s106-1-am,chapter-seventeen,3108,3111,"1 AM.",Nadia,"1 AM","",true
+3,s107-slept-deeply-the-foundation-building-s-windows-glow,chapter-seventeen,3112,3131,"slept deeply. The Foundation building's windows glowed against the",Nadia,"","The Foundation building's windows glowed against the",true
+3,s108-subtropolis-he-went-back-to-the-chamber-at-8-pm-a,chapter-seventeen,3132,3169,"\"SubTropolis. He went back to the chamber at 8 PM. Alone.\"",Nadia,"8 PM","\"SubTropolis",true
+3,s109-ms-volkov-this-is-colonel-james-harding-office-o,chapter-seventeen,3170,3179,"\"Ms. Volkov? This is Colonel James Harding, Office of the",Blake,"","Volkov? This is Colonel James Harding, Office of the",true
+3,s110-intersects-with-dod-research-interests-we-need-your,chapter-seventeen,3180,3194,"intersects with DOD research interests. We need your Foundation's",Blake,"","We need your Foundation's",true
+3,s111-colonel-i-ll-clarify-something-for-you-the-founda,chapter-seventeen,3195,3200,"\"Colonel, I'll clarify something for you. The Foundation's candidate",Blake,"","The Foundation's candidate",true
+3,s112-anyway-if-the-dod-wants-our-chamber-specifications,chapter-seventeen,3201,3202,"anyway. \"If the DOD wants our chamber specifications, your office can",Blake,"","\"If the DOD wants our chamber specifications, your office can",true
+3,s113-we-re-a-private-research-foundation-and-foia-doesn-t,chapter-seventeen,3203,3212,"we're a private research foundation and FOIA doesn't apply. If you want",Blake,"","we're a private research foundation and FOIA doesn't apply",true
+3,s114-foundation-spent-three-years-building-that-is-not-a,chapter-seventeen,3213,3228,"Foundation spent three years building. That is not an argument for",Blake,"","Foundation spent three years building",true
+3,s115-she-made-a-note-in-her-legal-pad-dod-contact-col,chapter-seventeen,3229,3229,"She made a note in her legal pad: DOD contact, Col. Harding, 1:17",Blake,"","",true
+3,s116-am-request-denied-notify-foundation-counsel-in-am,chapter-seventeen,3230,3256,"AM. Request denied. Notify Foundation counsel in AM.",Blake,"","Notify Foundation counsel in AM.",true
+3,s117-reshkin-documented-in-the-foundation-cohort-their-c,chapter-seventeen,3257,3259,"Reshkin documented in the Foundation cohort. Their consciousness is",Blake,"","Reshkin documented in the Foundation cohort",true
+3,s118-blake-thinks-the-foundation-can-help-them-retroact,chapter-seventeen,3260,3270,"\"Blake thinks the Foundation can help them. Retroactive",Blake,"","\"Blake thinks the Foundation can help them",true
+3,s119-at-4-am-nadia-opened-her-notebook-not-the-foundati,chapter-seventeen,3271,3292,"At 4 AM, Nadia opened her notebook. Not the Foundation",Blake,"4 AM","Not the Foundation",true
+3,s120-she-closed-the-notebook-got-in-her-car-drove-to-th,chapter-seventeen,3293,3304,"She closed the notebook. Got in her car. Drove to the SubTropolis.",Nadia,"","Drove to the SubTropolis.",true
+3,s121-we-help-them-first-then-iceland,chapter-seventeen,3305,3314,"\"We help them first. Then Iceland.\"",Nadia,"","Then Iceland.\"",true
+3,s122-not-because-i-can-t-because-the-foundation-needs-m,chapter-seventeen,3315,3317,"\"Not because I can't. Because the Foundation needs me here.\"",Nadia,"","Because the Foundation needs me here.\"",true
+3,s123-he-opened-his-eyes-in-the-dark-chamber-without-the,chapter-seventeen,3318,3323,"He opened his eyes. In the dark chamber, without the frequency, he",Nadia,"","In the dark chamber, without the frequency, he",true
+3,s124-they-sat-in-the-dark-the-moreau-chamber-held-them-t,chapter-seventeen,3324,3344,"They sat in the dark. The Moreau chamber held them the way a",Nadia,"","The Moreau chamber held them the way a",true
+3,s125-the-data-is-released-this-is-irreversible-the-que,chapter-seventeen,3345,3349,"\"The data is released. This is irreversible. The question is whether",Nadia,"","",true
+3,s126-longer-possible-the-foundation-s-reason-for-existen,chapter-seventeen,3350,3354,"longer possible. The Foundation's reason for existence has been",Nadia,"","The Foundation's reason for existence has been",true
+3,s127-with-context-without-the-foundation-the-curriculum,chapter-seventeen,3355,3356,"with context. Without the Foundation, the curriculum exists without the",Nadia,"","Without the Foundation, the curriculum exists without the",true
+3,s128-preparation-protocol-the-chamber-designs-exist-with,chapter-seventeen,3357,3380,"preparation protocol. The chamber designs exist without the safety data.",Nadia,"","The chamber designs exist without the safety data.",true
+3,s129-that-night-nadia-s-desk-the-foundation-office-11,chapter-seventeen,3381,3443,"That night. Nadia's desk. The Foundation office, 11 PM.",Nadia,"night","The Foundation office, 11 PM.",true
+3,s130-buenos-aires-a-church-basement-on-calle-defensa-sa,chapter-eighteen,3444,3447,"Buenos Aires. A church basement on Calle Defensa, San Telmo, the",Andrew,"","A church basement on Calle Defensa, San Telmo, the",true
+3,s131-gathered-in-the-basement-were-not-all-catholic-thre,chapter-eighteen,3448,3468,"gathered in the basement were not all Catholic. Three were, two were",Andrew,"","gathered in the basement were not all Catholic",true
+3,s132-they-sat-the-basement-hummed-around-them-the-hvac,chapter-eighteen,3469,3500,"They sat. The basement hummed around them, the HVAC (such as",Andrew,"","The basement hummed around them, the HVAC (such as",true
+3,s133-osaka-a-listening-lab-on-the-fourth-floor-of-the-en,chapter-eighteen,3501,3516,"Osaka. A listening lab on the fourth floor of the Engineering Building at",Andrew,"","A listening lab on the fourth floor of the Engineering Building at",true
+3,s134-professors-read-the-newspaper-had-built-the-test-ch,chapter-eighteen,3517,3522,"professors read the newspaper, had built the test chamber himself. Six",Nadia,"","professors read the newspaper, had built the test chamber himself",true
+3,s135-the-chamber-was-the-size-of-a-large-closet-the-ande,chapter-eighteen,3523,3531,"The chamber was the size of a large closet. The andesite panels,",Nadia,"","The chamber was the size of a large closet",true
+3,s136-before-our-chamber-produces-109-3-hz-the-differen,chapter-eighteen,3532,3641,"before. \"Our chamber produces 109.3 Hz. The difference is the geology.",Nadia,"","\"Our chamber produces 109.3 Hz",true
+3,s137-ear-the-foundation-was-silent-around-her-six-thous,chapter-eighteen,3642,3680,"ear. The Foundation was silent around her. Six thousand miles between",Blake,"","The Foundation was silent around her",true
+3,s138-she-was-at-the-kitchen-table-the-blue-mug-the-foun,chapter-nineteen,3681,3820,"She was at the kitchen table. The blue mug, the Foundation mug, the",Blake,"","She was at the kitchen table",true
+3,s139-the-kitchen-got-dark-around-them-the-october-light,chapter-nineteen,3821,3892,"The kitchen got dark around them, the October light retreating",Blake,"October","The kitchen got dark around them, the October light retreating",true
+3,s140-chapter-twenty,chapter-twenty,3893,3918,"CHAPTER TWENTY",Blake,"","",true
+3,s141-she-moved-through-the-apartment-in-the-dark,chapter-twenty,3919,3954,"She moved through the apartment in the dark.",Blake,"","She moved through the apartment in the dark.",true
+3,s142-the-kitchen,chapter-twenty,3955,3960,"The kitchen.",Blake,"","The kitchen.",true
+3,s143-she-took-the-foundation-mug-from-the-cabinet-left-t,chapter-twenty,3961,3978,"She took the Foundation mug from the cabinet. Left the blue one,",Blake,"","She took the Foundation mug from the cabinet",true
+3,s144-as-it-is-without-the-kindness-of-full-illumination,chapter-twenty,3979,3982,"as it is without the kindness of full illumination. The kitchen in that light",Nadia,"","The kitchen in that light",true
+3,s145-she-wrote-a-note-on-the-back-of-a-foundation-envelo,chapter-twenty,3983,3992,"She wrote a note. On the back of a Foundation envelope, the same",Nadia,"","On the back of a Foundation envelope, the same",true
+3,s146-picked-it-up-put-it-in-her-purse-left-no-note-the,chapter-twenty,3993,4000,"Picked it up. Put it in her purse. Left no note. The absence was the",Nadia,"","",true
+3,s147-october-morning-kansas-city-traffic-sparse-at-5-40,chapter-twenty,4001,4003,"October morning. Kansas City traffic sparse at 5:40 AM, the",Nadia,"October","",true
+3,s148-down-troost-past-the-gas-station-past-the-church-w,chapter-twenty,4004,4004,"down Troost. Past the gas station. Past the church where they'd held the",Nadia,"","down Troost",true
+3,s149-first-community-protocol-session-past-the-quality-h,chapter-twenty,4005,4006,"first community protocol session. Past the Quality Hill boundary into",Nadia,"","Past the Quality Hill boundary into",true
+3,s150-the-foundation-parking-lot-was-empty-her-spot-the,chapter-twenty,4007,4033,"The Foundation parking lot was empty. Her spot, the one nearest",Nadia,"","The Foundation parking lot was empty",true
+3,s151-she-walked-into-the-foundation-turned-on-the-lights,chapter-twenty,4034,4034,"She walked into the Foundation. Turned on the lights. The",Blake,"","She walked into the Foundation",true
+3,s152-fluorescent-hum-120-hz-the-institutional-heartbeat,chapter-twenty,4035,4035,"fluorescent hum, 120 Hz, the institutional heartbeat. The server room",Blake,"","The server room",true
+3,s153-leds-reflecting-green-off-the-hallway-wall-the-buil,chapter-twenty,4036,4074,"LEDs reflecting green off the hallway wall. The building receiving her",Blake,"","LEDs reflecting green off the hallway wall",true
+3,s154-institutional-dark-the-foundation-opening-for-anoth,chapter-twenty,4075,4086,"institutional dark. The Foundation opening for another day, and Nadia",Blake,"","The Foundation opening for another day, and Nadia",true
+3,s155-chapter-twenty-one,chapter-twenty-one,4087,4089,"CHAPTER TWENTY-ONE",Blake,"","",true
+3,s156-morning-the-quality-hill-kitchen-the-coffee-machin,chapter-twenty-one,4090,4096,"Morning. The Quality Hill kitchen. The coffee machine.",Blake,"Morning","The Quality Hill kitchen",true
+3,s157-the-cup-was-on-the-counter-his-cup-not-the-foundat,chapter-twenty-one,4097,4097,"The cup was on the counter. His cup. Not the Foundation mug, she",Blake,"","Not the Foundation mug, she",true
+3,s158-had-taken-the-foundation-mug-the-blue-one-the-chip,chapter-twenty-one,4098,4139,"had taken the Foundation mug. The blue one. The chipped one. The",Blake,"","had taken the Foundation mug",true
+3,s159-he-put-the-envelope-in-the-drawer-the-kitchen-drawe,chapter-twenty-one,4140,4177,"He put the envelope in the drawer. The kitchen drawer. Next to the",Blake,"","The kitchen drawer",true
+3,s160-he-stood-in-the-kitchen-he-trembled-the-house-humm,chapter-twenty-one,4178,4193,"He stood in the kitchen. He trembled. The house hummed at 53.6",Blake,"","He stood in the kitchen",true
+3,s161-the-machine-clicked-off-the-kitchen-was-quiet,chapter-twenty-one,4194,4209,"The machine clicked off. The kitchen was quiet.",Blake,"","The kitchen was quiet.",true
+3,s162-tell-nadia-or-marcus-or-the-twelve-or-the-foundation,chapter-twenty-two,4210,4212,"tell Nadia or Marcus or the twelve or the Foundation board. He simply,",Blake,"","tell Nadia or Marcus or the twelve or the Foundation board",true
+3,s163-he-sat-on-the-quality-hill-balcony,chapter-twenty-two,4213,4325,"He sat on the Quality Hill balcony.",Blake,"","He sat on the Quality Hill balcony.",true
+3,s164-to-the-chamber-that-no-map-recorded-the-carvings-t,chapter-twenty-two,4326,4335,"to. The chamber that no map recorded. The carvings that no living",Blake,"","The chamber that no map recorded",true
+3,s165-there-after-him-the-chamber-s-silence-was-not-an-in,chapter-twenty-two,4336,4359,"there after him. The chamber's silence was not an invitation; it was a",Blake,"","The chamber's silence was not an invitation; it was a",true
+3,s166-that-had-happened-in-the-eighth-chamber-this-was-su,chapter-twenty-two,4360,4375,"that had happened in the eighth chamber. This was subtler. A softening.",Blake,"","that had happened in the eighth chamber",true
+3,s167-107-3-hz-below-the-strahov-specification-below-the,chapter-twenty-two,4376,4387,"107.3 Hz. Below the Strahov specification. Below the preparation",Blake,"","Below the Strahov specification",true
+3,s168-day-twenty-two-marcus-came-for-dinner-the-kitchen,chapter-twenty-two,4388,4392,"Day twenty-two. Marcus came for dinner. The kitchen table, the same",Blake,"","The kitchen table, the same",true
+3,s169-nadia-made-pasta-not-institution-food-not-foundati,chapter-twenty-two,4393,4477,"Nadia made pasta. Not institution food, not Foundation food, not",Blake,"","Not institution food, not Foundation food, not",true
+3,s170-ghana-kofi-s-team-will-maintain-the-volta-stations,chapter-twenty-three,4478,4539,"Ghana. Kofi's team will maintain the Volta stations. The Moleskines I'm",Andrew,"","Ghana",true
+3,s171-the-next-morning-he-called-jennifer,chapter-twenty-three,4540,4582,"The next morning, he called Jennifer.",Andrew,"morning","",true
+3,s172-listening-to-its-relatives-he-would-tell-her-it-was,chapter-twenty-three,4583,4608,"listening to its relatives. He would tell her it was a rock from Iceland,",Andrew,"","He would tell her it was a rock from Iceland,",true
+3,s173-the-monitors-shipped-to-ghana-the-real-time-freque,chapter-twenty-three,4609,4611,"The monitors: shipped to Ghana. The real-time frequency tracking",Andrew,"","The monitors: shipped to Ghana",true
+3,s174-to-kofi-mensah-at-the-university-of-ghana-the-volta,chapter-twenty-three,4612,4616,"to Kofi Mensah at the University of Ghana. The Volta caves would",Blake,"","to Kofi Mensah at the University of Ghana",true
+3,s175-reykjavik-icelandic-birch-hand-joined-unvarnished,chapter-twenty-three,4617,4629,"Reykjavik. Icelandic birch, hand-joined, unvarnished, the kind of box",Blake,"","Reykjavik",true
+3,s176-andrew-sealed-the-box-addressed-it-to-the-quality-h,chapter-twenty-three,4630,4691,"Andrew sealed the box. Addressed it to the Quality Hill apartment.",Andrew,"","Addressed it to the Quality Hill apartment.",true
+3,s177-hours-he-would-arrive-at-the-quality-hill-apartment,chapter-twenty-three,4692,4717,"hours. He would arrive at the Quality Hill apartment and knock on the",Blake,"","He would arrive at the Quality Hill apartment and knock on the",true
+3,s178-5-am-the-foundation-february-a-year-after-the-dis,chapter-twenty-four,4718,4733,"5 AM. The Foundation. February. A year after the distribution.",Nadia,"5 AM","The Foundation",true
+3,s179-the-foundation-was-no-longer-a-lab-she-sat-at-her-d,chapter-twenty-four,4734,4737,"The Foundation was no longer a lab. She sat at her desk and",Nadia,"","The Foundation was no longer a lab",true
+3,s180-foundation-was-a-school-twelve-hundred-trained-faci,chapter-twenty-four,4738,4779,"Foundation was a school. Twelve hundred trained facilitators",Nadia,"","Foundation was a school",true
+3,s181-slightly-below-the-strahov-specification-slightly-a,chapter-twenty-four,4780,4785,"Slightly below the Strahov specification. Slightly above the cathedral",Nadia,"","Slightly below the Strahov specification",true
+3,s182-she-opened-her-eyes-the-building-was-dark-the-serv,chapter-twenty-four,4786,4786,"She opened her eyes. The building was dark. The server room",Nadia,"","The server room",true
+3,s183-leds-reflected-green-off-the-hallway-wall-the-coffe,chapter-twenty-four,4787,4798,"LEDs reflected green off the hallway wall. The coffee maker, the one",Nadia,"","LEDs reflected green off the hallway wall",true
+3,s184-she-opened-her-notebook-the-leather-notebook-from-p,chapter-twenty-four,4799,4855,"She opened her notebook. The leather notebook from Prague. Twelve",Nadia,"","The leather notebook from Prague",true
+3,s185-she-picked-up-her-coat-from-the-chair-the-foundatio,chapter-twenty-four,4856,4859,"She picked up her coat from the chair. The Foundation building",Blake,"","The Foundation building",true
+3,s186-she-set-the-cold-cup-in-the-sink-on-her-way-out-loc,chapter-twenty-four,4860,4900,"She set the cold cup in the sink on her way out. Locked the office.",Blake,"","Locked the office.",true
+3,s187-tokyo-a-sixth-floor-apartment-in-shimokitazawa-twe,chapter-twenty-five,4901,4935,"Tokyo. A sixth-floor apartment in Shimokitazawa. Twelve people, a",Andrew,"","A sixth-floor apartment in Shimokitazawa",true
+3,s188-students-need-not-the-frequency-data-not-the-chamb,chapter-twenty-five,4936,4937,"students need. Not the frequency data. Not the chamber specifications.",Andrew,"","Not the chamber specifications.",true
+3,s189-she-did-not-tell-the-group-about-the-foundation-she,chapter-twenty-five,4938,5027,"She did not tell the group about the Foundation. She did not",Andrew,"","She did not tell the group about the Foundation",true
+3,s190-earlier-that-morning-the-quality-hill-kitchen-the,chapter-twenty-six,5028,5034,"Earlier that morning. The Quality Hill kitchen. The light through the",Blake,"morning","The Quality Hill kitchen",true
+3,s191-he-had-filled-nine-notebooks-in-iceland-he-was-fini,chapter-twenty-six,5035,5065,"He had filled nine notebooks in Iceland. He was finishing the tenth",Blake,"","He had filled nine notebooks in Iceland",true
+3,s192-within-is-the-resonance-chamber-of-a-human-chest,chapter-twenty-six,5066,5089,"\"within\" is the resonance chamber of a human chest. The \"God\" is the",Blake,"","\"within\" is the resonance chamber of a human chest",true
+3,s193-eight-minutes-later-the-volvo-turned-onto-quality-h,chapter-twenty-six,5090,5120,"Eight minutes later, the Volvo turned onto Quality Hill and stopped in",Blake,"","Eight minutes later, the Volvo turned onto Quality Hill and stopped in",true
+3,s194-she-walked-into-the-kitchen,chapter-twenty-six,5121,5176,"She walked into the kitchen.",Blake,"","She walked into the kitchen.",true
+3,s195-the-strahov-specification-not-the-preparation-proto,chapter-twenty-six,5177,5211,"the Strahov specification. Not the preparation protocol's target. His. The",Blake,"","the Strahov specification",true
+3,s196-cessation-of-the-eighth-chamber-not-the-flatline-of,chapter-twenty-six,5212,5226,"cessation of the eighth chamber. Not the flatline of the demonstration.",Andrew,"","cessation of the eighth chamber",true
+3,s197-she-closed-her-eyes-he-closed-his-two-people-at-a,chapter-twenty-six,5227,5253,"She closed her eyes. He closed his. Two people at a kitchen table",Andrew,"","Two people at a kitchen table",true
+3,s198-chapter-twenty-seven,chapter-twenty-seven,5254,5255,"CHAPTER TWENTY-SEVEN",Andrew,"","",true
+3,s199-april-the-same-flight-he-had-taken-nine-times-befor,chapter-twenty-seven,5256,5262,"April. The same flight he had taken nine times before. KEF in the early",Andrew,"April","",true
+3,s200-recognize-it-some-addresses-in-iceland-are-not-reco,chapter-twenty-seven,5263,5265,"recognize it. Some addresses in Iceland are not recognized; they are",Andrew,"","Some addresses in Iceland are not recognized; they are",true
+3,s201-the-cottage-was-where-he-had-left-it-the-wind-too,chapter-twenty-seven,5266,5276,"The cottage was where he had left it. The wind too. The lava field",Andrew,"","The cottage was where he had left it",true
+3,s202-his-feet-the-cottage-was-unlocked-the-way-it-had-b,chapter-twenty-seven,5277,5294,"his feet. The cottage was unlocked, the way it had been unlocked for",Andrew,"","The cottage was unlocked, the way it had been unlocked for",true
+3,s203-the-desk-was-dust-five-months-of-dust-from-a-cottag,chapter-twenty-seven,5295,5333,"The desk was dust. Five months of dust from a cottage in a lava",Aldric,"","Five months of dust from a cottage in a lava",true
+3,s204-cottage-would-receive-the-silence-the-silence-would,chapter-twenty-seven,5334,5370,"cottage would receive the silence. The silence would be the same silence",Aldric,"","cottage would receive the silence",true
+3,s205-in-the-mind-already-formed-blake-looked-at-the-corn,volume-two,-and-now,-today,-in-the-spring-of-his-fifty-second-year,,5371,5376,"in the mind already-formed. Blake looked at the corner of the cottage",Blake,"","Blake looked at the corner of the cottage",true
+3,s206-the-wind-moved-against-the-cottage-walls,volume-two,-and-now,-today,-in-the-spring-of-his-fifty-second-year,,5377,5404,"The wind moved against the cottage walls.",Aldric,"","The wind moved against the cottage walls.",true
+3,s207-some-things-i-cannot-write-there-is-a-chamber-at-th,volume-two,-and-now,-today,-in-the-spring-of-his-fifty-second-year,,5405,5405,"Some things I cannot write. There is a chamber at the bottom of an Ozark",Blake,"","There is a chamber at the bottom of an Ozark",true
+3,s208-lake-i-will-not-return-to-it-there-is-a-sphere-in,volume-two,-and-now,-today,-in-the-spring-of-his-fifty-second-year,,5406,5427,"lake; I will not return to it. There is a sphere in that chamber whose carvings no",Blake,"","There is a sphere in that chamber whose carvings no",true
+3,s209-the-cottage-was-warm-the-wind-was-high-the-breitli,volume-two,-and-now,-today,-in-the-spring-of-his-fifty-second-year,,5428,5455,"The cottage was warm. The wind was high. The Breitling on the",Blake,"","The cottage was warm",true
+3,ch-sub-book-two,sub-book-two,1586,1594,"sub-book-two",,"","",false
+3,ch-sub-book-three,sub-book-three,3431,3439,"sub-book-three",,"","",false

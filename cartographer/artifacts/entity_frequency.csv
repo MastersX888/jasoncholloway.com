@@ -1,0 +1,654 @@
+entity,occurrence_count,books,categories,sample_lines
+Foundation,243,1;2;3,gazetteer,B1:844|B1:2653|B1:4333|B1:4412|B1:4499|B1:4500|B1:4524|B1:4527|B1:4542|B1:4571|B1:4605|B2:196|B2:312|B2:543|B2:611|B2:636|B2:698|B2:717|B2:739|B2:788
+Kansas City,128,1;2;3,proper_noun_phrase,B1:199|B1:535|B1:748|B1:888|B1:966|B1:1001|B1:1231|B1:1310|B1:1489|B1:1491|B1:1626|B1:1698|B1:1721|B1:1915|B1:2072|B1:2227|B1:2232|B1:2462|B1:2508|B1:2698
+Iceland,109,1;2;3,gazetteer,B1:19|B2:12|B2:40|B2:45|B2:156|B2:236|B2:242|B2:610|B2:765|B2:783|B2:815|B2:904|B2:1083|B2:1163|B2:1170|B2:1210|B2:1325|B2:1556|B2:1765|B2:1820
+Prague,103,1;2;3,gazetteer,B1:76|B1:181|B1:1865|B1:2443|B1:2444|B1:2482|B1:2486|B1:2487|B1:2488|B1:2499|B1:2681|B1:2685|B1:2688|B1:2695|B1:2698|B1:2699|B1:2713|B1:2719|B1:2723|B1:2727
+Strahov,91,1;2;3,gazetteer,B1:2149|B1:2457|B1:2476|B1:2488|B1:2499|B1:2688|B1:2720|B1:2737|B1:2838|B1:2862|B1:2952|B1:3035|B1:3080|B1:3225|B1:3246|B1:3250|B1:3415|B1:3431|B1:3696|B1:3709
+Quality Hill,43,1;2;3,gazetteer;proper_noun_phrase,B1:4468|B1:4468|B2:1495|B2:1495|B2:1622|B2:1622|B2:1773|B2:1773|B2:1819|B2:1819|B2:3108|B2:3108|B3:53|B3:1429|B3:2147|B3:2147|B3:2265|B3:2334|B3:2334|B3:4005
+Cognigenics,41,2;3,gazetteer,B2:544|B2:1271|B2:1358|B2:1436|B2:2038|B2:2065|B2:2089|B2:2755|B2:2758|B2:2781|B2:2782|B2:2814|B2:2949|B2:3010|B2:3067|B2:3111|B2:3117|B2:4937|B2:4946|B2:4947
+SubTropolis,39,1;2;3,gazetteer,B1:263|B1:373|B1:456|B1:458|B1:501|B1:585|B1:694|B1:796|B1:949|B1:1040|B1:1266|B1:1298|B1:1462|B1:1723|B1:1725|B1:1877|B1:2107|B1:2108|B1:2202|B1:2226
+109 Hz,37,1;2;3,address,B1:199|B1:535|B1:748|B1:966|B1:1231|B1:1489|B1:1698|B1:1915|B1:2072|B1:2227|B1:2508|B1:2734|B1:3838|B1:3936|B1:4061|B2:2476|B2:2498|B2:2508|B2:3481|B2:3798
+Moreau,35,1;2;3,gazetteer,B1:987|B1:1312|B1:1313|B1:1578|B1:1589|B1:1727|B1:1752|B1:1754|B1:1794|B1:1803|B1:1813|B1:1814|B1:1843|B1:1844|B1:1876|B1:2180|B1:2190|B1:2345|B1:2349|B1:2545
+Aldric,34,1;2;3,gazetteer,B1:13|B1:26|B1:33|B1:38|B1:44|B1:46|B1:55|B1:59|B1:63|B1:67|B1:74|B1:89|B1:95|B1:111|B1:130|B1:134|B1:147|B1:155|B1:181|B1:2603
+Volta,34,2;3,gazetteer,B2:641|B2:661|B2:671|B2:699|B2:730|B2:1848|B2:4162|B2:4198|B2:4210|B2:4241|B2:4254|B2:4414|B2:4433|B2:4485|B2:4563|B2:6186|B2:6361|B2:6405|B2:6458|B2:6694
+The Breitling,30,1;2;3,proper_noun_phrase,B1:524|B1:952|B1:1929|B1:3737|B1:3855|B1:3887|B2:433|B2:1985|B2:2142|B2:2681|B2:4738|B2:4855|B2:5747|B2:5880|B2:5916|B2:6114|B2:6152|B2:6431|B2:6485|B2:6566
+Ghana,30,2;3,gazetteer,B2:609|B2:635|B2:640|B2:681|B2:2248|B2:4163|B2:4520|B2:4546|B2:4601|B2:4609|B2:4651|B2:4657|B2:4764|B2:4775|B2:6004|B2:6169|B2:6189|B2:6199|B2:6614|B2:6694
+Blake Masters,25,1;2;3,proper_noun_phrase,B1:19|B1:200|B1:468|B2:1490|B2:1660|B2:3815|B2:4727|B2:4857|B2:5602|B2:6081|B2:7183|B2:7326|B2:7434|B3:38|B3:92|B3:286|B3:1418|B3:1841|B3:2033|B3:3778
+Ars Notoria,24,1;2;3,proper_noun_phrase,B1:1329|B1:1663|B1:2342|B1:2556|B1:2559|B1:3333|B2:119|B2:266|B2:438|B2:473|B2:874|B2:991|B2:1681|B2:1866|B2:1889|B2:1893|B2:2170|B2:2245|B2:2330|B2:3316
+Nadia Volkov,22,1;2;3,proper_noun_phrase,B1:567|B2:195|B2:211|B2:617|B2:1185|B2:1465|B2:1493|B2:4873|B2:4874|B2:6081|B2:6189|B2:6392|B3:444|B3:1449|B3:2162|B3:3340|B3:3406|B3:3424|B3:3424|B3:4043
+Genessee Street,18,1,street;proper_noun_phrase,B1:1456|B1:1456|B1:1490|B1:1490|B1:1504|B1:1504|B1:1655|B1:1655|B1:2059|B1:2059|B1:2073|B1:2073|B1:2188|B1:2188|B1:2254|B1:2254|B1:2510|B1:2510
+Volta Region,15,2;3,proper_noun_phrase,B2:641|B2:661|B2:699|B2:1848|B2:4198|B2:4210|B2:4414|B2:4433|B2:4485|B2:6186|B2:6694|B2:6993|B2:7182|B2:7450|B3:3550
+108 Hz,15,2;3,address,B2:2234|B2:2245|B2:2253|B2:2353|B3:377|B3:386|B3:389|B3:394|B3:1184|B3:1193|B3:1242|B3:1811|B3:2103|B3:3442|B3:4411
+UMKC,14,1;2;3,gazetteer,B1:537|B1:1193|B2:3402|B2:3534|B3:199|B3:249|B3:566|B3:1230|B3:1761|B3:1843|B3:3899|B3:4211|B3:4477|B3:4602
+Specchi,14,2;3,gazetteer,B2:5134|B2:5147|B2:5156|B2:5181|B2:5230|B3:497|B3:1627|B3:1643|B3:1650|B3:1660|B3:1739|B3:2368|B3:2394|B3:2988
+Oscar-01,13,1,gazetteer,B1:372|B1:512|B1:602|B1:804|B1:1951|B1:2475|B1:2861|B1:3754|B1:3756|B1:3990|B1:3993|B1:4005|B1:4025
+The Strahov,13,1;2;3,proper_noun_phrase,B1:2499|B1:2862|B1:3415|B1:3916|B2:131|B2:165|B2:707|B2:2014|B2:3362|B2:4552|B2:5110|B3:562|B3:1969
+Andrew Chen,12,1;2;3,proper_noun_phrase,B1:1520|B2:5471|B2:5474|B2:5603|B2:5641|B2:6974|B2:7084|B3:554|B3:626|B3:3064|B3:4662|B3:4680
+Washington Street,12,2;3,gazetteer;street;proper_noun_phrase,B2:1494|B2:1494|B2:1494|B2:3504|B2:3504|B2:3504|B2:3751|B2:3751|B2:3751|B3:501|B3:501|B3:501
+The Moleskine,11,2;3,proper_noun_phrase,B2:210|B2:289|B2:4233|B2:5744|B2:5896|B2:6431|B2:7262|B2:7266|B3:432|B3:3813|B3:4175
+83 Hz,11,2;3,address,B2:2308|B2:5454|B2:5533|B3:631|B3:2111|B3:3049|B3:4509|B3:4582|B3:4639|B3:4655|B3:4674
+Jefferson,10,1,gazetteer,B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1930
+Jefferson City,10,1,proper_noun_phrase,B1:381|B1:469|B1:470|B1:521|B1:658|B1:736|B1:835|B1:919|B1:967|B1:1930
+Ama Ata,10,2,proper_noun_phrase,B2:4217|B2:4349|B2:4501|B2:4542|B2:4547|B2:5871|B2:6317|B2:6322|B2:6353|B2:7392
+But Blake,9,1;2,proper_noun_phrase,B1:379|B1:731|B1:993|B1:1507|B1:2739|B1:2881|B1:3536|B2:4074|B2:7382
+Genessee,9,1,gazetteer,B1:1456|B1:1490|B1:1504|B1:1655|B1:2059|B1:2073|B1:2188|B1:2254|B1:2510
+Venice,9,1;2;3,gazetteer,B1:3505|B2:32|B2:5089|B2:5128|B2:5206|B2:5230|B2:6004|B3:1656|B3:2399
+915 Hz,9,2;3,address,B2:12|B2:236|B2:610|B2:3183|B2:5417|B2:5648|B2:6423|B3:625|B3:4457
+Brother Aldric,8,1;3,proper_noun_phrase,B1:13|B1:26|B1:2603|B1:3581|B1:4259|B3:4348|B3:5368|B3:5393
+Meramec Caverns,8,1,gazetteer;proper_noun_phrase,B1:892|B1:892|B1:1041|B1:1041|B1:1069|B1:1069|B1:4005|B1:4005
+West Bottoms,8,1;2;3,gazetteer;proper_noun_phrase,B1:1496|B1:1496|B2:5153|B2:5153|B3:2926|B3:2926|B3:3126|B3:3126
+Yuki Tanaka,8,2;3,proper_noun_phrase,B2:3533|B2:3697|B2:3939|B2:5232|B3:549|B3:808|B3:848|B3:1106
+120 Hz,8,3,address,B3:251|B3:850|B3:1175|B3:1767|B3:2347|B3:3471|B3:4035|B3:4232
+Mýrdalsjökull,7,1;2;3,gazetteer,B1:19|B2:43|B2:822|B3:11|B3:38|B3:5255|B3:5418
+And Blake,7,1;2,proper_noun_phrase,B1:310|B1:1654|B1:1897|B1:2852|B1:3239|B1:4180|B2:5611
+Missouri River,7,1;3,gazetteer;proper_noun_phrase,B1:711|B1:864|B1:919|B1:1581|B1:1581|B3:3125|B3:3125
+The Ars Notoria,7,1;2,proper_noun_phrase,B1:1338|B1:2574|B2:842|B2:862|B2:1043|B2:2011|B2:2040
+Completion Sect,7,1;2;3,proper_noun_phrase,B1:1429|B1:2463|B1:3487|B1:3639|B2:2083|B2:4067|B3:2905
+Father Crane,7,1;2,proper_noun_phrase,B1:1823|B1:2462|B1:3628|B1:4388|B2:3511|B2:5373|B2:5383
+The Church,7,1;2;3,proper_noun_phrase,B1:1842|B1:1851|B2:877|B2:986|B2:990|B3:4808|B3:4810
+The Watchers,7,1,proper_noun_phrase,B1:3464|B1:3472|B1:3480|B1:3514|B1:3860|B1:3871|B1:3873
+60 Hz,7,1;2;3,address,B1:4476|B1:4588|B2:1001|B3:80|B3:4233|B3:4793|B3:4857
+Sabrina Volkov,7,2;3,proper_noun_phrase,B2:21|B2:1420|B2:1794|B2:3056|B3:2205|B3:2574|B3:2838
+Sefer Yetzirah,7,2,proper_noun_phrase,B2:128|B2:241|B2:439|B2:1029|B2:1547|B2:1703|B2:6143
+Teresa Morales,7,2,proper_noun_phrase,B2:1659|B2:2048|B2:2709|B2:2737|B2:2737|B2:6620|B2:6652
+The Maryland,7,2;3,proper_noun_phrase,B2:1953|B2:1967|B3:2861|B3:3178|B3:3208|B3:3209|B3:3235
+The Gothic,7,2;3,proper_noun_phrase,B2:2253|B2:2555|B2:2568|B2:2591|B2:3287|B2:4553|B3:331
+200 Hz,7,2;3,address,B2:6818|B3:934|B3:1016|B3:1247|B3:3017|B3:4229|B3:4253
+Reykjavik,7,2;3,gazetteer,B2:6973|B2:6973|B3:2363|B3:2371|B3:3011|B3:3020|B3:4617
+Mara Reeves,7,3,proper_noun_phrase,B3:205|B3:309|B3:371|B3:1135|B3:2436|B3:3416|B3:4354
+And Nadia,6,1;2;3,proper_noun_phrase,B1:741|B1:955|B1:2721|B2:3128|B3:2585|B3:4173
+The Keepers,6,1;2,proper_noun_phrase,B1:1309|B1:1317|B1:3122|B1:3178|B1:3724|B2:2037
+Central,6,1;2;3,gazetteer,B1:2555|B2:847|B2:1504|B2:3155|B2:3200|B3:1642
+Helena Vance,6,1;2;3,proper_noun_phrase,B1:3656|B2:1991|B2:2940|B2:5250|B2:6656|B3:1727
+Charles University,6,2,gazetteer;proper_noun_phrase,B2:91|B2:91|B2:105|B2:105|B2:1518|B2:1518
+Land Cruiser,6,2,proper_noun_phrase,B2:4187|B2:4234|B2:4383|B2:4437|B2:4547|B2:6185
+The Word,6,3,proper_noun_phrase,B3:13|B3:5055|B3:5081|B3:5166|B3:5384|B3:5417
+Miller Nichols,5,1;3,gazetteer;proper_noun_phrase,B1:200|B1:985|B1:992|B3:286|B3:286
+William Masters,5,1;2;3,proper_noun_phrase,B1:205|B1:223|B1:814|B2:7418|B3:5231
+The Custodians,5,1;2,proper_noun_phrase,B1:1371|B1:1598|B1:1749|B1:2848|B2:4076
+47 AM,5,1;2;3,address,B1:1478|B2:1199|B2:5297|B3:444|B3:1661
+Morning Coffee,5,1,proper_noun_phrase,B1:1699|B1:2509|B1:3901|B1:3928|B1:4127
+The Keeper,5,1;3,proper_noun_phrase,B1:2755|B1:3522|B3:1291|B3:1302|B3:1378
+11 PM,5,2;3,address,B2:1193|B2:3108|B2:3422|B3:2343|B3:3381
+The Specchi,5,2;3,proper_noun_phrase,B2:5134|B2:5156|B2:5181|B3:1643|B3:2988
+The Quality Hill,5,3,proper_noun_phrase,B3:53|B3:1429|B3:2265|B3:4090|B3:5028
+Margaret Chen,5,3,proper_noun_phrase,B3:507|B3:1680|B3:2108|B3:3157|B3:3332
+Sister Maria Theresa,5,3,proper_noun_phrase,B3:1807|B3:1811|B3:3800|B3:3837|B3:3946
+Mojave,4,1,gazetteer,B1:315|B1:367|B1:503|B1:4381
+But William,4,1,proper_noun_phrase,B1:631|B1:999|B1:3239|B1:4237
+Picture Cave,4,1,gazetteer;proper_noun_phrase,B1:1356|B1:1356|B1:2103|B1:2103
+Notebook Six,4,1,proper_noun_phrase,B1:1882|B1:1893|B1:2118|B1:2631
+The Carrier Mark,4,1;2,proper_noun_phrase,B1:2166|B2:539|B2:568|B2:591
+Nerudova Street,4,1,street;proper_noun_phrase,B1:2976|B1:2976|B1:3049|B1:3049
+São Paulo,4,1;3,gazetteer,B1:3153|B3:1665|B3:2397|B3:3542
+Kofi Asante,4,2;3,proper_noun_phrase,B2:635|B2:4190|B2:6198|B3:3551
+The Fontomfrom,4,2,proper_noun_phrase,B2:700|B2:760|B2:4346|B2:6267
+The Gospel,4,2,proper_noun_phrase,B2:1551|B2:1579|B2:1742|B2:3116
+Not Blake,4,2;3,proper_noun_phrase,B2:2044|B2:2874|B2:3078|B3:4781
+85 Hz,4,2;3,address,B2:2184|B3:4294|B3:4875|B3:5092
+David Kim,4,2;3,proper_noun_phrase,B2:2782|B2:2798|B3:344|B3:1150
+Thomas Webb,4,2,proper_noun_phrase,B2:2841|B2:2905|B2:2911|B2:2940
+Murano,4,2,gazetteer,B2:5108|B2:5134|B2:5146|B2:5181
+340 Hz,4,3,address,B3:420|B3:895|B3:920|B3:1104
+Gerald Stern,4,3,proper_noun_phrase,B3:1600|B3:1675|B3:2108|B3:3086
+Bohemia,3,1;3,gazetteer,B1:11|B1:3567|B3:16
+Nichols Library,3,1,gazetteer,B1:200|B1:985|B1:992
+Northrop,3,1,gazetteer,B1:224|B1:370|B1:3476
+James Masters,3,1;3,proper_noun_phrase,B1:227|B1:805|B3:5231
+Westport,3,1;2,gazetteer,B1:369|B2:242|B2:1702
+Don Quixote,3,1;2,proper_noun_phrase,B1:445|B2:473|B2:495
+Medieval History,3,1,proper_noun_phrase,B1:688|B1:998|B1:1002
+15 PM,3,1;2;3,address,B1:1232|B2:1418|B3:1265
+The Completion Sect,3,1;3,proper_noun_phrase,B1:1318|B1:3657|B3:2853
+Then Nadia,3,1,proper_noun_phrase,B1:1378|B1:2056|B1:2379
+Father Moreau,3,1,proper_noun_phrase,B1:1578|B1:1589|B1:1843
+In Prague,3,1,proper_noun_phrase,B1:1865|B1:2698|B1:2767
+Strahov Library,3,1,proper_noun_phrase,B1:2476|B1:3250|B1:3709
+Then Prague,3,1,proper_noun_phrase,B1:2487|B1:2695|B1:2727
+Codex Gigas,3,1;3,proper_noun_phrase,B1:2560|B1:2594|B3:1346
+Then Blake,3,1;2,proper_noun_phrase,B1:3315|B1:3373|B2:7167
+The Third Way,3,1,proper_noun_phrase,B1:3491|B1:3684|B1:4047
+Site Echo,3,1;3,proper_noun_phrase,B1:4223|B1:4238|B3:4323
+Nadia Katar,3,1;3,proper_noun_phrase,B1:4589|B1:4610|B3:3883
+The Don Quixote,3,2,proper_noun_phrase,B2:445|B2:491|B2:591
+Hotel Phillips,3,2,gazetteer;proper_noun_phrase,B2:619|B2:3091|B2:3091
+Reykjavík,3,2;3,gazetteer,B2:818|B2:908|B3:5317
+222 Hz,3,2,address,B2:920|B2:1139|B2:2106
+12 AM,3,2;3,address,B2:1190|B2:6388|B3:3896
+Senator Holt,3,2,proper_noun_phrase,B2:1658|B2:6598|B2:6599
+The Testament,3,2,proper_noun_phrase,B2:1881|B2:1992|B2:2117
+The Kabbalists,3,2;3,proper_noun_phrase,B2:2040|B2:4554|B3:5058
+Sagrada Fam,3,2,proper_noun_phrase,B2:2523|B2:2531|B2:3302
+19 Hz,3,2,address,B2:3405|B2:3445|B2:3461
+Because Blake,3,2,proper_noun_phrase,B2:3456|B2:3457|B2:5608
+Troost,3,2;3,gazetteer,B2:4123|B3:3110|B3:4004
+000 Hz,3,2,address,B2:5062|B2:6048|B2:7346
+Nature Neuroscience,3,2;3,proper_noun_phrase,B2:5251|B2:5347|B3:1722
+Father Emmanuel Crane Jr,3,2;3,proper_noun_phrase,B2:5339|B3:1887|B3:1981
+The All,3,2,proper_noun_phrase,B2:5981|B2:6380|B2:6382
+Through Kofi,3,2,proper_noun_phrase,B2:6327|B2:6343|B2:6353
+The Volta,3,2;3,proper_noun_phrase,B2:6405|B2:7208|B3:4612
+55 Hz,3,3,address,B3:79|B3:3677|B3:4107
+14 AM,3,3,address,B3:138|B3:570|B3:3078
+Marcus Chen,3,3,proper_noun_phrase,B3:144|B3:539|B3:4605
+52 Hz,3,3,address,B3:280|B3:684|B3:1175
+800 Hz,3,3,address,B3:925|B3:1055|B3:1082
+The April,3,3,proper_noun_phrase,B3:1286|B3:1353|B3:1393
+Creative Commons,3,3,proper_noun_phrase,B3:1621|B3:2991|B3:4891
+Theological Studies,3,3,proper_noun_phrase,B3:1900|B3:1981|B3:2022
+Johns Hopkins,3,3,proper_noun_phrase,B3:2576|B3:2916|B3:3235
+The Pentecost,3,3,proper_noun_phrase,B3:3066|B3:3376|B3:3409
+67 BPM,3,3,address,B3:3659|B3:4071|B3:4772
+Uncle Andrew,3,3,proper_noun_phrase,B3:4550|B3:4551|B3:4565
+Miller Nichols Library,2,1,proper_noun_phrase,B1:200|B1:985
+Breitling Navitimer,2,1,proper_noun_phrase,B1:215|B1:222
+Now Blake,2,1,proper_noun_phrase,B1:230|B1:655
+First National Bank,2,1,proper_noun_phrase,B1:474|B1:739
+Holy Mother,2,1,proper_noun_phrase,B1:687|B1:4470
+High Street,2,1,street;proper_noun_phrase,B1:836|B1:836
+47 PM,2,1;2,address,B1:952|B2:5652
+The Moreau,2,1;3,proper_noun_phrase,B1:987|B3:3324
+Since Father Moreau,2,1,proper_noun_phrase,B1:1312|B1:1313
+Washington County,2,1,gazetteer;proper_noun_phrase,B1:1356|B1:1356
+2847 Genessee Street,2,1,address,B1:1504|B1:2073
+Notebook Three,2,1,proper_noun_phrase,B1:1536|B1:2076
+Wyandotte,2,1,gazetteer,B1:1703|B1:1722
+Pennsylvania Avenue,2,1,street;proper_noun_phrase,B1:1754|B1:1754
+Margaret Masters,2,1;2,proper_noun_phrase,B1:1917|B2:3561
+Carrier Mark,2,1,proper_noun_phrase,B1:2174|B1:2197
+William Carroll Masters,2,1,proper_noun_phrase,B1:2303|B1:2411
+The Strahov Library,2,1,proper_noun_phrase,B1:2457|B1:2720
+The Ars,2,1;2,proper_noun_phrase,B1:2601|B2:1991
+The Voynich,2,1;2,proper_noun_phrase,B1:2602|B2:3275
+The Codex Gigas,2,1,proper_noun_phrase,B1:2602|B1:4398
+Powder Tower,2,1,proper_noun_phrase,B1:2940|B1:3070
+Moravian Riesling,2,1,proper_noun_phrase,B1:3007|B1:3722
+In Kansas City,2,1;2,proper_noun_phrase,B1:3010|B2:5880
+Town Square,2,1,proper_noun_phrase,B1:3070|B1:3569
+The Prague,2,1;2,proper_noun_phrase,B1:3192|B2:6892
+The Latin,2,1;2,proper_noun_phrase,B1:3341|B2:898
+With Andrew,2,1,proper_noun_phrase,B1:3378|B1:3776
+Third Way,2,1,proper_noun_phrase,B1:3700|B1:3790
+Theological Hall,2,1;2,proper_noun_phrase,B1:3710|B2:1095
+Third Street,2,1,street;proper_noun_phrase,B1:3942|B1:3942
+Nadia Masters,2,1,proper_noun_phrase,B1:4612|B1:4615
+Archaeological Method,2,2,proper_noun_phrase,B2:93|B2:638
+The Book,2,2,proper_noun_phrase,B2:128|B2:1048
+The Wisdom,2,2,proper_noun_phrase,B2:270|B2:290
+Protestant Bible,2,2,proper_noun_phrase,B2:271|B2:378
+Independence,2,2,gazetteer,B2:767|B2:4216
+City Market,2,2,gazetteer;proper_noun_phrase,B2:1696|B2:1696
+No Dr,2,2,street;proper_noun_phrase,B2:1699|B2:1699
+The Iceland,2,2;3,proper_noun_phrase,B2:1765|B3:4594
+The Merkabah,2,2,proper_noun_phrase,B2:2007|B2:4610
+The Christians,2,2,proper_noun_phrase,B2:2041|B2:4554
+Chartres Cathedral,2,2;3,proper_noun_phrase,B2:2279|B3:325
+The Cognigenics,2,2;3,proper_noun_phrase,B2:3111|B3:3141
+The Monroe Institute,2,2;3,proper_noun_phrase,B2:3338|B3:3142
+47 PM Kansas City,2,2;3,address,B2:3408|B3:1884
+Overland Park,2,2,gazetteer;proper_noun_phrase,B2:3535|B2:3535
+Monroe Institute,2,2;3,proper_noun_phrase,B2:3589|B3:2916
+Not How,2,2,proper_noun_phrase,B2:3748|B2:3748
+2004 Land Cruiser,2,2,address,B2:4187|B2:6185
+Ama Ata Asante,2,2,proper_noun_phrase,B2:4224|B2:4465
+The Ashanti,2,2;3,proper_noun_phrase,B2:4553|B3:5058
+00 PM,2,2;3,address,B2:4675|B3:1116
+Commerce Committee,2,2,proper_noun_phrase,B2:4894|B2:4959
+Frequency Foundation,2,2,proper_noun_phrase,B2:4902|B2:6678
+Your Foundation,2,2,proper_noun_phrase,B2:4937|B2:5364
+Reagan National,2,2,proper_noun_phrase,B2:5052|B2:6793
+Sarah Chen,2,2,proper_noun_phrase,B2:5448|B2:6517
+The Stanford,2,2,proper_noun_phrase,B2:5486|B2:6542
+Year Three,2,2,proper_noun_phrase,B2:5543|B2:5544
+The Icelandic,2,2,proper_noun_phrase,B2:5925|B2:7433
+To Ghana,2,2,proper_noun_phrase,B2:6868|B2:6869
+Cave Three,2,2,proper_noun_phrase,B2:6976|B2:7079
+The Body,2,3,proper_noun_phrase,B3:19|B3:5384
+Volume Two,2,3,proper_noun_phrase,B3:19|B3:5354
+The Listening,2,3,proper_noun_phrase,B3:30|B3:5384
+Harris Hall,2,3,proper_noun_phrase,B3:249|B3:655
+Sofia Petrov,2,3,proper_noun_phrase,B3:304|B3:1145
+If Blake,2,3,proper_noun_phrase,B3:495|B3:511
+48 Hz,2,3,address,B3:858|B3:3470
+440 Hz,2,3,address,B3:866|B3:3475
+220 Hz,2,3,address,B3:897|B3:4147
+Grand Boulevard,2,3,street;proper_noun_phrase,B3:932|B3:932
+Mud Pie Vegan Bakery,2,3,proper_noun_phrase,B3:932|B3:1236
+Thom Yorke,2,3,proper_noun_phrase,B3:938|B3:1247
+180 Hz,2,3,address,B3:998|B3:1253
+Summit,2,3,gazetteer,B3:1384|B3:4763
+Acoustic Consciousness,2,3,proper_noun_phrase,B3:1605|B3:1742
+The Board,2,3,proper_noun_phrase,B3:1790|B3:1839
+But Dr,2,3,street;proper_noun_phrase,B3:2604|B3:2604
+Hour Eight,2,3,proper_noun_phrase,B3:2654|B3:2694
+Kyoto University,2,3,proper_noun_phrase,B3:3034|B3:3502
+Mary Magdalene,2,3,proper_noun_phrase,B3:3424|B3:4808
+Buenos Aires,2,3,proper_noun_phrase,B3:3444|B3:3461
+Adunni Okafor,2,3,proper_noun_phrase,B3:3559|B3:3621
+91 BPM,2,3,address,B3:3678|B3:3729
+71 BPM,2,3,address,B3:3803|B3:3808
+The October,2,3,proper_noun_phrase,B3:4030|B3:4166
+The Moleskines,2,3,proper_noun_phrase,B3:4478|B3:4615
+The Volvo,2,3,proper_noun_phrase,B3:4865|B3:4875
+Linking Road,2,3,street;proper_noun_phrase,B3:4970|B3:4970
+The Lamy,2,3,proper_noun_phrase,B3:5033|B3:5082
+The Inheritance,1,1,proper_noun_phrase,B1:2
+Holy Father,1,1,proper_noun_phrase,B1:78
+Cold War,1,1,proper_noun_phrase,B1:207
+1967 Breitling Navitimer,1,1,address,B1:222
+What Blake,1,1,proper_noun_phrase,B1:258
+Air Force,1,1,proper_noun_phrase,B1:372
+Before Blake,1,1,proper_noun_phrase,B1:488
+71 Blackbird,1,1,address,B1:627
+38 Lightning,1,1,address,B1:627
+12 Oxcart,1,1,address,B1:627
+Dragon Lady,1,1,proper_noun_phrase,B1:627
+Sister Nadia Volkov,1,1,proper_noun_phrase,B1:683
+Cognitive Transformation,1,1,proper_noun_phrase,B1:689
+The Notory Arts Reconsidered,1,1,proper_noun_phrase,B1:690
+Either Sister Nadia Volkov,1,1,proper_noun_phrase,B1:707
+The Missouri River Runner,1,1,proper_noun_phrase,B1:711
+Main Streets,1,1,proper_noun_phrase,B1:718
+The Missouri State Capitol,1,1,proper_noun_phrase,B1:735
+Patricia Thornton,1,1,proper_noun_phrase,B1:749
+Don Quixote Blake,1,1,proper_noun_phrase,B1:764
+For Blake Masters,1,1,proper_noun_phrase,B1:765
+For Blake,1,1,proper_noun_phrase,B1:811
+The Missouri River,1,1,proper_noun_phrase,B1:864
+000 BC,1,1,address,B1:887
+Grandpa William,1,1,proper_noun_phrase,B1:908
+15 Missouri River Runner,1,1,address,B1:919
+Missouri River Runner,1,1,proper_noun_phrase,B1:919
+To Nadia,1,1,proper_noun_phrase,B1:933
+For God,1,1,proper_noun_phrase,B1:934
+Watched Missouri,1,1,proper_noun_phrase,B1:936
+Home Depot,1,1,proper_noun_phrase,B1:969
+The Miller Nichols Library,1,1,proper_noun_phrase,B1:992
+Religious Studies,1,1,proper_noun_phrase,B1:1003
+Comparative Religion,1,1,proper_noun_phrase,B1:1003
+And Comparative,1,1,proper_noun_phrase,B1:1003
+Special Collections,1,1,proper_noun_phrase,B1:1009
+Pad Thai,1,1,proper_noun_phrase,B1:1250
+Tom Kha,1,1,proper_noun_phrase,B1:1250
+About James Masters,1,1,proper_noun_phrase,B1:1315
+North American,1,1,proper_noun_phrase,B1:1360
+But Nadia,1,1,proper_noun_phrase,B1:1405
+Jesus Christ,1,1,proper_noun_phrase,B1:1554
+The Masters,1,1,proper_noun_phrase,B1:1559
+Kansas City Star,1,1,proper_noun_phrase,B1:1580
+Sacred Heart Church,1,1,proper_noun_phrase,B1:1581
+Sacred Heart,1,1,proper_noun_phrase,B1:1583
+Since Sister Katarina,1,1,proper_noun_phrase,B1:1609
+Columbian North America,1,1,proper_noun_phrase,B1:1634
+The Jesuits,1,1,proper_noun_phrase,B1:1661
+Bethany Falls,1,1,gazetteer,B1:1725
+The Bethany Falls,1,1,proper_noun_phrase,B1:1725
+Limestone Company,1,1,proper_noun_phrase,B1:1726
+Pennsylvania,1,1,gazetteer,B1:1754
+1112 Pennsylvania Avenue,1,1,address,B1:1754
+Father Vincent Moreau,1,1,proper_noun_phrase,B1:1794
+Sister Volkov,1,1,proper_noun_phrase,B1:1833
+Sister Katarina,1,1,proper_noun_phrase,B1:1865
+Walnut,1,1,gazetteer,B1:1993
+At Ethan,1,1,proper_noun_phrase,B1:2007
+Whatever Dad,1,1,proper_noun_phrase,B1:2010
+Called Nadia,1,1,proper_noun_phrase,B1:2051
+Post Office,1,1,proper_noun_phrase,B1:2055
+The Analysis Chamber,1,1,proper_noun_phrase,B1:2073
+Mud Glyph,1,1,proper_noun_phrase,B1:2103
+Gottschall Rockshelter,1,1,proper_noun_phrase,B1:2104
+First Figura,1,1,proper_noun_phrase,B1:2125
+With Elena,1,1,proper_noun_phrase,B1:2128
+French Jesuits,1,1,proper_noun_phrase,B1:2174
+New World,1,1,proper_noun_phrase,B1:2180
+The Fibonacci,1,1,proper_noun_phrase,B1:2333
+Father Elias Dryden,1,1,proper_noun_phrase,B1:2431
+Father Dryden,1,1,proper_noun_phrase,B1:2439
+Whatever William,1,1,proper_noun_phrase,B1:2500
+Sankt Emmeram,1,1,proper_noun_phrase,B1:2542
+Recite Psalm,1,1,proper_noun_phrase,B1:2583
+Latin Vulgate,1,1,proper_noun_phrase,B1:2595
+From Nadia,1,1,proper_noun_phrase,B1:2772
+Morning Coffees,1,1,proper_noun_phrase,B1:2858
+Except Blake,1,1,proper_noun_phrase,B1:2870
+Havel Airport,1,1,proper_noun_phrase,B1:2896
+Old Town,1,1,proper_noun_phrase,B1:2913
+Miroslav Khoury,1,1,proper_noun_phrase,B1:2976
+In America,1,1,proper_noun_phrase,B1:2981
+The European,1,1,proper_noun_phrase,B1:2981
+From Rudolf,1,1,proper_noun_phrase,B1:3023
+Not God,1,1,proper_noun_phrase,B1:3143
+The Thai,1,1,proper_noun_phrase,B1:3212
+Giving Blake,1,1,proper_noun_phrase,B1:3262
+And Keepers,1,1,proper_noun_phrase,B1:3489
+And Prague,1,1,proper_noun_phrase,B1:3505
+The International Symposium,1,1,proper_noun_phrase,B1:3566
+Medieval Manuscript Studies,1,1,proper_noun_phrase,B1:3566
+Conference Room,1,1,proper_noun_phrase,B1:3567
+Grand Hotel Bohemia,1,1,proper_noun_phrase,B1:3567
+Klaus Bergmann,1,1,proper_noun_phrase,B1:3601
+Professor Sarah Chen,1,1,proper_noun_phrase,B1:3616
+Thomas Crane,1,1,proper_noun_phrase,B1:3633
+The Theological Hall,1,1,proper_noun_phrase,B1:3712
+The Motif Watchers,1,1,proper_noun_phrase,B1:3727
+Andrew Masters,1,1,proper_noun_phrase,B1:3728
+What James,1,1,proper_noun_phrase,B1:3789
+The Moravian Riesling,1,1,proper_noun_phrase,B1:3797
+The Gr,1,1,proper_noun_phrase,B1:3859
+Everything William,1,1,proper_noun_phrase,B1:3895
+That William,1,1,proper_noun_phrase,B1:3960
+Before Miroslav,1,1,proper_noun_phrase,B1:3999
+Strahov Latin,1,1,proper_noun_phrase,B1:4079
+Professor Chen,1,1,proper_noun_phrase,B1:4079
+The Ozarks,1,1,proper_noun_phrase,B1:4201
+Analysis Chamber,1,1,proper_noun_phrase,B1:4292
+The Ozark,1,1,proper_noun_phrase,B1:4376
+The Portuguese,1,1,proper_noun_phrase,B1:4387
+Or William,1,1,proper_noun_phrase,B1:4416
+The Masters Foundation,1,1,proper_noun_phrase,B1:4500
+Acoustic Research,1,1,proper_noun_phrase,B1:4500
+The Jackson County,1,1,proper_noun_phrase,B1:4554
+The Slovak,1,1,proper_noun_phrase,B1:4616
+The Grimoire,1,2,proper_noun_phrase,B2:2
+De Occulta Philosophia,1,2,proper_noun_phrase,B2:120
+Liber Juratus,1,2,proper_noun_phrase,B2:122
+Sworn Book,1,2,proper_noun_phrase,B2:122
+Liber Sapientiae,1,2,proper_noun_phrase,B2:125
+Liber Esdrae Quartus,1,2,proper_noun_phrase,B2:126
+Fourth Book,1,2,proper_noun_phrase,B2:126
+10 PM Kansas City,1,2,address,B2:195
+Just Nadia,1,2,proper_noun_phrase,B2:243
+Divine Wisdom,1,2,proper_noun_phrase,B2:285
+The Big Bang,1,2,proper_noun_phrase,B2:295
+Then Sirach,1,2,proper_noun_phrase,B2:299
+And Sirach,1,2,proper_noun_phrase,B2:344
+But Andrew,1,2,proper_noun_phrase,B2:358
+180 BCE,1,2,address,B2:359
+The Fourth Book,1,2,proper_noun_phrase,B2:377
+Arctic September,1,2,proper_noun_phrase,B2:381
+Corpus Hermeticum,1,2,proper_noun_phrase,B2:439
+The Ormsby,1,2,proper_noun_phrase,B2:450
+The French,1,2,proper_noun_phrase,B2:540
+New France,1,2,proper_noun_phrase,B2:561
+The Hotel Phillips Building,1,2,proper_noun_phrase,B2:619
+Volta Acoustic Survey,1,2,proper_noun_phrase,B2:671
+The Notary Art,1,2,proper_noun_phrase,B2:862
+1230 CE,1,2,address,B2:863
+The December,1,2,proper_noun_phrase,B2:904
+333 Hz,1,2,address,B2:926
+Sub Tropolis,1,2,proper_noun_phrase,B2:950
+The Kabbalistic,1,2,proper_noun_phrase,B2:1030
+Kabbalistic Tree,1,2,proper_noun_phrase,B2:1044
+Which Nadia,1,2,proper_noun_phrase,B2:1049
+17 PM,1,2,address,B2:1401
+18 PM,1,2,address,B2:1412
+Central Europeans,1,2,proper_noun_phrase,B2:1504
+Papyrus Berolinensis,1,2,proper_noun_phrase,B2:1551
+The Berlin,1,2,proper_noun_phrase,B2:1551
+Not Mary,1,2,proper_noun_phrase,B2:1598
+Then Mary,1,2,proper_noun_phrase,B2:1632
+And Peter,1,2,proper_noun_phrase,B2:1632
+And Levi,1,2,proper_noun_phrase,B2:1675
+No Foundation,1,2,proper_noun_phrase,B2:1698
+To Sabrina,1,2,proper_noun_phrase,B2:1814
+The Solomon,1,2,proper_noun_phrase,B2:1884
+United States,1,2,proper_noun_phrase,B2:2047
+But Teresa,1,2,proper_noun_phrase,B2:2052
+Emmanuel Crane Jr,1,2,proper_noun_phrase,B2:2065
+Emmanuel Crane Sr,1,2,proper_noun_phrase,B2:2082
+Royal Portal,1,2,proper_noun_phrase,B2:2214
+But Moreau,1,2,proper_noun_phrase,B2:2255
+The Chartres,1,2,proper_noun_phrase,B2:2288
+The March,1,2,proper_noun_phrase,B2:2348
+And Andrew,1,2,proper_noun_phrase,B2:2353
+The Uppsala,1,2,proper_noun_phrase,B2:2434
+Vendel Period,1,2,proper_noun_phrase,B2:2434
+Christian Scandinavia,1,2,proper_noun_phrase,B2:2435
+115 Hz,1,2,address,B2:2440
+Professor Astrid Lindblom,1,2,proper_noun_phrase,B2:2444
+Uppsala University Department,1,2,proper_noun_phrase,B2:2444
+The Norse,1,2,proper_noun_phrase,B2:2479
+The Cripta,1,2,proper_noun_phrase,B2:2523
+What Gaud,1,2,proper_noun_phrase,B2:2587
+The Gaud,1,2,proper_noun_phrase,B2:2591
+The Santa Cova,1,2,proper_noun_phrase,B2:2597
+Holy Cave,1,2,proper_noun_phrase,B2:2597
+Black Madonna,1,2,proper_noun_phrase,B2:2608
+The Madonna,1,2,proper_noun_phrase,B2:2617
+The Mediterranean,1,2,proper_noun_phrase,B2:2680
+City Plaza,1,2,proper_noun_phrase,B2:2728
+Internal Cognigenics,1,2,proper_noun_phrase,B2:2781
+Silver Spring,1,2,proper_noun_phrase,B2:2842
+After Teresa,1,2,proper_noun_phrase,B2:3047
+Not Andrew,1,2,proper_noun_phrase,B2:3078
+Three Marys,1,2,proper_noun_phrase,B2:3134
+Central European,1,2,proper_noun_phrase,B2:3155
+17 AM Prague,1,2,address,B2:3184
+23 Hz,1,2,address,B2:3244
+112 Hz,1,2,address,B2:3295
+04 Hz,1,2,address,B2:3407
+What Andrew,1,2,proper_noun_phrase,B2:3411
+To Blake,1,2,proper_noun_phrase,B2:3456
+47 AM Prague,1,2,address,B2:3463
+Masters Foundation,1,2,proper_noun_phrase,B2:3503
+The Hemi,1,2,proper_noun_phrase,B2:3589
+After Yuki,1,2,proper_noun_phrase,B2:3716
+Not That,1,2,proper_noun_phrase,B2:3748
+Monthly Personal Check,1,2,proper_noun_phrase,B2:3803
+Foundation Nadia,1,2,proper_noun_phrase,B2:3837
+Not English,1,2,proper_noun_phrase,B2:3877
+And Sabrina,1,2,proper_noun_phrase,B2:3974
+The Heritage Ministry,1,2,proper_noun_phrase,B2:4000
+Heritage Ministry,1,2,proper_noun_phrase,B2:4001
+State Board,1,2,proper_noun_phrase,B2:4048
+Higher Education,1,2,proper_noun_phrase,B2:4048
+Missouri Board,1,2,proper_noun_phrase,B2:4060
+About Sister Maria Theresa,1,2,proper_noun_phrase,B2:4133
+Kotoka International,1,2,proper_noun_phrase,B2:4180
+Professor Masters,1,2,proper_noun_phrase,B2:4194
+Paramount Chiefs,1,2,proper_noun_phrase,B2:4208
+Not Fontomfrom,1,2,proper_noun_phrase,B2:4430
+The Fall,1,2,proper_noun_phrase,B2:4792
+The Senate,1,2,proper_noun_phrase,B2:4865
+Senator Margaret Holt,1,2,proper_noun_phrase,B2:4894
+What Cognigenics,1,2,proper_noun_phrase,B2:4968
+The Dual Use Research,1,2,proper_noun_phrase,B2:4987
+Every Ashanti,1,2,proper_noun_phrase,B2:4992
+Lincoln Memorial,1,2,proper_noun_phrase,B2:5075
+Strahov Premonstratensian,1,2,proper_noun_phrase,B2:5093
+Father Benjamin Moreau,1,2,proper_noun_phrase,B2:5152
+Francis Parish,1,2,proper_noun_phrase,B2:5153
+Master Builders,1,2,proper_noun_phrase,B2:5182
+Between Chartres,1,2,proper_noun_phrase,B2:5197
+Fondamenta Nuove,1,2,proper_noun_phrase,B2:5201
+San Michele,1,2,proper_noun_phrase,B2:5202
+Compressed Preparation Protocols,1,2,proper_noun_phrase,B2:5264
+Frequency Therapy,1,2,proper_noun_phrase,B2:5265
+Stratification Framework,1,2,proper_noun_phrase,B2:5265
+Emmanuel Crane,1,2,proper_noun_phrase,B2:5351
+Crane Jr,1,2,proper_noun_phrase,B2:5401
+Urgency Argument,1,2,proper_noun_phrase,B2:5401
+Full Discussion,1,2,proper_noun_phrase,B2:5401
+14 PM,1,2,address,B2:5418
+Stanford University School,1,2,proper_noun_phrase,B2:5435
+Behavioral Sciences,1,2,proper_noun_phrase,B2:5436
+Computational Neuroscience,1,2,proper_noun_phrase,B2:5437
+Called Jennifer,1,2,proper_noun_phrase,B2:5537
+Year One,1,2,proper_noun_phrase,B2:5542
+Icelandic January,1,2,proper_noun_phrase,B2:5546
+After Blake,1,2,proper_noun_phrase,B2:5564
+While Blake,1,2,proper_noun_phrase,B2:5596
+Vance Doctrine,1,2,proper_noun_phrase,B2:5598
+His Moleskine,1,2,proper_noun_phrase,B2:5731
+100 Hz,1,2,address,B2:5739
+Dialed Nadia,1,2,proper_noun_phrase,B2:5848
+In Iceland,1,2,proper_noun_phrase,B2:5881
+The Metatron,1,2,proper_noun_phrase,B2:5902
+Nag Hammadi,1,2,proper_noun_phrase,B2:5949
+Eight Moleskines,1,2,proper_noun_phrase,B2:6006
+110 Hz,1,2,address,B2:6074
+The Hypogeum,1,2,proper_noun_phrase,B2:6692
+Strahov Monastery,1,2,proper_noun_phrase,B2:6693
+Masters Frequency,1,2,proper_noun_phrase,B2:6747
+The Capitol,1,2,proper_noun_phrase,B2:6782
+Late November,1,2,proper_noun_phrase,B2:6835
+To Ama Ata,1,2,proper_noun_phrase,B2:6869
+Then December,1,2,proper_noun_phrase,B2:6913
+The November,1,2,proper_noun_phrase,B2:6940
+The Volta Region,1,2,proper_noun_phrase,B2:6956
+The Raphael,1,2,proper_noun_phrase,B2:7106
+Land Cruisers,1,2,proper_noun_phrase,B2:7301
+What Jesus,1,2,proper_noun_phrase,B2:7307
+The Kingdom,1,3,proper_noun_phrase,B3:2
+Volume One,1,3,proper_noun_phrase,B3:13
+Kansas City Royals,1,3,proper_noun_phrase,B3:144
+Marcus Blake,1,3,proper_noun_phrase,B3:147
+Acoustic Perception,1,3,proper_noun_phrase,B3:199
+Then James Okafor,1,3,proper_noun_phrase,B3:300
+First Kansas City,1,3,proper_noun_phrase,B3:432
+Senior Advisor,1,3,proper_noun_phrase,B3:549
+Continuous Perception Support,1,3,proper_noun_phrase,B3:549
+Chief Science Officer,1,3,proper_noun_phrase,B3:554
+The Masters Frequency Foundation,1,3,proper_noun_phrase,B3:596
+62 Hz,1,3,address,B3:611
+The Price Chopper,1,3,proper_noun_phrase,B3:843
+Price Choppers,1,3,proper_noun_phrase,B3:843
+Is Blake,1,3,proper_noun_phrase,B3:980
+400 Hz,1,3,address,B3:1015
+725 RPM,1,3,address,B3:1019
+20 Hz,1,3,address,B3:1035
+James Okafor,1,3,proper_noun_phrase,B3:1140
+Laura Chen,1,3,proper_noun_phrase,B3:1154
+Marcus Jr,1,3,proper_noun_phrase,B3:1155
+Sarah Washington,1,3,proper_noun_phrase,B3:1156
+The Charcoal Overcoat,1,3,proper_noun_phrase,B3:1285
+His Latin,1,3,proper_noun_phrase,B3:1328
+315 MHz,1,3,address,B3:1379
+Nissan Altima,1,3,proper_noun_phrase,B3:1381
+The Opposition,1,3,proper_noun_phrase,B3:1587
+Cognigenics Inc,1,3,proper_noun_phrase,B3:1604
+United States Patent Application No,1,3,proper_noun_phrase,B3:1604
+23 AM,1,3,address,B3:1612
+23 AM Central European Time,1,3,address,B3:1642
+Central European Time,1,3,proper_noun_phrase,B3:1642
+By Thursday,1,3,proper_noun_phrase,B3:1665
+By Friday,1,3,proper_noun_phrase,B3:1673
+Judith Hollander,1,3,proper_noun_phrase,B3:1724
+Methodological Concerns,1,3,proper_noun_phrase,B3:1724
+Acoustic Consciousness Research,1,3,proper_noun_phrase,B3:1725
+Critical Analysis,1,3,proper_noun_phrase,B3:1725
+Peter Kline,1,3,proper_noun_phrase,B3:1725
+Replication Failure,1,3,proper_noun_phrase,B3:1726
+Human Frequency Resonance,1,3,proper_noun_phrase,B3:1726
+Compressed Acoustic,1,3,proper_noun_phrase,B3:1727
+Exposure Protocols,1,3,proper_noun_phrase,B3:1728
+Safety Analysis,1,3,proper_noun_phrase,B3:1728
+The Hollander,1,3,proper_noun_phrase,B3:1734
+The Kline,1,3,proper_noun_phrase,B3:1737
+The Vance,1,3,proper_noun_phrase,B3:1739
+Institutional Capture,1,3,proper_noun_phrase,B3:1743
+James Strand,1,3,proper_noun_phrase,B3:1755
+Eleanor Whitman,1,3,proper_noun_phrase,B3:1771
+45 CFR,1,3,address,B3:1791
+Aaron Levy,1,3,proper_noun_phrase,B3:1813
+The Sisters,1,3,proper_noun_phrase,B3:1832
+Tell Blake,1,3,proper_noun_phrase,B3:1864
+The Acoustic Gospel,1,3,proper_noun_phrase,B3:1982
+Delayed Disclosure,1,3,proper_noun_phrase,B3:1983
+Colonel David Reese,1,3,proper_noun_phrase,B3:2058
+Technology Directorate,1,3,proper_noun_phrase,B3:2059
+The Lancet,1,3,proper_noun_phrase,B3:2071
+The Department,1,3,proper_noun_phrase,B3:2075
+Colonel Reese,1,3,proper_noun_phrase,B3:2136
+Use Research,1,3,proper_noun_phrase,B3:2141
+Great Plains,1,3,proper_noun_phrase,B3:2188
+00 AM,1,3,address,B3:2473
+Lin Chen,1,3,proper_noun_phrase,B3:2497
+Tomoko Ando,1,3,proper_noun_phrase,B3:2498
+Block Three,1,3,proper_noun_phrase,B3:2502
+Week Thirty,1,3,proper_noun_phrase,B3:2531
+Hour One,1,3,proper_noun_phrase,B3:2558
+By Hour Eight,1,3,proper_noun_phrase,B3:2594
+Block Two,1,3,proper_noun_phrase,B3:2694
+55 AM,1,3,address,B3:2739
+Focus Level,1,3,proper_noun_phrase,B3:2760
+The Focus Level,1,3,proper_noun_phrase,B3:2765
+Then Yuki,1,3,proper_noun_phrase,B3:2783
+The Lempel,1,3,proper_noun_phrase,B3:2812
+Level Two,1,3,proper_noun_phrase,B3:2834
+Every Moleskine,1,3,proper_noun_phrase,B3:2957
+Everything Andrew Chen,1,3,proper_noun_phrase,B3:2989
+Midnight Reykjavik,1,3,proper_noun_phrase,B3:3011
+The Osaka,1,3,proper_noun_phrase,B3:3033
+Geology Department,1,3,proper_noun_phrase,B3:3063
+22 AM,1,3,address,B3:3079
+45 AM,1,3,address,B3:3080
+The June,1,3,proper_noun_phrase,B3:3124
+Only Nadia,1,3,proper_noun_phrase,B3:3143
+17 AM,1,3,address,B3:3169
+Colonel James Harding,1,3,proper_noun_phrase,B3:3170
+The Pentagon,1,3,proper_noun_phrase,B3:3174
+Colonel Harding,1,3,proper_noun_phrase,B3:3177
+Notify Foundation,1,3,proper_noun_phrase,B3:3230
+Michael Chen,1,3,proper_noun_phrase,B3:3236
+Then Iceland,1,3,proper_noun_phrase,B3:3305
+Executive Director,1,3,proper_noun_phrase,B3:3406
+The Frequency,1,3,proper_noun_phrase,B3:3432
+Calle Defensa,1,3,proper_noun_phrase,B3:3444
+San Telmo,1,3,proper_noun_phrase,B3:3444
+Elena Guti,1,3,proper_noun_phrase,B3:3457
+Western Hemisphere,1,3,proper_noun_phrase,B3:3472
+Engineering Building,1,3,proper_noun_phrase,B3:3501
+Professor Kenji Yamamoto,1,3,proper_noun_phrase,B3:3509
+Acoustics Department,1,3,proper_noun_phrase,B3:3510
+Izu Peninsula,1,3,proper_noun_phrase,B3:3518
+Professor Yamamoto,1,3,proper_noun_phrase,B3:3528
+Acoustical Society,1,3,proper_noun_phrase,B3:3536
+Local Geological Variation,1,3,proper_noun_phrase,B3:3537
+Acoustic Resonance Chamber Output,1,3,proper_noun_phrase,B3:3538
+An Initial Observation,1,3,proper_noun_phrase,B3:3538
+44 Hz,1,3,address,B3:3580
+50 Hz,1,3,address,B3:3581
+West African,1,3,proper_noun_phrase,B3:3581
+30 AM,1,3,address,B3:3849
+58 BPM,1,3,address,B3:3873
+67 Hz,1,3,address,B3:3895
+40 AM,1,3,address,B3:4001
+30 Hz,1,3,address,B3:4225
+Price Chopper,1,3,proper_noun_phrase,B3:4228
+The Muzak,1,3,proper_noun_phrase,B3:4233
+The Norton,1,3,proper_noun_phrase,B3:4241
+500 Hz,1,3,address,B3:4262
+111 Hz,1,3,address,B3:4272
+Not Norton,1,3,proper_noun_phrase,B3:4404
+California Pinot,1,3,proper_noun_phrase,B3:4404
+But Jennifer,1,3,proper_noun_phrase,B3:4519
+Tell Sophie,1,3,proper_noun_phrase,B3:4556
+250 Hz,1,3,address,B3:4568
+Kofi Mensah,1,3,proper_noun_phrase,B3:4612
+Iceland Geology,1,3,proper_noun_phrase,B3:4667
+262 Hz,1,3,address,B3:4702
+44 AM,1,3,address,B3:4827
+Eva Lindqvist,1,3,proper_noun_phrase,B3:4827
+44 PM,1,3,address,B3:4828
+53 AM,1,3,address,B3:4863
+By February,1,3,proper_noun_phrase,B3:4886
+Kenji Yamamoto,1,3,proper_noun_phrase,B3:4907
+Rural Germany,1,3,proper_noun_phrase,B3:4928
+Black Forest,1,3,proper_noun_phrase,B3:4928
+Lena Hoffmann,1,3,proper_noun_phrase,B3:4933
+Rudolf Werner,1,3,proper_noun_phrase,B3:4942
+Priya Desai,1,3,proper_noun_phrase,B3:4966
+65 Hz,1,3,address,B3:4971
+80 Hz,1,3,address,B3:4971
+Arjun Mehta,1,3,proper_noun_phrase,B3:4974
+Ain Sof,1,3,proper_noun_phrase,B3:5058
+The February,1,3,proper_noun_phrase,B3:5109
+Volume Three,1,3,proper_noun_phrase,B3:5355
+Jason Carroll Holloway,1,3,proper_noun_phrase,B3:5441
+English Literature,1,3,proper_noun_phrase,B3:5441
+Dobbs Ferry,1,3,proper_noun_phrase,B3:5442
+New York,1,3,proper_noun_phrase,B3:5442
+Creative Writing,1,3,proper_noun_phrase,B3:5443
+Data Analytics,1,3,proper_noun_phrase,B3:5443
+Seventh City Press,1,3,proper_noun_phrase,B3:5448

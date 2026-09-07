@@ -1,0 +1,122 @@
+[
+  {
+    "id": "b1-picture-cave-warren-osage",
+    "book": 1,
+    "line_start": 1356,
+    "line_end": 1358,
+    "old": " \"Picture Cave,\" she said. \"Washington County, Missouri. Dated to\nat least a thousand years ago. Pre-Columbian. Pre-European.\nPre-Christian.\"",
+    "new": " \"Picture Cave,\" she said. \"Warren County, Missouri. Osage ancestral\nground, sacred to them still. Dated to at least a thousand years ago.\nPre-Columbian. Pre-European. Pre-Christian.\"",
+    "ruling": "7B",
+    "note": "Washington County -> Warren County; one-clause Osage ancestral acknowledgment."
+  },
+  {
+    "id": "b1-genessee-address-and-storage-sign",
+    "book": 1,
+    "line_start": 1504,
+    "line_end": 1506,
+    "old": " 2847 Genessee Street looked abandoned. Graffiti on the loading\ndock. Windows covered with plywood. A faded sign: MISSOURI\nCOLD STORAGE CO. 1923.",
+    "new": " 1647 Genessee Street looked abandoned. Graffiti on the loading\ndock. Windows covered with plywood. A faded sign: RIVERWARDS\nCOLD STORAGE CO. 1923.",
+    "ruling": "6A",
+    "note": "2847 -> 1647 Genessee (16xx-17xx band); fictional storage company replaces MISSOURI COLD STORAGE CO., which reads as the real KC Cold Storage Co. at 500 E 3rd."
+  },
+  {
+    "id": "b1-bethany-falls-precote-hunt-midwest",
+    "book": 1,
+    "line_start": 1725,
+    "line_end": 1727,
+    "old": " \"SubTropolis wasn't built. It was discovered. The Bethany Falls\nLimestone Company found existing cave systems in the 1940s. The\ncaves Moreau used were there decades before. Centuries before.\"",
+    "new": " \"SubTropolis wasn't built. It was mined. Midwest Precote started\nroom-and-pillar work in the Bethany Falls limestone in the 1940s, and\nHunt Midwest turned the emptied rooms into an underground business\ndistrict twenty years later. But the mining broke into voids nobody\ncut. The caves Moreau used were there decades before. Centuries\nbefore.\"",
+    "ruling": "5B",
+    "note": "Bethany Falls is the limestone formation, not a company. Reframed on Midwest Precote / Hunt Midwest public history; no misconduct attributed. Plot point (voids predate the mining) preserved."
+  },
+  {
+    "id": "b1-analysis-chamber-address",
+    "book": 1,
+    "line_start": 2073,
+    "line_end": 2073,
+    "old": "The Analysis Chamber lived in the basement of 2847 Genessee Street.",
+    "new": "The Analysis Chamber lived in the basement of 1647 Genessee Street.",
+    "ruling": "6A",
+    "note": "Second 2847 Genessee instance renumbered to match."
+  },
+  {
+    "id": "b1-subtropolis-commercial-depth",
+    "book": 1,
+    "line_start": 2243,
+    "line_end": 2251,
+    "old": "condensation. The commercial mining level, SubTropolis proper,\nfifty-five feet below the surface, ended here. Everything below this point\nwas older, deeper, and no longer part of anyone's inventory. The shaft\ndropped a hundred and sixty feet into limestone that had been forming\nsince before anything human existed. The first ten feet were lit by\nAndrew's flashlight. Rust-streaked concrete, bolts driven into bedrock.\nThen the light ended. Below that threshold, darkness. Not the absence\nof light but the presence of stone, the geological weight of 270 million\nyears pressing inward from every direction.",
+    "new": "condensation. The commercial mining level, SubTropolis proper, a\nhundred and fifty feet below the surface, ended here. Everything below\nthis point was older, deeper, and no longer part of anyone's inventory.\nThe shaft bottomed out at a hundred and sixty feet, in limestone that\nhad been forming since before anything human existed. The first ten\nfeet were lit by Andrew's flashlight. Rust-streaked concrete, bolts\ndriven into bedrock. Then the light ended. Below that threshold,\ndarkness. Not the absence of light but the presence of stone, the\ngeological weight of 270 million years pressing inward from every\ndirection.",
+    "ruling": "3A",
+    "note": "Commercial level 55 ft -> a hundred and fifty feet. Shaft reworded to 'bottomed out at' so the 160 ft reads as total depth below surface rather than 150 + 160."
+  },
+  {
+    "id": "b2-quality-hill-window-pennsylvania",
+    "book": 2,
+    "line_start": 4123,
+    "line_end": 4126,
+    "old": "window, Kansas City's February light fell on the buildings of Troost\nAvenue with the indifferent clarity that her city produced in winter,\nsharp, honest light that showed surfaces as they were without the\nkindness of cloud-filtered diffusion.",
+    "new": "window, Kansas City's February light fell on the buildings of\nPennsylvania Avenue with the indifferent clarity that her city produced\nin winter, sharp, honest light that showed surfaces as they were without\nthe kindness of cloud-filtered diffusion.",
+    "ruling": "8A",
+    "note": "Troost Avenue is ~2 mi east and not visible from the Quality Hill apartment window; Pennsylvania is the district's residential spine."
+  },
+  {
+    "id": "b3-yuki-cohort-basalt-iceland",
+    "book": 3,
+    "line_start": 878,
+    "line_end": 881,
+    "old": "monitored, clinically supervised exposure to the 333.6 Hz harmonic in\nthe basalt chamber. She was Cohort 4, the musician, the oboist whose\nears had been trained to perceive pitch differences of less than one\nhertz. Andrew had flagged her as a candidate because her auditory",
+    "new": "monitored, clinically supervised exposure to the 333.6 Hz harmonic in\nthe Iceland basalt chamber. She was Cohort 4, the musician, the oboist\nwhose ears had been trained to perceive pitch differences of less than\none hertz. Andrew had flagged her as a candidate because her auditory",
+    "ruling": "4A",
+    "note": "Basalt tagged to Iceland, consistent with her own recollection of 'the basalt caves' at B3:1047. Limestone stays with SubTropolis."
+  },
+  {
+    "id": "b3-basalt-resonance-iceland-tag",
+    "book": 3,
+    "line_start": 2369,
+    "line_end": 2369,
+    "old": "specification. The basalt chamber resonance is stable at 111.2. Andrew,",
+    "new": "specification. The Iceland basalt chamber is stable at 111.2. Andrew,",
+    "ruling": "4A",
+    "note": "KC hallway briefing: the basalt chamber is the Iceland field station feeding the Reykjavik uplink named in the next sentence. The KC demonstration chamber stays limestone."
+  },
+  {
+    "id": "b3-mirrors-not-below-them",
+    "book": 3,
+    "line_start": 2391,
+    "line_end": 2399,
+    "old": "hum. Somewhere below them, 160 feet below, in the SubTropolis\nlimestone, in the converted Moreau church basement that had become\nthe Foundation’s primary research chamber, the mirrors waited. Six\nparabolic surfaces, each ground to the Specchi specification by the\nVenetian workshop that Eva Černá had contracted, each surface\ncarrying a reflective coating whose formula had been published and\ndownloaded 14,000 times and that could now be fabricated in São Paulo\nfor $340 per square meter but that the Foundation had sourced from\nVenice because some things deserved their original provenance.",
+    "new": "hum. Across town, 160 feet below the Northland bluff, in the\nSubTropolis limestone, in the converted Moreau church basement that\nhad become the Foundation’s primary research chamber, the mirrors\nwaited. Six parabolic surfaces, each ground to the Specchi\nspecification by the Venetian workshop that Eva Černá had contracted,\neach surface carrying a reflective coating whose formula had been\npublished and downloaded 14,000 times and that could now be fabricated\nin São Paulo for $340 per square meter but that the Foundation had\nsourced from Venice because some things deserved their original\nprovenance.",
+    "ruling": "2A",
+    "note": "Andrew and Nadia are in the downtown Foundation hallway; the SubTropolis chamber cannot be below them."
+  },
+  {
+    "id": "b3-foundation-not-on-troost",
+    "book": 3,
+    "line_start": 3109,
+    "line_end": 3114,
+    "old": " Nadia had been at the Foundation since midnight, the streets of the\nTroost corridor empty, the industrial district's daytime commerce\nreplaced by the nocturnal hush of a neighborhood that worked hard and\nslept deeply. The Foundation building's windows glowed against the\ndark brick facades of the surrounding buildings, a single lit structure in a\nblock of sleeping commerce.",
+    "new": " Nadia had been at the Foundation since midnight, the streets of\nQuality Hill empty, the district's daytime commerce replaced by the\nnocturnal hush of a neighborhood that worked hard and slept deeply.\nThe Foundation building's windows glowed against the dark brick\nfacades of the surrounding buildings, a single lit structure in a block of\nsleeping commerce.",
+    "ruling": "8A",
+    "note": "Foundation HQ is Washington Street / Quality Hill, not the Troost corridor. 'industrial' dropped since Quality Hill is not an industrial district."
+  },
+  {
+    "id": "b3-chamber-not-under-west-bottoms",
+    "book": 3,
+    "line_start": 3124,
+    "line_end": 3129,
+    "old": "presence. The car's engine ticked as it cooled. The June night air carried\nthe humidity and the distant ozone-sweetness of the Missouri River and\nthe industrial memory of the West Bottoms, where, 160 feet below\nground, the Moreau chamber sat in its limestone silence, mirrors\ndormant, the seventy-two-hour resonance still decaying in the geological\nsubstrate.",
+    "new": "presence. The car's engine ticked as it cooled. The June night air carried\nthe humidity and the distant ozone-sweetness of the Missouri River and\nthe industrial memory of the West Bottoms below the bluff. Seven miles\nnortheast, across the river at SubTropolis, 160 feet down, the Moreau\nchamber sat in its limestone silence, mirrors dormant, the\nseventy-two-hour resonance still decaying in the geological substrate.",
+    "ruling": "2A",
+    "note": "West Bottoms kept as atmosphere below the Quality Hill bluff; the chamber moves to SubTropolis, 160 ft down, seven miles northeast across the river."
+  },
+  {
+    "id": "b3-troost-to-quality-hill-drive",
+    "book": 3,
+    "line_start": 4003,
+    "line_end": 4006,
+    "old": "were awake before the sun because the world required them. She drove\ndown Troost. Past the gas station. Past the church where they'd held the\nfirst community protocol session. Past the Quality Hill boundary into\nthe institutional district.",
+    "new": "were awake before the sun because the world required them. She drove\nthe long way. East to Troost. Past the gas station. Past the church\nwhere they'd held the first community protocol session. Then west on\nTwelfth, across Broadway, up the bluff to Washington Street and the\ninstitutional district.",
+    "ruling": "8A",
+    "note": "Troost does not bound Quality Hill. She detours east to the community church, then cuts west on Twelfth and crosses Broadway to reach Washington Street. 5:40 AM October and the Foundation parking lot destination are unchanged."
+  }
+]

@@ -1,0 +1,183 @@
+from_id,from_name,to_id,to_name,straight_line_miles,est_driving_minutes,est_walking_minutes,same_neighborhood
+quality_hill,Quality Hill (10th & Pennsylvania),washington_11th,Washington St & 11th,0.13,5,3,YES
+quality_hill,Quality Hill (10th & Pennsylvania),hotel_phillips,Hotel Phillips (106 W 12th),0.39,6,8,NO
+quality_hill,Quality Hill (10th & Pennsylvania),west_bottoms,West Bottoms (12th & Genessee),0.73,7,15,NO
+quality_hill,Quality Hill (10th & Pennsylvania),genessee_16xx,Genessee ~1600 (Livestock Exchange),0.72,7,14,NO
+quality_hill,Quality Hill (10th & Pennsylvania),subtropolis,SubTropolis,7.37,21,147,NO
+quality_hill,Quality Hill (10th & Pennsylvania),city_market,City Market / River Market,0.68,6,14,NO
+quality_hill,Quality Hill (10th & Pennsylvania),westport,Westport (Westport & Broadway),3.49,13,70,NO
+quality_hill,Quality Hill (10th & Pennsylvania),troost_31,Troost & 31st,3.06,12,61,NO
+quality_hill,Quality Hill (10th & Pennsylvania),overland_park,Overland Park (downtown OP),9.37,26,187,NO
+quality_hill,Quality Hill (10th & Pennsylvania),union_station,Union Station,1.30,8,26,NO
+quality_hill,Quality Hill (10th & Pennsylvania),wyandotte,Wyandotte County center (KCK),2.08,10,42,NO
+quality_hill,Quality Hill (10th & Pennsylvania),meramec,Meramec Caverns (Stanton),197.91,495,3958,NO
+quality_hill,Quality Hill (10th & Pennsylvania),picture_cave,Picture Cave (Warren County approx),186.58,466,3732,NO
+washington_11th,Washington St & 11th,quality_hill,Quality Hill (10th & Pennsylvania),0.13,5,3,YES
+washington_11th,Washington St & 11th,hotel_phillips,Hotel Phillips (106 W 12th),0.28,6,6,NO
+washington_11th,Washington St & 11th,west_bottoms,West Bottoms (12th & Genessee),0.83,7,17,NO
+washington_11th,Washington St & 11th,genessee_16xx,Genessee ~1600 (Livestock Exchange),0.79,7,16,NO
+washington_11th,Washington St & 11th,subtropolis,SubTropolis,7.36,21,147,NO
+washington_11th,Washington St & 11th,city_market,City Market / River Market,0.70,7,14,NO
+washington_11th,Washington St & 11th,westport,Westport (Westport & Broadway),3.39,12,68,NO
+washington_11th,Washington St & 11th,troost_31,Troost & 31st,2.93,11,59,NO
+washington_11th,Washington St & 11th,overland_park,Overland Park (downtown OP),9.31,25,186,NO
+washington_11th,Washington St & 11th,union_station,Union Station,1.19,8,24,NO
+washington_11th,Washington St & 11th,wyandotte,Wyandotte County center (KCK),2.19,10,44,NO
+washington_11th,Washington St & 11th,meramec,Meramec Caverns (Stanton),197.80,495,3956,NO
+washington_11th,Washington St & 11th,picture_cave,Picture Cave (Warren County approx),186.49,466,3730,NO
+hotel_phillips,Hotel Phillips (106 W 12th),quality_hill,Quality Hill (10th & Pennsylvania),0.39,6,8,NO
+hotel_phillips,Hotel Phillips (106 W 12th),washington_11th,Washington St & 11th,0.28,6,6,NO
+hotel_phillips,Hotel Phillips (106 W 12th),west_bottoms,West Bottoms (12th & Genessee),1.11,7,22,NO
+hotel_phillips,Hotel Phillips (106 W 12th),genessee_16xx,Genessee ~1600 (Livestock Exchange),1.06,7,21,NO
+hotel_phillips,Hotel Phillips (106 W 12th),subtropolis,SubTropolis,7.18,21,144,NO
+hotel_phillips,Hotel Phillips (106 W 12th),city_market,City Market / River Market,0.64,6,13,NO
+hotel_phillips,Hotel Phillips (106 W 12th),westport,Westport (Westport & Broadway),3.34,12,67,NO
+hotel_phillips,Hotel Phillips (106 W 12th),troost_31,Troost & 31st,2.71,11,54,NO
+hotel_phillips,Hotel Phillips (106 W 12th),overland_park,Overland Park (downtown OP),9.39,26,188,NO
+hotel_phillips,Hotel Phillips (106 W 12th),union_station,Union Station,1.10,7,22,NO
+hotel_phillips,Hotel Phillips (106 W 12th),wyandotte,Wyandotte County center (KCK),2.46,10,49,NO
+hotel_phillips,Hotel Phillips (106 W 12th),meramec,Meramec Caverns (Stanton),197.53,494,3951,NO
+hotel_phillips,Hotel Phillips (106 W 12th),picture_cave,Picture Cave (Warren County approx),186.21,466,3724,NO
+west_bottoms,West Bottoms (12th & Genessee),quality_hill,Quality Hill (10th & Pennsylvania),0.73,7,15,NO
+west_bottoms,West Bottoms (12th & Genessee),washington_11th,Washington St & 11th,0.83,7,17,NO
+west_bottoms,West Bottoms (12th & Genessee),hotel_phillips,Hotel Phillips (106 W 12th),1.11,7,22,NO
+west_bottoms,West Bottoms (12th & Genessee),genessee_16xx,Genessee ~1600 (Livestock Exchange),0.19,5,4,YES
+west_bottoms,West Bottoms (12th & Genessee),subtropolis,SubTropolis,7.94,22,159,NO
+west_bottoms,West Bottoms (12th & Genessee),city_market,City Market / River Market,1.28,8,26,NO
+west_bottoms,West Bottoms (12th & Genessee),westport,Westport (Westport & Broadway),3.67,13,73,NO
+west_bottoms,West Bottoms (12th & Genessee),troost_31,Troost & 31st,3.63,13,73,NO
+west_bottoms,West Bottoms (12th & Genessee),overland_park,Overland Park (downtown OP),9.16,25,183,NO
+west_bottoms,West Bottoms (12th & Genessee),union_station,Union Station,1.72,9,34,NO
+west_bottoms,West Bottoms (12th & Genessee),wyandotte,Wyandotte County center (KCK),1.38,8,28,NO
+west_bottoms,West Bottoms (12th & Genessee),meramec,Meramec Caverns (Stanton),198.63,497,3973,NO
+west_bottoms,West Bottoms (12th & Genessee),picture_cave,Picture Cave (Warren County approx),187.31,468,3746,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),quality_hill,Quality Hill (10th & Pennsylvania),0.72,7,14,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),washington_11th,Washington St & 11th,0.79,7,16,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),hotel_phillips,Hotel Phillips (106 W 12th),1.06,7,21,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),west_bottoms,West Bottoms (12th & Genessee),0.19,5,4,YES
+genessee_16xx,Genessee ~1600 (Livestock Exchange),subtropolis,SubTropolis,8.02,23,160,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),city_market,City Market / River Market,1.33,8,27,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),westport,Westport (Westport & Broadway),3.48,13,70,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),troost_31,Troost & 31st,3.50,13,70,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),overland_park,Overland Park (downtown OP),8.99,25,180,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),union_station,Union Station,1.57,8,31,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),wyandotte,Wyandotte County center (KCK),1.49,8,30,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),meramec,Meramec Caverns (Stanton),198.57,496,3971,NO
+genessee_16xx,Genessee ~1600 (Livestock Exchange),picture_cave,Picture Cave (Warren County approx),187.28,468,3746,NO
+subtropolis,SubTropolis,quality_hill,Quality Hill (10th & Pennsylvania),7.37,21,147,NO
+subtropolis,SubTropolis,washington_11th,Washington St & 11th,7.36,21,147,NO
+subtropolis,SubTropolis,hotel_phillips,Hotel Phillips (106 W 12th),7.18,21,144,NO
+subtropolis,SubTropolis,west_bottoms,West Bottoms (12th & Genessee),7.94,22,159,NO
+subtropolis,SubTropolis,genessee_16xx,Genessee ~1600 (Livestock Exchange),8.02,23,160,NO
+subtropolis,SubTropolis,city_market,City Market / River Market,6.70,20,134,NO
+subtropolis,SubTropolis,westport,Westport (Westport & Broadway),9.73,26,195,NO
+subtropolis,SubTropolis,troost_31,Troost & 31st,7.64,22,153,NO
+subtropolis,SubTropolis,overland_park,Overland Park (downtown OP),16.18,41,324,NO
+subtropolis,SubTropolis,union_station,Union Station,7.89,22,158,NO
+subtropolis,SubTropolis,wyandotte,Wyandotte County center (KCK),8.73,24,175,NO
+subtropolis,SubTropolis,meramec,Meramec Caverns (Stanton),193.20,483,3864,NO
+subtropolis,SubTropolis,picture_cave,Picture Cave (Warren County approx),180.95,452,3619,NO
+city_market,City Market / River Market,quality_hill,Quality Hill (10th & Pennsylvania),0.68,6,14,NO
+city_market,City Market / River Market,washington_11th,Washington St & 11th,0.70,7,14,NO
+city_market,City Market / River Market,hotel_phillips,Hotel Phillips (106 W 12th),0.64,6,13,NO
+city_market,City Market / River Market,west_bottoms,West Bottoms (12th & Genessee),1.28,8,26,NO
+city_market,City Market / River Market,genessee_16xx,Genessee ~1600 (Livestock Exchange),1.33,8,27,NO
+city_market,City Market / River Market,subtropolis,SubTropolis,6.70,20,134,NO
+city_market,City Market / River Market,westport,Westport (Westport & Broadway),3.97,14,79,NO
+city_market,City Market / River Market,troost_31,Troost & 31st,3.15,12,63,NO
+city_market,City Market / River Market,overland_park,Overland Park (downtown OP),10.00,27,200,NO
+city_market,City Market / River Market,union_station,Union Station,1.72,9,34,NO
+city_market,City Market / River Market,wyandotte,Wyandotte County center (KCK),2.46,10,49,NO
+city_market,City Market / River Market,meramec,Meramec Caverns (Stanton),197.55,494,3951,NO
+city_market,City Market / River Market,picture_cave,Picture Cave (Warren County approx),186.12,465,3722,NO
+westport,Westport (Westport & Broadway),quality_hill,Quality Hill (10th & Pennsylvania),3.49,13,70,NO
+westport,Westport (Westport & Broadway),washington_11th,Washington St & 11th,3.39,12,68,NO
+westport,Westport (Westport & Broadway),hotel_phillips,Hotel Phillips (106 W 12th),3.34,12,67,NO
+westport,Westport (Westport & Broadway),west_bottoms,West Bottoms (12th & Genessee),3.67,13,73,NO
+westport,Westport (Westport & Broadway),genessee_16xx,Genessee ~1600 (Livestock Exchange),3.48,13,70,NO
+westport,Westport (Westport & Broadway),subtropolis,SubTropolis,9.73,26,195,NO
+westport,Westport (Westport & Broadway),city_market,City Market / River Market,3.97,14,79,NO
+westport,Westport (Westport & Broadway),troost_31,Troost & 31st,2.27,10,45,NO
+westport,Westport (Westport & Broadway),overland_park,Overland Park (downtown OP),6.46,19,129,NO
+westport,Westport (Westport & Broadway),union_station,Union Station,2.25,10,45,NO
+westport,Westport (Westport & Broadway),wyandotte,Wyandotte County center (KCK),4.68,15,94,NO
+westport,Westport (Westport & Broadway),meramec,Meramec Caverns (Stanton),196.95,492,3939,NO
+westport,Westport (Westport & Broadway),picture_cave,Picture Cave (Warren County approx),186.22,466,3724,NO
+troost_31,Troost & 31st,quality_hill,Quality Hill (10th & Pennsylvania),3.06,12,61,NO
+troost_31,Troost & 31st,washington_11th,Washington St & 11th,2.93,11,59,NO
+troost_31,Troost & 31st,hotel_phillips,Hotel Phillips (106 W 12th),2.71,11,54,NO
+troost_31,Troost & 31st,west_bottoms,West Bottoms (12th & Genessee),3.63,13,73,NO
+troost_31,Troost & 31st,genessee_16xx,Genessee ~1600 (Livestock Exchange),3.50,13,70,NO
+troost_31,Troost & 31st,subtropolis,SubTropolis,7.64,22,153,NO
+troost_31,Troost & 31st,city_market,City Market / River Market,3.15,12,63,NO
+troost_31,Troost & 31st,westport,Westport (Westport & Broadway),2.27,10,45,NO
+troost_31,Troost & 31st,overland_park,Overland Park (downtown OP),8.64,24,173,NO
+troost_31,Troost & 31st,union_station,Union Station,1.96,9,39,NO
+troost_31,Troost & 31st,wyandotte,Wyandotte County center (KCK),4.99,16,100,NO
+troost_31,Troost & 31st,meramec,Meramec Caverns (Stanton),195.38,488,3908,NO
+troost_31,Troost & 31st,picture_cave,Picture Cave (Warren County approx),184.38,461,3688,NO
+overland_park,Overland Park (downtown OP),quality_hill,Quality Hill (10th & Pennsylvania),9.37,26,187,NO
+overland_park,Overland Park (downtown OP),washington_11th,Washington St & 11th,9.31,25,186,NO
+overland_park,Overland Park (downtown OP),hotel_phillips,Hotel Phillips (106 W 12th),9.39,26,188,NO
+overland_park,Overland Park (downtown OP),west_bottoms,West Bottoms (12th & Genessee),9.16,25,183,NO
+overland_park,Overland Park (downtown OP),genessee_16xx,Genessee ~1600 (Livestock Exchange),8.99,25,180,NO
+overland_park,Overland Park (downtown OP),subtropolis,SubTropolis,16.18,41,324,NO
+overland_park,Overland Park (downtown OP),city_market,City Market / River Market,10.00,27,200,NO
+overland_park,Overland Park (downtown OP),westport,Westport (Westport & Broadway),6.46,19,129,NO
+overland_park,Overland Park (downtown OP),troost_31,Troost & 31st,8.64,24,173,NO
+overland_park,Overland Park (downtown OP),union_station,Union Station,8.43,24,169,NO
+overland_park,Overland Park (downtown OP),wyandotte,Wyandotte County center (KCK),9.41,26,188,NO
+overland_park,Overland Park (downtown OP),meramec,Meramec Caverns (Stanton),199.85,500,3997,NO
+overland_park,Overland Park (downtown OP),picture_cave,Picture Cave (Warren County approx),190.08,475,3802,NO
+union_station,Union Station,quality_hill,Quality Hill (10th & Pennsylvania),1.30,8,26,NO
+union_station,Union Station,washington_11th,Washington St & 11th,1.19,8,24,NO
+union_station,Union Station,hotel_phillips,Hotel Phillips (106 W 12th),1.10,7,22,NO
+union_station,Union Station,west_bottoms,West Bottoms (12th & Genessee),1.72,9,34,NO
+union_station,Union Station,genessee_16xx,Genessee ~1600 (Livestock Exchange),1.57,8,31,NO
+union_station,Union Station,subtropolis,SubTropolis,7.89,22,158,NO
+union_station,Union Station,city_market,City Market / River Market,1.72,9,34,NO
+union_station,Union Station,westport,Westport (Westport & Broadway),2.25,10,45,NO
+union_station,Union Station,troost_31,Troost & 31st,1.96,9,39,NO
+union_station,Union Station,overland_park,Overland Park (downtown OP),8.43,24,169,NO
+union_station,Union Station,wyandotte,Wyandotte County center (KCK),3.04,12,61,NO
+union_station,Union Station,meramec,Meramec Caverns (Stanton),197.25,493,3945,NO
+union_station,Union Station,picture_cave,Picture Cave (Warren County approx),186.12,465,3722,NO
+wyandotte,Wyandotte County center (KCK),quality_hill,Quality Hill (10th & Pennsylvania),2.08,10,42,NO
+wyandotte,Wyandotte County center (KCK),washington_11th,Washington St & 11th,2.19,10,44,NO
+wyandotte,Wyandotte County center (KCK),hotel_phillips,Hotel Phillips (106 W 12th),2.46,10,49,NO
+wyandotte,Wyandotte County center (KCK),west_bottoms,West Bottoms (12th & Genessee),1.38,8,28,NO
+wyandotte,Wyandotte County center (KCK),genessee_16xx,Genessee ~1600 (Livestock Exchange),1.49,8,30,NO
+wyandotte,Wyandotte County center (KCK),subtropolis,SubTropolis,8.73,24,175,NO
+wyandotte,Wyandotte County center (KCK),city_market,City Market / River Market,2.46,10,49,NO
+wyandotte,Wyandotte County center (KCK),westport,Westport (Westport & Broadway),4.68,15,94,NO
+wyandotte,Wyandotte County center (KCK),troost_31,Troost & 31st,4.99,16,100,NO
+wyandotte,Wyandotte County center (KCK),overland_park,Overland Park (downtown OP),9.41,26,188,NO
+wyandotte,Wyandotte County center (KCK),union_station,Union Station,3.04,12,61,NO
+wyandotte,Wyandotte County center (KCK),meramec,Meramec Caverns (Stanton),199.98,500,4000,NO
+wyandotte,Wyandotte County center (KCK),picture_cave,Picture Cave (Warren County approx),188.58,471,3772,NO
+meramec,Meramec Caverns (Stanton),quality_hill,Quality Hill (10th & Pennsylvania),197.91,495,3958,NO
+meramec,Meramec Caverns (Stanton),washington_11th,Washington St & 11th,197.80,495,3956,NO
+meramec,Meramec Caverns (Stanton),hotel_phillips,Hotel Phillips (106 W 12th),197.53,494,3951,NO
+meramec,Meramec Caverns (Stanton),west_bottoms,West Bottoms (12th & Genessee),198.63,497,3973,NO
+meramec,Meramec Caverns (Stanton),genessee_16xx,Genessee ~1600 (Livestock Exchange),198.57,496,3971,NO
+meramec,Meramec Caverns (Stanton),subtropolis,SubTropolis,193.20,483,3864,NO
+meramec,Meramec Caverns (Stanton),city_market,City Market / River Market,197.55,494,3951,NO
+meramec,Meramec Caverns (Stanton),westport,Westport (Westport & Broadway),196.95,492,3939,NO
+meramec,Meramec Caverns (Stanton),troost_31,Troost & 31st,195.38,488,3908,NO
+meramec,Meramec Caverns (Stanton),overland_park,Overland Park (downtown OP),199.85,500,3997,NO
+meramec,Meramec Caverns (Stanton),union_station,Union Station,197.25,493,3945,NO
+meramec,Meramec Caverns (Stanton),wyandotte,Wyandotte County center (KCK),199.98,500,4000,NO
+meramec,Meramec Caverns (Stanton),picture_cave,Picture Cave (Warren County approx),35.29,83,706,NO
+picture_cave,Picture Cave (Warren County approx),quality_hill,Quality Hill (10th & Pennsylvania),186.58,466,3732,NO
+picture_cave,Picture Cave (Warren County approx),washington_11th,Washington St & 11th,186.49,466,3730,NO
+picture_cave,Picture Cave (Warren County approx),hotel_phillips,Hotel Phillips (106 W 12th),186.21,466,3724,NO
+picture_cave,Picture Cave (Warren County approx),west_bottoms,West Bottoms (12th & Genessee),187.31,468,3746,NO
+picture_cave,Picture Cave (Warren County approx),genessee_16xx,Genessee ~1600 (Livestock Exchange),187.28,468,3746,NO
+picture_cave,Picture Cave (Warren County approx),subtropolis,SubTropolis,180.95,452,3619,NO
+picture_cave,Picture Cave (Warren County approx),city_market,City Market / River Market,186.12,465,3722,NO
+picture_cave,Picture Cave (Warren County approx),westport,Westport (Westport & Broadway),186.22,466,3724,NO
+picture_cave,Picture Cave (Warren County approx),troost_31,Troost & 31st,184.38,461,3688,NO
+picture_cave,Picture Cave (Warren County approx),overland_park,Overland Park (downtown OP),190.08,475,3802,NO
+picture_cave,Picture Cave (Warren County approx),union_station,Union Station,186.12,465,3722,NO
+picture_cave,Picture Cave (Warren County approx),wyandotte,Wyandotte County center (KCK),188.58,471,3772,NO
+picture_cave,Picture Cave (Warren County approx),meramec,Meramec Caverns (Stanton),35.29,83,706,NO

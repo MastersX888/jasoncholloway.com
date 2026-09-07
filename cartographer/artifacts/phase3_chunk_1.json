@@ -1,0 +1,226 @@
+[
+  {
+    "entity": "Mara Reeves",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 7,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:205|B3:309|B3:371|B3:1135|B3:2436|B3:3416|B3:4354"
+  },
+  {
+    "entity": "And Nadia",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 6,
+    "books": "1;2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:741|B1:955|B1:2721|B2:3128|B3:2585|B3:4173"
+  },
+  {
+    "entity": "Central",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 6,
+    "books": "1;2;3",
+    "categories": "gazetteer",
+    "sample_lines": "B1:2555|B2:847|B2:1504|B2:3155|B2:3200|B3:1642"
+  },
+  {
+    "entity": "Helena Vance",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 6,
+    "books": "1;2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:3656|B2:1991|B2:2940|B2:5250|B2:6656|B3:1727"
+  },
+  {
+    "entity": "Land Cruiser",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 6,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:4187|B2:4234|B2:4383|B2:4437|B2:4547|B2:6185"
+  },
+  {
+    "entity": "The Word",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 6,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:13|B3:5055|B3:5081|B3:5166|B3:5384|B3:5417"
+  },
+  {
+    "entity": "William Masters",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "1;2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:205|B1:223|B1:814|B2:7418|B3:5231"
+  },
+  {
+    "entity": "The Custodians",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1371|B1:1598|B1:1749|B1:2848|B2:4076"
+  },
+  {
+    "entity": "47 AM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "1;2;3",
+    "categories": "address",
+    "sample_lines": "B1:1478|B2:1199|B2:5297|B3:444|B3:1661"
+  },
+  {
+    "entity": "Morning Coffee",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1699|B1:2509|B1:3901|B1:3928|B1:4127"
+  },
+  {
+    "entity": "11 PM",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "2;3",
+    "categories": "address",
+    "sample_lines": "B2:1193|B2:3108|B2:3422|B3:2343|B3:3381"
+  },
+  {
+    "entity": "The Specchi",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:5134|B2:5156|B2:5181|B3:1643|B3:2988"
+  },
+  {
+    "entity": "Margaret Chen",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:507|B3:1680|B3:2108|B3:3157|B3:3332"
+  },
+  {
+    "entity": "Sister Maria Theresa",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 5,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1807|B3:1811|B3:3800|B3:3837|B3:3946"
+  },
+  {
+    "entity": "But William",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:631|B1:999|B1:3239|B1:4237"
+  },
+  {
+    "entity": "Notebook Six",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "1",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:1882|B1:1893|B1:2118|B1:2631"
+  },
+  {
+    "entity": "The Carrier Mark",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:2166|B2:539|B2:568|B2:591"
+  },
+  {
+    "entity": "Kofi Asante",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:635|B2:4190|B2:6198|B3:3551"
+  },
+  {
+    "entity": "The Fontomfrom",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:700|B2:760|B2:4346|B2:6267"
+  },
+  {
+    "entity": "The Gospel",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:1551|B2:1579|B2:1742|B2:3116"
+  },
+  {
+    "entity": "Not Blake",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:2044|B2:2874|B2:3078|B3:4781"
+  },
+  {
+    "entity": "85 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2;3",
+    "categories": "address",
+    "sample_lines": "B2:2184|B3:4294|B3:4875|B3:5092"
+  },
+  {
+    "entity": "David Kim",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:2782|B2:2798|B3:344|B3:1150"
+  },
+  {
+    "entity": "Thomas Webb",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B2:2841|B2:2905|B2:2911|B2:2940"
+  },
+  {
+    "entity": "340 Hz",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "3",
+    "categories": "address",
+    "sample_lines": "B3:420|B3:895|B3:920|B3:1104"
+  },
+  {
+    "entity": "Gerald Stern",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 4,
+    "books": "3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B3:1600|B3:1675|B3:2108|B3:3086"
+  },
+  {
+    "entity": "James Masters",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "1;3",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:227|B1:805|B3:5231"
+  },
+  {
+    "entity": "Don Quixote",
+    "class": "AMBIGUOUS",
+    "occurrence_count": 3,
+    "books": "1;2",
+    "categories": "proper_noun_phrase",
+    "sample_lines": "B1:445|B2:473|B2:495"
+  }
+]

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "quality_hill",
+    "name": "Quality Hill (10th & Pennsylvania)",
+    "lat": 39.103,
+    "lon": -94.5915,
+    "neighborhood": "Quality Hill"
+  },
+  {
+    "id": "washington_11th",
+    "name": "Washington St & 11th",
+    "lat": 39.1015,
+    "lon": -94.59,
+    "neighborhood": "Quality Hill"
+  },
+  {
+    "id": "hotel_phillips",
+    "name": "Hotel Phillips (106 W 12th)",
+    "lat": 39.1006,
+    "lon": -94.585,
+    "neighborhood": "Downtown / Power & Light"
+  },
+  {
+    "id": "west_bottoms",
+    "name": "West Bottoms (12th & Genessee)",
+    "lat": 39.1045,
+    "lon": -94.605,
+    "neighborhood": "West Bottoms"
+  },
+  {
+    "id": "genessee_16xx",
+    "name": "Genessee ~1600 (Livestock Exchange)",
+    "lat": 39.1018,
+    "lon": -94.6048,
+    "neighborhood": "West Bottoms"
+  },
+  {
+    "id": "subtropolis",
+    "name": "SubTropolis",
+    "lat": 39.161213,
+    "lon": -94.476242,
+    "neighborhood": "Northland / Clay County"
+  },
+  {
+    "id": "city_market",
+    "name": "City Market / River Market",
+    "lat": 39.1095,
+    "lon": -94.582,
+    "neighborhood": "River Market"
+  },
+  {
+    "id": "westport",
+    "name": "Westport (Westport & Broadway)",
+    "lat": 39.0525,
+    "lon": -94.5915,
+    "neighborhood": "Westport"
+  },
+  {
+    "id": "troost_31",
+    "name": "Troost & 31st",
+    "lat": 39.069,
+    "lon": -94.555,
+    "neighborhood": "Midtown / Troost corridor"
+  },
+  {
+    "id": "overland_park",
+    "name": "Overland Park (downtown OP)",
+    "lat": 38.9822,
+    "lon": -94.6708,
+    "neighborhood": "Johnson County KS"
+  },
+  {
+    "id": "union_station",
+    "name": "Union Station",
+    "lat": 39.0847,
+    "lon": -94.5855,
+    "neighborhood": "Crown Center / Freight House"
+  },
+  {
+    "id": "wyandotte",
+    "name": "Wyandotte County center (KCK)",
+    "lat": 39.1142,
+    "lon": -94.6275,
+    "neighborhood": "Wyandotte County KS"
+  },
+  {
+    "id": "meramec",
+    "name": "Meramec Caverns (Stanton)",
+    "lat": 38.24127,
+    "lon": -91.09237,
+    "neighborhood": "Stanton / Franklin County MO"
+  },
+  {
+    "id": "picture_cave",
+    "name": "Picture Cave (Warren County approx)",
+    "lat": 38.75,
+    "lon": -91.15,
+    "neighborhood": "Warren County MO"
+  }
+]

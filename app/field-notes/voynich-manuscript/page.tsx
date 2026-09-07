@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Voynich Manuscript: Rudolf II & the Unreadable Book",
+  titleAbsolute: true,
   description:
     "Yale's Beinecke holds the Voynich Manuscript — early 1400s, undeciphered, once owned by Rudolf II. Documented history the Masters X Prague court reconstructs.",
   socialTitle: "Voynich Manuscript: Rudolf II & the Unreadable Book | Field Notes",

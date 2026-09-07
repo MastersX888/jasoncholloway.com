@@ -6,7 +6,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Contact & Press",
   description:
-    "Get in touch with Jason Carroll Holloway or Seventh City Press for order support, damaged or defective books, rights, media inquiries, review copies, and press kit downloads.",
+    "Contact Jason Carroll Holloway and Seventh City Press: order support, damaged books, rights, media inquiries, review copies, and press kit downloads.",
   path: "/contact/",
 });
 

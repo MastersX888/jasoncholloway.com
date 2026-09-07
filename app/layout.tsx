@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     template: "%s | Jason Carroll Holloway",
   },
   description:
-    "Jason Carroll Holloway is the author of the Masters X Trilogy — a Kansas City conspiracy thriller tracing the Voynich Manuscript, the Ars Notoria, SubTropolis, and the 111 Hz archaeoacoustics phenomenon. Published by Seventh City Press.",
+    "Jason Carroll Holloway writes the Masters X Trilogy — a Kansas City conspiracy thriller of the Voynich Manuscript, the Ars Notoria, and a 111 Hz frequency.",
   keywords: [
     "Jason Carroll Holloway",
     "Jason C. Holloway",

@@ -4,7 +4,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "SubTropolis: The Underground City Beneath Kansas City",
+  titleAbsolute: true,
   description:
     "55 million sq ft of Bethany Falls limestone beneath Kansas City — world's largest underground business complex, and where Blake Masters found what wasn't on any map.",
   socialTitle: "SubTropolis: The Underground City Beneath Kansas City | Field Notes",

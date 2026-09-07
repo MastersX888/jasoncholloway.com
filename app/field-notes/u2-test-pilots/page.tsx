@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "U-2 Test Pilots: What They Saw from 70,000 Feet",
+  titleAbsolute: true,
   description:
     "Declassified U-2 histories and pilot accounts from the edge of the stratosphere — and what William Masters saw in 1956 that he spent a lifetime proving.",
   socialTitle: "U-2 Test Pilots: What They Saw from 70,000 Feet | Field Notes",

@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "The Ars Notoria: Medieval Notory Art & Cognitive Tech",
+  titleAbsolute: true,
   description:
     "A thirteenth-century Solomonic manuscript of memory and eloquence held in London and Paris — not magic, but a protocol. The operational manual beneath Masters X.",
   socialTitle: "The Ars Notoria: Medieval Notory Art & Cognitive Tech | Field Notes",

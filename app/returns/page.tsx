@@ -5,7 +5,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Returns & Refunds",
   description:
-    "Return and refund policy for print books sold by Seventh City Press through jasoncholloway.com — damaged or defective copies are replaced by the printer, with 30-day returns for incorrect orders.",
+    "Returns and refunds for print books from Seventh City Press: damaged or defective copies are replaced by the printer, 30-day returns on wrong orders.",
   path: "/returns/",
 });
 

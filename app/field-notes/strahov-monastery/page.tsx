@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Strahov Library, Prague: Chained Books & a Sealed Crypt",
+  titleAbsolute: true,
   description:
     "Premonstratensian Theological Hall since 1143 — chained books, baroque frescoes, and a crypt beneath. Real Prague library; the trilogy's sealed chamber is fiction.",
   socialTitle: "Strahov Library, Prague: Chained Books & a Sealed Crypt | Field Notes",

@@ -4,9 +4,12 @@ import NewsletterForm from "@/components/layout/NewsletterForm";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The query is "books like Foucault's Pendulum"; the author suffix was the
+  // part being truncated, so it comes off.
   title: "Books Like Foucault's Pendulum: The Masters X Trilogy",
+  titleAbsolute: true,
   description:
-    "Looking for books like Foucault's Pendulum? Jason Carroll Holloway's Masters X Trilogy is a literary conspiracy of real medieval manuscripts and acoustic science — the book Blake Masters is reading when the story begins is Eco's.",
+    "Looking for books like Foucault's Pendulum? The Masters X Trilogy is a literary conspiracy of real medieval manuscripts and acoustic science.",
   socialTitle: "Books Like Foucault's Pendulum | Jason Carroll Holloway",
   socialDescription:
     "Eco's novel is named inside this one — Blake Masters is reading Foucault's Pendulum for the fourth time when the Masters X Trilogy begins. Real Voynich, Ars Notoria, and Codex Gigas; 111 Hz archaeoacoustics; Kansas City to Prague.",

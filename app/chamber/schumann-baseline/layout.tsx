@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Schumann Resonance Baseline",
-  description: "Virtual Schumann Resonance Baseline monitoring interface. Masters Analysis Chamber tool.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/schumann-baseline/",
-  },
-};
+  description:
+    "7.83 Hz, the earth's electromagnetic heartbeat — the control measurement beneath Andrew Chen's research in the Masters X Trilogy.",
+  path: "/chamber/schumann-baseline/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

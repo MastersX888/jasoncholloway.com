@@ -5,7 +5,11 @@ import { themes, fieldNotes } from "@/lib/data/fieldNotes";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Field Notes — The Real History Beneath Masters X",
+  titleAbsolute: true,
   description:
     "Documented places, manuscripts, and phenomena beneath Masters X — SubTropolis, Voynich, Ars Notoria, 111 Hz, Strahov. Real history that opens onto fiction.",
   socialTitle: "Field Notes — The Real History Beneath Masters X",

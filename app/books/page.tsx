@@ -10,7 +10,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 export const metadata: Metadata = buildMetadata({
   title: "Books — Jason Carroll Holloway",
   description:
-    "The complete catalog from Seventh City Press: the Masters X Trilogy (three novels of acoustic frequency, medieval manuscripts, and Kansas City conspiracy) and the John Hawkes critical monograph. Available in hardcover, paperback, and Kindle.",
+    "The full Seventh City Press catalog: the Masters X Trilogy, the Omnibus Edition, and the John Hawkes monograph — in hardcover, paperback, and Kindle.",
   path: "/books/",
   socialTitle: "Books by Jason Carroll Holloway — Seventh City Press",
   socialDescription:

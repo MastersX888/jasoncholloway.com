@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Meramec Caverns and the Patterns in the Flowstone",
+  titleAbsolute: true,
   description:
     "Meramec Caverns, Stanton MO — Stage Curtain flowstone, Jesse James lore, Route 66. Where William Masters taught young Blake to see the pattern in everything.",
   socialTitle: "Meramec Caverns and the Patterns in the Flowstone | Field Notes",

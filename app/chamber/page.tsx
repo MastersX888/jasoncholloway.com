@@ -1,14 +1,13 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Virtual Masters Analysis Chamber",
   description:
     "An interactive replica of Andrew Chen's acoustic analysis system from the Masters X Trilogy: frequency layers, cave mapping, and the research archive.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/",
-  },
-};
+  path: "/chamber/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

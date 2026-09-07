@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import styles from './harmonic-derivations.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  // 100 chars with the layout suffix — the pipe-separated tail was pure
-  // truncation. Absolute, and the imprint moves to the description.
-  title: { absolute: "The Harmonic Derivations of Masters X — 111.2 Hz to 889.6 Hz" },
-  description: "The eight harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: 111.2 Hz to 889.6 Hz, with coupling and quality factors.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/harmonic-derivations/" },
-};
+export const metadata: Metadata = buildMetadata({
+  title: "The Harmonic Derivations of Masters X — 111.2 Hz to 889.6 Hz",
+  titleAbsolute: true,
+  description:
+    "The eight harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: 111.2 Hz to 889.6 Hz, with coupling and quality factors.",
+  path: "/chamber/harmonic-derivations/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import styles from './reading-sequence.module.css';
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "The Reading Sequence — 15 Texts Behind Masters X" },
-  description: "The annotated core reading sequence from the Masters X Trilogy: fifteen texts curated by Eva Černá. The novels' full research corpus is twenty-three texts.",
-  alternates: { canonical: "https://jasoncholloway.com/chamber/reading-sequence/" },
-};
+export const metadata: Metadata = buildMetadata({
+  title: "The Reading Sequence — 15 Texts Behind Masters X",
+  titleAbsolute: true,
+  description:
+    "The annotated core reading sequence from the Masters X Trilogy: fifteen texts curated by Eva Černá. The novels' full research corpus is twenty-three.",
+  path: "/chamber/reading-sequence/",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

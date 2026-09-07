@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Global Cave Site Map",
-  description: "Global acoustic cave site map exploring convergent frequencies. Virtual Masters Analysis Chamber tool.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/chamber/global-map/",
-  },
-};
+  description:
+    "Nine cave sites across four continents, each converging within 3% of the 111 Hz fundamental — the acoustic map behind the Masters X Trilogy.",
+  path: "/chamber/global-map/",
+});
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

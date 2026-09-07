@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import NewsletterForm from "@/components/layout/NewsletterForm";
 import { themes, fieldNotes } from "@/lib/data/fieldNotes";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 export const metadata: Metadata = buildMetadata({
   // The essay title is what earns the click here, and appending the brand
@@ -54,7 +55,7 @@ export default function FieldNotesHub() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([collectionJsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(collectionJsonLd, breadcrumbJsonLd) }}
       />
 
       {/* Header */}

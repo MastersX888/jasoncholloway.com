@@ -5,6 +5,7 @@ import BookViewTracker from "@/components/analytics/BookViewTracker";
 import TrackedBuyLink from "@/components/ui/TrackedBuyLink";
 import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 export const metadata: Metadata = {
   // The monograph's actual title is 51 characters — it needs the whole window,
@@ -145,7 +146,7 @@ export default function HawkesMonographPage() {
       <BookViewTracker items={viewItems} value={viewValue} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify([jsonLd, breadcrumbJsonLd]) }}
+        dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd, breadcrumbJsonLd) }}
       />
       <section className="page-header" style={{ paddingBottom: "3rem" }}>
         <div className="container">

@@ -19,6 +19,7 @@ import {
   MASTERS_X_AUDIENCE,
   MASTERS_X_KEYWORDS,
 } from "@/lib/seo/mastersXEntities";
+import { jsonLdScript } from "@/lib/seo/jsonLd";
 
 // The comp titles that used to live in this description now have their own
 // /books/books-like-* landing pages, so naming them here only split the signal.
@@ -44,8 +45,7 @@ export default function MastersXPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            {
+          __html: jsonLdScript({
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
@@ -83,8 +83,7 @@ export default function MastersXPage() {
                 "name": b.title + ": " + b.subtitle,
                 "url": `https://jasoncholloway.com/books/masters-x/${b.slug}/`
               }))
-            }
-          ])
+            })
         }}
       />
       <section className="page-header">

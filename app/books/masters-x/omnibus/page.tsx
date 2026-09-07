@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { books } from "@/lib/data/books";
 import { BUY_LINKS } from "@/lib/data/buyLinks";
+import { purchaseRoute } from "@/lib/data/books";
 import CaseCoverReveal from "@/components/store/CaseCoverReveal";
 import { omnibusSavingsLine } from "@/lib/data/trilogyCheckout";
 import WaveDivider from "@/components/ui/WaveDivider";
@@ -59,7 +60,9 @@ export default function OmnibusPage() {
 
   const paragraphs = omnibus.description.split("\n\n");
 
-  const jsonLd = {
+  const hardcoverRoute = purchaseRoute(omnibus, "Hardcover");
+
+const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Book",
     "@id": "https://jasoncholloway.com/books/masters-x/omnibus#work",
@@ -79,18 +82,18 @@ export default function OmnibusPage() {
               isbn: omnibus.isbn_hc,
               bookFormat: "https://schema.org/Hardcover",
               numberOfPages: omnibus.pageCountHC ?? omnibus.pageCount,
-              potentialAction: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")
-                ? {
-                    "@type": "BuyAction",
-                    target: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")!.url,
-                  }
+              // Both the action and the offer take the routed URL: advertising
+              // InStock against IngramSpark's disabled link would point Google
+              // and any price aggregator at a checkout that refuses the sale.
+              potentialAction: hardcoverRoute
+                ? { "@type": "BuyAction", target: hardcoverRoute.url }
                 : undefined,
-              offers: omnibus.price_hc_is ? {
+              offers: hardcoverRoute?.price ? {
                 "@type": "Offer",
-                price: omnibus.price_hc_msrp ?? omnibus.price_hc_is,
+                price: hardcoverRoute.price,
                 priceCurrency: "USD",
                 availability: "https://schema.org/InStock",
-                url: omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)")?.url ?? "https://jasoncholloway.com/books/masters-x/omnibus/",
+                url: hardcoverRoute.url,
               } : undefined,
             },
           ]
@@ -134,7 +137,10 @@ export default function OmnibusPage() {
 
   const omnibusDisplayName = `${omnibus.title}: ${omnibus.subtitle}`;
   const pbLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (PB)");
-  const hcLink = omnibus.buyLinks.find((l) => l.label === "IngramSpark (HC)");
+  // Where each format can actually be bought right now. IngramSpark has the
+  // hardcover's direct checkout disabled, so purchaseRoute() sends it to
+  // Bookshop at list price — the button must show that price, not the direct one.
+  const hcRoute = purchaseRoute(omnibus, "Hardcover");
   const bookshopPbLink = omnibus.buyLinks.find(
     (l) => l.label.startsWith("Bookshop.org") && l.format === "Paperback"
   );
@@ -250,29 +256,29 @@ export default function OmnibusPage() {
                       </span>
                     </TrackedBuyLink>
                   )}
-                  {hcLink && omnibus.isbn_hc && (
+                  {hcRoute && omnibus.isbn_hc && (
                     <TrackedBuyLink
-                      href={hcLink.url}
+                      href={hcRoute.url}
                       itemId={omnibus.isbn_hc}
                       itemName={`${omnibusDisplayName} (Hardcover)`}
                       itemVariant="Hardcover"
-                      price={omnibus.price_hc_is}
+                      price={hcRoute.price}
                       className="btn btn-gold buy-direct-is"
                       style={{ width: "100%", justifyContent: "center" }}
                     >
                       <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
-                        Buy Direct · Best Price
+                        {hcRoute.eyebrow}
                       </span>
                       <span className="price-row">
-                        {omnibus.price_hc_msrp && (
-                          <span className="price-msrp">${omnibus.price_hc_msrp}</span>
+                        {hcRoute.listPrice && (
+                          <span className="price-msrp">${hcRoute.listPrice}</span>
                         )}
                         <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>
-                          {omnibus.price_hc_is ? `$${omnibus.price_hc_is}` : "Best Price"}
+                          {hcRoute.price ? `$${hcRoute.price}` : "Best Price"}
                         </span>
-                        {omnibus.price_hc_msrp && omnibus.price_hc_is && (
+                        {hcRoute.listPrice && hcRoute.price && (
                           <span style={{ fontSize: "0.58rem", background: "rgba(255,255,255,0.18)", padding: "0.1em 0.4em", borderRadius: "2px", letterSpacing: "0.08em", textTransform: "uppercase" }}>
-                            save ${(parseFloat(omnibus.price_hc_msrp) - parseFloat(omnibus.price_hc_is)).toFixed(2)}
+                            save ${(parseFloat(hcRoute.listPrice) - parseFloat(hcRoute.price)).toFixed(2)}
                           </span>
                         )}
                       </span>
@@ -356,22 +362,22 @@ export default function OmnibusPage() {
                       {omnibus.pageCountHC ?? omnibus.pageCount} pages
                     </div>
                   </div>
-                  {hcLink && omnibus.isbn_hc && (
+                  {hcRoute && omnibus.isbn_hc && (
                     <TrackedBuyLink
-                      href={hcLink.url}
+                      href={hcRoute.url}
                       itemId={omnibus.isbn_hc}
                       itemName={`${omnibusDisplayName} (Hardcover)`}
                       itemVariant="Hardcover"
-                      price={omnibus.price_hc_is}
+                      price={hcRoute.price}
                       className="btn btn-gold buy-direct-is"
                       style={{ width: "100%", justifyContent: "center" }}
                     >
                       <span style={{ fontSize: "0.62rem", letterSpacing: "0.1em", textTransform: "uppercase", opacity: 0.75 }}>
-                        Buy Direct · Best Price
+                        {hcRoute.eyebrow}
                       </span>
                       <span className="price-row">
-                        {omnibus.price_hc_msrp && <span className="price-msrp">${omnibus.price_hc_msrp}</span>}
-                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>${omnibus.price_hc_is}</span>
+                        {hcRoute.listPrice && <span className="price-msrp">${hcRoute.listPrice}</span>}
+                        <span style={{ fontSize: "1.1rem", fontWeight: 700 }}>${hcRoute.price}</span>
                       </span>
                     </TrackedBuyLink>
                   )}

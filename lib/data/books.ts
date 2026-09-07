@@ -48,6 +48,74 @@ export interface Book {
   excerpt: string;
   keywords: string[];
   buyLinks: BookLink[];
+  /**
+   * Print formats whose IngramSpark link is live but refuses to sell: the page
+   * loads, Buy Now stays disabled, and it reads "Purchase through this link is
+   * currently not available."
+   *
+   * Only IngramSpark can re-enable it, so until they do the site must not show
+   * that link as a working checkout — `printOffer()` routes these formats to
+   * Bookshop.org instead of dropping them, because a reader who wants the
+   * hardcover should still be able to buy the hardcover.
+   *
+   * Remove a format from this list the moment its direct link works again.
+   */
+  directCheckoutUnavailable?: ("Hardcover" | "Paperback")[];
+}
+
+export interface PurchaseRoute {
+  url: string;
+  /** True for the IngramSpark direct checkout; false when routed to a retailer. */
+  direct: boolean;
+  /** What the reader actually pays on this route. */
+  price?: string;
+  /** Struck-through comparison price. Only set when there is a real saving. */
+  listPrice?: string;
+  /** Button eyebrow — must match the destination, not the ideal. */
+  eyebrow: string;
+}
+
+/**
+ * Where to send a reader who wants to buy this format today.
+ *
+ * Normally the IngramSpark direct link at the lower direct price. When
+ * `directCheckoutUnavailable` names the format, IngramSpark is refusing the
+ * sale, so this returns the Bookshop.org route at list price instead.
+ *
+ * Callers must render the price and eyebrow this returns rather than the
+ * book's direct price — otherwise the button advertises a discount the
+ * destination will not honour.
+ */
+export function purchaseRoute(
+  book: Book,
+  format: "Hardcover" | "Paperback"
+): PurchaseRoute | undefined {
+  const isbn = format === "Hardcover" ? book.isbn_hc : book.isbn_pb;
+  const directPrice = format === "Hardcover" ? book.price_hc_is : book.price_pb_is;
+  const listPrice = format === "Hardcover" ? book.price_hc_msrp : book.price_pb_msrp;
+
+  if (book.directCheckoutUnavailable?.includes(format)) {
+    if (!isbn) return undefined;
+    return {
+      url: bookshopIsbnUrl(isbn),
+      direct: false,
+      price: listPrice,
+      eyebrow: "Buy at Bookshop.org",
+    };
+  }
+
+  const ingram = book.buyLinks.find(
+    (link) => link.url.includes("shop.ingramspark.com") && link.format === format
+  );
+  if (!ingram) return undefined;
+
+  return {
+    url: ingram.url,
+    direct: true,
+    price: directPrice,
+    listPrice,
+    eyebrow: "Buy Direct · Best Price",
+  };
 }
 
 export const books: Book[] = [
@@ -215,6 +283,11 @@ export const books: Book[] = [
     excerpt:
       "The gate is not arbitrary. The gate is the body.",
     keywords: ["Masters X Omnibus", "collected edition", "acoustic frequency"],
+    // Verified broken 2026-09-07: the hardcover IngramSpark link loads the right
+    // product page but Buy Now is disabled — "Purchase through this link is
+    // currently not available." The paperback link on the same title works, so
+    // this is per-SKU on IngramSpark's side, not an account-wide problem.
+    directCheckoutUnavailable: ["Hardcover"],
     buyLinks: [
       { label: "IngramSpark (PB)", url: "https://shop.ingramspark.com/b/084?params=QCSm4Cs8X0r8XkWm865RXOqXWvU4FbMlEf4GhiViHuy", format: "Paperback" },
       { label: "IngramSpark (HC)", url: "https://shop.ingramspark.com/b/084?params=5euticmifKEyNYtkmPSmmxiTwypmN5nErByeUkomLfk", format: "Hardcover" },

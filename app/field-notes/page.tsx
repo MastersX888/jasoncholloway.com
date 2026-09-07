@@ -116,7 +116,7 @@ export default function FieldNotesHub() {
             The Masters X Trilogy follows what happens when a fired Kansas City security guard inherits 30 years of classified acoustic research — and follows the cross-references into a sealed Prague crypt.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link href="/books/masters-x" className="btn btn-gold">Read the Trilogy</Link>
+            <Link href="/books/masters-x/" className="btn btn-gold">Read the Trilogy</Link>
             <Link href="/chamber" className="btn btn-outline" style={{ color: "var(--cyan)", borderColor: "var(--cyan-dim)" }}>Enter the Analysis Chamber</Link>
           </div>
         </div>

@@ -102,6 +102,9 @@ export default function SubTropolisNote() {
                 allowFullScreen
                 loading="lazy"
                 style={{
+                  // Blockers and consent walls leave the frame unpainted, and its
+                  // default white shows as a light slab on this dark page.
+                  backgroundColor: "black",
                   position: "absolute",
                   top: 0,
                   left: 0,

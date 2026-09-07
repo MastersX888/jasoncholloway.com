@@ -91,7 +91,7 @@ export default function Home() {
             </div>
 
             <div className="hero-ctas animate-fade-up delay-3" style={{ display: "flex", gap: "1rem", flexWrap: "wrap", alignItems: "center", marginBottom: "3.5rem" }}>
-              <Link href="/books/masters-x" className="btn btn-outline">
+              <Link href="/books/masters-x/" className="btn btn-outline">
                 Explore the Catalog
               </Link>
               <StartTourButton source="hero" className="btn btn-outline">
@@ -234,7 +234,7 @@ export default function Home() {
               </div>
 
               <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem", flexWrap: "wrap" }}>
-                <Link href="/books/masters-x" className="btn btn-gold" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
+                <Link href="/books/masters-x/" className="btn btn-gold" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
                   View Trilogy
                 </Link>
                 <Link href="/books/masters-x/the-inheritance-of-frequency" className="btn btn-outline" style={{ flex: 1, justifyContent: "center", minWidth: "140px" }}>
@@ -378,7 +378,7 @@ export default function Home() {
                 <Link href="/chamber" className="btn btn-gold">
                   Enter the Chamber
                 </Link>
-                <Link href="/chamber/folio-visualizer" className="btn btn-outline" style={{ color: "var(--cyan)", borderColor: "var(--cyan-dim)" }}>
+                <Link href="/chamber/folio-visualizer/" className="btn btn-outline" style={{ color: "var(--cyan)", borderColor: "var(--cyan-dim)" }}>
                   Try the Folio Visualizer
                 </Link>
               </div>

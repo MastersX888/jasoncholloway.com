@@ -232,6 +232,7 @@ export default function FolioVisualizerPage() {
               <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
                 <input
                   type="text"
+                  aria-label="Search folios by number, feature, or note"
                   placeholder="Search folio, features, notes..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
@@ -270,6 +271,7 @@ export default function FolioVisualizerPage() {
                 </div>
 
                 <select
+                  aria-label="Filter folios by category"
                   value={categoryFilter}
                   onChange={(e) => setCategoryFilter(e.target.value)}
                   style={{

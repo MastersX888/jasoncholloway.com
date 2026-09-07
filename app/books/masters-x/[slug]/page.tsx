@@ -218,7 +218,7 @@ export default function BookPage({ params }: Props) {
         "@type": "ListItem",
         "position": 2,
         "name": "Masters X Trilogy",
-        "item": "https://jasoncholloway.com/books/masters-x"
+        "item": "https://jasoncholloway.com/books/masters-x/"
       },
       {
         "@type": "ListItem",
@@ -280,19 +280,26 @@ export default function BookPage({ params }: Props) {
         <div className="container">
           <div className="page-header-inner">
             <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
-              <Link href="/books/masters-x" className="hover:text-foreground transition-colors">
+              <Link href="/books/masters-x/" className="hover:text-foreground transition-colors">
               {book.series}
             </Link>
             <span className="text-muted-foreground">·</span>
-            <span className="text-foreground">{book.title}</span>
+            {/* `title` is the series name ("Masters X") on every volume — the
+                volume's own name is `subtitle`, which is what the JSON-LD
+                breadcrumb already uses. */}
+            <span className="text-foreground">{book.subtitle}</span>
             </div>
 
             <div className="resp-book-hero" style={{ display: "grid", gridTemplateColumns: "380px 1fr", gap: "3.5rem", alignItems: "start" }}>
               
               {/* Covers side-by-side */}
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                {/* minWidth 0 on both columns: flex items default to
+                    `min-width: auto`, so the hardcover's "see what's under the
+                    jacket" button set a floor that widened its column and left
+                    the paperback rendering ~40% narrower than its sibling. */}
                 <div style={{ display: "flex", gap: "1rem" }}>
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Paperback</div>
                     <CoverArtifact
                       src={book.coverImagePB}
@@ -303,7 +310,7 @@ export default function BookPage({ params }: Props) {
                       priority
                     />
                   </div>
-                  <div style={{ flex: 1 }}>
+                  <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: "0.65rem", textTransform: "uppercase", letterSpacing: "0.08em", color: "var(--text-faint)", marginBottom: "0.4rem", textAlign: "center" }}>Hardcover</div>
                     <CaseCoverReveal
                       jacket={{ src: book.coverImageHC, alt: `${book.subtitle} hardcover, dust jacket` }}
@@ -658,7 +665,7 @@ export default function BookPage({ params }: Props) {
               </Link>
             ) : <div style={{ flex: 1 }} />}
 
-            <Link href="/books/masters-x" className="btn btn-outline" style={{ alignSelf: "center", whiteSpace: "nowrap" }}>
+            <Link href="/books/masters-x/" className="btn btn-outline" style={{ alignSelf: "center", whiteSpace: "nowrap" }}>
               All Three Volumes
             </Link>
 

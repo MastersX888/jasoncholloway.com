@@ -5,21 +5,17 @@ import BuyDirectButton from "@/components/ui/BuyDirectButton";
 import OpenStoreButton from "@/components/store/OpenStoreButton";
 import { findOffer, omnibusComparison, omnibusProduct } from "@/lib/data/storefront";
 import type { Metadata } from "next";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Books — Jason Carroll Holloway",
   description:
     "The complete catalog from Seventh City Press: the Masters X Trilogy (three novels of acoustic frequency, medieval manuscripts, and Kansas City conspiracy) and the John Hawkes critical monograph. Available in hardcover, paperback, and Kindle.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/books/",
-  },
-  openGraph: {
-    title: "Books by Jason Carroll Holloway — Seventh City Press",
-    description:
-      "Masters X Trilogy · Omnibus Edition · Hawkes Monograph. Available now from Seventh City Press.",
-    url: "https://jasoncholloway.com/books/",
-  },
-};
+  path: "/books/",
+  socialTitle: "Books by Jason Carroll Holloway — Seventh City Press",
+  socialDescription:
+    "Masters X Trilogy · Omnibus Edition · Hawkes Monograph. Available now from Seventh City Press.",
+});
 
 export default function BooksIndexPage() {
   const trilogy = books.filter((b) => b.series === "Masters X" && b.slug !== "omnibus");
@@ -216,7 +212,7 @@ export default function BooksIndexPage() {
           </div>
 
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "2rem" }}>
-            <Link href="/books/masters-x" className="btn btn-gold">
+            <Link href="/books/masters-x/" className="btn btn-gold">
               View the Trilogy
             </Link>
             <OpenStoreButton source="books_index">See all editions &amp; prices</OpenStoreButton>

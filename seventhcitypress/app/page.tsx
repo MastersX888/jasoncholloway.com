@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import Image from "next/image";
 import Link from "next/link";
 import { authorIsniIdentifier, authorSameAs } from "../lib/authorAuthority";
+import CoverImage from "@/components/ui/CoverImage";
 import styles from './press-page.module.css';
 
 export const metadata: Metadata = {
@@ -162,7 +162,7 @@ function CoverThumb({ label, src }: { label: string; src: string }) {
         border: "1px solid var(--border-faint)",
         background: "var(--bg-raised)",
       }}>
-        <Image src={src} alt={label} fill style={{ objectFit: "contain" }} sizes="120px" />
+        <CoverImage src={src} alt={label} sizes="120px" />
       </div>
       <span style={{
         fontSize: "0.68rem",

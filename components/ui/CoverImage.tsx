@@ -13,8 +13,12 @@ interface CoverImageProps {
 /**
  * Cover art for a static export. Next/Image is unoptimized here, so it never
  * emits srcset — phones and retina laptops would paint a 2000px PNG into a
- * 70–220px box and the gold linework goes muddy. This uses pre-sharpened
- * WebP widths so each device downloads ~2–3× its CSS size.
+ * 70–220px box and the gold linework goes muddy. This uses pre-built WebP
+ * widths so each device downloads roughly its own CSS size.
+ *
+ * The WebP widths hang off a <source> rather than the <img> so that a browser
+ * without WebP support still resolves the original through `src`, instead of
+ * picking a candidate it cannot decode.
  */
 export default function CoverImage({
   src,
@@ -31,17 +35,19 @@ export default function CoverImage({
     .join(" ");
 
   return (
-    <img
-      src={src}
-      srcSet={srcSet}
-      sizes={sizes}
-      alt={alt}
-      className={classes}
-      decoding="async"
-      draggable={false}
-      fetchPriority={priority ? "high" : "auto"}
-      loading={priority ? "eager" : "lazy"}
-      style={fill ? { objectFit: fit } : { objectFit: fit, width: "100%", height: "auto" }}
-    />
+    <picture className="cover-picture">
+      {srcSet ? <source type="image/webp" srcSet={srcSet} sizes={sizes} /> : null}
+      <img
+        src={src}
+        sizes={sizes}
+        alt={alt}
+        className={classes}
+        decoding="async"
+        draggable={false}
+        fetchPriority={priority ? "high" : "auto"}
+        loading={priority ? "eager" : "lazy"}
+        style={fill ? { objectFit: fit } : { objectFit: fit, width: "100%", height: "auto" }}
+      />
+    </picture>
   );
 }

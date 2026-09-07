@@ -180,7 +180,7 @@ export default function ManuscriptsThatShouldntExistPage() {
             </p>
             <p>
               That claim is fiction, and we say so plainly. The manuscripts are not. The{" "}
-              <Link href="/chamber/folio-visualizer" className="hover-gold" style={{ color: "var(--gold)" }}>Analysis Chamber</Link>{" "}
+              <Link href="/chamber/folio-visualizer/" className="hover-gold" style={{ color: "var(--gold)" }}>Analysis Chamber</Link>{" "}
               lets you test the pattern yourself with 181 real folios.
             </p>
 

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useId } from "react";
 
 interface NewsletterFormProps {
   compact?: boolean;
 }
 
 export default function NewsletterForm({ compact = false }: NewsletterFormProps) {
+  // This form renders in the footer of every page and again inline on most of
+  // them. A hardcoded id made the two collide, and `label[for]` binds only to
+  // the first match — so the second copy shipped with no accessible name.
+  const emailId = useId();
+
   return (
     <div 
       className={`newsletter-container ${compact ? "newsletter-compact" : "newsletter-featured"}`}
@@ -59,7 +64,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
           <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
           
           <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-            <label htmlFor="newsletter-email-input" className="sr-only" style={{
+            <label htmlFor={emailId} className="sr-only" style={{
               position: "absolute",
               width: "1px",
               height: "1px",
@@ -81,7 +86,7 @@ export default function NewsletterForm({ compact = false }: NewsletterFormProps)
               }}
             >
               <input
-                id="newsletter-email-input"
+                id={emailId}
                 type="email"
                 name="email"
                 placeholder="Email Address"

@@ -91,7 +91,7 @@ export default function VoynichNote() {
         <>
           <p className="fn-body">
             The Folio Visualizer in the{" "}
-            <a href="/chamber/folio-visualizer" style={{ color: "var(--gold)" }}>Analysis Chamber</a>{" "}
+            <a href="/chamber/folio-visualizer/" style={{ color: "var(--gold)" }}>Analysis Chamber</a>{" "}
             lets you explore 181 Voynich Manuscript folios alongside Ars Notoria notae. You can overlay, tessellate, and rotate them to see the geometric interference patterns Blake Masters sees in the trilogy. The manuscript itself is real; the interpretive framework the tool uses is the novel&apos;s.
           </p>
           <p className="fn-body">

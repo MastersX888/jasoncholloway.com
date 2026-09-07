@@ -12,6 +12,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { usePathname } from "next/navigation";
 import BuyBoxModal from "@/components/store/BuyBoxModal";
 import { omnibusProduct } from "@/lib/data/storefront";
 import { trackBuyBoxDismiss, trackBuyBoxOpen } from "@/lib/analytics/gtag";
@@ -20,6 +21,27 @@ const PROMPTED_KEY = "scp.buybox.prompted";
 /** Let the page paint before offering the panel. */
 const FIRST_VISIT_DELAY_MS = 1200;
 const AUTO_OPEN_MIN_WIDTH = 768;
+
+/**
+ * Sections where the panel never opens on its own.
+ *
+ * The Field Notes and the Chamber are top-of-funnel: most of their traffic
+ * arrives from a search for the subject, not for the books, and a price list
+ * over the first paragraph spends the reader's attention before the essay has
+ * earned it. The sticky bar and the header's Buy button are still there, and an
+ * explicit `open()` or a `?buy=1` deep link still works — this suppresses only
+ * the unprompted open.
+ *
+ * A visitor who is not prompted here is not marked as prompted either, so the
+ * panel is still offered once they reach a commercial page.
+ */
+const NO_AUTO_OPEN_PREFIXES = ["/field-notes", "/chamber"];
+
+function suppressesAutoOpen(pathname: string): boolean {
+  return NO_AUTO_OPEN_PREFIXES.some(
+    (prefix) => pathname === prefix || pathname.startsWith(`${prefix}/`)
+  );
+}
 
 interface StoreContextValue {
   isOpen: boolean;
@@ -54,6 +76,7 @@ function markPrompted() {
 export default function StoreProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [showBar, setShowBar] = useState(false);
+  const pathname = usePathname();
 
   const open = useCallback((source: string) => {
     setShowBar(false);
@@ -70,6 +93,10 @@ export default function StoreProvider({ children }: { children: ReactNode }) {
     // ?buy=1 (ads, QR codes, print inserts) always opens the panel.
     const deepLink = new URLSearchParams(window.location.search).get("buy") === "1";
     if (!deepLink && alreadyPrompted()) return;
+
+    // Runs again on client-side navigation, so a reader who arrives on an essay
+    // and then clicks through to a book page is offered the panel there.
+    if (!deepLink && suppressesAutoOpen(pathname)) return;
 
     markPrompted();
 
@@ -89,7 +116,7 @@ export default function StoreProvider({ children }: { children: ReactNode }) {
     );
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [pathname]);
 
   const value = useMemo<StoreContextValue>(
     () => ({ isOpen, open, close }),

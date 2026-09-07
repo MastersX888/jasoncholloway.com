@@ -24,7 +24,7 @@ export default function Footer() {
             <div className="footer-col-title">Books</div>
             <nav className="footer-links">
               <Link href="/books">Full Catalog</Link>
-              <Link href="/books/masters-x">Masters X Trilogy</Link>
+              <Link href="/books/masters-x/">Masters X Trilogy</Link>
               <Link href="/books/masters-x/the-inheritance-of-frequency">The Inheritance of Frequency</Link>
               <Link href="/books/masters-x/the-grimoire">The Grimoire</Link>
               <Link href="/books/masters-x/the-kingdom">The Kingdom</Link>

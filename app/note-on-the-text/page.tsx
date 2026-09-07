@@ -15,22 +15,17 @@ import {
   whyTextChanges,
 } from "@/lib/data/noteOnTheText";
 import styles from "./note-on-the-text.module.css";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
-  title: { absolute: "A Note on the Text — Masters X Trilogy" },
+export const metadata: Metadata = buildMetadata({
+  title: "A Note on the Text — Masters X Trilogy",
+  titleAbsolute: true,
   description: NOTE_ON_THE_TEXT.description,
-  alternates: {
-    canonical: "https://jasoncholloway.com/note-on-the-text/",
-  },
-  openGraph: {
-    title: "A Note on the Text — Masters X Trilogy",
-    description: NOTE_ON_THE_TEXT.description,
-    url: "https://jasoncholloway.com/note-on-the-text/",
-    type: "article",
-    publishedTime: "2026-08-30",
-    modifiedTime: "2026-08-30",
-  },
-};
+  path: "/note-on-the-text/",
+  ogType: "article",
+  publishedTime: "2026-08-30",
+  modifiedTime: "2026-08-30",
+});
 
 const articleJsonLd = {
   "@context": "https://schema.org",
@@ -79,7 +74,7 @@ export default function NoteOnTheTextPage() {
               <span className={styles.breadcrumbSep}>›</span>
               <Link href="/books">Books</Link>
               <span className={styles.breadcrumbSep}>›</span>
-              <Link href="/books/masters-x">Masters X</Link>
+              <Link href="/books/masters-x/">Masters X</Link>
               <span className={styles.breadcrumbSep}>›</span>
               <span>{NOTE_ON_THE_TEXT.title}</span>
             </nav>
@@ -228,7 +223,7 @@ export default function NoteOnTheTextPage() {
               ))}
 
               <p className={styles.footerLink}>
-                <Link href="/books/masters-x">The Masters X Trilogy →</Link>
+                <Link href="/books/masters-x/">The Masters X Trilogy →</Link>
               </p>
             </article>
 
@@ -248,7 +243,7 @@ export default function NoteOnTheTextPage() {
                 <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: 1.65, marginBottom: "0.75rem" }}>
                   Masters X — three novels by Jason Carroll Holloway, published June 2026 by Seventh City Press.
                 </p>
-                <Link href="/books/masters-x" style={{ fontSize: "0.85rem" }}>
+                <Link href="/books/masters-x/" style={{ fontSize: "0.85rem" }}>
                   View the trilogy →
                 </Link>
               </div>

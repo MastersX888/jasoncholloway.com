@@ -1,18 +1,14 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/layout/ContactForm";
 import SocialLinks from "@/components/layout/SocialLinks";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Contact & Press",
   description:
     "Get in touch with Jason Carroll Holloway or Seventh City Press for order support, damaged or defective books, rights, media inquiries, review copies, and press kit downloads.",
-  alternates: {
-    canonical: "https://jasoncholloway.com/contact/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/contact/",
-  },
-};
+  path: "/contact/",
+});
 
 export default function ContactPage() {
   return (

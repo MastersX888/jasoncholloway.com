@@ -1383,6 +1383,11 @@ ul, ol { list-style: none; }
   gap: 0.15rem; padding-block: 0.75rem; }
 
 /* ─── COVER ARTIFACT (materiality) ───────────────────────────── */
+.cover-picture {
+  /* Keeps <picture> out of the box tree so the <img> lays out exactly as it did
+     when it was a direct child — both the absolute --fill case and the flow case. */
+  display: contents;
+}
 .cover-image {
   display: block;
   image-rendering: auto;
@@ -1504,7 +1509,11 @@ ul, ol { list-style: none; }
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text);
-  background: rgba(8, 8, 15, 0.72);
+  /* Sits over the cover art, where the author's name is printed across the
+     bottom. A semi-transparent chip let the two blend into each other, so it
+     occludes instead. */
+  background: rgba(8, 8, 15, 0.92);
+  backdrop-filter: blur(3px);
   border: 1px solid var(--gold-dim);
   border-radius: 999px;
   padding: 0.3em 0.7em;

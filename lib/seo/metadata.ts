@@ -29,6 +29,9 @@ export type BuildMetadataInput = {
   socialDescription?: string;
   image?: SeoImage;
   ogType?: "website" | "article" | "book" | "profile";
+  /** Article-only; ignored for other og types. */
+  publishedTime?: string;
+  modifiedTime?: string;
   keywords?: string[];
   noindex?: boolean;
 };
@@ -51,6 +54,8 @@ export function buildMetadata({
   image = DEFAULT_OG_IMAGE,
   ogType = "website",
   keywords,
+  publishedTime,
+  modifiedTime,
   noindex = false,
 }: BuildMetadataInput): Metadata {
   const url = `${SITE_URL}${path}`;
@@ -70,7 +75,12 @@ export function buildMetadata({
 
   const openGraph: Metadata["openGraph"] =
     ogType === "article"
-      ? { ...shared, type: "article" }
+      ? {
+          ...shared,
+          type: "article",
+          ...(publishedTime ? { publishedTime } : {}),
+          ...(modifiedTime ? { modifiedTime } : {}),
+        }
       : ogType === "book"
         ? { ...shared, type: "book" }
         : ogType === "profile"

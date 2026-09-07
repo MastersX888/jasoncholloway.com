@@ -48,7 +48,7 @@ export default function SitemapPage() {
               <h2 className="label" style={{ marginBottom: "1.25rem", borderBottom: "1px solid var(--border-faint)", paddingBottom: "0.5rem" }}>Publications</h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <li><Link href="/books" className="hover-gold" style={{ fontWeight: 600 }}>Full Catalog</Link></li>
-                <li><Link href="/books/masters-x" className="hover-gold" style={{ fontWeight: 600 }}>Masters X Trilogy</Link></li>
+                <li><Link href="/books/masters-x/" className="hover-gold" style={{ fontWeight: 600 }}>Masters X Trilogy</Link></li>
                 {volumes.map(v => (
                   <li key={v.slug} style={{ paddingLeft: "1rem" }}><Link href={`/books/masters-x/${v.slug}`} className="hover-gold">Volume {v.volume}: {v.subtitle}</Link></li>
                 ))}
@@ -75,7 +75,7 @@ export default function SitemapPage() {
               <h2 className="label" style={{ marginBottom: "1.25rem", borderBottom: "1px solid var(--border-faint)", paddingBottom: "0.5rem" }}>Virtual Research</h2>
               <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 <li><Link href="/chamber" className="hover-gold" style={{ fontWeight: 600 }}>Analysis Chamber</Link></li>
-                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/folio-visualizer" className="hover-gold">Folio Visualizer</Link></li>
+                <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/folio-visualizer/" className="hover-gold">Folio Visualizer</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/harmonic-stack" className="hover-gold">Harmonic Stack</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/global-map" className="hover-gold">Global Map</Link></li>
                 <li style={{ paddingLeft: "1rem" }}><Link href="/chamber/schumann-baseline" className="hover-gold">Schumann Monitor</Link></li>

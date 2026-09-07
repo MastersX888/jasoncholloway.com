@@ -2,11 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { authorIsniIdentifier, authorSameAs } from "@/lib/data/authorAuthority";
 import SocialLinks from "@/components/layout/SocialLinks";
+import { buildMetadata } from "@/lib/seo/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About",
   description:
     "Jason Carroll Holloway holds an M.A. in English Literature from Mercy University and is a writer and researcher whose work explores the intersection of acoustic science, medieval scholarship, and human consciousness. He is the author of the Masters X Trilogy, published by Seventh City Press.",
+  path: "/about/",
+  ogType: "profile",
   keywords: [
     "acoustic science",
     "medieval scholarship",
@@ -14,13 +17,7 @@ export const metadata: Metadata = {
     "archaeoacoustics",
     "contemplative fiction",
   ],
-  alternates: {
-    canonical: "https://jasoncholloway.com/about/",
-  },
-  openGraph: {
-    url: "https://jasoncholloway.com/about/",
-  },
-};
+});
 
 export default function AboutPage() {
   return (

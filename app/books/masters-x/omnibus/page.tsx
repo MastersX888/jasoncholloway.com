@@ -125,7 +125,7 @@ export default function OmnibusPage() {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Books", item: "https://jasoncholloway.com/books" },
+      { "@type": "ListItem", position: 1, name: "Books", item: "https://jasoncholloway.com/books/" },
       { "@type": "ListItem", position: 2, name: "Masters X Trilogy", item: "https://jasoncholloway.com/books/masters-x/" },
       { "@type": "ListItem", position: 3, name: omnibus.subtitle, item: "https://jasoncholloway.com/books/masters-x/omnibus/" },
     ],
@@ -175,7 +175,7 @@ export default function OmnibusPage() {
         <div className="container">
           <div className="page-header-inner">
             <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
-              <Link href="/books/masters-x" className="hover:text-foreground transition-colors">
+              <Link href="/books/masters-x/" className="hover:text-foreground transition-colors">
                 {omnibus.series}
               </Link>
               <span className="text-muted-foreground">·</span>
@@ -448,7 +448,7 @@ export default function OmnibusPage() {
 
               <NoteOnTheTextLink />
 
-              <Link href="/books/masters-x" className="btn btn-outline" style={{ justifyContent: "center" }}>
+              <Link href="/books/masters-x/" className="btn btn-outline" style={{ justifyContent: "center" }}>
                 ← Back to Trilogy Hub
               </Link>
             </div>

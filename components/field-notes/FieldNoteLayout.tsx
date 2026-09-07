@@ -166,7 +166,7 @@ export default function FieldNoteLayout({
                 <Link href={bookHref} className="btn btn-gold">
                   Read the Novel →
                 </Link>
-                <Link href="/books/masters-x" className="btn btn-outline">
+                <Link href="/books/masters-x/" className="btn btn-outline">
                   View the Trilogy
                 </Link>
               </div>
@@ -211,7 +211,7 @@ export default function FieldNoteLayout({
                   <div className="fn-author-links">
                     <Link href="/about">About the Author</Link>
                     <Link href="/chamber">Analysis Chamber</Link>
-                    <Link href="/books/masters-x">Masters X Trilogy</Link>
+                    <Link href="/books/masters-x/">Masters X Trilogy</Link>
                   </div>
                 </div>
               </div>

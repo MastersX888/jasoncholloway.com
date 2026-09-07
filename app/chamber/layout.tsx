@@ -29,7 +29,7 @@ export default function ChamberLayout({
             The Analysis Chamber is the research companion to the Masters X Trilogy.
           </p>
           <a
-            href="/books/masters-x"
+            href="/books/masters-x/"
             style={{
               fontSize: "0.85rem",
               color: "var(--gold)",

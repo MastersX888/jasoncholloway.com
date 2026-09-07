@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Codex Gigas: The Devil's Bible Made in Bohemia",
+  titleAbsolute: true,
   description:
     "The world's largest medieval manuscript — 310 surviving leaves, and a missing quire nobody can account for. Bohemia, Rudolf II, and Sweden 1648.",
   socialTitle: "Codex Gigas: The Devil's Bible Made in Bohemia | Field Notes",

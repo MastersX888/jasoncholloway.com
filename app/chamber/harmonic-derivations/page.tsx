@@ -4,8 +4,10 @@ import Link from "next/link";
 import styles from './harmonic-derivations.module.css';
 
 export const metadata: Metadata = {
-  title: "The Harmonic Frequency Derivations | Masters X Trilogy — Seventh City Press",
-  description: "The eight major harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: from the 111.2 Hz fundamental to 889.6 Hz, with coupling factors, quality factors, forty inversion frequencies, and cathedral cross-references.",
+  // 100 chars with the layout suffix — the pipe-separated tail was pure
+  // truncation. Absolute, and the imprint moves to the description.
+  title: { absolute: "The Harmonic Derivations of Masters X — 111.2 Hz to 889.6 Hz" },
+  description: "The eight harmonic frequencies of the Masters X Trilogy, derived from the Ars Notoria: 111.2 Hz to 889.6 Hz, with coupling and quality factors.",
   alternates: { canonical: "https://jasoncholloway.com/chamber/harmonic-derivations/" },
 };
 

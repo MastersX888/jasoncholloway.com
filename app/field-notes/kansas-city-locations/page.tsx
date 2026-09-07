@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "The Real Kansas City of Masters X: A Reader's Map",
+  titleAbsolute: true,
   description:
     "Miller Nichols Library, Westport, Quality Hill, West Bottoms, Hotel Phillips — every Kansas City location in Masters X mapped. Real geography; fictional events.",
   socialTitle: "The Real Kansas City of Masters X: A Reader's Map | Field Notes",

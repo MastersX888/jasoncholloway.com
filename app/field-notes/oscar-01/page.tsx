@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Oscar-01: Missouri's Preserved Cold War Launch Room",
+  titleAbsolute: true,
   description:
     "Preserved Minuteman II launch control at Whiteman AFB — 60 feet underground, two keys, ten missiles. The real ground James Masters stood on in Masters X.",
   socialTitle: "Oscar-01: Missouri's Preserved Cold War Launch Room | Field Notes",

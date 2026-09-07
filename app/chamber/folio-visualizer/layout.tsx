@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 
-const ogTitle = "Voynich Manuscript Folio Visualizer — 181 Folios Interactive";
+const ogTitle = "Voynich Manuscript Folio Visualizer — All 181 Folios";
+// The <title> drops the layout suffix; the social card keeps ogTitle above.
 const ogDescription =
   "Explore 181 Voynich Manuscript folios and Ars Notoria notae interactively. Beinecke MS 408 scans with folio navigation — free tool from the Analysis Chamber.";
 const ogImage = {
@@ -9,7 +10,7 @@ const ogImage = {
 };
 
 export const metadata: Metadata = {
-  title: ogTitle,
+  title: { absolute: ogTitle },
   description: ogDescription,
   alternates: {
     canonical: "https://jasoncholloway.com/chamber/folio-visualizer/",

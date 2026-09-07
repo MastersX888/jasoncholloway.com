@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Virtual Masters Analysis Chamber",
   description:
-    "An interactive research tool replicating Andrew Chen's acoustic consciousness analysis system from the Masters X Trilogy. Five layers of frequency data, global cave mapping, harmonic derivations, and the 247-page research archive.",
+    "An interactive replica of Andrew Chen's acoustic analysis system from the Masters X Trilogy: frequency layers, cave mapping, and the research archive.",
   alternates: {
     canonical: "https://jasoncholloway.com/chamber/",
   },

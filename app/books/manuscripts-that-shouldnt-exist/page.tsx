@@ -4,9 +4,11 @@ import NewsletterForm from "@/components/layout/NewsletterForm";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Manuscripts That Shouldn't Exist: Voynich, Codex Gigas, Ars Notoria",
+  // Two named manuscripts fit the window; the third stays in the description.
+  title: "Manuscripts That Shouldn't Exist: Voynich & Codex Gigas",
+  titleAbsolute: true,
   description:
-    "The Voynich Manuscript, the Codex Gigas, and the Ars Notoria are real books that resist explanation — and the fiction they inspire, from The Rule of Four and The Club Dumas to the Masters X Trilogy.",
+    "The Voynich Manuscript, the Codex Gigas and the Ars Notoria are real books that resist explanation — and the fiction they keep inspiring.",
   socialTitle: "Manuscripts That Shouldn't Exist | Jason Carroll Holloway",
   socialDescription:
     "Three real manuscripts no one can fully explain — and the novels built from them. A reader's guide to impossible books, ending in Kansas City.",

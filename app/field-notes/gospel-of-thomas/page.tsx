@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Gospel of Thomas Saying 113: Kingdom Spread on Earth",
+  titleAbsolute: true,
   description:
     "Nag Hammadi, 1945. Saying 113 — the kingdom is spread upon the earth, and people do not see it. The sentence Volume III of Masters X is built on.",
   socialTitle: "Gospel of Thomas Saying 113: Kingdom Spread on Earth | Field Notes",

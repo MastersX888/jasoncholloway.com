@@ -4,9 +4,12 @@ import NewsletterForm from "@/components/layout/NewsletterForm";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Books Like The Historian by Elizabeth Kostova: The Masters X Trilogy",
+  // "by Elizabeth Kostova" is not part of the query people type, and it was
+  // what pushed this to 93 characters. It stays in the description.
+  title: "Books Like The Historian: The Masters X Trilogy",
+  titleAbsolute: true,
   description:
-    "Looking for books like The Historian? The Masters X Trilogy by Jason Carroll Holloway is a multi-generational archival investigation — a 1267 Bohemian scriptorium, seven inherited notebooks, and a sealed crypt beneath Prague.",
+    "Looking for books like Elizabeth Kostova's The Historian? A multi-generational archival hunt: seven inherited notebooks and a sealed crypt beneath Prague.",
   socialTitle: "Books Like The Historian | Jason Carroll Holloway",
   socialDescription:
     "If The Historian's pleasure was the archive — letters inside books inside centuries — the Masters X Trilogy runs on the same engine: seven notebooks, fifty-seven years of patience, and a crypt beneath Strahov.",

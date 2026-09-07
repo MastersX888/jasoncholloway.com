@@ -4,7 +4,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "111 Hz: The Frequency Ancient Builders Kept Choosing",
+  titleAbsolute: true,
   description:
     "111 Hz standing waves in stone chambers from Malta to Ghana — documented archaeoacoustics, and the carrier frequency of the Masters X Trilogy.",
   socialTitle: "111 Hz: The Frequency Ancient Builders Kept Choosing | Field Notes",

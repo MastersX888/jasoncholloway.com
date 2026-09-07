@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
+  // The essay title is what earns the click here, and appending the brand
+  // suffix pushed every note past the SERP window — so the suffix was the part
+  // Google cut. Social cards are unaffected; each note sets its own socialTitle.
   title: "Cymatics: Sound You Can See — Chladni Patterns",
+  titleAbsolute: true,
   description:
     "Visible sound patterns in sand and water — Chladni figures, Hans Jenny, and the five-sided wave the Masters X Trilogy places in red laterite clay.",
   socialTitle: "Cymatics: Sound You Can See — Chladni Patterns | Field Notes",

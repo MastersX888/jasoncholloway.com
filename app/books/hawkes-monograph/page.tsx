@@ -7,7 +7,9 @@ import { googlePlayIsbnUrl } from "@/lib/data/buyLinks";
 import { buildBookItem } from "@/lib/analytics/gtag";
 
 export const metadata: Metadata = {
-  title: "Innocence, Desire, and the Architecture of the Fall",
+  // The monograph's actual title is 51 characters — it needs the whole window,
+  // so the brand suffix comes off rather than the book's own name.
+  title: { absolute: "Innocence, Desire, and the Architecture of the Fall" },
   description: "The Grape and Its Counter-Symbols in the Fiction of John Hawkes. By Jason Carroll Holloway. Published by Seventh City Press.",
   alternates: {
     canonical: "https://jasoncholloway.com/books/hawkes-monograph/",

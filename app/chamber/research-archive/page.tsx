@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Research Archive — Virtual Masters Analysis Chamber",
+  // 76 with the layout suffix; the chamber name already says whose it is.
+  title: { absolute: "Research Archive — The Masters Analysis Chamber" },
   description:
     "The 247-page distribution file released by Andrew Chen. Seven years of acoustic consciousness research. 1.2 million downloads. Creative Commons.",
   alternates: {

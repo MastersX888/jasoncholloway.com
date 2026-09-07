@@ -4,9 +4,11 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 
 export const metadata: Metadata = buildMetadata({
-  // Short enough that the layout's " | Jason Carroll Holloway" suffix still fits the
-  // ~60-character SERP window; the h1 below carries the fuller phrasing.
+  // Absolute like every other note: the essay title is what earns the click, and
+  // the field notes read as one set in a results page. The h1 below carries the
+  // fuller phrasing. Social cards are unaffected — socialTitle is set separately.
   title: "Archaeoacoustics: What It Measures",
+  titleAbsolute: true,
   description:
     "Archaeoacoustics is the study of how ancient built spaces behave acoustically. What the field measures, what it has established, and what it has not.",
   socialTitle: "Archaeoacoustics: How Ancient Sound Is Measured | Field Notes",

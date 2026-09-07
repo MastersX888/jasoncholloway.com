@@ -51,3 +51,17 @@ See [../encyclopedia_project/01_PUBLICATION_PLAN.md](../encyclopedia_project/01_
 **Location:** `encyclopedia_project/output/` — **67 entries**, 2 Part Three essays, DF integration Rev. 2.
 
 Start with `output/HANDOFF_STATUS.md` and `output/OPEN_DECISIONS.md`.
+
+---
+
+## Sequel Brainstorm — *Oracle* (Aug 2026)
+
+Post-trilogy follow-up outline (Nadia as Oracle · Blake as protagonist). Not locked canon.
+
+| Start | Path |
+|-------|------|
+| Index | [`oracle_project/00_INDEX.md`](../oracle_project/00_INDEX.md) |
+| Architecture | [`oracle_project/01_ARCHITECTURE.md`](../oracle_project/01_ARCHITECTURE.md) |
+| Research pipelines | [`oracle_project/02_RESEARCH_PIPELINE.md`](../oracle_project/02_RESEARCH_PIPELINE.md) |
+| Arc outline | [`oracle_project/03_ARC_OUTLINE.md`](../oracle_project/03_ARC_OUTLINE.md) |
+| Open decisions | [`oracle_project/04_OPEN_DECISIONS.md`](../oracle_project/04_OPEN_DECISIONS.md) |
